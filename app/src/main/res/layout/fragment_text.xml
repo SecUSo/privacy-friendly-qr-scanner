@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView4"
+        android:layout_above="@+id/btnProceed"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <TextView
+                android:id="@+id/textLink"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/result_field_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_centerInParent="false"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Example application"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#014164"
+        android:padding="5dp"
+        android:text="@string/choose_action"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_margin="1dp" />
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/imageView"
+        android:paddingLeft="2dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#014164"
+        android:padding="5dp"
+        android:text="@string/abort_action"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_margin="1dp" />
+
+</RelativeLayout>

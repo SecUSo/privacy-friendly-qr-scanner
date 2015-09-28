@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+    <string name="pref_title_enable_history">Enable History</string>
+    <string name="pref_description_enable_history">Previous scans are logged for you to show them again</string>
+    <string name="pref_title_scanner_mode">Scanner Mode</string>
+    <string name="pref_keep_duplicates">Keep duplicates</string>
+    <string name="pref_keep_duplicates_explanation">Duplicates are saved to the history</string>
+
+    <string-array name="pref_scanner_mode">
+        <item>Barcode</item>
+        <item>QR-Code</item>
+        <item>Barcode und QR-Code</item>
+    </string-array>
+    <string-array name="pref_scanner_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_title_beep">Beep</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    
+    <string name="intro_label">Intro</string>
+	<string name="intro_description">Show the intro again.</string>
+
+</resources>

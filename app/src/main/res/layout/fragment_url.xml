@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:nestedScrollingEnabled="false"
+        android:fillViewport="true"
+        android:layout_above="@+id/btnProceed"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <TextView
+                android:id="@+id/hints4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/urlExplanation"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textDomain"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:text="@string/domain"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxKnowRisks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:checked="false"
+                android:longClickable="false"
+                android:text="@string/knowRisks"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/further_info"
+                android:textSize="15sp"
+                android:linksClickable="true"
+                android:enabled="true"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#014164"
+        android:padding="5dp"
+        android:text="@string/choose_action"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_margin="1dp" />
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/imageView"
+        android:paddingLeft="2dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#014164"
+        android:padding="5dp"
+        android:text="@string/abort_action"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_margin="1dp" />
+
+</RelativeLayout>

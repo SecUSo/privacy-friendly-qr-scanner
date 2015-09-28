@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:fillViewport="true"
+        android:layout_above="@+id/btnCancel"
+        android:layout_alignRight="@+id/btnProceed"
+        android:layout_alignEnd="@+id/btnProceed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <TextView
+                android:id="@+id/textLink"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_sms"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textResultSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:autoLink="none"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/textContentSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textResultSms"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="22dp"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#014164"
+        android:padding="5dp"
+        android:text="@string/choose_action"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_margin="1dp" />
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_height="fill_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/imageView"
+        android:paddingLeft="2dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#014164"
+        android:padding="5dp"
+        android:text="@string/abort_action"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_margin="1dp" />
+
+</RelativeLayout>

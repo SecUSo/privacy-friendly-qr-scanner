@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="bool_history"
+            android:summary="@string/pref_description_enable_history"
+            android:title="@string/pref_title_enable_history" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="bool_keep_duplicates"
+            android:summary="@string/pref_keep_duplicates_explanation"
+            android:title="@string/pref_keep_duplicates" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="beep"
+            android:title="@string/pref_title_beep" />
+
+        <Preference android:title="@string/intro_label"
+            android:key="buttonIntroAgain"
+            android:summary="@string/intro_description"/>
+</PreferenceScreen>
