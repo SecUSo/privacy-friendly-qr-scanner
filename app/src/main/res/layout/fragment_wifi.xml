@@ -10,7 +10,11 @@
         android:id="@+id/scrollView5"
         android:layout_above="@+id/btnProceed"
         android:layout_alignParentTop="true"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:layout_alignRight="@+id/btnProceed"
+        android:layout_alignEnd="@+id/btnProceed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -39,6 +43,12 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|center_horizontal" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/result_field_wifi_pw"
+                android:gravity="center_horizontal" />
 
         </LinearLayout>
     </ScrollView>

@@ -10,7 +10,8 @@
             android:defaultValue="true"
             android:key="bool_keep_duplicates"
             android:summary="@string/pref_keep_duplicates_explanation"
-            android:title="@string/pref_keep_duplicates" />
+            android:title="@string/pref_keep_duplicates"
+            android:dependency="bool_history"/>
 
         <CheckBoxPreference
             android:defaultValue="true"

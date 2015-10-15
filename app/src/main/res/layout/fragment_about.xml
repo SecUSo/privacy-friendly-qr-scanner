@@ -8,42 +8,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".AboutActivity" >
+    tools:context=".AboutActivity"
+    android:weightSum="1">
 
-    <ScrollView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_weight="0.36">
+
+        <ImageView
+            android:id="@+id/barcodeLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/privacyfriendlyappslogo" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView10" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <ImageView
-                android:id="@+id/barcodeLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_launcher" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginLeft="10dp"
-                android:text="Privacy Firendly QR Code Scanner"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/app_name_long" />
 
     <TextView
         android:id="@+id/textFieldVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:text="Version 1.3" />
+        android:layout_marginTop="10dp"
+        android:text="@string/version_number" />
 
     <TextView
         android:id="@+id/textFieldAuthor"
@@ -70,29 +66,25 @@
         android:src="@drawable/secuso_logo_blau_blau" />
 
     <TextView
-        android:id="@+id/textFieldLibraries"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:gravity="center_horizontal"
-        android:text="@string/about_libraries"
-        android:textStyle="bold" />
+        android:text="@string/privacy_friendly"/>
 
     <TextView
-        android:id="@+id/textFieldLibrary1Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:text="ZXing open source project" />
+        android:layout_marginTop="20dp"
+        android:text="@string/more_info"/>
 
     <TextView
-        android:id="@+id/textFieldLibrary1Link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/url_1"
+        android:textStyle="bold"
         android:layout_gravity="center_horizontal"
-        android:autoLink="web"
-        android:text="https://github.com/zxing/" />
+        android:autoLink="web"/>
 
 </LinearLayout>

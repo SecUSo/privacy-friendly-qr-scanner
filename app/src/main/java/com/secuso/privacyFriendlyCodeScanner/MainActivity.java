@@ -5,17 +5,15 @@ import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -31,27 +29,13 @@ import java.util.LinkedList;
 
 public class MainActivity extends ActionBarActivity {
 
-    /* TO_DO
-     * - History
-     *  #########
-     *   - Speichern von Einträgen
-     *   - Auslesen der Datei
-     *   - Duplikate & History on/off
-     *
-     *  - Resultsscreens
-     *   ################
-     *   - alle außer Url
-     *   - Aktionen implementieren (anrufen, Url öffnen)
-     *
-     */
-
-    private DrawerLayout mDrawerLayout;
-    private ListView mDrawerList;
-    private ActionBarDrawerToggle mDrawerToggle;
-
-    private CharSequence mDrawerTitle;
-    private CharSequence mTitle;
-    private String[] mMenuTitels;
+//    private DrawerLayout mDrawerLayout;
+//    private ListView mDrawerList;
+//    private ActionBarDrawerToggle mDrawerToggle;
+//
+//    private CharSequence mDrawerTitle;
+//    private CharSequence mTitle;
+//    private String[] mMenuTitels;
 
     private LinkedList<Integer> backStack = new LinkedList<Integer>();
 
@@ -60,43 +44,48 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTitle = mDrawerTitle = getTitle();
-        mMenuTitels = new String[]{getResources().getString(R.string.app_name),getResources().getString(R.string.history), getResources().getString(R.string.title_activity_settings), getResources().getString(R.string.action_about)};
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+//        mTitle = mDrawerTitle = getTitle();
+//        mMenuTitels = new String[]{getResources().getString(R.string.app_name),getResources().getString(R.string.history), getResources().getString(R.string.title_activity_settings), getResources().getString(R.string.action_about)};
+//        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        mDrawerList = (ListView) findViewById(R.id.left_drawer);
+//
+//        // set a custom shadow that overlays the main content when the drawer opens
+//        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
+//        // set up the drawer's list view with items and click listener
+//        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+//                R.layout.drawer_list_item, mMenuTitels));
+//        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+//
+//        // enable ActionBar app icon to behave as action to toggle nav drawer
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//
+//        // ActionBarDrawerToggle ties together the the proper interactions
+//        // between the sliding drawer and the action bar app icon
+//        mDrawerToggle = new ActionBarDrawerToggle(
+//                this,                  /* host Activity */
+//                mDrawerLayout,         /* DrawerLayout object */
+//                R.drawable.ic_drawer,  /* nav drawer image to replace 'Up' caret */
+//                R.string.drawer_open,  /* "open drawer" description for accessibility */
+//                R.string.drawer_close  /* "close drawer" description for accessibility */
+//        ) {
+//            @Override
+//            public void onDrawerClosed(View view) {
+//                getSupportActionBar().setTitle(mTitle);
+//                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//            }
+//
+//            @Override
+//            public void onDrawerOpened(View drawerView) {
+//                getSupportActionBar().setTitle(mDrawerTitle);
+//                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+//            }
+//        };
+//        mDrawerLayout.setDrawerListener(mDrawerToggle);
 
-        // set a custom shadow that overlays the main content when the drawer opens
-        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
-        // set up the drawer's list view with items and click listener
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, mMenuTitels));
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
-        // enable ActionBar app icon to behave as action to toggle nav drawer
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // ActionBarDrawerToggle ties together the the proper interactions
-        // between the sliding drawer and the action bar app icon
-        mDrawerToggle = new ActionBarDrawerToggle(
-                this,                  /* host Activity */
-                mDrawerLayout,         /* DrawerLayout object */
-                R.drawable.ic_drawer,  /* nav drawer image to replace 'Up' caret */
-                R.string.drawer_open,  /* "open drawer" description for accessibility */
-                R.string.drawer_close  /* "close drawer" description for accessibility */
-        ) {
-            @Override
-            public void onDrawerClosed(View view) {
-                getSupportActionBar().setTitle(mTitle);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                getSupportActionBar().setTitle(mDrawerTitle);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
-            }
-        };
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_launcher);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
         if(prefs.getBoolean("firstVisit", true)) {
@@ -124,6 +113,19 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            selectItem(2, false);
+            return true;
+        }
+        else if(id == R.id.action_history) {
+            selectItem(1, false);
+            return true;
+        }
+        else if (id == R.id.action_about) {
+            selectItem(3, false);
+            return true;
+        }
+        else if (id == R.id.action_home) {
+            selectItem(0, false);
             return true;
         }
         else if(id == R.id.action_clear) {
@@ -162,9 +164,9 @@ public class MainActivity extends ActionBarActivity {
             }
         }
 
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
+//        if (mDrawerToggle.onOptionsItemSelected(item)) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -191,11 +193,12 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-        Object back = backStack.pollLast();
-        if(back == null)
+        if (backStack.size() < 1)
             finish();
-        else
-            selectItem((Integer)back, true);
+        else {
+            int back = backStack.pop();
+            selectItem(back, true);
+        }
     }
 
     public void goBack(){
@@ -213,22 +216,22 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public void setTitle(CharSequence title) {
-        mTitle = title;
-        getSupportActionBar().setTitle(mTitle);
+//        mTitle = title;
+        getSupportActionBar().setTitle(title);
     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         // Sync the toggle state after onRestoreInstanceState has occurred.
-        mDrawerToggle.syncState();
+        //mDrawerToggle.syncState();
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Pass any configuration change to the drawer toggls
-        mDrawerToggle.onConfigurationChanged(newConfig);
+        //mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
     public void selectItem(int position, boolean back) {
@@ -251,7 +254,7 @@ public class MainActivity extends ActionBarActivity {
         }
 
         // update selected item and title, then close the drawer
-        mDrawerList.setItemChecked(position, true);
-        mDrawerLayout.closeDrawer(mDrawerList);
+//        mDrawerList.setItemChecked(position, true);
+//        mDrawerLayout.closeDrawer(mDrawerList);
     }
 }

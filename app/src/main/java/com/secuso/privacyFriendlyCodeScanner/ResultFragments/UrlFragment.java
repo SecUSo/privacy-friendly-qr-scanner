@@ -114,13 +114,15 @@ public class UrlFragment extends ResultFragment {
                                             saveScanned(true);
                                             if(!result.startsWith("http")) result = "http://" + result;
                                             Intent url = new Intent(Intent.ACTION_VIEW, Uri.parse(result));
-
                                             caption = getActivity().getResources().getStringArray(R.array.url_array)[0];
                                             startActivity(Intent.createChooser(url, caption));
                                             break;
                                         case 1:
                                             saveScanned(true);
                                             Browser.saveBookmark(getActivity(), "", result);
+                                            break;
+                                        case 2:
+                                            saveScanned(true);
                                             break;
                                         default:
                                     }

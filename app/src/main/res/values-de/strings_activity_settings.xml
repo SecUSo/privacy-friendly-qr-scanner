@@ -26,7 +26,7 @@
 
     <!-- Example settings for Notifications -->
     <string name="pref_header_notifications">Rückmeldung</string>
-    <string name="pref_title_beep">Piepton</string>
+    <string name="pref_title_beep">Signalton</string>
     <string name="pref_title_vibrate">Vibration</string>
     
     <string name="intro_label">Intro</string>

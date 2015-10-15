@@ -53,10 +53,13 @@ public class ProductFragment extends ResultFragment {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which) {
                                     case 0:
+                                        saveScanned(true);
                                         Intent product = new Intent("android.intent.action.WEB_SEARCH");
                                         product.putExtra(SearchManager.QUERY, result);
                                         String caption = getActivity().getResources().getStringArray(R.array.product_array)[0];
                                         startActivity(Intent.createChooser(product, caption));
+                                        break;
+                                    case 1:
                                         saveScanned(true);
                                         break;
                                     default:

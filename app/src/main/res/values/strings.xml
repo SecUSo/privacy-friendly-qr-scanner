@@ -4,6 +4,7 @@
     <string name="scan_text">Place this window above the code u want to decode.</string>
 
     <string name="app_name">QR Scanner</string>
+    <string name="version_number">Version 1.4</string>
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
     <string name="history">History</string>
@@ -44,15 +45,19 @@
     <string name="usability_hint1">To adjust the scanner, use the preferences menu.</string>
     <string name="usability_hint2">If you cannot scan a code, increase the distance between the scanner and the code.</string>
     <string name="usability_hint3">In poor lighting conditions, use the volume controls to turn the camera light on.</string>
-    <string name="usability_hint4">If you click on <b>not trustworthy</b>, the scanned qr code is not saved to the history.</string>
+    <string name="usability_hint4">If you click on <b>not trustworthy</b>, the scanned QR-Code is not saved to the history.</string>
 
     <string name="description_contact">The QR-Code you scanned contains contact information. In order to <i>import</i> it into your address book, click Proceed.</string>
     <string name="description_email">The QR-Code you scanned contains an email address. In order to <i>send an email</i> or <i>add it to a contact</i>, click Proceed.</string>
     <string name="description_send_email">The QR-Code you scanned contains an filled email. In order to <i>send</i> it or <i>add the address a contact</i>, click Proceed.</string>
-    <string name="description_product">The QR-Code you scanned contains a product code. In order to <i>search the web</i> for information, click Proceed.</string>
+    <string name="description_product">The code you scanned contains a product code. In order to </string>
     <string name="description_tel">The QR-Code you scanned contains a phone number. In order to <i>start a call</i> or <i>add it to a contact</i>, just click Proceed.</string>
     <string name="description_sms">The QR-Code you scanned contains an SMS. In order to <i>send</i> the SMS or <i>add the number to a contact</i>, click Proceed.</string>
     <string name="description_text">The QR-Code you scanned contains plain text. In order to <i>search the web</i> for information, click Proceed.</string>
+
+    <string name="privacy_friendly">This application belongs to the Privacy Friendly Apps.</string>
+    <string name="more_info">More information can be found on:</string>
+    <string name="url_1"><a href="https://www.secuso.informatik.tu-darmstadt.de/en/research/results/">https://www.secuso.org</a></string>
 
     <string name="choose_action">Proceed &amp; save</string>
     <string name="abort_action">Abort &amp; do not save</string>
@@ -65,36 +70,45 @@
 
     <string-array name="text_array">
         <item>Search on Web</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="vcard_array">
         <item>Add to Contacts</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="send_email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="sms_array">
         <item>Send SMS</item>
         <item>Call Number</item>
         <item>Add to Contacts</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="tel_array">
         <item>Call Number</item>
         <item>Add to Contacts</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="url_array">
         <item>Visit URL</item>
         <item>Add to Bookmarks</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="product_array">
         <item>Search on Web</item>
+        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="wifi_array">
         <item>Copy SSID</item>
+        <item>Do nothing, just save</item>
     </string-array>
 
     <string name="title_activity_result">QR Scanner</string>
@@ -110,4 +124,5 @@
     <string name="title_activity_result_wifi">Wifi found</string>
     <string name="title_activity_result_contact">Contact found</string>
     <string name="title_activity_about">About</string>
+    <string name="app_name_long" >Privacy friendly QR scanner</string>
 </resources>

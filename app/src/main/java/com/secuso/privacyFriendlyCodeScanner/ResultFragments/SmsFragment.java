@@ -77,6 +77,9 @@ public class SmsFragment extends ResultFragment {
                                         startActivity(Intent.createChooser(contact, caption));
                                         saveScanned(true);
                                         break;
+                                    case 3:
+                                        saveScanned(true);
+                                        break;
                                     default:
                                 }
                             }

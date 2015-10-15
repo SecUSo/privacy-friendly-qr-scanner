@@ -4,9 +4,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.widget.Toast;
-
-import com.secuso.privacyFriendlyCodeScanner.R;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -16,8 +13,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Philipp on 14/09/2015.

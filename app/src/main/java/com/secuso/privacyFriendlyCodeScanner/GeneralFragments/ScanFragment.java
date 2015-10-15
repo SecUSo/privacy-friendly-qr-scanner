@@ -56,7 +56,7 @@ public class ScanFragment extends Fragment {
         IntentIntegrator integrator = IntentIntegrator.forFragment(this);
         integrator.setCaptureActivity(MyCaptureActivity.class);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
-        integrator.setBeepEnabled(prefs.getBoolean("beep", false));
+        integrator.setBeepEnabled(prefs.getBoolean("beep", true));
         integrator.setOrientationLocked(false);
         integrator.setPrompt(getResources().getString(R.string.scan_text));
         integrator.initiateScan();

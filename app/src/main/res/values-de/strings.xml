@@ -2,9 +2,10 @@
 <resources>
 
     <string name="title_activity_my_capture">MyCaptureActivity</string>
-    <string name="scan_text">Platzieren Sie den Scanner über dem Code den sie decodieren möchten.</string>
+    <string name="scan_text">Platzieren Sie den Scanner über dem Code den Sie decodieren möchten.</string>
 
     <string name="app_name">QR Scanner</string>
+    <string name="version_number">Version 1.4</string>
     <string name="action_settings">Einstellungen</string>
     <string name="action_share">Teilen</string>
     <string name="history">Verlauf</string>
@@ -15,18 +16,18 @@
     <string name="knowRisks">Ich habe den Link geprüft und möchte die Webseite besuchen.</string>
     <string name="domain">Link:</string>
     <string name="ssl">Wenn Sie die Webseite besuchen, werden Ihre Daten unverschlüsselt gesendet!</string>
-    <string name="urlExplanation">QR Codes können Links enthalten, die zu einer Webseite führen, auf der Ihre Daten gefährdet sind (z.B. Phishing Webseiten) oder über die Schadsoftware (z.B. Viren) auf Ihr Gerät geladen wird.\n\n<b>Überprüfen</b> Sie daher, ob folgender Link der ist, den sie erwartet haben: </string>
+    <string name="urlExplanation">QR-Codes können Links enthalten, die zu einer Webseite führen, auf der Ihre Daten gefährdet sind (z.B. Phishing Webseiten) oder über die Schadsoftware (z.B. Viren) auf Ihr Gerät geladen wird.\n\n<b>Überprüfen</b> Sie daher, ob folgender Link der ist, den Sie erwartet haben: </string>
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informationen</a>, wie Sie den Link überprüfen, werden von der TU Darmstadt bereitgestellt. Wenn Sie die dem Link nicht vertrauen, klicken Sie auf nicht vertrauen &amp; nicht speichern.</string>
     <string name="textview">TextView</string>
     <string name="drawer_open">Drawer open</string>
     <string name="drawer_close">Drawer close</string>
-    <string name="delete_message">Möchten sie den Eintrag wirklich löschen?</string>
+    <string name="delete_message">Möchten Sie den Eintrag wirklich löschen?</string>
     <string name="delete_message_nottrustworthy">Sie schätzen diesen Eintrag als nicht vertrauenswürdig ein. Möchten Sie ihn daher jetzt löschen?</string>
-    <string name="delete_history">Möchten sie den Verlauf wirklich löschen?</string>
+    <string name="delete_history">Möchten Sie den Verlauf wirklich löschen?</string>
     <string name="cancel">Abbrechen</string>
     <string name="ok">OK</string>
     <string name="element_removed">Element gelöscht.</string>
-    <string name="conform_url">Bitte bestätigen Sie, dass sie den Link geprüft haben.</string>
+    <string name="conform_url">Bitte bestätigen Sie, dass Sie den Link geprüft haben.</string>
     <string name="scan_aborted">Scan abgebrochen.</string>
     <string name="wifi_explanation">Aufgrund der nötigen Rechte, ermöglicht diese version der App keine direkte Verbindung mit einem WIFI Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
     <string name="encryption">Verschlüsselung</string>
@@ -50,10 +51,14 @@
     <string name="description_contact">Der gescannte QR-Code enthält Kontaktinformationen. Um diese in Ihr Adressbuch zu <i>importieren</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_email">Der gescannte QR-Code enthält eine E-Mail-Adresse. Um eine <i>E-Mail zu senden</i> oder <i>sie einem Kontakt hizuzufügen</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_send_email">Der gescannte QR-Code enthält eine ausgefüllte E-Mail. Um diese zu <i>senden</i> oder <i>die Adresse einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
-	<string name="description_product">Der gescannte QR-Code enthält einen Produktcode. Um nach mehr Informationen im <i>Internet zu suchen</i>, klicken Sie auf Fortfahren.</string>
+	<string name="description_product">Der gescannte Code enthält einen Produktcode. Um nach mehr Informationen im </string>
 	<string name="description_tel">Der gescannte QR-Code enthält eine Telefonnummer. Um einen <i>Anruf zu tätigen</i> oder <i>sie einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_sms">Der gescannte QR-Code enthält eine SMS. Um diese zu <i>senden</i> oder <i>die Nummer einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_text">Der gescannte QR-Code enthält Text. Um nach mehr Informationen im <i>Internet zu suchen</i>, klicken Sie auf Fortfahren.</string>
+
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps.</string>
+    <string name="more_info">Mehr Informationen unter:</string>
+    <string name="url_1"><a href="https://www.secuso.informatik.tu-darmstadt.de/en/research/results/">https://www.secuso.org</a></string>
 	
 	<string name="choose_action">Fortfahren &amp; speichern</string>
 	<string name="abort_action">Abbrechen &amp; nicht speichern</string>
@@ -66,36 +71,45 @@
 	
     <string-array name="text_array">
         <item>Online suchen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="email_array">
         <item>Email senden</item>
         <item>Zu Kontakten hinzufügen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="vcard_array">
         <item>Zu Kontakten hinzufügen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="send_email_array">
         <item>Email senden</item>
         <item>Zu Kontakten hinzufügen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="sms_array">
         <item>SMS senden</item>
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="tel_array">
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
         <item>Zu Lesezeichen hinzufügen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="product_array">
         <item>Online suchen</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="wifi_array">
         <item>SSID kopieren</item>
+        <item>Nichts tun, nur speichern</item>
     </string-array>
 
     <string name="title_activity_result_wifi">Wifi gefunden</string>
@@ -111,5 +125,6 @@
     <string name="title_activity_result_contact">Kontakt gefunden</string>
     <string name="title_activity_about">Über</string>
     <string name="title_activity_result">QR Scanner</string>
+    <string name="app_name_long" >Privacy friendly QR scanner</string>
 
 </resources>

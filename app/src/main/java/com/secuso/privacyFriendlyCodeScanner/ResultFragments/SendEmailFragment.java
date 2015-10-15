@@ -71,6 +71,7 @@ public class SendEmailFragment extends ResultFragment {
                                 String caption = "";
                                 switch (which) {
                                     case 0:
+                                        saveScanned(true);
                                         Intent email = new Intent(Intent.ACTION_SEND);
                                         email.setType("plain/text");
                                         String[] recipient = new String[] {address};
@@ -79,14 +80,16 @@ public class SendEmailFragment extends ResultFragment {
                                         email.putExtra(Intent.EXTRA_TEXT, message);
                                         caption = getActivity().getResources().getStringArray(R.array.send_email_array)[0];
                                         startActivity(Intent.createChooser(email, caption));
-                                        saveScanned(true);
                                         break;
                                     case 1:
+                                        saveScanned(true);
                                         Intent contact = new Intent(
                                                 ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,
                                                 Uri.parse(result));
                                         caption = getActivity().getResources().getStringArray(R.array.send_email_array)[1];
                                         startActivity(Intent.createChooser(contact, caption));
+                                        break;
+                                    case 2:
                                         saveScanned(true);
                                         break;
                                     default:

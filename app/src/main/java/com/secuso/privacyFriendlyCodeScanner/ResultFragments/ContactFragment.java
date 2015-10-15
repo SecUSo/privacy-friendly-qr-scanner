@@ -77,6 +77,9 @@ public class ContactFragment extends ResultFragment {
                                         String caption = getActivity().getResources().getStringArray(R.array.vcard_array)[0];
                                         startActivity(Intent.createChooser(contact, caption));
                                         break;
+                                    case 1:
+                                        saveScanned(true);
+                                        break;
                                     default:
                                 }
                             }

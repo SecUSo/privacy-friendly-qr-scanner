@@ -50,17 +50,20 @@ public class TelFragment extends ResultFragment {
                                 String caption = "";
                                 switch (which) {
                                     case 0:
+                                        saveScanned(true);
                                         Intent call = new Intent("android.intent.action.DIAL", Uri.parse(result));
                                         caption = getActivity().getResources().getStringArray(R.array.tel_array)[0];
                                         startActivity(Intent.createChooser(call, caption));
-                                        saveScanned(true);
                                         break;
                                     case 1:
+                                        saveScanned(true);
                                         Intent contact = new Intent(
                                                 ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,
                                                 Uri.parse(result));
                                         caption = getActivity().getResources().getStringArray(R.array.tel_array)[1];
                                         startActivity(Intent.createChooser(contact, caption));
+                                        break;
+                                    case 2:
                                         saveScanned(true);
                                         break;
                                     default:

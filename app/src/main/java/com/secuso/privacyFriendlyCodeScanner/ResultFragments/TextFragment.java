@@ -46,10 +46,13 @@ public class TextFragment extends ResultFragment {
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which) {
                                     case 0:
+                                        saveScanned(true);
                                         Intent search = new Intent(Intent.ACTION_WEB_SEARCH);
                                         search.putExtra(SearchManager.QUERY, result);
                                         String caption = getActivity().getResources().getStringArray(R.array.text_array)[0];
                                         startActivity(Intent.createChooser(search, caption));
+                                        break;
+                                    case 1:
                                         saveScanned(true);
                                         break;
                                     default:
