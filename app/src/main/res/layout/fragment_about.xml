@@ -13,12 +13,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_height="85dp"
         android:layout_weight="0.36">
 
         <ImageView
             android:id="@+id/barcodeLogo"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/privacyfriendlyappslogo" />
