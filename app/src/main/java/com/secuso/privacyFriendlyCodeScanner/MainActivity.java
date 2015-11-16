@@ -14,7 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.AboutFragment;
@@ -88,6 +91,7 @@ public class MainActivity extends ActionBarActivity {
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#024265")));
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+
         if(prefs.getBoolean("firstVisit", true)) {
             switchToFragment(new IntroFragment(), false);
         }

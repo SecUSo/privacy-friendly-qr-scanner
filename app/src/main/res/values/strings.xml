@@ -11,6 +11,7 @@
     <string name="action_clear">Clear History</string>
     <string name="cannot_clear">The history is already empty</string>
     <string name="scanButton">Start Scan</string>
+    <string name="lock_orientation">Lock orientation of scanner</string>
     <string name="url">URL</string>
     <string name="knowRisks">I checked the link and want to visit the website.</string>
     <string name="domain">Domain</string>

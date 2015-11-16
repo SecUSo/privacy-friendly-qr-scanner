@@ -126,5 +126,6 @@
     <string name="title_activity_about">Über</string>
     <string name="title_activity_result">QR Scanner</string>
     <string name="app_name_long" >Privacy friendly QR scanner</string>
+    <string name="lock_orientation">Ausrichtung des Scanners sperren</string>
 
 </resources>
