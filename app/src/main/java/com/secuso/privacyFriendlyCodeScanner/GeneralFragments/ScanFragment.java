@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -49,6 +51,18 @@ public class ScanFragment extends Fragment {
                 scanFromFragment();
             }
         });
+
+        CheckBox cbOrientation = (CheckBox) view.findViewById(R.id.cbOrientation);
+        cbOrientation.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putBoolean("lock_orientation", isChecked).commit();
+            }
+        });
+        cbOrientation.setChecked(PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("lock_orientation",false));
+
         return view;
     }
 
