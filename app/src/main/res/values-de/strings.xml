@@ -29,7 +29,7 @@
     <string name="element_removed">Element gelöscht.</string>
     <string name="conform_url">Bitte bestätigen Sie, dass Sie den Link geprüft haben.</string>
     <string name="scan_aborted">Scan abgebrochen.</string>
-    <string name="wifi_explanation">Aufgrund der nötigen Rechte, ermöglicht diese version der App keine direkte Verbindung mit einem WIFI Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
+    <string name="wifi_explanation">Aufgrund der nötigen Rechte, ermöglicht diese Version der App keine direkte Verbindung mit einem WIFI Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
     <string name="encryption">Verschlüsselung</string>
     <string name="action_about">Über</string>
     <string name="about_author">Autor: Philipp Rack</string>
