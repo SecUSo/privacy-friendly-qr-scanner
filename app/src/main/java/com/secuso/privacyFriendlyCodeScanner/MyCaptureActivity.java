@@ -18,4 +18,8 @@ public class MyCaptureActivity extends CaptureActivity {
         if(prefs.getBoolean("lock_orientation", false))
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 }

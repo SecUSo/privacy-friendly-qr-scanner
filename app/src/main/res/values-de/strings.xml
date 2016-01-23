@@ -5,7 +5,7 @@
     <string name="scan_text">Platzieren Sie den Scanner über dem Code den Sie decodieren möchten.</string>
 
     <string name="app_name">QR Scanner</string>
-    <string name="version_number">Version 1.4</string>
+    <string name="version_number">Version 1.5</string>
     <string name="action_settings">Einstellungen</string>
     <string name="action_share">Teilen</string>
     <string name="history">Verlauf</string>
@@ -126,6 +126,10 @@
     <string name="title_activity_about">Über</string>
     <string name="title_activity_result">QR Scanner</string>
     <string name="app_name_long" >Privacy friendly QR scanner</string>
+<<<<<<< HEAD
     <string name="lock_orientation">Ausrichtung des Scanners sperren</string>
+=======
+    <string name="lock_orientation" >Ausrichtung des Scanners sperren</string>
+>>>>>>> origin/master
 
 </resources>
