@@ -54,7 +54,7 @@ public class ProductFragment extends ResultFragment {
                                 switch (which) {
                                     case 0:
                                         saveScanned(true);
-                                        Intent product = new Intent("android.intent.action.WEB_SEARCH");
+                                        Intent product = new Intent(Intent.ACTION_SEARCH);
                                         product.putExtra(SearchManager.QUERY, result);
                                         String caption = getActivity().getResources().getStringArray(R.array.product_array)[0];
                                         startActivity(Intent.createChooser(product, caption));

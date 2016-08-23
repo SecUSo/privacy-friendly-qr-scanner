@@ -2,6 +2,7 @@ package com.secuso.privacyFriendlyCodeScanner.GeneralFragments;
 
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -146,6 +147,7 @@ public class HistoryFragment extends Fragment {
             ImageView icon = (ImageView) newView.findViewById(R.id.icon);
             TextView firstLine = (TextView) newView.findViewById(R.id.result_field_text);
             TextView secondLine = (TextView) newView.findViewById(R.id.secondLine);
+            String seconLineText = "";
 
             if(element.content.startsWith("WIFI:")){
                 icon.setImageResource(R.drawable.ic_action_network_wifi);
@@ -155,7 +157,8 @@ public class HistoryFragment extends Fragment {
                     if(content[i].startsWith("S:")) ssid_id = i;
                 }
                 firstLine.setText(R.string.title_activity_result_wifi);
-                secondLine.setText(content[ssid_id].substring(2));
+                seconLineText = content[ssid_id].substring(2);
+                secondLine.setText(seconLineText);
             }
             else if(element.content.startsWith("BEGIN:VCARD")){
                 icon.setImageResource(R.drawable.ic_action_person);
@@ -166,10 +169,14 @@ public class HistoryFragment extends Fragment {
                 if(m.find())  {
                     name = m.group(1).substring(1);
 
-                    if(name.startsWith("N:"))
-                        secondLine.setText(name.substring(2).replace(';', ' '));
-                    else if(name.startsWith("FN:"))
-                        secondLine.setText(name.substring(3).replace(';', ' '));
+                    if(name.startsWith("N:")) {
+                        seconLineText = name.substring(2).replace(';', ' ');
+                        secondLine.setText(seconLineText);
+                    }
+                    else if(name.startsWith("FN:")) {
+                        seconLineText = name.substring(3).replace(';', ' ');
+                        secondLine.setText(seconLineText);
+                    }
                 }
 
                 firstLine.setText(R.string.title_activity_result_contact);
@@ -177,25 +184,31 @@ public class HistoryFragment extends Fragment {
             else if(element.content.startsWith("tel:")) {
                 icon.setImageResource(R.drawable.ic_action_call);
                 firstLine.setText(R.string.title_activity_result_tel);
-                secondLine.setText(element.content.substring(4));
+                seconLineText = element.content.substring(4);
+                secondLine.setText(seconLineText);
             }
             else if(element.content.startsWith("MATMSG:")) {
                 icon.setImageResource(R.drawable.ic_action_new_email);
                 Pattern r = Pattern.compile("MATMSG:TO:(.+?);SUB:");
                 Matcher m = r.matcher(element.content);
-                if(m.find()) secondLine.setText(m.group(1));
+                if(m.find()) {
+                    seconLineText = m.group(1);
+                    secondLine.setText(seconLineText);
+                }
                 firstLine.setText(R.string.title_activity_result_send_email);
             }
             else if(element.content.startsWith("mailto:")){
                 icon.setImageResource(R.drawable.ic_action_email);
                 firstLine.setText(R.string.title_activity_result_email);
-                secondLine.setText(element.content.subSequence(7, element.content.length()));
+                seconLineText = element.content.subSequence(7, element.content.length()).toString();
+                secondLine.setText(seconLineText);
             }
             else if(element.content.startsWith("SMSTO:")) {
                 icon.setImageResource(R.drawable.ic_action_chat);
                 String content = element.content.substring(element.content.indexOf(":") + 1);
                 String address = content.substring(0, content.indexOf(":"));
-                secondLine.setText(address);
+                seconLineText = address;
+                secondLine.setText(seconLineText);
                 firstLine.setText(R.string.title_activity_result_sms);
             }
             else if(element.content.startsWith("http://") || element.content.startsWith("https://") || element.content.startsWith("www.")) {
@@ -204,11 +217,13 @@ public class HistoryFragment extends Fragment {
                 else
                     icon.setImageResource(R.drawable.ic_action_web_site);
                 firstLine.setText(R.string.title_activity_result_url);
-                secondLine.setText(element.content);
+                seconLineText = element.content;
+                secondLine.setText(seconLineText);
             }
             else {
                 icon.setImageResource(R.drawable.ic_action_view_as_list);
-                secondLine.setText(element.content);
+                seconLineText = element.content;
+                secondLine.setText(seconLineText);
                 firstLine.setText(R.string.title_activity_result_text);
             }
 
@@ -225,6 +240,8 @@ public class HistoryFragment extends Fragment {
                 }
             });
 
+            final String clipboardText = seconLineText;
+
             newView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
@@ -232,6 +249,29 @@ public class HistoryFragment extends Fragment {
                     newView.setBackgroundColor(Color.parseColor("#ff33b5e5"));
 
                     AlertDialog.Builder deleteDialog = new AlertDialog.Builder(rootView.getContext());
+
+                    deleteDialog.setTitle("")
+                            .setItems(R.array.history_array, new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    switch (which) {
+                                        case 0:
+                                            ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+                                            clipboard.setText(clipboardText);
+                                            Toast.makeText(getActivity(), getResources().getString(R.string.copied_to_clipboard), Toast.LENGTH_SHORT).show();
+                                            newView.setBackgroundColor(Color.WHITE);
+                                            break;
+                                        case 1:
+                                            remove(element.id);
+                                            refresh();
+                                            Toast.makeText(getActivity(), getResources().getString(R.string.element_removed), Toast.LENGTH_SHORT).show();
+                                            newView.setBackgroundColor(Color.WHITE);
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                            });
+                    /*
                     deleteDialog.setOnCancelListener(new DialogInterface.OnCancelListener () {
                         @Override
                         public void onCancel(DialogInterface dialog) {
@@ -257,6 +297,7 @@ public class HistoryFragment extends Fragment {
                             newView.setBackgroundColor(Color.WHITE);
                         }
                     });
+                    */
                     deleteDialog.show();
                     return true;
                 }

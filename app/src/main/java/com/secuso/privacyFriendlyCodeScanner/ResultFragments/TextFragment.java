@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,8 +48,8 @@ public class TextFragment extends ResultFragment {
                                 switch (which) {
                                     case 0:
                                         saveScanned(true);
-                                        Intent search = new Intent(Intent.ACTION_WEB_SEARCH);
-                                        search.putExtra(SearchManager.QUERY, result);
+                                        Uri uri = Uri.parse("http://www.google.com/#q="+result);
+                                        Intent search = new Intent(Intent.ACTION_VIEW, uri);
                                         String caption = getActivity().getResources().getStringArray(R.array.text_array)[0];
                                         startActivity(Intent.createChooser(search, caption));
                                         break;

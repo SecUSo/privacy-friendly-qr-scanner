@@ -108,9 +108,15 @@
         <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="wifi_array">
-        <item>SSID kopieren</item>
+        <item>Passwort kopieren</item>
         <item>Nichts tun, nur speichern</item>
     </string-array>
+    <string-array name="history_array">
+        <item>In Zwischenablage kopieren</item>
+        <item>Eintrag löschen</item>
+    </string-array>
+    <string name="copied_to_clipboard">In Zwischenablage kopiert.</string>
+    <string name="noname">Kein Name angegeben</string>
 
     <string name="title_activity_result_wifi">Wifi gefunden</string>
     <string name="title_activity_result_url">Link gefunden</string>

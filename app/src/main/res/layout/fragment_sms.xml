@@ -39,7 +39,8 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
                 android:autoLink="none"
-                android:gravity="center_horizontal" />
+                android:gravity="center_horizontal"
+                android:textIsSelectable="true" />
 
             <TextView
                 android:id="@+id/textContentSms"
@@ -49,7 +50,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="22dp"
-                android:gravity="center_horizontal" />
+                android:gravity="center_horizontal"
+                android:textIsSelectable="true" />
 
         </LinearLayout>
     </ScrollView>

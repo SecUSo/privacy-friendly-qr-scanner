@@ -4,6 +4,8 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.View;
+
 
 import com.journeyapps.barcodescanner.CaptureActivity;
 
@@ -17,6 +19,7 @@ public class MyCaptureActivity extends CaptureActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
         if(prefs.getBoolean("lock_orientation", false))
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
     }
 <<<<<<< HEAD
 =======

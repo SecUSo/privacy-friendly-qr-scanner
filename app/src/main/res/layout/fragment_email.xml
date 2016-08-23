@@ -28,7 +28,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/description_email"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textIsSelectable="true" />
 
             <TextView
                 android:id="@+id/result_field_email"
@@ -37,7 +38,8 @@
                 android:layout_gravity="center_horizontal"
                 android:text="Test"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textIsSelectable="true" />
 
         </LinearLayout>
     </ScrollView>

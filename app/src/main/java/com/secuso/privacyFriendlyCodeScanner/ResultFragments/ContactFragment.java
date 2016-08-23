@@ -55,6 +55,8 @@ public class ContactFragment extends ResultFragment {
                 resultTextContact.setText("Name: " + name.substring(2).replace(';', ' '));
             else if(name.startsWith("FN:"))
                 resultTextContact.setText("Name: " + name.substring(3).replace(';', ' '));
+            else
+                resultTextContact.setText(R.string.noname);
         }
         Button chooseActionButton = (Button) rootView.findViewById(R.id.btnProceed);
         chooseActionButton.setOnClickListener(new View.OnClickListener() {

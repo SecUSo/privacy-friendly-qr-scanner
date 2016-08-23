@@ -46,7 +46,7 @@ public class WifiFragment extends ResultFragment {
 
         final String ssid = content[ssid_id].substring(2);
         String encryption = content[encryption_id].substring(2);
-        String pw = content[pw_id].substring(2);
+        final String pw = content[pw_id].substring(2);
 
         TextView resultField = (TextView) rootView.findViewById(R.id.result_field_wifi);
         TextView resultFieldEncryption = (TextView) rootView.findViewById(R.id.result_field_wifi_encryption);
@@ -70,7 +70,7 @@ public class WifiFragment extends ResultFragment {
                                     case 0:
                                         saveScanned(true);
                                         ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
-                                        clipboard.setText(ssid);
+                                        clipboard.setText(pw);
                                         saveScanned(true);
                                         break;
                                     case 1:

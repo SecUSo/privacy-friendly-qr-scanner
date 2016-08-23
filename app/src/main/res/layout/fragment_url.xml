@@ -34,7 +34,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center_horizontal"
                 android:text="@string/domain"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:textIsSelectable="true" />
 
             <CheckBox
                 android:id="@+id/checkBoxKnowRisks"

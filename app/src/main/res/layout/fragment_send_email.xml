@@ -54,7 +54,8 @@
                         android:id="@+id/textResultSendEmailAdress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="reciept" />
+                        android:text="reciept"
+                        android:textIsSelectable="true" />
                 </TableRow>
 
                 <TableRow
@@ -74,7 +75,8 @@
                         android:id="@+id/textResultSendEmailSubject"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="sub" />
+                        android:text="sub"
+                        android:textIsSelectable="true" />
                 </TableRow>
 
             </TableLayout>
@@ -93,7 +95,8 @@
                     android:layout_centerInParent="true"
                     android:maxHeight="175dp"
                     android:maxLines="10"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical"
+                    android:textIsSelectable="true" />
             </ScrollView>
         </LinearLayout>
     </ScrollView>
