@@ -24,14 +24,14 @@ public class SettingsFragment extends PreferenceFragment {
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.preferences);
 
-        Preference button = getPreferenceManager().findPreference("buttonIntroAgain");
+/*        Preference button = getPreferenceManager().findPreference("buttonIntroAgain");
         button.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference arg0) {
                 ((MainActivity)getActivity()).switchToFragment(new IntroFragment(),false);
                 return true;
             }
-        });
+        });*/
     }
 
 }

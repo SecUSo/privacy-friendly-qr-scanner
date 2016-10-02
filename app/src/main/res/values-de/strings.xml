@@ -5,7 +5,7 @@
     <string name="scan_text">Platzieren Sie den Scanner über dem Code den Sie decodieren möchten.</string>
 
     <string name="app_name">QR Scanner</string>
-    <string name="version_number">Version 1.5</string>
+    <string name="version_number">Version 1.6</string>
     <string name="action_settings">Einstellungen</string>
     <string name="action_share">Teilen</string>
     <string name="history">Verlauf</string>
@@ -42,7 +42,7 @@
 	<string name="to">Empfänger:</string>
 	<string name="subject">Betreff:</string>
 	
-	<string name="intro_text">Herzlich Willkommen zum Privacy Friendly QR Scanner, der Ihnen hilft Ihre Privatsphäre zu schützen. Im Folgenden ein paar Tipps zur App:</string>
+	<string name="intro_text">Im Folgenden ein paar Tipps zur App:</string>
     <string name="usability_hint1">In den Einstellungen können Sie den Scanner nach Ihren Wünschen konfigurieren.</string>
 	<string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie ihn etwas weiter entfernt zu scannen.</string>
 	<string name="usability_hint3">Bei schlechten Lichtverhältnissen können Sie mit den Lautstärketasten das Kameralicht hinzuschalten.</string>
@@ -100,7 +100,6 @@
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
-        <item>Zu Lesezeichen hinzufügen</item>
         <item>Nichts tun, nur speichern</item>
     </string-array>
     <string-array name="product_array">
@@ -122,7 +121,7 @@
     <string name="title_activity_result_url">Link gefunden</string>
     <string name="title_activity_result_text">Text gefunden</string>
     <string name="title_activity_result_sms">SMS gefunden</string>
-    <string name="title_activity_result_email">E-Mail-Ad­res­se gefunden</string>
+    <string name="title_activity_result_email">E-Mail-Adresse gefunden</string>
     <string name="title_activity_result_location">Position gefunden</string>
     <string name="title_activity_result_send_email">Email gefunden</string>
     <string name="title_activity_result_tel">Telefonnummer gefunden</string>
@@ -132,10 +131,17 @@
     <string name="title_activity_about">Über</string>
     <string name="title_activity_result">QR Scanner</string>
     <string name="app_name_long" >Privacy friendly QR scanner</string>
-<<<<<<< HEAD
-    <string name="lock_orientation">Ausrichtung des Scanners sperren</string>
-=======
     <string name="lock_orientation" >Ausrichtung des Scanners sperren</string>
->>>>>>> origin/master
+    <string name="action_help">Help</string>
 
+    <!-- ###DRAWER###-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- ### WELCOME DIALOG ### -->
+    <string name="welcome_text">Privacy Friendly QR Code Scanner App mit minimalen Berechtigungen und zur Unterstützung bei der Erkennung von Links auf schadhafte Seiten.</string>
+    <string name="welcome">Wilkommen</string>
+    <string name="okay">Okay</string>
+    <string name="viewhelp">Hilfe zeigen</string>
+    <string name="main_button_welcomedialog">Zeige Begrüßung</string>
 </resources>

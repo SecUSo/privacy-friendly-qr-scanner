@@ -21,8 +21,4 @@ public class MyCaptureActivity extends CaptureActivity {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 }

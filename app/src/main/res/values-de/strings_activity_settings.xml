@@ -30,6 +30,6 @@
     <string name="pref_title_vibrate">Vibration</string>
     
     <string name="intro_label">Intro</string>
-	<string name="intro_description">Intro erneut ansehen.</string>
+	<string name="intro_description">Tutorial</string>
 
 </resources>

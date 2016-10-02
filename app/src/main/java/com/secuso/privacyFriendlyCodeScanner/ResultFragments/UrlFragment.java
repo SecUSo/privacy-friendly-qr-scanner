@@ -117,11 +117,12 @@ public class UrlFragment extends ResultFragment {
                                             caption = getActivity().getResources().getStringArray(R.array.url_array)[0];
                                             startActivity(Intent.createChooser(url, caption));
                                             break;
-                                        case 1:
+                                        /*case 1:
                                             saveScanned(true);
-                                            Browser.saveBookmark(getActivity(), "", result);
-                                            break;
-                                        case 2:
+                                            Intent i = new Intent(Intent.ACTION_INSERT, Browser.BOOKMARKS_URIBrowser.);
+                                            startActivity(i);
+                                            break;*/
+                                        case 1:
                                             saveScanned(true);
                                             break;
                                         default:

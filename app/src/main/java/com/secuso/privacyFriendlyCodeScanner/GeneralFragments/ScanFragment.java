@@ -62,10 +62,6 @@ public class ScanFragment extends Fragment {
             }
         });
         cbOrientation.setChecked(PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("lock_orientation",false));
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
         return view;
     }
 

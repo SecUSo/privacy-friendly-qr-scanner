@@ -131,9 +131,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:background="#014164"
+        android:background="@drawable/button_fullwidth"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/confirm_intro"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="1dp" />
 
 </RelativeLayout>

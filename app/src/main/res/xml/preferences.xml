@@ -18,7 +18,4 @@
             android:key="beep"
             android:title="@string/pref_title_beep" />
 
-        <Preference android:title="@string/intro_label"
-            android:key="buttonIntroAgain"
-            android:summary="@string/intro_description"/>
 </PreferenceScreen>
