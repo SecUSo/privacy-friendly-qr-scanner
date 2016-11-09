@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.secuso.privacyFriendlyCodeScanner"
-    android:versionCode="5"
-    android:versionName="1.4">
+    package="com.secuso.privacyFriendlyCodeScanner">
 
     <application
         android:allowBackup="true"
@@ -22,6 +20,7 @@
         </provider>
         <activity
             android:name="com.secuso.privacyFriendlyCodeScanner.SplashActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
