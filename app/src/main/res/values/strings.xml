@@ -36,7 +36,7 @@
     <string name="delete_message_nottrustworthy">You classified the entry as not trustworthy. Do you want to delete it now?</string>
     <string name="delete_history">Do you want to delete the history?</string>
     <string name="cancel">Cancel</string>
-    <string name="ok">OK</string>
+    <string name="ok">Okay</string>
     <string name="element_removed">Element removed.</string>
     <string name="conform_url">Please confirm, that you checked the link.</string>
     <string name="scan_aborted">Scan aborted.</string>

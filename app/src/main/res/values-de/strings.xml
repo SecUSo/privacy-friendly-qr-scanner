@@ -31,7 +31,7 @@
     <string name="delete_message_nottrustworthy">Sie schätzen diesen Eintrag als nicht vertrauenswürdig ein. Möchten Sie ihn daher jetzt löschen?</string>
     <string name="delete_history">Möchten Sie den Verlauf wirklich löschen?</string>
     <string name="cancel">Abbrechen</string>
-    <string name="ok">OK</string>
+    <string name="ok">Okay</string>
     <string name="element_removed">Element gelöscht.</string>
     <string name="conform_url">Bitte bestätigen Sie, dass Sie den Link geprüft haben.</string>
     <string name="scan_aborted">Scan abgebrochen.</string>
