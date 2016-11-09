@@ -2,9 +2,11 @@ package com.secuso.privacyFriendlyCodeScanner.GeneralFragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.secuso.privacyFriendlyCodeScanner.R;
 
@@ -18,6 +20,9 @@ public class AboutFragment extends Fragment {
                                 Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         View rootView = inflater.inflate(R.layout.fragment_about, container, false);
+
+        ((TextView)rootView.findViewById(R.id.secusoWebsite)).setMovementMethod(LinkMovementMethod.getInstance());
+        ((TextView)rootView.findViewById(R.id.githubURL)).setMovementMethod(LinkMovementMethod.getInstance());
 
         return rootView;
     }
