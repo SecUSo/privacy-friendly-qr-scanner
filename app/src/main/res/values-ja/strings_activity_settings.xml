@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="title_activity_settings">設定</string>
+
+    <!-- Strings related to Settings -->
+
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">全般</string>
+    <string name="pref_title_enable_history">履歴を有効にする</string>
+    <string name="pref_description_enable_history">以前のスキャンを記録して、再び表示します</string>
+    <string name="pref_title_scanner_mode">スキャナーモード</string>
+    <string name="pref_keep_duplicates">重複を保持</string>
+    <string name="pref_keep_duplicates_explanation">重複が履歴に保存されます</string>
+
+    <string-array name="pref_scanner_mode">
+        <item>バーコード</item>
+        <item>QR コード</item>
+        <item>バーコードと QR コード</item>
+    </string-array>
+    <string-array name="pref_scanner_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">通知</string>
+    <string name="pref_title_beep">着信音</string>
+    <string name="pref_title_vibrate">振動</string>
+    
+    <string name="intro_label">紹介</string>
+	<string name="intro_description">チュートリアル</string>
+
+</resources>
