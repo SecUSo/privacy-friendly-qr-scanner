@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Browser;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;

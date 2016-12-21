@@ -1,11 +1,8 @@
 package com.secuso.privacyFriendlyCodeScanner.GeneralFragments;
 
 import android.os.Bundle;
-import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.widget.ScrollView;
 
-import com.secuso.privacyFriendlyCodeScanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
 
 public class SettingsFragment extends PreferenceFragment {
