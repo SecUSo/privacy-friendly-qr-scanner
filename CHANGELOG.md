@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 16 *(2015-12-21)*
+----------------------------
+
+ * Japanese Translation added
+ * Repo cleanup
+
 Version 1.5 *(2015-11-18)*
 ----------------------------
 
