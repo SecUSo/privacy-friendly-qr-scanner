@@ -51,5 +51,7 @@ Markus Hau<br />
 
 Github-Users: <br />
 p-rack<br />
-yonjuni
+yonjuni<br />
+naofum (Japanese translation)
+
 
