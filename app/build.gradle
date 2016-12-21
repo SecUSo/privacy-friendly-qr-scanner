@@ -7,8 +7,8 @@ android {
         applicationId 'com.secuso.privacyFriendlyCodeScanner'
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 7
-        versionName "1.5"
+        versionCode 8
+        versionName "1.6"
     }
     buildTypes {
         release {
