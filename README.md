@@ -20,7 +20,7 @@ Further development requires Android Studio, we recommend to use at least versio
 Further development requires Android Studio.
 
 Mininum SDK: 15
-Target SDK: 21 
+Target SDK: 23 
 
 This app uses the help of the ZXing Projekt (https://github.com/zxing).
 
