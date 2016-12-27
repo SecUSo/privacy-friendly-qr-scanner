@@ -43,13 +43,30 @@
             android:layout_marginTop="15dp"
             android:text="@string/app_name_long" />
 
-        <TextView
-            android:id="@+id/textFieldVersion"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="5dp"
-            android:text="@string/version_number" />
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/textFieldVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/version_number" />
+
+            <TextView
+                android:id="@+id/textFieldVersionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@+id/textFieldVersion" />
+
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/textFieldAuthor"
@@ -76,7 +93,7 @@
                 android:id="@+id/textFieldContributors"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
                 android:layout_toEndOf="@+id/textFieldAuthorNames"
                 android:text="@string/about_author_contributors" />
 
@@ -129,10 +146,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
-            android:textStyle="bold"
-            android:text="@string/github" />
+            android:text="@string/github"
+            android:textStyle="bold" />
 
-     <TextView
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -146,8 +163,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
-            android:textStyle="bold"
-            android:text="@string/lib_url" />
+            android:text="@string/lib_url"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
