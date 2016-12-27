@@ -1,7 +1,12 @@
 Changelog
 ==========
 
-Version 16 *(2015-12-21)*
+Version 1.6.1 *(2015-12-27)*
+----------------------------
+
+ * Integration of permission request
+
+Version 1.6 *(2015-12-21)*
 ----------------------------
 
  * Japanese Translation added
