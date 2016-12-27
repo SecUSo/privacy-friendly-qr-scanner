@@ -1,10 +1,16 @@
 package com.secuso.privacyFriendlyCodeScanner.GeneralFragments;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,11 +27,15 @@ import com.secuso.privacyFriendlyCodeScanner.MyCaptureActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
 import com.secuso.privacyFriendlyCodeScanner.Utility.FragmentGenerator;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 /**
  * Created by Philipp on 12.09.2015.
  */
 public class ScanFragment extends Fragment {
     private String toast;
+
+    private Activity activity;
 
     public ScanFragment() {
     }
@@ -40,7 +50,7 @@ public class ScanFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        ImageView image = (ImageView)view.findViewById(R.id.imageView1);
+        ImageView image = (ImageView) view.findViewById(R.id.imageView1);
         image.setMinimumWidth(getResources().getDisplayMetrics().widthPixels);
         image.setMinimumHeight(getResources().getDisplayMetrics().widthPixels);
 
@@ -48,6 +58,13 @@ public class ScanFragment extends Fragment {
         scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                if (SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
+                        return;
+                    }
+                }
                 scanFromFragment();
             }
         });
@@ -61,11 +78,12 @@ public class ScanFragment extends Fragment {
                 editor.putBoolean("lock_orientation", isChecked).commit();
             }
         });
-        cbOrientation.setChecked(PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("lock_orientation",false));
+        cbOrientation.setChecked(PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("lock_orientation", false));
         return view;
     }
 
     public void scanFromFragment() {
+
         IntentIntegrator integrator = IntentIntegrator.forFragment(this);
         integrator.setCaptureActivity(MyCaptureActivity.class);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
@@ -76,7 +94,7 @@ public class ScanFragment extends Fragment {
     }
 
     private void displayToast() {
-        if(getActivity() != null && toast != null) {
+        if (getActivity() != null && toast != null) {
             Toast.makeText(getActivity(), toast, Toast.LENGTH_LONG).show();
             toast = null;
         }
@@ -85,15 +103,21 @@ public class ScanFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if(result != null) {
-            if(result.getContents() == null) {
+        if (result != null) {
+            if (result.getContents() == null) {
                 toast = getResources().getString(R.string.scan_aborted);
             } else {
-                ((MainActivity)getActivity()).switchToFragment(FragmentGenerator.getFragment(result),false);
+                ((MainActivity) getActivity()).switchToFragment(FragmentGenerator.getFragment(result), false);
             }
 
             // At this point we may or may not have a reference to the activity
             displayToast();
         }
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.activity = activity;
     }
 }
