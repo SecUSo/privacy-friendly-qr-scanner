@@ -1,14 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 25
     buildToolsVersion '23.0.3'
     defaultConfig {
         applicationId 'com.secuso.privacyFriendlyCodeScanner'
+<<<<<<< HEAD
         minSdkVersion 16
         targetSdkVersion 21
         versionCode 6
         versionName "1.5"
+=======
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionCode 9
+        versionName "1.6.1"
+>>>>>>> origin/master
     }
     buildTypes {
         release {
@@ -22,9 +29,9 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
     compile 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
     compile 'com.google.zxing:core:3.2.0'
 }
