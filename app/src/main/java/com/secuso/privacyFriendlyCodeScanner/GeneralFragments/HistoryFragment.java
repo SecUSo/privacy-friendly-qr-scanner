@@ -21,6 +21,14 @@ import android.widget.Toast;
 
 import com.secuso.privacyFriendlyCodeScanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.ContactFragment;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.EmailFragment;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.ProductFragment;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.SendEmailFragment;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.SmsFragment;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.TelFragment;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.UrlFragment;
+import com.secuso.privacyFriendlyCodeScanner.ResultFragments.WifiFragment;
 import com.secuso.privacyFriendlyCodeScanner.Utility.FragmentGenerator;
 import com.secuso.privacyFriendlyCodeScanner.Utility.History;
 import com.secuso.privacyFriendlyCodeScanner.Utility.HistoryEntry;
@@ -149,7 +157,9 @@ public class HistoryFragment extends Fragment {
             TextView secondLine = (TextView) newView.findViewById(R.id.secondLine);
             String seconLineText = "";
 
-            if(element.content.startsWith("WIFI:")){
+            Fragment type= FragmentGenerator.getFragmentFromContent(element.content);
+
+            if(type instanceof WifiFragment){
                 icon.setImageResource(R.drawable.ic_action_network_wifi);
                 String[] content = element.content.substring(element.content.indexOf(":") + 1).split(";");
                 int ssid_id = 0;
@@ -160,7 +170,7 @@ public class HistoryFragment extends Fragment {
                 seconLineText = content[ssid_id].substring(2);
                 secondLine.setText(seconLineText);
             }
-            else if(element.content.startsWith("BEGIN:VCARD")){
+            else if(type instanceof ContactFragment){
                 icon.setImageResource(R.drawable.ic_action_person);
 
                 Pattern pattern = Pattern.compile("([\\n|;|:](FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*[\\n|;])");
@@ -181,13 +191,13 @@ public class HistoryFragment extends Fragment {
 
                 firstLine.setText(R.string.title_activity_result_contact);
             }
-            else if(element.content.startsWith("tel:")) {
+            else if(type instanceof TelFragment) {
                 icon.setImageResource(R.drawable.ic_action_call);
                 firstLine.setText(R.string.title_activity_result_tel);
                 seconLineText = element.content.substring(4);
                 secondLine.setText(seconLineText);
             }
-            else if(element.content.startsWith("MATMSG:")) {
+            else if(type instanceof SendEmailFragment) {
                 icon.setImageResource(R.drawable.ic_action_new_email);
                 Pattern r = Pattern.compile("MATMSG:TO:(.+?);SUB:");
                 Matcher m = r.matcher(element.content);
@@ -197,13 +207,13 @@ public class HistoryFragment extends Fragment {
                 }
                 firstLine.setText(R.string.title_activity_result_send_email);
             }
-            else if(element.content.startsWith("mailto:")){
+            else if(type instanceof EmailFragment){
                 icon.setImageResource(R.drawable.ic_action_email);
                 firstLine.setText(R.string.title_activity_result_email);
                 seconLineText = element.content.subSequence(7, element.content.length()).toString();
                 secondLine.setText(seconLineText);
             }
-            else if(element.content.startsWith("SMSTO:")) {
+            else if(type instanceof SmsFragment) {
                 icon.setImageResource(R.drawable.ic_action_chat);
                 String content = element.content.substring(element.content.indexOf(":") + 1);
                 String address = content.substring(0, content.indexOf(":"));
@@ -211,7 +221,7 @@ public class HistoryFragment extends Fragment {
                 secondLine.setText(seconLineText);
                 firstLine.setText(R.string.title_activity_result_sms);
             }
-            else if(element.content.startsWith("http://") || element.content.startsWith("https://") || element.content.startsWith("www.")) {
+            else if(type instanceof UrlFragment) {
                 if (element.content.contains("maps.google") | element.content.contains("geo:"))
                     icon.setImageResource(R.drawable.ic_action_place);
                 else
@@ -219,6 +229,12 @@ public class HistoryFragment extends Fragment {
                 firstLine.setText(R.string.title_activity_result_url);
                 seconLineText = element.content;
                 secondLine.setText(seconLineText);
+            }
+            else if(type instanceof ProductFragment) {
+                icon.setImageResource(R.drawable.ic_action_about);
+                seconLineText = element.content;
+                secondLine.setText(seconLineText);
+                firstLine.setText(R.string.title_activity_result_product);
             }
             else {
                 icon.setImageResource(R.drawable.ic_action_view_as_list);
@@ -267,37 +283,18 @@ public class HistoryFragment extends Fragment {
                                             newView.setBackgroundColor(Color.WHITE);
                                             break;
                                         default:
+                                            newView.setBackgroundColor(Color.WHITE);
                                             break;
                                     }
                                 }
                             });
-                    /*
+
                     deleteDialog.setOnCancelListener(new DialogInterface.OnCancelListener () {
                         @Override
                         public void onCancel(DialogInterface dialog) {
                             newView.setBackgroundColor(Color.WHITE);
                         }
                     });
-                    deleteDialog.setMessage(R.string.delete_message);
-                    deleteDialog.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog,
-                                            int which) {
-                            remove(element.id);
-                            refresh();
-                            Toast.makeText(getActivity(), getResources().getString(R.string.element_removed), Toast.LENGTH_SHORT).show();
-                            newView.setBackgroundColor(Color.WHITE);
-                        }
-                    });
-
-                    deleteDialog.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog,
-                                            int which) {
-                            newView.setBackgroundColor(Color.WHITE);
-                        }
-                    });
-                    */
                     deleteDialog.show();
                     return true;
                 }

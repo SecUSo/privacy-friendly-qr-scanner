@@ -2,8 +2,10 @@ package com.secuso.privacyFriendlyCodeScanner.Utility;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.zxing.integration.android.IntentResult;
+import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyFriendlyCodeScanner.ResultFragments.ContactFragment;
 import com.secuso.privacyFriendlyCodeScanner.ResultFragments.EmailFragment;
 import com.secuso.privacyFriendlyCodeScanner.ResultFragments.ProductFragment;
@@ -21,10 +23,10 @@ import java.util.regex.Pattern;
  * Created by Philipp on 14/09/2015.
  */
 public class FragmentGenerator {
-    public static Fragment getFragment(IntentResult result) {
+    public static Fragment getFragment(BarcodeResult result) {
         Fragment fragment;
-        String format = result.getFormatName();
-        String content = result.getContents();
+        String format = result.getBarcodeFormat().name();
+        String content = result.getResult().toString();
 
         if(!format.contains("QR_CODE"))
             fragment = new ProductFragment();
@@ -48,7 +50,8 @@ public class FragmentGenerator {
         }
 
         Bundle bundle = new Bundle();
-        bundle.putString("result_content", result.getContents());
+        bundle.putString("result_content", result.getResult().toString());
+        Log.e("TESTER", result.getResult().toString());
         fragment.setArguments(bundle);
 
         return fragment;
@@ -58,7 +61,7 @@ public class FragmentGenerator {
         Fragment fragment;
         boolean isProduct = false;
 
-        Pattern r = Pattern.compile("^[0-9]\\*\\$");
+        Pattern r = Pattern.compile("[0-9]+");
         Matcher m = r.matcher(content);
         if(m.find()) isProduct = true;
 

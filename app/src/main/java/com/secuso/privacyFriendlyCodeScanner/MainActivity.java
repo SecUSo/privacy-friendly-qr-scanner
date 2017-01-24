@@ -24,10 +24,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.AboutFragment;
+import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.MyCaptureFragment;
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.HelpFragment;
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.HistoryFragment;
-import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.IntroFragment;
-import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.ScanFragment;
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.SettingsFragment;
 
 import java.io.File;
@@ -68,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else if(savedInstanceState == null) {
                 selectItem(0, false);
         }
-        overridePendingTransition(0, 0);
     }
 
     @Override
@@ -160,7 +158,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void switchToFragment(Fragment frag, boolean back){
         Fragment temp = getFragmentManager().findFragmentById(R.id.container);
         if(!back)
-            if(temp instanceof ScanFragment)
+            if(temp instanceof MyCaptureFragment)
                 backStack.push(0);
             else if(temp instanceof HistoryFragment)
                 backStack.push(1);
@@ -233,7 +231,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected int getNavigationDrawerID() {
         Fragment temp = getFragmentManager().findFragmentById(R.id.container);
 
-        if(temp instanceof ScanFragment)
+        if(temp instanceof MyCaptureFragment)
             return R.id.nav_scan;
         else if(temp instanceof HistoryFragment)
             return R.id.nav_history;
@@ -254,12 +252,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     protected boolean goToNavigationItem(final int itemId) {
 
-        /*if(itemId == getNavigationDrawerID()) {
-            // just close drawer because we are already in this activity
-            mDrawerLayout.closeDrawer(GravityCompat.START);
-            return true;
-        }*/
-
         // delay transition so the drawer can close
         mHandler.postDelayed(new Runnable() {
             @Override
@@ -272,11 +264,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         selectNavigationItem(itemId);
 
-        // fade out the active activity
-        /*View mainContent = findViewById(R.id.main_content);
-        if (mainContent != null) {
-            mainContent.animate().alpha(0).setDuration(MAIN_CONTENT_FADEOUT_DURATION);
-        }*/
         return true;
     }
 
@@ -315,7 +302,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         TextView drawer_header = (TextView) findViewById(R.id.drawer_header);
 
         if(position == 0) {
-            switchToFragment(new ScanFragment(), back);
+            switchToFragment(new MyCaptureFragment(), back);
             this.setTitle(R.string.app_name);
         }
         else if(position == 1) {

@@ -14,7 +14,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="6dip"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_action_about" />
 
     <TextView
         android:id="@+id/secondLine"

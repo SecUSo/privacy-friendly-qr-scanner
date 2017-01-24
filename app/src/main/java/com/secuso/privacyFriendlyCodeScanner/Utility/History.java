@@ -111,10 +111,7 @@ public class History {
         try {
             if(!file.canWrite()) {
                 file.createNewFile();
-                Log.e("Problem", "neue Datei erzeugt.");
             }
-            else
-                Log.e("Problem", "keine neue Datei erzeugt.");
 
             BufferedWriter out = new BufferedWriter(
                     new OutputStreamWriter(
@@ -131,8 +128,7 @@ public class History {
             out.close();
 
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            Log.e("Problem", "keine neue Datei erzeugt.");
+
         }
     }
 

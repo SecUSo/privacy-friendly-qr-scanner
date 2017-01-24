@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.Browser;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -21,6 +20,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.secuso.privacyFriendlyCodeScanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
 
 import java.util.regex.Matcher;
@@ -124,6 +124,10 @@ public class UrlFragment extends ResultFragment {
                                             break;*/
                                         case 1:
                                             saveScanned(true);
+                                            if(fromHistory)
+                                                ((MainActivity)getActivity()).selectItem(1,false);
+                                            else
+                                                ((MainActivity)getActivity()).selectItem(0,false);
                                             break;
                                         default:
                                     }

@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.secuso.privacyFriendlyCodeScanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
 
 /**
@@ -67,6 +68,11 @@ public class EmailFragment extends ResultFragment {
                                         break;
                                     case 2:
                                         saveScanned(true);
+                                        fromHistory = getArguments().getBoolean("history", false);
+                                        if(fromHistory)
+                                            ((MainActivity)getActivity()).selectItem(1,false);
+                                        else
+                                            ((MainActivity)getActivity()).selectItem(0,false);
                                         break;
                                     default:
                                 }

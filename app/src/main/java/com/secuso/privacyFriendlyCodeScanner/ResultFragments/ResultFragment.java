@@ -36,7 +36,10 @@ public abstract class ResultFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-            ((MainActivity)getActivity()).selectItem(1,false);
+               if(fromHistory)
+                    ((MainActivity)getActivity()).selectItem(1,false);
+                else
+                    ((MainActivity)getActivity()).selectItem(0,false);
             }
         });
 

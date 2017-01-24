@@ -1,7 +1,6 @@
 package com.secuso.privacyFriendlyCodeScanner.ResultFragments;
 
 import android.app.AlertDialog;
-import android.app.SearchManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.secuso.privacyFriendlyCodeScanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
 
 /**
@@ -55,6 +55,10 @@ public class TextFragment extends ResultFragment {
                                         break;
                                     case 1:
                                         saveScanned(true);
+                                        if(fromHistory)
+                                            ((MainActivity)getActivity()).selectItem(1,false);
+                                        else
+                                            ((MainActivity)getActivity()).selectItem(0,false);
                                         break;
                                     default:
                                 }

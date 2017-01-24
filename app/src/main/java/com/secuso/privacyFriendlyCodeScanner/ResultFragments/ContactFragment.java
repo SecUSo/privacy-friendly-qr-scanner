@@ -1,24 +1,25 @@
 package com.secuso.privacyFriendlyCodeScanner.ResultFragments;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.content.FileProvider;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.secuso.privacyFriendlyCodeScanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -81,6 +82,10 @@ public class ContactFragment extends ResultFragment {
                                         break;
                                     case 1:
                                         saveScanned(true);
+                                        if(fromHistory)
+                                            ((MainActivity)getActivity()).selectItem(1,false);
+                                        else
+                                            ((MainActivity)getActivity()).selectItem(0,false);
                                         break;
                                     default:
                                 }
@@ -92,21 +97,26 @@ public class ContactFragment extends ResultFragment {
 
         return rootView;
     }
+
     private Uri createVCard() {
         try {
             File sdcard = getActivity().getFilesDir();
             File file = new File(sdcard,"vCard.vcf");
 
-
-            BufferedWriter out = new BufferedWriter(
+            /*BufferedWriter out = new BufferedWriter(
                     new OutputStreamWriter(
-                            new FileOutputStream(file, false)));
+                            new FileOutputStream(file, false)));*/
 
-            out.append(result);
-            out.flush();
+            FileOutputStream out = getActivity().openFileOutput(file.getName(), Context.MODE_WORLD_READABLE);
+
+            out.write(result.getBytes());
+            //out.flush();
             out.close();
 
+            Log.e("TESTEST", file.getPath());
+
             Uri uri = FileProvider.getUriForFile(getActivity(), "com.secuso.privacyFriendlyCodeScanner", file);
+            getActivity().grantUriPermission("com.google.android.contacts", uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
             getActivity().grantUriPermission("com.android.contacts", uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
             return uri;
