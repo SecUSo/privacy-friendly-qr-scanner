@@ -1,10 +1,15 @@
 package com.secuso.privacyFriendlyCodeScanner.GeneralFragments;
 
+import android.Manifest;
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -23,11 +28,14 @@ import com.secuso.privacyFriendlyCodeScanner.Utility.FragmentGenerator;
 
 import java.util.List;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 public class MyCaptureFragment extends Fragment {
 
     private CompoundBarcodeView barcodeView;
     private BeepManager beepManager;
     private boolean torchOn = false;
+    private Activity activity;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -37,6 +45,11 @@ public class MyCaptureFragment extends Fragment {
 
         View v;
         v = inflater.inflate(R.layout.fragment_capture, container, false);
+
+        if (SDK_INT >= Build.VERSION_CODES.M)
+            if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
+            }
 
         barcodeView = (CompoundBarcodeView) v.findViewById(R.id.barcode_scanner);
 
@@ -127,5 +140,11 @@ public class MyCaptureFragment extends Fragment {
 
     private boolean hasFlash(){
         return getActivity().getApplication().getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        this.activity = activity;
     }
 }

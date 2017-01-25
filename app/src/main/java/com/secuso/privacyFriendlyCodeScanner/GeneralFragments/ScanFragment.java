@@ -48,6 +48,7 @@ public class ScanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         ImageView image = (ImageView) view.findViewById(R.id.imageView1);
@@ -79,7 +80,8 @@ public class ScanFragment extends Fragment {
             }
         });
         cbOrientation.setChecked(PreferenceManager.getDefaultSharedPreferences(getActivity()).getBoolean("lock_orientation", false));
-        return view;
+        return view;*/
+        return null;
     }
 
     public void scanFromFragment() {
@@ -101,7 +103,7 @@ public class ScanFragment extends Fragment {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {/*
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
             if (result.getContents() == null) {
@@ -113,6 +115,7 @@ public class ScanFragment extends Fragment {
             // At this point we may or may not have a reference to the activity
             displayToast();
         }
+        */
     }
 
     @Override

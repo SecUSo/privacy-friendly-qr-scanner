@@ -30,8 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-=======
 
         <activity
             android:name="com.secuso.privacyFriendlyCodeScanner.MainActivity"
@@ -47,7 +45,6 @@
             android:windowSoftInputMode="stateAlwaysHidden"
             android:icon="@mipmap/ic_launcher">
         </activity>
->>>>>>> origin/master
     </application>
 
 </manifest>

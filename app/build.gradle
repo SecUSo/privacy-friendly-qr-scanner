@@ -5,17 +5,10 @@ android {
     buildToolsVersion '23.0.3'
     defaultConfig {
         applicationId 'com.secuso.privacyFriendlyCodeScanner'
-<<<<<<< HEAD
-        minSdkVersion 16
-        targetSdkVersion 21
-        versionCode 6
-        versionName "1.5"
-=======
         minSdkVersion 17
         targetSdkVersion 25
         versionCode 9
         versionName "1.6.1"
->>>>>>> origin/master
     }
     buildTypes {
         release {

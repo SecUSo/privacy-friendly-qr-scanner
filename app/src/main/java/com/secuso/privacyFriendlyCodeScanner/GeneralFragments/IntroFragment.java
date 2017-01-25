@@ -31,7 +31,7 @@ public class IntroFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                 Bundle savedInstanceState) {
-
+    /*
         View rootView = inflater.inflate(R.layout.fragment_intro, container, false);
 
         TextView bull1 = (TextView) rootView.findViewById(R.id.bull1);
@@ -58,5 +58,7 @@ public class IntroFragment extends Fragment {
 
         });
         return rootView;
+        */
+        return null;
     }
 }

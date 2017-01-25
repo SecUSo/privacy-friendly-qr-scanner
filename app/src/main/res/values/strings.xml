@@ -150,11 +150,11 @@
     <string name="viewhelp">View Help</string>
     <string name="main_button_welcomedialog">Show Welcome</string>
 
-    <string name="help_privacy_heading">Privacy Info</string>
+    <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
     <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="weburl" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="help_permission1_description">Used to scan barcodes and qr codes via camera.</string>
     <string name="help_permission1_heading">Camera</string>
