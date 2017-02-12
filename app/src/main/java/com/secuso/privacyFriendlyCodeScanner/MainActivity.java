@@ -24,11 +24,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.AboutFragment;
-import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.MyCaptureFragment;
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.HelpFragment;
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.HistoryFragment;
-
-import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.ScanFragment;
+import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.MyCaptureFragment;
 import com.secuso.privacyFriendlyCodeScanner.GeneralFragments.SettingsFragment;
 
 import java.io.File;

@@ -1,33 +1,19 @@
 package com.secuso.privacyFriendlyCodeScanner.GeneralFragments;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
-import com.secuso.privacyFriendlyCodeScanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.MyCaptureActivity;
 import com.secuso.privacyFriendlyCodeScanner.R;
-import com.secuso.privacyFriendlyCodeScanner.Utility.FragmentGenerator;
-
-import static android.os.Build.VERSION.SDK_INT;
 
 /**
  * Created by Philipp on 12.09.2015.

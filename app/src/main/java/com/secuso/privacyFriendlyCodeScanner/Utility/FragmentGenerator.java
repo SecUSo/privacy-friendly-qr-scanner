@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.google.zxing.integration.android.IntentResult;
 import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyFriendlyCodeScanner.ResultFragments.ContactFragment;
 import com.secuso.privacyFriendlyCodeScanner.ResultFragments.EmailFragment;
