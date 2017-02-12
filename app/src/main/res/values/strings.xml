@@ -1,10 +1,8 @@
 <resources>
-    <string name="title_activity_my_capture">MyCaptureActivity</string>
 
     <string name="scan_text">Place this window above the code u want to decode.</string>
 
     <!--###ABOUT###-->
-    <string name="about">About</string>
     <string name="about_author">Authors: </string>
     <string name="about_author_names" translatable="false">Philipp Rack</string>
     <string name="about_author_contributors">and contributors.</string>
@@ -17,46 +15,28 @@
     <string name="app_name">QR Scanner</string>
     <string name="version_number">Version</string>
     <string name="action_settings">Settings</string>
-    <string name="action_share">Share</string>
     <string name="history">History</string>
     <string name="action_clear">Clear History</string>
     <string name="cannot_clear">The history is already empty</string>
-    <string name="scanButton">Start Scan</string>
-    <string name="lock_orientation">Lock orientation of scanner</string>
-    <string name="url">URL</string>
     <string name="knowRisks">I checked the link and want to visit the website.</string>
     <string name="domain">Domain</string>
-    <string name="ssl">Visiting this site means that your data is sent unencrypted!</string>
     <string name="urlExplanation">QR-Codes can contain links, that lead to a faked website, which can compromise your personal data (phishing website) or transfer malware (e.g. viruses) to your device.\n\nAs a consequence you should <b>check</b> if the following link is the one you expected:</string>
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Information</a> how to check links are provided by the colleagues of TU Darmstadt. If you do not trust the link, click do not trust &amp; do not save.</string>
-    <string name="textview">TextView</string>
-    <string name="drawer_open">Drawer open</string>
-    <string name="drawer_close">Drawer close</string>
-    <string name="delete_message">Do you want to delete this entry?</string>
-    <string name="delete_message_nottrustworthy">You classified the entry as not trustworthy. Do you want to delete it now?</string>
     <string name="delete_history">Do you want to delete the history?</string>
     <string name="cancel">Cancel</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element removed.</string>
     <string name="conform_url">Please confirm, that you checked the link.</string>
-    <string name="scan_aborted">Scan aborted.</string>
     <string name="wifi_explanation">This version of the app cannot connect to WIFI networks automatically due to the permission that would be needed. Below are some details about the network.</string>
     <string name="encryption">Encryption</string>
     <string name="action_about">About</string>
     <string name="about_libraries">Used libraries:</string>
     <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
-    <string name="confirm_intro">Begin</string>
     <string name="history_disabled">History disabled</string>
-    <string name="number">Number</string>
-    <string name="message">Message</string>
     <string name="to">Recipient:</string>
     <string name="subject">Subject:</string>
 
-    <string name="intro_text">Below you will find a few hints about the app</string>
-    <string name="usability_hint1">To adjust the scanner, use the preferences menu.</string>
     <string name="usability_hint2">If you cannot scan a code, increase the distance between the scanner and the code.</string>
-    <string name="usability_hint3">In poor lighting conditions, use the volume controls to turn the camera light on.</string>
-    <string name="usability_hint4">If you click on <b>not trustworthy</b>, the scanned QR-Code is not saved to the history.</string>
 
     <string name="description_contact">The QR-Code you scanned contains contact information. In order to <i>import</i> it into your address book, click Proceed.</string>
     <string name="description_email">The QR-Code you scanned contains an email address. In order to <i>send an email</i> or <i>add it to a contact</i>, click Proceed.</string>
@@ -123,19 +103,15 @@
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>
 
-    <string name="title_activity_result">QR Scanner</string>
     <string name="title_activity_result_url">Link found</string>
     <string name="title_activity_result_text">Text found</string>
     <string name="title_activity_result_sms">SMS found</string>
     <string name="title_activity_result_email">Email address found</string>
-    <string name="title_activity_result_location">Location found</string>
     <string name="title_activity_result_send_email">Email found</string>
     <string name="title_activity_result_product">Product found</string>
     <string name="title_activity_result_tel">Phone number found</string>
-    <string name="title_activity_main">QR Scanner</string>
     <string name="title_activity_result_wifi">Wifi found</string>
     <string name="title_activity_result_contact">Contact found</string>
-    <string name="title_activity_about">About</string>
     <string name="app_name_long">Privacy friendly QR scanner</string>
     <string name="action_help">Help</string>
 
@@ -146,24 +122,18 @@
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">Privacy Friendly QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring Minimal set of permissions and supporting the detection of malicious links.</string>
     <string name="welcome">Welcome</string>
-    <string name="okay">Okay</string>
     <string name="viewhelp">View Help</string>
-    <string name="main_button_welcomedialog">Show Welcome</string>
 
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
     <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
-    <string name="weburl" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="help_permission1_description">Used to scan barcodes and qr codes via camera.</string>
     <string name="help_permission1_heading">Camera</string>
-    <string name="help_permission2_heading">Vibration</string>
-    <string name="help_permission2_description">Used to give haptic feedback after sucessful scan.</string>
     <string name="help_example"></string>
+    <string name="help_privacy_heading">Privacy Info</string>
     <string name="help_category_example">General Information</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="help_overview_heading">Overview</string>
     <string name="help_intro">The app allows scanning of barcodes and qr-codes with various content.</string>
-    <string name="url_1"><a href="https://www.secuso.informatik.tu-darmstadt.de/en/research/results/">https://www.secuso.org</a></string>
 </resources>

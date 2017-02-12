@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="title_activity_my_capture">MyCaptureActivity</string>
     <string name="scan_text">Platzieren Sie den Scanner über dem Code den Sie decodieren möchten.</string>
 
-    <string name="about">Über</string>
     <string name="about_author">Autoren: </string>
     <string name="about_author_contributors">und Mitwirkende.</string>
     <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quelltext lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
@@ -13,46 +11,29 @@
     <string name="app_name">QR Scanner</string>
     <string name="version_number">Version</string>
     <string name="action_settings">Einstellungen</string>
-    <string name="action_share">Teilen</string>
     <string name="history">Verlauf</string>
     <string name="action_clear">Verlauf löschen</string>
     <string name="cannot_clear">Der Verlauf ist bereits leer.</string>
-    <string name="scanButton">Scan starten</string>
-    <string name="url">URL</string>
     <string name="knowRisks">Ich habe den Link geprüft und möchte die Webseite besuchen.</string>
     <string name="domain">Link:</string>
-    <string name="ssl">Wenn Sie die Webseite besuchen, werden Ihre Daten unverschlüsselt gesendet!</string>
     <string name="urlExplanation">QR-Codes können Links enthalten, die zu einer Webseite führen, auf der Ihre Daten gefährdet sind (z.B. Phishing Webseiten) oder über die Schadsoftware (z.B. Viren) auf Ihr Gerät geladen wird.\n\n<b>Überprüfen</b> Sie daher, ob folgender Link der ist, den Sie erwartet haben: </string>
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informationen</a>, wie Sie den Link überprüfen, werden von der TU Darmstadt bereitgestellt. Wenn Sie die dem Link nicht vertrauen, klicken Sie auf nicht vertrauen &amp; nicht speichern.</string>
-    <string name="textview">TextView</string>
-    <string name="drawer_open">Drawer open</string>
-    <string name="drawer_close">Drawer close</string>
-    <string name="delete_message">Möchten Sie den Eintrag wirklich löschen?</string>
-    <string name="delete_message_nottrustworthy">Sie schätzen diesen Eintrag als nicht vertrauenswürdig ein. Möchten Sie ihn daher jetzt löschen?</string>
     <string name="delete_history">Möchten Sie den Verlauf wirklich löschen?</string>
     <string name="cancel">Abbrechen</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element gelöscht.</string>
     <string name="conform_url">Bitte bestätigen Sie, dass Sie den Link geprüft haben.</string>
-    <string name="scan_aborted">Scan abgebrochen.</string>
     <string name="wifi_explanation">Aufgrund der nötigen Rechte, ermöglicht diese Version der App keine direkte Verbindung mit einem WIFI Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
     <string name="encryption">Verschlüsselung</string>
     <string name="action_about">Über</string>
     <string name="about_affiliation">In Zusammenarbeit mit:</string>
 	<string name="about_libraries">Verwendete Bibliotheken:</string>
-	<string name="confirm_intro">Beginnen</string>
-	<string name="history_disabled">Verlauf deaktiviert</string>
-	<string name="number">Nummer</string>
-	<string name="message">Nachricht</string>
-	<string name="to">Empfänger:</string>
+    <string name="history_disabled">Verlauf deaktiviert</string>
+    <string name="to">Empfänger:</string>
 	<string name="subject">Betreff:</string>
-	
-	<string name="intro_text">Im Folgenden ein paar Tipps zur App:</string>
-    <string name="usability_hint1">In den Einstellungen können Sie den Scanner nach Ihren Wünschen konfigurieren.</string>
-	<string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie ihn etwas weiter entfernt zu scannen.</string>
-	<string name="usability_hint3">Bei schlechten Lichtverhältnissen können Sie mit den Lautstärketasten das Kameralicht hinzuschalten.</string>
-	<string name="usability_hint4">Wenn Sie auf <b>nicht vertrauenswürdig</b> klicken, wird das Gescannte nicht im Verlauf gespeichert.</string>
-	
+
+    <string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie ihn etwas weiter entfernt zu scannen.</string>
+
     <string name="description_contact">Der gescannte QR-Code enthält Kontaktinformationen. Um diese in Ihr Adressbuch zu <i>importieren</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_email">Der gescannte QR-Code enthält eine E-Mail-Adresse. Um eine <i>E-Mail zu senden</i> oder <i>sie einem Kontakt hizuzufügen</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_send_email">Der gescannte QR-Code enthält eine ausgefüllte E-Mail. Um diese zu <i>senden</i> oder <i>die Adresse einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
@@ -61,9 +42,7 @@
 	<string name="description_sms">Der gescannte QR-Code enthält eine SMS. Um diese zu <i>senden</i> oder <i>die Nummer einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_text">Der gescannte QR-Code enthält Text. Um nach mehr Informationen im <i>Internet zu suchen</i>, klicken Sie auf Fortfahren.</string>
 
-    <string name="url_1"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/">https://www.secuso.org</a></string>
-	
-	<string name="choose_action">Fortfahren &amp; speichern</string>
+    <string name="choose_action">Fortfahren &amp; speichern</string>
 	<string name="abort_action">Abbrechen &amp; nicht speichern</string>
 
     <string name="proceed">Fortfahren</string>
@@ -125,16 +104,11 @@
     <string name="title_activity_result_text">Text gefunden</string>
     <string name="title_activity_result_sms">SMS gefunden</string>
     <string name="title_activity_result_email">E-Mail-Adresse gefunden</string>
-    <string name="title_activity_result_location">Position gefunden</string>
     <string name="title_activity_result_send_email">Email gefunden</string>
     <string name="title_activity_result_tel">Telefonnummer gefunden</string>
     <string name="title_activity_result_product">Produkt gefunden</string>
-    <string name="title_activity_main">QR Scanner</string>
     <string name="title_activity_result_contact">Kontakt gefunden</string>
-    <string name="title_activity_about">Über</string>
-    <string name="title_activity_result">QR Scanner</string>
     <string name="app_name_long" >Privacy friendly QR scanner</string>
-    <string name="lock_orientation" >Ausrichtung des Scanners sperren</string>
     <string name="action_help">Hilfe</string>
 
     <!-- ###DRAWER###-->
@@ -144,19 +118,14 @@
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">Die Privacy Friendly QR Code Scanner App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, wozu sie nur minimale Berechtigungen benötigt und zur Unterstützung bei der Erkennung von Links auf schadhafte Seiten dient.</string>
     <string name="welcome">Wilkommen</string>
-    <string name="okay">Okay</string>
     <string name="viewhelp">Hilfe zeigen</string>
-    <string name="main_button_welcomedialog">Zeige Begrüßung</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="help_overview_heading">Übersicht</string>
     <string name="help_intro">Diese App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten.</string>
     <string name="help_category_example">Allgemeine Hinweise</string>
     <string name="help_privacy_heading">Datenschutzinfo</string>
     <string name="help_permission1_heading">Kamera</string>
     <string name="help_permission1_description">Wird benötigt um über die Kamera Barcodes oder QR-Codes zu scannen.</string>
-    <string name="help_permission2_heading">Vibration</string>
-    <string name="help_permission2_description">Wird benötigt um zu haptisches Feedback nach dem Scannen zu geben.</string>
     <!--<string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quelltext lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
     <string name="about_author_contributors">Mitwirkende</string>-->

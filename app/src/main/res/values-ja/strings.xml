@@ -1,10 +1,8 @@
 ﻿<resources>
-    <string name="title_activity_my_capture">MyCaptureActivity</string>
 
     <string name="scan_text">読み取るコードの上にこのウインドウをかざしてください。</string>
 
     <!--###ABOUT###-->
-    <string name="about">アプリについて</string>
     <string name="about_author">作者: </string>
     <string name="about_author_contributors">と貢献者。</string>
     <string name="about_affiliation">提携</string>
@@ -14,45 +12,27 @@
     <string name="app_name">QR Scanner</string>
     <string name="version_number">Version</string>
     <string name="action_settings">設定</string>
-    <string name="action_share">共有</string>
     <string name="history">履歴</string>
     <string name="action_clear">履歴をクリア</string>
     <string name="cannot_clear">履歴はすでに空です</string>
-    <string name="scanButton">スキャンを開始</string>
-    <string name="lock_orientation">スキャナの向きを固定する</string>
-    <string name="url">URL</string>
     <string name="knowRisks">リンクを確認しました。 Web サイトを訪問します。</string>
     <string name="domain">ドメイン</string>
-    <string name="ssl">このサイトにアクセスすると、データが暗号化されずに送信されます!</string>
     <string name="urlExplanation">QR コードには、あなたの個人データを侵害する可能性のある偽のウェブサイト（フィッシング詐欺ウェブサイト）へのリンクや、マルウェア（例えばウイルス）をあなたの端末に転送するリンクが含まれている可能性があります。\n\nそのため、次のリンクが想定したものかどうかを <b>確認</b> してください:</string>
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">情報</a> リンクを確認する方法は、TU Darmstadt の同僚によって提供されています。 リンクを信頼しない場合は、信頼しない &amp; 保存しない、をクリックしてください。</string>
-    <string name="textview">テキストビュー</string>
-    <string name="drawer_open">ドロワーを開く</string>
-    <string name="drawer_close">ドロワーを閉じる</string>
-    <string name="delete_message">このエントリーを削除しますか?</string>
-    <string name="delete_message_nottrustworthy">エントリーを信頼できないものと分類しました。 今すぐ削除しますか?</string>
     <string name="delete_history">履歴を削除しますか?</string>
     <string name="cancel">キャンセル</string>
     <string name="ok">OK</string>
     <string name="element_removed">項目を削除しました。</string>
     <string name="conform_url">確認したリンクをもう一度確認してください。</string>
-    <string name="scan_aborted">スキャンを中断しました。</string>
     <string name="wifi_explanation">このバージョンのアプリは、必要なアクセス許可のために WIFI ネットワークに自動的に接続できません。 以下はネットワークの詳細に関してです。</string>
     <string name="encryption">暗号化</string>
     <string name="action_about">アプリについて</string>
     <string name="about_libraries">使用ライブラリー:</string>
-    <string name="confirm_intro">始める</string>
     <string name="history_disabled">履歴は無効です</string>
-    <string name="number">番号</string>
-    <string name="message">メッセージ</string>
     <string name="to">受信者:</string>
     <string name="subject">件名:</string>
 
-    <string name="intro_text">以下に、いくつかのアプリについてのヒントがあります</string>
-    <string name="usability_hint1">スキャナを調整するには、設定メニューを使用してください。</string>
     <string name="usability_hint2">コードをスキャンできない場合は、スキャナとコード間の距離を広げてください。</string>
-    <string name="usability_hint3">暗い環境では、音量コントロールを使用してカメラのライトをオンにしてください。</string>
-    <string name="usability_hint4"><b>信頼しない</b> をクリックすると、スキャンした QR コードは履歴に保存されません。</string>
 
     <string name="description_contact">スキャンした QR コードに連絡先情報が含まれています。 アドレス帳に <i>インポート</i> するには、続行をクリックします。</string>
     <string name="description_email">スキャンした QR コードにメールアドレスが含まれています。 <i>メールを送信</i> または <i>連絡先に追加</i> するには、続行をクリックします。</string>
@@ -119,19 +99,15 @@
     <string name="copied_to_clipboard">クリップボードにコピーしました。</string>
     <string name="noname">名前が指定されていません</string>
 
-    <string name="title_activity_result">QR スキャナー</string>
     <string name="title_activity_result_url">リンクが見つかりました</string>
     <string name="title_activity_result_text">テキストが見つかりました</string>
     <string name="title_activity_result_sms">SMS が見つかりました</string>
     <string name="title_activity_result_email">メールアドレスが見つかりました</string>
-    <string name="title_activity_result_location">場所が見つかりました</string>
     <string name="title_activity_result_send_email">メールが見つかりました</string>
     <string name="title_activity_result_product">製品が見つかりました</string>
     <string name="title_activity_result_tel">電話番号が見つかりました</string>
-    <string name="title_activity_main">QR スキャナー</string>
     <string name="title_activity_result_wifi">Wifi が見つかりました</string>
     <string name="title_activity_result_contact">連絡先が見つかりました</string>
-    <string name="title_activity_about">アプリについて</string>
     <string name="app_name_long" >Privacy friendly QR scanner</string>
     <string name="action_help">ヘルプ</string>
 
@@ -142,6 +118,5 @@
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">プライバシーフレンドリーな QR コードスキャナーアプリは、必要なアクセス許可が最小限で、悪意のあるリンクの検出をサポートします。</string>
     <string name="welcome">ようこそ</string>
-    <string name="okay">OK</string>
     <string name="viewhelp">ヘルプを表示</string>
 </resources>
