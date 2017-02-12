@@ -129,11 +129,11 @@
     <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
-    <string name="help_permission1_description">Used to scan barcodes and qr codes via camera.</string>
+    <string name="help_permission1_description">The app required the camera permission, which is used to scan barcodes and qr codes via camera.</string>
     <string name="help_permission1_heading">Camera</string>
     <string name="help_example"></string>
-    <string name="help_privacy_heading">Privacy Info</string>
-    <string name="help_category_example">General Information</string>
-    <string name="help_overview_heading">Overview</string>
-    <string name="help_intro">The app allows scanning of barcodes and qr-codes with various content.</string>
+    <string name="help_privacy_heading">What permissions are required by Privacy Friendly QR Scanner?</string>
+    <string name="help_category_example">The scannoing does not work, what can I do?</string>
+    <string name="help_overview_heading">What is Privacy Friendly QR Scanner?</string>
+    <string name="help_intro">With Privacy Friendly QR Scanner you can scan barcodes and qr-codes with various contents.</string>
 </resources>
