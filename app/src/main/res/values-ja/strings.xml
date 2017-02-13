@@ -119,4 +119,17 @@
     <string name="welcome_text">プライバシーフレンドリーな QR コードスキャナーアプリは、必要なアクセス許可が最小限で、悪意のあるリンクの検出をサポートします。</string>
     <string name="welcome">ようこそ</string>
     <string name="viewhelp">ヘルプを表示</string>
+
+    <!--<string name="help_privacy_heading">プライバシー情報</string>
+    <string name="about_author_contributors">貢献者</string>
+    <string name="privacy_friendly">このアプリケーションは、ダルムシュタット工科大学 (Technische Universität Darmstadt, Germany) が開発したプライバシーフレンドリーアプリのグループに属しています。ソースコードは GPLv3 の下でライセンスされます。画像の著作権は TU Darmstadt および Google Inc.</string>
+    <string name="more_info">さらに詳しい情報は以下でご覧ください:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
+    <string name="help_permission1_description">アプリはカメラのアクセス許可を必要とします。これはカメラでバーコードと QR コードをスキャンするために使用します。</string>
+    <string name="help_permission1_heading">カメラ</string>
+    <string name="help_example"></string>
+    <string name="help_privacy_heading">プライバシーフレンドリー QR スキャナーは、何のアクセス許可が必要ですか?</string>
+    <string name="help_category_example">スキャンが動作しません。どうすればいいですか?</string>
+    <string name="help_overview_heading">プライバシーフレンドリー QR スキャナーとは何ですか?</string>
+    <string name="help_intro">プライバシーフレンドリー QR スキャナーは、さまざまな内容のバーコードと QR コードをスキャンすることができます。</string>
 </resources>
