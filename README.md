@@ -1,4 +1,7 @@
-## Privacy Friendly QR Scanner
+# Privacy Friendly QR Scanner
+
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=com.secuso.privacyFriendlyCodeScanner)<a href="https://play.google.com/store/apps/details?id=com.secuso.privacyFriendlyCodeScanner"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="60"></a>
+
 The Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps. The app supports its users in detecting malicious links: QR Codes provide new possibilities for an attacker, as QR Codes can contain malicious links, i.e. links to phishing webpages or webpages from which malware would automatically be downloaded. Therefore it is important to carefully check the link before accessing the corresponding webpage.
 
 This app is optimized regarding the user's privacy. It only uses the device's camera in order to decode QR codes and barcodes.
@@ -7,11 +10,7 @@ This app is optimized regarding the user's privacy. It only uses the device's ca
 
 Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps and has been developed to provide a privacy friendly QR-Code/Barcode decoding application. 
 
-## Download and more Information
-
-[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=com.secuso.privacyFriendlyCodeScanner)<a href="https://play.google.com/store/apps/details?id=com.secuso.privacyFriendlyCodeScanner"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="60"></a>
-
-### Building 
+## Building 
 
 Further development requires Android Studio, we recommend to use at least version 2.2.2
  
@@ -42,7 +41,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-The icons used in the nagivation drawer are licensed under the [CC BY 2.5] (http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the splash screen icon and the header in the navigation drawer) copyright [Technische Universtität Darmstadt] (www.tu-darmstadt.de) (2016).
+The icons used in the nagivation drawer are licensed under the [CC BY 2.5] (http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the splash screen icon and app logos) copyright [Technische Universtität Darmstadt] (www.tu-darmstadt.de) (2016).
 
 ## Contributors
 
