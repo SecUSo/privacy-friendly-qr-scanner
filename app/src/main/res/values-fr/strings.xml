@@ -8,7 +8,7 @@
     <string name="about_author_names" translatable="false">Yannick G-F</string>
     <string name="about_author_contributors">et contributeurs.</string>
     <string name="about_affiliation">En affiliation avec</string>
-    <string name="privacy_friendly">Cette application appartient au groupe Privacy Friendly Apps développée par Technische Universität Darmstadt. Code source sous licence GPLv3. Droit à l'image: TU Darmstadt et Google Inc.</string>
+    <string name="privacy_friendly">Cette application appartient au groupe PRIVACY FRIENDLY Apps développée par Technische Universität Darmstadt. Code source sous licence GPLv3. Droit à l'image: TU Darmstadt et Google Inc.</string>
     <string name="more_info">Des informations supplémentaires peuvent être obtenues sur le:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Dépôt Github</a></string>
     <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">Site internet de SECUSO</a></string>
@@ -113,7 +113,7 @@
     <string name="title_activity_result_tel">Numéro de téléphone trouvé</string>
     <string name="title_activity_result_wifi">Réseau Wifi trouvé</string>
     <string name="title_activity_result_contact">Coordonnées trouvées</string>
-    <string name="app_name_long">Privacy friendly QR scanner</string>
+    <string name="app_name_long">PRIVACY FRIENDLY QR scanner</string>
     <string name="action_help">Aide</string>
 
     <!-- ###DRAWER###-->
@@ -121,20 +121,20 @@
     <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
 
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Privacy Friendly QR Code Scanner App permet de scanner des code-barres et QR codes de contenus divers tout en exigeant un minimum d'autorisation et supportant la détection de liens malveillants.</string>
+    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App permet de scanner des code-barres et QR codes de contenus divers tout en exigeant un minimum d'autorisation et supportant la détection de liens malveillants.</string>
     <string name="welcome">Bienvenue</string>
     <string name="viewhelp">Afficher l'aide</string>
 
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
-    <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="help_permission1_description">L'application exige les autorisations de l'appareil photo, laquelle sert à scanner les code-barres et QR codes.</string>
     <string name="help_permission1_heading">Appareil photo</string>
     <string name="help_example"></string>
-    <string name="help_privacy_heading">Quelles autorisations sont demandées par Privacy Friendly QR Scanner?</string>
+    <string name="help_privacy_heading">Quelles autorisations sont demandées par PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">Le scan ne fonctionne pas, comment puis-je y remédier?</string>
-    <string name="help_overview_heading">C'est quoi Privacy Friendly QR Scanner?</string>
-    <string name="help_intro">Avec Privacy Friendly QR Scanner, vous pouvez scanner des code-barres et QR codes de contenus divers.</string>
+    <string name="help_overview_heading">C'est quoi PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_intro">Avec PRIVACY FRIENDLY QR Scanner, vous pouvez scanner des code-barres et QR codes de contenus divers.</string>
 </resources>

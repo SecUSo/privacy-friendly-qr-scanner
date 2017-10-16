@@ -7,7 +7,7 @@
     <string name="about_author_names" translatable="false">Philipp Rack</string>
     <string name="about_author_contributors">and contributors.</string>
     <string name="about_affiliation">In affiliation with</string>
-    <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
     <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
@@ -112,7 +112,7 @@
     <string name="title_activity_result_tel">Phone number found</string>
     <string name="title_activity_result_wifi">Wifi found</string>
     <string name="title_activity_result_contact">Contact found</string>
-    <string name="app_name_long">Privacy friendly QR scanner</string>
+    <string name="app_name_long">PRIVACY FRIENDLY QR scanner</string>
     <string name="action_help">Help</string>
 
     <!-- ###DRAWER###-->
@@ -120,20 +120,20 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Privacy Friendly QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring Minimal set of permissions and supporting the detection of malicious links.</string>
+    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring Minimal set of permissions and supporting the detection of malicious links.</string>
     <string name="welcome">Welcome</string>
     <string name="viewhelp">View Help</string>
 
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
-    <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="help_permission1_description">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
     <string name="help_permission1_heading">Camera</string>
     <string name="help_example"></string>
-    <string name="help_privacy_heading">What permissions are required by Privacy Friendly QR Scanner?</string>
+    <string name="help_privacy_heading">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">The scanning does not work, what can I do?</string>
-    <string name="help_overview_heading">What is Privacy Friendly QR Scanner?</string>
-    <string name="help_intro">With Privacy Friendly QR Scanner you can scan barcodes and qr-codes with various contents.</string>
+    <string name="help_overview_heading">What is PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_intro">With PRIVACY FRIENDLY QR Scanner you can scan barcodes and qr-codes with various contents.</string>
 </resources>
