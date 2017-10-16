@@ -8,7 +8,7 @@ This app is optimized regarding the user's privacy. It only uses the device's ca
 
 ## Motivation
 
-Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps and has been developed to provide a privacy friendly QR-Code/Barcode decoding application. 
+Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps and has been developed to provide a privacy friendly QR-Code/Barcode decoding application. More information can be found on https://secuso.org/pfa
 
 ## Building 
 
@@ -16,17 +16,15 @@ Further development requires Android Studio, we recommend to use at least versio
  
 ### API Reference
 
-Further development requires Android Studio.
+Mininum SDK: 17
+Target SDK: 25 
 
-Mininum SDK: 15
-Target SDK: 23 
-
-This app uses the help of the ZXing Projekt (https://github.com/zxing).
+This app uses the help of the [ZXing Projekt](https://github.com/zxing).
 
 ## License
 
 Privacy Friendly QR Scanner is licensed under the GPLv3.
-Copyright (C) 2015 Philipp Rack
+Copyright (C) 2015-2017 Philipp Rack
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -41,7 +39,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-The icons used in the nagivation drawer are licensed under the [CC BY 2.5] (http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the splash screen icon and app logos) copyright [Technische Universtität Darmstadt] (www.tu-darmstadt.de) (2016).
+The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the splash screen icon and app logos) copyright [Technische Universtität Darmstadt](www.tu-darmstadt.de) (2016).
 
 ## Contributors
 
