@@ -1,6 +1,120 @@
 <resources>
+    <string name="app_name">QR Scanner</string>
 
-    <string name="scan_text">Place this window above the code u want to decode.</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="qr_scanner">QR Scanner</string>
+    <string name="qr_generator">QR Generator</string>
+    <string name="history">History</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="title_activity_qrscanner">QRScanner</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_qr_scanner">QrScanner</string>
+    <string name="title_activity_qr_generator">QrGenerator</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_about">About</string>
+    <string name="Settings">Settings</string>
+    <string name="QRScanner">QR Scanner</string>
+    <string name="QRGenerator">QR Generator</string>
+    <string name="History">History</string>
+
+    <string name="slide1_heading">Welcome!</string>
+    <string name="slide1_text">This App serves as a guideline to see the basic design of Privacy Friendly Apps. Here introduce your app in one or two sentences.</string>
+    <string name="slide2_heading">Key Elements</string>
+    <string name="text_slide2">Introduce key elements of your app. Do not introduce too many details.</string>
+    <string name="slide3_heading">Github and Guide</string>
+    <string name="text_slide3">The sourcecode of this app is available at GitHub. For further explanations have a look at the Privacy Friendly App Guide.</string>
+    <string name="wecome">welcome</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="help_">Help</string>
+
+    <string name="main_text_title">This is an example app to demonstrate the design of a Privacy Friendly App. Further explanations can be found in the Privacy Friendly App Guide.</string>
+    <string name="main_text_normalbutton_desc">There are multiple ways to display basic buttons. Button 1 is the basic button. If you wish to separate a button visually, use button 2. The buttons 3–5 are examples for highlighted buttons. Depending on the app other colors are possible.</string>
+    <string name="maint_button_1">1</string>
+    <string name="maint_button_2">2</string>
+    <string name="maint_button_3">3</string>
+    <string name="maint_button_4">4</string>
+    <string name="maint_button_5">5</string>
+    <string name="main_text_fullwithbutton_desc">A button that uses the full width of the screen looks like this:</string>
+    <string name="main_text_disabledbutton_desc">A disabled button looks like this (any size):</string>
+    <string name="main_button_text">Full Width Button</string>
+    <string name="main_button_disabled_text">Inactive Button</string>
+    <string name="main_button_welcomedialog_text">Use the button in the lower left corner to call the Welcome Dialog.</string>
+
+    <string name="Home">Home</string>
+    <string name="main_button_welcomedialog">SHOW WECLOME</string>
+
+    <string name="my_preference">"com.abc.com.MyPref"</string>
+    <string name="my_preference_key">"com.abc.com.MyPrefKey"</string>
+    <string name="tutorial">Tutorial</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
 
     <!--###ABOUT###-->
     <string name="about_author">Authors: </string>
@@ -11,11 +125,15 @@
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
     <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
-
-    <string name="app_name">QR Scanner</string>
+    <string name="about_libraries">Used libraries:</string>
+    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
+    <string name="app_name_long">PRIVACY FRIENDLY QR scanner</string>
     <string name="version_number">Version</string>
-    <string name="action_settings">Settings</string>
-    <string name="history">History</string>
+    <string name="delete_items">Delete items</string>
+
+
+
+    <string name="scan_text">Place this window above the code u want to decode.</string>
     <string name="action_clear">Clear History</string>
     <string name="cannot_clear">The history is already empty</string>
     <string name="knowRisks">I checked the link and want to visit the website.</string>
@@ -30,8 +148,6 @@
     <string name="wifi_explanation">This version of the app cannot connect to WIFI networks automatically due to the permission that would be needed. Below are some details about the network.</string>
     <string name="encryption">Encryption</string>
     <string name="action_about">About</string>
-    <string name="about_libraries">Used libraries:</string>
-    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="history_disabled">History disabled</string>
     <string name="to">Recipient:</string>
     <string name="subject">Subject:</string>
@@ -112,12 +228,7 @@
     <string name="title_activity_result_tel">Phone number found</string>
     <string name="title_activity_result_wifi">Wifi found</string>
     <string name="title_activity_result_contact">Contact found</string>
-    <string name="app_name_long">PRIVACY FRIENDLY QR scanner</string>
     <string name="action_help">Help</string>
-
-    <!-- ###DRAWER###-->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring Minimal set of permissions and supporting the detection of malicious links.</string>
