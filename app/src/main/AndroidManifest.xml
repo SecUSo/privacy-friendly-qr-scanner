@@ -1,49 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.secuso.privacyFriendlyCodeScanner">
+    package="com.secuso.privacyfriendlycodescanner.qrscanner">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.secuso.privacyFriendlyCodeScanner"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/my_paths" />
-        </provider>
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.secuso.privacyFriendlyCodeScanner.SplashActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme">
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".QrScanner" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".About" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".History" android:parentActivityName=".MainActivity">
+
+        </activity>
+
+        <activity android:name=".Help" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".QrGenerator" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
-        <activity
-            android:name="com.secuso.privacyFriendlyCodeScanner.MainActivity"
-            android:label="@string/app_name"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity
-            android:name="com.secuso.privacyFriendlyCodeScanner.MyCaptureActivity"
-            android:screenOrientation="fullSensor"
-            android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:icon="@mipmap/ic_launcher">
+        <activity android:name=".TutorialActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Settings"
+            android:parentActivityName=".MainActivity">
+
         </activity>
     </application>
 

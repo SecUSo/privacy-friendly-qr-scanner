@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
     <group android:id="@+id/nav_group_main"
         android:checkableBehavior="all">
         <item
-            android:id="@+id/nav_scan"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/app_name" />
+            android:id="@+id/home1"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/Home"/>
         <item
-            android:id="@+id/nav_history"
-            android:icon="@drawable/ic_action_view_as_list"
-            android:title="@string/history" />
+            android:id="@+id/nav_scan"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="@string/qr_scanner" />
+        <item
+            android:id="@+id/nav_generate"
+            android:icon="@drawable/generator"
+            android:title="@string/qr_generator" />
     </group>
 
     <group android:id="@+id/nav_group_add"
         android:checkableBehavior="all">
         <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_action_view_as_list"
+            android:title="@string/history" />
+        <item
             android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="@string/action_settings" />
+            android:icon="@drawable/ic_settings_black_48dp"
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/nav_tutorial"
+            android:icon="@drawable/ic_menu_tutorial"
+            android:title="@string/tutorial" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/ic_menu_help"
-            android:title="@string/action_help" />
+            android:title="@string/help" />
+
         <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_menu_info"
-            android:title="@string/action_about" />
+            android:title="@string/about" />
     </group>
+
 </menu>
