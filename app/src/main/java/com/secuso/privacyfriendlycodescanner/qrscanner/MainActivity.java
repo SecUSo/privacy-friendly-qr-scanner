@@ -1,4 +1,4 @@
-package com.secuso.privacyfriendlycodescanner.qrscanner;
+package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -100,6 +103,7 @@ public class MainActivity extends AppCompatActivity
                 Intent hs= new Intent(MainActivity.this,History.class);
                 startActivity(hs);
                 break;
+
             case R.id.nav_settings:
                 Intent st= new Intent(MainActivity.this,Settings.class);
                 startActivity(st);
@@ -110,10 +114,17 @@ public class MainActivity extends AppCompatActivity
                 startActivity(h);
                 break;
 
+
+
             case R.id.nav_tutorial:
-                Intent tu= new Intent(MainActivity.this,TutorialActivity.class);
-                startActivity(tu);
+                PrefManager prefManager = new PrefManager(getBaseContext());
+                prefManager.setFirstTimeLaunch(true);
+                Intent intent = new Intent(MainActivity.this, SplashActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 break;
+
+
 
             case R.id.nav_about:
                 Intent a= new Intent(MainActivity.this,About.class);
