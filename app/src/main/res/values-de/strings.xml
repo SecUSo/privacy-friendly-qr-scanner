@@ -53,21 +53,21 @@
 	
     <string-array name="text_array">
         <item>Online suchen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="email_array">
         <item>Email senden</item>
         <item>Zu Kontakten hinzufügen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="vcard_array">
         <item>Zu Kontakten hinzufügen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="send_email_array">
         <item>Email senden</item>
         <item>Zu Kontakten hinzufügen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="sms_array">
         <item>SMS senden</item>
@@ -78,11 +78,11 @@
     <string-array name="tel_array">
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="product_array">
         <item>Online suchen</item>

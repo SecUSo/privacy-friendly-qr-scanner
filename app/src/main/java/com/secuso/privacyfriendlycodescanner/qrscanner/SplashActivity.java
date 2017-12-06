@@ -1,4 +1,4 @@
-package com.secuso.privacyfriendlycodescanner.qrscanner;
+package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

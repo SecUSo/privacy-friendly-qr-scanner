@@ -6,16 +6,7 @@
             android:summary="@string/pref_description_enable_history"
             android:title="@string/pref_title_enable_history" />
 
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="bool_keep_duplicates"
-            android:summary="@string/pref_keep_duplicates_explanation"
-            android:title="@string/pref_keep_duplicates"
-            android:dependency="bool_history"/>
 
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="beep"
-            android:title="@string/pref_title_beep" />
+
 
 </PreferenceScreen>

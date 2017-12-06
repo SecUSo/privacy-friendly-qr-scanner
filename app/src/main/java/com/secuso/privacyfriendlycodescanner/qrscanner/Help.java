@@ -1,4 +1,4 @@
-package com.secuso.privacyfriendlycodescanner.qrscanner;
+package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;

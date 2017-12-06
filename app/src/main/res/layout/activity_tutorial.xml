@@ -19,22 +19,19 @@
         android:layout_height="1dp"
         android:alpha=".5"
         android:layout_above="@+id/dotsLayout"
-        android:background="@android:color/white"
-        android:layout_marginBottom="15dp"
-        tools:ignore="ExtraText">?</View>
+        android:background="@android:color/white" />
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:id="@+id/dotsLayout"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:layout_marginBottom="55sp"
-        />
+        android:orientation="horizontal"
+        ></LinearLayout>
 
     <Button
         android:id="@+id/btSkip"
@@ -42,12 +39,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="8dp"
         android:background="@null"
         android:text="@string/skip"
         android:textColor="@color/white"
-        android:textSize="16dp"
-        tools:ignore="RtlHardcoded,SpUsage" />
+        />
 
     <Button
         android:id="@+id/btNext"
@@ -55,12 +50,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="8dp"
         android:background="@null"
         android:text="@string/next"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        tools:ignore="RelativeOverlap,RtlHardcoded" />
+        android:textColor="@color/white" />
 
 
 

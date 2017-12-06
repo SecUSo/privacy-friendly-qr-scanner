@@ -1,4 +1,4 @@
-package DataBase;
+package com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,14 +10,16 @@ public class DBHandler extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "DB.db";
-    public static final String TABLE_NAMES = "names";
+    public static final String TABLE_NAMES = "contents";
     public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_NAME = "name";
+    public static final String COLUMN_NAME = "content";
 
     //We need to pass database information along to superclass
+
     public DBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -35,21 +37,27 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     //Add a new row to the database
-    public void addName(ScanedData name){
+    public void addContent(ScanedData content){
         ContentValues values = new ContentValues();
-        values.put(COLUMN_NAME, name.get_name());
+        values.put(COLUMN_NAME, content.get_name());
         SQLiteDatabase db = getWritableDatabase();
         db.insert(TABLE_NAMES, null, values);
         db.close();
     }
 
-    //Delete a product from the database
-    public void deleteName(String Name){
+    //Delete a content from the database
+    public void deleteContent(String Content){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_NAMES + " WHERE " + COLUMN_NAME + "=\"" + Name + "\";");
+        db.execSQL("DELETE FROM " + TABLE_NAMES + " WHERE " + COLUMN_NAME + "=\"" + Content + "\";");
     }
 
-    public String databaseToString(){
+    public Cursor getListContents(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAMES, null);
+        return data;
+    }
+
+   /* public String databaseToString() {
         String dbString = "";
         SQLiteDatabase db = getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAMES + " WHERE 1";
@@ -61,14 +69,14 @@ public class DBHandler extends SQLiteOpenHelper {
 
         //Position after the last row means the end of the results
         while (!c.isAfterLast()) {
-            if (c.getString(c.getColumnIndex("name")) != null) {
-                dbString += c.getString(c.getColumnIndex("name"));
+            if (c.getString(c.getColumnIndex("content")) != null) {
+                dbString += c.getString(c.getColumnIndex("content"));
                 dbString += "\n";
             }
             c.moveToNext();
-        }
-        db.close();
-        return dbString;
-    }
 
+            db.close();
+            return c;
+        }
+    } */
 }

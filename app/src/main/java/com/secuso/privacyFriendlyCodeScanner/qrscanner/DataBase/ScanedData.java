@@ -1,16 +1,16 @@
-package DataBase;
+package com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase;
 
 
 public class ScanedData {
 
     private int _id;
-    private String _name;
+    private String _content;
 
     public ScanedData(){
     }
 
     public ScanedData(String name){
-        this._name = name;
+        this._content = name;
     }
 
     public void set_id(int _id) {
@@ -18,7 +18,7 @@ public class ScanedData {
     }
 
     public void set_name(String _name) {
-        this._name = _name;
+        this._content = _name;
     }
 
     public int get_id() {
@@ -26,7 +26,7 @@ public class ScanedData {
     }
 
     public String get_name() {
-        return _name;
+        return _content;
     }
 
 }

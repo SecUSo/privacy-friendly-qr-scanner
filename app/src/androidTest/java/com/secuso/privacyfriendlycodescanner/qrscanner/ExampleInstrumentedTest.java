@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.secuso.privacyfriendlycodescanner.qrscanner", appContext.getPackageName());
+        assertEquals("com.secuso.privacyFriendlyCodeScanner.qrscanner", appContext.getPackageName());
     }
 }
