@@ -1,26 +1,22 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.*;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
-import android.widget.CheckBox;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.qrcode.encoder.QRCode;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.DBHandler;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.ScanedData;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.ContactActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.EmailActivity;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.MmsActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.SendEmailActivity;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.SmsActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.TelActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.URLActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.Settings;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -84,7 +80,7 @@ public class ResultActivity extends AppCompatActivity {
     } */
 
     public  void checkResult(String result)
-        {  //CharSequence charSequence=
+        {
           if(isValidEmail(result))
           {
               Intent i=new Intent(this, EmailActivity.class);
@@ -112,12 +108,32 @@ public class ResultActivity extends AppCompatActivity {
               i.putExtra("Rst",result);
               startActivity(i);
           }
+          else if (isValidSms(result)|| isValidSmsTo(result))
+          {
+              Intent i=new Intent(this, SmsActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
+          else if (isValidMms(result)|| isValidMmsTo(result))
+          {
+              Intent i=new Intent(this, MmsActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
+          else if(isValidContact(result))
+          {
+              Intent i=new Intent(this, ContactActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
 
           else {
               Toast.makeText(this, "Unkown", Toast.LENGTH_LONG).show();
           }
 
         }
+
+       // *********************************************************************** //
 
     public final static boolean isValidEmail(CharSequence target) {
 
@@ -147,10 +163,46 @@ public class ResultActivity extends AppCompatActivity {
 
 
 
+
     }
     public final static boolean isValidURL(String target)
     {
         return Patterns.WEB_URL.matcher(target).matches();
+    }
+
+    public final static boolean isValidSms(String target)
+    {
+        Pattern pattern = Pattern.compile("sms:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Matcher matcher =pattern.matcher(target);
+        return matcher.matches();
+    }
+    public final static boolean isValidSmsTo(String target)
+    {
+        Pattern pattern = Pattern.compile("SMSTO:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Matcher matcher =pattern.matcher(target);
+        return matcher.matches();
+    }
+
+    public final static boolean isValidMms(String target)
+    {
+        Pattern pattern = Pattern.compile("mms:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Matcher matcher =pattern.matcher(target);
+        return matcher.matches();
+    }
+    public final static boolean isValidMmsTo(String target)
+    {
+        Pattern pattern = Pattern.compile("MMSTO:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Matcher matcher =pattern.matcher(target);
+        return matcher.matches();
+    }
+    public boolean isValidContact(String target)
+    {
+       /* Pattern pattern = Pattern.compile("([\\n|;|:](FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*[\\n|;])");
+         Matcher matcher = pattern.matcher(target);
+        return matcher.matches();*/
+        if (target.startsWith("BEGIN:VCARD"))
+            return true;
+        else return false;
     }
 
 }

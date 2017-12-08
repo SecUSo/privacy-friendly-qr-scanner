@@ -159,7 +159,9 @@
     <string name="description_product">The code you scanned contains a product code. In order to </string>
     <string name="description_tel">The QR-Code you scanned contains a phone number. In order to <i>start a call</i> or <i>add it to a contact</i>, just click Proceed.</string>
     <string name="description_sms">The QR-Code you scanned contains an SMS. In order to <i>send</i> the SMS or <i>add the number to a contact</i>, click Proceed.</string>
+
     <string name="description_text">The QR-Code you scanned contains plain text. In order to <i>search the web</i> for information, click Proceed.</string>
+    <string name="description_MMS">The QR-Code you scanned contains an MMS. In order to <i>send</i> the MMS or <i>add the number to a contact</i>, click Proceed.</string>
 
     <string name="choose_action">Proceed</string>
     <string name="abort_action">Abort </string>
@@ -245,25 +247,20 @@
     <string name="help_category_example">The scanning does not work, what can I do?</string>
     <string name="help_overview_heading">What is PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">With PRIVACY FRIENDLY QR Scanner you can scan barcodes and qr-codes with various contents.</string>
-    <string name="help_whatis_answer">Privacy Friendly App Example is an app that demonstrates the design of a Privacy Friendly App</string>
+    <string name="help_whatis_answer">With PRIVACY FRIENDLY QR Scanner you can scan/generate barcodes and qr-codes with various contents.</string>
 
 
     <!--###HELP###-->
 
 
-    <string name="help_whatis">What is Privacy Friendly App Example?</string>
+    <string name="help_whatis">What is PRIVACY FRIENDLY QR Scanner?</string>
 
-    <string name="help_feature_one">Feature 1</string>
-    <string name="help_feature_one_answer">Description of first feature.
-Lorem ipsum dolor sit amet, eu ius alia fierent indoctum, ad pri sale tation. Elit dictas sit an, ad volumus urbanitas duo. Ei clita iracundia mel, eum et laoreet pertinax abhorreant. Nonumy suavitate dignissim quo id, ius audire prodesset adipiscing ei, altera saperet his et. Nostrud pertinax eu has, qui munere complectitur an.
-
-Ne albucius perfecto adolescens eum, id choro assueverit mea, sed viris constituto ex. Per soleat impedit delicatissimi cu. Inermis volumus his ea, id quo praesent eloquentiam conclusionemque. Dolores mediocrem ad sit, ex cibo evertitur cotidieque eos.
-
-    </string>
+    <string name="help_usability">The scanning does not work, what can I do?</string>
+    <string name="help_usability_answer">If you cannot scan a code, increase the distance between the scanner and the code.</string>
     <string name="help_privacy">What makes the app privacy-friendly?</string>
     <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
-    <string name="help_permission">Which permissions requires the app?</string>
-    <string name="help_permission_answer">Privacy Friendly App Example does not require any permission.</string>
+    <string name="help_permission">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_permission_answer">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
@@ -274,5 +271,6 @@ Ne albucius perfecto adolescens eum, id choro assueverit mea, sed viris constitu
 
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Signal tone</string>
+    <string name="description_Mms">The QR-Code you scanned contains an MMS. In order to send the MMS or add the number to a contact, click Proceed.</string>
 
 </resources>

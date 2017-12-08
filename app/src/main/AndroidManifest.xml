@@ -48,7 +48,11 @@
         <activity android:name=".ResultsActivities.EmailActivity" />
         <activity android:name=".ResultsActivities.TelActivity" />
         <activity android:name=".ResultsActivities.SendEmailActivity" />
-        <activity android:name=".ResultsActivities.URLActivity"></activity>
+        <activity android:name=".ResultsActivities.URLActivity" />
+        <activity android:name=".ResultsActivities.SmsActivity" />
+        <activity android:name=".ResultsActivities.WifiActivity" />
+        <activity android:name=".ResultsActivities.ContactActivity" />
+        <activity android:name=".ResultsActivities.MmsActivity"></activity>
     </application>
 
 </manifest>
