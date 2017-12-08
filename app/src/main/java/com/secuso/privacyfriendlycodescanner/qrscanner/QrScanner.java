@@ -9,6 +9,9 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.hardware.Camera;
+import android.hardware.Camera.PictureCallback;
+import android.hardware.Camera.ShutterCallback;
 
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -22,10 +25,11 @@ import android.widget.Toast;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+
 import static android.os.Build.VERSION.SDK_INT;
 
 
-public class QrScanner extends AppCompatActivity {
+public class QrScanner extends AppCompatActivity  {
 
 
 
@@ -33,18 +37,36 @@ public class QrScanner extends AppCompatActivity {
         private Activity activity;
 
 
+
         @SuppressLint("RestrictedApi")
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-
             setContentView(R.layout.activity_qr_scanner);
+
+
+
+
+
+
+
+
+
+
+
             scan_bt = (Button) findViewById(R.id.btScan);
             final Activity activity = this;
             scan_bt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    if (SDK_INT >= Build.VERSION_CODES.M) {
+                        if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                            ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
+                            return;
+                        }
+                    }
                     IntentIntegrator integrator = new IntentIntegrator(activity);
                     integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
                     integrator.setPrompt("Scan");
