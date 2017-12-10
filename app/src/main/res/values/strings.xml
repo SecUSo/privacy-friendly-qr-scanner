@@ -156,7 +156,7 @@
     <string name="description_contact">The QR-Code you scanned contains contact information. In order to <i>import</i> it into your address book, click Proceed.</string>
     <string name="description_email">The QR-Code you scanned contains an email address. In order to <i>send an email</i> or <i>add it to a contact</i>, click Proceed.</string>
     <string name="description_send_email">The QR-Code you scanned contains a filled email. In order to <i>send</i> it or <i>add the address a contact</i>, click Proceed.</string>
-    <string name="description_product">The code you scanned contains a product code. In order to </string>
+    <string name="description_product">The code you scanned contains a product code. In order to  <i>see it on Google Play</i>, just click Proceed. </string>
     <string name="description_tel">The QR-Code you scanned contains a phone number. In order to <i>start a call</i> or <i>add it to a contact</i>, just click Proceed.</string>
     <string name="description_sms">The QR-Code you scanned contains an SMS. In order to <i>send</i> the SMS or <i>add the number to a contact</i>, click Proceed.</string>
 
@@ -198,6 +198,10 @@
     <string-array name="tel_array">
         <item>Call Number</item>
         <item>Add to Contacts</item>
+        <item>Do nothing</item>
+    </string-array>
+    <string-array name="geo_array">
+        <item>Open google maps</item>
         <item>Do nothing</item>
     </string-array>
     <string-array name="url_array">
@@ -272,5 +276,8 @@
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Signal tone</string>
     <string name="description_Mms">The QR-Code you scanned contains an MMS. In order to send the MMS or add the number to a contact, click Proceed.</string>
+    <string name="geoInfo">The QR-Code you scanned contains a geographic information. In order to start google maps, just click Proceed.</string>
+    <string name="content_copied">Content copied</string>
+    <string name="share_via">Share via</string>
 
 </resources>

@@ -5,10 +5,7 @@
 
     <group android:id="@+id/nav_group_main"
         android:checkableBehavior="all">
-        <item
-            android:id="@+id/home1"
-            android:icon="@drawable/ic_menu_home"
-            android:title="@string/Home"/>
+        
         <item
             android:id="@+id/nav_scan"
             android:icon="@android:drawable/ic_menu_gallery"

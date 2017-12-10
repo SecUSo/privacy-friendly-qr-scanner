@@ -12,14 +12,20 @@ import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.DBHandler;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.ScanedData;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.ContactActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.EmailActivity;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.GeoInfoActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.MmsActivity;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.ProductActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.SendEmailActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.SmsActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.TelActivity;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.TextActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.URLActivity;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.WifiActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static java.util.regex.Pattern.CASE_INSENSITIVE;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -89,7 +95,7 @@ public class ResultActivity extends AppCompatActivity {
           }
 
 
-          else if(validCellPhone(result))
+          else if(isValidCellPhone(result))
           {
               Intent i=new Intent(this, TelActivity.class);
               i.putExtra("Rst",result);
@@ -126,9 +132,30 @@ public class ResultActivity extends AppCompatActivity {
               i.putExtra("Rst",result);
               startActivity(i);
           }
+          else if(isValidWifi(result))
+          {
+              Intent i=new Intent(this, WifiActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
+          else if(isValidGeoInfo(result))
+          {
+              Intent i=new Intent(this, GeoInfoActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
+          else if(isValidProduct(result))
+          {
+              Intent i=new Intent(this, ProductActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
 
           else {
-              Toast.makeText(this, "Unkown", Toast.LENGTH_LONG).show();
+
+              Intent i=new Intent(this, TextActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
           }
 
         }
@@ -139,7 +166,7 @@ public class ResultActivity extends AppCompatActivity {
 
        String expression = "^MAILTO:+[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
 
-        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile(expression, CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(target);
         return matcher.matches();
         //return Patterns.EMAIL_ADDRESS.matcher(target).matches();
@@ -147,7 +174,7 @@ public class ResultActivity extends AppCompatActivity {
     }
     public final static boolean isValidSendEmail(String target)
     {
-        Pattern pattern = Pattern.compile("MATMSG:TO:(.+?);SUB:(.+?);BODY:(.+?)",Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("MATMSG:TO:(.+?);SUB:(.+?);BODY:(.+?)", CASE_INSENSITIVE);
 
 
 
@@ -157,12 +184,21 @@ public class ResultActivity extends AppCompatActivity {
        // return Patterns.EMAIL_ADDRESS.matcher(target).matches();
 
     }
-    public final static boolean validCellPhone(String number)
+    public final static boolean isValidCellPhone(String number)
     {
-        return android.util.Patterns.PHONE.matcher(number).matches();
+        // return android.util.Patterns.PHONE.matcher(number).matches();
+        if (number.startsWith("tel:"))
+            return true;
+        else return false;
 
+    }
 
+    public final static boolean isValidProduct(String target)
+    {
 
+        if (target.startsWith("{{{market://details?id"))
+            return true;
+        else return false;
 
     }
     public final static boolean isValidURL(String target)
@@ -172,26 +208,26 @@ public class ResultActivity extends AppCompatActivity {
 
     public final static boolean isValidSms(String target)
     {
-        Pattern pattern = Pattern.compile("sms:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("sms:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
     }
     public final static boolean isValidSmsTo(String target)
     {
-        Pattern pattern = Pattern.compile("SMSTO:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("SMSTO:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
     }
 
     public final static boolean isValidMms(String target)
     {
-        Pattern pattern = Pattern.compile("mms:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("mms:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
     }
     public final static boolean isValidMmsTo(String target)
     {
-        Pattern pattern = Pattern.compile("MMSTO:(.+?):(.+?)",Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("MMSTO:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
     }
@@ -201,6 +237,18 @@ public class ResultActivity extends AppCompatActivity {
          Matcher matcher = pattern.matcher(target);
         return matcher.matches();*/
         if (target.startsWith("BEGIN:VCARD"))
+            return true;
+        else return false;
+    }
+    public boolean isValidWifi(String target)
+    {
+        if (target.startsWith("WIFI:"))
+            return true;
+        else return false;
+    }
+    public boolean isValidGeoInfo(String target)
+    {
+        if (target.startsWith("geo:"))
             return true;
         else return false;
     }

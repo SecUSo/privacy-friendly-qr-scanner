@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity
 
         switch (id){
 
-            case R.id.home1:
+            /*case R.id.home1:
                 Intent m= new Intent(MainActivity.this,MainActivity.class);
                 startActivity(m);
-                break;
+                break;*/
 
             case R.id.nav_scan:
                 Intent s= new Intent(MainActivity.this,QrScanner.class);
