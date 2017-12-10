@@ -20,7 +20,9 @@ import android.widget.Toast;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
 
-public class SmsActivity extends AppCompatActivity {
+import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
+
+public class GeoInfoActivity extends AppCompatActivity {
 
     ClipboardManager clipboardManager;
     ClipData clipData;
@@ -29,28 +31,21 @@ public class SmsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sms);
+        setContentView(R.layout.activity_geo_info);
 
-
-        TextView numberField = (TextView) findViewById(R.id.textResultSms);
-        TextView contentField = (TextView) findViewById(R.id.textContentSms);
-        Button btnProceed = (Button) findViewById(R.id.btnProceed);
+        TextView resultField = (TextView) findViewById(R.id.result_field_geo);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
+        Button btnProceed = (Button) findViewById(R.id.btnProceed);
 
         Bundle QRData = getIntent().getExtras();//from ResultActivity
-        final String smsResult = QRData.getString("Rst");
+        final String geoResult = QRData.getString("Rst");
+        resultField.setText(geoResult);
 
-        String content = smsResult.substring(smsResult.indexOf(":") + 1);
-        final String number = content.substring(0, content.indexOf(":"));
-        final String message = content.substring(content.indexOf(":") + 1);
-
-        numberField.setText(number);
-        contentField.setText(message);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent ca = new Intent(SmsActivity.this, MainActivity.class);
+                Intent ca = new Intent(GeoInfoActivity.this, MainActivity.class);
                 startActivity(ca);
 
             }
@@ -61,32 +56,20 @@ public class SmsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle(R.string.choose_action)
-                        .setItems(R.array.sms_array, new DialogInterface.OnClickListener() {
+                        .setItems(R.array.geo_array, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String caption = "";
                                 switch (which) {
                                     case 0:
-                                        Intent sms = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + number));
-                                        sms.putExtra("address",  number);
-                                        sms.putExtra("sms_body", message);
-                                        caption = getResources().getStringArray(R.array.sms_array)[0];
-                                        startActivity(Intent.createChooser(sms, caption));
 
-                                        break;
-                                    case 1:
-                                        Intent call = new Intent("android.intent.action.DIAL");
-                                        call.setData(Uri.parse("tel:" + number));
-                                        caption = getResources().getStringArray(R.array.sms_array)[1];
-                                        startActivity(Intent.createChooser(call, caption));
 
-                                        break;
-                                    case 2:
-                                        Intent contact = new Intent(
-                                                ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,
-                                                Uri.parse("tel:" + number));
-                                        caption = getResources().getStringArray(R.array.sms_array)[2];
-                                        startActivity(Intent.createChooser(contact, caption));
+                                        Uri gmmIntentUri = Uri.parse(geoResult);
+                                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                                        mapIntent.setPackage("com.google.android.apps.maps");
+                                        if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                                            startActivity(Intent.createChooser(mapIntent, caption));
+                                        }
 
                                         break;
 
@@ -97,6 +80,9 @@ public class SmsActivity extends AppCompatActivity {
                 builder.create().show();
             }
         });
+
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -120,7 +106,7 @@ public class SmsActivity extends AppCompatActivity {
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData= ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(),"Content copied",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), content_copied,Toast.LENGTH_LONG).show();
                 return true;
 
             default:
@@ -132,7 +118,7 @@ public class SmsActivity extends AppCompatActivity {
         Intent sharingIntent= new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
-        startActivity(Intent.createChooser(sharingIntent,"Share via"));
+        startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
     }
 
 }
