@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="qr_scanner">QR Scanner</string>
+    <string name="qr_generator">QR Generator</string>
+
+    <string name="settings">Einstellungen</string>
+    <string name="help">Hilfe</string>
+    <string name="about">Über</string>
+    <string name="title_activity_qrscanner">QRScanner</string>
     <string name="scan_text">Platzieren Sie den Scanner über dem Code den Sie decodieren möchten.</string>
 
     <string name="about_author">Autoren: </string>
@@ -73,7 +80,7 @@
         <item>SMS senden</item>
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="tel_array">
         <item>Nummer wählen</item>
@@ -86,11 +93,11 @@
     </string-array>
     <string-array name="product_array">
         <item>Online suchen</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="wifi_array">
         <item>Passwort kopieren</item>
-        <item>Nichts tun, nur speichern</item>
+        <item>Nichts tun</item>
     </string-array>
     <string-array name="history_array">
         <item>In Zwischenablage kopieren</item>
@@ -129,6 +136,39 @@
     <!--<string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quelltext lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
     <string name="about_author_contributors">Mitwirkende</string>-->
+    <string name="help_whatis">Was ist PRIVACY FRIENDLY QR Scanner?</string>
+
+    <string name="help_usability">Das Scannen funktioniert nicht, was kann ich tun?</string>
+    <string name="help_usability_answer">Wenn Sie keinen Code scannen können, vergrößern Sie den Abstand zwischen Scanner und Code.</string>
+    <string name="help_privacy">What makes the app privacy-friendly?</string>
+    <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
+    <string name="help_permission">Welche Berechtigungen benötigt der PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen.</string>
+
+
+    <string name="help_whatis_answer">Mit dem PRIVACY FRIENDLY QR Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen / generieren.</string>
+
+
+
+
+
+
+
+
+
     <string name="help_example"></string>
-    <string name="share_via">Share via</string>
+    <string name="description_Mms">Der gescannte QR-Code enthält eine MMS.Um diese zu <i>senden</i> oder <i>die Nummer einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
+    <string name="geoInfo">Der gescannte QR-Code enthält eine geographisch Information .Um google maps zu <i>starten</i>, klicken Sie auf Fortfahren.</string>
+    <string name="content_copied">Inhalt kopiert</string>
+    <string name="share_via">Teilen per</string>
+
+    <string name="no_content_in_history">Es gibt keine Inhalte im Verlauf!</string>
+    <string name="selected_item">Artikel ausgewählt</string>
+    <string name="removed_item">Artikel entfernt</string>
+    <string name="selected_items">Artikel ausgewählt</string>
+    <string name="removed_items">Artikel entfernt</string>
+    <string name="canncelled_scan">Sie haben den Scanvorgang abgebrochen</string>
+    <string name="Scan_qr">Scan</string>
+    <string name="okay">Ok</string>
+    <string name="next">Nächster</string>
 </resources>

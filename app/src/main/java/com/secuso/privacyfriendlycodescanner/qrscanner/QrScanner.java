@@ -69,7 +69,7 @@ public class QrScanner extends AppCompatActivity  {
                     }
                     IntentIntegrator integrator = new IntentIntegrator(activity);
                     integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-                    integrator.setPrompt("Scan");
+                    integrator.setPrompt(getString(R.string.Scan_qr));
                     integrator.setCameraId(0);
                     integrator.setBeepEnabled(false);
                   //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -87,7 +87,7 @@ public class QrScanner extends AppCompatActivity  {
             IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
             if (result != null) {
                 if (result.getContents() == null) {
-                    Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.canncelled_scan, Toast.LENGTH_LONG).show();
                 } else {
                     dataResult=result.getContents();
                     Intent i=new Intent(this, ResultActivity.class);
