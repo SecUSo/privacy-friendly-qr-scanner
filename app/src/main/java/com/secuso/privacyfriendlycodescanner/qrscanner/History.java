@@ -44,7 +44,7 @@ public class History extends AppCompatActivity {
 
         Cursor data = dbHandler.getListContents();///////////DB///////////////////////////////////
         if (data.getCount() == 0) {
-            Toast.makeText(this, "There are no contents in history!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.no_content_in_history, Toast.LENGTH_LONG).show();
         } else {
             while (data.moveToNext()) {
                 list.add(data.getString(1));
@@ -78,10 +78,10 @@ public class History extends AppCompatActivity {
 
 
                 count = count + 1;
-                if (count == 1)
-                    mode.setTitle(count + " item selected");
-                else
-                    mode.setTitle(count + " items selected");
+                if (count == 1) {
+                    mode.setTitle(count + getString(R.string.selected_item));
+                } else
+                    mode.setTitle(count + getString(R.string.selected_items));
                 list_items.add(list.get(position));
 
 
@@ -115,9 +115,9 @@ public class History extends AppCompatActivity {
                         }
 
                         if (count == 1) {
-                            Toast.makeText(getBaseContext(), count + " item removed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getBaseContext(), count + getString(R.string.removed_item), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(getBaseContext(), count + " items removed", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getBaseContext(), count + getString(R.string.removed_items), Toast.LENGTH_SHORT).show();
                         }
                         count = 0;
                         mode.finish();

@@ -54,9 +54,9 @@ public class HelpDataDump {
         expandableListDetail.put(context.getResources().getString(R.string.help_usability), features);
 
         List<String> privacy = new ArrayList<String>();
-        privacy.add(context.getResources().getString(R.string.help_privacy_answer));
+       // privacy.add(context.getResources().getString(R.string.help_privacy_answer));
 
-        expandableListDetail.put(context.getResources().getString(R.string.help_privacy), privacy);
+       // expandableListDetail.put(context.getResources().getString(R.string.help_privacy), privacy);
 
         List<String> permissions = new ArrayList<String>();
         permissions.add(context.getResources().getString(R.string.help_permission_answer));

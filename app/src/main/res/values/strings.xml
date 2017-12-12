@@ -279,5 +279,14 @@
     <string name="geoInfo">The QR-Code you scanned contains a geographic information. In order to start google maps, just click Proceed.</string>
     <string name="content_copied">Content copied</string>
     <string name="share_via">Share via</string>
+    <string name="no_content_in_history">There are no contents in history!</string>
+    <string name="selected_item">item selected</string>
+    <string name="selected_items">items selected</string>
+    <string name="removed_item">item removed</string>
+    <string name="removed_items">items removed</string>
+    <string name="canncelled_scan">You cancelled the scanning</string>
+    <string name="Scan_qr">Scan</string>
+    <string name="okay">Okay</string>
+
 
 </resources>
