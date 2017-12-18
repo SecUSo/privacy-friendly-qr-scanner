@@ -13,6 +13,7 @@ import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.ScanedData;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.ContactActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.EmailActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.GeoInfoActivity;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.MeCardActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.MmsActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.ProductActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.SendEmailActivity;
@@ -132,6 +133,12 @@ public class ResultActivity extends AppCompatActivity {
               i.putExtra("Rst",result);
               startActivity(i);
           }
+          else if(isValidMeCard(result))
+          {
+              Intent i=new Intent(this, MeCardActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
           else if(isValidWifi(result))
           {
               Intent i=new Intent(this, WifiActivity.class);
@@ -196,7 +203,7 @@ public class ResultActivity extends AppCompatActivity {
     public final static boolean isValidProduct(String target)
     {
 
-        if (target.startsWith("{{{market://details?id"))
+        if (target.startsWith("market://"))
             return true;
         else return false;
 
@@ -237,6 +244,13 @@ public class ResultActivity extends AppCompatActivity {
          Matcher matcher = pattern.matcher(target);
         return matcher.matches();*/
         if (target.startsWith("BEGIN:VCARD"))
+            return true;
+        else return false;
+    }
+    public boolean isValidMeCard(String target)
+    {
+
+        if (target.startsWith("MECARD"))
             return true;
         else return false;
     }

@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.provider.ContactsContract;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,8 +31,9 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ContactActivity extends AppCompatActivity {
+import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
 
+public class MeCardActivity extends AppCompatActivity {
     ClipboardManager clipboardManager;
     ClipData clipData;
     final Context context = this;
@@ -41,18 +41,13 @@ public class ContactActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact);
-
+        setContentView(R.layout.activity_me_card);
         TextView resultTextContact = (TextView) findViewById(R.id.result_text_contact);
         Button btnProceed = (Button) findViewById(R.id.btnProceed);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
 
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String contactResult = QRData.getString("Rst");
-
-
-        // resultTextContact.setText(vCard);
-
 
         Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
@@ -65,8 +60,8 @@ public class ContactActivity extends AppCompatActivity {
 
             if (name.startsWith("N:"))
                 resultTextContact.setText("Name: " + name.substring(2).replace(';', ' '));
-            else if (name.startsWith("FN:"))
-                resultTextContact.setText("Name: " + name.substring(3).replace(';', ' '));
+         //   else if (name.startsWith("FN:"))
+              //  resultTextContact.setText("Name: " + name.substring(3).replace(';', ' '));
             else
                 resultTextContact.setText(R.string.noname);
         }
@@ -74,7 +69,7 @@ public class ContactActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent ca = new Intent(ContactActivity.this, MainActivity.class);
+                Intent ca = new Intent(MeCardActivity.this, MainActivity.class);
                 startActivity(ca);
 
             }
@@ -94,13 +89,13 @@ public class ContactActivity extends AppCompatActivity {
 
                                         Uri uri = null;
                                         try {
-                                            uri = createVCard();
+                                            uri = createMeCard();
                                         } catch (IOException e) {
                                             e.printStackTrace();
                                         }
                                         Intent contact = new Intent();
                                         contact.setAction(Intent.ACTION_VIEW);
-                                       // Intent contact = new Intent(ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,uri);
+                                        // Intent contact = new Intent(ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,uri);
                                         contact.setType("text/x-vcard");
                                         contact.setData(uri);
 
@@ -116,9 +111,11 @@ public class ContactActivity extends AppCompatActivity {
             }
         });
 
-    }
 
-    private Uri createVCard() throws IOException {
+
+
+    }
+    private Uri createMeCard() throws IOException {
 
 
         Bundle QRData = getIntent().getExtras();//from ResultActivity
@@ -157,6 +154,7 @@ public class ContactActivity extends AppCompatActivity {
         }
         return uri;
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.share,menu);
@@ -179,7 +177,7 @@ public class ContactActivity extends AppCompatActivity {
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData= ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(),"Content copied",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), content_copied,Toast.LENGTH_LONG).show();
                 return true;
 
             default:
@@ -191,8 +189,6 @@ public class ContactActivity extends AppCompatActivity {
         Intent sharingIntent= new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
-        startActivity(Intent.createChooser(sharingIntent,"Share via"));
+        startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
     }
-
 }
-

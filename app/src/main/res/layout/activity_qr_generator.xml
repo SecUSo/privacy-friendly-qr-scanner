@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QrGenerator">
+    tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating.QrGenerator">
 
-</android.support.constraint.ConstraintLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail" />
+
+        <RadioButton
+            android:id="@+id/radioTel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tel" />
+        <RadioButton
+            android:id="@+id/radioUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/gnResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="104dp"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/gnResult"
+        android:layout_below="@+id/gnResult"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="75dp"
+        android:text="Generate" />
+
+</RelativeLayout>
