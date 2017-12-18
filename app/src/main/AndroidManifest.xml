@@ -3,6 +3,7 @@
     package="com.secuso.privacyFriendlyCodeScanner.qrscanner">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +29,7 @@
             android:name=".Help"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".QrGenerator"
+            android:name=".QRGenerating.QrGenerator"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -55,7 +56,11 @@
         <activity android:name=".ResultsActivities.MmsActivity" />
         <activity android:name=".ResultsActivities.GeoInfoActivity" />
         <activity android:name=".ResultsActivities.ProductActivity" />
-        <activity android:name=".ResultsActivities.TextActivity"></activity>
+        <activity android:name=".ResultsActivities.TextActivity" />
+        <activity android:name=".ResultsActivities.MeCardActivity" />
+        <activity android:name=".QRGenerating.MailGnrActivity" />
+        <activity android:name=".QRGenerating.TelGnrActivity" />
+        <activity android:name=".QRGenerating.UrlGnrActivity"></activity>
     </application>
 
 </manifest>

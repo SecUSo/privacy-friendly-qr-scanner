@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
 
 import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
@@ -30,10 +31,20 @@ public class ProductActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product);
 
 
+        Button btnCancel = (Button) findViewById(R.id.btnCancel);
         TextView resultText = (TextView) findViewById(R.id.result_field_product);
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String productResult = QRData.getString("Rst");
         resultText.setText(productResult);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent ca = new Intent(ProductActivity.this, MainActivity.class);
+                startActivity(ca);
+
+            }
+        });
 
         Button proceed = (Button) findViewById(R.id.btnProceed);
         proceed.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +58,7 @@ public class ProductActivity extends AppCompatActivity {
                                 switch (which) {
                                     case 0:
 
-                                        String url = "http://www.google.com/search?q=" + productResult;
+                                        String url = productResult;
                                         Intent intent = new Intent(Intent.ACTION_VIEW);
                                         intent.setData(Uri.parse(url));
 
@@ -101,4 +112,5 @@ public class ProductActivity extends AppCompatActivity {
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
         startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
-    }}
+    }
+}
