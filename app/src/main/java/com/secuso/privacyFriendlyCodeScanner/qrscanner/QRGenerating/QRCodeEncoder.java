@@ -101,7 +101,7 @@ public  class QRCodeEncoder {
         } else if (type.equals(Contents.Type.SMS)) {
             data = trim(data);
             if (data != null) {
-                contents = "sms:" + data;
+                contents = "SMSTO:" + data;
                 displayContents = PhoneNumberUtils.formatNumber(data);
                 title = "SMS";
             }

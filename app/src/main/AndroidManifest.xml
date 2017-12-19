@@ -60,7 +60,8 @@
         <activity android:name=".ResultsActivities.MeCardActivity" />
         <activity android:name=".QRGenerating.MailGnrActivity" />
         <activity android:name=".QRGenerating.TelGnrActivity" />
-        <activity android:name=".QRGenerating.UrlGnrActivity"></activity>
+        <activity android:name=".QRGenerating.UrlGnrActivity" />
+        <activity android:name=".QRGenerating.SmsGnrActivity"></activity>
     </application>
 
 </manifest>
