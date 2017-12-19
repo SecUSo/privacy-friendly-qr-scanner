@@ -36,8 +36,46 @@ public class QrGenerator extends AppCompatActivity {
         final RadioButton btnMail = (RadioButton) findViewById(R.id.radioMail);
         final RadioButton btnTel = (RadioButton) findViewById(R.id.radioTel);
         final RadioButton btnUrl = (RadioButton) findViewById(R.id.radioUrl);
+        final RadioButton btnSms = (RadioButton) findViewById(R.id.radioSms);
+
         final EditText qrResult=(EditText) findViewById(R.id.gnResult);
+        final EditText qrSms=(EditText) findViewById(R.id.editTel);
+        final EditText qrText=(EditText) findViewById(R.id.editText1);
+
         Button generate=(Button) findViewById(R.id.generate);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                // checkedId is the RadioButton selected
+                switch (checkedId)
+                {
+                    case R.id.radioMail:
+                        qrResult.setEnabled(true);
+                        qrSms.setEnabled(false);
+                        qrText.setEnabled(false);
+                        break;
+
+                    case R.id.radioTel:
+                        qrResult.setEnabled(true);
+                        qrSms.setEnabled(false);
+                        qrText.setEnabled(false);
+                        break;
+
+                    case R.id.radioUrl:
+                        qrResult.setEnabled(true);
+                        qrSms.setEnabled(false);
+                        qrText.setEnabled(false);
+                        break;
+
+                    case R.id.radioSms:
+                        qrResult.setEnabled(false);
+                        qrSms.setEnabled(true);
+                        qrText.setEnabled(true);
+                        break;
+                }
+
+            }
+        });
 
 
 
@@ -70,11 +108,21 @@ public class QrGenerator extends AppCompatActivity {
                     Intent i = new Intent(QrGenerator.this, UrlGnrActivity.class);
                     i.putExtra("gn", result);
                     startActivity(i);
+                } else if (selectedId==btnSms.getId()){
+
+                    result = qrSms.getText().toString()+":"+qrText.getText().toString();
+                    Intent i = new Intent(QrGenerator.this, SmsGnrActivity.class);
+                    i.putExtra("gn", result);
+                    startActivity(i);
+
                 }
+
 
             }
 
         });
+
+
 
 
     }

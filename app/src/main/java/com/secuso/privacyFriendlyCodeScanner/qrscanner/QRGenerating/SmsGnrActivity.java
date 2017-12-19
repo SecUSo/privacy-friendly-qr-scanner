@@ -1,5 +1,7 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
@@ -27,12 +29,15 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Random;
 
-public class TelGnrActivity extends AppCompatActivity {
+public class SmsGnrActivity extends AppCompatActivity {
+    ClipboardManager clipboardManager;
+    ClipData clipData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tel_gnr);
+        setContentView(R.layout.activity_sms_gnr);
+
         Button btnstore = (Button) findViewById(R.id.btnstore);
 
         Bundle QRData = getIntent().getExtras();//from QRGenerator
@@ -57,9 +62,9 @@ public class TelGnrActivity extends AppCompatActivity {
                 Bitmap bitmap=createBitmap(qrInputText);
                 saveImageToExternalStorage(bitmap);
 
-                Intent i=new Intent(TelGnrActivity.this, MainActivity.class);
+                Intent i=new Intent(SmsGnrActivity.this, MainActivity.class);
                 startActivity(i);
-                Toast.makeText(TelGnrActivity.this, "QR code stored in gallery", Toast.LENGTH_LONG).show();
+                Toast.makeText(SmsGnrActivity.this, "QR code stored in gallery", Toast.LENGTH_LONG).show();
 
 
 
@@ -166,7 +171,7 @@ public class TelGnrActivity extends AppCompatActivity {
         //Encode with a QR Code image
         QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
                 null,
-                Contents.Type.PHONE,
+                Contents.Type.SMS,
                 BarcodeFormat.QR_CODE.toString(),
                 smallerDimension);
         Bitmap bitmap_ = null;
