@@ -61,7 +61,9 @@
         <activity android:name=".QRGenerating.MailGnrActivity" />
         <activity android:name=".QRGenerating.TelGnrActivity" />
         <activity android:name=".QRGenerating.UrlGnrActivity" />
-        <activity android:name=".QRGenerating.SmsGnrActivity"></activity>
+        <activity android:name=".QRGenerating.SmsGnrActivity" />
+        <activity android:name=".QRGenerating.GeoLocatioGnrActivity" />
+        <activity android:name=".ResultsActivities.BizCardActivity"></activity>
     </application>
 
 </manifest>

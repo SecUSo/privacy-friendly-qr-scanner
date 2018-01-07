@@ -21,7 +21,7 @@ import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.TextAct
 public class QrGenerator extends AppCompatActivity {
 
 
-    //RadioButton btnMail = (RadioButton) findViewById(R.id.btnEmail);
+
 
 
     @SuppressLint("RestrictedApi")
@@ -37,10 +37,13 @@ public class QrGenerator extends AppCompatActivity {
         final RadioButton btnTel = (RadioButton) findViewById(R.id.radioTel);
         final RadioButton btnUrl = (RadioButton) findViewById(R.id.radioUrl);
         final RadioButton btnSms = (RadioButton) findViewById(R.id.radioSms);
+        final RadioButton btnGeo = (RadioButton) findViewById(R.id.radioGeo);
 
         final EditText qrResult=(EditText) findViewById(R.id.gnResult);
         final EditText qrSms=(EditText) findViewById(R.id.editTel);
         final EditText qrText=(EditText) findViewById(R.id.editText1);
+        final EditText qrLatitude=(EditText) findViewById(R.id.editGeo1);
+        final EditText qrLongitude=(EditText) findViewById(R.id.editGeo2);
 
         Button generate=(Button) findViewById(R.id.generate);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
@@ -53,24 +56,40 @@ public class QrGenerator extends AppCompatActivity {
                         qrResult.setEnabled(true);
                         qrSms.setEnabled(false);
                         qrText.setEnabled(false);
+                        qrLatitude.setEnabled(false);
+                        qrLongitude.setEnabled(false);
                         break;
 
                     case R.id.radioTel:
                         qrResult.setEnabled(true);
                         qrSms.setEnabled(false);
                         qrText.setEnabled(false);
+                        qrLatitude.setEnabled(false);
+                        qrLongitude.setEnabled(false);
                         break;
 
                     case R.id.radioUrl:
                         qrResult.setEnabled(true);
                         qrSms.setEnabled(false);
                         qrText.setEnabled(false);
+                        qrLatitude.setEnabled(false);
+                        qrLongitude.setEnabled(false);
                         break;
 
                     case R.id.radioSms:
                         qrResult.setEnabled(false);
+                        qrLatitude.setEnabled(false);
+                        qrLongitude.setEnabled(false);
                         qrSms.setEnabled(true);
                         qrText.setEnabled(true);
+                        break;
+
+                    case R.id.radioGeo:
+                        qrResult.setEnabled(false);
+                        qrSms.setEnabled(false);
+                        qrText.setEnabled(false);
+                        qrLatitude.setEnabled(true);
+                        qrLongitude.setEnabled(true);
                         break;
                 }
 
@@ -116,7 +135,16 @@ public class QrGenerator extends AppCompatActivity {
                     startActivity(i);
 
                 }
+                else if (selectedId==btnGeo.getId()){
 
+                   result = qrLatitude.getText().toString()+","+qrLongitude.getText().toString();
+
+
+                    Intent i = new Intent(QrGenerator.this, GeoLocatioGnrActivity.class);
+                    i.putExtra("gn", result);
+                    startActivity(i);
+
+                }
 
             }
 

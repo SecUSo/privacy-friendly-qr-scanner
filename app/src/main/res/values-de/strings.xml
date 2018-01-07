@@ -49,8 +49,8 @@
 	<string name="description_sms">Der gescannte QR-Code enthält eine SMS. Um diese zu <i>senden</i> oder <i>die Nummer einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
 	<string name="description_text">Der gescannte QR-Code enthält Text. Um nach mehr Informationen im <i>Internet zu suchen</i>, klicken Sie auf Fortfahren.</string>
 
-    <string name="choose_action">Fortfahren &amp; speichern</string>
-	<string name="abort_action">Abbrechen &amp; nicht speichern</string>
+    <string name="choose_action">Fortfahren </string>
+	<string name="abort_action">Abbrechen </string>
 
     <string name="proceed">Fortfahren</string>
     <string name="back">Zurück</string>

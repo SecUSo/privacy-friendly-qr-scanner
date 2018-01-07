@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.zxing.common.StringUtils;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
 
@@ -42,6 +44,7 @@ public class MeCardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me_card);
+
         TextView resultTextContact = (TextView) findViewById(R.id.result_text_contact);
         Button btnProceed = (Button) findViewById(R.id.btnProceed);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
@@ -49,22 +52,36 @@ public class MeCardActivity extends AppCompatActivity {
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String contactResult = QRData.getString("Rst");
 
-        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
         Matcher m = pattern.matcher(contactResult);
 
         String name = "";
 
+
+
         if (m.find()) {
             name = m.group(1).substring(1);
 
+
             if (name.startsWith("N:"))
                 resultTextContact.setText("Name: " + name.substring(2).replace(';', ' '));
-         //   else if (name.startsWith("FN:"))
-              //  resultTextContact.setText("Name: " + name.substring(3).replace(';', ' '));
+
             else
                 resultTextContact.setText(R.string.noname);
         }
+
+        final String n=name.substring(2).replace(';', ' ');// get name from the string
+
+        final String tel=between(contactResult,"TEL:",";EMAIL");
+        final String mail=between(contactResult,"EMAIL:",";;");
+        //final String title=between(contactResult,"T:",";C");
+       // final String org=between(contactResult,"C:",";A");
+
+
+
+
+
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,17 +104,18 @@ public class MeCardActivity extends AppCompatActivity {
                                 switch (which) {
                                     case 0:
 
-                                        Uri uri = null;
-                                        try {
-                                            uri = createMeCard();
-                                        } catch (IOException e) {
-                                            e.printStackTrace();
-                                        }
-                                        Intent contact = new Intent();
-                                        contact.setAction(Intent.ACTION_VIEW);
-                                        // Intent contact = new Intent(ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,uri);
-                                        contact.setType("text/x-vcard");
-                                        contact.setData(uri);
+
+                                        Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
+                                        contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+
+
+                                        contact.putExtra(ContactsContract.Intents.Insert.PHONE, tel);
+                                        contact.putExtra(ContactsContract.Intents.Insert.NAME, n);
+                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL,mail);
+                                       // contact.putExtra(ContactsContract.Intents.Insert.COMPANY, org);
+                                       // contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, title);
+
+
 
                                         String caption = getResources().getStringArray(R.array.vcard_array)[0];
                                         startActivity(Intent.createChooser(contact, caption));
@@ -115,45 +133,7 @@ public class MeCardActivity extends AppCompatActivity {
 
 
     }
-    private Uri createMeCard() throws IOException {
 
-
-        Bundle QRData = getIntent().getExtras();//from ResultActivity
-        final String contactResult = QRData.getString("Rst");
-
-        File f = new File(this.getExternalFilesDir(null),"contact.vcf");
-        FileWriter fw;
-        fw = new FileWriter(f);
-        Uri uri = null;
-        try (FileOutputStream fop = new FileOutputStream(f)) {
-
-            if (f.exists()) {
-
-                fop.write(contactResult.getBytes());
-                //Now read the content of the vCard after writing data into it
-                BufferedReader br = null;
-                String sCurrentLine;
-                br = new BufferedReader(new FileReader("contact.vcf"));
-
-                //close the output stream and buffer reader
-                fop.flush();
-                fop.close();
-                System.out.println("The data has been written");
-                Log.e("TESTEST", f.getPath());
-
-                uri = FileProvider.getUriForFile(context, "com.secuso.privacyFriendlyCodeScanner", f);
-                grantUriPermission("com.google.android.contacts", uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                grantUriPermission("com.android.contacts", uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
-
-
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return uri;
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -190,5 +170,21 @@ public class MeCardActivity extends AppCompatActivity {
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
         startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
+    }
+    static String between(String value, String a, String b) {
+        // Return a substring between the two strings.
+        int posA = value.indexOf(a);
+        if (posA == -1) {
+            return "";
+        }
+        int posB = value.lastIndexOf(b);
+        if (posB == -1) {
+            return "";
+        }
+        int adjustedPosA = posA + a.length();
+        if (adjustedPosA >= posB) {
+            return "";
+        }
+        return value.substring(adjustedPosA, posB);
     }
 }

@@ -118,7 +118,7 @@
 
     <!--###ABOUT###-->
     <string name="about_author">Authors: </string>
-    <string name="about_author_names" translatable="false">Philipp Rack</string>
+    <string name="about_author_names" translatable="false">Bassel Hanna</string>
     <string name="about_author_contributors">and contributors.</string>
     <string name="about_affiliation">In affiliation with</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
@@ -128,7 +128,7 @@
     <string name="about_libraries">Used libraries:</string>
     <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="app_name_long">PRIVACY FRIENDLY QR scanner</string>
-    <string name="version_number">Version</string>
+    <string name="version_number">Version 2</string>
     <string name="delete_items">Delete items</string>
 
 

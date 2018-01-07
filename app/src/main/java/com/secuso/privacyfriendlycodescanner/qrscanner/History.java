@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,6 +31,10 @@ public class History extends AppCompatActivity {
     int count = 0;
     DBHandler dbHandler;/////////////DB
     ResultActivity resultActivity;
+
+
+    private SparseBooleanArray mSelectedItemsIds;
+
 
 
     @Override
@@ -76,13 +81,21 @@ public class History extends AppCompatActivity {
             @Override
             public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
 
+                // Capture total checked items
 
+                final int checkedCount = list_view.getCheckedItemCount();
+                // Set the CAB title according to total checked items
+                mode.setTitle(checkedCount + " Selected");
+                // Calls toggleSelection method from ListViewAdapter Class
+                selectView(position, !mSelectedItemsIds.get(position));
+
+            /*
                 count = count + 1;
                 if (count == 1) {
                     mode.setTitle(count + getString(R.string.selected_item));
                 } else
                     mode.setTitle(count + getString(R.string.selected_items));
-                list_items.add(list.get(position));
+                list_items.add(list.get(position)); */
 
 
             }
@@ -108,6 +121,8 @@ public class History extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.delete_id:
+
+
                         for (String msg : list_items) {
                             adapter.remove(msg);
                             dbHandler.deleteContent(msg);///////////DB
@@ -138,5 +153,29 @@ public class History extends AppCompatActivity {
             }
         });
 
+    }
+    public void toggleSelection(int position) {
+        selectView(position, !mSelectedItemsIds.get(position));
+    }
+
+    public void removeSelection() {
+        mSelectedItemsIds = new SparseBooleanArray();
+        adapter.notifyDataSetChanged();
+    }
+
+    public void selectView(int position, boolean value) {
+        if (value)
+            mSelectedItemsIds.put(position, value);
+        else
+            mSelectedItemsIds.delete(position);
+        adapter.notifyDataSetChanged();
+    }
+
+    public int getSelectedCount() {
+        return mSelectedItemsIds.size();
+    }
+
+    public SparseBooleanArray getSelectedIds() {
+        return mSelectedItemsIds;
     }
 }
