@@ -98,9 +98,12 @@ public class ContactActivity extends AppCompatActivity {
                                         } catch (IOException e) {
                                             e.printStackTrace();
                                         }
-                                        Intent contact = new Intent();
-                                        contact.setAction(Intent.ACTION_VIEW);
-                                       // Intent contact = new Intent(ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,uri);
+                                            Intent contact = new Intent();
+                                           contact.setAction(Intent.ACTION_VIEW);
+
+                                       // Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
+                                        //contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+                                      //  Intent contact = new Intent(Intent.ACTION_INSERT, ContactsContract.Contacts.CONTENT_URI);
                                         contact.setType("text/x-vcard");
                                         contact.setData(uri);
 

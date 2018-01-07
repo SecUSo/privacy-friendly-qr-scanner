@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.DBHandler;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.ScanedData;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.BizCardActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.ContactActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.EmailActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.GeoInfoActivity;
@@ -139,6 +140,12 @@ public class ResultActivity extends AppCompatActivity {
               i.putExtra("Rst",result);
               startActivity(i);
           }
+          else if(isValidBizCard(result))
+          {
+              Intent i=new Intent(this, BizCardActivity.class);
+              i.putExtra("Rst",result);
+              startActivity(i);
+          }
           else if(isValidWifi(result))
           {
               Intent i=new Intent(this, WifiActivity.class);
@@ -251,6 +258,13 @@ public class ResultActivity extends AppCompatActivity {
     {
 
         if (target.startsWith("MECARD"))
+            return true;
+        else return false;
+    }
+    public boolean isValidBizCard(String target)
+    {
+
+        if (target.startsWith("BIZCARD"))
             return true;
         else return false;
     }

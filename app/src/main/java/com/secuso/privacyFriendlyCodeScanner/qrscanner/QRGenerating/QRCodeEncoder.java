@@ -174,16 +174,24 @@ public  class QRCodeEncoder {
 
             }
         } else if (type.equals(Contents.Type.LOCATION)) {
-            if (bundle != null) {
+           // if (bundle != null) {
+
+                data = trim(data);
+                if (data != null) {
+                    contents = "geo:" + data;
+                    displayContents =data;
+                            title = "Location";
+
+                }
                 // These must use Bundle.getFloat(), not getDouble(), it's part of the API.
-                float latitude = bundle.getFloat("LAT", Float.MAX_VALUE);
+              /*  float latitude = bundle.getFloat("LAT", Float.MAX_VALUE);
                 float longitude = bundle.getFloat("LONG", Float.MAX_VALUE);
                 if (latitude != Float.MAX_VALUE && longitude != Float.MAX_VALUE) {
                     contents = "geo:" + latitude + ',' + longitude;
                     displayContents = latitude + "," + longitude;
-                    title = "Location";
-                }
-            }
+                    title = "Location";    */
+               // }
+            //}
         }
     }
 
