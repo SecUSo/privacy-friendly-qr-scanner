@@ -21,15 +21,19 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".About"
+            android:label="@string/about"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".History"
+            android:label="@string/history"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Help"
+            android:label="@string/help"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.QrGenerator"
+            android:label="@string/QRGenerator"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -46,18 +50,18 @@
             android:name=".Settings"
             android:parentActivityName=".MainActivity" />
         <activity android:name=".ResultActivity" />
-        <activity android:name=".ResultsActivities.EmailActivity" />
-        <activity android:name=".ResultsActivities.TelActivity" />
-        <activity android:name=".ResultsActivities.SendEmailActivity" />
-        <activity android:name=".ResultsActivities.URLActivity" />
-        <activity android:name=".ResultsActivities.SmsActivity" />
-        <activity android:name=".ResultsActivities.WifiActivity" />
-        <activity android:name=".ResultsActivities.ContactActivity" />
-        <activity android:name=".ResultsActivities.MmsActivity" />
-        <activity android:name=".ResultsActivities.GeoInfoActivity" />
-        <activity android:name=".ResultsActivities.ProductActivity" />
-        <activity android:name=".ResultsActivities.TextActivity" />
-        <activity android:name=".ResultsActivities.MeCardActivity" />
+        <activity android:name=".ResultsActivities.EmailActivity" android:parentActivityName=".MainActivity" />
+        <activity android:name=".ResultsActivities.TelActivity" android:parentActivityName=".MainActivity" />
+        <activity android:name=".ResultsActivities.SendEmailActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ResultsActivities.URLActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ResultsActivities.SmsActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ResultsActivities.WifiActivity" android:parentActivityName=".MainActivity" />
+        <activity android:name=".ResultsActivities.ContactActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ResultsActivities.MmsActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ResultsActivities.GeoInfoActivity" android:parentActivityName=".MainActivity" />
+        <activity android:name=".ResultsActivities.ProductActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ResultsActivities.TextActivity" android:parentActivityName=".MainActivity"/>
+        <activity android:name=".ResultsActivities.MeCardActivity" android:parentActivityName=".MainActivity" />
         <activity android:name=".QRGenerating.MailGnrActivity" />
         <activity android:name=".QRGenerating.TelGnrActivity" />
         <activity android:name=".QRGenerating.UrlGnrActivity" />
