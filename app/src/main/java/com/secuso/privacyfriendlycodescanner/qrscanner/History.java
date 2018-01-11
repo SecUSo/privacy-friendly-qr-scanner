@@ -1,8 +1,11 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseBooleanArray;
@@ -52,7 +55,7 @@ public class History extends AppCompatActivity {
             Toast.makeText(this, R.string.no_content_in_history, Toast.LENGTH_LONG).show();
         } else {
             while (data.moveToNext()) {
-                list.add(data.getString(1));
+                list.add(0,data.getString(1));// Add item to top of arraylist
                 ListAdapter adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
                 list_view.setAdapter(adapter);
 
@@ -81,30 +84,30 @@ public class History extends AppCompatActivity {
             @Override
             public void onItemCheckedStateChanged(ActionMode mode, int position, long id, boolean checked) {
 
-                // Capture total checked items
+            /*    // Capture total checked items
 
                 final int checkedCount = list_view.getCheckedItemCount();
                 // Set the CAB title according to total checked items
                 mode.setTitle(checkedCount + " Selected");
                 // Calls toggleSelection method from ListViewAdapter Class
-                selectView(position, !mSelectedItemsIds.get(position));
+                selectView(position, !mSelectedItemsIds.get(position));*/
 
-            /*
+
                 count = count + 1;
                 if (count == 1) {
                     mode.setTitle(count + getString(R.string.selected_item));
                 } else
                     mode.setTitle(count + getString(R.string.selected_items));
-                list_items.add(list.get(position)); */
+                list_items.add(list.get(position));
 
 
             }
-
             @Override
             public boolean onCreateActionMode(ActionMode mode, Menu menu) {
 
                 MenuInflater inflater = mode.getMenuInflater();
                 inflater.inflate(R.menu.context_menu, menu);
+
 
 
                 return true;
@@ -178,4 +181,55 @@ public class History extends AppCompatActivity {
     public SparseBooleanArray getSelectedIds() {
         return mSelectedItemsIds;
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.history,menu);
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+
+
+
+       switch (item.getItemId()){
+
+            case R.id.action_clear:
+
+
+ new AlertDialog.Builder(this)
+                .setTitle("Delete all contents")
+                .setMessage("Are you sure you want to delete  contents?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // continue with delete
+                        dbHandler.deleteAllContents();///////////DB
+
+                        dbHandler.close();
+                        list.clear();
+                        adapter.notifyDataSetChanged();
+
+
+                    }
+                })
+                .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // do nothing
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+
+                return true;
+
+
+            default:
+                return false;
+        }
+   }
+
+
 }

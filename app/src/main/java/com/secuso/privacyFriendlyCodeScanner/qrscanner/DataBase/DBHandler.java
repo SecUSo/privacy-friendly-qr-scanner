@@ -51,6 +51,11 @@ public class DBHandler extends SQLiteOpenHelper {
         db.execSQL("DELETE FROM " + TABLE_NAMES + " WHERE " + COLUMN_NAME + "=\"" + Content + "\";");
     }
 
+    public void deleteAllContents(){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DELETE FROM " + TABLE_NAMES );
+    }
+
     public Cursor getListContents(){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAMES, null);
