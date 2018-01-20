@@ -82,6 +82,12 @@
         <item>Zu Kontakten hinzufügen</item>
         <item>Nichts tun</item>
     </string-array>
+    <string-array name="mms_array">
+        <item>MMS senden</item>
+        <item>Nummer wählen</item>
+        <item>Zu Kontakten hinzufügen</item>
+        <item>Nichts tun</item>
+    </string-array>
     <string-array name="tel_array">
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>

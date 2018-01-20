@@ -60,7 +60,7 @@ public class MmsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle(R.string.choose_action)
-                        .setItems(R.array.sms_array, new DialogInterface.OnClickListener() {
+                        .setItems(R.array.mms_array, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String caption = "";
@@ -69,14 +69,14 @@ public class MmsActivity extends AppCompatActivity {
                                         Intent sms = new Intent(Intent.ACTION_SENDTO, Uri.parse("mmsto:" + number));
                                         sms.putExtra("address",  number);
                                         sms.putExtra("mms_body", message);
-                                        caption = getResources().getStringArray(R.array.sms_array)[0];
+                                        caption = getResources().getStringArray(R.array.mms_array)[0];
                                         startActivity(Intent.createChooser(sms, caption));
 
                                         break;
                                     case 1:
                                         Intent call = new Intent("android.intent.action.DIAL");
                                         call.setData(Uri.parse("tel:" + number));
-                                        caption = getResources().getStringArray(R.array.sms_array)[1];
+                                        caption = getResources().getStringArray(R.array.mms_array)[1];
                                         startActivity(Intent.createChooser(call, caption));
 
                                         break;
@@ -84,7 +84,7 @@ public class MmsActivity extends AppCompatActivity {
                                         Intent contact = new Intent(
                                                 ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,
                                                 Uri.parse("tel:" + number));
-                                        caption = getResources().getStringArray(R.array.sms_array)[2];
+                                        caption = getResources().getStringArray(R.array.mms_array)[2];
                                         startActivity(Intent.createChooser(contact, caption));
 
                                         break;

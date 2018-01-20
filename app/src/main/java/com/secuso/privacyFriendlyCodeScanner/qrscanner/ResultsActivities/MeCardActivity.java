@@ -52,16 +52,21 @@ public class MeCardActivity extends AppCompatActivity {
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String contactResult = QRData.getString("Rst");
 
-        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL: | EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
         Matcher m = pattern.matcher(contactResult);
 
         String name = "";
+        String te="";
+        String mai="ooo";
+
 
 
 
         if (m.find()) {
             name = m.group(1).substring(1);
+
+
 
 
             if (name.startsWith("N:"))
@@ -70,11 +75,26 @@ public class MeCardActivity extends AppCompatActivity {
             else
                 resultTextContact.setText(R.string.noname);
         }
+        if (m.find()) {
+
+            te=m.group(1).substring(1);
+            if (te.startsWith("TEL:")){
+                te=te;
+            }
+
+        }
+
+
+
 
         final String n=name.substring(2).replace(';', ' ');// get name from the string
 
-        final String tel=between(contactResult,"TEL:",";EMAIL");
-        final String mail=between(contactResult,"EMAIL:",";;");
+
+        final String tel=te.substring(4).replace(';', ' ');
+
+
+       // final String tel=between(contactResult,"TEL:",";EMAIL");
+       final String mail=between(contactResult,"EMAIL:",";;");
         //final String title=between(contactResult,"T:",";C");
        // final String org=between(contactResult,"C:",";A");
 
@@ -146,16 +166,37 @@ public class MeCardActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Bundle QRData = getIntent().getExtras();//from ResultActivity
-        final String qrurl = QRData.getString("Rst");
+        final String contactResult = QRData.getString("Rst");
+
+        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+
+        Matcher m = pattern.matcher(contactResult);
+
+
+        String name = "";
+
+
+        if (m.find()) {
+            name = m.group(1).substring(1);
+        }
+
+        final String n=name.substring(2).replace(';', ' ');// get name from the string
+
+        final String tel=between(contactResult,"TEL:",";EMAIL");
+        final String mail=between(contactResult,"EMAIL:",";;");
+        final String adr=between(contactResult,"ADR:",";TEL");
+
+
+        final String ss="name:"+n +"; phone nummber:"+tel+"; E-mail:"+mail+"; address:"+adr;
 
         switch (item.getItemId()){
             case R.id.share:
-                shareIt(qrurl);
+                shareIt(ss);
                 return true;
 
             case R.id.copy:
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
-                clipData= ClipData.newPlainText("Text",qrurl);
+                clipData= ClipData.newPlainText("Text",ss);
                 clipboardManager.setPrimaryClip(clipData);
                 Toast.makeText(getApplicationContext(), content_copied,Toast.LENGTH_LONG).show();
                 return true;

@@ -136,16 +136,39 @@ public class BizCardActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Bundle QRData = getIntent().getExtras();//from ResultActivity
-        final String qrurl = QRData.getString("Rst");
+        final String contactResult = QRData.getString("Rst");
+
+
+
+        Pattern pattern = Pattern.compile("((\\n|;|:)(N:|X:|T:|C:|A:|B:|E:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+
+        Matcher m = pattern.matcher(contactResult);
+
+
+        String name = "";
+
+
+        if (m.find()) {
+            name = m.group(1).substring(1);
+        }
+
+        final String n=name.substring(2).replace(';', ' ');// get name from the string
+        final String tel=between(contactResult,"B:",";E");
+        final String mail=between(contactResult,"E:",";;");
+        final String title=between(contactResult,"T:",";C");
+        final String org=between(contactResult,"C:",";A");
+
+
+        final String ss="name:"+n +"; phone nummber:"+tel+"; title: "+title+"; E-mail:"+mail+"; organization:"+org;
 
         switch (item.getItemId()){
             case R.id.share:
-                shareIt(qrurl);
+                shareIt(ss);
                 return true;
 
             case R.id.copy:
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
-                clipData= ClipData.newPlainText("Text",qrurl);
+                clipData= ClipData.newPlainText("Text",ss);
                 clipboardManager.setPrimaryClip(clipData);
                 Toast.makeText(getApplicationContext(), content_copied,Toast.LENGTH_LONG).show();
                 return true;
