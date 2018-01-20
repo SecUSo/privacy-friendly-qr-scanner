@@ -195,6 +195,12 @@
         <item>Add to Contacts</item>
         <item>Do nothing</item>
     </string-array>
+    <string-array name="mms_array">
+        <item>Send MMS</item>
+        <item>Call Number</item>
+        <item>Add to Contacts</item>
+        <item>Do nothing</item>
+    </string-array>
     <string-array name="tel_array">
         <item>Call Number</item>
         <item>Add to Contacts</item>
@@ -219,6 +225,15 @@
     <string-array name="history_array">
         <item>Copy to clipboard</item>
         <item>Delete entry</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>E-mail</item>
+        <item>URL</item>
+        <item>Phone number</item>
+        <item>SMS</item>
+        <item>Geo location</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
     </string-array>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>

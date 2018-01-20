@@ -7,115 +7,15 @@
     tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating.QrGenerator">
 
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:checkedButton="@id/radioMail">
 
-        <RadioButton
-            android:id="@+id/radioMail"
-            android:layout_width="wrap_content"
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="E-mail" />
-
-        <RadioButton
-            android:id="@+id/radioTel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tel" />
-        <RadioButton
-            android:id="@+id/radioUrl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="URL" />
-
-        <RadioButton
-            android:id="@+id/radioSms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="SMS" />
-
-        <RadioButton
-            android:id="@+id/radioGeo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Geo location" />
-    </RadioGroup>
-
-    <EditText
-        android:id="@+id/gnResult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/radioGroup"
-        android:ems="10"
-        android:inputType="textPersonName" />
-
-    <Button
-        android:id="@+id/generate"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/button_fullwidth"
-        android:padding="5dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_margin="1dp"
-        android:text="Generate"
-        android:textColor="@android:color/white" />
-
-    <EditText
-        android:id="@+id/editTel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/generate"
-        android:layout_below="@+id/gnResult"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="38dp"
-        android:ems="10"
-        android:hint="Mobile number"
-        android:inputType="phone" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editTel"
-        android:layout_alignTop="@+id/editTel"
-        android:layout_marginTop="74dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="SMS text"
-        android:text=""
-        android:visibility="visible" />
+            android:clipToPadding="true" />
 
 
-    <EditText
-        android:id="@+id/editGeo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="55dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:hint="latitude"/>
-
-    <EditText
-        android:id="@+id/editGeo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/editGeo1"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="longitude"
-        android:inputType="numberDecimal" />
 
 </RelativeLayout>
+
+
