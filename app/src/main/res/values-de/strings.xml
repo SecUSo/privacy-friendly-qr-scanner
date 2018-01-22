@@ -88,10 +88,22 @@
         <item>Zu Kontakten hinzufügen</item>
         <item>Nichts tun</item>
     </string-array>
+
     <string-array name="tel_array">
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>
         <item>Nichts tun</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>E-mail</item>
+        <item>URL</item>
+        <item>Telefonnummer</item>
+        <item>SMS</item>
+        <item>Geo Standort</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>VCard</item>
+        <item>MMS</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
@@ -178,4 +190,8 @@
     <string name="okay">Ok</string>
     <string name="next">Nächster</string>
     <string name="Store_in_gallery">Store</string>
+    <string name="phone_number">Telefonnummer</string>
+    <string name="sms_text">SMS-Text</string>
+    <string name="mms">MMS</string>
+
 </resources>

@@ -107,11 +107,32 @@
         <activity
             android:name=".QRGenerating.GeoLocatioGnrActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.MailEnterActivity" android:parentActivityName=".MainActivity" android:label="E-Mail"/>
-        <activity android:name=".QRGenerating.TelEnterActivity" android:parentActivityName=".MainActivity" android:label="Phone number"/>
-        <activity android:name=".QRGenerating.UrlEnterActivity" android:parentActivityName=".MainActivity" android:label="URL"/>
-        <activity android:name=".QRGenerating.SmsEnterActivity"  android:parentActivityName=".MainActivity" android:label="SMS"/>
-        <activity android:name=".QRGenerating.GeoLocationEnterActivity" android:parentActivityName=".MainActivity" android:label="Geo location"/>
+        <activity
+            android:name=".QRGenerating.MailEnterActivity"
+            android:label="E-Mail"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.TelEnterActivity"
+            android:label="Phone number"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.UrlEnterActivity"
+            android:label="URL"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.SmsEnterActivity"
+            android:label="SMS"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.GeoLocationEnterActivity"
+            android:label="Geo location"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".QRGenerating.MeCardEnterActivity"   android:label="MeCard" android:parentActivityName=".MainActivity" />
+        <activity android:name=".QRGenerating.BizCardEnterActivity"   android:label="BizCard" android:parentActivityName=".MainActivity" />
+        <activity android:name=".QRGenerating.MeCardGnrActivity" android:parentActivityName=".MainActivity" />
+        <activity android:name=".QRGenerating.BizCardGnrActivity"  android:parentActivityName=".MainActivity"/>
+        <activity android:name=".QRGenerating.MmsEnterActivity"   android:label="MMS" android:parentActivityName=".MainActivity"  />
+        <activity android:name=".QRGenerating.MmsGnrActivity" android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

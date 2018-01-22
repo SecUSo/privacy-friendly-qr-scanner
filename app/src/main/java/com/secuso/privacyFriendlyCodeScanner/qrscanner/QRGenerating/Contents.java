@@ -24,7 +24,10 @@ public final class Contents {
 
         // An SMS type. Use Intent.putExtra(DATA, string) where string is the number to SMS.
         public static final String SMS = "SMS_TYPE";
+        public static final String MMS = "MMS_TYPE";
         public static final String WEB_URL = "URL_TYPE";
+        public static final String Me_Card = "MeCard_TYPE";
+        public static final String Biz_Card = "BizCard_TYPE";
 
 
 

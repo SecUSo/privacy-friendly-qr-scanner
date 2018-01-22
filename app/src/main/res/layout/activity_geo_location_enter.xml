@@ -4,10 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating.SmsEnterActivity">
+    tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating.GeoLocationEnterActivity">
 
+    <EditText
+        android:id="@+id/editGeo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:ems="10"
+        android:hint="latitude"
+        android:inputType="numberDecimal" />
 
-
+    <EditText
+        android:id="@+id/editGeo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editGeo1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="longitude"
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/generate"
@@ -23,16 +42,4 @@
         android:layout_margin="1dp"
         android:text="Generate"
         android:textColor="@android:color/white" />
-
-    <EditText
-        android:id="@+id/editPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="124dp"
-        android:ems="10"
-        android:hint="@string/phone_number"
-        android:inputType="phone" />
-
 </RelativeLayout>

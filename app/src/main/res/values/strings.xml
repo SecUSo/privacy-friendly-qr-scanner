@@ -234,6 +234,8 @@
         <item>Geo location</item>
         <item>MeCard</item>
         <item>BizCard</item>
+        <item>VCard</item>
+        <item>MMS</item>
     </string-array>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>
@@ -303,6 +305,10 @@
     <string name="Scan_qr">Scan</string>
     <string name="okay">Okay</string>
     <string name="Store_in_gallery">Store</string>
+    <string name="phone_number">Phone number</string>
+
+    <string name="sms_text">SMS text</string>
+    <string name="mms">MMS</string>
 
 
 </resources>
