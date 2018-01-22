@@ -32,7 +32,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="124dp"
         android:ems="10"
-        android:hint="Phone number"
+        android:hint="@string/phone_number"
         android:inputType="phone" />
 
     <EditText
@@ -44,6 +44,6 @@
         android:layout_marginTop="75dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="SMS text" />
+        android:hint="@string/sms_text" />
 
 </RelativeLayout>

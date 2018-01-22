@@ -71,12 +71,20 @@ public class QrGenerator extends AppCompatActivity {
                 }
 
                 if(position==5){
-                    Intent english=new Intent(QrGenerator.this,TelEnterActivity.class);
+                    Intent english=new Intent(QrGenerator.this,MeCardEnterActivity.class);
                     startActivity(english);
                 }
 
                 if(position==6){
-                    Intent english=new Intent(QrGenerator.this,TelEnterActivity.class);
+                    Intent english=new Intent(QrGenerator.this,BizCardEnterActivity.class);
+                    startActivity(english);
+                }
+                if(position==7){
+                    Intent english=new Intent(QrGenerator.this,MmsEnterActivity.class);
+                    startActivity(english);
+                }
+                if(position==8){
+                    Intent english=new Intent(QrGenerator.this,MmsEnterActivity.class);
                     startActivity(english);
                 }
 

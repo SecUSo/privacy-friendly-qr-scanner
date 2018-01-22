@@ -98,14 +98,44 @@ public  class QRCodeEncoder {
                 displayContents = PhoneNumberUtils.formatNumber(data);
                 title = "Phone";
             }
-        } else if (type.equals(Contents.Type.SMS)) {
+
+        }
+        else if (type.equals(Contents.Type.Me_Card)) {
+            data = trim(data);
+            if (data != null) {
+                contents = "MECARD:N:" + data;
+                displayContents = data;
+                title = "MeCard";
+            }
+
+        }
+        else if (type.equals(Contents.Type.Biz_Card)) {
+            data = trim(data);
+            if (data != null) {
+                contents = "BIZCARD:N:" + data;
+                displayContents = data;
+                title = "BizCard";
+            }
+
+        }
+        else if (type.equals(Contents.Type.SMS)) {
             data = trim(data);
             if (data != null) {
                 contents = "SMSTO:" + data;
                 displayContents = PhoneNumberUtils.formatNumber(data);
                 title = "SMS";
             }
-        } else if (type.equals(Contents.Type.CONTACT)) {
+
+        }
+        else if (type.equals(Contents.Type.MMS)) {
+            data = trim(data);
+            if (data != null) {
+                contents = "MMSTO:" + data;
+                //displayContents = PhoneNumberUtils.formatNumber(data);
+                title = "MMS";
+            }
+
+        }else if (type.equals(Contents.Type.CONTACT)) {
             if (bundle != null) {
                 StringBuilder newContents = new StringBuilder(100);
                 StringBuilder newDisplayContents = new StringBuilder(100);
