@@ -127,12 +127,30 @@
             android:name=".QRGenerating.GeoLocationEnterActivity"
             android:label="Geo location"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.MeCardEnterActivity"   android:label="MeCard" android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.BizCardEnterActivity"   android:label="BizCard" android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.MeCardGnrActivity" android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.BizCardGnrActivity"  android:parentActivityName=".MainActivity"/>
-        <activity android:name=".QRGenerating.MmsEnterActivity"   android:label="MMS" android:parentActivityName=".MainActivity"  />
-        <activity android:name=".QRGenerating.MmsGnrActivity" android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".QRGenerating.MeCardEnterActivity"
+            android:label="MeCard"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.BizCardEnterActivity"
+            android:label="BizCard"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.MeCardGnrActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.BizCardGnrActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.MmsEnterActivity"
+            android:label="MMS"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.MmsGnrActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".QRGenerating.WifiEnterActivity" android:label="WIFI"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".QRGenerating.WifiGnrActivity" android:parentActivityName=".MainActivity" ></activity>
     </application>
 
 </manifest>

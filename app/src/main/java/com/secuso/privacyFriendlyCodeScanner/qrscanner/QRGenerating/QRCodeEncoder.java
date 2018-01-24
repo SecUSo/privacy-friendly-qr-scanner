@@ -100,6 +100,15 @@ public  class QRCodeEncoder {
             }
 
         }
+        else if (type.equals(Contents.Type.WIFI)) {
+            data = trim(data);
+            if (data != null) {
+                contents = "WIFI:T:" + data;
+               // displayContents = PhoneNumberUtils.formatNumber(data);
+                title = "WIFI";
+            }
+
+        }
         else if (type.equals(Contents.Type.Me_Card)) {
             data = trim(data);
             if (data != null) {

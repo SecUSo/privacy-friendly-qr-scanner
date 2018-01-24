@@ -102,8 +102,9 @@
         <item>Geo Standort</item>
         <item>MeCard</item>
         <item>BizCard</item>
-        <item>VCard</item>
         <item>MMS</item>
+        <item>Wifi</item>
+        <item>VCard</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
@@ -193,5 +194,7 @@
     <string name="phone_number">Telefonnummer</string>
     <string name="sms_text">SMS-Text</string>
     <string name="mms">MMS</string>
+    <string name="network_name">Network name</string>
+    <string name="password">Password</string>
 
 </resources>

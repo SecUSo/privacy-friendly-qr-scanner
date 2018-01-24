@@ -84,7 +84,7 @@ public class QrGenerator extends AppCompatActivity {
                     startActivity(english);
                 }
                 if(position==8){
-                    Intent english=new Intent(QrGenerator.this,MmsEnterActivity.class);
+                    Intent english=new Intent(QrGenerator.this,WifiEnterActivity.class);
                     startActivity(english);
                 }
 
