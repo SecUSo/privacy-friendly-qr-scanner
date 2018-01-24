@@ -27,12 +27,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Random;
 
-public class MmsGnrActivity extends AppCompatActivity {
+public class WifiGnrActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mms_gnr);
+        setContentView(R.layout.activity_wifi_gnr);
         Button btnstore = (Button) findViewById(R.id.btnstore);
 
         Bundle QRData = getIntent().getExtras();//from QRGenerator
@@ -57,9 +57,9 @@ public class MmsGnrActivity extends AppCompatActivity {
                 Bitmap bitmap=createBitmap(qrInputText);
                 saveImageToExternalStorage(bitmap);
 
-                Intent i=new Intent(MmsGnrActivity.this, MainActivity.class);
+                Intent i=new Intent(WifiGnrActivity.this, MainActivity.class);
                 startActivity(i);
-                Toast.makeText(MmsGnrActivity.this, "QR code stored in gallery", Toast.LENGTH_LONG).show();
+                Toast.makeText(WifiGnrActivity.this, "QR code stored in gallery", Toast.LENGTH_LONG).show();
 
 
 
@@ -166,7 +166,7 @@ public class MmsGnrActivity extends AppCompatActivity {
         //Encode with a QR Code image
         QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
                 null,
-                Contents.Type.MMS,
+                Contents.Type.WIFI,
                 BarcodeFormat.QR_CODE.toString(),
                 smallerDimension);
         Bitmap bitmap_ = null;

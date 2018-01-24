@@ -17,7 +17,7 @@ public class MmsEnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mms_enter);
 
 
-        final EditText qrSms=(EditText) findViewById(R.id.editTel);
+        final EditText qrMms=(EditText) findViewById(R.id.editTel);
         final EditText qrText=(EditText) findViewById(R.id.editText1);
         Button generate=(Button) findViewById(R.id.generate);
 
@@ -31,7 +31,7 @@ public class MmsEnterActivity extends AppCompatActivity {
 
 
 
-                result = qrSms.getText().toString()+":"+qrText.getText().toString();
+                result = qrMms.getText().toString()+":"+qrText.getText().toString();
                 Intent i = new Intent(MmsEnterActivity.this, MmsGnrActivity.class);
                 i.putExtra("gn", result);
                 startActivity(i);
