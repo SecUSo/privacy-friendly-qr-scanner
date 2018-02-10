@@ -49,44 +49,54 @@ public class QrGenerator extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position==0){
-                    Intent appInfo = new Intent(QrGenerator.this, MailEnterActivity.class);
-                    startActivity(appInfo);
+                    Intent intent = new Intent(QrGenerator.this, MailEnterActivity.class);
+                    startActivity(intent);
                 }
                 if(position==1){
-                    Intent english=new Intent(QrGenerator.this,UrlEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,UrlEnterActivity.class);
+                    startActivity(intent);
                 }
                 if(position==2){
-                    Intent english=new Intent(QrGenerator.this,TelEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,TelEnterActivity.class);
+                    startActivity(intent);
                 }
                 if(position==3){
-                    Intent english=new Intent(QrGenerator.this,SmsEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,SmsEnterActivity.class);
+                    startActivity(intent);
                 }
 
                 if(position==4){
-                    Intent english=new Intent(QrGenerator.this,GeoLocationEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,GeoLocationEnterActivity.class);
+                    startActivity(intent);
                 }
 
                 if(position==5){
-                    Intent english=new Intent(QrGenerator.this,MeCardEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,MeCardEnterActivity.class);
+                    startActivity(intent);
                 }
 
                 if(position==6){
-                    Intent english=new Intent(QrGenerator.this,BizCardEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,BizCardEnterActivity.class);
+                    startActivity(intent);
                 }
                 if(position==7){
-                    Intent english=new Intent(QrGenerator.this,MmsEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,MmsEnterActivity.class);
+                    startActivity(intent);
                 }
                 if(position==8){
-                    Intent english=new Intent(QrGenerator.this,WifiEnterActivity.class);
-                    startActivity(english);
+                    Intent intent=new Intent(QrGenerator.this,WifiEnterActivity.class);
+                    startActivity(intent);
                 }
+                if(position==9){
+                    Intent intent=new Intent(QrGenerator.this,VcardEnterActivity.class);
+                    startActivity(intent);
+                }
+
+                if(position==10){
+                    Intent intent=new Intent(QrGenerator.this,MarketEnterActivity.class);
+                    startActivity(intent);
+                }
+
 
 
             }

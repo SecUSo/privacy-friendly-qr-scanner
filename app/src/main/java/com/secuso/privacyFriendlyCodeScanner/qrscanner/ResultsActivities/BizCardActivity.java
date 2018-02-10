@@ -36,14 +36,55 @@ public class BizCardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_biz_card);
 
 
-        TextView resultTextContact = (TextView) findViewById(R.id.result_text_contact);
+        TextView resultTextName = (TextView) findViewById(R.id.result_text_Name);
+        TextView resultTextEmail = (TextView) findViewById(R.id.result_text_Email);
+        TextView resultTextPhone = (TextView) findViewById(R.id.result_text_Phone);
+        TextView resultTextAddress = (TextView) findViewById(R.id.result_text_Address);
+        TextView resultTextCompany = (TextView) findViewById(R.id.result_text_Company);
+        TextView resultTextTitle = (TextView) findViewById(R.id.result_text_Title);
+
         Button btnProceed = (Button) findViewById(R.id.btnProceed);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
 
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String contactResult = QRData.getString("Rst");
 
-        Pattern pattern = Pattern.compile("((\\n|;|:)(N:|X:|T:|C:|A:|B:|E:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+
+        String[] content = contactResult.substring(contactResult.indexOf(":") + 1).split(";");
+        int name_id = 0;
+        int email_id = 0;
+        int phone_id = 0;
+        int address_id = 0;
+        int company_id = 0;
+        int title_id = 0;
+
+//BIZCARD:N:Sean;X:Owen;T:Software Engineer;C:Google;A:76 9th Avenue, New York, NY 10011;B:+12125551212;E:srowen@google.com;;
+
+        for(int i=0; i < content.length; i++) {
+            if(content[i].startsWith("N:")) name_id = i;
+            if(content[i].startsWith("E:")) email_id = i;
+            if(content[i].startsWith("B:")) phone_id = i;
+            if(content[i].startsWith("A:")) address_id = i;
+            if(content[i].startsWith("C:")) company_id = i;
+            if(content[i].startsWith("T:")) title_id = i;
+        }
+
+        final String name = content[name_id].substring(2);
+        final String email = content[email_id].substring(2);
+        final String phone = content[phone_id].substring(2);
+        final String address = content[address_id].substring(2);
+        final String company = content[company_id].substring(2);
+        final String title = content[title_id].substring(2);
+
+
+        resultTextName.setText("Name: " + name);
+        resultTextEmail.setText("Email: " + email);
+        resultTextPhone.setText("Tel: " + phone);
+        resultTextAddress.setText("Address: " + address);
+        resultTextCompany.setText("Company: " + company);
+        resultTextTitle.setText("Title: " + title);
+
+     /*   Pattern pattern = Pattern.compile("((\\n|;|:)(N:|X:|T:|C:|A:|B:|E:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
         Matcher m = pattern.matcher(contactResult);
 
@@ -66,7 +107,7 @@ public class BizCardActivity extends AppCompatActivity {
         final String tel=between(contactResult,"B:",";E");
         final String mail=between(contactResult,"E:",";;");
         final String title=between(contactResult,"T:",";C");
-        final String org=between(contactResult,"C:",";A");
+        final String org=between(contactResult,"C:",";A");  */
 
 
 
@@ -99,10 +140,10 @@ public class BizCardActivity extends AppCompatActivity {
                                         contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
 
-                                        contact.putExtra(ContactsContract.Intents.Insert.PHONE, tel);
-                                        contact.putExtra(ContactsContract.Intents.Insert.NAME, n);
-                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL,mail);
-                                       contact.putExtra(ContactsContract.Intents.Insert.COMPANY, org);
+                                        contact.putExtra(ContactsContract.Intents.Insert.PHONE, phone);
+                                        contact.putExtra(ContactsContract.Intents.Insert.NAME, name);
+                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL,email);
+                                       contact.putExtra(ContactsContract.Intents.Insert.COMPANY, company);
                                         contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, title);
 
 
@@ -139,8 +180,32 @@ public class BizCardActivity extends AppCompatActivity {
         final String contactResult = QRData.getString("Rst");
 
 
+        String[] content = contactResult.substring(contactResult.indexOf(":") + 1).split(";");
+        int name_id = 0;
+        int email_id = 0;
+        int phone_id = 0;
+        int address_id = 0;
+        int company_id = 0;
+        int title_id = 0;
 
-        Pattern pattern = Pattern.compile("((\\n|;|:)(N:|X:|T:|C:|A:|B:|E:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+//BIZCARD:N:Sean;X:Owen;T:Software Engineer;C:Google;A:76 9th Avenue, New York, NY 10011;B:+12125551212;E:srowen@google.com;;
+
+        for(int i=0; i < content.length; i++) {
+            if(content[i].startsWith("N:")) name_id = i;
+            if(content[i].startsWith("E:")) email_id = i;
+            if(content[i].startsWith("B:")) phone_id = i;
+            if(content[i].startsWith("A:")) address_id = i;
+            if(content[i].startsWith("C:")) company_id = i;
+            if(content[i].startsWith("T:")) title_id = i;
+        }
+
+        final String name = content[name_id].substring(2);
+        final String email = content[email_id].substring(2);
+        final String phone = content[phone_id].substring(2);
+        final String address = content[address_id].substring(2);
+        final String company = content[company_id].substring(2);
+        final String title = content[title_id].substring(2);
+       /* Pattern pattern = Pattern.compile("((\\n|;|:)(N:|X:|T:|C:|A:|B:|E:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
         Matcher m = pattern.matcher(contactResult);
 
@@ -156,10 +221,10 @@ public class BizCardActivity extends AppCompatActivity {
         final String tel=between(contactResult,"B:",";E");
         final String mail=between(contactResult,"E:",";;");
         final String title=between(contactResult,"T:",";C");
-        final String org=between(contactResult,"C:",";A");
+        final String org=between(contactResult,"C:",";A");*/
 
 
-        final String ss="name:"+n +"; phone nummber:"+tel+"; title: "+title+"; E-mail:"+mail+"; organization:"+org;
+        final String ss="name:"+name +"; phone nummber:"+phone+"; Address"+address+"; title: "+title+"; E-mail:"+email+"; Company:"+company;
 
         switch (item.getItemId()){
             case R.id.share:

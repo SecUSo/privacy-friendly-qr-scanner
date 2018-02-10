@@ -33,21 +33,17 @@ public class QrScanner extends AppCompatActivity  {
 
 
 
-        private Button scan_bt;
-        private Activity activity;
+    private Button scan_bt;
+    private Activity activity;
 
 
 
-        @SuppressLint("RestrictedApi")
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
-            setContentView(R.layout.activity_qr_scanner);
-
-
-
-
+    @SuppressLint("RestrictedApi")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        setContentView(R.layout.activity_qr_scanner);
 
 
 
@@ -55,50 +51,58 @@ public class QrScanner extends AppCompatActivity  {
 
 
 
-            scan_bt = (Button) findViewById(R.id.btScan);
-            final Activity activity = this;
-            scan_bt.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
 
-                    if (SDK_INT >= Build.VERSION_CODES.M) {
-                        if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                            ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
-                            return;
-                        }
+
+
+
+        scan_bt = (Button) findViewById(R.id.btScan);
+        final Activity activity = this;
+        scan_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
+
+
+
+
+                        return;
                     }
-                    IntentIntegrator integrator = new IntentIntegrator(activity);
-                    integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-                    integrator.setPrompt(getString(R.string.Scan_qr));
-                    integrator.setCameraId(0);
-                    integrator.setBeepEnabled(false);
-                  //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                  //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
-                    integrator.setOrientationLocked(false);
-                    //integrator.setBarcodeImageEnabled(false);
-                    integrator.initiateScan();
                 }
-            });
-        }
-
-        @Override
-        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            String dataResult;
-            IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-            if (result != null) {
-                if (result.getContents() == null) {
-                    Toast.makeText(this, R.string.canncelled_scan, Toast.LENGTH_LONG).show();
-                } else {
-                    dataResult=result.getContents();
-                    Intent i=new Intent(this, ResultActivity.class);
-                    i.putExtra("QRResult",dataResult);
-                    startActivity(i);
-
-
-                   // Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
-                }
-            } else {
-                super.onActivityResult(requestCode, resultCode, data);
+                IntentIntegrator integrator = new IntentIntegrator(activity);
+                integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+                integrator.setPrompt(getString(R.string.Scan_qr));
+                integrator.setCameraId(0);
+                integrator.setBeepEnabled(false);
+                //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
+                integrator.setOrientationLocked(false);
+                //integrator.setBarcodeImageEnabled(false);
+                integrator.initiateScan();
             }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        String dataResult;
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            if (result.getContents() == null) {
+                Toast.makeText(this, R.string.canncelled_scan, Toast.LENGTH_LONG).show();
+            } else {
+                dataResult=result.getContents();
+                Intent i=new Intent(this, ResultActivity.class);
+                i.putExtra("QRResult",dataResult);
+                startActivity(i);
+
+
+                // Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
+}

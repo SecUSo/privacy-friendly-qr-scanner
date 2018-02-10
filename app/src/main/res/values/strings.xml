@@ -237,6 +237,7 @@
         <item>MMS</item>
         <item>Wifi</item>
         <item>VCard</item>
+        <item>Market</item>
 
     </string-array>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
@@ -313,6 +314,15 @@
     <string name="mms">MMS</string>
     <string name="network_name">Network name</string>
     <string name="password">Password</string>
+    <string name="company">Company</string>
+    <string name="lastname">Lastname</string>
+    <string name="title">Title</string>
+    <string name="city">City</string>
+    <string name="street_number">Street number</string>
+    <string name="postal_address">Postal address</string>
+    <string name="e_mail_address">E-mail address</string>
+    <string name="firstname">Firstname</string>
+    <string name="street_name_and_number">Street name and number</string>
 
 
 </resources>

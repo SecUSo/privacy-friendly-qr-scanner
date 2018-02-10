@@ -45,12 +45,62 @@ public class MeCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_me_card);
 
-        TextView resultTextContact = (TextView) findViewById(R.id.result_text_contact);
+        TextView resultTextName = (TextView) findViewById(R.id.result_text_name);
+        TextView resultTextEmail = (TextView) findViewById(R.id.result_text_Email);
+        TextView resultTextPhone = (TextView) findViewById(R.id.result_text_Phone);
+        TextView resultTextAddress = (TextView) findViewById(R.id.result_text_Address);
+
         Button btnProceed = (Button) findViewById(R.id.btnProceed);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
 
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String contactResult = QRData.getString("Rst");
+
+        String[] content = contactResult.substring(contactResult.indexOf(":") + 1).split(";");
+        int name_id = 0;
+        int email_id = 0;
+        int phone_id = 0;
+        int address_id = 0;
+
+
+        for(int i=0; i < content.length; i++) {
+            if(content[i].startsWith("N:")) name_id = i;
+            if(content[i].startsWith("EMAIL:")) email_id = i;
+            if(content[i].startsWith("TEL:")) phone_id = i;
+            if(content[i].startsWith("ADR:")) address_id = i;
+        }
+
+        final String name = content[name_id].substring(2);
+       final String email = content[email_id].substring(6);
+        final String phone = content[phone_id].substring(4);
+        final String address = content[address_id].substring(4);
+
+        resultTextName.setText("Name: " + name);
+        resultTextEmail.setText("Email: " + email);
+        resultTextPhone.setText("Tel: " + phone);
+        resultTextAddress.setText("Address: " + address);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
 
         Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL: | EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
@@ -96,7 +146,8 @@ public class MeCardActivity extends AppCompatActivity {
        // final String tel=between(contactResult,"TEL:",";EMAIL");
        final String mail=between(contactResult,"EMAIL:",";;");
         //final String title=between(contactResult,"T:",";C");
-       // final String org=between(contactResult,"C:",";A");
+       // final String org=between(contactResult,"C:",";A");       */
+
 
 
 
@@ -129,9 +180,9 @@ public class MeCardActivity extends AppCompatActivity {
                                         contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
 
-                                        contact.putExtra(ContactsContract.Intents.Insert.PHONE, tel);
-                                        contact.putExtra(ContactsContract.Intents.Insert.NAME, n);
-                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL,mail);
+                                        contact.putExtra(ContactsContract.Intents.Insert.PHONE, phone);
+                                        contact.putExtra(ContactsContract.Intents.Insert.NAME, name);
+                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL,email);
                                        // contact.putExtra(ContactsContract.Intents.Insert.COMPANY, org);
                                        // contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, title);
 
@@ -168,7 +219,25 @@ public class MeCardActivity extends AppCompatActivity {
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String contactResult = QRData.getString("Rst");
 
-        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+        String[] content = contactResult.substring(contactResult.indexOf(":") + 1).split(";");
+        int name_id = 0;
+        int email_id = 0;
+        int phone_id = 0;
+        int address_id = 0;
+
+
+        for(int i=0; i < content.length; i++) {
+            if(content[i].startsWith("N:")) name_id = i;
+            if(content[i].startsWith("EMAIL:")) email_id = i;
+            if(content[i].startsWith("TEL:")) phone_id = i;
+            if(content[i].startsWith("ADR:")) address_id = i;
+        }
+
+        final String name = content[name_id].substring(2);
+        final String email = content[email_id].substring(6);
+        final String phone = content[phone_id].substring(4);
+        final String address = content[address_id].substring(4);
+      /*  Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
         Matcher m = pattern.matcher(contactResult);
 
@@ -184,10 +253,10 @@ public class MeCardActivity extends AppCompatActivity {
 
         final String tel=between(contactResult,"TEL:",";EMAIL");
         final String mail=between(contactResult,"EMAIL:",";;");
-        final String adr=between(contactResult,"ADR:",";TEL");
+        final String adr=between(contactResult,"ADR:",";TEL"); */
 
 
-        final String ss="name:"+n +"; phone nummber:"+tel+"; E-mail:"+mail+"; address:"+adr;
+        final String ss="name:"+name +"; phone nummber:"+phone+"; E-mail:"+email+"; address:"+address;
 
         switch (item.getItemId()){
             case R.id.share:
