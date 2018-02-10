@@ -125,6 +125,23 @@ public  class QRCodeEncoder {
                 displayContents = data;
                 title = "BizCard";
             }
+        }
+            else if (type.equals(Contents.Type.Market)) {
+                data = trim(data);
+                if (data != null) {
+                    contents = "market://details?id=" + data;
+                    displayContents = data;
+                    title = "Market";
+                }
+
+        }
+        else if (type.equals(Contents.Type.V_Card)) {
+            data = trim(data);
+            if (data != null) {
+                contents = "BEGIN:VCARD"+"\n"+"VERSION:3.0"+"\n"+ data;
+                displayContents = data;
+                title = "VCard";
+            }
 
         }
         else if (type.equals(Contents.Type.SMS)) {

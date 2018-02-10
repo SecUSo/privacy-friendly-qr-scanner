@@ -105,6 +105,7 @@
         <item>MMS</item>
         <item>Wifi</item>
         <item>VCard</item>
+        <item>Market</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
@@ -190,11 +191,20 @@
     <string name="Scan_qr">Scan</string>
     <string name="okay">Ok</string>
     <string name="next">Nächster</string>
-    <string name="Store_in_gallery">Store</string>
+    <string name="Store_in_gallery">Speichern</string>
     <string name="phone_number">Telefonnummer</string>
     <string name="sms_text">SMS-Text</string>
     <string name="mms">MMS</string>
-    <string name="network_name">Network name</string>
-    <string name="password">Password</string>
+    <string name="network_name">Netzwrkname</string>
+    <string name="password">Passwort</string>
+    <string name="company">Firma</string>
+    <string name="lastname">Nachname</string>
+    <string name="title">Title</string>
+    <string name="city">Stadt</string>
+    <string name="street_number">Street number</string>
+    <string name="postal_address">Plz</string>
+    <string name="e_mail_address">E-mail adresse</string>
+    <string name="firstname">Vorname</string>
+    <string name="street_name_and_number">Straße und Nummer</string>
 
 </resources>

@@ -28,6 +28,8 @@ public final class Contents {
         public static final String WEB_URL = "URL_TYPE";
         public static final String WIFI = "WIFI_TYPE";
         public static final String Me_Card = "MeCard_TYPE";
+        public static final String V_Card = "VCard_TYPE";
+        public static final String Market = "Market_TYPE";
         public static final String Biz_Card = "BizCard_TYPE";
 
 

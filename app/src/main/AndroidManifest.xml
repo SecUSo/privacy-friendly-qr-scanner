@@ -94,18 +94,23 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.MailGnrActivity"
+            android:label="E-Mail"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.TelGnrActivity"
+            android:label="Phone number"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.UrlGnrActivity"
+            android:label="URL"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.SmsGnrActivity"
+            android:label="SMS"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.GeoLocatioGnrActivity"
+            android:label="Geo location"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.MailEnterActivity"
@@ -137,9 +142,11 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.MeCardGnrActivity"
+            android:label="MeCard"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.BizCardGnrActivity"
+            android:label="BizCard"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.MmsEnterActivity"
@@ -147,10 +154,28 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".QRGenerating.MmsGnrActivity"
+            android:label="MMS"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.WifiEnterActivity" android:label="WIFI"
+        <activity
+            android:name=".QRGenerating.WifiEnterActivity"
+            android:label="WIFI"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.WifiGnrActivity" android:parentActivityName=".MainActivity" ></activity>
+        <activity
+            android:name=".QRGenerating.WifiGnrActivity"
+            android:label="WIFI"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.VcardEnterActivity"
+            android:label="vcard"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".QRGenerating.VcardGnrActivity"
+            android:label="vcard"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".QRGenerating.MarketEnterActivity"   android:label="Market"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".QRGenerating.MarketGnrActivity"   android:label="Market"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
