@@ -1,6 +1,7 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
 import android.annotation.SuppressLint;
+import android.app.ActionBar;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.wifi.p2p.WifiP2pManager;
@@ -8,7 +9,9 @@ import android.preference.PreferenceActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.Toolbar;
 
 
 public class Settings extends PreferenceActivity {
@@ -22,6 +25,15 @@ public class Settings extends PreferenceActivity {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.activity_settings);
         //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+
+      //  getLayoutInflater().inflate(R.layout.toolbar, (ViewGroup)findViewById(android.R.id.content));
+      // Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+       //getSuppor(toolbar);
+
+       // setActionBar(toolbar);
+
+
+
 
 
        // Load the preferences from an XML resource

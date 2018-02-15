@@ -43,7 +43,14 @@ public class ContactActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
 
-        TextView resultTextContact = (TextView) findViewById(R.id.result_text_contact);
+        TextView resultTextName = (TextView) findViewById(R.id.result_text_contact);
+        TextView resultTextLastname = (TextView) findViewById(R.id.result_text_lastname);
+        TextView resultTextEmail = (TextView) findViewById(R.id.result_text_Email);
+        TextView resultTextPhone = (TextView) findViewById(R.id.result_text_Phone);
+        TextView resultTextAddress = (TextView) findViewById(R.id.result_text_Address);
+        TextView resultTextCompany = (TextView) findViewById(R.id.result_text_Company);
+        TextView resultTextTitle = (TextView) findViewById(R.id.result_text_Title);
+
         Button btnProceed = (Button) findViewById(R.id.btnProceed);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
 
@@ -54,7 +61,7 @@ public class ContactActivity extends AppCompatActivity {
         // resultTextContact.setText(vCard);
 
 
-        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+       /* Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
         Matcher m = pattern.matcher(contactResult);
 
@@ -64,12 +71,61 @@ public class ContactActivity extends AppCompatActivity {
             name = m.group(1).substring(1);
 
             if (name.startsWith("N:"))
-                resultTextContact.setText("Name: " + name.substring(2).replace(';', ' '));
+                resultTextName.setText("Name: " + name.substring(2).replace(';', ' '));
             else if (name.startsWith("FN:"))
-                resultTextContact.setText("Name: " + name.substring(3).replace(';', ' '));
+                resultTextName.setText("Name: " + name.substring(3).replace(';', ' '));
             else
-                resultTextContact.setText(R.string.noname);
+                resultTextName.setText(R.string.noname);
+
+
+        }  */
+
+
+       /* ***************************************************************************************************/
+
+        String[] content = contactResult.substring(contactResult.indexOf(":") + 1).split(";");
+        int name_id = 0;
+        int lastname_id = 0;
+        int email_id = 0;
+        int phone_id = 0;
+        int address_id = 0;
+        int company_id = 0;
+        int title_id = 0;
+
+
+        for(int i=0; i < content.length; i++) {
+            if(content[i].startsWith("FN:") && content[i].endsWith("\n")) name_id = i;
+            if(content[i].startsWith("N:") && content[i].endsWith("\n")) lastname_id = i;
+            if(content[i].startsWith("EMAIL;WORK:") && content[i].endsWith("\n")) email_id = i;
+            if(content[i].startsWith("TEL;CELL:")&& content[i].endsWith("\n")) phone_id = i;
+            if(content[i].startsWith("ADR:;;") && content[i].endsWith("\n")) address_id = i;
+            if(content[i].startsWith("ORG:") && content[i].endsWith("\n")) company_id = i;
+            if(content[i].startsWith("TITLE:") && content[i].endsWith("\n")) title_id = i;
         }
+
+        final String name = content[name_id].substring(3);
+        final String lastname = content[lastname_id].substring(2);
+        final String email = content[email_id].substring(11);
+        final String phone = content[phone_id].substring(9);
+        final String address = content[address_id].substring(6);
+        final String company = content[company_id].substring(4);
+        final String title = content[title_id].substring(6);
+
+
+        resultTextName.setText("Name: " + name);
+        resultTextLastname.setText("Lastname: " + lastname);
+        resultTextEmail.setText("Email: " + email);
+        resultTextPhone.setText("Tel: " + phone);
+        resultTextAddress.setText("Address: " + address);
+        resultTextCompany.setText("Company: " + company);
+        resultTextTitle.setText("Title: " + title);
+
+
+       /* ***************************************************************************************************/
+
+
+
+
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +148,7 @@ public class ContactActivity extends AppCompatActivity {
                                 switch (which) {
                                     case 0:
 
-                                        Uri uri = null;
+                                     /*   Uri uri = null;
                                         try {
                                             uri = createVCard();
                                         } catch (IOException e) {
@@ -106,6 +162,20 @@ public class ContactActivity extends AppCompatActivity {
                                       //  Intent contact = new Intent(Intent.ACTION_INSERT, ContactsContract.Contacts.CONTENT_URI);
                                         contact.setType("text/x-vcard");
                                         contact.setData(uri);
+
+                                        String caption = getResources().getStringArray(R.array.vcard_array)[0];
+                                        startActivity(Intent.createChooser(contact, caption));*/
+                                        Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
+                                        contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+
+
+                                        contact.putExtra(ContactsContract.Intents.Insert.PHONE, phone);
+                                        contact.putExtra(ContactsContract.Intents.Insert.NAME, name);
+                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL,email);
+                                        contact.putExtra(ContactsContract.Intents.Insert.COMPANY, company);
+                                        contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, title);
+
+
 
                                         String caption = getResources().getStringArray(R.array.vcard_array)[0];
                                         startActivity(Intent.createChooser(contact, caption));
