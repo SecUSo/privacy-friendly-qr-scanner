@@ -24,11 +24,11 @@
     <string name="History">History</string>
 
     <string name="slide1_heading">Welcome!</string>
-    <string name="slide1_text">This App serves as a guideline to see the basic design of Privacy Friendly Apps. Here introduce your app in one or two sentences.</string>
-    <string name="slide2_heading">Key Elements</string>
-    <string name="text_slide2">Introduce key elements of your app. Do not introduce too many details.</string>
-    <string name="slide3_heading">Github and Guide</string>
-    <string name="text_slide3">The sourcecode of this app is available at GitHub. For further explanations have a look at the Privacy Friendly App Guide.</string>
+    <string name="slide1_text">Welcome to privacy friendly QR scanner. This tutorial will cover the most important things you need to know.</string>
+    <string name="slide2_heading">what is there?</string>
+    <string name="text_slide2">You either scan QR code by using QR Scanner or generate QR code by using QR Generator.</string>
+    <string name="slide3_heading">More features</string>
+    <string name="text_slide3">The QR code you scanned can be saved in History. Furthermore you can share it or copy it.</string>
     <string name="wecome">welcome</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
@@ -169,8 +169,8 @@
     <string name="proceed">Proceed</string>
     <string name="back">Back</string>
 
-    <string name="choose_action_url">Proceed &amp; save</string>
-    <string name="abort_action_url">Do not trust &amp; do not save</string>
+    <string name="choose_action_url">Proceed</string>
+    <string name="abort_action_url">Abort</string>
 
     <string-array name="text_array">
         <item>Search on Web</item>
@@ -271,7 +271,7 @@
     <string name="help_category_example">The scanning does not work, what can I do?</string>
     <string name="help_overview_heading">What is PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">With PRIVACY FRIENDLY QR Scanner you can scan barcodes and qr-codes with various contents.</string>
-    <string name="help_whatis_answer">With PRIVACY FRIENDLY QR Scanner you can scan/generate barcodes and qr-codes with various contents.</string>
+    <string name="help_whatis_answer">With PRIVACY FRIENDLY QR Scanner you can scan/generate barcodes and qr-codes with various contents. Also You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
 
 
     <!--###HELP###-->
@@ -323,6 +323,22 @@
     <string name="e_mail_address">E-mail address</string>
     <string name="firstname">Firstname</string>
     <string name="street_name_and_number">Street name and number</string>
+    <string name="delete_content">Are you sure you want to delete  contents?</string>
+    <string name="delete_alll">Delete all contents</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="D_all">Delete all record(s)</string>
+    <string name="all_records">Do you  want to delete all record(s)?</string>
+    <string name="Del">Do you  want to delete selected record(s)?</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="selected">Selected</string>
+    <string name="code_stored">QR code stored in gallery</string>
+    <string name="Ofeatures">Other features</string>
+    <string name="OfeaturesAnswer">You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
+    <string name="Content_copied">Content copied</string>
+    <string name="Share_via">Share via</string>
+    <string name="select_all">Select All</string>
+    <string name="selected_1">Selected</string>
 
 
 </resources>

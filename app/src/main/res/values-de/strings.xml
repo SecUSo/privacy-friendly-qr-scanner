@@ -4,6 +4,17 @@
     <string name="qr_scanner">QR Scanner</string>
     <string name="qr_generator">QR Generator</string>
 
+    <string name="slide1_heading">Herzlich willkommen!</string>
+    <string name="slide1_text">Willkommen beim Datenschutz QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollen.</string>
+    <string name="slide2_heading">Was gibt es?</string>
+    <string name="text_slide2">Sie scannen entweder QR-Code mit QR-Scanner oder QR-Code generieren mit QR-Generator.</string>
+    <string name="slide3_heading">Mehr Funktionen</string>
+    <string name="text_slide3">Der QR-Code, den Sie gescannt haben, kann im Verlauf gespeichert werden. Außerdem können Sie es teilen oder kopieren.</string>
+    <string name="wecome">Herzlich willkommen!</string>
+    <string name="skip">Überspringent</string>
+
+    <string name="help_">Hilfe</string>
+
     <string name="settings">Einstellungen</string>
     <string name="help">Hilfe</string>
     <string name="about">Über</string>
@@ -55,8 +66,8 @@
     <string name="proceed">Fortfahren</string>
     <string name="back">Zurück</string>
 	
-	<string name="choose_action_url">Fortfahren &amp; speichern</string>
-	<string name="abort_action_url">Nicht vertrauen &amp; nicht speichern</string>
+	<string name="choose_action_url">Fortfahrenn</string>
+	<string name="abort_action_url">Abbrechen</string>
 	
     <string-array name="text_array">
         <item>Online suchen</item>
@@ -157,6 +168,7 @@
     <string name="more_info">Weitere Infos unter:</string>
     <string name="about_author_contributors">Mitwirkende</string>-->
     <string name="help_whatis">Was ist PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="Ofeatures">andere Funktionen</string>
 
     <string name="help_usability">Das Scannen funktioniert nicht, was kann ich tun?</string>
     <string name="help_usability_answer">Wenn Sie keinen Code scannen können, vergrößern Sie den Abstand zwischen Scanner und Code.</string>
@@ -166,7 +178,7 @@
     <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen.</string>
 
 
-    <string name="help_whatis_answer">Mit dem PRIVACY FRIENDLY QR Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen / generieren.</string>
+    <string name="help_whatis_answer">Mit dem PRIVACY FRIENDLY QR Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen / generieren. Sie können auch gescannten QR-Code mit anderen Apps kopieren / teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
 
 
 
@@ -201,10 +213,29 @@
     <string name="lastname">Nachname</string>
     <string name="title">Title</string>
     <string name="city">Stadt</string>
-    <string name="street_number">Street number</string>
+    <string name="street_number">Hausnummer</string>
     <string name="postal_address">Plz</string>
     <string name="e_mail_address">E-mail adresse</string>
     <string name="firstname">Vorname</string>
     <string name="street_name_and_number">Straße und Nummer</string>
+    <string name="delete_content">Möchten Sie den Inhalt wirklich löschen?</string>
+    <string name="delete_all">Löschen Sie alle Inhalte</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="D_all">Löschen Sie alle Datensätze</string>
+    <string name="all_records">Möchten Sie alle Datensätze löschen?</string>
+    <string name="Del">Möchten Sie ausgewählte Datensätze löschen?</string>
+    <string name="confirmation">Bestätigung</string>
+
+    <string name="pref_title_enable_history">Verlauf aktivieren</string>
+    <string name="pref_description_enable_history">Vorherige Scans werden protokolliert, damit Sie sie erneut anzeigen können</string>
+    <string name="selected">ausgewählt</string>
+    <string name="code_stored">QR-Code in der Galerie gespeichert.</string>
+    <string name="OfeaturesAnswer">Sie können gescannten QR-Code mit anderen Anwendungen kopieren / teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
+    <string name="Content_copied">Der Inhalt kopiert</string>
+    <string name="Share_via">Teilen per</string>
+    <string name="select_all">Wählen Sie Alle</string>
+    <string name="selected_1">Ausgewählt</string>
+
 
 </resources>

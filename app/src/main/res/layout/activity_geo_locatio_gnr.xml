@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating.GeoLocatioGnrActivity">
     <ImageView android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"/>
     <Button
         android:id="@+id/btnstore"
         android:layout_width="fill_parent"

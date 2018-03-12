@@ -7,16 +7,5 @@
     tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.Settings">
 
 
-    <CheckBox
-        android:id="@+id/Cbdisable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="39dp"
-        android:checked="false"
-        android:onClick="onClick"
-        android:text="Disable storing data in history" />
-
 
 </RelativeLayout>

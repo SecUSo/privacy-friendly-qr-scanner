@@ -1,13 +1,19 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Point;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -35,11 +41,14 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 public class MailGnrActivity extends AppCompatActivity {
 
     ClipboardManager clipboardManager;
     ClipData clipData;
     private static final String TAG ="StoreQRCode" ;
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +79,11 @@ public class MailGnrActivity extends AppCompatActivity {
                 Bitmap bitmap=createBitmap(qrInputText);
                     saveImageToExternalStorage(bitmap);
 
+
+
                 Intent i=new Intent(MailGnrActivity.this, MainActivity.class);
                 startActivity(i);
-                Toast.makeText(MailGnrActivity.this, "QR code stored in gallery", Toast.LENGTH_LONG).show();
+                Toast.makeText(MailGnrActivity.this, R.string.code_stored, Toast.LENGTH_LONG).show();
 
 
 
