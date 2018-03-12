@@ -36,13 +36,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textIsSelectable="true" />
 
             <TextView
                 android:id="@+id/result_field_wifi_encryption"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textSize="20sp"
                 android:gravity="center_vertical|center_horizontal" />
 
             <TextView
@@ -50,7 +51,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/result_field_wifi_pw"
                 android:gravity="center_horizontal"
-                android:textIsSelectable="true" />
+                android:textIsSelectable="true"
+                android:textSize="20sp"/>
 
         </LinearLayout>
     </ScrollView>

@@ -3,6 +3,7 @@ package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -31,6 +32,12 @@ public class WifiEnterActivity extends AppCompatActivity {
         final EditText qrNetwork=(EditText) findViewById(R.id.editNetwork);
         final EditText qrPassword=(EditText) findViewById(R.id.editPassword);
         Button generate=(Button) findViewById(R.id.generate);
+
+        int maxLength = 25;
+        qrNetwork.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
+
+        int maxLength2 = 20;
+        qrPassword.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength2)});
 
 
         generate.setOnClickListener(new View.OnClickListener() {

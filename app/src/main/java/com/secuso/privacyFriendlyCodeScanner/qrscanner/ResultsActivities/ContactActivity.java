@@ -57,33 +57,42 @@ public class ContactActivity extends AppCompatActivity {
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String contactResult = QRData.getString("Rst");
 
+     /*   final String firstname ;
+        final String lastname ;
+        final String email ;
+        final String phone ;
+        final String address ;
+        final String company ;
+        final String title ; */
+
 
         // resultTextContact.setText(vCard);
 
 
-       /* Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
+        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|EMAIL;WORK;INTERNET:|TEL;CELL:|TITLE:|ADR:;;|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
         Matcher m = pattern.matcher(contactResult);
 
-        String name = "";
+/*
 
         if (m.find()) {
             name = m.group(1).substring(1);
 
-            if (name.startsWith("N:"))
+            if (name.startsWith("TEL;CELL:"))
+                resultTextLastname.setText("Phone number: " + name.substring(9));
+
+           /* if (name.startsWith("N:"))
                 resultTextName.setText("Name: " + name.substring(2).replace(';', ' '));
-            else if (name.startsWith("FN:"))
-                resultTextName.setText("Name: " + name.substring(3).replace(';', ' '));
             else
                 resultTextName.setText(R.string.noname);
-
 
         }  */
 
 
+
        /* ***************************************************************************************************/
 
-        String[] content = contactResult.substring(contactResult.indexOf(":") + 1).split(";");
+        String[] content = contactResult.substring(contactResult.indexOf(":|| ;||;;;||\n") + 1).split("\n");
         int name_id = 0;
         int lastname_id = 0;
         int email_id = 0;
@@ -93,19 +102,20 @@ public class ContactActivity extends AppCompatActivity {
         int title_id = 0;
 
 
-        for(int i=0; i < content.length; i++) {
-            if(content[i].startsWith("FN:") && content[i].endsWith("\n")) name_id = i;
-            if(content[i].startsWith("N:") && content[i].endsWith("\n")) lastname_id = i;
-            if(content[i].startsWith("EMAIL;WORK:") && content[i].endsWith("\n")) email_id = i;
-            if(content[i].startsWith("TEL;CELL:")&& content[i].endsWith("\n")) phone_id = i;
-            if(content[i].startsWith("ADR:;;") && content[i].endsWith("\n")) address_id = i;
-            if(content[i].startsWith("ORG:") && content[i].endsWith("\n")) company_id = i;
-            if(content[i].startsWith("TITLE:") && content[i].endsWith("\n")) title_id = i;
+        String compan = null;
+        for (int i = 0; i < content.length; i++) {
+            if (content[i].startsWith("FN:")) name_id = i;
+            if (content[i].startsWith("N:")) lastname_id = i;
+            if (content[i].startsWith("EMAIL;WORK;INTERNET:")) email_id = i;
+            if (content[i].startsWith("TEL;CELL:")) phone_id = i;
+            if (content[i].startsWith("ADR:;;")) address_id = i;
+            if (content[i].startsWith("ORG:")) company_id = i;
+            if (content[i].startsWith("TITLE:")) title_id = i;
         }
 
         final String name = content[name_id].substring(3);
         final String lastname = content[lastname_id].substring(2);
-        final String email = content[email_id].substring(11);
+        final String email = content[email_id].substring(20);
         final String phone = content[phone_id].substring(9);
         final String address = content[address_id].substring(6);
         final String company = content[company_id].substring(4);
@@ -113,7 +123,7 @@ public class ContactActivity extends AppCompatActivity {
 
 
         resultTextName.setText("Name: " + name);
-        resultTextLastname.setText("Lastname: " + lastname);
+        //resultTextLastname.setText("Lastname: " + lastname);
         resultTextEmail.setText("Email: " + email);
         resultTextPhone.setText("Tel: " + phone);
         resultTextAddress.setText("Address: " + address);
@@ -122,8 +132,6 @@ public class ContactActivity extends AppCompatActivity {
 
 
        /* ***************************************************************************************************/
-
-
 
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -171,10 +179,9 @@ public class ContactActivity extends AppCompatActivity {
 
                                         contact.putExtra(ContactsContract.Intents.Insert.PHONE, phone);
                                         contact.putExtra(ContactsContract.Intents.Insert.NAME, name);
-                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL,email);
+                                        contact.putExtra(ContactsContract.Intents.Insert.EMAIL, email);
                                         contact.putExtra(ContactsContract.Intents.Insert.COMPANY, company);
                                         contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, title);
-
 
 
                                         String caption = getResources().getStringArray(R.array.vcard_array)[0];
@@ -252,7 +259,7 @@ public class ContactActivity extends AppCompatActivity {
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData= ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(),"Content copied",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Content copied",Toast.LENGTH_LONG).show();
                 return true;
 
             default:

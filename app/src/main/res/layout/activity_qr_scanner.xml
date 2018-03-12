@@ -7,6 +7,9 @@
     android:layout_height="match_parent"
     tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QrScanner">
 
+
+
+
     <Button
         android:id="@+id/btScan"
         android:layout_width="match_parent"

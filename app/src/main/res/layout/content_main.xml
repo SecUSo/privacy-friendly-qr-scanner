@@ -10,6 +10,16 @@
 
 
 
-
+    <Button
+        android:id="@+id/btScan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_fullwidth"
+        android:text="Scan"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        />
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,15 @@ public class GeoLocationEnterActivity extends AppCompatActivity {
         final EditText qrLatitude=(EditText) findViewById(R.id.editGeo1);
         final EditText qrLongitude=(EditText) findViewById(R.id.editGeo2);
         Button generate=(Button) findViewById(R.id.generate);
+
+        int maxLength = 11;
+        qrLatitude.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
+
+        int maxLength2 = 11;
+        qrLongitude.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength2)});
+
+
+
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
             @Override

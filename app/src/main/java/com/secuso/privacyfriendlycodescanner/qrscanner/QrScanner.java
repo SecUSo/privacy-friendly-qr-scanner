@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,12 +25,13 @@ import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.journeyapps.barcodescanner.CaptureActivity;
 
 
 import static android.os.Build.VERSION.SDK_INT;
 
 
-public class QrScanner extends AppCompatActivity  {
+public class QrScanner extends AppCompatActivity   {
 
 
 
@@ -61,16 +63,16 @@ public class QrScanner extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
 
+
                 if (SDK_INT >= Build.VERSION_CODES.M) {
                     if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                         ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
 
 
-
-
                         return;
                     }
                 }
+
                 IntentIntegrator integrator = new IntentIntegrator(activity);
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
                 integrator.setPrompt(getString(R.string.Scan_qr));
@@ -79,8 +81,12 @@ public class QrScanner extends AppCompatActivity  {
                 //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
                 //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
                 integrator.setOrientationLocked(false);
-                //integrator.setBarcodeImageEnabled(false);
+               // int orientation;
+                //orientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR;
+               // setRequestedOrientation(orientation);
+               // integrator.setCaptureActivity(QrScanner.class);
                 integrator.initiateScan();
+
             }
         });
     }

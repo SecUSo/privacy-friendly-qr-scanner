@@ -8,11 +8,11 @@
         
         <item
             android:id="@+id/nav_scan"
-            android:icon="@android:drawable/ic_menu_gallery"
+            android:icon="@drawable/qqr"
             android:title="@string/qr_scanner" />
         <item
             android:id="@+id/nav_generate"
-            android:icon="@drawable/generator"
+            android:icon="@drawable/gnrr"
             android:title="@string/qr_generator" />
     </group>
 

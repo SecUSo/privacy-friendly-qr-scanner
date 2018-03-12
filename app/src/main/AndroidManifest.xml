@@ -20,8 +20,10 @@
         <activity
             android:name=".QrScanner"
             android:parentActivityName=".MainActivity"
-            android:screenOrientation="fullSensor"
+           
+            android:screenOrientation="portrait"
             tools:replace="screenOrientation" />
+
         <activity
             android:name=".About"
             android:label="@string/about"
@@ -38,20 +40,23 @@
             android:name=".QRGenerating.QrGenerator"
             android:label="@string/QRGenerator"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".TutorialActivity"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+        >  <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+    </activity>
+
+
         <activity
             android:name=".Settings"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/Settings"
+          ></activity>
         <activity android:name=".ResultActivity" />
         <activity
             android:name=".ResultsActivities.EmailActivity"

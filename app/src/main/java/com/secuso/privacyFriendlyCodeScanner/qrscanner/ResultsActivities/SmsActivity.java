@@ -35,7 +35,7 @@ public class SmsActivity extends AppCompatActivity {
         TextView numberField = (TextView) findViewById(R.id.textResultSms);
         TextView contentField = (TextView) findViewById(R.id.textContentSms);
         Button btnProceed = (Button) findViewById(R.id.btnProceed);
-       // Button btnCancel = (Button) findViewById(R.id.btnCancel);
+        Button btnCancel = (Button) findViewById(R.id.btnCancel);
 
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String smsResult = QRData.getString("Rst");
@@ -46,7 +46,7 @@ public class SmsActivity extends AppCompatActivity {
 
         numberField.setText(number);
         contentField.setText(message);
-       /* btnCancel.setOnClickListener(new View.OnClickListener() {
+       btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -54,7 +54,7 @@ public class SmsActivity extends AppCompatActivity {
                 startActivity(ca);
 
             }
-        });*/
+        });
         btnProceed.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -120,7 +120,7 @@ public class SmsActivity extends AppCompatActivity {
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData= ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(),"Content copied",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.Content_copied,Toast.LENGTH_LONG).show();
                 return true;
 
             default:
@@ -132,7 +132,7 @@ public class SmsActivity extends AppCompatActivity {
         Intent sharingIntent= new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
-        startActivity(Intent.createChooser(sharingIntent,"Share via"));
+        startActivity(Intent.createChooser(sharingIntent,getString(R.string.Share_via)));
     }
 
 }

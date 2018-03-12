@@ -3,6 +3,7 @@ package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +20,12 @@ public class SmsEnterActivity extends AppCompatActivity {
         final EditText qrSms=(EditText) findViewById(R.id.editTel);
         final EditText qrText=(EditText) findViewById(R.id.editText1);
         Button generate=(Button) findViewById(R.id.generate);
+
+        int maxLength = 15;
+        qrSms.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
+
+        int maxLength2 = 300;
+        qrText.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength2)});
 
 
         generate.setOnClickListener(new View.OnClickListener() {

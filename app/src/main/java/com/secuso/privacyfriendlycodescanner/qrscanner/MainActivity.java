@@ -1,9 +1,15 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,12 +19,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating.QrGenerator;
+
+import static android.os.Build.VERSION.SDK_INT;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private Button scan_bt;
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +43,41 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
+
+/*****************************************************************************/
+
+        scan_bt = (Button) findViewById(R.id.btScan);
+        final Activity activity = this;
+        scan_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               if (SDK_INT >= Build.VERSION_CODES.M) {
+                    if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                        ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
+
+
+
+
+                        return;
+                    }
+                }
+
+               /* IntentIntegrator integrator = new IntentIntegrator(activity);
+                integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+                integrator.setPrompt(getString(R.string.Scan_qr));
+                integrator.setCameraId(0);
+                integrator.setBeepEnabled(false);
+                //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
+                integrator.setOrientationLocked(false);
+                //integrator.setBarcodeImageEnabled(false);
+                integrator.initiateScan(); */
+            }
+        });
+/******************************************************************************************************/
       /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,7 +170,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_tutorial:
                 PrefManager prefManager = new PrefManager(getBaseContext());
                 prefManager.setFirstTimeLaunch(true);
-                Intent intent = new Intent(MainActivity.this, SplashActivity.class);
+                Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
@@ -136,5 +187,25 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        String dataResult;
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null) {
+            if (result.getContents() == null) {
+                Toast.makeText(this, R.string.canncelled_scan, Toast.LENGTH_LONG).show();
+            } else {
+                dataResult=result.getContents();
+                Intent i=new Intent(this, ResultActivity.class);
+                i.putExtra("QRResult",dataResult);
+                startActivity(i);
+
+
+                // Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }
