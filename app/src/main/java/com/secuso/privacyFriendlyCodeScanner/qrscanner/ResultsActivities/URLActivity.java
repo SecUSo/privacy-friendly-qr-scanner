@@ -34,6 +34,8 @@ import org.json.JSONException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
+
 public class URLActivity extends AppCompatActivity {
     ClipboardManager clipboardManager;
     ClipData clipData;
@@ -163,11 +165,7 @@ public class URLActivity extends AppCompatActivity {
 
                                            }
                                             break;
-                                        /*case 1:
-                                            saveScanned(true);
-                                            Intent i = new Intent(Intent.ACTION_INSERT, Browser.BOOKMARKS_URIBrowser.);
-                                            startActivity(i);
-                                            break;*/
+
 
                                         default:
                                     }
@@ -191,7 +189,7 @@ public class URLActivity extends AppCompatActivity {
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData= ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(),"Content copied",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),content_copied,Toast.LENGTH_LONG).show();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -202,7 +200,7 @@ public class URLActivity extends AppCompatActivity {
         Intent sharingIntent= new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
-        startActivity(Intent.createChooser(sharingIntent,"Share via"));
+        startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
     }
 
 }

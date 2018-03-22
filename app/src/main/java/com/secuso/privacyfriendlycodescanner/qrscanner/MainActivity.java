@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
 
-               /* IntentIntegrator integrator = new IntentIntegrator(activity);
+               IntentIntegrator integrator = new IntentIntegrator(activity);
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
                 integrator.setPrompt(getString(R.string.Scan_qr));
                 integrator.setCameraId(0);
@@ -74,18 +74,11 @@ public class MainActivity extends AppCompatActivity
                 //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
                 integrator.setOrientationLocked(false);
                 //integrator.setBarcodeImageEnabled(false);
-                integrator.initiateScan(); */
+                integrator.initiateScan();
             }
         });
 /******************************************************************************************************/
-      /*  FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -202,7 +195,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(i);
 
 
-                // Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);

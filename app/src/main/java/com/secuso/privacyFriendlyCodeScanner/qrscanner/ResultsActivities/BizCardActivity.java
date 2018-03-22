@@ -84,30 +84,7 @@ public class BizCardActivity extends AppCompatActivity {
         resultTextCompany.setText("Company: " + company);
         resultTextTitle.setText("Title: " + title);
 
-     /*   Pattern pattern = Pattern.compile("((\\n|;|:)(N:|X:|T:|C:|A:|B:|E:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
-        Matcher m = pattern.matcher(contactResult);
-
-
-        String name = "";
-
-
-        if (m.find()) {
-            name = m.group(1).substring(1);
-
-
-            if (name.startsWith("N:"))
-                resultTextContact.setText("Name: " + name.substring(2).replace(';', ' '));
-
-            else
-                resultTextContact.setText(R.string.noname);
-        }
-
-        final String n=name.substring(2).replace(';', ' ');// get name from the string
-        final String tel=between(contactResult,"B:",";E");
-        final String mail=between(contactResult,"E:",";;");
-        final String title=between(contactResult,"T:",";C");
-        final String org=between(contactResult,"C:",";A");  */
 
 
 
@@ -205,23 +182,7 @@ public class BizCardActivity extends AppCompatActivity {
         final String address = content[address_id].substring(2);
         final String company = content[company_id].substring(2);
         final String title = content[title_id].substring(2);
-       /* Pattern pattern = Pattern.compile("((\\n|;|:)(N:|X:|T:|C:|A:|B:|E:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
 
-        Matcher m = pattern.matcher(contactResult);
-
-
-        String name = "";
-
-
-        if (m.find()) {
-            name = m.group(1).substring(1);
-        }
-
-        final String n=name.substring(2).replace(';', ' ');// get name from the string
-        final String tel=between(contactResult,"B:",";E");
-        final String mail=between(contactResult,"E:",";;");
-        final String title=between(contactResult,"T:",";C");
-        final String org=between(contactResult,"C:",";A");*/
 
 
         final String ss="name:"+name +"; phone nummber:"+phone+"; Address"+address+"; title: "+title+"; E-mail:"+email+"; Company:"+company;

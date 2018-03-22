@@ -48,15 +48,6 @@ public class QrScanner extends AppCompatActivity   {
         setContentView(R.layout.activity_qr_scanner);
 
 
-
-
-
-
-
-
-
-
-
         scan_bt = (Button) findViewById(R.id.btScan);
         final Activity activity = this;
         scan_bt.setOnClickListener(new View.OnClickListener() {
@@ -78,13 +69,7 @@ public class QrScanner extends AppCompatActivity   {
                 integrator.setPrompt(getString(R.string.Scan_qr));
                 integrator.setCameraId(0);
                 integrator.setBeepEnabled(false);
-                //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
                 integrator.setOrientationLocked(false);
-               // int orientation;
-                //orientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR;
-               // setRequestedOrientation(orientation);
-               // integrator.setCaptureActivity(QrScanner.class);
                 integrator.initiateScan();
 
             }
@@ -105,7 +90,7 @@ public class QrScanner extends AppCompatActivity   {
                 startActivity(i);
 
 
-                // Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);

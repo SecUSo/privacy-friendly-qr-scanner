@@ -21,19 +21,13 @@ import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.AppComp
 
 public class Settings extends AppCompatPreferenceActivity {
 
-   // private int PRIVATE_MODE = 0;
-    //CheckBox cb;
+
 
     @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_settings);
-        //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
-
-       // addPreferencesFromResource(R.xml.preferences);
-        // load settings fragment
         getFragmentManager().beginTransaction().replace(android.R.id.content, new MainPreferenceFragment()).commit();
 
 

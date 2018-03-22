@@ -32,6 +32,8 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
+
 public class ContactActivity extends AppCompatActivity {
 
     ClipboardManager clipboardManager;
@@ -73,20 +75,6 @@ public class ContactActivity extends AppCompatActivity {
 
         Matcher m = pattern.matcher(contactResult);
 
-/*
-
-        if (m.find()) {
-            name = m.group(1).substring(1);
-
-            if (name.startsWith("TEL;CELL:"))
-                resultTextLastname.setText("Phone number: " + name.substring(9));
-
-           /* if (name.startsWith("N:"))
-                resultTextName.setText("Name: " + name.substring(2).replace(';', ' '));
-            else
-                resultTextName.setText(R.string.noname);
-
-        }  */
 
 
 
@@ -156,23 +144,7 @@ public class ContactActivity extends AppCompatActivity {
                                 switch (which) {
                                     case 0:
 
-                                     /*   Uri uri = null;
-                                        try {
-                                            uri = createVCard();
-                                        } catch (IOException e) {
-                                            e.printStackTrace();
-                                        }
-                                            Intent contact = new Intent();
-                                           contact.setAction(Intent.ACTION_VIEW);
 
-                                       // Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
-                                        //contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
-                                      //  Intent contact = new Intent(Intent.ACTION_INSERT, ContactsContract.Contacts.CONTENT_URI);
-                                        contact.setType("text/x-vcard");
-                                        contact.setData(uri);
-
-                                        String caption = getResources().getStringArray(R.array.vcard_array)[0];
-                                        startActivity(Intent.createChooser(contact, caption));*/
                                         Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
                                         contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
@@ -259,7 +231,7 @@ public class ContactActivity extends AppCompatActivity {
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData= ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(), "Content copied",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), content_copied,Toast.LENGTH_LONG).show();
                 return true;
 
             default:
@@ -271,7 +243,7 @@ public class ContactActivity extends AppCompatActivity {
         Intent sharingIntent= new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
-        startActivity(Intent.createChooser(sharingIntent,"Share via"));
+        startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
     }
 
 }
