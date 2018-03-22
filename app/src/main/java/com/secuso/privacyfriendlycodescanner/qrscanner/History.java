@@ -112,12 +112,6 @@ public class History extends AppCompatActivity {
                 list_items.add(list.get(position));
 
 
-              /*  count = count + 1;
-                if (count == 1) {
-                    mode.setTitle(count + getString(R.string.selected_item));
-                } else
-                    mode.setTitle(count + getString(R.string.selected_items));
-                list_items.add(list.get(position));  */
 
 
             }
@@ -299,35 +293,7 @@ public class History extends AppCompatActivity {
 
             }
 
-          /*
-            @Override
-            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
 
-                switch (item.getItemId()) {
-
-                    case R.id.delete_id:
-
-
-                        for (String msg : list_items) {
-                            adapter.remove(msg);
-                            dbHandler.deleteContent(msg);///////////DB
-
-                        }
-
-                        if (count == 1) {
-                            Toast.makeText(getBaseContext(), count + getString(R.string.removed_item), Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getBaseContext(), count + getString(R.string.removed_items), Toast.LENGTH_SHORT).show();
-                        }
-                        count = 0;
-                        mode.finish();
-                        return true;
-                    //break;
-                    default:
-                        return false;
-                }
-                // return false;
-            } */
 
 
             @Override
@@ -340,30 +306,6 @@ public class History extends AppCompatActivity {
         });
 
     }
- /*   public void toggleSelection(int position) {
-        selectView(position, !mSelectedItemsIds.get(position));
-    }
-
-    public void removeSelection() {
-        mSelectedItemsIds = new SparseBooleanArray();
-        adapter.notifyDataSetChanged();
-    }
-
-    public void selectView(int position, boolean value) {
-        if (value)
-            mSelectedItemsIds.put(position, value);
-        else
-            mSelectedItemsIds.delete(position);
-        adapter.notifyDataSetChanged();
-    }
-
-    public int getSelectedCount() {
-        return mSelectedItemsIds.size();
-    }
-
-    public SparseBooleanArray getSelectedIds() {
-        return mSelectedItemsIds;
-    }*/
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

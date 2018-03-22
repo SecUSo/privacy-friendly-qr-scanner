@@ -67,11 +67,9 @@ public class GeoInfoActivity extends AppCompatActivity {
                                         Uri gmmIntentUri = Uri.parse(geoResult);
                                        Intent mapIntent = new Intent(Intent.ACTION_VIEW);
                                        mapIntent.setData(gmmIntentUri);
-                                       // Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                                        //mapIntent.setPackage("com.google.android.apps.maps");
-                                       // if (mapIntent.resolveActivity(getPackageManager()) != null) {
+
                                            startActivity(Intent.createChooser(mapIntent, caption));
-                                       // }
+
 
                                         break;
 

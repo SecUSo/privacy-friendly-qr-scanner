@@ -191,7 +191,7 @@
     <string name="help_example"></string>
     <string name="description_Mms">Der gescannte QR-Code enthält eine MMS.Um diese zu <i>senden</i> oder <i>die Nummer einem Kontakt hinzuzufügen</i>, klicken Sie auf Fortfahren.</string>
     <string name="geoInfo">Der gescannte QR-Code enthält eine geographisch Information .Um google maps zu <i>starten</i>, klicken Sie auf Fortfahren.</string>
-    <string name="content_copied">Inhalt kopiert</string>
+    <string name="content_copied">Der Inhalt kopiert</string>
     <string name="share_via">Teilen per</string>
 
     <string name="no_content_in_history">Es gibt keine Inhalte im Verlauf!</string>

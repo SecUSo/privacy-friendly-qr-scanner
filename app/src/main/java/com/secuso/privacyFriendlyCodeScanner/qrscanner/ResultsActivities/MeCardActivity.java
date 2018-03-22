@@ -100,57 +100,6 @@ public class MeCardActivity extends AppCompatActivity {
 
 
 
-        /*
-
-        Pattern pattern = Pattern.compile("((\\n|;|:)(FN:|N:|TEL:|EMAIL: | EMAIL:|URL:|TEL: |NOTE:|ADR:|ORG:)[0-9a-zA-Z-\\säöüÄÖÜß,]*(\\n|;))");
-
-        Matcher m = pattern.matcher(contactResult);
-
-        String name = "";
-        String te="";
-        String mai="ooo";
-
-
-
-
-        if (m.find()) {
-            name = m.group(1).substring(1);
-
-
-
-
-            if (name.startsWith("N:"))
-                resultTextContact.setText("Name: " + name.substring(2).replace(';', ' '));
-
-            else
-                resultTextContact.setText(R.string.noname);
-        }
-        if (m.find()) {
-
-            te=m.group(1).substring(1);
-            if (te.startsWith("TEL:")){
-                te=te;
-            }
-
-        }
-
-
-
-
-        final String n=name.substring(2).replace(';', ' ');// get name from the string
-
-
-        final String tel=te.substring(4).replace(';', ' ');
-
-
-       // final String tel=between(contactResult,"TEL:",";EMAIL");
-       final String mail=between(contactResult,"EMAIL:",";;");
-        //final String title=between(contactResult,"T:",";C");
-       // final String org=between(contactResult,"C:",";A");       */
-
-
-
-
 
 
         btnCancel.setOnClickListener(new View.OnClickListener() {

@@ -53,10 +53,6 @@ public class ResultActivity extends AppCompatActivity {
 
 
 
-      /*  Bundle QRData = getIntent().getExtras();
-        String DataFromHistory = QRData.getString("Result");
-        Toast.makeText(this, DataFromHistory, Toast.LENGTH_LONG).show(); */ // print items from History
-
        if(checked && QRCode!=null) {
 
            // addContent();
@@ -70,7 +66,7 @@ public class ResultActivity extends AppCompatActivity {
 
 
          checkResult(QRCode);
-           //Toast.makeText(this, "no Scan", Toast.LENGTH_LONG).show();
+
              }
         else if (QrHistory!=null)
        {
@@ -80,12 +76,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
 
-   /* public void addContent()/////////DB
-    {   Bundle QRData = getIntent().getExtras();
-        String QRCode = QRData.getString("QRResult");
-        ScanedData content=new ScanedData(QRCode);
-        dbHandler.addContent(content);
-    } */
+
 
     public  void checkResult(String result)
         {

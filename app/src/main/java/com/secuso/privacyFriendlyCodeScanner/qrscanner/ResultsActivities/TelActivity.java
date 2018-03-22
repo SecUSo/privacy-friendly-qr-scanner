@@ -20,6 +20,8 @@ import android.widget.Toast;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
 
+import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
+
 public class TelActivity extends AppCompatActivity {
 
     ClipboardManager clipboardManager;
@@ -108,7 +110,7 @@ public class TelActivity extends AppCompatActivity {
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData=ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(),"Content copied",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),content_copied,Toast.LENGTH_LONG).show();
                 return true;
 
             default:
@@ -120,7 +122,7 @@ public class TelActivity extends AppCompatActivity {
         Intent sharingIntent= new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);
-        startActivity(Intent.createChooser(sharingIntent,"Share via"));
+        startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
     }
 
 }
