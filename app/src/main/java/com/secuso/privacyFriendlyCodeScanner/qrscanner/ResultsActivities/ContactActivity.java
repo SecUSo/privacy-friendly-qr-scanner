@@ -43,7 +43,7 @@ public class ContactActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact);
+        setContentView(R.layout.activity_result_contact);
 
         TextView resultTextName = (TextView) findViewById(R.id.result_text_contact);
         TextView resultTextLastname = (TextView) findViewById(R.id.result_text_lastname);

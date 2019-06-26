@@ -7,21 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.History;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.MmsActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.SmsActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.TextActivity;
 
 
 public class QrGenerator extends AppCompatActivity {

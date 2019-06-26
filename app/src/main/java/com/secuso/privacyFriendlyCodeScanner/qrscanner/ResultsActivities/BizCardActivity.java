@@ -16,12 +16,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.client.result.BizcardResultParser;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
 
@@ -33,7 +29,7 @@ public class BizCardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_biz_card);
+        setContentView(R.layout.activity_result_biz_card);
 
 
         TextView resultTextName = (TextView) findViewById(R.id.result_text_Name);

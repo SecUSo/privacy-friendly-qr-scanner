@@ -7,180 +7,180 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:installLocation="preferExternal"
+        android:hardwareAccelerated="true"
         android:allowBackup="true"
+        android:backupInForeground="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ScannerActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".QrScanner"
-            android:parentActivityName=".MainActivity"
-
-            android:screenOrientation="portrait"
-            tools:replace="screenOrientation" />
-
-        <activity
-            android:name=".About"
+            android:name=".AboutActivity"
             android:label="@string/about"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".History"
+            android:name=".HistoryActivity"
             android:label="@string/history"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".Help"
+            android:name=".HelpActivity"
             android:label="@string/help"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.QrGenerator"
             android:label="@string/QRGenerator"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".TutorialActivity"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-        >  <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-    </activity>
-
-
+            android:parentActivityName=".ScannerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".Settings"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/Settings"
-          ></activity>
+            android:name=".SettingsActivity"
+            android:parentActivityName=".ScannerActivity"
+            android:label="@string/Settings"/>
         <activity android:name=".ResultActivity" />
         <activity
             android:name=".ResultsActivities.EmailActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.TelActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.SendEmailActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.URLActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.SmsActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.WifiActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.ContactActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.MmsActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.GeoInfoActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.ProductActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.TextActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.MeCardActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".ResultsActivities.BizCardActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.MailGnrActivity"
             android:label="E-Mail"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.TelGnrActivity"
             android:label="Phone number"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.UrlGnrActivity"
             android:label="URL"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.SmsGnrActivity"
             android:label="SMS"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.GeoLocatioGnrActivity"
             android:label="Geo location"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.MailEnterActivity"
             android:label="E-Mail"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.TelEnterActivity"
             android:label="Phone number"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.UrlEnterActivity"
             android:label="URL"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.SmsEnterActivity"
             android:label="SMS"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.GeoLocationEnterActivity"
             android:label="Geo location"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.MeCardEnterActivity"
             android:label="MeCard"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.BizCardEnterActivity"
             android:label="BizCard"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.MeCardGnrActivity"
             android:label="MeCard"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.BizCardGnrActivity"
             android:label="BizCard"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.MmsEnterActivity"
             android:label="MMS"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.MmsGnrActivity"
             android:label="MMS"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.WifiEnterActivity"
             android:label="WIFI"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.WifiGnrActivity"
             android:label="WIFI"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.VcardEnterActivity"
             android:label="vcard"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".ScannerActivity" />
         <activity
             android:name=".QRGenerating.VcardGnrActivity"
             android:label="vcard"
-            android:parentActivityName=".MainActivity" />
-        <activity android:name=".QRGenerating.MarketEnterActivity"   android:label="Market"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".QRGenerating.MarketGnrActivity"   android:label="Market"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".QRGenerating.MarketEnterActivity"
+            android:label="Market"
+            android:parentActivityName=".ScannerActivity"/>
+        <activity
+            android:name=".QRGenerating.MarketGnrActivity"
+            android:label="Market"
+            android:parentActivityName=".ScannerActivity"/>
     </application>
 
 </manifest>

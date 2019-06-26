@@ -31,7 +31,7 @@ public class EmailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_email);
+        setContentView(R.layout.activity_result_email);
 
         TextView resultField = (TextView) findViewById(R.id.result_field_email);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);
@@ -43,14 +43,10 @@ public class EmailActivity extends AppCompatActivity {
        // final String eAddress=email;
         resultField.setText(eAddress);
 
-
-
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent ca = new Intent(EmailActivity.this, MainActivity.class);
-                startActivity(ca);
+                finish();
 
             }
         });
@@ -112,7 +108,6 @@ public class EmailActivity extends AppCompatActivity {
                 shareIt(qrurl);
                 return true;
             case R.id.copy:
-
                 clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
                 clipData= ClipData.newPlainText("Text",qrurl);
                 clipboardManager.setPrimaryClip(clipData);

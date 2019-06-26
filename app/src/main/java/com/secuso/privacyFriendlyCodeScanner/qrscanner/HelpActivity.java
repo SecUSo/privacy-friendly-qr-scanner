@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class Help extends AppCompatActivity {
+public class HelpActivity extends AppCompatActivity {
 
     @SuppressLint("RestrictedApi")
     @Override

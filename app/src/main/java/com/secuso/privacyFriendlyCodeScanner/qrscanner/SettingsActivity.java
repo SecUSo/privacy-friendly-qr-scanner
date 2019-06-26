@@ -19,7 +19,7 @@ import android.widget.Toolbar;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.AppCompatPreferenceActivity;
 
 
-public class Settings extends AppCompatPreferenceActivity {
+public class SettingsActivity extends AppCompatPreferenceActivity {
 
 
 

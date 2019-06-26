@@ -11,6 +11,4 @@
         android:title="@string/action_clear"
         app:showAsAction="always"/>
 
-
-
 </menu>

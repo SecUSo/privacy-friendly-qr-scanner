@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers;
 
 import android.content.Context;
 import android.content.SharedPreferences;
