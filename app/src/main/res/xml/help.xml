@@ -12,7 +12,7 @@
         /></PreferenceCategory>
 
     <PreferenceCategory android:title="@string/help_category_example">
-        <Preference android:title="@string/help_example"
+        <Preference android:title=""
             android:summary="@string/usability_hint2"
             android:selectable="false"/></PreferenceCategory>
 

@@ -33,9 +33,6 @@ public class ResultActivity extends AppCompatActivity {
 
     DBHandler dbHandler;/////////DB
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,123 +48,59 @@ public class ResultActivity extends AppCompatActivity {
         Bundle QR = getIntent().getExtras();
         String QrHistory = QRData.getString("QrHistory");
 
-
-
        if(checked && QRCode!=null) {
-
-           // addContent();
-           ScanedData content=new ScanedData(QRCode);
-           dbHandler.addContent(content);
-
-          checkResult(QRCode);
-
-                   }
-        else if(!checked && QRCode!=null) {
-
-
-         checkResult(QRCode);
-
-             }
-        else if (QrHistory!=null)
-       {
-           checkResult(QrHistory);
+            // addContent();
+            ScanedData content=new ScanedData(QRCode);
+            dbHandler.addContent(content);
+            checkResult(QRCode);
+       } else if(!checked && QRCode!=null) {
+            checkResult(QRCode);
+       } else if (QrHistory!=null) {
+            checkResult(QrHistory);
        }
 
     }
 
 
-
-
-    public  void checkResult(String result)
-        {
-          if(isValidEmail(result))
-          {
-              Intent i=new Intent(this, EmailActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-
-
-          else if(isValidCellPhone(result))
-          {
-              Intent i=new Intent(this, TelActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-
-          }
-          else if (isValidSendEmail(result))
-          {
-              Intent i=new Intent(this, SendEmailActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if(isValidURL(result))
-          {
-              Intent i=new Intent(this, URLActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if (isValidSms(result)|| isValidSmsTo(result))
-          {
-              Intent i=new Intent(this, SmsActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if (isValidMms(result)|| isValidMmsTo(result))
-          {
-              Intent i=new Intent(this, MmsActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if(isValidContact(result))
-          {
-              Intent i=new Intent(this, ContactActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if(isValidMeCard(result))
-          {
-              Intent i=new Intent(this, MeCardActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if(isValidBizCard(result))
-          {
-              Intent i=new Intent(this, BizCardActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if(isValidWifi(result))
-          {
-              Intent i=new Intent(this, WifiActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if(isValidGeoInfo(result))
-          {
-              Intent i=new Intent(this, GeoInfoActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-          else if(isValidProduct(result))
-          {
-              Intent i=new Intent(this, ProductActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-
-          else {
-
-              Intent i=new Intent(this, TextActivity.class);
-              i.putExtra("Rst",result);
-              startActivity(i);
-          }
-
+    public void checkResult(String result)
+    {
+        Intent i;
+        if(isValidEmail(result)) {
+            i = new Intent(this, EmailActivity.class);
+        } else if(isValidCellPhone(result)) {
+            i = new Intent(this, TelActivity.class);
+        } else if (isValidSendEmail(result)) {
+            i=new Intent(this, SendEmailActivity.class);
+        } else if(isValidURL(result)) {
+            i=new Intent(this, URLActivity.class);
+        } else if (isValidSms(result)|| isValidSmsTo(result)) {
+            i=new Intent(this, SmsActivity.class);
+        } else if (isValidMms(result)|| isValidMmsTo(result)) {
+            i=new Intent(this, MmsActivity.class);
+        } else if(isValidContact(result)) {
+            i=new Intent(this, ContactActivity.class);
+        } else if(isValidMeCard(result)) {
+            i=new Intent(this, MeCardActivity.class);
+        } else if(isValidBizCard(result)) {
+            i=new Intent(this, BizCardActivity.class);
+        } else if(isValidWifi(result)) {
+            i=new Intent(this, WifiActivity.class);
+        } else if(isValidGeoInfo(result)) {
+            i=new Intent(this, GeoInfoActivity.class);
+        } else if(isValidProduct(result)) {
+            i=new Intent(this, ProductActivity.class);
+        } else {
+            i=new Intent(this, TextActivity.class);
         }
+
+        i.putExtra("Rst",result);
+        startActivity(i);
+        finish();
+    }
 
        // *********************************************************************** //
 
-    public final static boolean isValidEmail(CharSequence target) {
+    public static boolean isValidEmail(CharSequence target) {
 
        String expression = "^MAILTO:+[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
 
@@ -177,11 +110,9 @@ public class ResultActivity extends AppCompatActivity {
         //return Patterns.EMAIL_ADDRESS.matcher(target).matches();
 
     }
-    public final static boolean isValidSendEmail(String target)
+    public static boolean isValidSendEmail(String target)
     {
         Pattern pattern = Pattern.compile("MATMSG:TO:(.+?);SUB:(.+?);BODY:(.+?)", CASE_INSENSITIVE);
-
-
 
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
@@ -189,7 +120,7 @@ public class ResultActivity extends AppCompatActivity {
        // return Patterns.EMAIL_ADDRESS.matcher(target).matches();
 
     }
-    public final static boolean isValidCellPhone(String number)
+    public static boolean isValidCellPhone(String number)
     {
         // return android.util.Patterns.PHONE.matcher(number).matches();
         if (number.startsWith("tel:"))
@@ -198,7 +129,7 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    public final static boolean isValidProduct(String target)
+    public static boolean isValidProduct(String target)
     {
 
         if (target.startsWith("market://"))
@@ -206,31 +137,31 @@ public class ResultActivity extends AppCompatActivity {
         else return false;
 
     }
-    public final static boolean isValidURL(String target)
+    public static boolean isValidURL(String target)
     {
         return Patterns.WEB_URL.matcher(target).matches();
     }
 
-    public final static boolean isValidSms(String target)
+    public static boolean isValidSms(String target)
     {
         Pattern pattern = Pattern.compile("sms:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
     }
-    public final static boolean isValidSmsTo(String target)
+    public static boolean isValidSmsTo(String target)
     {
         Pattern pattern = Pattern.compile("SMSTO:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
     }
 
-    public final static boolean isValidMms(String target)
+    public static boolean isValidMms(String target)
     {
         Pattern pattern = Pattern.compile("mms:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
         return matcher.matches();
     }
-    public final static boolean isValidMmsTo(String target)
+    public static boolean isValidMmsTo(String target)
     {
         Pattern pattern = Pattern.compile("MMSTO:(.+?):(.+?)", CASE_INSENSITIVE);
         Matcher matcher =pattern.matcher(target);
@@ -241,35 +172,25 @@ public class ResultActivity extends AppCompatActivity {
        /* Pattern pattern = Pattern.compile("([\\n|;|:](FN:|N:)[0-9a-zA-Z-\\säöüÄÖÜß,]*[\\n|;])");
          Matcher matcher = pattern.matcher(target);
         return matcher.matches();*/
-        if (target.startsWith("BEGIN:VCARD"))
-            return true;
-        else return false;
+        return target.startsWith("BEGIN:VCARD");
     }
     public boolean isValidMeCard(String target)
     {
 
-        if (target.startsWith("MECARD"))
-            return true;
-        else return false;
+        return target.startsWith("MECARD");
     }
     public boolean isValidBizCard(String target)
     {
 
-        if (target.startsWith("BIZCARD"))
-            return true;
-        else return false;
+        return target.startsWith("BIZCARD");
     }
     public boolean isValidWifi(String target)
     {
-        if (target.startsWith("WIFI:"))
-            return true;
-        else return false;
+        return target.startsWith("WIFI:");
     }
     public boolean isValidGeoInfo(String target)
     {
-        if (target.startsWith("geo:"))
-            return true;
-        else return false;
+        return target.startsWith("geo:");
     }
 
 }

@@ -18,7 +18,6 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -35,6 +34,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.PrefManager;
 
 
 /**
@@ -172,7 +172,7 @@ public class TutorialActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        Intent intent = new Intent(TutorialActivity.this, MainActivity.class);
+        Intent intent = new Intent(this, ScannerActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();

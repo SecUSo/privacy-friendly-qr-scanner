@@ -1,23 +1,18 @@
 package com.secuso.privacyFriendlyCodeScanner.qrscanner;
 
 import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -27,7 +22,7 @@ import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.MyListViewAdapter
 
 import java.util.ArrayList;
 
-public class History extends AppCompatActivity {
+public class HistoryActivity extends AppCompatActivity {
     ListView list_view;
     // ArrayAdapter<String> adapter;
     ArrayList<String> list = new ArrayList<String>();
@@ -80,7 +75,7 @@ public class History extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String val =(String) parent.getItemAtPosition(position);
                 //resultActivity.checkResult(val);
-                Intent st= new Intent(History.this,ResultActivity.class);
+                Intent st= new Intent(HistoryActivity.this,ResultActivity.class);
                 st.putExtra("QrHistory",val);
                 startActivity(st);
 
@@ -138,42 +133,23 @@ public class History extends AppCompatActivity {
 
             @Override
 
-            public boolean  onActionItemClicked(final ActionMode mode,
-
-                                                MenuItem item) {
-
+            public boolean  onActionItemClicked(final ActionMode mode, MenuItem item) {
                 // TODO  Auto-generated method stub
-
                 switch  (item.getItemId()) {
-
                     case R.id.selectAll:
-
-                        //
-
                         final int checkedCount  = list.size();
 
                         // If item  is already selected or checked then remove or
-
                         // unchecked  and again select all
-
                         adapter.removeSelection();
 
                         for (int i = 0; i <  checkedCount; i++) {
-
-                            list_view.setItemChecked(i,   true);
-
+                            list_view.setItemChecked(i,true);
                             //  listviewadapter.toggleSelection(i);
-
                         }
 
                         // Set the  CAB title according to total checked items
-
-
-
                         // Calls  toggleSelection method from ListViewAdapter Class
-
-
-
                         // Count no.  of selected item and print it
 
                         mode.setTitle(checkedCount  + getString(R.string.selected_1));
@@ -183,37 +159,11 @@ public class History extends AppCompatActivity {
 
 
                     case R.id.delete_id:
-
                         // Add  dialog for confirmation to delete selected item
-
                         // record.
-
-
-
-                        AlertDialog.Builder  builder = new AlertDialog.Builder(
-
-                                History.this);
-
+                        AlertDialog.Builder  builder = new AlertDialog.Builder(HistoryActivity.this);
                         builder.setMessage(R.string.Del);
-
-
-
-                        builder.setNegativeButton(R.string.no,  new  DialogInterface.OnClickListener() {
-
-
-
-                            @Override
-
-                            public void  onClick(DialogInterface dialog, int which) {
-
-                                // TODO  Auto-generated method stub
-
-
-
-                            }
-
-                        });
-
+                        builder.setNegativeButton(R.string.no,  null);
                         builder.setPositiveButton(R.string.yes, new  DialogInterface.OnClickListener() {
 
 
@@ -221,53 +171,25 @@ public class History extends AppCompatActivity {
                             @Override
 
                             public void  onClick(DialogInterface dialog, int which) {
-
-                                // TODO  Auto-generated method stub
-
-                                SparseBooleanArray  selected = adapter
-
-                                        .getSelectedIds();
+                                SparseBooleanArray  selected = adapter.getSelectedIds();
 
                                 for (int i =  (selected.size() - 1); i >= 0; i--) {
-
                                     if  (selected.valueAt(i)) {
-
-                                        selecteditem = adapter
-
-                                                .getItem(selected.keyAt(i));
+                                        selecteditem = adapter.getItem(selected.keyAt(i));
 
                                         // Remove  selected items following the ids
-
-
-
                                         adapter.remove(selecteditem);
                                         dbHandler.deleteContent(selecteditem);
 
                                         //Toast.makeText(getBaseContext(),selecteditem, Toast.LENGTH_SHORT).show();
-
                                         dbHandler.close();
                                         adapter.notifyDataSetChanged();
-
-
                                     }
-
-
                                 }
 
-
-
-
-
-
-
                                 // Close CAB
-
                                 mode.finish();
-
                                 selected.clear();
-
-
-
                             }
 
 

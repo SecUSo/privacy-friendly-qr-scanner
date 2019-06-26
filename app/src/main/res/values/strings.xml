@@ -9,11 +9,11 @@
     <string name="settings">Settings</string>
     <string name="help">Help</string>
     <string name="about">About</string>
-    <string name="title_activity_qrscanner">QRScanner</string>
+    <string name="title_activity_qrscanner">QR Scanner</string>
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_qr_scanner">QrScanner</string>
-    <string name="title_activity_qr_generator">QrGenerator</string>
+    <string name="title_activity_qr_scanner">QR Scanner</string>
+    <string name="title_activity_qr_generator">QR Generator</string>
     <string name="title_activity_history">History</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_help">Help</string>
@@ -34,92 +34,12 @@
     <string name="next">Next</string>
     <string name="help_">Help</string>
 
-    <string name="main_text_title">This is an example app to demonstrate the design of a Privacy Friendly App. Further explanations can be found in the Privacy Friendly App Guide.</string>
-    <string name="main_text_normalbutton_desc">There are multiple ways to display basic buttons. Button 1 is the basic button. If you wish to separate a button visually, use button 2. The buttons 3–5 are examples for highlighted buttons. Depending on the app other colors are possible.</string>
-    <string name="maint_button_1">1</string>
-    <string name="maint_button_2">2</string>
-    <string name="maint_button_3">3</string>
-    <string name="maint_button_4">4</string>
-    <string name="maint_button_5">5</string>
-    <string name="main_text_fullwithbutton_desc">A button that uses the full width of the screen looks like this:</string>
-    <string name="main_text_disabledbutton_desc">A disabled button looks like this (any size):</string>
-    <string name="main_button_text">Full Width Button</string>
-    <string name="main_button_disabled_text">Inactive Button</string>
-    <string name="main_button_welcomedialog_text">Use the button in the lower left corner to call the Welcome Dialog.</string>
-
-    <string name="Home">Home</string>
-    <string name="main_button_welcomedialog">SHOW WECLOME</string>
-
-    <string name="my_preference">"com.abc.com.MyPref"</string>
-    <string name="my_preference_key">"com.abc.com.MyPrefKey"</string>
     <string name="tutorial">Tutorial</string>
-
-    <!-- Strings related to Settings -->
-
-    <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
-
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact
-        based on your message history
-    </string>
-
-    <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">John Smith</string>
-
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
-    <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_example_list_values">
-        <item>1</item>
-        <item>0</item>
-        <item>-1</item>
-    </string-array>
-
-    <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Data &amp; sync</string>
-
-    <string name="pref_title_sync_frequency">Sync frequency</string>
-    <string-array name="pref_sync_frequency_titles">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
-        <item>Never</item>
-    </string-array>
-    <string-array name="pref_sync_frequency_values">
-        <item>15</item>
-        <item>30</item>
-        <item>60</item>
-        <item>180</item>
-        <item>360</item>
-        <item>-1</item>
-    </string-array>
-
-    <string-array name="list_preference_entries">
-        <item>Entry 1</item>
-        <item>Entry 2</item>
-        <item>Entry 3</item>
-    </string-array>
-
-    <string-array name="list_preference_entry_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </string-array>
-
-    <string-array name="multi_select_list_preference_default_value" />
-
-    <string name="pref_title_system_sync_settings">System sync settings</string>
 
     <!--###ABOUT###-->
     <string name="about_author">Authors: </string>
-    <string name="about_author_names" translatable="false">Bassel Hanna</string>
-    <string name="about_author_contributors">and contributors.</string>
+    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
+    <string name="about_author_string">%s and contributors.</string>
     <string name="about_affiliation">In affiliation with</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
@@ -127,10 +47,9 @@
     <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">Used libraries:</string>
     <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
-    <string name="app_name_long">PRIVACY FRIENDLY QR scanner</string>
-    <string name="version_number">Version 2</string>
+    <string name="app_name_long">Privacy Friendly QR Scanner</string>
+    <string name="version_number">Version v%s</string>
     <string name="delete_items">Delete items</string>
-
 
     <string name="scan_text">Place this window above the code u want to decode.</string>
     <string name="action_clear">Clear History</string>
@@ -153,15 +72,14 @@
 
     <string name="usability_hint2">If you cannot scan a code, increase the distance between the scanner and the code.</string>
 
-    <string name="description_contact">The QR-Code you scanned contains contact information. In order to <i>import</i> it into your address book, click Proceed.</string>
-    <string name="description_email">The QR-Code you scanned contains an email address. In order to <i>send an email</i> or <i>add it to a contact</i>, click Proceed.</string>
-    <string name="description_send_email">The QR-Code you scanned contains a filled email. In order to <i>send</i> it or <i>add the address a contact</i>, click Proceed.</string>
-    <string name="description_product">The code you scanned contains a product code. In order to  <i>see it on Google Play</i>, just click Proceed. </string>
-    <string name="description_tel">The QR-Code you scanned contains a phone number. In order to <i>start a call</i> or <i>add it to a contact</i>, just click Proceed.</string>
-    <string name="description_sms">The QR-Code you scanned contains an SMS. In order to <i>send</i> the SMS or <i>add the number to a contact</i>, click Proceed.</string>
+    <string name="description_contact">The QR-Code you scanned contains contact information.</string>
+    <string name="description_email">The QR-Code you scanned contains an email address.</string>
+    <string name="description_send_email">The QR-Code you scanned contains a filled email.</string>
+    <string name="description_product">The code you scanned contains a product code.</string>
+    <string name="description_tel">The QR-Code you scanned contains a phone number.</string>
+    <string name="description_sms">The QR-Code you scanned contains an SMS.</string>
 
-    <string name="description_text">The QR-Code you scanned contains plain text. In order to <i>search the web</i> for information, click Proceed.</string>
-    <string name="description_MMS">The QR-Code you scanned contains an MMS. In order to <i>send</i> the MMS or <i>add the number to a contact</i>, click Proceed.</string>
+    <string name="description_text">The QR-Code you scanned contains plain text.</string>
 
     <string name="choose_action">Proceed</string>
     <string name="abort_action">Abort </string>
@@ -266,7 +184,6 @@
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="help_permission1_description">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
     <string name="help_permission1_heading">Camera</string>
-    <string name="help_example"></string>
     <string name="help_privacy_heading">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">The scanning does not work, what can I do?</string>
     <string name="help_overview_heading">What is PRIVACY FRIENDLY QR Scanner?</string>
@@ -285,7 +202,7 @@
     <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
     <string name="help_permission">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_permission_answer">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
-    <!-- Strings related to Settings -->
+    <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->
     <string name="pref_title_enable_history">Enable History</string>
@@ -295,8 +212,8 @@
 
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Signal tone</string>
-    <string name="description_Mms">The QR-Code you scanned contains an MMS. In order to send the MMS or add the number to a contact, click Proceed.</string>
-    <string name="geoInfo">The QR-Code you scanned contains a geographic information. In order to start google maps, just click Proceed.</string>
+    <string name="description_Mms">The QR-Code you scanned contains an MMS.</string>
+    <string name="geoInfo">The QR-Code you scanned contains a geographic information.</string>
     <string name="content_copied">Content copied</string>
     <string name="share_via">Share via</string>
     <string name="no_content_in_history">There are no contents in history!</string>
@@ -324,7 +241,7 @@
     <string name="firstname">Firstname</string>
     <string name="street_name_and_number">Street name and number</string>
     <string name="delete_content">Are you sure you want to delete  contents?</string>
-    <string name="delete_alll">Delete all contents</string>
+    <string name="delete_all">Delete all contents</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="D_all">Delete all record(s)</string>
@@ -339,6 +256,7 @@
     <string name="Share_via">Share via</string>
     <string name="select_all">Select All</string>
     <string name="selected_1">Selected</string>
+    <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
 
 
 </resources>

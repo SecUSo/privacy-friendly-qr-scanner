@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
@@ -46,7 +44,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-/*****************************************************************************/
+/* *************************************************************************** */
 
         scan_bt = (Button) findViewById(R.id.btScan);
         final Activity activity = this;
@@ -58,23 +56,26 @@ public class MainActivity extends AppCompatActivity
                     if (ContextCompat.checkSelfPermission(activity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                         ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.CAMERA}, 0);
 
-
-
-
                         return;
                     }
-                }
+               }
 
-               IntentIntegrator integrator = new IntentIntegrator(activity);
-                integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-                integrator.setPrompt(getString(R.string.Scan_qr));
-                integrator.setCameraId(0);
-                integrator.setBeepEnabled(false);
-                //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
-                integrator.setOrientationLocked(false);
-                //integrator.setBarcodeImageEnabled(false);
-                integrator.initiateScan();
+               IntentIntegrator integrator = new IntentIntegrator(MainActivity.this);
+               integrator.setCaptureActivity(ScannerActivity.class);
+               integrator.setBeepEnabled(false);
+               integrator.setOrientationLocked(false);
+               integrator.initiateScan();
+
+//               IntentIntegrator integrator = new IntentIntegrator(activity);
+//                integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
+//                integrator.setPrompt(getString(R.string.Scan_qr));
+//                integrator.setCameraId(0);
+//                integrator.setBeepEnabled(false);
+//                //  SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+//                //  integrator.setBeepEnabled(prefs.getBoolean("beep", true));
+//                integrator.setOrientationLocked(false);
+//                //integrator.setBarcodeImageEnabled(false);
+//                integrator.initiateScan();
             }
         });
 /******************************************************************************************************/
@@ -136,34 +137,33 @@ public class MainActivity extends AppCompatActivity
                 break;*/
 
             case R.id.nav_scan:
-                Intent s= new Intent(MainActivity.this,QrScanner.class);
-                startActivity(s);
+                // TODO Intent s= new Intent(MainActivity.this,QrScanner.class);
+                //startActivity(s);
                 break;
             case R.id.nav_generate:
                 Intent g= new Intent(MainActivity.this,QrGenerator.class);
                 startActivity(g);
                 break;
             case R.id.nav_history:
-                Intent hs= new Intent(MainActivity.this,History.class);
+                Intent hs= new Intent(MainActivity.this, HistoryActivity.class);
                 startActivity(hs);
                 break;
 
             case R.id.nav_settings:
-                Intent st= new Intent(MainActivity.this,Settings.class);
+                Intent st= new Intent(MainActivity.this, SettingsActivity.class);
                 startActivity(st);
                 break;
 
             case R.id.nav_help:
-                Intent h= new Intent(MainActivity.this,Help.class);
+                Intent h= new Intent(MainActivity.this, HelpActivity.class);
                 startActivity(h);
                 break;
 
 
 
             case R.id.nav_tutorial:
-                PrefManager prefManager = new PrefManager(getBaseContext());
-                prefManager.setFirstTimeLaunch(true);
                 Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
+                intent.setAction(TutorialActivity.ACTION_SHOW_ANYWAYS);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 break;
@@ -171,13 +171,13 @@ public class MainActivity extends AppCompatActivity
 
 
             case R.id.nav_about:
-                Intent a= new Intent(MainActivity.this,About.class);
+                Intent a= new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(a);
                 break;
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
