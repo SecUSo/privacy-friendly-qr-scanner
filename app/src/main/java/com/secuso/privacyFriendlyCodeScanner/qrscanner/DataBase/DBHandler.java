@@ -16,7 +16,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     //We need to pass database information along to superclass
 
-    public DBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public DBHandler(Context context, SQLiteDatabase.CursorFactory factory) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
     }
 
