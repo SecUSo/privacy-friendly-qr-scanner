@@ -16,8 +16,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ScannerActivity;
 
 import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
 
@@ -90,7 +90,7 @@ public class BizCardActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent ca = new Intent(BizCardActivity.this, MainActivity.class);
+                Intent ca = new Intent(BizCardActivity.this, ScannerActivity.class);
                 startActivity(ca);
 
             }
@@ -112,14 +112,11 @@ public class BizCardActivity extends AppCompatActivity {
                                         Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
                                         contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
-
                                         contact.putExtra(ContactsContract.Intents.Insert.PHONE, phone);
                                         contact.putExtra(ContactsContract.Intents.Insert.NAME, name);
                                         contact.putExtra(ContactsContract.Intents.Insert.EMAIL,email);
                                        contact.putExtra(ContactsContract.Intents.Insert.COMPANY, company);
                                         contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, title);
-
-
 
                                         String caption = getResources().getStringArray(R.array.vcard_array)[0];
                                         startActivity(Intent.createChooser(contact, caption));

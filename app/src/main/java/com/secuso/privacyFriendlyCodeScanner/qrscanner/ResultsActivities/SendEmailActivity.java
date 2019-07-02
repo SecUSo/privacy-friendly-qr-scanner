@@ -17,8 +17,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ScannerActivity;
 
 import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
 
@@ -68,7 +68,7 @@ public class SendEmailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent ca = new Intent(SendEmailActivity.this, MainActivity.class);
+                Intent ca = new Intent(SendEmailActivity.this, ScannerActivity.class);
                 startActivity(ca);
 
             }

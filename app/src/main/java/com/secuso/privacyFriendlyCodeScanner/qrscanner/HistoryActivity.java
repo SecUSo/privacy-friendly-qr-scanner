@@ -43,7 +43,7 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        dbHandler = new DBHandler(this, null, null, 1);////////////////DB
+        dbHandler = new DBHandler(this,  null);////////////////DB
 
         list_view = findViewById(R.id.list_view);
 

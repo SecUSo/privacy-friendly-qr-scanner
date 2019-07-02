@@ -20,8 +20,8 @@ import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ScannerActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -57,7 +57,7 @@ public class TelGnrActivity extends AppCompatActivity {
                 Bitmap bitmap=createBitmap(qrInputText);
                 saveImageToExternalStorage(bitmap);
 
-                Intent i=new Intent(TelGnrActivity.this, MainActivity.class);
+                Intent i=new Intent(TelGnrActivity.this, ScannerActivity.class);
                 startActivity(i);
                 Toast.makeText(TelGnrActivity.this, "QR code stored in gallery", Toast.LENGTH_LONG).show();
 

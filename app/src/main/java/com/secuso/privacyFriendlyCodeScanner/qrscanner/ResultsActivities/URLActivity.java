@@ -8,7 +8,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -25,11 +24,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.MainActivity;
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-
-import org.json.JSONArray;
-import org.json.JSONException;
+import com.secuso.privacyFriendlyCodeScanner.qrscanner.ScannerActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -124,7 +120,7 @@ public class URLActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent ca = new Intent(URLActivity.this, MainActivity.class);
+                Intent ca = new Intent(URLActivity.this, ScannerActivity.class);
                 startActivity(ca);
 
             }
