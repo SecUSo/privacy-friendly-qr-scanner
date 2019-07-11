@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.MeCardActivity;
 
 public class MeCardEnterActivity extends AppCompatActivity {
 

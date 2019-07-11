@@ -55,45 +55,6 @@
             android:label="@string/Settings"/>
         <activity android:name=".ResultActivity" />
         <activity
-            android:name=".ResultsActivities.EmailActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.TelActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.SendEmailActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.URLActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.SmsActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.WifiActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.ContactActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.MmsActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.GeoInfoActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.ProductActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.TextActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.MeCardActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
-            android:name=".ResultsActivities.BizCardActivity"
-            android:parentActivityName=".ScannerActivity" />
-        <activity
             android:name=".QRGenerating.MailGnrActivity"
             android:label="E-Mail"
             android:parentActivityName=".ScannerActivity" />
