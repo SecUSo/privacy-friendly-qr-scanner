@@ -31,7 +31,7 @@ public class TelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tel);
+        setContentView(R.layout.fragment_result_tel);
 
         TextView resultField = (TextView) findViewById(R.id.result_field_tel);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);

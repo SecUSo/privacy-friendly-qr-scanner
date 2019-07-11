@@ -103,38 +103,4 @@
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/btnProceed"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/button_fullwidth"
-        android:padding="5dp"
-        android:text="@string/choose_action"
-        android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_margin="1dp" />
-
-    <ImageView
-        android:layout_centerInParent="true"
-        android:layout_height="fill_parent"
-        android:layout_width="wrap_content"
-        android:id="@+id/imageView"
-        android:paddingLeft="2dp"
-        android:visibility="invisible" />
-
-    <Button
-        android:id="@+id/btnCancel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/button_fullwidth"
-        android:padding="5dp"
-        android:text="@string/abort_action"
-        android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/imageView"
-        android:layout_margin="1dp" />
-
 </RelativeLayout>

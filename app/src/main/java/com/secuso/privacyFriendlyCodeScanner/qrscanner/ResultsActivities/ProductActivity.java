@@ -28,7 +28,7 @@ public class ProductActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product);
+        setContentView(R.layout.fragment_result_product);
 
 
         Button btnCancel = (Button) findViewById(R.id.btnCancel);

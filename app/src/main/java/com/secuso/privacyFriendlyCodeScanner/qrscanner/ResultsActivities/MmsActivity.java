@@ -31,7 +31,7 @@ public class MmsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mms);
+        setContentView(R.layout.fragment_result_mms);
 
         TextView numberField = (TextView) findViewById(R.id.textResultMMS);
         TextView contentField = (TextView) findViewById(R.id.textContentMMS);

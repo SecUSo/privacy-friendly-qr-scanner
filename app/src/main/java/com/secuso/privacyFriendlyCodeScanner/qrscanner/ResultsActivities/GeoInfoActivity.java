@@ -30,7 +30,7 @@ public class GeoInfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result_geo_info);
+        setContentView(R.layout.fragment_result_geo_info);
 
         TextView resultField = (TextView) findViewById(R.id.result_field_geo);
         Button btnCancel = (Button) findViewById(R.id.btnCancel);

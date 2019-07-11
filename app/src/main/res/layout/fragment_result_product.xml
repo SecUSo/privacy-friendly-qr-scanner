@@ -7,9 +7,9 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView3"
-        android:layout_above="@+id/btnProceed"
+        android:id="@+id/scrollView8"
         android:layout_alignParentTop="true"
+        android:layout_above="@+id/btnProceed"
         android:fillViewport="true">
 
         <LinearLayout
@@ -22,12 +22,12 @@
                 android:id="@+id/textLink"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/geoInfo"
+                android:text="@string/description_product"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/result_field_geo"
+                android:id="@+id/result_field_product"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -37,43 +37,9 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Example application"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:textIsSelectable="true" />
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/btnProceed"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/button_fullwidth"
-        android:padding="5dp"
-        android:text="@string/choose_action"
-        android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_margin="1dp" />
-
-    <ImageView
-        android:layout_centerInParent="true"
-        android:layout_height="fill_parent"
-        android:layout_width="wrap_content"
-        android:id="@+id/imageView"
-        android:paddingLeft="2dp"
-        android:visibility="invisible" />
-
-    <Button
-        android:id="@+id/btnCancel"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/button_fullwidth"
-        android:padding="5dp"
-        android:text="@string/abort_action"
-        android:textColor="@android:color/white"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/imageView"
-        android:layout_margin="1dp" />
 </RelativeLayout>

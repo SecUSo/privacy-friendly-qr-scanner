@@ -28,7 +28,7 @@ public class WifiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_wifi);
+        setContentView(R.layout.fragment_result_wifi);
 
 
         TextView resultText = (TextView) findViewById(R.id.result_field_wifi);

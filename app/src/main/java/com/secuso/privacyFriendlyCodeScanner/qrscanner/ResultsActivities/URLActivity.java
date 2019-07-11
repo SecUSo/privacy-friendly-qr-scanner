@@ -52,7 +52,7 @@ public class URLActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_url);
+        setContentView(R.layout.fragment_result_url);
 
         Bundle QRData = getIntent().getExtras();//from ResultActivity
         final String qrurl = QRData.getString("Rst");
