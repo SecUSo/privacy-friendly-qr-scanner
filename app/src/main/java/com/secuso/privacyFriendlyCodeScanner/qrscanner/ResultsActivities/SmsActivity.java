@@ -29,7 +29,7 @@ public class SmsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sms);
+        setContentView(R.layout.fragment_result_sms);
 
 
         TextView numberField = (TextView) findViewById(R.id.textResultSms);

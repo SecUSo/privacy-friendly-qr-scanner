@@ -122,7 +122,6 @@
     <string-array name="tel_array">
         <item>Call Number</item>
         <item>Add to Contacts</item>
-        <item>Do nothing</item>
     </string-array>
     <string-array name="geo_array">
         <item>Open google maps</item>
@@ -257,6 +256,9 @@
     <string name="select_all">Select All</string>
     <string name="selected_1">Selected</string>
     <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

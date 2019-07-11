@@ -29,8 +29,7 @@ public class BizCardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_result_biz_card);
-
+        setContentView(R.layout.fragment_result_biz_card);
 
         TextView resultTextName = (TextView) findViewById(R.id.result_text_Name);
         TextView resultTextEmail = (TextView) findViewById(R.id.result_text_Email);

@@ -6,14 +6,24 @@
     android:layout_height="match_parent"
     tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="110dp" />
+    <FrameLayout
+        android:id="@+id/activity_result_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_fullwidth"
+        android:padding="5dp"
+        android:text="@string/choose_action"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"/>
 
 </RelativeLayout>

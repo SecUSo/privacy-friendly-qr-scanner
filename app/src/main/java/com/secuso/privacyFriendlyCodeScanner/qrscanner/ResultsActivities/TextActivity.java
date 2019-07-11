@@ -30,7 +30,7 @@ public class TextActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_text);
+        setContentView(R.layout.fragment_result_text);
 
 
         TextView resultText = (TextView) findViewById(R.id.result_field_text);
@@ -107,8 +107,7 @@ public class TextActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    public void shareIt(String result)
-    {
+    public void shareIt(String result) {
         Intent sharingIntent= new Intent(Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
         sharingIntent.putExtra(Intent.EXTRA_TEXT,result);

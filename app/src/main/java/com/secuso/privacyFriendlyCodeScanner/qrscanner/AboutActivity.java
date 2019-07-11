@@ -17,6 +17,7 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         View mainContent = findViewById(R.id.main_content);

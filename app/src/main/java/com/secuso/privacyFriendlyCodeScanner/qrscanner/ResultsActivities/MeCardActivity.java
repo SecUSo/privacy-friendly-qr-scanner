@@ -29,7 +29,7 @@ public class MeCardActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_me_card);
+        setContentView(R.layout.fragment_result_me_card);
 
         TextView resultTextName = (TextView) findViewById(R.id.result_text_name);
         TextView resultTextEmail = (TextView) findViewById(R.id.result_text_Email);

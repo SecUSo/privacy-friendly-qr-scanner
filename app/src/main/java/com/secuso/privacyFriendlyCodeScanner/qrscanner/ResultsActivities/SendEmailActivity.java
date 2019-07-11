@@ -31,7 +31,7 @@ public class SendEmailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_send_email);
+        setContentView(R.layout.fragment_result_send_email);
 
 
         int subjectPos = 0;
