@@ -10,12 +10,9 @@ import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultsActivities.SmsActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ScannerActivity;
 
 public class SMSResultFragment extends ResultFragment {
 
