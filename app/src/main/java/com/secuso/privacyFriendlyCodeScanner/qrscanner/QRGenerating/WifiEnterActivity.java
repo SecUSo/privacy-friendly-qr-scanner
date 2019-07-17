@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
+package com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 public class WifiEnterActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase;
+package com.secuso.privacyfriendlycodescanner.qrscanner.database;
 
 
 public class ScanedData {

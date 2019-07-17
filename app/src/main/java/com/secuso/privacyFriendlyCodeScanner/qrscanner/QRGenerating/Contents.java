@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
+package com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating;
 
 import android.provider.ContactsContract;
 

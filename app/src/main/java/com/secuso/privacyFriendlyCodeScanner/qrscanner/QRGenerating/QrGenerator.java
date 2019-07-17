@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
+package com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 
 public class QrGenerator extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyfriendlycodescanner.qrscanner;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -15,28 +15,28 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.DBHandler;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.ScanedData;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.BizCardResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.ContactResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.EmailResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.GeoResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.MMSResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.MeCardResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.ProductResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.QRResultType;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.ResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.SMSResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.SendEmailResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.TelResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.TextResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.URLResultFragment;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments.WifiResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.DBHandler;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.ScanedData;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.BizCardResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.ContactResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.EmailResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.GeoResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.MMSResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.MeCardResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.ProductResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.QRResultType;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.ResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.SMSResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.SendEmailResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.TelResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.TextResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.URLResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments.WifiResultFragment;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.secuso.privacyFriendlyCodeScanner.qrscanner.R.string.content_copied;
+import static com.secuso.privacyfriendlycodescanner.qrscanner.R.string.content_copied;
 import static java.util.regex.Pattern.CASE_INSENSITIVE;
 
 public class ResultActivity extends AppCompatActivity implements TextResultFragment.OnFragmentInteractionListener {

@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers;
+package com.secuso.privacyfriendlycodescanner.qrscanner.helpers;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

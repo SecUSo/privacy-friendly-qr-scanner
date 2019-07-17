@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments;
+package com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -20,7 +20,7 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

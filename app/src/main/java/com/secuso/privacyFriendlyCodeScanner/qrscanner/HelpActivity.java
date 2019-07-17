@@ -1,12 +1,12 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyfriendlycodescanner.qrscanner;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.ExpandableListAdapter;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.HelpDataDump;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.ExpandableListAdapter;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.HelpDataDump;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

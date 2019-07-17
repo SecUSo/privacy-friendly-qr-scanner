@@ -1,11 +1,11 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyfriendlycodescanner.qrscanner;
 
 import android.annotation.SuppressLint;
 import android.preference.PreferenceFragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.AppCompatPreferenceActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.AppCompatPreferenceActivity;
 
 
 public class SettingsActivity extends AppCompatPreferenceActivity {

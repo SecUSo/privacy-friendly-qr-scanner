@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments;
+package com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -10,10 +10,9 @@ import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 public class EmailResultFragment extends ResultFragment {
 

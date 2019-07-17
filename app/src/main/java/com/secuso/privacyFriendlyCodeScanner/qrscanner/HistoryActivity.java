@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyfriendlycodescanner.qrscanner;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,8 +17,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.DataBase.DBHandler;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.MyListViewAdapter;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.DBHandler;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.MyListViewAdapter;
 
 import java.util.ArrayList;
 

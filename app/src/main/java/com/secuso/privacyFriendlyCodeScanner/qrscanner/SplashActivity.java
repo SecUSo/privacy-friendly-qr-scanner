@@ -1,10 +1,9 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyfriendlycodescanner.qrscanner;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.PrefManager;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager;
 
 /**
  * @author Karola Marky

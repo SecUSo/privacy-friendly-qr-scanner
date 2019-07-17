@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments;
+package com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 public class SMSResultFragment extends ResultFragment {
 
@@ -56,14 +56,12 @@ public class SMSResultFragment extends ResultFragment {
                                 sms.putExtra("sms_body", message);
                                 caption = getResources().getStringArray(R.array.sms_array)[0];
                                 startActivity(Intent.createChooser(sms, caption));
-
                                 break;
                             case 1:
                                 Intent call = new Intent("android.intent.action.DIAL");
                                 call.setData(Uri.parse("tel:" + number));
                                 caption = getResources().getStringArray(R.array.sms_array)[1];
                                 startActivity(Intent.createChooser(call, caption));
-
                                 break;
                             case 2:
                                 Intent contact = new Intent(
@@ -71,9 +69,7 @@ public class SMSResultFragment extends ResultFragment {
                                         Uri.parse("tel:" + number));
                                 caption = getResources().getStringArray(R.array.sms_array)[2];
                                 startActivity(Intent.createChooser(contact, caption));
-
                                 break;
-
                             default:
                         }
                     }

@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
+package com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating;
 
 /**
  * Created by bassel on 12/17/2017.
