@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers;
+package com.secuso.privacyfriendlycodescanner.qrscanner.helpers;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,14 +18,14 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.zxing.integration.android.IntentIntegrator;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.AboutActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.HelpActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.HistoryActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating.QrGenerator;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ScannerActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.SettingsActivity;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.TutorialActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.AboutActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.HelpActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.HistoryActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating.QrGenerator;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ScannerActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.SettingsActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.TutorialActivity;
 
 /**
  * @author Christopher Beckmann, Karola Marky

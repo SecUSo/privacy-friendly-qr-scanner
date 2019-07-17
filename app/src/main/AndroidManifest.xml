@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.secuso.privacyFriendlyCodeScanner.qrscanner">
+    package="com.secuso.privacyfriendlycodescanner.qrscanner">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -42,7 +42,7 @@
             android:label="@string/help"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.QrGenerator"
+            android:name=".qrgenerating.QrGenerator"
             android:label="@string/QRGenerator"
             android:parentActivityName=".ScannerActivity" />
         <activity
@@ -55,91 +55,91 @@
             android:label="@string/Settings"/>
         <activity android:name=".ResultActivity" />
         <activity
-            android:name=".QRGenerating.MailGnrActivity"
+            android:name=".qrgenerating.MailGnrActivity"
             android:label="E-Mail"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.TelGnrActivity"
+            android:name=".qrgenerating.TelGnrActivity"
             android:label="Phone number"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.UrlGnrActivity"
+            android:name=".qrgenerating.UrlGnrActivity"
             android:label="URL"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.SmsGnrActivity"
+            android:name=".qrgenerating.SmsGnrActivity"
             android:label="SMS"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.GeoLocatioGnrActivity"
+            android:name=".qrgenerating.GeoLocatioGnrActivity"
             android:label="Geo location"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.MailEnterActivity"
+            android:name=".qrgenerating.MailEnterActivity"
             android:label="E-Mail"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.TelEnterActivity"
+            android:name=".qrgenerating.TelEnterActivity"
             android:label="Phone number"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.UrlEnterActivity"
+            android:name=".qrgenerating.UrlEnterActivity"
             android:label="URL"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.SmsEnterActivity"
+            android:name=".qrgenerating.SmsEnterActivity"
             android:label="SMS"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.GeoLocationEnterActivity"
+            android:name=".qrgenerating.GeoLocationEnterActivity"
             android:label="Geo location"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.MeCardEnterActivity"
+            android:name=".qrgenerating.MeCardEnterActivity"
             android:label="MeCard"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.BizCardEnterActivity"
+            android:name=".qrgenerating.BizCardEnterActivity"
             android:label="BizCard"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.MeCardGnrActivity"
+            android:name=".qrgenerating.MeCardGnrActivity"
             android:label="MeCard"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.BizCardGnrActivity"
+            android:name=".qrgenerating.BizCardGnrActivity"
             android:label="BizCard"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.MmsEnterActivity"
+            android:name=".qrgenerating.MmsEnterActivity"
             android:label="MMS"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.MmsGnrActivity"
+            android:name=".qrgenerating.MmsGnrActivity"
             android:label="MMS"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.WifiEnterActivity"
+            android:name=".qrgenerating.WifiEnterActivity"
             android:label="WIFI"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.WifiGnrActivity"
+            android:name=".qrgenerating.WifiGnrActivity"
             android:label="WIFI"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.VcardEnterActivity"
+            android:name=".qrgenerating.VcardEnterActivity"
             android:label="vcard"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.VcardGnrActivity"
+            android:name=".qrgenerating.VcardGnrActivity"
             android:label="vcard"
             android:parentActivityName=".ScannerActivity" />
         <activity
-            android:name=".QRGenerating.MarketEnterActivity"
+            android:name=".qrgenerating.MarketEnterActivity"
             android:label="Market"
             android:parentActivityName=".ScannerActivity"/>
         <activity
-            android:name=".QRGenerating.MarketGnrActivity"
+            android:name=".qrgenerating.MarketGnrActivity"
             android:label="Market"
             android:parentActivityName=".ScannerActivity"/>
     </application>

@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.QRGenerating;
+package com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -23,8 +23,8 @@ import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.ScannerActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ScannerActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;

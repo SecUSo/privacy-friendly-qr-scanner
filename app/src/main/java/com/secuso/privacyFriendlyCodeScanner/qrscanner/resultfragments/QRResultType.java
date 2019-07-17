@@ -1,18 +1,8 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments;
+package com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
-import android.provider.ContactsContract;
 import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
-
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 public enum QRResultType {
     TEXT(R.layout.fragment_result_text),

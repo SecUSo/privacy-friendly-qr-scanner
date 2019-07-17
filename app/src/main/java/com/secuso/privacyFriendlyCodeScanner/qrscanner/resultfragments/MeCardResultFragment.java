@@ -1,19 +1,17 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.resultfragments;
+package com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 public class MeCardResultFragment extends ResultFragment {
 

@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyfriendlycodescanner.qrscanner;
 
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.BaseActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.BaseActivity;
 
 
 public class AboutActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers;
+package com.secuso.privacyfriendlycodescanner.qrscanner.helpers;
 
 /**
  * Created by bassel on 3/3/2018.
@@ -25,7 +25,7 @@ import  android.widget.ImageView;
 
 import  android.widget.TextView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
 
 public class  MyListViewAdapter extends ArrayAdapter<String> {

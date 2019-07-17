@@ -15,7 +15,7 @@
  along with Privacy Friendly App Example. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.secuso.privacyFriendlyCodeScanner.qrscanner;
+package com.secuso.privacyfriendlycodescanner.qrscanner;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -34,7 +34,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.secuso.privacyFriendlyCodeScanner.qrscanner.helpers.PrefManager;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager;
 
 
 /**
