@@ -14,4 +14,15 @@
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Signal tone</string>
 
+    <!--Settings for used Search Engine-->
+    <string name="pref_title_search_engine">Default Search Engine</string>
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>DUCK_DUCK_GO</item>
+        <item>GOOGLE</item>
+    </string-array>
+
 </resources>

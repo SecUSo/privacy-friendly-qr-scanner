@@ -18,4 +18,12 @@
             android:key="beep"
             android:title="@string/pref_title_beep" />
 
+        <ListPreference
+            android:key="pref_search_engine"
+            android:title="@string/pref_title_search_engine"
+            android:summary="%s"
+            android:entries="@array/pref_search_engine_entries"
+            android:entryValues="@array/pref_search_engine_values"
+            android:defaultValue="DUCK_DUCK_GO" />
+
 </PreferenceScreen>
