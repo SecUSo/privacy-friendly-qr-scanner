@@ -82,6 +82,7 @@ public class ContactResultFragment extends ResultFragment {
             if (content[i].startsWith("TITLE:")) title_id = i;
         }
 
+        // TODO this must be reworked .. this way of parsing just leads to unexpected crashes.
         name = content[name_id].substring(3);
         lastname = content[lastname_id].substring(2);
         email = content[email_id].substring(20);

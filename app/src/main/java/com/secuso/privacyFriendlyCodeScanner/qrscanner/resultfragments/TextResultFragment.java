@@ -2,8 +2,10 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.resultfragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +30,11 @@ public class TextResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(Context context, String content) {
-        Uri uri = Uri.parse("http://www.google.com/#q="+content);
+
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
+        String searchURL = pref.getString("pref_search_engine", "https://duckduckgo.com/?q=%s");
+        Uri uri = Uri.parse(String.format(searchURL, content));
+
         Intent search = new Intent(Intent.ACTION_VIEW, uri);
         String caption = getResources().getStringArray(R.array.text_array)[0];
         startActivity(Intent.createChooser(search, caption));

@@ -259,6 +259,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pref_search_engine">Search Link</string>
+    <string name="pref_search_engine_hint">https://duckduckgo.com/?q=%s</string>
 
 
 </resources>
