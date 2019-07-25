@@ -246,4 +246,9 @@
     <string name="pref_title_beep">Signalton</string>
 
 
+    <string name="hello_blank_fragment">Hallo leeres fragment</string>
+    <string name="pref_search_engine">Suchmaschinenlink</string>
+    <string name="pref_search_engine_hint">https://duckduckgo.com/?q=%s</string>
+
+
 </resources>
