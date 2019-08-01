@@ -27,11 +27,6 @@ public class UrlEnterActivity extends AppCompatActivity {
             String result;
             @Override
             public void onClick(View v) {
-
-
-
-
-
                 result = qrResult.getText().toString();
                 Intent i = new Intent(UrlEnterActivity.this, UrlGnrActivity.class);
                 i.putExtra("gn", result);
