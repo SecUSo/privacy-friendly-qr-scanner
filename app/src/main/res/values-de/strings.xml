@@ -45,30 +45,30 @@
     <string name="encryption">Verschlüsselung</string>
     <string name="action_about">Über</string>
     <string name="about_affiliation">In Zusammenarbeit mit:</string>
-	<string name="about_libraries">Verwendete Bibliotheken:</string>
+    <string name="about_libraries">Verwendete Bibliotheken:</string>
     <string name="history_disabled">Verlauf deaktiviert</string>
     <string name="to">Empfänger:</string>
-	<string name="subject">Betreff:</string>
+    <string name="subject">Betreff:</string>
 
     <string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie ihn etwas weiter entfernt zu scannen.</string>
 
     <string name="description_contact">Der gescannte QR-Code enthält Kontaktinformationen.</string>
-	<string name="description_email">Der gescannte QR-Code enthält eine E-Mail-Adresse.</string>
-	<string name="description_send_email">Der gescannte QR-Code enthält eine ausgefüllte E-Mail.</string>
-	<string name="description_product">Der gescannte Code enthält einen Produktcode.</string>
-	<string name="description_tel">Der gescannte QR-Code enthält eine Telefonnummer.</string>
-	<string name="description_sms">Der gescannte QR-Code enthält eine SMS.</string>
-	<string name="description_text">Der gescannte QR-Code enthält Text.</string>
+    <string name="description_email">Der gescannte QR-Code enthält eine E-Mail-Adresse.</string>
+    <string name="description_send_email">Der gescannte QR-Code enthält eine ausgefüllte E-Mail.</string>
+    <string name="description_product">Der gescannte Code enthält einen Produktcode.</string>
+    <string name="description_tel">Der gescannte QR-Code enthält eine Telefonnummer.</string>
+    <string name="description_sms">Der gescannte QR-Code enthält eine SMS.</string>
+    <string name="description_text">Der gescannte QR-Code enthält Text.</string>
 
     <string name="choose_action">Fortfahren </string>
-	<string name="abort_action">Abbrechen </string>
+    <string name="abort_action">Abbrechen </string>
 
     <string name="proceed">Fortfahren</string>
     <string name="back">Zurück</string>
-	
-	<string name="choose_action_url">Fortfahrenn</string>
-	<string name="abort_action_url">Abbrechen</string>
-	
+
+    <string name="choose_action_url">Fortfahrenn</string>
+    <string name="abort_action_url">Abbrechen</string>
+
     <string-array name="text_array">
         <item>Online suchen</item>
         <item>Nichts tun</item>
@@ -146,7 +146,7 @@
     <string name="title_activity_result_tel">Telefonnummer gefunden</string>
     <string name="title_activity_result_product">Produkt gefunden</string>
     <string name="title_activity_result_contact">Kontakt gefunden</string>
-    <string name="app_name_long" >Privacy friendly QR scanner</string>
+    <string name="app_name_long">Privacy friendly QR scanner</string>
     <string name="action_help">Hilfe</string>
 
     <!-- ###DRAWER###-->
@@ -245,10 +245,9 @@
     <string name="pref_keep_duplicates_explanation">Duplikate werden auch in der Historie gespeichert</string>
     <string name="pref_title_beep">Signalton</string>
 
-
     <string name="hello_blank_fragment">Hallo leeres fragment</string>
-    <string name="pref_search_engine">Suchmaschinenlink</string>
-    <string name="pref_search_engine_hint">https://duckduckgo.com/?q=%s</string>
 
+    <!--Settings for used Search Engine-->
+    <string name="pref_search_engine_title">Standardsuchmaschine</string>
 
 </resources>

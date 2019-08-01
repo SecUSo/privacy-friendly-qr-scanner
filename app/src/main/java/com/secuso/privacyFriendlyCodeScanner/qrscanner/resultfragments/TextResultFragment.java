@@ -30,13 +30,21 @@ public class TextResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(Context context, String content) {
-
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        String searchURL = pref.getString("pref_search_engine", "https://duckduckgo.com/?q=%s");
-        Uri uri = Uri.parse(String.format(searchURL, content));
+        final String searchEngineURI = getSearchEngineURI(context);
+        final Uri uri = Uri.parse(String.format(searchEngineURI, content));
 
         Intent search = new Intent(Intent.ACTION_VIEW, uri);
         String caption = getResources().getStringArray(R.array.text_array)[0];
         startActivity(Intent.createChooser(search, caption));
+    }
+
+    private String getSearchEngineURI(final Context context) {
+        final String duckDuckGo =
+                getResources().getStringArray(R.array.pref_search_engine_values)[0];
+        final SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
+        final String searchEngineType = pref.getString("pref_search_engine", duckDuckGo);
+        return duckDuckGo.equals(searchEngineType)
+                ? getResources().getString(R.string.pref_search_engine_uri_duckduckgo)
+                : getResources().getString(R.string.pref_search_engine_uri_google);
     }
 }
