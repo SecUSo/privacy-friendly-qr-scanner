@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="bool_history"
             android:summary="@string/pref_description_enable_history"
             android:title="@string/pref_title_enable_history" />
 
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="bool_keep_duplicates"
-            android:summary="@string/pref_keep_duplicates_explanation"
-            android:title="@string/pref_keep_duplicates"
-            android:dependency="bool_history"/>
 
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="beep"
-            android:title="@string/pref_title_beep" />
+        <EditTextPreference
+            android:id="@+id/pref_search_engine"
+            android:key="pref_search_engine"
+            android:title="@string/pref_search_engine"
+            android:hint="@string/pref_search_engine_hint"
+            android:inputType="textWebEditText"
+            android:defaultValue="@string/pref_search_engine_hint"/>
 
         <ListPreference
             android:key="pref_search_engine"

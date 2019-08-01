@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/main_content"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:paddingBottom="2dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.secuso.privacyFriendlyCodeScanner.MainActivity"
-    tools:showIn="@layout/app_bar_main"
-    android:orientation="vertical"
-    android:fillViewport="true"
-    style="@style/AlertDialog.AppCompat">
+    tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.QrScanner"
+    tools:showIn="@layout/app_bar_main">
 
-    <ScrollView
+
+
+    <Button
+        android:id="@+id/btScan"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:fillViewport="true">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFFFFF"
-            android:fillViewport="true">
-
-            <FrameLayout
-                android:id="@+id/container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF" />
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_fullwidth"
+        android:text="Scan"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+        />
 
 </LinearLayout>

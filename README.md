@@ -12,12 +12,12 @@ Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps and ha
 
 ## Building 
 
-Further development requires Android Studio, we recommend to use at least version 2.2.2
+Further development requires Android Studio, we recommend to use at least version 3.4.2
  
 ### API Reference
 
 Mininum SDK: 17
-Target SDK: 25 
+Target SDK: 28 
 
 This app uses the help of the [ZXing Projekt](https://github.com/zxing).
 
@@ -39,14 +39,16 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo, the splash screen icon and app logos) copyright [Technische Universtität Darmstadt](www.tu-darmstadt.de) (2016).
+The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the app logo) copyright Karlsruhe Institute of Technology (2016-2019).
 
 ## Contributors
 
 App-Icon: <br />
-Markus Hau<br />
+Markus Hau & Tatjana Albrandt<br />
 
 Github-Users: <br />
+kamuno<br />
+bassel-hanna<br />
 p-rack<br />
 yonjuni<br />
 naofum (Japanese translation)

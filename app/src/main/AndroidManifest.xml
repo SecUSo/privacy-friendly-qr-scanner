@@ -1,50 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.secuso.privacyFriendlyCodeScanner">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.secuso.privacyfriendlycodescanner.qrscanner">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:installLocation="preferExternal"
+        android:hardwareAccelerated="true"
         android:allowBackup="true"
+        android:backupInForeground="false"
         android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-
-        <provider
-            android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.secuso.privacyFriendlyCodeScanner"
-            android:exported="false"
-            android:grantUriPermissions="true" >
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/my_paths" />
-        </provider>
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.secuso.privacyFriendlyCodeScanner.SplashActivity"
-            android:screenOrientation="portrait"
+            android:name=".SplashActivity"
+            android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.secuso.privacyFriendlyCodeScanner.MainActivity"
+            android:name=".ScannerActivity"
             android:label="@string/app_name"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.secuso.privacyFriendlyCodeScanner.MyCaptureActivity"
-            android:screenOrientation="fullSensor"
-            android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:icon="@mipmap/ic_launcher">
-        </activity>
+            android:name=".AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".HistoryActivity"
+            android:label="@string/history"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/help"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.QrGenerator"
+            android:label="@string/QRGenerator"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".TutorialActivity"
+            android:parentActivityName=".ScannerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".ScannerActivity"
+            android:label="@string/Settings"/>
+        <activity android:name=".ResultActivity" />
+        <activity
+            android:name=".qrgenerating.MailGnrActivity"
+            android:label="E-Mail"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.TelGnrActivity"
+            android:label="Phone number"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.UrlGnrActivity"
+            android:label="URL"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.SmsGnrActivity"
+            android:label="SMS"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.GeoLocatioGnrActivity"
+            android:label="Geo location"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.MailEnterActivity"
+            android:label="E-Mail"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.TelEnterActivity"
+            android:label="Phone number"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.UrlEnterActivity"
+            android:label="URL"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.SmsEnterActivity"
+            android:label="SMS"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.GeoLocationEnterActivity"
+            android:label="Geo location"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.MeCardEnterActivity"
+            android:label="MeCard"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.BizCardEnterActivity"
+            android:label="BizCard"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.MeCardGnrActivity"
+            android:label="MeCard"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.BizCardGnrActivity"
+            android:label="BizCard"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.MmsEnterActivity"
+            android:label="MMS"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.MmsGnrActivity"
+            android:label="MMS"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.WifiEnterActivity"
+            android:label="WIFI"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.WifiGnrActivity"
+            android:label="WIFI"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.VcardEnterActivity"
+            android:label="vcard"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.VcardGnrActivity"
+            android:label="vcard"
+            android:parentActivityName=".ScannerActivity" />
+        <activity
+            android:name=".qrgenerating.MarketEnterActivity"
+            android:label="Market"
+            android:parentActivityName=".ScannerActivity"/>
+        <activity
+            android:name=".qrgenerating.MarketGnrActivity"
+            android:label="Market"
+            android:parentActivityName=".ScannerActivity"/>
     </application>
 
 </manifest>

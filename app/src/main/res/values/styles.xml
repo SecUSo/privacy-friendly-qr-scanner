@@ -1,5 +1,6 @@
 <resources>
 
+    <!-- Base application theme. -->
     <style name="zxing_CaptureTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen">
     </style>
 
@@ -22,5 +23,19 @@
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+    <style name="AppTheme.AppBarTransparent" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:background">@color/transparent</item>
+    </style>
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlayTransparent" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorBackgroundFloating">@color/transparent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Support library compatibility -->
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
 </resources>
