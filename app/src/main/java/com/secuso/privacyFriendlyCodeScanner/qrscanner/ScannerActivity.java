@@ -148,10 +148,8 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     protected void onResume() {
         super.onResume();
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-                showCameraPermissionRequirement(true);
-            }
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            showCameraPermissionRequirement(true);
         } else {
             barcodeScannerView.resume();
         }

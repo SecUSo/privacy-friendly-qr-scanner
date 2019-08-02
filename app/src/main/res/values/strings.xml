@@ -105,19 +105,16 @@
     <string-array name="send_email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>
-        <item>Do nothing</item>
     </string-array>
     <string-array name="sms_array">
         <item>Send SMS</item>
         <item>Call Number</item>
         <item>Add to Contacts</item>
-        <item>Do nothing</item>
     </string-array>
     <string-array name="mms_array">
         <item>Send MMS</item>
         <item>Call Number</item>
         <item>Add to Contacts</item>
-        <item>Do nothing</item>
     </string-array>
     <string-array name="tel_array">
         <item>Call Number</item>
