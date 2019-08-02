@@ -259,8 +259,22 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="pref_search_engine">Search Link</string>
-    <string name="pref_search_engine_hint">https://duckduckgo.com/?q=%s</string>
 
+    <!--Settings for Default Search Engine-->
+    <string name="pref_search_engine_title">Default Search Engine</string>
+    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
+        "https://duckduckgo.com/?q=%s"
+    </string>
+    <string name="pref_search_engine_uri_google" translatable="false">
+        "https://www.google.com/search?q=%s"
+    </string>
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>DUCK_DUCK_GO</item>
+        <item>GOOGLE</item>
+    </string-array>
 
 </resources>

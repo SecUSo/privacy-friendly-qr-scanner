@@ -7,13 +7,12 @@
             android:summary="@string/pref_description_enable_history"
             android:title="@string/pref_title_enable_history" />
 
-
-        <EditTextPreference
-            android:id="@+id/pref_search_engine"
+        <ListPreference
             android:key="pref_search_engine"
-            android:title="@string/pref_search_engine"
-            android:hint="@string/pref_search_engine_hint"
-            android:inputType="textWebEditText"
-            android:defaultValue="@string/pref_search_engine_hint"/>
+            android:title="@string/pref_search_engine_title"
+            android:summary="%s"
+            android:entries="@array/pref_search_engine_entries"
+            android:entryValues="@array/pref_search_engine_values"
+            android:defaultValue="DUCK_DUCK_GO" />
 
 </PreferenceScreen>
