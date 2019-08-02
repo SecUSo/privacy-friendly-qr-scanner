@@ -116,6 +116,10 @@ public class ResultActivity extends AppCompatActivity implements TextResultFragm
                 Toast.makeText(getApplicationContext(), content_copied, Toast.LENGTH_SHORT).show();
                 return true;
 
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -233,17 +237,12 @@ public class ResultActivity extends AppCompatActivity implements TextResultFragm
 
     public static boolean isValidCellPhone(String number) {
         // return android.util.Patterns.PHONE.matcher(number).matches();
-        if (number.startsWith("tel:"))
-            return true;
-        else return false;
+        return number.startsWith("tel:");
 
     }
 
     public static boolean isValidProduct(String target) {
-
-        if (target.startsWith("market://"))
-            return true;
-        else return false;
+        return target.startsWith("market://");
 
     }
 
