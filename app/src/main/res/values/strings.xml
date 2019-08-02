@@ -121,7 +121,7 @@
         <item>Add to Contacts</item>
     </string-array>
     <string-array name="geo_array">
-        <item>Open google maps</item>
+        <item>Open Maps App</item>
         <item>Do nothing</item>
     </string-array>
     <string-array name="url_array">

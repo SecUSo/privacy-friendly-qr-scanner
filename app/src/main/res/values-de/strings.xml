@@ -95,7 +95,10 @@
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>
     </string-array>
-
+    <string-array name="geo_array">
+        <item>Öffne Karten App</item>
+        <item>Nichts tun</item>
+    </string-array>
     <string-array name="tel_array">
         <item>Nummer wählen</item>
         <item>Zu Kontakten hinzufügen</item>
