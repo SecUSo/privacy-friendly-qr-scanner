@@ -152,7 +152,6 @@
         <item>Wifi</item>
         <item>VCard</item>
         <item>Market</item>
-
     </string-array>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>
@@ -186,10 +185,7 @@
     <string name="help_intro">With PRIVACY FRIENDLY QR Scanner you can scan barcodes and qr-codes with various contents.</string>
     <string name="help_whatis_answer">With PRIVACY FRIENDLY QR Scanner you can scan/generate barcodes and qr-codes with various contents. Also You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
 
-
     <!--###HELP###-->
-
-
     <string name="help_whatis">What is PRIVACY FRIENDLY QR Scanner?</string>
 
     <string name="help_usability">The scanning does not work, what can I do?</string>
@@ -198,8 +194,8 @@
     <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
     <string name="help_permission">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_permission_answer">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
-    <!-- Strings related to SettingsActivity -->
 
+    <!--###Strings related to SettingsActivity###-->
     <!-- Example General settings -->
     <string name="pref_title_enable_history">Enable History</string>
     <string name="pref_description_enable_history">Previous scans are logged for you to show them again</string>

@@ -31,6 +31,6 @@
         <item>@color/dot_dark_screen</item>
         <item>@color/dot_dark_screen</item>
     </array>
-    
+
     <drawable name="blue_color">#0274B2</drawable>
 </resources>

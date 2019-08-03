@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.ResultActivity">
+    tools:context="com.secuso.privacyfriendlycodescanner.qrscanner.ResultActivity">
 
     <FrameLayout
         android:id="@+id/activity_result_frame_layout"

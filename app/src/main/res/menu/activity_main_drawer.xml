@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:id="@+id/nav_group_main"
+    <group
+        android:id="@+id/nav_group_main"
         android:checkableBehavior="all">
-        
+
         <item
             android:id="@+id/nav_scan"
             android:icon="@drawable/qqr"
@@ -16,7 +17,8 @@
             android:title="@string/qr_generator" />
     </group>
 
-    <group android:id="@+id/nav_group_add"
+    <group
+        android:id="@+id/nav_group_add"
         android:checkableBehavior="all">
         <item
             android:id="@+id/nav_history"

@@ -16,6 +16,7 @@
  */
 
 package com.secuso.privacyfriendlycodescanner.qrscanner;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -72,34 +73,32 @@ public class TutorialActivity extends AppCompatActivity {
         }
 
         // Making notification bar transparent
-        if(Build.VERSION.SDK_INT >=21)
-
-        {
+        if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
 
         setContentView(R.layout.activity_tutorial);
 
-        viewPager =(ViewPager)
+        viewPager = (ViewPager)
 
                 findViewById(R.id.viewPager);
 
-        dotsLayout =(LinearLayout)
+        dotsLayout = (LinearLayout)
 
                 findViewById(R.id.dotsLayout);
 
-        btnSkip =(Button)
+        btnSkip = (Button)
 
                 findViewById(R.id.btSkip);
 
-        btnNext =(Button)
+        btnNext = (Button)
 
                 findViewById(R.id.btNext);
 
 
         // layouts of all welcome sliders
         // add few more layouts if you want
-        layouts =new int[]
+        layouts = new int[]
 
                 {
                         R.layout.tutorial_slide1,
@@ -114,26 +113,22 @@ public class TutorialActivity extends AppCompatActivity {
         // making notification bar transparent
         changeStatusBarColor();
 
-        myViewPagerAdapter =new
+        myViewPagerAdapter = new
 
                 MyViewPagerAdapter();
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
-        btnSkip.setOnClickListener(new View.OnClickListener()
-
-        {
+        btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v){
+            public void onClick(View v) {
                 launchHomeScreen();
             }
         });
 
-        btnNext.setOnClickListener(new View.OnClickListener()
-
-        {
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick (View v){
+            public void onClick(View v) {
                 // checking for last page
                 // if last page home screen will be launched
                 int current = getItem(+1);
