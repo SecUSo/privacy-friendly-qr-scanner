@@ -5,13 +5,13 @@
     <string name="qr_generator">QR Generator</string>
 
     <string name="slide1_heading">Herzlich willkommen!</string>
-    <string name="slide1_text">Willkommen beim Datenschutz QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollen.</string>
+    <string name="slide1_text">Willkommen beim Privacy Friendly QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollen.</string>
     <string name="slide2_heading">Was gibt es?</string>
-    <string name="text_slide2">Sie scannen entweder QR-Code mit QR-Scanner oder QR-Code generieren mit QR-Generator.</string>
+    <string name="text_slide2">Sie können entweder einen QR-Code mit dem &quot;QR-Scanner&quot; scannen oder einen QR-Code mit der Funktion &quot;QR-Generator&quot; generieren.</string>
     <string name="slide3_heading">Mehr Funktionen</string>
-    <string name="text_slide3">Der QR-Code, den Sie gescannt haben, kann im Verlauf gespeichert werden. Außerdem können Sie es teilen oder kopieren.</string>
+    <string name="text_slide3">Der QR-Code, den Sie gescannt haben, kann im Verlauf gespeichert werden. Außerdem können Sie ihn teilen oder kopieren.</string>
     <string name="wecome">Herzlich willkommen!</string>
-    <string name="skip">Überspringent</string>
+    <string name="skip">Überspringen</string>
 
     <string name="help_">Hilfe</string>
 
@@ -23,7 +23,7 @@
 
     <string name="about_author">Autoren: </string>
     <string name="about_author_string">%s und Mitwirkende.</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von der Technischen Universität Darmstadt. Quelltext lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der &quot;Privacy Friendly Apps&quot; entwickelt von der Technischen Universität Darmstadt. Quelltext lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
 
     <string name="app_name">QR Scanner</string>
@@ -38,7 +38,7 @@
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informationen</a>, wie Sie den Link überprüfen, werden von der TU Darmstadt bereitgestellt. Wenn Sie die dem Link nicht vertrauen, klicken Sie auf nicht vertrauen &amp; nicht speichern.</string>
     <string name="delete_history">Möchten Sie den Verlauf wirklich löschen?</string>
     <string name="cancel">Abbrechen</string>
-    <string name="ok">Okay</string>
+    <string name="ok">Ok</string>
     <string name="element_removed">Element gelöscht.</string>
     <string name="conform_url">Bitte bestätigen Sie, dass Sie den Link geprüft haben.</string>
     <string name="wifi_explanation">Aufgrund der nötigen Rechte, ermöglicht diese Version der App keine direkte Verbindung mit einem WIFI Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
@@ -66,7 +66,7 @@
     <string name="proceed">Fortfahren</string>
     <string name="back">Zurück</string>
 
-    <string name="choose_action_url">Fortfahrenn</string>
+    <string name="choose_action_url">Fortfahren</string>
     <string name="abort_action_url">Abbrechen</string>
 
     <string-array name="text_array">
@@ -74,7 +74,7 @@
         <item>Nichts tun</item>
     </string-array>
     <string-array name="email_array">
-        <item>Email senden</item>
+        <item>E-Mail senden</item>
         <item>Zu Kontakten hinzufügen</item>
     </string-array>
     <string-array name="vcard_array">
@@ -104,7 +104,7 @@
         <item>Zu Kontakten hinzufügen</item>
     </string-array>
     <string-array name="generator_array">
-        <item>E-mail</item>
+        <item>E-Mail</item>
         <item>URL</item>
         <item>Telefonnummer</item>
         <item>SMS</item>
@@ -140,7 +140,7 @@
     <string name="title_activity_result_text">Text gefunden</string>
     <string name="title_activity_result_sms">SMS gefunden</string>
     <string name="title_activity_result_email">E-Mail-Adresse gefunden</string>
-    <string name="title_activity_result_send_email">Email gefunden</string>
+    <string name="title_activity_result_send_email">E-Mail gefunden</string>
     <string name="title_activity_result_tel">Telefonnummer gefunden</string>
     <string name="title_activity_result_product">Produkt gefunden</string>
     <string name="title_activity_result_contact">Kontakt gefunden</string>
@@ -153,7 +153,7 @@
 
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">Die Privacy Friendly QR Code Scanner App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, wozu sie nur minimale Berechtigungen benötigt und zur Unterstützung bei der Erkennung von Links auf schadhafte Seiten dient.</string>
-    <string name="welcome">Wilkommen</string>
+    <string name="welcome">Willkommen</string>
     <string name="viewhelp">Hilfe zeigen</string>
 
     <string name="help_overview_heading">Übersicht</string>
@@ -196,15 +196,15 @@
     <string name="phone_number">Telefonnummer</string>
     <string name="sms_text">SMS-Text</string>
     <string name="mms">MMS</string>
-    <string name="network_name">Netzwrkname</string>
+    <string name="network_name">Netzwerkname</string>
     <string name="password">Passwort</string>
     <string name="company">Firma</string>
     <string name="lastname">Nachname</string>
     <string name="title">Title</string>
     <string name="city">Stadt</string>
     <string name="street_number">Hausnummer</string>
-    <string name="postal_address">Plz</string>
-    <string name="e_mail_address">E-mail adresse</string>
+    <string name="postal_address">Postleitzahl</string>
+    <string name="e_mail_address">E-Mail-Adresse</string>
     <string name="firstname">Vorname</string>
     <string name="street_name_and_number">Straße und Nummer</string>
     <string name="delete_content">Möchten Sie den Inhalt wirklich löschen?</string>
@@ -219,13 +219,13 @@
     <string name="pref_description_enable_history">Vorherige Scans werden protokolliert, damit Sie sie erneut anzeigen können</string>
     <string name="selected">ausgewählt</string>
     <string name="code_stored">QR-Code in der Galerie gespeichert.</string>
-    <string name="OfeaturesAnswer">Sie können gescannten QR-Code mit anderen Anwendungen kopieren / teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
+    <string name="OfeaturesAnswer">Sie können den gescannten QR-Code mit anderen Anwendungen öffnen oder kopieren. Außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
     <string name="Content_copied">Inhalt kopiert</string>
     <string name="Share_via">Teilen per</string>
     <string name="select_all">Wählen Sie Alle</string>
     <string name="selected_1">Ausgewählt</string>
     <string name="D_all">Alle Einträge löschen</string>
-    <string name="History">Histor</string>
+    <string name="History">Historie</string>
     <string name="QRGenerator">QR Generator</string>
     <string name="QRScanner">QR Scanner</string>
     <string name="activity_scanner_permission_needed_explanation">Die App benötigt die Camera-Berechtigung um QR-Codes scannen zu dürfen.</string>
