@@ -15,4 +15,9 @@
             android:entryValues="@array/pref_search_engine_values"
             android:defaultValue="DUCK_DUCK_GO" />
 
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="beep"
+            android:title="@string/pref_title_beep" />
+
 </PreferenceScreen>

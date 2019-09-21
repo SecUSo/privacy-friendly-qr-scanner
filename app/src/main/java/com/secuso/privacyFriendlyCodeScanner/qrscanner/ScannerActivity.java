@@ -3,9 +3,11 @@ package com.secuso.privacyfriendlycodescanner.qrscanner;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -91,9 +93,8 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
         beepManager = new BeepManager(this);
 
-        if (!getIntent().getBooleanExtra(Intents.Scan.BEEP_ENABLED, true)) {
-            beepManager.setBeepEnabled(false);
-        }
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        beepManager.setBeepEnabled(prefs.getBoolean("beep", false));
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             initScanWithPermissionCheck();
