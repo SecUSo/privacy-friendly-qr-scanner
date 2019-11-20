@@ -1,0 +1,54 @@
+QR Codes gewinnen mehr und mehr an Bedeutung. In einigen Bereichen haben sie sogar schon den klassischen Barcode ersetzt. Ein QR Code ermöglicht es bis zu 7000 Zeichen speichern und ist deswegen für komplexere Inhalte, wie zum Beispiel VCards geeignet. Auf fast jedem Werbeplakat findet man heutzutage QR Codes, die den Nutzer anregen den Code mit seinem Smartphone zu scannen. Es ist also nicht mehr notwendig handschriftliche Notizen zu machen, es reicht aus nur den QR Code zu scannen. Dementsprechend gibt es viele QR Code Scanner Apps im Google Play Store.
+
+
+
+
+Unsere Privacy Friendly QR Code Scanner App unterscheidet sich hiervon hinsichtlich zweier Aspekte:
+
+
+
+1. Die Privacy Friendly QR Code Scanner App benötigt nur ein Minimum an Berechtigungen, namentlich:
+
+
+
+• In Kategorie "Kamera/Mikrophon": Kamera
+Die Kamera wird benutzt um den QR Code zu scannen.
+
+• In Kategorie "Sonstiges": Vibration und Kameralicht
+Der Vibrationsalarm wird genutzt um Rückmeldung zu geben, ob das Scannen erfolgreich war. Das Kameralicht wird genutzt um die Kamera bei schlechten Lichtverhältnissen zu unterstützen.
+
+
+
+Die meisten QR Code Scanner Apps, die im Google Play Store erhältlich sind, benötigen überdies weitere Genehmigungen, zum Beispiel: Lesen der Kontaktliste oder des Anrufprotokolls oder Abrufen von Daten aus dem Internet. Die meisten dieser Voraussetzungen sind für die Funktionalität der App nicht notwendig.
+
+
+
+2. Die Privacy Friendly QR Code Scanner App hilft dem Benutzer bösartige Links zu erkennen: QR Codes bieten neue Möglichkeiten für einen Angreifer. QR Codes können schädliche Links wie zum Beispiel Links zu Phishing-Webseiten oder Webseiten, von denen Schadsoftware automatisch heruntergeladen wird, enthalten. Daher ist es wichtig, den Link sorgfältig zu überprüfen bevor man auf die entsprechende Website zugreift. Da es für den Benutzer schwierig ist, schädliche Links zu erkennen, unterstützt die App hierbei den Benutzer, indem die Domain besonders hervorgehoben wird. Um zu vermeiden, dass der Link nicht sorgfältig überprüft wird, stellt die App Informationen über mögliche Betrugsfälle zur Verfügung und die Benutzer müssen bestätigen, dass sie den Link und seine Vertrauenswürdigkeit überprüft haben. Die in der App angezeigte Information ist nicht spezifisch auf die gescannte URL zugeschnitten, da die App keinen Zugriff auf Phishing-Datenbanken oder andere Blacklists besitzt. Entsprechend ist jede URL entsprechend durch Sie als Benutzer der App zu überprüfen, bevor Sie die Webseite besuchen.
+
+
+
+Die Privatsphären freundliche QR Scanner App unterstützt, vergleichbar zu anderen verfügbaren QR Code Scanner Apps, die folgenden Formate:
+
+• Text
+
+• Produktcodes
+
+• Telefonnummer
+
+• Sms
+
+• Email-Adresse
+
+• Email
+
+• Kontaktinformation (z.B. vCards)
+
+• URL
+
+• WiFi (eingeschränkt: kann nicht automatisch mit dem Netzwerk verbinden)
+
+
+
+Barcodes werden auch unterstützt.
+
+Die App gehört zur Gruppe der Privacy Friendly Apps, die von der Forschungsgruppe SECUSO der Technischen Universität Darmstadt entwickelt werden. Mehr Informationen unter: https://secuso.org/pfa
