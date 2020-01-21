@@ -27,17 +27,11 @@ public class MarketEnterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
-
-
                 result = qrMarket.getText().toString();
-                Intent i = new Intent(MarketEnterActivity.this, MarketGnrActivity.class);
+                Intent i = new Intent(MarketEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.Market);
                 startActivity(i);
-
-
-
             }
 
         });

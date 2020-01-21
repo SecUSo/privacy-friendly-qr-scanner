@@ -34,19 +34,12 @@ public class MmsEnterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
-
-
                 result = qrMms.getText().toString()+":"+qrText.getText().toString();
-                Intent i = new Intent(MmsEnterActivity.this, MmsGnrActivity.class);
+                Intent i = new Intent(MmsEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.MMS);
                 startActivity(i);
-
-
-
             }
-
         });
     }
 }

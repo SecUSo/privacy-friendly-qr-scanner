@@ -33,20 +33,12 @@ public class GeoLocationEnterActivity extends AppCompatActivity {
             String result;
             @Override
             public void onClick(View v) {
-
-
-
-
                 result = qrLatitude.getText().toString()+","+qrLongitude.getText().toString();
 
-
-                Intent i = new Intent(GeoLocationEnterActivity.this, GeoLocatioGnrActivity.class);
+                Intent i = new Intent(GeoLocationEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.LOCATION);
                 startActivity(i);
-
-
-
-
             }
 
         });

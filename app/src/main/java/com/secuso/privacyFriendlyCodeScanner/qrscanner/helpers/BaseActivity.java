@@ -21,7 +21,7 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.secuso.privacyfriendlycodescanner.qrscanner.AboutActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.HelpActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.HistoryActivity;
-import com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating.QrGenerator;
+import com.secuso.privacyfriendlycodescanner.qrscanner.qrgenerating.QrGeneratorOverviewActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ScannerActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.SettingsActivity;
@@ -156,7 +156,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnNaviga
                 integrator.initiateScan();
                 break;
             case R.id.nav_generate:
-                intent = new Intent(this, QrGenerator.class);
+                intent = new Intent(this, QrGeneratorOverviewActivity.class);
                 createBackStack(intent);
                 break;
             case R.id.nav_history:

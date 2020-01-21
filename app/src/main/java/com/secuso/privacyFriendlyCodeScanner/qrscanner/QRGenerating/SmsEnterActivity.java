@@ -32,20 +32,12 @@ public class SmsEnterActivity extends AppCompatActivity {
             String result;
             @Override
             public void onClick(View v) {
-
-
-
-
-
                 result = qrSms.getText().toString()+":"+qrText.getText().toString();
-                Intent i = new Intent(SmsEnterActivity.this, SmsGnrActivity.class);
+                Intent i = new Intent(SmsEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.SMS);
                 startActivity(i);
-
-
-
             }
-
         });
     }
 }

@@ -12,6 +12,8 @@ public final class Contents {
 
     public static final class Type {
 
+        public static final String UNDEFINED = "UNDEFINED";
+
         // Plain text. Use Intent.putExtra(DATA, string). This can be used for URLs too, but string
         // must include "http://" or "https://".
         public static final String TEXT = "TEXT_TYPE";

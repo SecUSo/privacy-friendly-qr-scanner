@@ -32,8 +32,9 @@ public class TelEnterActivity extends AppCompatActivity {
 
 
                 result = qrResult.getText().toString();
-                Intent i = new Intent(TelEnterActivity.this, TelGnrActivity.class);
+                Intent i = new Intent(TelEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.PHONE);
                 startActivity(i);
 
 

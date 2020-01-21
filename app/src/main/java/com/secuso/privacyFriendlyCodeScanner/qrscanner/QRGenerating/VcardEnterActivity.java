@@ -61,15 +61,11 @@ public class VcardEnterActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-
-
-
                 result = "N:"+qrLastname.getText().toString()+"\n"+"FN:"+qrName.getText().toString()+"\n"+"ORG:"+qrCompany.getText().toString()+"\n"+"TITLE:"+qrTitle.getText().toString()+"\n"+"ADR:;;"+qrStreet.getText().toString()+";"+qrCity.getText().toString()+"\n"+qrPostal.getText().toString()+"\n"+"TEL;CELL:"+qrPhone.getText().toString()+"\n"+"EMAIL;WORK;INTERNET:"+qrMail.getText().toString()+"\n"+"END:VCARD";
-                Intent i = new Intent(VcardEnterActivity.this, VcardGnrActivity.class);
+                Intent i = new Intent(VcardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.V_Card);
                 startActivity(i);
-
-
 
             }
 

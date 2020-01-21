@@ -53,25 +53,18 @@ public class BizCardEnterActivity extends AppCompatActivity {
 
         Button generate=(Button) findViewById(R.id.generate);
 
-
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
             @Override
             public void onClick(View v) {
-
-
                 //BIZCARD:N:Sean;X:Owen;T:Software Engineer;C:Google;A:76 9th Avenue, New York, NY 10011;B:+12125551212;E:srowen@google.com;;
 
-
                 result = qrName.getText().toString()+";T:"+qrTitle.getText().toString()+";C:"+qrCompany.getText().toString()+";A:"+qrStreet.getText().toString()+","+qrCity.getText().toString()+","+qrPostal.getText().toString()+";B:"+qrPhone.getText().toString()+";E:"+qrMail.getText().toString()+";;";
-                Intent i = new Intent(BizCardEnterActivity.this, BizCardGnrActivity.class);
+                Intent i = new Intent(BizCardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.Biz_Card);
                 startActivity(i);
-
-
-
             }
-
         });
     }
 }

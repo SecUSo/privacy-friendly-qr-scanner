@@ -33,8 +33,9 @@ public class MailEnterActivity extends AppCompatActivity {
 
 
                     result = qrResult.getText().toString();
-                    Intent i = new Intent(MailEnterActivity.this, MailGnrActivity.class);
+                    Intent i = new Intent(MailEnterActivity.this, QrGeneratorDisplayActivity.class);
                     i.putExtra("gn", result);
+                    i.putExtra("type", Contents.Type.EMAIL);
                     startActivity(i);
 
 

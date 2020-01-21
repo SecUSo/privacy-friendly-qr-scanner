@@ -24,14 +24,13 @@ public class WifiEnterActivity extends AppCompatActivity {
 
 
         final Spinner  spinner = (Spinner)findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(WifiEnterActivity.this,
-                android.R.layout.simple_spinner_item,auth);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(WifiEnterActivity.this, android.R.layout.simple_spinner_item,auth);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        final EditText qrNetwork=(EditText) findViewById(R.id.editNetwork);
-        final EditText qrPassword=(EditText) findViewById(R.id.editPassword);
-        Button generate=(Button) findViewById(R.id.generate);
+        final EditText qrNetwork = (EditText) findViewById(R.id.editNetwork);
+        final EditText qrPassword = (EditText) findViewById(R.id.editPassword);
+        Button generate = (Button) findViewById(R.id.generate);
 
         int maxLength = 25;
         qrNetwork.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
@@ -45,27 +44,19 @@ public class WifiEnterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                //  WIFI:T:WPA;S:mynetwork;P:mypass;;
+                if(spinner.getSelectedItemPosition()==0) {
+                    result = "WEP;S:" + qrNetwork.getText().toString() + ";P:" + qrPassword.getText().toString() + ";;";
+                }
+                else if (spinner.getSelectedItemPosition()==1) {
+                    result = "WPA;S:" + qrNetwork.getText().toString() + ";P:" + qrPassword.getText().toString() + ";;";
+                }
 
-                    //  WIFI:T:WPA;S:mynetwork;P:mypass;;
-
-              if(spinner.getSelectedItemPosition()==0) {
-                  result = "WEP;S:" + qrNetwork.getText().toString() + ";P:" + qrPassword.getText().toString() + ";;";
-                  Intent i = new Intent(WifiEnterActivity.this, WifiGnrActivity.class);
-                  i.putExtra("gn", result);
-                  startActivity(i);
-              }
-              else if (spinner.getSelectedItemPosition()==1)
-              {
-                  result = "WPA;S:" + qrNetwork.getText().toString() + ";P:" + qrPassword.getText().toString() + ";;";
-                  Intent i = new Intent(WifiEnterActivity.this, WifiGnrActivity.class);
-                  i.putExtra("gn", result);
-                  startActivity(i);
-
-              }
-
-
+                Intent i = new Intent(WifiEnterActivity.this, QrGeneratorDisplayActivity.class);
+                i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.WIFI);
+                startActivity(i);
             }
-
         });
     }
 }

@@ -83,8 +83,7 @@ public  class QRCodeEncoder {
                 displayContents = data;
                 title = "E-Mail";
             }
-        }
-            else if (type.equals(Contents.Type.WEB_URL)) {
+        } else if (type.equals(Contents.Type.WEB_URL)) {
                 data = trim(data);
                 if (data != null &&!data.startsWith("http://") && !data.startsWith("https://") )
                     contents = "http://" + data;
@@ -99,8 +98,7 @@ public  class QRCodeEncoder {
                 title = "Phone";
             }
 
-        }
-        else if (type.equals(Contents.Type.WIFI)) {
+        } else if (type.equals(Contents.Type.WIFI)) {
             data = trim(data);
             if (data != null) {
                 contents = "WIFI:T:" + data;
@@ -108,8 +106,7 @@ public  class QRCodeEncoder {
                 title = "WIFI";
             }
 
-        }
-        else if (type.equals(Contents.Type.Me_Card)) {
+        } else if (type.equals(Contents.Type.Me_Card)) {
             data = trim(data);
             if (data != null) {
                 contents = "MECARD:N:" + data;
@@ -117,16 +114,14 @@ public  class QRCodeEncoder {
                 title = "MeCard";
             }
 
-        }
-        else if (type.equals(Contents.Type.Biz_Card)) {
+        } else if (type.equals(Contents.Type.Biz_Card)) {
             data = trim(data);
             if (data != null) {
                 contents = "BIZCARD:N:" + data;
                 displayContents = data;
                 title = "BizCard";
             }
-        }
-            else if (type.equals(Contents.Type.Market)) {
+        } else if (type.equals(Contents.Type.Market)) {
                 data = trim(data);
                 if (data != null) {
                     contents = "market://details?id=" + data;
@@ -134,8 +129,7 @@ public  class QRCodeEncoder {
                     title = "Market";
                 }
 
-        }
-        else if (type.equals(Contents.Type.V_Card)) {
+        } else if (type.equals(Contents.Type.V_Card)) {
             data = trim(data);
             if (data != null) {
                 contents = "BEGIN:VCARD"+"\n"+"VERSION:3.0"+"\n"+ data;
@@ -143,8 +137,7 @@ public  class QRCodeEncoder {
                 title = "VCard";
             }
 
-        }
-        else if (type.equals(Contents.Type.SMS)) {
+        } else if (type.equals(Contents.Type.SMS)) {
             data = trim(data);
             if (data != null) {
                 contents = "SMSTO:" + data;
@@ -152,8 +145,7 @@ public  class QRCodeEncoder {
                 title = "SMS";
             }
 
-        }
-        else if (type.equals(Contents.Type.MMS)) {
+        } else if (type.equals(Contents.Type.MMS)) {
             data = trim(data);
             if (data != null) {
                 contents = "MMSTO:" + data;

@@ -52,18 +52,12 @@ public class MeCardEnterActivity extends AppCompatActivity {
             String result;
             @Override
             public void onClick(View v) {
-
-
                 //MECARD:N:Owen,Sean;ADR:76 9th Avenue, 4th Floor, New York, NY 10011;TEL:12125551212;EMAIL:srowen@example.com;;
-
-
                 result = qrName.getText().toString()+";ADR:"+qrStreet.getText().toString()+","+qrCity.getText().toString()+","+qrPostal.getText().toString()+";TEL:"+qrPhone.getText().toString()+";EMAIL:"+qrMail.getText().toString()+";;";
-                Intent i = new Intent(MeCardEnterActivity.this, MeCardGnrActivity.class);
+                Intent i = new Intent(MeCardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.Me_Card);
                 startActivity(i);
-
-
-
             }
 
         });

@@ -28,14 +28,11 @@ public class UrlEnterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 result = qrResult.getText().toString();
-                Intent i = new Intent(UrlEnterActivity.this, UrlGnrActivity.class);
+                Intent i = new Intent(UrlEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
+                i.putExtra("type", Contents.Type.WEB_URL);
                 startActivity(i);
-
-
-
             }
-
         });
 
 
