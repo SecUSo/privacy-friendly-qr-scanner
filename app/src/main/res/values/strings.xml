@@ -265,6 +265,8 @@
     <string name="pref_search_engine_uri_google" translatable="false">
         "https://www.google.com/search?q=%s"
     </string>
+    <string name="pref_enable_beep_on_scan_title">Beep on scan</string>
+    <string name="pref_enable_beep_on_scan_summary">Play a confirmation tone when scanning</string>
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>

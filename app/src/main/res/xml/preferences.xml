@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="true"
             android:key="bool_history"
             android:summary="@string/pref_description_enable_history"
@@ -14,5 +14,12 @@
             android:entries="@array/pref_search_engine_entries"
             android:entryValues="@array/pref_search_engine_values"
             android:defaultValue="DUCK_DUCK_GO" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_enable_beep_on_scan"
+            android:summary="@string/pref_enable_beep_on_scan_summary"
+            android:title="@string/pref_enable_beep_on_scan_title" />
+
 
 </PreferenceScreen>
