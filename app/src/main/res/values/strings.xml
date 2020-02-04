@@ -59,7 +59,6 @@
     <string name="urlExplanation">QR-Codes can contain links, that lead to a faked website, which can compromise your personal data (phishing website) or transfer malware (e.g. viruses) to your device.\n\nAs a consequence you should <b>check</b> if the following link is the one you expected:</string>
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Information</a> how to check links are provided by the colleagues of TU Darmstadt. If you do not trust the link, click do not trust &amp; do not save.</string>
     <string name="delete_history">Do you want to delete the history?</string>
-    <string name="cancel">Cancel</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element removed.</string>
     <string name="conform_url">Please confirm, that you checked the link.</string>
@@ -267,6 +266,12 @@
     </string>
     <string name="pref_enable_beep_on_scan_title">Beep on scan</string>
     <string name="pref_enable_beep_on_scan_summary">Play a confirmation tone when scanning</string>
+    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
+    <string name="delete">delete</string>
+    <string name="dialog_history_delete_message">Do you really want to delete this entry?</string>
+    <string name="dialog_history_delete_title">Delete Entry</string>
+    <string name="pref_save_real_image_to_history_title">Save real code</string>
+    <string name="pref_save_real_image_to_history_summary">Saves a real image of the code instead of a recreation</string>
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>

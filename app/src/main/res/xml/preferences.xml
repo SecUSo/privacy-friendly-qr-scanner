@@ -7,6 +7,12 @@
             android:summary="@string/pref_description_enable_history"
             android:title="@string/pref_title_enable_history" />
 
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_save_real_image_to_history"
+            android:summary="@string/pref_save_real_image_to_history_summary"
+            android:title="@string/pref_save_real_image_to_history_title"/>
+
         <ListPreference
             android:key="pref_search_engine"
             android:title="@string/pref_search_engine_title"
@@ -20,6 +26,5 @@
             android:key="pref_enable_beep_on_scan"
             android:summary="@string/pref_enable_beep_on_scan_summary"
             android:title="@string/pref_enable_beep_on_scan_title" />
-
 
 </PreferenceScreen>

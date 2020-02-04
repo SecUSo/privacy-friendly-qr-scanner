@@ -13,6 +13,7 @@
     <color name="yellow">#f6d126</color>
     <color name="red">#B71C1C</color>
     <color name="green">#388E3C</color>
+    <color name="lightgrey">#ffd1d1d1</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen">#026499</color>

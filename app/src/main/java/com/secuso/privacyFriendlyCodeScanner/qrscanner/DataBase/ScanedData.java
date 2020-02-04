@@ -1,6 +1,9 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.database;
 
+/*
 
+ */
+@Deprecated
 public class ScanedData {
 
     private int _id;

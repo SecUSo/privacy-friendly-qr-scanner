@@ -37,7 +37,6 @@
     <string name="urlExplanation">QR-Codes können Links enthalten, die zu einer Webseite führen, auf der Ihre Daten gefährdet sind (z.B. Phishing Webseiten) oder über die Schadsoftware (z.B. Viren) auf Ihr Gerät geladen wird.\n\n<b>Überprüfen</b> Sie daher, ob folgender Link der ist, den Sie erwartet haben: </string>
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informationen</a>, wie Sie den Link überprüfen, werden von der TU Darmstadt bereitgestellt. Wenn Sie die dem Link nicht vertrauen, klicken Sie auf nicht vertrauen &amp; nicht speichern.</string>
     <string name="delete_history">Möchten Sie den Verlauf wirklich löschen?</string>
-    <string name="cancel">Abbrechen</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element gelöscht.</string>
     <string name="conform_url">Bitte bestätigen Sie, dass Sie den Link geprüft haben.</string>
@@ -249,5 +248,10 @@
     <string name="pref_search_engine_title">Standardsuchmaschine</string>
     <string name="pref_enable_beep_on_scan_title">Bestätigungston</string>
     <string name="pref_enable_beep_on_scan_summary">Beim Scannen einen Ton abspielen</string>
+    <string name="delete">Löschen</string>
+    <string name="dialog_history_delete_message">Möchten Sie diesen Eintrag wirklich löschen?</string>
+    <string name="dialog_history_delete_title">Eintrag löschen</string>
+    <string name="pref_save_real_image_to_history_summary">Speichere ein Bild des codes statt einer Nachbildung</string>
+    <string name="pref_save_real_image_to_history_title">Speichere echten Code</string>
 
 </resources>
