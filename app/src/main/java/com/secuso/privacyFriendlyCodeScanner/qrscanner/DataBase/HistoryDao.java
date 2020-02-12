@@ -21,10 +21,10 @@ public interface HistoryDao {
     @Delete
     void delete(HistoryItem entry);
 
-    @Query("SELECT * FROM Histories")
+    @Query("SELECT * FROM Histories ORDER BY _id DESC, timestamp DESC")
     List<HistoryItem> getAll();
 
-    @Query("SELECT * FROM Histories")
+    @Query("SELECT * FROM Histories ORDER BY _id DESC, timestamp DESC")
     LiveData<List<HistoryItem>> getAllLiveData();
 
     @Insert

@@ -28,11 +28,11 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ContactResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.GeoResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ProductResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.SMSResultFragment;
-import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.TelResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.TextResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.URLResultFragment;
@@ -62,7 +62,7 @@ public class ResultActivity extends AppCompatActivity {
         context.startActivity(resultIntent);
     }
 
-    private SharedPreferences mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    private SharedPreferences mPreferences;
 
     private BarcodeResult currentBarcodeResult = null;
     private ResultFragment currentResultFragment = null;
@@ -74,6 +74,8 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         boolean hasHistoryItem = getIntent().getBooleanExtra(HISTORY_DATA, false);
 

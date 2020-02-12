@@ -14,6 +14,8 @@ import android.support.annotation.NonNull;
 import com.google.zxing.BarcodeFormat;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 
+import java.util.GregorianCalendar;
+
 /**
  * This is the room database for this app.
  *
@@ -70,6 +72,7 @@ public abstract class AppDatabase extends RoomDatabase {
                             cv.put("_id", item.get_id());
                             cv.put("text", item.getText());
                             cv.put("image", Converters.encodeImage(item.getImage()));
+                            cv.put("timestamp", GregorianCalendar.getInstance().getTimeInMillis());
                             database.update("Histories", 0, cv, "_id = ?", new String[]{Integer.toString(item.get_id())});
                         }
                     }
