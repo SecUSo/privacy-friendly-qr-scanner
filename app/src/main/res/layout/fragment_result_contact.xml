@@ -3,94 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView6"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/btnCancel"
-        android:fillViewport="true">
-
-        <LinearLayout
-            android:id="@+id/linearLayoutContact"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="16dp" >
-
-            <TextView
-                android:id="@+id/textLink"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/description_contact"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/result_text_contact"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/result_text_lastname"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/result_text_Email"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/result_text_Phone"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/result_text_Address"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/result_text_Company"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="20sp" />
-            <TextView
-                android:id="@+id/result_text_Title"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                android:text="TextView"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-    </ScrollView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_result_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </RelativeLayout>

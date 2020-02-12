@@ -11,8 +11,7 @@ import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
-import com.secuso.privacyfriendlycodescanner.qrscanner.databinding.ItemQrCodeHistoryBinding;
-import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
+import com.secuso.privacyfriendlycodescanner.qrscanner.databinding.ItemHistoryCodeBinding;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.HistoryActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.HistoryItemViewModel;
 
@@ -45,9 +44,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
     @NonNull
     @Override
     public HistoryItemViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        ItemQrCodeHistoryBinding binding = DataBindingUtil.inflate(
+        ItemHistoryCodeBinding binding = DataBindingUtil.inflate(
                 LayoutInflater.from(viewGroup.getContext()),
-                R.layout.item_qr_code_history,
+                R.layout.item_history_code,
                 viewGroup,
                 false
         );
@@ -56,7 +55,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
 
     @Override
     public void onBindViewHolder(@NonNull HistoryItemViewHolder historyItemViewHolder, int i) {
-        ItemQrCodeHistoryBinding binding = historyItemViewHolder.binding;
+        ItemHistoryCodeBinding binding = historyItemViewHolder.binding;
         HistoryItemViewModel viewModel = new HistoryItemViewModel(context, historyEntries.get(i));
         binding.setViewModel(viewModel);
         binding.itemView.setOnClickListener(viewModel.onClickItem());
@@ -81,9 +80,9 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
     }
 
     public static class HistoryItemViewHolder extends RecyclerView.ViewHolder {
-        ItemQrCodeHistoryBinding binding;
+        ItemHistoryCodeBinding binding;
 
-        public HistoryItemViewHolder(@NonNull ItemQrCodeHistoryBinding binding) {
+        public HistoryItemViewHolder(@NonNull ItemHistoryCodeBinding binding) {
             super(binding.itemView);
             this.binding = binding;
         }
