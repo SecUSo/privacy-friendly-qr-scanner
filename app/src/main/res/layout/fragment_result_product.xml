@@ -1,45 +1,32 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#FFFFFF"
-    android:orientation="vertical">
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <ScrollView
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/fragment_result_product_label"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView8"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/btnProceed"
-        android:fillViewport="true">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/fragment_result_product_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp" >
 
-            <TextView
-                android:id="@+id/textLink"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/description_product"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textSize="15sp" />
+    <TextView
+        android:id="@+id/fragment_result_product_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/fragment_result_product_label"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/result_field_product"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignWithParentIfMissing="true"
-                android:layout_centerInParent="false"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="Example application"
-                android:textSize="20sp"
-                android:textIsSelectable="true" />
-
-        </LinearLayout>
-    </ScrollView>
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

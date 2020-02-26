@@ -5,17 +5,18 @@
     android:orientation="vertical">
 
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
         android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp" >
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/textLink"
@@ -29,15 +30,15 @@
                 android:id="@+id/result_field_text"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
                 android:layout_alignWithParentIfMissing="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
                 android:layout_centerInParent="false"
                 android:layout_marginTop="20dp"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Example application"
-                android:textSize="20sp"
-                android:textIsSelectable="true" />
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>

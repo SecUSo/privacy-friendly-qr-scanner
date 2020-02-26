@@ -1,0 +1,1 @@
+Privatsphäre-freundlicher QR-Scanner mit minimalen Berechtigungen

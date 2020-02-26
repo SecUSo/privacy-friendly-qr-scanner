@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
  * Class structure taken from tutorial at http://www.androidhive.info/2016/05/android-build-intro-slider-app/
  */
 public class PrefManager {
+    public static final String PREF_SAVE_REAL_IMAGE_TO_HISTORY = "pref_save_real_image_to_history";
+
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
 

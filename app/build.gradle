@@ -6,9 +6,23 @@ android {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 13
-        versionName "2.2"
+        versionCode 15
+        versionName "3.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":"$projectDir/schemas".toString()]
+            }
+        }
+
+        sourceSets {
+            androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+        }
+
+        dataBinding {
+            enabled true
+        }
     }
     buildTypes {
         release {
@@ -18,6 +32,10 @@ android {
     }
     lintOptions {
         abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 }
 
@@ -31,6 +49,15 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation('com.journeyapps:zxing-android-embedded:3.6.0') { transitive = false }
+    implementation('com.journeyapps:zxing-android-embedded:4.0.2') { transitive = false }
     implementation 'com.google.zxing:core:3.3.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+    androidTestImplementation 'android.arch.persistence.room:testing:1.1.1'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
 }

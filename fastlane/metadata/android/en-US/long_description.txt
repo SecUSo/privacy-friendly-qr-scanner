@@ -1,0 +1,61 @@
+QR Codes become more and more important. In some areas they have even replaced the traditional barcode. A QR Code is able to store up to seven thousand characters and therefore is qualified for more complex content, e.g. vCards. Hence nowadays QR Codes can nowadays be found on nearly every advertisement poster and animate the user to scan it with his smartphone. Thus, it is no longer necessary take a hand written note, it is enough to scan the QR Code. Correspondingly, there are already many QR Code scanner apps available in the Google Play Store. It belongs to the Privacy Friendly Apps group developed by the research group SECUSO at Technische Universität Darmstadt. More information can be found an secuso.org/pfa
+
+
+
+
+Our Privacy Friendly QR Scanner App differs with respect to two aspects:
+
+
+
+
+1. The Privacy Friendly QR Scanner App only requires the minimum amount of permissions, namely:
+
+
+
+
+• In category "Camera/Microphone": Camera
+
+    The camera is used to scan QR Code.
+
+
+• In category "Other": Vibrate and Flashlight
+
+    The vibration is used to provide feedback if the scan was successful. The flashlight is used to support the camera in reading the QR Code successfully in bad lighting conditions.
+
+
+
+
+Most of the QR Code scanner apps available in the Google Play Store need several permissions on top of the ones needed: e.g. reading contacts or your call log and retrieving data from the Internet. Most of these requirements are not necessary for the functionality they actually are supposed to provide.
+
+
+
+
+2. The Privacy Friendly QR Scanner App supports its users in detecting malicious links: QR Codes provide new possibilities for an attacker, as QR Codes can contain malicious links, i.e. links to phishing webpages or webpages from which malware would automatically be downloaded. Therefore it is important to carefully check the link before accessing the corresponding webpage. Since it is difficult for the user to spot malicious links, the Privacy friendly QR Scanner App supports the user by highlighting the domain (e.g. in that case for https://www.secuso.org, secuso.org would be highlighted). To avoid not checking the link and in particular the highlighted domain carefully, the app provides information about possible fraud and its users need to confirm that they checked the link and it is trustworthy. Note, the information shown after scanning an URL based QR Code is not customized for every URL. Hence, it should be considered as an advice for the user how to behave in general.
+
+
+
+
+Similar to other available QR Code scanning apps, the Privacy Friendly QR Scanner App supports the following formats:
+
+• text
+
+• product codes
+
+• phone number
+
+• sms
+
+• email address
+
+• email
+
+• contact information (e.g. vCards)
+
+• URL
+
+• WiFi (limited: cannot connect to network automatically)
+
+
+
+
+Bar codes are also supported.
