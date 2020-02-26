@@ -9,6 +9,7 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.ResultMetadataType;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -23,8 +24,14 @@ public class Utils {
             hints = new EnumMap<>(EncodeHintType.class);
         }
 
-        if(!hints.containsKey(ERROR_CORRECTION) && metadata.containsKey(ERROR_CORRECTION_LEVEL)) {
-            hints.put(ERROR_CORRECTION, metadata.get(ERROR_CORRECTION_LEVEL));
+        if(!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL)) {
+            Object ec = metadata.get(ERROR_CORRECTION_LEVEL);
+            if(ec != null) {
+                hints.put(ERROR_CORRECTION, ec);
+            }
+        }
+        if(!hints.containsKey(ERROR_CORRECTION)) {
+            hints.put(ERROR_CORRECTION, ErrorCorrectionLevel.L.name());
         }
 
         return generateCode(data, format, hints);

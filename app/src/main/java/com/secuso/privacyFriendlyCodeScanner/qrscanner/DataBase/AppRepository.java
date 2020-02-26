@@ -47,6 +47,10 @@ public class AppRepository {
         executor.execute(() -> appDatabase.historyDao().insert(entry));
     }
 
+    public void updateHistoryEntry(HistoryItem entry) {
+        executor.execute(() -> appDatabase.historyDao().update(entry));
+    }
+
     public LiveData<List<HistoryItem>> getHistoryEntriesLiveData() {
         return appDatabase.historyDao().getAllLiveData();
     }

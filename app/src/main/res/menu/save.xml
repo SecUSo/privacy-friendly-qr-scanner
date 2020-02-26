@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <item
-        android:id="@+id/copy"
-        android:icon="@drawable/ic_content_copy_white_24dp"
-        android:title="Copy"
+    <item
+        android:id="@+id/save"
+        android:icon="@drawable/ic_save_white_24dp"
+        android:title="Save"
         app:showAsAction="always" />
 
 </menu>

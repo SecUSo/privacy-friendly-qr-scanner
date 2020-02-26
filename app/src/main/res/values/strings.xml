@@ -272,6 +272,13 @@
     <string name="dialog_history_delete_title">Delete Entry</string>
     <string name="pref_save_real_image_to_history_title">Save real code</string>
     <string name="pref_save_real_image_to_history_summary">Saves a real image of the code instead of a recreation</string>
+    <string name="item_result_email_to">To:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="item_result_email_bcc">BCC:</string>
+    <string name="item_result_email_subject">Subject:</string>
+    <string name="item_result_email_body">Body:</string>
+    <string name="activity_result_toast_saved">Saved to history.</string>
+    <string name="fragment_result_product_label">Identifier:</string>
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>

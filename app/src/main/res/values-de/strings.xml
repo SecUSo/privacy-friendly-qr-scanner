@@ -253,5 +253,12 @@
     <string name="dialog_history_delete_title">Eintrag löschen</string>
     <string name="pref_save_real_image_to_history_summary">Speichere ein Bild des codes statt einer Nachbildung</string>
     <string name="pref_save_real_image_to_history_title">Speichere echten Code</string>
+    <string name="activity_result_toast_saved">In Historie abgespeichert.</string>
+    <string name="fragment_result_product_label">Kennung:</string>
+    <string name="item_result_email_bcc">BCC:</string>
+    <string name="item_result_email_body">Nachricht:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="item_result_email_subject">Titel:</string>
+    <string name="item_result_email_to">Empfänger:</string>
 
 </resources>

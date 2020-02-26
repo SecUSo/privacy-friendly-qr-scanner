@@ -1,6 +1,5 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.database;
 
-import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
@@ -31,6 +30,8 @@ public class HistoryItem implements Parcelable {
     private byte[] rawBytes;
     private int numBits;
     private ResultPoint[] resultPoints;
+    private BarcodeFormat format;
+    private long timestamp;
 
     public void setImage(Bitmap image) {
         this.image = image;
@@ -87,9 +88,6 @@ public class HistoryItem implements Parcelable {
     public void setTimestamp(long timestamp) {
         this.timestamp = timestamp;
     }
-
-    private BarcodeFormat format;
-    private long timestamp;
 
     public HistoryItem() {}
 

@@ -11,6 +11,11 @@ import com.google.zxing.client.result.AddressBookParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.resultwrapper.ContactResultWrapper;
 
+/**
+ * Displays contact data.
+ *
+ * @author Christopher Beckmann
+ */
 public class ContactResultAdapter extends RecyclerView.Adapter<ContactResultAdapter.ViewHolder>{
 
     private ContactResultWrapper data;
@@ -44,39 +49,39 @@ public class ContactResultAdapter extends RecyclerView.Adapter<ContactResultAdap
         View v;
         switch(viewType) {
             case TYPE_NAME:
-                v = inflater.inflate(R.layout.item_result_name, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_name, viewGroup, false);
                 return new NameViewHolder(v);
             case TYPE_PHONE_NUMBER:
-                v = inflater.inflate(R.layout.item_result_phone, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_phone, viewGroup, false);
                 return new PhoneViewHolder(v);
             case TYPE_EMAIL:
-                v = inflater.inflate(R.layout.item_result_email, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_email, viewGroup, false);
                 return new EMailViewHolder(v);
             case TYPE_BIRTHDAY:
-                v = inflater.inflate(R.layout.item_result_birthday, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_birthday, viewGroup, false);
                 return new BirthdayViewHolder(v);
             case TYPE_INSTANT_MESSENGER:
-                v = inflater.inflate(R.layout.item_result_messenger, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_messenger, viewGroup, false);
                 return new MessengerViewHolder(v);
             case TYPE_ADDRESS:
-                v = inflater.inflate(R.layout.item_result_address, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_address, viewGroup, false);
                 return new AddressViewHolder(v);
             case TYPE_ORGANISATION:
-                v = inflater.inflate(R.layout.item_result_organization, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_organization, viewGroup, false);
                 return new OrgViewHolder(v);
             case TYPE_TITLE :
-                v = inflater.inflate(R.layout.item_result_title, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_title, viewGroup, false);
                 return new TitleViewHolder(v);
             case TYPE_URL :
-                v = inflater.inflate(R.layout.item_result_url, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_url, viewGroup, false);
                 return new UrlViewHolder(v);
             case TYPE_GEO :
-                v = inflater.inflate(R.layout.item_result_geo, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_geo, viewGroup, false);
                 return new GeoViewHolder(v);
             case TYPE_TEXT:
             case TYPE_NOTE:
             default:
-                v = inflater.inflate(R.layout.item_result_text, viewGroup, false);
+                v = inflater.inflate(R.layout.item_result_contact_text, viewGroup, false);
                 return new TextViewHolder(v);
         }
     }

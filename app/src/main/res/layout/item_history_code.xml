@@ -42,7 +42,6 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
-                    android:layout_margin="4dp"
                     android:contentDescription="@string/activity_history_list_item_qr_image_descriptor"
                     android:src="@drawable/ic_no_image_accent_24dp"/>
 

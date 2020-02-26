@@ -15,6 +15,11 @@ import com.google.zxing.client.result.AddressBookParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.ContactResultAdapter;
 
+/**
+ * Fragment to display the contact data. Most of the work is done in {@link ContactResultAdapter}
+ *
+ * @author Christopher Beckmann
+ */
 public class ContactResultFragment extends ResultFragment {
 
     AddressBookParsedResult result;

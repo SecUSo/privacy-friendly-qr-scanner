@@ -2,7 +2,6 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ProductParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
@@ -31,7 +29,7 @@ public class ProductResultFragment extends ResultFragment {
 
         result = (ProductParsedResult) parsedResult;
 
-        TextView resultText = (TextView) v.findViewById(R.id.result_field_product);
+        TextView resultText = v.findViewById(R.id.fragment_result_product_content);
 
         resultText.setText(result.getProductID());
 
