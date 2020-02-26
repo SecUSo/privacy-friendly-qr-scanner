@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 2.2.1 *(tba)*
+----------------------------
+
+ * \#48 Fix typos and misspellings in German translation
+
 Version 1.6.1 *(2016-12-27)*
 ----------------------------
 
