@@ -1,6 +1,7 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.app.Activity;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -40,6 +41,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.TelRes
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.TextResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.URLResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.WifiResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ResultViewModel;
 
 import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
 
@@ -76,6 +78,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private SharedPreferences mPreferences;
+    private ResultViewModel viewModel;
 
     private BarcodeResult currentBarcodeResult = null;
     private ResultFragment currentResultFragment = null;
@@ -91,6 +94,8 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
 
         mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        viewModel = ViewModelProviders.of(this).get(ResultViewModel.class);
 
         initOrRestoreState(savedInstanceState);
 
@@ -148,6 +153,12 @@ public class ResultActivity extends AppCompatActivity {
             mSavedToHistory = savedInstanceState.getBoolean("mSavedToHistory");
             mParsedResult = ResultParser.parseResult(currentHistoryItem.getResult());
         }
+        viewModel.currentBarcodeResult = currentBarcodeResult;
+        viewModel.currentHistoryItem = currentHistoryItem;
+        viewModel.currentResultFragment = currentResultFragment;
+        viewModel.mParsedResult = mParsedResult;
+        viewModel.mCodeImage = mCodeImage;
+        viewModel.mSavedToHistory = mSavedToHistory;
     }
 
 
