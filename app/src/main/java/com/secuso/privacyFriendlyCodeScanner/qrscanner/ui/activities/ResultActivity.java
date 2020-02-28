@@ -6,13 +6,9 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -23,14 +19,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.google.zxing.BarcodeFormat;
 import com.google.zxing.client.result.ParsedResult;
-import com.google.zxing.client.result.ResultParser;
 import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
-import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
-import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ContactResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.GeoResultFragment;
@@ -42,8 +34,6 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.TextRe
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.URLResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.WifiResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ResultViewModel;
-
-import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
 
 /**
  * This activity displays the results of scan. Either from the history or from a scan directly.<br>
@@ -62,6 +52,10 @@ public class ResultActivity extends AppCompatActivity {
     private static BarcodeResult barcodeResult = null;
     private static HistoryItem historyItem = null;
 
+    private ResultViewModel viewModel;
+
+    private ResultFragment currentResultFragment;
+
     public static void startResultActivity(@NonNull Context context, @NonNull BarcodeResult barcodeResult) {
         ResultActivity.barcodeResult = barcodeResult;
         ResultActivity.historyItem = null;
@@ -77,34 +71,21 @@ public class ResultActivity extends AppCompatActivity {
         context.startActivity(resultIntent);
     }
 
-    private SharedPreferences mPreferences;
-    private ResultViewModel viewModel;
-
-    private BarcodeResult currentBarcodeResult = null;
-    private ResultFragment currentResultFragment = null;
-
-    private HistoryItem currentHistoryItem = null;
-    private ParsedResult mParsedResult = null;
-    private Bitmap mCodeImage = null;
-    private boolean mSavedToHistory = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
         viewModel = ViewModelProviders.of(this).get(ResultViewModel.class);
 
-        initOrRestoreState(savedInstanceState);
+        initStateIfNecessary(savedInstanceState);
 
         ActionBar ab = getSupportActionBar();
         if(ab != null) {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
-        loadFragment(mParsedResult);
+        loadFragment(viewModel.mParsedResult);
         displayGeneralData();
     }
 
@@ -120,45 +101,19 @@ public class ResultActivity extends AppCompatActivity {
      * This method will also update the {@link HistoryItem} in the database with a recreation of the QR Code if the image is missing.
      * @param savedInstanceState is the bundle that is given to the {@link #onCreate(Bundle)} or {@link #onRestoreInstanceState(Bundle)} Methods
      */
-    private void initOrRestoreState(Bundle savedInstanceState) {
+    private void initStateIfNecessary(Bundle savedInstanceState) {
         boolean hasHistoryItem = getIntent().getBooleanExtra(HISTORY_DATA, false);
 
         if(savedInstanceState == null) {
-            if(hasHistoryItem) {
-                currentHistoryItem = historyItem;
-                mParsedResult = ResultParser.parseResult(historyItem.getResult());
-                mCodeImage = historyItem.getImage();
-                if(mCodeImage == null) {
-                    mCodeImage = Utils.generateCode(currentHistoryItem.getText(), BarcodeFormat.QR_CODE, null, null);
-                    currentHistoryItem.setImage(mCodeImage);
-                    currentHistoryItem.setFormat(BarcodeFormat.QR_CODE);
-                    updateHistoryItem(currentHistoryItem);
-                }
-                mSavedToHistory = true;
-
+            if(hasHistoryItem && historyItem != null) {
+                viewModel.initFromHistoryItem(historyItem);
             } else if(barcodeResult != null) {
-                currentBarcodeResult = barcodeResult;
-                mParsedResult = ResultParser.parseResult(currentBarcodeResult.getResult());
-                mCodeImage = currentBarcodeResult.getBitmapWithResultPoints(ContextCompat.getColor(this, R.color.colorAccent));
-
-                createHistoryItem();
+                viewModel.initFromScan(barcodeResult);
             } else {
                 // no data to display -> exit
                 finish();
-                return;
             }
-        } else {
-            currentHistoryItem = savedInstanceState.getParcelable("currentHistoryItem");
-            mCodeImage = savedInstanceState.getParcelable("mCodeImage");
-            mSavedToHistory = savedInstanceState.getBoolean("mSavedToHistory");
-            mParsedResult = ResultParser.parseResult(currentHistoryItem.getResult());
         }
-        viewModel.currentBarcodeResult = currentBarcodeResult;
-        viewModel.currentHistoryItem = currentHistoryItem;
-        viewModel.currentResultFragment = currentResultFragment;
-        viewModel.mParsedResult = mParsedResult;
-        viewModel.mCodeImage = mCodeImage;
-        viewModel.mSavedToHistory = mSavedToHistory;
     }
 
 
@@ -176,7 +131,7 @@ public class ResultActivity extends AppCompatActivity {
         if(menu != null) {
             MenuItem saveMi = menu.findItem(R.id.save);
             if(saveMi != null) {
-                saveMi.setVisible(!mSavedToHistory);
+                saveMi.setVisible(!viewModel.mSavedToHistory);
             }
         }
 
@@ -187,8 +142,8 @@ public class ResultActivity extends AppCompatActivity {
         ImageView qrImageView = findViewById(R.id.activity_result_qr_image);
         TextView qrTypeText = findViewById(R.id.textView);
 
-        Glide.with(this).load(mCodeImage).into(qrImageView);
-        String type = mParsedResult.getType().name();
+        Glide.with(this).load(viewModel.mCodeImage).into(qrImageView);
+        String type = viewModel.mParsedResult.getType().name();
 //        switch(mParsedResult.getType()) {
 //            case ADDRESSBOOK:
 //                type = getString(R.string.activity_result_type_addressbook);
@@ -230,57 +185,6 @@ public class ResultActivity extends AppCompatActivity {
         qrTypeText.setText(type);
     }
 
-    private void createHistoryItem() {
-        currentHistoryItem = new HistoryItem();
-
-        Bitmap image;
-        boolean prefSaveRealImage = mPreferences.getBoolean(PREF_SAVE_REAL_IMAGE_TO_HISTORY, false);
-        if(prefSaveRealImage) {
-            float height;
-            float width;
-            if(mCodeImage.getWidth() == 0 || mCodeImage.getWidth() == 0) {
-                height = 200f;
-                width = 200f;
-            } else if(mCodeImage.getWidth() > mCodeImage.getHeight()) {
-                height = (float)mCodeImage.getHeight() / (float)mCodeImage.getWidth() * 200f;
-                width = 200f;
-            } else {
-                width = (float)mCodeImage.getWidth() / (float)mCodeImage.getHeight() * 200f;
-                height = 200f;
-            }
-            image = Bitmap.createScaledBitmap(mCodeImage, (int)width, (int)height, false);
-        } else {
-            image = Utils.generateCode(currentBarcodeResult.getText(), currentBarcodeResult.getBarcodeFormat(), null, currentBarcodeResult.getResult().getResultMetadata());
-        }
-        currentHistoryItem.setImage(image);
-
-        currentHistoryItem.setFormat(currentBarcodeResult.getResult().getBarcodeFormat());
-        currentHistoryItem.setNumBits(currentBarcodeResult.getResult().getNumBits());
-        currentHistoryItem.setRawBytes(currentBarcodeResult.getResult().getRawBytes());
-        currentHistoryItem.setResultPoints(currentBarcodeResult.getResult().getResultPoints());
-        currentHistoryItem.setText(currentBarcodeResult.getResult().getText());
-        currentHistoryItem.setTimestamp(currentBarcodeResult.getResult().getTimestamp());
-    }
-
-    private void saveHistoryItem(HistoryItem item) {
-        AppRepository.getInstance(this).insertHistoryEntry(item);
-        mSavedToHistory = true;
-    }
-
-
-    private void updateHistoryItem(HistoryItem item) {
-        AppRepository.getInstance(this).updateHistoryEntry(item);
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-
-        outState.putParcelable("currentHistoryItem", currentHistoryItem);
-        outState.putParcelable("mCodeImage", mCodeImage);
-        outState.putBoolean("mSavedToHistory", mSavedToHistory);
-    }
-
     public void onClick(View view) {
         if (view.getId() == R.id.btnProceed) {
             if(currentResultFragment != null) {
@@ -295,19 +199,19 @@ public class ResultActivity extends AppCompatActivity {
             case R.id.share:
                 Intent sharingIntent= new Intent(Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
-                sharingIntent.putExtra(Intent.EXTRA_TEXT, mParsedResult.getDisplayResult());
+                sharingIntent.putExtra(Intent.EXTRA_TEXT, viewModel.mParsedResult.getDisplayResult());
                 startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
                 return true;
 
             case R.id.save:
-                saveHistoryItem(currentHistoryItem);
+                viewModel.saveHistoryItem(viewModel.currentHistoryItem);
                 invalidateOptionsMenu();
                 Toast.makeText(this, R.string.activity_result_toast_saved, Toast.LENGTH_SHORT).show();
                 return true;
 
             case R.id.copy:
                 ClipboardManager clipboardManager =(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
-                ClipData clipData = ClipData.newPlainText("Text", mParsedResult.getDisplayResult());
+                ClipData clipData = ClipData.newPlainText("Text", viewModel.mParsedResult.getDisplayResult());
                 clipboardManager.setPrimaryClip(clipData);
                 Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
                 return true;

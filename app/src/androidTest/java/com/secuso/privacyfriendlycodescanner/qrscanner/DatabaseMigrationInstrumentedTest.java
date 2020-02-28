@@ -115,7 +115,4 @@ public class DatabaseMigrationInstrumentedTest {
         testHelper.closeWhenFinished(database);
         return database;
     }
-
-
-
 }
