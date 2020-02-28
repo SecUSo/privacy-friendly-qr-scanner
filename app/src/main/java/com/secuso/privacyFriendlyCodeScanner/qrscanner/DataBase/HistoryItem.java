@@ -5,7 +5,6 @@ import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 import android.graphics.Bitmap;
 import android.os.Parcel;
-import android.os.Parcelable;
 import android.support.annotation.NonNull;
 
 import com.google.zxing.BarcodeFormat;
@@ -22,11 +21,11 @@ import com.google.zxing.ResultPoint;
  * @author Christopher Beckmann
  */
 @Entity(tableName = "Histories")
-public class HistoryItem implements Parcelable {
+public class HistoryItem {
 
     @PrimaryKey(autoGenerate = true) private int _id;
     private Bitmap image;
-    @NonNull private String text;
+    @NonNull private String text = "";
     private byte[] rawBytes;
     private int numBits;
     private ResultPoint[] resultPoints;
@@ -45,6 +44,7 @@ public class HistoryItem implements Parcelable {
         this._id = _id;
     }
 
+    @NonNull
     public String getText() {
         return text;
     }
@@ -106,7 +106,6 @@ public class HistoryItem implements Parcelable {
         }
     }
 
-    @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(_id);
         dest.writeString(Converters.encodeImage(image));
@@ -116,29 +115,28 @@ public class HistoryItem implements Parcelable {
         dest.writeLong(timestamp);
         dest.writeInt(format.ordinal());
 
-        dest.writeInt(resultPoints.length);
+        dest.writeInt(resultPoints != null ? resultPoints.length : 0);
         for(ResultPoint rp : resultPoints) {
             dest.writeFloat(rp.getX());
             dest.writeFloat(rp.getY());
         }
     }
 
-    @Override
     public int describeContents() {
         return 0;
     }
 
-    public static final Creator<HistoryItem> CREATOR = new Creator<HistoryItem>() {
-        @Override
-        public HistoryItem createFromParcel(Parcel in) {
-            return new HistoryItem(in);
-        }
-
-        @Override
-        public HistoryItem[] newArray(int size) {
-            return new HistoryItem[size];
-        }
-    };
+//    public static final Creator<HistoryItem> CREATOR = new Creator<HistoryItem>() {
+//        @Override
+//        public HistoryItem createFromParcel(Parcel in) {
+//            return new HistoryItem(in);
+//        }
+//
+//        @Override
+//        public HistoryItem[] newArray(int size) {
+//            return new HistoryItem[size];
+//        }
+//    };
 
     public Result getResult() {
         return new Result(text, rawBytes, numBits, resultPoints,format,timestamp);
