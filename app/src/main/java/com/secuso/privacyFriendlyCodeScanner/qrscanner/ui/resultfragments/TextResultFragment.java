@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.TextParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
@@ -28,17 +27,24 @@ public class TextResultFragment extends ResultFragment {
         super.onCreateView(inflater, container, savedInstanceState);
 
         View v = inflater.inflate(R.layout.fragment_result_text, container, false);
-        result = (TextParsedResult) parsedResult;
+        // TODO: v3.0.2 - 1.3.2020 This can currently be more than just Text.
+        // - ISBN
+        // - VIN
+        // - CALENDAR
+        // - TEXT
+        // result = (TextParsedResult) parsedResult;
 
         TextView tv = v.findViewById(R.id.result_field_text);
-        tv.setText(result.getText());
+        // TODO: v3.0.2 - 1.3.2020 this is to temporary fix crashes
+        tv.setText(parsedResult.getDisplayResult());
 
         return v;
     }
 
     public void onProceedPressed(Context context) {
         final String searchEngineURI = getSearchEngineURI(context);
-        final Uri uri = Uri.parse(String.format(searchEngineURI, result.getText()));
+        // TODO: parsedResult used here .. should be result
+        final Uri uri = Uri.parse(String.format(searchEngineURI, parsedResult.getDisplayResult()));
 
         Intent search = new Intent(Intent.ACTION_VIEW, uri);
         String caption = getResources().getStringArray(R.array.text_array)[0];
