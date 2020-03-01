@@ -279,6 +279,7 @@
     <string name="item_result_email_body">Body:</string>
     <string name="activity_result_toast_saved">Saved to history.</string>
     <string name="fragment_result_product_label">Identifier:</string>
+    <string name="activity_result_toast_error_cant_load">Something went wrong when loading the result.</string>
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>

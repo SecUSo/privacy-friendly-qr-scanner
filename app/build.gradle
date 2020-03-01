@@ -6,8 +6,8 @@ android {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 17
-        versionName "3.0.2"
+        versionCode 18
+        versionName "3.0.3"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         javaCompileOptions {

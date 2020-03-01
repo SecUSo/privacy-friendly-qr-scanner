@@ -260,5 +260,6 @@
     <string name="item_result_email_cc">CC:</string>
     <string name="item_result_email_subject">Titel:</string>
     <string name="item_result_email_to">Empfänger:</string>
+    <string name="activity_result_toast_error_cant_load">Ein Fehler ist beim Laden des Codes aufgetreten.</string>
 
 </resources>

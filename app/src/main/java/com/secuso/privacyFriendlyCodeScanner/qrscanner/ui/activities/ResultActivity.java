@@ -85,6 +85,10 @@ public class ResultActivity extends AppCompatActivity {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
+        if(isFinishing()) {
+            return;
+        }
+
         loadFragment(viewModel.mParsedResult);
         displayGeneralData();
     }
@@ -111,6 +115,7 @@ public class ResultActivity extends AppCompatActivity {
                 viewModel.initFromScan(barcodeResult);
             } else {
                 // no data to display -> exit
+                Toast.makeText(this, R.string.activity_result_toast_error_cant_load, Toast.LENGTH_SHORT).show();
                 finish();
             }
         }
@@ -225,7 +230,7 @@ public class ResultActivity extends AppCompatActivity {
         }
     }
 
-    private void loadFragment(ParsedResult parsedResult) {
+    private void loadFragment(@NonNull ParsedResult parsedResult) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
         ResultFragment resultFragment;
