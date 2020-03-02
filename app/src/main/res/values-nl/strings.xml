@@ -1,0 +1,292 @@
+<resources>
+    <string name="app_name">QR-scanner</string>
+
+    <string name="navigation_drawer_open">Navigatiemenu openen</string>
+    <string name="navigation_drawer_close">Navigatiemenu sluiten</string>
+    <string name="qr_scanner">QR-scanner</string>
+    <string name="qr_generator">QR-generator</string>
+    <string name="history">Geschiedenis</string>
+    <string name="settings">Instellingen</string>
+    <string name="help">Hulp</string>
+    <string name="about">Over</string>
+    <string name="title_activity_qrscanner">QR-scanner</string>
+
+    <string name="action_settings">Instellingen</string>
+    <string name="title_activity_qr_scanner">QR-scanner</string>
+    <string name="title_activity_qr_generator">QR-generator</string>
+    <string name="title_activity_history">Geschiedenis</string>
+    <string name="title_activity_settings">Instellingen</string>
+    <string name="title_activity_help">Hulp</string>
+    <string name="title_activity_about">Over</string>
+    <string name="Settings">Instellingen</string>
+    <string name="QRScanner">QR-scanner</string>
+    <string name="QRGenerator">QR-generator</string>
+    <string name="History">Geschiedenis</string>
+
+    <string name="slide1_heading">Welkom!</string>
+    <string name="slide1_text">Welkom bij de privacyvriendelijke QR-scanner. In deze rondleiding krijg je de belangrijkste functies te zien.</string>
+    <string name="slide2_heading">Wat kan ik doen?</string>
+    <string name="text_slide2">Je kunt een QR-code scannen met de QR-scanner of een QR-code genereren met de QR-generator.</string>
+    <string name="slide3_heading">Meer functies</string>
+    <string name="text_slide3">De gescande QR-code kun je opslaan in de geschiedenis, delen of kopi?ren.</string>
+    <string name="wecome">Welkom</string>
+    <string name="skip">Overslaan</string>
+    <string name="next">Volgende</string>
+    <string name="help_">Hulp</string>
+
+    <string name="tutorial">Rondleiding</string>
+
+    <!--###ABOUT###-->
+    <string name="about_author">Makers: </string>
+    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
+    <string name="about_author_string">%s en bijdragers.</string>
+    <string name="about_affiliation">In samenwerking met</string>
+    <string name="privacy_friendly">Deze app behoort tot de groep PRIVACYVRIENDELIJKE apps, ontwikkeld door de Technische Universiteit van Darmstadt. De broncode is vrijgegeven onder de GPLv3-licentie. Op de afbeeldingen berust auteursrecht van TU Darmstadt en copyright van Google Inc.</string>
+    <string name="more_info">Ga voor meer informatie naar onze</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="about_libraries">Gebruikte bibliotheken:</string>
+    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
+    <string name="app_name_long">Privacyvriendelijke QR-scanner</string>
+    <string name="version_number">Versie v%s</string>
+    <string name="delete_items">Items verwijderen</string>
+
+    <string name="scan_text">Houd dit venster boven de code die je wilt uitlezen.</string>
+    <string name="action_clear">Geschiedenis wissen</string>
+    <string name="cannot_clear">De geschiedenis is al gewist</string>
+    <string name="knowRisks">Ik heb de link gecontroleerd en wil de website bezoeken.</string>
+    <string name="domain">Domeinnaam</string>
+    <string name="urlExplanation">QR-codes kunnen links bevatten die naar een nepsite leiden. Zo'n site kan je persoonlijke gegevens misbruiken (phishingwebsite) of malware (bijv. virussen) installeren op je apparaat.\n\n<b>Controleer</b> dus altijd of de link wel de link is die je verwachtte:</string>
+    <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informatie</a> over het controleren van links (met dank aan de collega\'s van de TU Darmstadt). Als je de link niet vertrouwt, open hem dan niet en sla hem ook niet op.</string>
+    <string name="delete_history">Weet je zeker dat je geschiedenis wilt wissen?</string>
+    <string name="ok">Ja</string>
+    <string name="element_removed">Item verwijderd.</string>
+    <string name="conform_url">Geef aan of je de link gecontroleerd hebt.</string>
+    <string name="wifi_explanation">Deze versie van de app kan niet automatisch verbinding maken met Wi-Fi-netwerken omdat hiervoor een machtiging vereist is. Hieronder vind je de netwerkinformatie.</string>
+    <string name="encryption">Versleuteling</string>
+    <string name="action_about">Over</string>
+    <string name="history_disabled">Geschiedenis bijhouden is uitgeschakeld</string>
+    <string name="to">Geadresseerde:</string>
+    <string name="subject">Onderwerp:</string>
+
+    <string name="usability_hint2">Als je een code niet kunt scannen, vergroot dan de afstand tussen je apparaat en de code.</string>
+
+    <string name="description_contact">De gescande QR-code bevat contactinformatie.</string>
+    <string name="description_email">De gescande QR-code bevat een e-mailadres.</string>
+    <string name="description_send_email">De gescande QR-code bevat een ingevuld e-mailadres.</string>
+    <string name="description_product">De gescande QR-code bevat een productcode.</string>
+    <string name="description_tel">De gescande QR-code bevat een telefoonnummer.</string>
+    <string name="description_sms">De gescande QR-code bevat een sms.</string>
+
+    <string name="description_text">De gescande QR-code bevat platte tekst.</string>
+
+    <string name="choose_action">Doorgaan</string>
+    <string name="abort_action">Afbreken</string>
+
+    <string name="proceed">Doorgaan</string>
+    <string name="back">Terug</string>
+
+    <string name="choose_action_url">Doorgaan</string>
+    <string name="abort_action_url">Afbreken</string>
+
+    <string-array name="text_array">
+        <item>Opzoeken op internet</item>
+        <item>Niets doen</item>
+    </string-array>
+    <string-array name="email_array">
+        <item>E-mail versturen</item>
+        <item>Toevoegen aan contactpersonen</item>
+    </string-array>
+    <string-array name="vcard_array">
+        <item>Toevoegen aan contactpersonen</item>
+        <item>Niets doen</item>
+    </string-array>
+    <string-array name="send_email_array">
+        <item>E-mail versturen</item>
+        <item>Toevoegen aan contactpersonen</item>
+    </string-array>
+    <string-array name="sms_array">
+        <item>SMS versturen</item>
+        <item>Nummer bellen</item>
+        <item>Toevoegen aan contactpersonen</item>
+    </string-array>
+    <string-array name="mms_array">
+        <item>MMS versturen</item>
+        <item>Nummer bellen</item>
+        <item>Toevoegen aan contactpersonen</item>
+    </string-array>
+    <string-array name="tel_array">
+        <item>Nummer bellen</item>
+        <item>Toevoegen aan contactpersonen</item>
+    </string-array>
+    <string-array name="geo_array">
+        <item>Maps-app openen</item>
+        <item>Niets doen</item>
+    </string-array>
+    <string-array name="url_array">
+        <item>URL openen</item>
+        <item>Niets doen</item>
+    </string-array>
+    <string-array name="product_array">
+        <item>Opzoeken op internet</item>
+        <item>Niets doen</item>
+    </string-array>
+    <string-array name="wifi_array">
+        <item>Wachtwoord kopi?ren</item>
+        <item>Niets doen</item>
+    </string-array>
+    <string-array name="history_array">
+        <item>Kopi?ren naar klembord</item>
+        <item>Item verwijderen</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>E-mailadres</item>
+        <item>URL</item>
+        <item>Telefoonnummer</item>
+        <item>SMS</item>
+        <item>Geolocatie</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>MMS</item>
+        <item>Wi-Fi</item>
+        <item>VCard</item>
+        <item>Winkel</item>
+
+    </string-array>
+    <string name="copied_to_clipboard">Gekopieerd naar het klembord.</string>
+    <string name="noname">Geen naam opgegeven</string>
+
+    <string name="title_activity_result_url">Link aangetroffen</string>
+    <string name="title_activity_result_text">Tekst aangetroffen</string>
+    <string name="title_activity_result_sms">SMS aangetroffen</string>
+    <string name="title_activity_result_email">E-mailadres aangetroffen</string>
+    <string name="title_activity_result_send_email">E-mail aangetroffen</string>
+    <string name="title_activity_result_product">Product aangetroffen</string>
+    <string name="title_activity_result_tel">Telefoonnummer aangetroffen</string>
+    <string name="title_activity_result_wifi">Wi-Fi aangetroffen</string>
+    <string name="title_activity_result_contact">Contactpersoon aangetroffen</string>
+    <string name="action_help">Hulp</string>
+
+    <!-- ### WELCOME DIALOG ### -->
+    <string name="welcome_text">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met vari?rende inhoud scannen. Deze app vereist nauwelijks machtigingen en heeft ondersteuning voor het detecteren van kwaadaardige links.</string>
+    <string name="welcome">Welkom</string>
+    <string name="viewhelp">Hulp tonen</string>
+
+    <!--<string name="help_privacy_heading">Privacy Info</string>
+    <string name="about_author_contributors">Contributors</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="more_info">More information can be found on:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
+    <string name="help_permission1_description">Deze app vereist de cameramachtiging om barcodes and QR-codes te kunnen scannen middels de camera.</string>
+    <string name="help_permission1_heading">Camera</string>
+    <string name="help_privacy_heading">Welke machtigingen vereist de PRIVACYVRIENDELIJKE QR-scanner?</string>
+    <string name="help_category_example">Het scannen werkt niet. Wat kan ik hieraan doen?</string>
+    <string name="help_overview_heading">Wat is de PRIVACYVRIENDELIJKE QR-scanner?</string>
+    <string name="help_intro">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met vari?rende inhoud scannen.</string>
+    <string name="help_whatis_answer">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met vari?rende inhoud scannen en genereren. Daarnaast kun je gescande QR-codes kopi?ren naar of delen met andere apps. Ook kun je gegeneerde QR-codes opslaan in de galerij en delen.</string>
+
+
+    <!--###HELP###-->
+
+
+    <string name="help_whatis">Wat is de PRIVACYVRIENDELIJKE QR-scanner?</string>
+
+    <string name="help_usability">Het scannen werkt niet. Wat kan ik hieraan doen?</string>
+    <string name="help_usability_answer">Als je geen codes kunt scannen, vergroot dan de afstand tussen je apparaat en de code.</string>
+    <string name="help_privacy">Wat maakt de app privacyvriendelijk?</string>
+    <string name="help_privacy_answer">Privacy Friendly App-voorbeeld vereist geen enkele machtiging. Daarnaast wordt er niks bijgehouden en geen reclame getoond.</string>
+    <string name="help_permission">Welke machtigingen vereist de PRIVACYVRIENDELIJKE QR-scanner?</string>
+    <string name="help_permission_answer">Deze app vereist de cameramachtiging om barcodes and QR-codes te kunnen scannen middels de camera.</string>
+    <!-- Strings related to SettingsActivity -->
+
+    <!-- Example General settings -->
+    <string name="pref_title_enable_history">Geschiedenis bijhouden</string>
+    <string name="pref_description_enable_history">Sla eerdere scans op zodat je ze later weer kunt bekijken</string>
+    <string name="pref_keep_duplicates">Duplicaten bijhouden</string>
+    <string name="pref_keep_duplicates_explanation">Neem duplicaten op in de geschiedenis</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_title_beep">Geluid</string>
+    <string name="description_Mms">De gescande QR-code bevat een mms.</string>
+    <string name="geoInfo">De gescande QR-code bevat geografische informatie.</string>
+    <string name="content_copied">Inhoud gekopieerd</string>
+    <string name="share_via">Delen via</string>
+    <string name="no_content_in_history">Er is geen geschiedenis!</string>
+    <string name="selected_item">item geselecteerd</string>
+    <string name="selected_items">items geselecteerd</string>
+    <string name="removed_item">item verwijderd</string>
+    <string name="removed_items">items verwijderd</string>
+    <string name="canncelled_scan">Het scannen is afgebroken</string>
+    <string name="Scan_qr">Scannen</string>
+    <string name="okay">Ok?</string>
+    <string name="Store_in_gallery">Opslaan</string>
+    <string name="phone_number">Telefoonnummer</string>
+
+    <string name="sms_text">SMS-tekst</string>
+    <string name="mms">MMS</string>
+    <string name="network_name">Netwerknaam</string>
+    <string name="password">Wachtwoord</string>
+    <string name="company">Bedrijf</string>
+    <string name="lastname">Achternaam</string>
+    <string name="title">Titel</string>
+    <string name="city">Locatie</string>
+    <string name="street_number">Huisnummer</string>
+    <string name="postal_address">Adres</string>
+    <string name="e_mail_address">E-mailadres</string>
+    <string name="firstname">Voornaam</string>
+    <string name="street_name_and_number">Straatnaam en huisnummer</string>
+    <string name="delete_content">Weet je zeker dat je de inhoud wilt wissen?</string>
+    <string name="delete_all">Alle inhoud wissen</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nee</string>
+    <string name="D_all">Alle items wissen</string>
+    <string name="all_records">Weet je zeker dat je alle items wilt wissen?</string>
+    <string name="Del">Weet je zeker dat je de geselecteerde items wilt wissen?</string>
+    <string name="confirmation">Bevestiging</string>
+    <string name="selected">Geselecteerd</string>
+    <string name="code_stored">De QR-code is opgeslagen in de galerij</string>
+    <string name="Ofeatures">Overige functies</string>
+    <string name="OfeaturesAnswer">Je kunt gescande QR-codes kopi?ren naar of delen met andere apps. Ook kun je gegeneerde QR-codes opslaan in de galerij en delen.</string>
+    <string name="Content_copied">Inhoud gekopieerd</string>
+    <string name="Share_via">Delen via</string>
+    <string name="select_all">Alles selecteren</string>
+    <string name="selected_1">Geselecteerd</string>
+    <string name="activity_scanner_permission_needed_explanation">Deze app vereist de cameramachtiging om QR-codes te kunnen scannen.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hallo blanco fragment</string>
+
+    <!--Settings for Default Search Engine-->
+    <string name="pref_search_engine_title">Standaard zoekmachine</string>
+    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
+        "https://duckduckgo.com/?q=%s"
+    </string>
+    <string name="pref_search_engine_uri_google" translatable="false">
+        "https://www.google.com/search?q=%s"
+    </string>
+    <string name="pref_enable_beep_on_scan_title">Piepen na scannen</string>
+    <string name="pref_enable_beep_on_scan_summary">Speel een bevestigingsgeluid af na het scannen</string>
+    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
+    <string name="delete">Verwijderen</string>
+    <string name="dialog_history_delete_message">Weet je zeker dat je dit item wilt verwijderen?</string>
+    <string name="dialog_history_delete_title">Item verwijderen</string>
+    <string name="pref_save_real_image_to_history_title">Echte code opslaan</string>
+    <string name="pref_save_real_image_to_history_summary">Sla een echte afbeelding op van de code in plaats van een nagemaakte</string>
+    <string name="item_result_email_to">Aan:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="item_result_email_bcc">BCC:</string>
+    <string name="item_result_email_subject">Onderwerp:</string>
+    <string name="item_result_email_body">Berichtinhoud:</string>
+    <string name="activity_result_toast_saved">Opgeslagen in de geschiedenis.</string>
+    <string name="fragment_result_product_label">Identificatie:</string>
+    <string name="activity_result_toast_error_cant_load">Er is iets misgegaan tijdens het laden van het resultaat.</string>
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>DUCK_DUCK_GO</item>
+        <item>GOOGLE</item>
+    </string-array>
+
+</resources>
