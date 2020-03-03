@@ -38,15 +38,11 @@
 
     <!--###ABOUT###-->
     <string name="about_author">Makers: </string>
-    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
     <string name="about_author_string">%s en bijdragers.</string>
     <string name="about_affiliation">In samenwerking met</string>
     <string name="privacy_friendly">Deze app behoort tot de groep PRIVACYVRIENDELIJKE apps, ontwikkeld door de Technische Universiteit van Darmstadt. De broncode is vrijgegeven onder de GPLv3-licentie. Op de afbeeldingen berust auteursrecht van TU Darmstadt en copyright van Google Inc.</string>
     <string name="more_info">Ga voor meer informatie naar onze</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">Gebruikte bibliotheken:</string>
-    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="app_name_long">Privacyvriendelijke QR-scanner</string>
     <string name="version_number">Versie v%s</string>
     <string name="delete_items">Items verwijderen</string>
@@ -218,7 +214,7 @@
     <string name="removed_items">items verwijderd</string>
     <string name="canncelled_scan">Het scannen is afgebroken</string>
     <string name="Scan_qr">Scannen</string>
-    <string name="okay">Ok?</string>
+    <string name="okay">Oké</string>
     <string name="Store_in_gallery">Opslaan</string>
     <string name="phone_number">Telefoonnummer</string>
 
@@ -258,15 +254,8 @@
 
     <!--Settings for Default Search Engine-->
     <string name="pref_search_engine_title">Standaard zoekmachine</string>
-    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
-        "https://duckduckgo.com/?q=%s"
-    </string>
-    <string name="pref_search_engine_uri_google" translatable="false">
-        "https://www.google.com/search?q=%s"
-    </string>
     <string name="pref_enable_beep_on_scan_title">Piepen na scannen</string>
     <string name="pref_enable_beep_on_scan_summary">Speel een bevestigingsgeluid af na het scannen</string>
-    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
     <string name="delete">Verwijderen</string>
     <string name="dialog_history_delete_message">Weet je zeker dat je dit item wilt verwijderen?</string>
     <string name="dialog_history_delete_title">Item verwijderen</string>
@@ -280,13 +269,5 @@
     <string name="activity_result_toast_saved">Opgeslagen in de geschiedenis.</string>
     <string name="fragment_result_product_label">Identificatie:</string>
     <string name="activity_result_toast_error_cant_load">Er is iets misgegaan tijdens het laden van het resultaat.</string>
-    <string-array name="pref_search_engine_entries">
-        <item>DuckDuckGo</item>
-        <item>Google</item>
-    </string-array>
-    <string-array name="pref_search_engine_values">
-        <item>DUCK_DUCK_GO</item>
-        <item>GOOGLE</item>
-    </string-array>
 
 </resources>
