@@ -189,7 +189,7 @@
     <!--###HELP###-->
 
 
-    <string name="help_whatis">Che cos'è PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_whatis">Che cos\'è PRIVACY FRIENDLY QR Scanner?</string>
 
     <string name="help_usability">La scansione non funziona, cosa posso fare?</string>
     <string name="help_usability_answer">Se non puoi scansionare un codice, aumenta la distanza tra lo scanner ed il codice.</string>
