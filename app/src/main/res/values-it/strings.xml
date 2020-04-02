@@ -181,7 +181,7 @@
     <string name="help_permission1_heading">Fotocamera</string>
     <string name="help_privacy_heading">Quali permessi sono richiesti da PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">La scansione non funziona, cosa posso fare?</string>
-    <string name="help_overview_heading">Che cos'è PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_overview_heading">Che cos\'è PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">Con PRIVACY FRIENDLY QR Scanner puoi scansionare codici a barre e codici-qr di varia tipologia.</string>
     <string name="help_whatis_answer">Con PRIVACY FRIENDLY QR Scanner puoi scansionare/generare codici a barre e codici-qr di varia tipologia. Inoltre puoi copiare/condividere i codici-qr scansionati con altre applicazioni, e salvare i codici-qr generati nella galleria e condividerli.</string>
 
