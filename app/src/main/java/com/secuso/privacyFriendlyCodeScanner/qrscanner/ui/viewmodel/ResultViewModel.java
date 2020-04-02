@@ -2,12 +2,12 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel;
 
 import android.app.Activity;
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
+import androidx.lifecycle.AndroidViewModel;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.client.result.ParsedResult;
@@ -112,3 +112,4 @@ public class ResultViewModel extends AndroidViewModel {
     }
 
 }
+
