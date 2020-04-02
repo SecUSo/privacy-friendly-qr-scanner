@@ -62,7 +62,7 @@
     <string name="ok">Okay</string>
     <string name="element_removed">Elemento rimosso.</string>
     <string name="conform_url">Per favore, conferma che hai controllato il collegamento.</string>
-    <string name="wifi_explanation">Questa versione dell'app non può connettersi a reti WIFI automaticamente a causa dei permessi che sarebbero necessari. Qui sotto trovi alcuni dettagli della rete.</string>
+    <string name="wifi_explanation">Questa versione dell\'app non può connettersi a reti WIFI automaticamente a causa dei permessi che sarebbero necessari. Qui sotto trovi alcuni dettagli della rete.</string>
     <string name="encryption">Criptazione</string>
     <string name="action_about">Al riguardo</string>
     <string name="history_disabled">Cronologia disabilitata</string>
