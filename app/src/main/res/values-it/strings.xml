@@ -30,8 +30,8 @@
     <string name="slide3_heading">Più caratteristiche</string>
     <string name="text_slide3">Il codice QR che hai scansionato può essere salvato nella Cronologia. Inoltre puoi condivederlo o copiarlo.</string>
     <string name="wecome">benvenuto</string>
-    <string name="skip">Ignora</string>
-    <string name="next">Prossimo</string>
+    <string name="skip">Salta</string>
+    <string name="next">Continua</string>
     <string name="help_">Aiuto</string>
 
     <string name="tutorial">Tutorial</string>
