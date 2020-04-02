@@ -1,6 +1,6 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.database;
 
-import android.arch.persistence.room.TypeConverter;
+import androidx.room.TypeConverter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
