@@ -73,4 +73,3 @@ public class EmailResultFragment extends ResultFragment {
 
 
 }
-

@@ -116,4 +116,3 @@ public class DatabaseMigrationInstrumentedTest {
         return database;
     }
 }
-

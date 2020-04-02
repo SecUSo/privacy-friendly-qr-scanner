@@ -39,4 +39,3 @@ public interface HistoryDao {
     @Query("SELECT * FROM Histories WHERE image IS null")
     List<HistoryItem> getAllWithoutImage();
 }
-

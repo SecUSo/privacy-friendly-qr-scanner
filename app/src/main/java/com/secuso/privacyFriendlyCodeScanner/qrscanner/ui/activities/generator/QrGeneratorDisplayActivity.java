@@ -75,4 +75,3 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
 
 }
 
-

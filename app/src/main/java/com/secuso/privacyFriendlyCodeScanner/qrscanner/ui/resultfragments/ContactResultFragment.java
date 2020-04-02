@@ -71,4 +71,3 @@ public class ContactResultFragment extends ResultFragment {
         builder.create().show();
     }
 }
-

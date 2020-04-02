@@ -44,4 +44,3 @@ public abstract class ResultFragment extends Fragment {
 
     public abstract void onProceedPressed(Context context);
 }
-

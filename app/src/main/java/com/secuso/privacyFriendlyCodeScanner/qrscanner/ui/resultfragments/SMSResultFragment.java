@@ -96,4 +96,3 @@ public class SMSResultFragment extends ResultFragment {
         builder.create().show();
     }
 }
-

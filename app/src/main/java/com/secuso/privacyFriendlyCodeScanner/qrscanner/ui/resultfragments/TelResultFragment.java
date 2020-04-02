@@ -59,4 +59,3 @@ public class TelResultFragment extends ResultFragment {
         builder.create().show();
     }
 }
-
