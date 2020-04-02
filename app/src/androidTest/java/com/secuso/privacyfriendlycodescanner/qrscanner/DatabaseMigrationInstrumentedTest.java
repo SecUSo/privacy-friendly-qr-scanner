@@ -1,12 +1,12 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner;
 
-import android.arch.persistence.db.SupportSQLiteDatabase;
-import android.arch.persistence.db.framework.FrameworkSQLiteOpenHelperFactory;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.testing.MigrationTestHelper;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.sqlite.db.framework.FrameworkSQLiteOpenHelperFactory;
+import androidx.room.Room;
+import androidx.room.testing.MigrationTestHelper;
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppDatabase;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.DBHandler;
@@ -116,3 +116,4 @@ public class DatabaseMigrationInstrumentedTest {
         return database;
     }
 }
+
