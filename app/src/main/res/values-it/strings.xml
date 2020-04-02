@@ -196,7 +196,7 @@
     <string name="help_privacy">Cosa rende l'app privacy-friendly?</string>
     <string name="help_privacy_answer">L'App Privacy Friendly non richiede alcun permesso. Inoltre non include alcun meccanismo di tracking od annuncio.</string>
     <string name="help_permission">Quali permessi sono richiesti da PRIVACY FRIENDLY QR Scanner?</string>
-    <string name="help_permission_answer">L'applicazione richiede il permesso di accedere alla fotocamera, che viene utilizzato per scansionare i codici a barre ed i codici-qr attraverso la fotocamera.</string>
+    <string name="help_permission_answer">L\'applicazione richiede il permesso di accedere alla fotocamera, che viene utilizzato per scansionare i codici a barre ed i codici-qr attraverso la fotocamera.</string>
     <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->
