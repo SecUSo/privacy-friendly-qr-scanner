@@ -73,7 +73,7 @@
 
     <string name="description_contact">Il codice-QR che hai scansionato contiene informazioni di contatto.</string>
     <string name="description_email">Il codice-QR che hai scansionato contiene un indirizzo e-mail.</string>
-    <string name="description_send_email">Il codice-QR che hai scansionato contiene una e-mail.</string>
+    <string name="description_send_email">Il codice-QR che hai scansionato contiene un\' e-mail.</string>
     <string name="description_product">Il codice-QR che hai scansionato contiene un codice prodotto.</string>
     <string name="description_tel">Il codice-QR che hai scansionato contiene un numero di telefono.</string>
     <string name="description_sms">Il codice-QR che hai scansionato contiene un SMS.</string>
@@ -177,7 +177,7 @@
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
-    <string name="help_permission1_description">L\'applicazione richiede il permesso di accedere alla fotocamera, che viene utilizzato per scansionare i codici a barre ed i codici-qr attraverso la fotocamera.</string>
+    <string name="help_permission1_description">L\' applicazione richiede il permesso di accedere alla fotocamera, che viene utilizzato per scansionare i codici a barre ed i codici-qr attraverso la fotocamera.</string>
     <string name="help_permission1_heading">Fotocamera</string>
     <string name="help_privacy_heading">Quali permessi sono richiesti da PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">La scansione non funziona, cosa posso fare?</string>
@@ -270,8 +270,8 @@
     <string name="delete">cancella</string>
     <string name="dialog_history_delete_message">Vuoi veramente cancellare questo elemento?</string>
     <string name="dialog_history_delete_title">Cancella Elemento</string>
-    <string name="pref_save_real_image_to_history_title">Salva il vero codice</string>
-    <string name="pref_save_real_image_to_history_summary">Salva una immagine del codice invece di ricrearla</string>
+    <string name="pref_save_real_image_to_history_title">Salva un\' immagine del codice scansionato</string>
+    <string name="pref_save_real_image_to_history_summary">Salva un\' immagine del codice scansionato nella cronologia</string>
     <string name="item_result_email_to">Da:</string>
     <string name="item_result_email_cc">Cc:</string>
     <string name="item_result_email_bcc">BCc:</string>
