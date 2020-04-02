@@ -208,7 +208,7 @@
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Tono suono</string>
     <string name="description_Mms">Il codice-QR che hai scansionato contiene un MMS.</string>
-    <string name="geoInfo">Il codice-QR che hai scansionato contiene informazioni geografiche.</string>
+    <string name="geoInfo">Il codice-QR che hai scansionato contiene informazioni di geolocalizzazione.</string>
     <string name="content_copied">Contenuto copiato</string>
     <string name="share_via">Condividi attraverso</string>
     <string name="no_content_in_history">Non ci sono contenuti nella cronologia!</string>
@@ -271,7 +271,7 @@
     <string name="dialog_history_delete_message">Vuoi veramente cancellare questo elemento?</string>
     <string name="dialog_history_delete_title">Cancella Elemento</string>
     <string name="pref_save_real_image_to_history_title">Salva il vero codice</string>
-    <string name="pref_save_real_image_to_history_summary">Salva una vera immagine del codice invece di ricrearla</string>
+    <string name="pref_save_real_image_to_history_summary">Salva una immagine del codice invece di ricrearla</string>
     <string name="item_result_email_to">Da:</string>
     <string name="item_result_email_cc">Cc:</string>
     <string name="item_result_email_bcc">BCc:</string>
