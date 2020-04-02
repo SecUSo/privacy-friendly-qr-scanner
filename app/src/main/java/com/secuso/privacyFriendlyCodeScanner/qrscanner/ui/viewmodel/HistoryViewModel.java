@@ -1,11 +1,10 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
-import android.support.annotation.NonNull;
-import android.util.Log;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.annotation.NonNull;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
@@ -38,3 +37,4 @@ public class HistoryViewModel extends AndroidViewModel {
                 }));
     }
 }
+
