@@ -1,12 +1,9 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.databinding.BaseObservable;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
+
+import androidx.databinding.BaseObservable;
+import androidx.appcompat.app.AlertDialog;
 import android.view.View;
 
 import com.google.zxing.client.result.ParsedResult;
