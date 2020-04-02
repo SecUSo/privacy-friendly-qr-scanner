@@ -168,7 +168,7 @@
     <string name="action_help">Aiuto</string>
 
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">L'app PRIVACY FRIENDLY QR Code Scanner consente di scansionare codici a barre e codici-qr di varia tipologia richiedendo un numero minimo di permessi e rilevando collegamenti dannosi.</string>
+    <string name="welcome_text">L\'app PRIVACY FRIENDLY QR Code Scanner consente di scansionare codici a barre e codici-qr di varia tipologia richiedendo un numero minimo di permessi e rilevando collegamenti dannosi.</string>
     <string name="welcome">Benvenuto</string>
     <string name="viewhelp">Visualizza Aiuto</string>
 
