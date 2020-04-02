@@ -177,7 +177,7 @@
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
-    <string name="help_permission1_description">L\'applicazione richiede il permesso di accedere alla fotocamera, che viene utilizzato per scansionare i codici a barre ed i codici QR attraverso la fotocamera.</string>
+    <string name="help_permission1_description">L\'applicazione richiede il permesso di accedere alla fotocamera, utilizzata per scansionare i codici a barre ed i codici QR.</string>
     <string name="help_permission1_heading">Fotocamera</string>
     <string name="help_privacy_heading">Quali permessi sono richiesti da PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">La scansione non funziona, cosa posso fare?</string>
@@ -196,7 +196,7 @@
     <string name="help_privacy">Cosa rende l\'app privacy-friendly?</string>
     <string name="help_privacy_answer">L\'app Privacy Friendly non richiede alcun permesso. Inoltre non include alcun meccanismo di tracking od annuncio.</string>
     <string name="help_permission">Quali permessi sono richiesti da PRIVACY FRIENDLY QR Scanner?</string>
-    <string name="help_permission_answer">L\'applicazione richiede il permesso di accedere alla fotocamera, che viene utilizzato per scansionare i codici a barre ed i codici QR attraverso la fotocamera.</string>
+    <string name="help_permission_answer">L\'applicazione richiede il permesso di accedere alla fotocamera, utilizzata per scansionare i codici a barre ed i codici QR.</string>
     <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->
