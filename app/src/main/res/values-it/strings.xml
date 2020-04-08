@@ -52,8 +52,8 @@
     <string name="cannot_clear">La cronologia è già vuota</string>
     <string name="knowRisks">Ho controllato il link e voglio visitare il sito.</string>
     <string name="domain">Dominio</string>
-    <string name="urlExplanation">I codici QR possono contenere collegamenti, che conducono a falsi siti web, capaci di compromettere i tuoi dati personali (siti di phishing) o trasferire malware (ad esempio virus) al tuo dispositivo.\n\nCome conseguenza dovresti <b>controllare</b> se il seguente link ti sembra corretto:</string>
-    <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informazione</a> come controllare i collegamenti forniti dai colleghi della TU Darmstadt. Se non ti fidi del link, clicca non mi fido &amp; non salvare.</string>
+    <string name="urlExplanation">I codici QR possono contenere link che conducono a falsi siti web, capaci di compromettere i tuoi dati personali (siti di phishing) o trasferire malware (ad esempio virus) al tuo dispositivo.\n\nCome conseguenza dovresti <b>controllare</b> se il seguente link ti sembra corretto:</string>
+    <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informazione</a> come controllare i link forniti dai colleghi della TU Darmstadt. Se non ti fidi del link, clicca non mi fido &amp; non salvare.</string>
     <string name="delete_history">Vuoi cancellare la cronologia?</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Elemento rimosso.</string>
@@ -164,7 +164,7 @@
     <string name="action_help">Aiuto</string>
 
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">L\'app PRIVACY FRIENDLY QR Code Scanner consente di scansionare codici a barre e codici-QR di varia tipologia richiedendo un numero minimo di permessi e rilevando collegamenti dannosi.</string>
+    <string name="welcome_text">L\'app PRIVACY FRIENDLY QR Code Scanner consente di scansionare codici a barre e codici-QR di varia tipologia richiedendo un numero minimo di permessi e rilevando link dannosi.</string>
     <string name="welcome">Benvenuto</string>
     <string name="viewhelp">Visualizza Aiuto</string>
 
