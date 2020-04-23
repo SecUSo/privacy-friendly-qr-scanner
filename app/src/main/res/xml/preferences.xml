@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-        <CheckBoxPreference
+
+        <SwitchPreference
             android:defaultValue="true"
             android:key="bool_history"
             android:summary="@string/pref_description_enable_history"
             android:title="@string/pref_title_enable_history" />
 
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="bool_keep_duplicates"
-            android:summary="@string/pref_keep_duplicates_explanation"
-            android:title="@string/pref_keep_duplicates"
-            android:dependency="bool_history"/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_save_real_image_to_history"
+            android:summary="@string/pref_save_real_image_to_history_summary"
+            android:title="@string/pref_save_real_image_to_history_title"/>
 
-        <CheckBoxPreference
+        <ListPreference
+            android:key="pref_search_engine"
+            android:title="@string/pref_search_engine_title"
+            android:summary="%s"
+            android:entries="@array/pref_search_engine_entries"
+            android:entryValues="@array/pref_search_engine_values"
+            android:defaultValue="DUCK_DUCK_GO" />
+
+        <SwitchPreference
             android:defaultValue="true"
-            android:key="beep"
-            android:title="@string/pref_title_beep" />
+            android:key="pref_enable_beep_on_scan"
+            android:summary="@string/pref_enable_beep_on_scan_summary"
+            android:title="@string/pref_enable_beep_on_scan_title" />
 
 </PreferenceScreen>

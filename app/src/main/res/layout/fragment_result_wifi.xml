@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView5"
+        android:layout_above="@+id/btnProceed"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:layout_alignRight="@+id/btnProceed"
+        android:layout_alignEnd="@+id/btnProceed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <TextView
+                android:id="@+id/result_field_wifi_exlanation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wifi_explanation"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/result_field_wifi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20sp"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/result_field_wifi_encryption"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center_vertical|center_horizontal" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/result_field_wifi_pw"
+                android:gravity="center_horizontal"
+                android:textIsSelectable="true"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

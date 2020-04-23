@@ -1,21 +1,57 @@
 <resources>
+    <string name="app_name">QR Scanner</string>
 
-    <string name="scan_text">Place this window above the code u want to decode.</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="qr_scanner">QR Scanner</string>
+    <string name="qr_generator">QR Generator</string>
+    <string name="history">History</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="title_activity_qrscanner">QR Scanner</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_qr_scanner">QR Scanner</string>
+    <string name="title_activity_qr_generator">QR Generator</string>
+    <string name="title_activity_history">History</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_help">Help</string>
+    <string name="title_activity_about">About</string>
+    <string name="Settings">Settings</string>
+    <string name="QRScanner">QR Scanner</string>
+    <string name="QRGenerator">QR Generator</string>
+    <string name="History">History</string>
+
+    <string name="slide1_heading">Welcome!</string>
+    <string name="slide1_text">Welcome to privacy friendly QR scanner. This tutorial will cover the most important things you need to know.</string>
+    <string name="slide2_heading">what is there?</string>
+    <string name="text_slide2">You either scan QR code by using QR Scanner or generate QR code by using QR Generator.</string>
+    <string name="slide3_heading">More features</string>
+    <string name="text_slide3">The QR code you scanned can be saved in History. Furthermore you can share it or copy it.</string>
+    <string name="wecome">welcome</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="help_">Help</string>
+
+    <string name="tutorial">Tutorial</string>
 
     <!--###ABOUT###-->
     <string name="about_author">Authors: </string>
-    <string name="about_author_names" translatable="false">Philipp Rack</string>
-    <string name="about_author_contributors">and contributors.</string>
+    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
+    <string name="about_author_string">%s and contributors.</string>
     <string name="about_affiliation">In affiliation with</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
     <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="about_libraries">Used libraries:</string>
+    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
+    <string name="app_name_long">Privacy Friendly QR Scanner</string>
+    <string name="version_number">Version v%s</string>
+    <string name="delete_items">Delete items</string>
 
-    <string name="app_name">QR Scanner</string>
-    <string name="version_number">Version</string>
-    <string name="action_settings">Settings</string>
-    <string name="history">History</string>
+    <string name="scan_text">Place this window above the code u want to decode.</string>
     <string name="action_clear">Clear History</string>
     <string name="cannot_clear">The history is already empty</string>
     <string name="knowRisks">I checked the link and want to visit the website.</string>
@@ -23,15 +59,12 @@
     <string name="urlExplanation">QR-Codes can contain links, that lead to a faked website, which can compromise your personal data (phishing website) or transfer malware (e.g. viruses) to your device.\n\nAs a consequence you should <b>check</b> if the following link is the one you expected:</string>
     <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Information</a> how to check links are provided by the colleagues of TU Darmstadt. If you do not trust the link, click do not trust &amp; do not save.</string>
     <string name="delete_history">Do you want to delete the history?</string>
-    <string name="cancel">Cancel</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element removed.</string>
     <string name="conform_url">Please confirm, that you checked the link.</string>
     <string name="wifi_explanation">This version of the app cannot connect to WIFI networks automatically due to the permission that would be needed. Below are some details about the network.</string>
     <string name="encryption">Encryption</string>
     <string name="action_about">About</string>
-    <string name="about_libraries">Used libraries:</string>
-    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="history_disabled">History disabled</string>
     <string name="to">Recipient:</string>
     <string name="subject">Subject:</string>
@@ -46,59 +79,78 @@
     <string name="description_sms">The QR-Code you scanned contains an SMS. In order to <i>send</i> the SMS or <i>add the number to a contact</i>, click Proceed.</string>
     <string name="description_text">The QR-Code you scanned contains plain text. In order to <i>search the web</i> for information, click Proceed.</string>
 
-    <string name="choose_action">Proceed &amp; save</string>
-    <string name="abort_action">Abort &amp; do not save</string>
+    <string name="choose_action">Proceed</string>
+    <string name="abort_action">Abort </string>
 
     <string name="proceed">Proceed</string>
     <string name="back">Back</string>
 
-    <string name="choose_action_url">Proceed &amp; save</string>
-    <string name="abort_action_url">Do not trust &amp; do not save</string>
+    <string name="choose_action_url">Proceed</string>
+    <string name="abort_action_url">Abort</string>
 
     <string-array name="text_array">
         <item>Search on Web</item>
-        <item>Do nothing, just save</item>
+        <item>Do nothing</item>
     </string-array>
     <string-array name="email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>
-        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="vcard_array">
         <item>Add to Contacts</item>
-        <item>Do nothing, just save</item>
+        <item>Do nothing</item>
     </string-array>
     <string-array name="send_email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>
-        <item>Do nothing, just save</item>
     </string-array>
     <string-array name="sms_array">
         <item>Send SMS</item>
         <item>Call Number</item>
         <item>Add to Contacts</item>
-        <item>Do nothing, just save</item>
+    </string-array>
+    <string-array name="mms_array">
+        <item>Send MMS</item>
+        <item>Call Number</item>
+        <item>Add to Contacts</item>
     </string-array>
     <string-array name="tel_array">
         <item>Call Number</item>
         <item>Add to Contacts</item>
-        <item>Do nothing, just save</item>
+    </string-array>
+    <string-array name="geo_array">
+        <item>Open Maps App</item>
+        <item>Do nothing</item>
     </string-array>
     <string-array name="url_array">
         <item>Visit URL</item>
-        <item>Do nothing, just save</item>
+        <item>Do nothing</item>
     </string-array>
     <string-array name="product_array">
         <item>Search on Web</item>
-        <item>Do nothing, just save</item>
+        <item>Do nothing</item>
     </string-array>
     <string-array name="wifi_array">
         <item>Copy Password</item>
-        <item>Do nothing, just save</item>
+        <item>Do nothing</item>
     </string-array>
     <string-array name="history_array">
         <item>Copy to clipboard</item>
         <item>Delete entry</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>E-mail</item>
+        <item>URL</item>
+        <item>Phone number</item>
+        <item>SMS</item>
+        <item>Geo location</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>MMS</item>
+        <item>Wifi</item>
+        <item>VCard</item>
+        <item>Market</item>
+
     </string-array>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>
@@ -112,12 +164,7 @@
     <string name="title_activity_result_tel">Phone number found</string>
     <string name="title_activity_result_wifi">Wifi found</string>
     <string name="title_activity_result_contact">Contact found</string>
-    <string name="app_name_long">PRIVACY FRIENDLY QR scanner</string>
     <string name="action_help">Help</string>
-
-    <!-- ###DRAWER###-->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring Minimal set of permissions and supporting the detection of malicious links.</string>
@@ -131,9 +178,114 @@
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="help_permission1_description">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
     <string name="help_permission1_heading">Camera</string>
-    <string name="help_example"></string>
     <string name="help_privacy_heading">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">The scanning does not work, what can I do?</string>
     <string name="help_overview_heading">What is PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">With PRIVACY FRIENDLY QR Scanner you can scan barcodes and qr-codes with various contents.</string>
+    <string name="help_whatis_answer">With PRIVACY FRIENDLY QR Scanner you can scan/generate barcodes and qr-codes with various contents. Also You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
+
+
+    <!--###HELP###-->
+
+
+    <string name="help_whatis">What is PRIVACY FRIENDLY QR Scanner?</string>
+
+    <string name="help_usability">The scanning does not work, what can I do?</string>
+    <string name="help_usability_answer">If you cannot scan a code, increase the distance between the scanner and the code.</string>
+    <string name="help_privacy">What makes the app privacy-friendly?</string>
+    <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
+    <string name="help_permission">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_permission_answer">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
+    <!-- Strings related to SettingsActivity -->
+
+    <!-- Example General settings -->
+    <string name="pref_title_enable_history">Enable History</string>
+    <string name="pref_description_enable_history">Previous scans are logged for you to show them again</string>
+    <string name="pref_keep_duplicates">Keep duplicates</string>
+    <string name="pref_keep_duplicates_explanation">Duplicates are saved to the history</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_title_beep">Signal tone</string>
+    <string name="description_Mms">The QR-Code you scanned contains an MMS.</string>
+    <string name="geoInfo">The QR-Code you scanned contains a geographic information.</string>
+    <string name="content_copied">Content copied</string>
+    <string name="share_via">Share via</string>
+    <string name="no_content_in_history">There are no contents in history!</string>
+    <string name="selected_item">item selected</string>
+    <string name="selected_items">items selected</string>
+    <string name="removed_item">item removed</string>
+    <string name="removed_items">items removed</string>
+    <string name="canncelled_scan">You cancelled the scanning</string>
+    <string name="Scan_qr">Scan</string>
+    <string name="okay">Okay</string>
+    <string name="Store_in_gallery">Store</string>
+    <string name="phone_number">Phone number</string>
+
+    <string name="sms_text">SMS text</string>
+    <string name="mms">MMS</string>
+    <string name="network_name">Network name</string>
+    <string name="password">Password</string>
+    <string name="company">Company</string>
+    <string name="lastname">Lastname</string>
+    <string name="title">Title</string>
+    <string name="city">City</string>
+    <string name="street_number">Street number</string>
+    <string name="postal_address">Postal address</string>
+    <string name="e_mail_address">E-mail address</string>
+    <string name="firstname">Firstname</string>
+    <string name="street_name_and_number">Street name and number</string>
+    <string name="delete_content">Are you sure you want to delete  contents?</string>
+    <string name="delete_all">Delete all contents</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="D_all">Delete all record(s)</string>
+    <string name="all_records">Do you  want to delete all record(s)?</string>
+    <string name="Del">Do you  want to delete selected record(s)?</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="selected">Selected</string>
+    <string name="code_stored">QR code stored in gallery</string>
+    <string name="Ofeatures">Other features</string>
+    <string name="OfeaturesAnswer">You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
+    <string name="Content_copied">Content copied</string>
+    <string name="Share_via">Share via</string>
+    <string name="select_all">Select All</string>
+    <string name="selected_1">Selected</string>
+    <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Settings for Default Search Engine-->
+    <string name="pref_search_engine_title">Default Search Engine</string>
+    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
+        "https://duckduckgo.com/?q=%s"
+    </string>
+    <string name="pref_search_engine_uri_google" translatable="false">
+        "https://www.google.com/search?q=%s"
+    </string>
+    <string name="pref_enable_beep_on_scan_title">Beep on scan</string>
+    <string name="pref_enable_beep_on_scan_summary">Play a confirmation tone when scanning</string>
+    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
+    <string name="delete">delete</string>
+    <string name="dialog_history_delete_message">Do you really want to delete this entry?</string>
+    <string name="dialog_history_delete_title">Delete Entry</string>
+    <string name="pref_save_real_image_to_history_title">Save real code</string>
+    <string name="pref_save_real_image_to_history_summary">Saves a real image of the code instead of a recreation</string>
+    <string name="item_result_email_to">To:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="item_result_email_bcc">BCC:</string>
+    <string name="item_result_email_subject">Subject:</string>
+    <string name="item_result_email_body">Body:</string>
+    <string name="activity_result_toast_saved">Saved to history.</string>
+    <string name="fragment_result_product_label">Identifier:</string>
+    <string name="activity_result_toast_error_cant_load">Something went wrong when loading the result.</string>
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>DUCK_DUCK_GO</item>
+        <item>GOOGLE</item>
+    </string-array>
+
 </resources>

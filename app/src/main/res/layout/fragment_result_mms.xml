@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:fillViewport="true"
+        android:layout_above="@+id/btnCancel"
+        android:layout_alignRight="@+id/btnProceed"
+        android:layout_alignEnd="@+id/btnProceed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <TextView
+                android:id="@+id/textLink"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_Mms"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textResultMMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:autoLink="none"
+                android:gravity="center_horizontal"
+                android:textSize="20sp"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/textContentMMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textResultSms"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="22dp"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
