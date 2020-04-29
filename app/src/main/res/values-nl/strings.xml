@@ -28,7 +28,7 @@
     <string name="slide2_heading">Wat kan ik doen?</string>
     <string name="text_slide2">Je kunt een QR-code scannen met de QR-scanner of een QR-code genereren met de QR-generator.</string>
     <string name="slide3_heading">Meer functies</string>
-    <string name="text_slide3">De gescande QR-code kun je opslaan in de geschiedenis, delen of kopi?ren.</string>
+    <string name="text_slide3">De gescande QR-code kun je opslaan in de geschiedenis, delen of kopiëren.</string>
     <string name="wecome">Welkom</string>
     <string name="skip">Overslaan</string>
     <string name="next">Volgende</string>
@@ -69,7 +69,7 @@
 
     <string name="description_contact">De gescande QR-code bevat contactinformatie.</string>
     <string name="description_email">De gescande QR-code bevat een e-mailadres.</string>
-    <string name="description_send_email">De gescande QR-code bevat een ingevuld e-mailadres.</string>
+    <string name="description_send_email">De gescande QR-code bevat een e-mail.</string>
     <string name="description_product">De gescande QR-code bevat een productcode.</string>
     <string name="description_tel">De gescande QR-code bevat een telefoonnummer.</string>
     <string name="description_sms">De gescande QR-code bevat een sms.</string>
@@ -128,11 +128,11 @@
         <item>Niets doen</item>
     </string-array>
     <string-array name="wifi_array">
-        <item>Wachtwoord kopi?ren</item>
+        <item>Wachtwoord kopiëren</item>
         <item>Niets doen</item>
     </string-array>
     <string-array name="history_array">
-        <item>Kopi?ren naar klembord</item>
+        <item>Kopiëren naar klembord</item>
         <item>Item verwijderen</item>
     </string-array>
     <string-array name="generator_array">
@@ -146,7 +146,7 @@
         <item>MMS</item>
         <item>Wi-Fi</item>
         <item>VCard</item>
-        <item>Winkel</item>
+        <item>App-winkel</item>
 
     </string-array>
     <string name="copied_to_clipboard">Gekopieerd naar het klembord.</string>
@@ -164,7 +164,7 @@
     <string name="action_help">Hulp</string>
 
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met vari?rende inhoud scannen. Deze app vereist nauwelijks machtigingen en heeft ondersteuning voor het detecteren van kwaadaardige links.</string>
+    <string name="welcome_text">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met variërende inhoud scannen. Deze app vereist nauwelijks machtigingen en heeft ondersteuning voor het detecteren van kwaadaardige links.</string>
     <string name="welcome">Welkom</string>
     <string name="viewhelp">Hulp tonen</string>
 
@@ -178,8 +178,8 @@
     <string name="help_privacy_heading">Welke machtigingen vereist de PRIVACYVRIENDELIJKE QR-scanner?</string>
     <string name="help_category_example">Het scannen werkt niet. Wat kan ik hieraan doen?</string>
     <string name="help_overview_heading">Wat is de PRIVACYVRIENDELIJKE QR-scanner?</string>
-    <string name="help_intro">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met vari?rende inhoud scannen.</string>
-    <string name="help_whatis_answer">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met vari?rende inhoud scannen en genereren. Daarnaast kun je gescande QR-codes kopi?ren naar of delen met andere apps. Ook kun je gegeneerde QR-codes opslaan in de galerij en delen.</string>
+    <string name="help_intro">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met variërende inhoud scannen.</string>
+    <string name="help_whatis_answer">Met de PRIVACYVRIENDELIJKE QR-codescanner-app kun je barcodes en QR-codes met variërende inhoud scannen en genereren. Daarnaast kun je gescande QR-codes kopiëren naar of delen met andere apps. Ook kun je gegeneerde QR-codes opslaan in de galerij en delen.</string>
 
 
     <!--###HELP###-->
@@ -242,7 +242,7 @@
     <string name="selected">Geselecteerd</string>
     <string name="code_stored">De QR-code is opgeslagen in de galerij</string>
     <string name="Ofeatures">Overige functies</string>
-    <string name="OfeaturesAnswer">Je kunt gescande QR-codes kopi?ren naar of delen met andere apps. Ook kun je gegeneerde QR-codes opslaan in de galerij en delen.</string>
+    <string name="OfeaturesAnswer">Je kunt gescande QR-codes kopiëren naar of delen met andere apps. Ook kun je gegeneerde QR-codes opslaan in de galerij en delen.</string>
     <string name="Content_copied">Inhoud gekopieerd</string>
     <string name="Share_via">Delen via</string>
     <string name="select_all">Alles selecteren</string>
