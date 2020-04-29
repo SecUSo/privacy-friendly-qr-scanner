@@ -190,7 +190,7 @@
     <string name="help_usability">Het scannen werkt niet. Wat kan ik hieraan doen?</string>
     <string name="help_usability_answer">Als je geen codes kunt scannen, vergroot dan de afstand tussen je apparaat en de code.</string>
     <string name="help_privacy">Wat maakt de app privacyvriendelijk?</string>
-    <string name="help_privacy_answer">Privacy Friendly App-voorbeeld vereist geen enkele machtiging. Daarnaast wordt er niks bijgehouden en geen reclame getoond.</string>
+    <string name="help_privacy_answer">Privacy Friendly QR-scanner vereist geen enkele machtiging. Daarnaast wordt er niks bijgehouden en geen reclame getoond.</string>
     <string name="help_permission">Welke machtigingen vereist de PRIVACYVRIENDELIJKE QR-scanner?</string>
     <string name="help_permission_answer">Deze app vereist de cameramachtiging om barcodes and QR-codes te kunnen scannen middels de camera.</string>
     <!-- Strings related to SettingsActivity -->
