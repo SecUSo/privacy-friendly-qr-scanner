@@ -68,6 +68,8 @@ public class QrGeneratorOverviewActivity extends AppCompatActivity {
                     case 10:
                         intent = new Intent(QrGeneratorOverviewActivity.this,MarketEnterActivity.class);
                         break;
+                    case 11:
+                        intent = new Intent(QrGeneratorOverviewActivity.this, TextEnterActivity.class);
                 }
                 startActivity(intent);
             }
