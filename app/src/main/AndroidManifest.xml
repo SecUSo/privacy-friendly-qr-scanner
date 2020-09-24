@@ -105,6 +105,10 @@
             android:name=".ui.activities.generator.MarketEnterActivity"
             android:label="Market"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
+        <activity
+            android:name=".ui.activities.generator.TextEnterActivity"
+            android:label="Text"
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
 
         <provider
             android:name="android.support.v4.content.FileProvider"

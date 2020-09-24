@@ -147,6 +147,7 @@
         <item>Wi-Fi</item>
         <item>VCard</item>
         <item>App-winkel</item>
+        <item>Tekst</item>
 
     </string-array>
     <string name="copied_to_clipboard">Gekopieerd naar het klembord.</string>

@@ -114,6 +114,7 @@
         <item>Wifi</item>
         <item>VCard</item>
         <item>Market</item>
+        <item>Text</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
