@@ -30,7 +30,7 @@ public class Utils {
                 hints.put(ERROR_CORRECTION, ec);
             }
         }
-        if(!hints.containsKey(ERROR_CORRECTION)) {
+        if(!hints.containsKey(ERROR_CORRECTION) && format!=BarcodeFormat.AZTEC) {
             hints.put(ERROR_CORRECTION, ErrorCorrectionLevel.L.name());
         }
 
