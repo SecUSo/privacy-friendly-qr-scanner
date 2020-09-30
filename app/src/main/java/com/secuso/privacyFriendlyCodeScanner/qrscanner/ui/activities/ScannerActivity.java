@@ -96,7 +96,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
         beepManager = new BeepManager(this);
 
-        if (!getIntent().getBooleanExtra(Intents.Scan.BEEP_ENABLED, true) && preferences.getBoolean("pref_enable_beep_on_scan", true)) {
+        if (!preferences.getBoolean("pref_enable_beep_on_scan", true)) {
             beepManager.setBeepEnabled(false);
         }
 
