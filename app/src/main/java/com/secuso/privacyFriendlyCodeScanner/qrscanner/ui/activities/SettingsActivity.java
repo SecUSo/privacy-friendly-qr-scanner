@@ -6,6 +6,7 @@ import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.preference.SwitchPreference;
 import android.view.MenuItem;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
@@ -58,10 +59,18 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
         // Trigger the listener immediately with the preference's
         // current value.
-        sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
-                PreferenceManager
-                        .getDefaultSharedPreferences(preference.getContext())
-                        .getString(preference.getKey(), ""));
+        //
+        if (preference instanceof SwitchPreference)
+        {
+            // We don't want a description of the current switch state.
+            // We must not invoke the method below, because a switch has a boolean value, not a string
+        }
+        else{
+            sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
+                    PreferenceManager
+                            .getDefaultSharedPreferences(preference.getContext())
+                            .getString(preference.getKey(), ""));
+        }
     }
 
     @SuppressLint("RestrictedApi")
@@ -78,6 +87,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             addPreferencesFromResource(R.xml.preferences);
 
             bindPreferenceSummaryToValue(findPreference("pref_search_engine"));
+            bindPreferenceSummaryToValue(findPreference("bool_history"));
+            //TODO: Add other preferences
         }
     }
 

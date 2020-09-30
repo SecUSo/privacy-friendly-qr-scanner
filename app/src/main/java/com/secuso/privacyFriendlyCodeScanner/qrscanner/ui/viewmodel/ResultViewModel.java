@@ -67,6 +67,9 @@ public class ResultViewModel extends AndroidViewModel {
         mCodeImage = currentBarcodeResult.getBitmapWithResultPoints(ContextCompat.getColor(getApplication(), R.color.colorAccent));
 
         createHistoryItem();
+        if(mPreferences.getBoolean("bool_history",true)){
+            this.saveHistoryItem(currentHistoryItem);
+        }
     }
 
     public void saveHistoryItem(HistoryItem item) {
