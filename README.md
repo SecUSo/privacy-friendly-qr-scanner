@@ -12,7 +12,7 @@ Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps and ha
 
 ## Building 
 
-Further development requires Android Studio, we recommend to use at least version 3.4.2
+Further development requires Android Studio, we recommend to use the latest version.
  
 ### API Reference
 
@@ -24,7 +24,7 @@ This app uses the help of the [ZXing Projekt](https://github.com/zxing).
 ## License
 
 Privacy Friendly QR Scanner is licensed under the GPLv3.
-Copyright (C) 2015-2017 Philipp Rack
+Copyright (C) 2015-2017 Philipp Rack 2018-2020 Christopher Beckmann
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the app logo) copyright Karlsruhe Institute of Technology (2016-2019).
+The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the app logo) copyright Karlsruhe Institute of Technology (2016-2020).
 
 ## Contributors
 
@@ -47,10 +47,17 @@ App-Icon: <br />
 Markus Hau & Tatjana Albrandt<br />
 
 Github-Users: <br />
-kamuno<br />
 bassel-hanna<br />
-p-rack<br />
+Kamuno<br />
 yonjuni<br />
-naofum (Japanese translation)
-
-
+p-rack<br />
+Vistaus<br />
+naofum (Japanese translation)<br />
+YannAries<br />
+sleep-yearning<br />
+heapifyman<br />
+derEisbaerX<br />
+robo-w<br />
+corvinusWiz<br />
+vanMacG<br />
+wesinator<br />
