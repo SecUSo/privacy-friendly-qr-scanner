@@ -19,7 +19,7 @@
         android:layout_weight="1"
         android:background="@drawable/button_fullwidth"
         android:padding="1dp"
-        android:text="Generate"
+        android:text="@string/generate"
         android:textColor="@android:color/white" />
 
     <EditText
@@ -30,7 +30,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="160dp"
         android:ems="10"
-        android:hint="Hello World"
+        android:hint="@string/hello_world"
         android:inputType="textPersonName" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:layout_alignStart="@+id/generate"
         android:layout_alignBottom="@+id/editText"
         android:layout_marginBottom="60dp"
-        android:text="The text you want to encode:" />
+        android:text="@string/text_enter" />
 
 
 </RelativeLayout>
