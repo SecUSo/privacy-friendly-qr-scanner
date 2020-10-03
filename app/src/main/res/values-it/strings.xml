@@ -275,5 +275,9 @@
         <item>Google</item>
     </string-array>
 
+    <string name="text_enter">Il testo che vuoi codificare</string>
+    <string name="hello_world">Ciao mondo</string>
+    <string name="generate">creare</string>
+
 </resources>
 

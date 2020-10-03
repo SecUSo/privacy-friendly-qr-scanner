@@ -222,6 +222,11 @@
     <string name="Store_in_gallery">Store</string>
     <string name="phone_number">Phone number</string>
 
+    <!-- Generator activities -->
+    <string name="text_enter">The text you want to encode</string>
+    <string name="hello_world">Hello World</string>
+    <string name="generate">generate</string>
+
     <string name="sms_text">SMS text</string>
     <string name="mms">MMS</string>
     <string name="network_name">Network name</string>
