@@ -136,6 +136,7 @@
         <item>Cancella valore</item>
     </string-array>
     <string-array name="generator_array">
+        <item>Testo</item>
         <item>E-mail</item>
         <item>URL</item>
         <item>Numero di telefono</item>
@@ -147,7 +148,6 @@
         <item>Wifi</item>
         <item>VCard</item>
         <item>Market</item>
-        <item>Testo</item>
 
     </string-array>
     <string name="copied_to_clipboard">Copiato nella clipboard.</string>

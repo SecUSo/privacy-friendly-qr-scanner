@@ -103,6 +103,7 @@
         <item>Zu Kontakten hinzufügen</item>
     </string-array>
     <string-array name="generator_array">
+        <item>Text</item>
         <item>E-Mail</item>
         <item>URL</item>
         <item>Telefonnummer</item>
@@ -114,7 +115,6 @@
         <item>Wifi</item>
         <item>VCard</item>
         <item>Market</item>
-        <item>Text</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
