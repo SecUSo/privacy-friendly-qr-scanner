@@ -1,13 +1,14 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.zxing.client.result.EmailAddressParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
@@ -34,7 +35,8 @@ public class EmailResultAdapter extends RecyclerView.Adapter<EmailResultAdapter.
         TYPE_SUBJECT(R.string.item_result_email_subject),
         TYPE_BODY(R.string.item_result_email_body);
 
-        @StringRes int local;
+        @StringRes
+        int local;
 
         EmailResultItemType(int local) {
             this.local = local;

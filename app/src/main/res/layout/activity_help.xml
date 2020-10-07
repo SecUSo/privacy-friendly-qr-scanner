@@ -2,10 +2,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/scrollojt"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.secuso.privacyFriendlyCodeScanner.qrscanner.HelpActivity">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <ExpandableListView
         android:divider="@android:color/darker_gray"

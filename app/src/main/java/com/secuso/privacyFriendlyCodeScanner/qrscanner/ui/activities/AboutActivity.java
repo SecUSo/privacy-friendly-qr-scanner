@@ -1,11 +1,12 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.BuildConfig;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;

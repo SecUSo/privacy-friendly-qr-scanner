@@ -1,10 +1,10 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.annotation.SuppressLint;
+import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
-import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 

@@ -1,11 +1,11 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
-import android.support.annotation.NonNull;
-import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
@@ -31,10 +31,14 @@ public class HistoryViewModel extends AndroidViewModel {
     }
 
     private void loadHistories() {
-        executorService.execute(() ->
-                historyItemsLiveData.addSource(AppRepository.getInstance(getApplication()).getHistoryEntriesLiveData(), data -> {
+        executorService.execute(() -> {
+                LiveData<List<HistoryItem>> historyEntries = AppRepository.getInstance(getApplication()).getHistoryEntriesLiveData();
+
+                //TODO: this has to be done on the ui thread
+                historyItemsLiveData.addSource(historyEntries, data -> {
                     //Log.d("HistoryViewModel", "### \t\t ### \t Number of History Items: \t" + data.size());
-                    historyItemsLiveData.setValue(data);
-                }));
+                    historyItemsLiveData.setValue((List<HistoryItem>) data);
+                });
+        });
     }
 }

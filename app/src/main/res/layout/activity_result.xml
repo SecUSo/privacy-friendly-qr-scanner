@@ -13,11 +13,11 @@
         android:background="@color/white"
         tools:context="com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ResultActivity">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/activity_result_qr_type_card"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <android.support.constraint.ConstraintLayout
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -38,7 +38,7 @@
                         android:layout_height="0dp"
                         android:layout_margin="8dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/qqr"
+                        app:srcCompat="@drawable/qqr"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="1:1"
                         app:layout_constraintStart_toStartOf="parent"
@@ -60,9 +60,9 @@
                         app:layout_constraintStart_toEndOf="@id/activity_result_qr_image"
                         app:layout_constraintTop_toTopOf="@id/activity_result_qr_image" />
 
-                </android.support.constraint.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <FrameLayout
                 android:id="@+id/activity_result_frame_layout"
@@ -75,7 +75,7 @@
                 app:layout_constraintTop_toBottomOf="@id/activity_result_qr_type_card"
                 app:layout_constraintVertical_bias="0.0" />
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 

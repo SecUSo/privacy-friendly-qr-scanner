@@ -1,9 +1,10 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.ExpandableListAdapter;

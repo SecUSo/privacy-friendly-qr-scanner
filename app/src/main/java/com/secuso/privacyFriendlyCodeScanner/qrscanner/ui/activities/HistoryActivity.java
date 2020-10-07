@@ -1,14 +1,15 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
-import android.app.AlertDialog;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
@@ -32,7 +33,7 @@ public class HistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        mViewModel = ViewModelProviders.of(this).get(HistoryViewModel.class);
+        mViewModel = new ViewModelProvider(this).get(HistoryViewModel.class);
 
         mHistoryAdapter = new HistoryAdapter(this);
 

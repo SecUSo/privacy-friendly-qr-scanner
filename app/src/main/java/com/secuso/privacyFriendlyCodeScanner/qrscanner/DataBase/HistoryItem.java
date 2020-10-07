@@ -1,11 +1,12 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.database;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.Ignore;
-import android.arch.persistence.room.PrimaryKey;
 import android.graphics.Bitmap;
 import android.os.Parcel;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
@@ -25,7 +26,8 @@ public class HistoryItem {
 
     @PrimaryKey(autoGenerate = true) private int _id;
     private Bitmap image;
-    @NonNull private String text = "";
+    @NonNull
+    private String text = "";
     private byte[] rawBytes;
     private int numBits;
     private ResultPoint[] resultPoints;
@@ -91,7 +93,8 @@ public class HistoryItem {
 
     public HistoryItem() {}
 
-    @Ignore protected HistoryItem(Parcel in) {
+    @Ignore
+    protected HistoryItem(Parcel in) {
         _id = in.readInt();
         image = Converters.decodeImage(in.readString());
         text = in.readString();

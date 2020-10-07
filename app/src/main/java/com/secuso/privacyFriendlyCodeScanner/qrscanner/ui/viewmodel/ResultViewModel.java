@@ -1,13 +1,14 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel;
 
-import android.app.Activity;
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.lifecycle.AndroidViewModel;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.client.result.ParsedResult;
@@ -45,7 +46,7 @@ public class ResultViewModel extends AndroidViewModel {
      *     <li>mSavedToHistory</li>
      *     <li>mParsedResult</li>
      * </ul>
-     * If the state can not be created the activity will call {@link Activity#finish()}
+     * If the state can not be created the activity will call {@link AppCompatActivity#finish()}
      * This method will also update the {@link HistoryItem} in the database with a recreation of the QR Code if the image is missing.
      */
     public void initFromHistoryItem(HistoryItem historyItem) {

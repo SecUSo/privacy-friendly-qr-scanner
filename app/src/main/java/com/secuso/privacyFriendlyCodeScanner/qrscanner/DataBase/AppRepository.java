@@ -1,7 +1,8 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.database;
 
-import android.arch.lifecycle.LiveData;
 import android.content.Context;
+
+import androidx.lifecycle.LiveData;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;

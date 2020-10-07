@@ -6,26 +6,26 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
-import android.support.v4.app.TaskStackBuilder;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.TaskStackBuilder;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 import com.google.zxing.integration.android.IntentIntegrator;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.AboutActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.HelpActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.HistoryActivity;
-import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.generator.QrGeneratorOverviewActivity;
-import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ScannerActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.SettingsActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.TutorialActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.generator.QrGeneratorOverviewActivity;
 
 /**
  * @author Christopher Beckmann, Karola Marky
@@ -41,7 +41,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.TutorialAct
  * This way it will automatically fade in and out every time a transition is happening.
  *
  */
-public abstract class BaseActivity extends AppCompatActivity implements OnNavigationItemSelectedListener {
+public abstract class BaseActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     // delay to launch nav drawer item, to allow close animation to play
     public static final int NAVDRAWER_LAUNCH_DELAY = 250;

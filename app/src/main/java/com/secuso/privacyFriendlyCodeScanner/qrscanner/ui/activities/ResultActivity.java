@@ -1,22 +1,22 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
-import android.app.Activity;
-import android.arch.lifecycle.ViewModelProviders;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.bumptech.glide.Glide;
 import com.google.zxing.client.result.ParsedResult;
@@ -76,7 +76,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        viewModel = ViewModelProviders.of(this).get(ResultViewModel.class);
+        viewModel = new ViewModelProvider(this).get(ResultViewModel.class);
 
         initStateIfNecessary(savedInstanceState);
 
@@ -101,7 +101,7 @@ public class ResultActivity extends AppCompatActivity {
      *     <li>mSavedToHistory</li>
      *     <li>mParsedResult</li>
      * </ul>
-     * If the state can not be created the activity will call {@link Activity#finish()}
+     * If the state can not be created the activity will call {@link AppCompatActivity#finish()}
      * This method will also update the {@link HistoryItem} in the database with a recreation of the QR Code if the image is missing.
      * @param savedInstanceState is the bundle that is given to the {@link #onCreate(Bundle)} or {@link #onRestoreInstanceState(Bundle)} Methods
      */

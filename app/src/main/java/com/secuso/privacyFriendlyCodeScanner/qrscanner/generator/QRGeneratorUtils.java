@@ -1,6 +1,5 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.generator;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -9,10 +8,12 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v4.content.FileProvider;
 import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.FileProvider;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
@@ -31,7 +32,7 @@ public class QRGeneratorUtils {
 
     private static Uri cache = null;
 
-    public static void shareImage(Activity context, Uri imageUri) {
+    public static void shareImage(AppCompatActivity context, Uri imageUri) {
         if(context == null) {
             throw new IllegalArgumentException("Context may not be null.");
         }
