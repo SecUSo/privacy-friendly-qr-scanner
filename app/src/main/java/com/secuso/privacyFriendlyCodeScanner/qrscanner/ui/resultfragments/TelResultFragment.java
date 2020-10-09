@@ -19,8 +19,6 @@ public class TelResultFragment extends ResultFragment {
 
     TelParsedResult result;
 
-    private String tel;
-
     public TelResultFragment() {
         // Required empty public constructor
     }
@@ -45,11 +43,11 @@ public class TelResultFragment extends ResultFragment {
                 .setItems(R.array.tel_array, (dialog, which) -> {
                     switch (which) {
                         case 0:
-                            Intent call = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", tel, null));
+                            Intent call = new Intent(Intent.ACTION_DIAL, Uri.parse(result.getTelURI()));
                             context.startActivity(Intent.createChooser(call, context.getResources().getStringArray(R.array.tel_array)[0]));
                             break;
                         case 1:
-                            Intent contact = new Intent(ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,Uri.fromParts("tel", tel, null));
+                            Intent contact = new Intent(ContactsContract.Intents.SHOW_OR_CREATE_CONTACT,Uri.parse(result.getTelURI()));
                             context.startActivity(Intent.createChooser(contact, context.getResources().getStringArray(R.array.tel_array)[1]));
                             break;
                         default:
