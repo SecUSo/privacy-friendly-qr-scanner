@@ -85,11 +85,16 @@ public  class QRCodeEncoder {
             }
         } else if (type.equals(Contents.Type.WEB_URL)) {
                 data = trim(data);
-                if (data != null &&!data.startsWith("http://") && !data.startsWith("https://") )
+                if (data != null){
+                    if(!data.startsWith("http://") && !data.startsWith("https://")){
                     contents = "http://" + data;
+                    }
+                    else{
+                        contents = data;
+                    }
                     displayContents = data;
                     title = "URL";
-
+                }
         } else if (type.equals(Contents.Type.PHONE)) {
             data = trim(data);
             if (data != null) {
