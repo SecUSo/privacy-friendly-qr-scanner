@@ -52,8 +52,8 @@ public class EmailResultFragment extends ResultFragment {
                     String caption = "";
                     switch (which) {
                         case 0:
-                            Intent email = new Intent(Intent.ACTION_SEND);
-                            email.setType("plain/text");
+                            Intent email = new Intent(Intent.ACTION_SENDTO);
+                            email.setData(Uri.parse("mailto:"));
                             email.putExtra(Intent.EXTRA_EMAIL, result.getTos());
                             email.putExtra(Intent.EXTRA_SUBJECT, result.getSubject());
                             email.putExtra(Intent.EXTRA_TEXT, result.getBody());
