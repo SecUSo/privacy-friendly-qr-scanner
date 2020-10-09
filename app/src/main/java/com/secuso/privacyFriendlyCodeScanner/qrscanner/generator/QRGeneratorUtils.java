@@ -1,5 +1,7 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.generator;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -21,6 +23,7 @@ import com.google.zxing.WriterException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.text.FieldPosition;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -99,26 +102,43 @@ public class QRGeneratorUtils {
     }
 
     public static void saveImageToExternalStorage(Context context, Bitmap finalBitmap) {
-        File externalPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        File myDir = new File(externalPath, "Generated QR-Codes");
-        myDir.mkdirs();
+        ContentResolver resolver = context.getContentResolver();
 
-        File file = writeToFile(myDir, finalBitmap);
+// On API <= 28, use VOLUME_EXTERNAL instead.
+        Uri imageCollection = MediaStore.Images.Media.getContentUri(
+                MediaStore.VOLUME_EXTERNAL);//_PRIMARY);
 
-        // Tell the media scanner about the new file so that it is
-        // immediately available to the user.
-        MediaScannerConnection.scanFile(context, new String[] { file.toString() }, null,
-                new MediaScannerConnection.OnScanCompletedListener() {
-                    public void onScanCompleted(String path, Uri uri) {
-                        Log.i("ExternalStorage", "Scanned " + path + ":");
-                        Log.i("ExternalStorage", "-> uri=" + uri);
-                    }
-                });
+        // Define subfolder path in Image-MediaStorage
+        final String relativeLocation = Environment.DIRECTORY_PICTURES + File.separator + "Generated_QR_Codes";
+        // Define name
+        StringBuffer sb = new StringBuffer();
+        sb.append("QrCode_");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        sdf.format(Calendar.getInstance().getTime(), sb, new FieldPosition(SimpleDateFormat.DATE_FIELD));
+        sb.append(".png");
+        // Create new media entry
+        ContentValues newImage = new ContentValues();
+        newImage.put(MediaStore.Images.Media.DISPLAY_NAME, sb.toString());
+        newImage.put(MediaStore.Images.Media.MIME_TYPE, "image/png");
+        newImage.put(MediaStore.Images.ImageColumns.RELATIVE_PATH, relativeLocation);
+
+        Uri uri = context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, newImage);
+
+
+        OutputStream outStream = null;
+        try {
+            outStream = context.getContentResolver().openOutputStream(uri);
+            finalBitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+            outStream.flush();
+            outStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static File writeToFile(File path, Bitmap image) {
         StringBuffer sb = new StringBuffer();
-        sb.append("QrCode ");
+        sb.append("QrCode_");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         sdf.format(Calendar.getInstance().getTime(), sb, new FieldPosition(SimpleDateFormat.DATE_FIELD));
         sb.append(".png");
@@ -128,7 +148,7 @@ public class QRGeneratorUtils {
         // if multiple codes are generated on the same day.. name them with numbers
         for(int i = 2; result.exists(); i++) {
             sb.delete(17, sb.length());
-            sb.append(" (").append(i).append(").png");
+            sb.append("_s(").append(i).append(").png");
             result = new File(path, sb.toString());
         }
 
