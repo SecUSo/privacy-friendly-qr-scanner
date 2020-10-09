@@ -1,10 +1,33 @@
 Changelog
 ==========
-
-Version 2.2.1 *(tba)*
+Version 3.0.3 *(2020-03-01)*
 ----------------------------
 
- * \#48 Fix typos and misspellings in German translation
+* Fixed some crashes
+
+Version 3.0.1 *(2020-02-29)*
+----------------------------
+
+* Fixed a common crash
+
+Version 3.0.0 *(2020-02-27)*
+----------------------------
+
+ * Reworked the History UI
+ * Reworked the QR Result UI
+ * Migrated to room database
+ * Now uses zxing result parser instead of custom one
+ * History items now save more information
+ * Added the ability to save images of the qr code (can be turned of in settings)
+ * Added an option to disable the beep tone when scanning
+ * Various Bugfixes
+
+Version 2.2 *(2019-08-02)*
+----------------------------
+
+ * Fix typos and misspellings in translation
+ * Updated UI
+ * Added QR Code Generator
 
 Version 1.6.1 *(2016-12-27)*
 ----------------------------
