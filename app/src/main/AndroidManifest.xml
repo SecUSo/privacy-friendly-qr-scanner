@@ -4,7 +4,6 @@
     package="com.secuso.privacyfriendlycodescanner.qrscanner">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
 
