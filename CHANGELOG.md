@@ -1,5 +1,20 @@
 Changelog
 ==========
+
+
+Version 3.1.0 *(2020-10-xx)*
+----------------------------
+
+* Fixed consecutive scans
+* Fix processing "tel:" qr codes
+* Fix en/disabling beep on scan
+* Fix automatic save scans to history
+* Fix reading aztec codes
+* Fixed code generation for urls
+* Removed write to storage permission
+* Added option to encode pure text
+* Show e-mail apps only for "mailto:"
+
 Version 3.0.3 *(2020-03-01)*
 ----------------------------
 
