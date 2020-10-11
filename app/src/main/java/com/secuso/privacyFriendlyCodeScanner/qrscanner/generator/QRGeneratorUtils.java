@@ -6,11 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
-import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
@@ -104,10 +102,6 @@ public class QRGeneratorUtils {
     public static void saveImageToExternalStorage(Context context, Bitmap finalBitmap) {
         ContentResolver resolver = context.getContentResolver();
 
-// On API <= 28, use VOLUME_EXTERNAL instead.
-        Uri imageCollection = MediaStore.Images.Media.getContentUri(
-                MediaStore.VOLUME_EXTERNAL);//_PRIMARY);
-
         // Define subfolder path in Image-MediaStorage
         final String relativeLocation = Environment.DIRECTORY_PICTURES + File.separator + "Generated_QR_Codes";
         // Define name
@@ -122,12 +116,12 @@ public class QRGeneratorUtils {
         newImage.put(MediaStore.Images.Media.MIME_TYPE, "image/png");
         newImage.put(MediaStore.Images.ImageColumns.RELATIVE_PATH, relativeLocation);
 
-        Uri uri = context.getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, newImage);
+        Uri uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, newImage);
 
-
+        // Write media entry
         OutputStream outStream = null;
         try {
-            outStream = context.getContentResolver().openOutputStream(uri);
+            outStream = resolver.openOutputStream(uri);
             finalBitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
             outStream.flush();
             outStream.close();
@@ -148,7 +142,7 @@ public class QRGeneratorUtils {
         // if multiple codes are generated on the same day.. name them with numbers
         for(int i = 2; result.exists(); i++) {
             sb.delete(17, sb.length());
-            sb.append("_s(").append(i).append(").png");
+            sb.append("_(").append(i).append(").png");
             result = new File(path, sb.toString());
         }
 
