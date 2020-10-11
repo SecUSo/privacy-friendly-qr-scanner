@@ -71,8 +71,6 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/activity_horizontal_margin"
                     android:background="?selectableItemBackground"
-                    android:drawableTop="@drawable/ic_camera_white_24dp"
-                    android:drawableBottom="@drawable/ic_refresh_white_24dp"
                     android:drawablePadding="@dimen/activity_vertical_margin"
                     android:paddingTop="@dimen/activity_vertical_margin"
                     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -82,7 +80,9 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:drawableTopCompat="@drawable/ic_camera_white_24dp"
+                    app:drawableBottomCompat="@drawable/ic_refresh_white_24dp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

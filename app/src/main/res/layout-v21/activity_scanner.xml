@@ -56,8 +56,6 @@
         <TextView
             android:textColor="@color/white"
             android:textAlignment="center"
-            android:drawableTop="@drawable/ic_camera_white_24dp"
-            android:drawableBottom="@drawable/ic_refresh_white_24dp"
             android:drawablePadding="@dimen/activity_vertical_margin"
             android:id="@+id/activity_scanner_permission_needed_explanation"
             android:text="@string/activity_scanner_permission_needed_explanation"
@@ -70,7 +68,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:drawableTopCompat="@drawable/ic_camera_white_24dp"
+            app:drawableBottomCompat="@drawable/ic_refresh_white_24dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
