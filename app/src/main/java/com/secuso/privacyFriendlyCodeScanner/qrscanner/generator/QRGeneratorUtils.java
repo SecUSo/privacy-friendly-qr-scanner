@@ -6,12 +6,17 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Point;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
@@ -31,6 +36,9 @@ import static android.content.Context.WINDOW_SERVICE;
 
 public class QRGeneratorUtils {
 
+    private static final String IMAGE_FOLDER = "Generated QR Codes";
+    private static final String TAG = QRGeneratorUtils.class.getSimpleName();
+
     private static Uri cache = null;
 
     public static void shareImage(AppCompatActivity context, Uri imageUri) {
@@ -49,6 +57,7 @@ public class QRGeneratorUtils {
     public static Uri cacheImage(Context context, Bitmap image) {
         File imageFilePath = new File(context.getCacheDir(), "images/");
         imageFilePath.mkdir();
+        imageFilePath = new File(imageFilePath, buildFileString());
         File file = writeToFile(imageFilePath, image);
         cache = FileProvider.getUriForFile(context, "org.secuso.qrscanner.fileprovider", file);
         return cache;
@@ -92,71 +101,78 @@ public class QRGeneratorUtils {
         Bitmap bitmap = null;
         try {
             bitmap = MediaStore.Images.Media.getBitmap(context.getContentResolver(), cache);
+            saveImageToExternalStorage(context, bitmap);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        saveImageToExternalStorage(context, bitmap);
     }
 
-    public static void saveImageToExternalStorage(Context context, Bitmap finalBitmap) {
-        ContentResolver resolver = context.getContentResolver();
+    public static void saveImageToExternalStorage(Context context, Bitmap finalBitmap) throws IOException {
+        final String fileName = buildFileString();
 
-        // Define subfolder path in Image-MediaStorage
-        final String relativeLocation = Environment.DIRECTORY_PICTURES + File.separator + "Generated_QR_Codes";
+        OutputStream oStream;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            ContentResolver resolver = context.getContentResolver();
+            Uri imageCollection = MediaStore.Images.Media.getContentUri(MediaStore.VOLUME_EXTERNAL_PRIMARY);
+
+            final String relativePath = Environment.DIRECTORY_PICTURES + File.separator + IMAGE_FOLDER;
+
+            ContentValues newImage = new ContentValues();
+            newImage.put(MediaStore.Images.Media.DISPLAY_NAME, fileName);
+            newImage.put(MediaStore.Images.Media.MIME_TYPE, "image/png");
+            newImage.put(MediaStore.Images.ImageColumns.RELATIVE_PATH, relativePath);
+
+            Uri imageUri = resolver.insert(imageCollection, newImage);
+            oStream = resolver.openOutputStream(imageUri);
+            finalBitmap.compress(Bitmap.CompressFormat.PNG, 100, oStream);
+        } else {
+            File externalPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            File myDir = new File(externalPath, IMAGE_FOLDER);
+            myDir.mkdirs();
+            File file = writeToFile(new File(myDir, fileName), finalBitmap);
+
+            // Tell the media scanner about the new file so that it is
+            // immediately available to the user.
+            MediaScannerConnection.scanFile(context, new String[] { file.toString() }, null,
+                (path, uri) -> {
+                    Log.i("ExternalStorage", "Scanned " + path + ":");
+                    Log.i("ExternalStorage", "-> uri=" + uri);
+                }
+            );
+        }
+
+    }
+
+    private static @NonNull String buildFileString() {
         // Define name
         StringBuffer sb = new StringBuffer();
         sb.append("QrCode_");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         sdf.format(Calendar.getInstance().getTime(), sb, new FieldPosition(SimpleDateFormat.DATE_FIELD));
         sb.append(".png");
-        // Create new media entry
-        ContentValues newImage = new ContentValues();
-        newImage.put(MediaStore.Images.Media.DISPLAY_NAME, sb.toString());
-        newImage.put(MediaStore.Images.Media.MIME_TYPE, "image/png");
-        newImage.put(MediaStore.Images.ImageColumns.RELATIVE_PATH, relativeLocation);
-
-        Uri uri = resolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, newImage);
-
-        // Write media entry
-        OutputStream outStream = null;
-        try {
-            outStream = resolver.openOutputStream(uri);
-            finalBitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
-            outStream.flush();
-            outStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        return sb.toString();
     }
 
-    private static File writeToFile(File path, Bitmap image) {
-        StringBuffer sb = new StringBuffer();
-        sb.append("QrCode_");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
-        sdf.format(Calendar.getInstance().getTime(), sb, new FieldPosition(SimpleDateFormat.DATE_FIELD));
-        sb.append(".png");
-
-        File result = new File(path, sb.toString());
+    private static @Nullable File writeToFile(@NonNull File file, @NonNull Bitmap image) {
+        File outFile = file;
+        StringBuilder sb = new StringBuilder(file.toString());
 
         // if multiple codes are generated on the same day.. name them with numbers
-        for(int i = 2; result.exists(); i++) {
-            sb.delete(17, sb.length());
+        for(int i = 2; outFile.exists(); i++) {
+            sb.delete(sb.length() - 4, sb.length());
             sb.append("_(").append(i).append(").png");
-            result = new File(path, sb.toString());
+            outFile = new File(sb.toString());
         }
 
-        try {
-            FileOutputStream fOut = new FileOutputStream(result);
+        try(FileOutputStream fOut = new FileOutputStream(outFile)){
             image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
-            fOut.flush();
-            fOut.close();
         } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
 
-        return result;
+        return outFile;
     }
 
 }
