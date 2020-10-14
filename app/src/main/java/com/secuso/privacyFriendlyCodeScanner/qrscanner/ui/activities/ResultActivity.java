@@ -72,15 +72,6 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent scanIntent = new Intent(this, ScannerActivity.class);
-        startActivity(scanIntent);
-        this.finish();
-    }
-
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);

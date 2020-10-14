@@ -156,6 +156,8 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             showCameraPermissionRequirement(true);
         } else {
+            barcodeScannerView.setStatusText(null);
+            barcodeScannerView.decodeSingle(callback);
             barcodeScannerView.resume();
         }
     }
