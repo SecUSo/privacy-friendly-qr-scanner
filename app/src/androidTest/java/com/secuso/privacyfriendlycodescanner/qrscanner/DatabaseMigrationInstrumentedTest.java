@@ -1,12 +1,13 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner;
 
-import android.arch.persistence.db.SupportSQLiteDatabase;
-import android.arch.persistence.db.framework.FrameworkSQLiteOpenHelperFactory;
-import android.arch.persistence.room.Room;
-import android.arch.persistence.room.testing.MigrationTestHelper;
 import android.content.Context;
-import android.support.test.InstrumentationRegistry;
-import android.support.test.runner.AndroidJUnit4;
+
+import androidx.room.Room;
+import androidx.room.testing.MigrationTestHelper;
+import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.sqlite.db.framework.FrameworkSQLiteOpenHelperFactory;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.platform.app.InstrumentationRegistry;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppDatabase;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.DBHandler;
@@ -49,26 +50,26 @@ public class DatabaseMigrationInstrumentedTest {
     @Test
     public void useAppContext() throws Exception {
         // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
+        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
         assertEquals("com.secuso.privacyfriendlycodescanner.qrscanner", appContext.getPackageName());
     }
 
     @Before
     public void prepareDatabase() {
-        InstrumentationRegistry.getTargetContext().deleteDatabase(TEST_DB_NAME);
+        InstrumentationRegistry.getInstrumentation().getTargetContext().deleteDatabase(TEST_DB_NAME);
     }
 
     @After
     public void deleteDatabase() {
-        InstrumentationRegistry.getTargetContext().deleteDatabase(TEST_DB_NAME);
+        InstrumentationRegistry.getInstrumentation().getTargetContext().deleteDatabase(TEST_DB_NAME);
     }
 
     @Test
     public void testMigrationToRoomDatabase_1_2() throws Exception {
 
         // Create the old database with version 1
-        DBHandler dbHandler = new DBHandler(InstrumentationRegistry.getTargetContext(), TEST_DB_NAME);
+        DBHandler dbHandler = new DBHandler(InstrumentationRegistry.getInstrumentation().getTargetContext(), TEST_DB_NAME);
 
         dbHandler.addContent(data1);
         dbHandler.addContent(data2);
@@ -107,7 +108,7 @@ public class DatabaseMigrationInstrumentedTest {
     }
 
     private AppDatabase getMigratedRoomDatabase() {
-        AppDatabase database = Room.databaseBuilder(InstrumentationRegistry.getTargetContext(),
+        AppDatabase database = Room.databaseBuilder(InstrumentationRegistry.getInstrumentation().getTargetContext(),
                 AppDatabase.class, TEST_DB_NAME)
                 .addMigrations(AppDatabase.MIGRATIONS)
                 .build();
