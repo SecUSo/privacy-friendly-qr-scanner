@@ -2,7 +2,7 @@ Changelog
 ==========
 
 
-Version 3.1.0 *(2020-10-xx)*
+Version 3.1.0 *(2020-10-21)*
 ----------------------------
 
 * Fixed consecutive scans
