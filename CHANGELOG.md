@@ -6,14 +6,15 @@ Version 3.1.0 *(2020-10-21)*
 ----------------------------
 
 * Fixed consecutive scans
-* Fix processing "tel:" qr codes
-* Fix en/disabling beep on scan
-* Fix automatic save scans to history
-* Fix reading aztec codes
+* Fixed processing "tel:" qr codes
+* Fixed en/disabling beep on scan
+* Fixed automatic save scans to history
+* Fixed reading aztec codes
 * Fixed code generation for urls
-* Removed write to storage permission
+* Fixed showing other app than e-mail apps only for "mailto:"
+* Fixed a crash when accessing the history on some devices
 * Added option to encode pure text
-* Show e-mail apps only for "mailto:"
+* Removed write to storage permission for API>=29
 
 Version 3.0.3 *(2020-03-01)*
 ----------------------------
