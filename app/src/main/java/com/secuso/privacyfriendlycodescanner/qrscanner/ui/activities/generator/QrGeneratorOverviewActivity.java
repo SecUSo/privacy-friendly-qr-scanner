@@ -40,36 +40,39 @@ public class QrGeneratorOverviewActivity extends AppCompatActivity {
                         intent = new Intent(QrGeneratorOverviewActivity.this, TextEnterActivity.class);
                         break;
                     case 1:
-                        intent = new Intent(QrGeneratorOverviewActivity.this, MailEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,LongTextEnterActivity.class);
                         break;
                     case 2:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,UrlEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this, MailEnterActivity.class);
                         break;
                     case 3:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,TelEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,UrlEnterActivity.class);
                         break;
                     case 4:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,SmsEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,TelEnterActivity.class);
                         break;
                     case 5:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,GeoLocationEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,SmsEnterActivity.class);
                         break;
                     case 6:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,MeCardEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,GeoLocationEnterActivity.class);
                         break;
                     case 7:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,BizCardEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,MeCardEnterActivity.class);
                         break;
                     case 8:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,MmsEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,BizCardEnterActivity.class);
                         break;
                     case 9:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,WifiEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,MmsEnterActivity.class);
                         break;
                     case 10:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,VcardEnterActivity.class);
+                        intent = new Intent(QrGeneratorOverviewActivity.this,WifiEnterActivity.class);
                         break;
                     case 11:
+                        intent = new Intent(QrGeneratorOverviewActivity.this,VcardEnterActivity.class);
+                        break;
+                    case 12:
                         intent = new Intent(QrGeneratorOverviewActivity.this,MarketEnterActivity.class);
                         break;
                 }

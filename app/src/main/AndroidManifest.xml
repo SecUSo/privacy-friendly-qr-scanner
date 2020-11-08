@@ -110,6 +110,10 @@
             android:name=".ui.activities.generator.TextEnterActivity"
             android:label="Text"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
+        <activity
+                android:name=".ui.activities.generator.LongTextEnterActivity"
+                android:label="Multiline Text"
+                android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"
