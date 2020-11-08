@@ -19,8 +19,22 @@ public class LongTextEnterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_long_text_enter);
 
-        final EditText qrText=(EditText) findViewById(R.id.editText);
-        Button generate=(Button) findViewById(R.id.generate);
+        final EditText qrText = findViewById(R.id.editText);
+        Button generate = findViewById(R.id.generate);
+
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
+
+        // Intent sent through an external application
+        if(Intent.ACTION_SEND.equals(action) && type != null) {
+            if ("text/plain".equals(type)) {
+                String textData = intent.getStringExtra(Intent.EXTRA_TEXT);
+                if (textData != null) {
+                    qrText.setText(textData);
+                }
+            }
+        }
 
         int maxLength = 1138;
         qrText.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});

@@ -111,9 +111,15 @@
             android:label="Text"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
         <activity
-                android:name=".ui.activities.generator.LongTextEnterActivity"
-                android:label="Multiline Text"
-                android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
+            android:name=".ui.activities.generator.LongTextEnterActivity"
+            android:label="Multiline Text"
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
