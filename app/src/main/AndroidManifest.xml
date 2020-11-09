@@ -114,7 +114,7 @@
             android:name=".ui.activities.generator.LongTextEnterActivity"
             android:label="Multiline Text"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity">
-            <intent-filter>
+            <intent-filter android:label="QR code generator">
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="text/*" />
