@@ -18,6 +18,8 @@ public final class Contents {
         // must include "http://" or "https://".
         public static final String TEXT = "TEXT_TYPE";
 
+        public static final String LONG_TEXT = "LONG_TEXT_TYPE";
+
         // An email type. Use Intent.putExtra(DATA, string) where string is the email address.
         public static final String EMAIL = "EMAIL_TYPE";
 

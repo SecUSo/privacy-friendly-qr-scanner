@@ -140,6 +140,7 @@
     </string-array>
     <string-array name="generator_array">
         <item>Text</item>
+        <item>Multiline Text</item>
         <item>E-mail</item>
         <item>URL</item>
         <item>Phone number</item>
@@ -151,7 +152,6 @@
         <item>Wifi</item>
         <item>VCard</item>
         <item>Market</item>
-
     </string-array>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>

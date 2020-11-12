@@ -3,11 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView android:id="@+id/imageView1"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:gravity="center_vertical"/>
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center_vertical" />
 
     <Button
         android:id="@+id/btnstore"
