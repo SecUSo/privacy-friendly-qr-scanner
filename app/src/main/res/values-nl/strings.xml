@@ -53,7 +53,7 @@
     <string name="knowRisks">Ik heb de link gecontroleerd en wil de website bezoeken.</string>
     <string name="domain">Domeinnaam</string>
     <string name="urlExplanation">QR-codes kunnen links bevatten die naar een nepsite leiden. Zo\'n site kan je persoonlijke gegevens misbruiken (phishingwebsite) of malware (bijv. virussen) installeren op je apparaat.\n\n<b>Controleer</b> dus altijd of de link wel de link is die je verwachtte:</string>
-    <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Informatie</a> over het controleren van links (met dank aan de collega\'s van de TU Darmstadt). Als je de link niet vertrouwt, open hem dan niet en sla hem ook niet op.</string>
+    <string name="further_info"><a href="https://secuso.aifb.kit.edu/99.php">Informatie</a> over het controleren van links (met dank aan de collega\'s van de TU Darmstadt). Als je de link niet vertrouwt, open hem dan niet en sla hem ook niet op.</string>
     <string name="delete_history">Weet je zeker dat je geschiedenis wilt wissen?</string>
     <string name="ok">Ja</string>
     <string name="element_removed">Item verwijderd.</string>
