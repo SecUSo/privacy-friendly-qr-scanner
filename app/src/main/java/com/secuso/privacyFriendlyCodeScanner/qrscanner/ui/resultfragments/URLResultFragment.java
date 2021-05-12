@@ -2,9 +2,11 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -32,6 +34,7 @@ public class URLResultFragment extends ResultFragment {
 
     private boolean checked = false;
     private boolean trust = false;
+    private SharedPreferences preferences;
     private String qrurl;
 
     public URLResultFragment() {
@@ -75,13 +78,17 @@ public class URLResultFragment extends ResultFragment {
 
         resultText.setText(WordtoSpan);
 
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
         // checked = trust = getBoolean("trust", false);
 
         final CheckBox knowDomain = (CheckBox) v.findViewById(R.id.checkBoxKnowRisks);
 
         // wenn bereits vertraut wurde, checkbox setzen
-        if(trust)
+        if (trust || (!preferences.getBoolean("pref_require_link_confirmation", true) && !preferences.getBoolean("pref_require_link_double_confirmation", true))) {
             knowDomain.setChecked(true);
+            checked = true;
+        }
 
         knowDomain.setOnClickListener(v1 -> checked = knowDomain.isChecked());
 
@@ -91,7 +98,7 @@ public class URLResultFragment extends ResultFragment {
     public void onProceedPressed(Context context) {
         if(!checked) {
             Toast.makeText(context,R.string.conform_url,Toast.LENGTH_LONG).show();
-        } else {
+        } else if (preferences.getBoolean("pref_require_link_double_confirmation", true)) {
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
             builder.setTitle(R.string.choose_action)
                     .setItems(R.array.url_array, (dialog, which) -> {
@@ -121,6 +128,21 @@ public class URLResultFragment extends ResultFragment {
                         }
                     });
             builder.create().show();
+        } else {
+            String qrurl3="";
+            if(!qrurl.startsWith("http://") && !qrurl.startsWith("https://"))
+            {
+                qrurl3 = "http://" + qrurl;
+
+                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
+                url.setData(Uri.parse(qrurl3));
+                startActivity(Intent.createChooser(url, "Visit URL"));}
+            else {
+                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
+                url.setData(Uri.parse(qrurl));
+                startActivity(Intent.createChooser(url, "Visit URL"));
+
+            }
         }
     }
 }
