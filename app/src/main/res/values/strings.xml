@@ -271,6 +271,8 @@
     </string>
     <string name="pref_enable_beep_on_scan_title">Beep on scan</string>
     <string name="pref_enable_beep_on_scan_summary">Play a confirmation tone when scanning</string>
+    <string name="pref_require_link_confirmation_title">Link confirmation</string>
+    <string name="pref_require_link_confirmation_summary">Require confirmation before opening a link</string>
     <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
     <string name="delete">delete</string>
     <string name="dialog_history_delete_message">Do you really want to delete this entry?</string>
