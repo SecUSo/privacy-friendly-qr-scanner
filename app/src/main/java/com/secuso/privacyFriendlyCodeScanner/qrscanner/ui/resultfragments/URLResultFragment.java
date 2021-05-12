@@ -85,7 +85,7 @@ public class URLResultFragment extends ResultFragment {
         final CheckBox knowDomain = (CheckBox) v.findViewById(R.id.checkBoxKnowRisks);
 
         // wenn bereits vertraut wurde, checkbox setzen
-        if (trust || !preferences.getBoolean("pref_require_link_confirmation", true)) {
+        if (trust || (!preferences.getBoolean("pref_require_link_confirmation", true) && !preferences.getBoolean("pref_require_link_double_confirmation", true))) {
             knowDomain.setChecked(true);
             checked = true;
         }
@@ -98,7 +98,7 @@ public class URLResultFragment extends ResultFragment {
     public void onProceedPressed(Context context) {
         if(!checked) {
             Toast.makeText(context,R.string.conform_url,Toast.LENGTH_LONG).show();
-        } else if (preferences.getBoolean("pref_require_link_confirmation", true)) {
+        } else if (preferences.getBoolean("pref_require_link_double_confirmation", true)) {
             AlertDialog.Builder builder = new AlertDialog.Builder(context);
             builder.setTitle(R.string.choose_action)
                     .setItems(R.array.url_array, (dialog, which) -> {
