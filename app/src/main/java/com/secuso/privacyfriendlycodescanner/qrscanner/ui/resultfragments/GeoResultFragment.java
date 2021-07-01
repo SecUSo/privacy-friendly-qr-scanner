@@ -20,7 +20,7 @@ import java.text.DecimalFormat;
 
 public class GeoResultFragment extends ResultFragment {
 
-    private static DecimalFormat df = new DecimalFormat("0.000000");
+    private static final DecimalFormat df = new DecimalFormat("0.000000");
 
     GeoParsedResult result;
 

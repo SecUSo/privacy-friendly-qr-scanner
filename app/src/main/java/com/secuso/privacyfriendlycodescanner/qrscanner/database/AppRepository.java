@@ -25,9 +25,9 @@ public class AppRepository {
 
     private static AppRepository INSTANCE = null;
 
-    private AppDatabase appDatabase;
+    private final AppDatabase appDatabase;
 
-    private ExecutorService executor = Executors.newSingleThreadExecutor();
+    private final ExecutorService executor = Executors.newSingleThreadExecutor();
 
     public synchronized static AppRepository getInstance(Context context) {
         if(INSTANCE == null) {

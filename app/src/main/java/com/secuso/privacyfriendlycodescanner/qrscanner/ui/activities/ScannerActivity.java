@@ -58,7 +58,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         @Override public void cameraClosed() { }
     };
 
-    private BarcodeCallback callback = new BarcodeCallback() {
+    private final BarcodeCallback callback = new BarcodeCallback() {
         @Override
         public void barcodeResult(BarcodeResult result) {
             String contents = result.toString();

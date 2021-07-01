@@ -43,7 +43,7 @@ public class EmailResultAdapter extends RecyclerView.Adapter<EmailResultAdapter.
         }
     }
 
-    private List<EmailResultItem> resultItems = new ArrayList<>();
+    private final List<EmailResultItem> resultItems = new ArrayList<>();
 
     private EmailResultAdapter(@NonNull List<EmailResultItem> resultItems) {
         this.resultItems.addAll(resultItems);

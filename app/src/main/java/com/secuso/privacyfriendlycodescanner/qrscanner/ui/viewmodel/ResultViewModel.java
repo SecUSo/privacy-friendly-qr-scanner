@@ -30,7 +30,7 @@ public class ResultViewModel extends AndroidViewModel {
     public Bitmap mCodeImage = null;
     public boolean mSavedToHistory = false;
 
-    private SharedPreferences mPreferences;
+    private final SharedPreferences mPreferences;
 
     public ResultViewModel(@NonNull Application application) {
         super(application);

@@ -26,8 +26,8 @@ import java.util.List;
  */
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryItemViewHolder> {
 
-    private Context context;
-    private List<HistoryItem> historyEntries;
+    private final Context context;
+    private final List<HistoryItem> historyEntries;
 
     public HistoryAdapter(Context context) {
         this.context = context;

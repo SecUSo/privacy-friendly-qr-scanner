@@ -24,9 +24,9 @@ import java.util.Date;
  */
 public class HistoryItemViewModel extends BaseObservable {
 
-    private Context context;
-    private HistoryItem entry;
-    private ParsedResult parsed;
+    private final Context context;
+    private final HistoryItem entry;
+    private final ParsedResult parsed;
     private boolean disabled = false;
 
     public HistoryItemViewModel(Context context, HistoryItem entry) {

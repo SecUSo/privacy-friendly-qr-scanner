@@ -3,7 +3,6 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.result;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.google.zxing.Result;
 import com.journeyapps.barcodescanner.BarcodeResult;
 
 public class ParcelableBarcodeResultDecorator implements Parcelable {

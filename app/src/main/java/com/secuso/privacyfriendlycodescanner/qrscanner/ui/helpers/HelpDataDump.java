@@ -34,7 +34,7 @@ import java.util.List;
 
 public class HelpDataDump {
 
-    private Context context;
+    private final Context context;
 
     public HelpDataDump(Context context) {
         this.context = context;

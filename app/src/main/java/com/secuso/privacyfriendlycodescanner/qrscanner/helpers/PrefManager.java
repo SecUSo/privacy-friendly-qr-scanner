@@ -11,11 +11,11 @@ import android.content.SharedPreferences;
 public class PrefManager {
     public static final String PREF_SAVE_REAL_IMAGE_TO_HISTORY = "pref_save_real_image_to_history";
 
-    private SharedPreferences pref;
-    private SharedPreferences.Editor editor;
+    private final SharedPreferences pref;
+    private final SharedPreferences.Editor editor;
 
     // shared pref mode
-    private int PRIVATE_MODE = 0;
+    private final int PRIVATE_MODE = 0;
 
     // Shared preferences file name
     private static final String PREF_NAME = "privacy_friendly_apps";
