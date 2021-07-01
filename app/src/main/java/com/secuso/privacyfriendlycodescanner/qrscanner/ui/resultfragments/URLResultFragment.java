@@ -18,8 +18,6 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
-
 import com.google.zxing.client.result.URIParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
@@ -31,7 +29,7 @@ public class URLResultFragment extends ResultFragment {
     URIParsedResult result;
 
     private boolean checked = false;
-    private boolean trust = false;
+    private final boolean trust = false;
     private String qrurl;
 
     public URLResultFragment() {
@@ -92,35 +90,23 @@ public class URLResultFragment extends ResultFragment {
         if(!checked) {
             Toast.makeText(context,R.string.conform_url,Toast.LENGTH_LONG).show();
         } else {
-            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setTitle(R.string.choose_action)
-                    .setItems(R.array.url_array, (dialog, which) -> {
-                        String caption = "";
-                        switch (which) {
-                            case 0:
-                                String qrurl3="";
-                                if(!qrurl.startsWith("http://") && !qrurl.startsWith("https://"))
-                                {
-                                    qrurl3 = "http://" + qrurl;
+            String caption = "";
+            String qrurl3="";
+            if(!qrurl.startsWith("http://") && !qrurl.startsWith("https://"))
+            {
+                qrurl3 = "http://" + qrurl;
 
-                                    Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
-                                    url.setData(Uri.parse(qrurl3));
-                                    caption = getResources().getStringArray(R.array.url_array)[0];
-                                    startActivity(Intent.createChooser(url, caption));}
-                                else {
-                                    Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
-                                    url.setData(Uri.parse(qrurl));
-                                    caption = getResources().getStringArray(R.array.url_array)[0];
-                                    startActivity(Intent.createChooser(url, caption));
+                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
+                url.setData(Uri.parse(qrurl3));
+                caption = getResources().getStringArray(R.array.url_array)[0];
+                startActivity(Intent.createChooser(url, caption));}
+            else {
+                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
+                url.setData(Uri.parse(qrurl));
+                caption = getResources().getStringArray(R.array.url_array)[0];
+                startActivity(Intent.createChooser(url, caption));
 
-                                }
-                                break;
-
-
-                            default:
-                        }
-                    });
-            builder.create().show();
+            }
         }
     }
 }
