@@ -57,7 +57,7 @@
     <string name="knowRisks">I checked the link and want to visit the website.</string>
     <string name="domain">Domain</string>
     <string name="urlExplanation">QR-Codes can contain links, that lead to a faked website, which can compromise your personal data (phishing website) or transfer malware (e.g. viruses) to your device.\n\nAs a consequence you should <b>check</b> if the following link is the one you expected:</string>
-    <string name="further_info"><a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">Information</a> how to check links are provided by the colleagues of TU Darmstadt. If you do not trust the link, click do not trust &amp; do not save.</string>
+    <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Information</a> on how to check links.</string>
     <string name="delete_history">Do you want to delete the history?</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element removed.</string>
