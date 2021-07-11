@@ -92,7 +92,8 @@ public class URLResultFragment extends ResultFragment {
         } else {
             String caption = "";
             String qrurl3="";
-            if(!qrurl.startsWith("http://") && !qrurl.startsWith("https://"))
+            final String lowercase_qrurl = qrurl.toLowerCase();
+            if(!lowercase_qrurl.startsWith("http://") && !lowercase_qrurl.startsWith("https://"))
             {
                 qrurl3 = "http://" + qrurl;
 
