@@ -270,6 +270,7 @@
     <string name="activity_result_toast_saved">Opgeslagen in de geschiedenis.</string>
     <string name="fragment_result_product_label">Identificatie:</string>
     <string name="activity_result_toast_error_cant_load">Er is iets misgegaan tijdens het laden van het resultaat.</string>
+    <string name="activity_enter_toast_missing_data">Geen gegevens</string>
 
     <string name="text_enter">De tekst die u wilt coderen</string>
     <string name="hello_world">Hallo Wereld</string>

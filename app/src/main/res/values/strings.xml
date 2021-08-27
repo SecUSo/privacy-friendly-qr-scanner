@@ -285,6 +285,7 @@
     <string name="activity_result_toast_saved">Saved to history.</string>
     <string name="fragment_result_product_label">Identifier:</string>
     <string name="activity_result_toast_error_cant_load">Something went wrong when loading the result.</string>
+    <string name="activity_enter_toast_missing_data">No data</string>
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>
