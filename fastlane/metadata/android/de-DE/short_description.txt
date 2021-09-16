@@ -1,1 +1,1 @@
-Privatsphäre-freundlicher QR-Scanner mit minimalen Berechtigungen
+(SECUSO) Privatsphäre-freundlicher QR-Scanner mit minimalen Berechtigungen
