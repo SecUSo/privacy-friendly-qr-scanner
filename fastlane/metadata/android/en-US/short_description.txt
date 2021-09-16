@@ -1,1 +1,1 @@
-Privacy Friendly QR-Scanner with minimal permissions
+(SECUSO) Privacy Friendly QR-Scanner with minimal permissions
