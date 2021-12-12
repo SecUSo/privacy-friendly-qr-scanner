@@ -1,0 +1,297 @@
+<resources>
+    <string name="app_name">QR Scanner</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="qr_scanner">QRスキャナー</string>
+    <string name="qr_generator">QR作成</string>
+    <string name="history">履歴</string>
+    <string name="settings">設定</string>
+    <string name="help">ヘルプ</string>
+    <string name="about">このアプリについて</string>
+    <string name="title_activity_qrscanner">QRスキャナー</string>
+
+    <string name="action_settings">設定</string>
+    <string name="title_activity_qr_scanner">QRスキャナー</string>
+    <string name="title_activity_qr_generator">QR作成</string>
+    <string name="title_activity_history">履歴</string>
+    <string name="title_activity_settings">設定</string>
+    <string name="title_activity_help">ヘルプ</string>
+    <string name="title_activity_about">このアプリについて</string>
+    <string name="Settings">設定</string>
+    <string name="QRScanner">QRスキャナー</string>
+    <string name="QRGenerator">QR作成</string>
+    <string name="History">履歴</string>
+
+    <string name="slide1_heading">ようこそ!</string>
+    <string name="slide1_text">プライバシーに配慮したQRスキャナーにようこそ。ガイドツアーで要点を見ましょう。</string>
+    <string name="slide2_heading">何ができますか?</string>
+    <string name="text_slide2">QRコードをスキャンすることも、QRコードを作ることもできます。</string>
+    <string name="slide3_heading">さらに</string>
+    <string name="text_slide3">作ったQRコードは保存できます。シェアもコピーもできます。</string>
+    <string name="wecome">ようこそ</string>
+    <string name="skip">飛ばす</string>
+    <string name="next">次へ</string>
+    <string name="help_">ヘルプ</string>
+
+    <string name="tutorial">ガイドツアー</string>
+
+    <!--###ABOUT###-->
+    <string name="about_author">作者: </string>
+    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
+    <string name="about_author_string">%s、そして協力の方々</string>
+    <string name="about_affiliation">所属</string>
+    <string name="privacy_friendly">このアプリは PRIVACY FRIENDLY Apps グループの所属です。開発はダルムシュタット工科大学。ソースコードのライセンスは GPLv3。画像の著作権は TU Darmstadt と Google Inc 所有です。</string>
+    <string name="more_info">詳しい情報は:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github レポジトリ</a></string>
+    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSOのウェブサイト</a></string>
+    <string name="about_libraries">使用ライブラリ:</string>
+    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
+    <string name="app_name_long">Privacy Friendly QR Scanner</string>
+    <string name="version_number">バージョン v%s</string>
+    <string name="delete_items">削除された項目</string>
+
+    <string name="scan_text">この枠をQRコードにかざして下さい。</string>
+    <string name="action_clear">履歴を消去</string>
+    <string name="cannot_clear">履歴が空です</string>
+    <string name="knowRisks">このリンクを確認したので、ウェブサイトを開きます。</string>
+    <string name="domain">ドメイン</string>
+    <string name="urlExplanation">QRコードで開くリンクは、偽造サイトの可能性があります。その場合個人情報が盗まれたり、お使いの機器がマルウェア(ウイルス)に感染したりします。以下が、本当に開きたいリンクかどうか確認して下さい。</string>in
+    <string name="further_info">リンクの確認方法は<a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">こちら</a></string>
+    <string name="delete_history">履歴を消去しますか?</string>
+    <string name="ok">はい</string>
+    <string name="element_removed">削除しました。</string>
+    <string name="conform_url">リンクは確認のこと</string>
+    <string name="wifi_explanation">この版おアプリはWifiに自動接続はできません。詳細は以下の通りです。</string>
+    <string name="encryption">暗号化</string>
+    <string name="action_about">このアプリについて</string>
+    <string name="history_disabled">履歴を消去しました</string>
+    <string name="to">受取:</string>
+    <string name="subject">題:</string>
+
+    <string name="usability_hint2">近付きすぎると、読み取れないことがあります。離れてみて下さい。</string>
+
+    <string name="description_contact">このQRコードは、連絡先です。アドレス帳に登録するには、「次へ」を押して下さい。</string>
+    <string name="description_email">このQRコードにはメールアドレスです。メールを送るか、アドレス帳に登録するは、「次へ」を押して下さい。</string>
+    <string name="description_send_email">このQRコードにはメールアドレスが入っています。メールを送るか、アドレス帳に登録するには、「次へ」を押して下さい。</string>
+    <string name="description_product">このQRコードには製品コードです。ウェブ検索するには、「次へ」を押して下さい。</string>
+    <string name="description_tel">このQRコードは電話番号です。電話をかけるか、アドレス帳に登録するには、「次へ」を押して下さい。</string>
+    <string name="description_sms">このQRコードは、ショートメッセージの送付先です。メッセージを送るかアドレス帳に登録するには、「次へ」を押して下さい。</string>
+    <string name="description_text">このQRコードは、文章が入っています。内容をウェブ検索するには、「次へ」を押して下さい。</string>
+
+    <string name="choose_action">次へ</string>
+    <string name="abort_action">取り消す</string>
+
+    <string name="proceed">次へ</string>
+    <string name="back">戻る</string>
+
+    <string name="choose_action_url">次へ</string>
+    <string name="abort_action_url">取り消す</string>
+
+    <string-array name="text_array">
+        <item>ウェブで検索</item>
+        <item>やめる</item>
+    </string-array>
+    <string-array name="email_array">
+        <item>メールを送る</item>
+        <item>アドレス帳に登録</item>
+    </string-array>
+    <string-array name="vcard_array">
+        <item>アドレス帳に登録</item>
+        <item>やめる</item>
+    </string-array>
+    <string-array name="send_email_array">
+        <item>メールを送る</item>
+        <item>やめる</item>
+    </string-array>
+    <string-array name="sms_array">
+        <item>ショートメッセージを送る</item>
+        <item>電話をかける</item>
+        <item>アドレス帳に登録</item>
+    </string-array>
+    <string-array name="mms_array">
+        <item>MMSを送る</item>
+        <item>電話をかける</item>
+        <item>アドレス帳に登録</item>
+    </string-array>
+    <string-array name="tel_array">
+        <item>電話をかける</item>
+        <item>アドレス帳に登録</item>
+    </string-array>
+    <string-array name="geo_array">
+        <item>Mapsアプリで開く</item>
+        <item>やめる</item>
+    </string-array>
+    <string-array name="url_array">
+        <item>ウェブサイトを開く</item>
+        <item>やめる</item>
+    </string-array>
+    <string-array name="product_array">
+        <item>ウェブで検索</item>
+        <item>やめる</item>
+    </string-array>
+    <string-array name="wifi_array">
+        <item>パスワードをコピー</item>
+        <item>やめる</item>
+    </string-array>
+    <string-array name="history_array">
+        <item>クリップボードにコピー</item>
+        <item>削除</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>文</item>
+        <item>メールアドレス</item>
+        <item>URL</item>
+        <item>電話番号</item>
+        <item>ショートメッセージ</item>
+        <item>位置情報</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>MMS</item>
+        <item>Wifi</item>
+        <item>VCard</item>
+        <item>Market</item>
+
+    </string-array>
+    <string name="copied_to_clipboard">クリップボードにコピーしました。</string>
+    <string name="noname">名前が空欄です</string>
+
+    <string name="title_activity_result_url">リンクです</string>
+    <string name="title_activity_result_text">文章です</string>
+    <string name="title_activity_result_sms">SMSです</string>
+    <string name="title_activity_result_email">メールアドレスです</string>
+    <string name="title_activity_result_send_email">メールアドレスです</string>
+    <string name="title_activity_result_product">製品コードです</string>
+    <string name="title_activity_result_tel">電話番号です</string>
+    <string name="title_activity_result_wifi">Wifiです</string>
+    <string name="title_activity_result_contact">連絡先です</string>
+    <string name="action_help">ヘルプ</string>
+
+    <!-- ### WELCOME DIALOG ### -->
+    <string name="welcome_text">このアプリ「PRIVACY FRIENDLY QR Code Scanner」では、バーコードに加え、様々な内容のQRコードをスキャンできます。必要な権限は最小限。危険なリンクの検知も可能です。</string>
+    <string name="welcome">ようこそ</string>
+    <string name="viewhelp">ヘルプ</string>
+
+    <!--<string name="help_privacy_heading">Privacy Info</string>
+    <string name="about_author_contributors">Contributors</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="more_info">More information can be found on:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
+    <string name="help_permission1_description">必要な権限はカメラだけです。</string>
+    <string name="help_permission1_heading">カメラ</string>
+    <string name="help_privacy_heading">このアプリ「PRIVACY FRIENDLY QR Scanner」に必要な権限は?</string>
+    <string name="help_category_example">スキャンできない場合は、どうすれば良いですか?</string>
+    <string name="help_overview_heading">このアプリ「PRIVACY FRIENDLY QR Scanner」とは?</string>
+    <string name="help_intro">このアプリ「PRIVACY FRIENDLY QR Scanner」では、バーコードと、様々な内容のQRコードをスキャンできます。</string>
+    <string name="help_whatis_answer">このアプリ「PRIVACY FRIENDLY QR Scanner」では、バーコードと、様々な内容のQRコードをスキャン・作成できます。コードはコピーしたり、他のアプリで開いたりできますし、作成したコードは保存もできます。</string>
+
+
+    <!--###HELP###-->
+
+
+    <string name="help_whatis">このアプリ「PRIVACY FRIENDLY QR Scanner」とは?</string>
+
+    <string name="help_usability">スキャンできない時は?</string>
+    <string name="help_usability_answer">近過ぎるとスキャンできます。離してみて下さい。</string>
+    <string name="help_privacy">このアプリは、どう個人情報に配慮していますか?</string>
+    <string name="help_privacy_answer">カメラ以外の権限は使いません。使用者を追跡したり、広告を表示したりもしません。</string>
+    <string name="help_permission">必要な権限は?</string>
+    <string name="help_permission_answer">カメラ以外の権限は使いません。</string>
+    <!-- Strings related to SettingsActivity -->
+
+    <!-- Example General settings -->
+    <string name="pref_title_enable_history">履歴を保存</string>
+    <string name="pref_description_enable_history">過去のスキャンを保存して、いつでも利用できるようにします</string>
+    <string name="pref_keep_duplicates">コピーを保存</string>
+    <string name="pref_keep_duplicates_explanation">保存したコードは「履歴」から開いて下さい</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_title_beep">検知音</string>
+    <string name="description_Mms">このQRコードはMMSです。</string>
+    <string name="geoInfo">このQRコードは位置情報です。</string>
+    <string name="content_copied">コピーしました。</string>
+    <string name="share_via">開く方法を選択:</string>
+    <string name="no_content_in_history">履歴は空です</string>
+    <string name="selected_item">項目を選択</string>
+    <string name="selected_items">項目を選択</string>
+    <string name="removed_item">項目を削除</string>
+    <string name="removed_items">項目を削除</string>
+    <string name="canncelled_scan">スキャンを中止しました</string>
+    <string name="Scan_qr">スキャンする</string>
+    <string name="okay">はい</string>
+    <string name="Store_in_gallery">保存</string>
+    <string name="phone_number">電話番号</string>
+
+    <!-- Generator activities -->
+    <string name="text_enter">以下の文をQRコード化</string>
+    <string name="hello_world">Hello World</string>
+    <string name="generate">作成</string>
+
+    <string name="sms_text">SMS</string>
+    <string name="mms">MMS</string>
+    <string name="network_name">ネットワーク名</string>
+    <string name="password">パスワード</string>
+    <string name="company">会社名</string>
+    <string name="lastname">姓</string>
+    <string name="title">題</string>
+    <string name="city">都市</string>
+    <string name="street_number">番地等</string>
+    <string name="postal_address">住所</string>
+    <string name="e_mail_address">メールアドレス</string>
+    <string name="firstname">個人名</string>
+    <string name="street_name_and_number">番地等</string>
+    <string name="delete_content">消去して良いですか?</string>
+    <string name="delete_all">全て消去</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="D_all">全て消去</string>
+    <string name="all_records">全て消去しますか?</string>
+    <string name="Del">選択した項目を消去しますか?</string>
+    <string name="confirmation">確認</string>
+    <string name="selected">選択中</string>
+    <string name="code_stored">ギャラリーに保存したQRコード</string>
+    <string name="Ofeatures">他の昨日</string>
+    <string name="OfeaturesAnswer">バーコードと、様々な内容のQRコードをスキャン・作成できます。コードはコピーしたり、他のアプリで開いたりできますし、作成したコードは保存もできます。</string>
+    <string name="Content_copied">コピーしました。</string>
+    <string name="Share_via">以下で開く:</string>
+    <string name="select_all">全て選択</string>
+    <string name="selected_1">選択中</string>
+    <string name="activity_scanner_permission_needed_explanation">カメラの権限が必要です</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Settings for Default Search Engine-->
+    <string name="pref_search_engine_title">使用する検索エンジン</string>
+    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
+        "https://duckduckgo.com/?q=%s"
+    </string>
+    <string name="pref_search_engine_uri_google" translatable="false">
+        "https://www.google.com/search?q=%s"
+    </string>
+    <string name="pref_enable_beep_on_scan_title">検知音を鳴らす</string>
+    <string name="pref_enable_beep_on_scan_summary"></string>
+    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR コード</string>
+    <string name="delete">削除</string>
+    <string name="dialog_history_delete_message">削除しますか?</string>
+    <string name="dialog_history_delete_title">削除</string>
+    <string name="pref_save_real_image_to_history_title">QRコードを保存</string>
+    <string name="pref_save_real_image_to_history_summary">QRコードを、画像として保存しますか?</string>
+    <string name="item_result_email_to">送り先:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="item_result_email_bcc">BCC:</string>
+    <string name="item_result_email_subject">題:</string>
+    <string name="item_result_email_body">本文:</string>
+    <string name="activity_result_toast_saved">保存しました.</string>
+    <string name="fragment_result_product_label">製品Id:</string>
+    <string name="activity_result_toast_error_cant_load">読み込み中に、何らかのエラーが発生しました。</string>
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>DUCK_DUCK_GO</item>
+        <item>GOOGLE</item>
+    </string-array>
+
+</resources>
