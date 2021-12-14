@@ -149,44 +149,45 @@ public class ResultActivity extends AppCompatActivity {
 
         Glide.with(this).load(viewModel.mCodeImage).into(qrImageView);
         String type = viewModel.mParsedResult.getType().name();
-//        switch(mParsedResult.getType()) {
-//            case ADDRESSBOOK:
-//                type = getString(R.string.activity_result_type_addressbook);
-//                break;
-//            case EMAIL_ADDRESS:
-//                type = getString(R.string.activity_result_type_emailaddress);
-//                break;
-//            case PRODUCT:
-//                type = getString(R.string.activity_result_type_product);
-//                break;
-//            case URI:
-//                type = getString(R.string.activity_result_type_uri);
-//                break;
-//            case GEO:
-//                type = getString(R.string.activity_result_type_geo);
-//                break;
-//            case TEL:
-//                type = getString(R.string.activity_result_type_tel);
-//                break;
-//            case WIFI:
-//                type = getString(R.string.activity_result_type_wifi);
-//                break;
-//            case SMS:
-//                type = getString(R.string.activity_result_type_sms);
-//                break;
-//            case CALENDAR:
-//                //type = getString(R.string.activity_result_type_calendar);
-//                //break;
-//            case ISBN:
-//                //type = getString(R.string.activity_result_type_isbn);
-//                //break;
-//            case VIN:
-//                //type = getString(R.string.activity_result_type_vin);
-//                //break;
-//            case TEXT: default:
-//                type = getString(R.string.activity_result_type_text);
-//                break;
-//        }
+        switch(viewModel.mParsedResult.getType()) {
+            case URI:
+                type = getString(R.string.activity_result_type_uri);
+                break;
+            case ADDRESSBOOK:
+                //type = getString(R.string.activity_result_type_addressbook);
+                //break;
+            case EMAIL_ADDRESS:
+                //type = getString(R.string.activity_result_type_emailaddress);
+                //break;
+            case PRODUCT:
+                //type = getString(R.string.activity_result_type_product);
+                //break;
+            case GEO:
+                //type = getString(R.string.activity_result_type_geo);
+                //break;
+            case TEL:
+                //type = getString(R.string.activity_result_type_tel);
+                //break;
+            case WIFI:
+                //type = getString(R.string.activity_result_type_wifi);
+                //break;
+            case SMS:
+                //type = getString(R.string.activity_result_type_sms);
+                //break;
+            case CALENDAR:
+                //type = getString(R.string.activity_result_type_calendar);
+                //break;
+            case ISBN:
+                //type = getString(R.string.activity_result_type_isbn);
+                //break;
+            case VIN:
+                //type = getString(R.string.activity_result_type_vin);
+                //break;
+            case TEXT: default:
+                //type = getString(R.string.activity_result_type_text);
+                type = viewModel.mParsedResult.getType().name();
+                break;
+        }
         qrTypeText.setText(type);
     }
 

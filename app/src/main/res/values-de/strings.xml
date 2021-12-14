@@ -23,7 +23,7 @@
 
     <string name="about_author">Autoren: </string>
     <string name="about_author_string">%s und Mitwirkende.</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der &quot;Privacy Friendly Apps&quot; entwickelt von der Technischen Universität Darmstadt. Quelltext lizenziert unter GPLv3. Bilder copyright TU Darmstadt und Google Inc.</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der &quot;Privacy Friendly Apps&quot; entwickelt von SECUSO. Quelltext lizenziert unter GPLv3. Bilder copyright Karlsruher Institut für Technologie und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
 
     <string name="app_name">QR Scanner</string>

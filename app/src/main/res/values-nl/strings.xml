@@ -40,7 +40,7 @@
     <string name="about_author">Makers: </string>
     <string name="about_author_string">%s en bijdragers.</string>
     <string name="about_affiliation">In samenwerking met</string>
-    <string name="privacy_friendly">Deze app behoort tot de groep PRIVACYVRIENDELIJKE apps, ontwikkeld door de Technische Universiteit van Darmstadt. De broncode is vrijgegeven onder de GPLv3-licentie. Op de afbeeldingen berust auteursrecht van TU Darmstadt en copyright van Google Inc.</string>
+    <string name="privacy_friendly">Deze app behoort tot de groep PRIVACYVRIENDELIJKE apps, ontwikkeld door de SECUSO. De broncode is vrijgegeven onder de GPLv3-licentie. Op de afbeeldingen berust auteursrecht van Karlsruhe Institute of Technology en copyright van Google Inc.</string>
     <string name="more_info">Ga voor meer informatie naar onze</string>
     <string name="about_libraries">Gebruikte bibliotheken:</string>
     <string name="app_name_long">Privacyvriendelijke QR-scanner</string>
