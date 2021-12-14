@@ -23,7 +23,7 @@ public class TextEnterActivity extends AppCompatActivity {
         final EditText qrText = (EditText) findViewById(R.id.editText);
         Button generate = (Button) findViewById(R.id.generate);
 
-        int maxLength = 75;
+        int maxLength = 1817;
         qrText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
