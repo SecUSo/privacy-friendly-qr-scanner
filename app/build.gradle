@@ -6,8 +6,8 @@ android {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
         minSdkVersion 17
         targetSdkVersion 30
-        versionCode 20
-        versionName "3.1.0"
+        versionCode 21
+        versionName "3.2.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildFeatures.dataBinding = true
         vectorDrawables.useSupportLibrary = true
