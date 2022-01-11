@@ -34,7 +34,28 @@ public class Utils {
             hints.put(ERROR_CORRECTION, ErrorCorrectionLevel.L.name());
         }
 
-        return generateCode(data, format, hints);
+        return generateCode(data, getFormat(format), hints); // only reshow as QR Codes
+    }
+
+    private static BarcodeFormat getFormat(BarcodeFormat format) {
+        switch (format) {
+            case EAN_8:
+            case UPC_E:
+            case EAN_13:
+            case UPC_A:
+            case QR_CODE:
+            case CODE_39:
+            case CODE_93:
+            case CODE_128:
+            case ITF:
+            case PDF_417:
+            case CODABAR:
+            case DATA_MATRIX:
+            case AZTEC:
+                return format;
+            default:
+                return BarcodeFormat.QR_CODE;
+        }
     }
 
     public static Bitmap generateCode(String data, BarcodeFormat format, Map<EncodeHintType,?> hints) {
