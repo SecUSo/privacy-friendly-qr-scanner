@@ -287,4 +287,7 @@
     <string name="fragment_result_text_dialog_title">Zoeken op</string>
     <string name="none">Geen</string>
 
+    <string name="pref_search_engine_enabled_title">Gebruik zoekmachines</string>
+    <string name="pref_search_engine_enabled_summary">Geef de toets "Zoeken" weer bij het scannen van tekst.</string>
+
 </resources>

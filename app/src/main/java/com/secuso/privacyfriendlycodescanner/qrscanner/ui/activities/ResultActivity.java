@@ -5,6 +5,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -275,6 +276,12 @@ public class ResultActivity extends AppCompatActivity {
             case TEXT:
             default:
                 resultFragment = new TextResultFragment();
+
+                // hide "search" button if search engines are disabled
+                if(!PreferenceManager.getDefaultSharedPreferences(this).getBoolean("pref_search_engine_enabled", true)) {
+                    proceedButton.setVisibility(View.GONE);
+                }
+
                 break;
         }
 

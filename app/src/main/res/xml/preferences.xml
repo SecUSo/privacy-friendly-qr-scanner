@@ -13,7 +13,14 @@
             android:summary="@string/pref_save_real_image_to_history_summary"
             android:title="@string/pref_save_real_image_to_history_title"/>
 
+        <SwitchPreference
+                android:defaultValue="true"
+                android:key="pref_search_engine_enabled"
+                android:summary="@string/pref_search_engine_enabled_summary"
+                android:title="@string/pref_search_engine_enabled_title"/>
+
         <ListPreference
+            android:dependency="pref_search_engine_enabled"
             android:key="pref_search_engine"
             android:title="@string/pref_search_engine_title"
             android:summary="%s"
