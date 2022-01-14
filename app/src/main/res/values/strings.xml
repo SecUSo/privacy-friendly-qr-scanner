@@ -290,6 +290,12 @@
 
     <string name="activity_scanner_flashlight_on">Flashlight On</string>
     <string name="activity_scanner_flashlight_off">Flashlight Off</string>
+    <string name="action_search">Search</string>
+    <string name="fragment_result_text_dialog_message">Do you want to search for this text on %s? This could potentially leak information and will send the text to the search engine.</string>
+    <string name="fragment_result_text_dialog_positive_button">Search</string>
+    <string name="fragment_result_text_dialog_title">Search</string>
+    <string name="none">None</string>
+    <string name="action_open">Open</string>
 
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>

@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.google.zxing.client.result.ParsedResult;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ResultViewModel;
 
 public abstract class ResultFragment extends Fragment {
@@ -45,4 +46,8 @@ public abstract class ResultFragment extends Fragment {
     }
 
     public abstract void onProceedPressed(Context context);
+
+    public String getProceedButtonTitle(Context context) {
+        return context.getString(R.string.choose_action);
+    }
 }

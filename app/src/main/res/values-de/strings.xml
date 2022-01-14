@@ -271,4 +271,12 @@
     <string name="activity_scanner_flashlight_on">Taschenlampe an</string>
     <string name="activity_scanner_flashlight_off">Taschenlampe aus</string>
 
+    <string name="action_search">Suchen</string>
+    <string name="action_open">Öffnen</string>
+
+    <string name="fragment_result_text_dialog_message">Möchten Sie diesen Text auf %s suchen? Dies leitet den Text an die Suchmaschine weiter.</string>
+    <string name="fragment_result_text_dialog_positive_button">Suchen</string>
+    <string name="fragment_result_text_dialog_title">Suchen</string>
+    <string name="none">Keine</string>
+
 </resources>

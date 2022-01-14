@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,6 +53,8 @@ public class ResultActivity extends AppCompatActivity {
     private static BarcodeResult barcodeResult = null;
     private static HistoryItem historyItem = null;
 
+    private Button proceedButton = null;
+
     private ResultViewModel viewModel;
 
     private ResultFragment currentResultFragment;
@@ -75,6 +78,8 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        proceedButton = findViewById(R.id.btnProceed);
 
         viewModel = new ViewModelProvider(this).get(ResultViewModel.class);
 
@@ -279,5 +284,7 @@ public class ResultActivity extends AppCompatActivity {
 
         ft.replace(R.id.activity_result_frame_layout, resultFragment);
         ft.commit();
+
+        proceedButton.setText(resultFragment.getProceedButtonTitle(this));
     }
 }

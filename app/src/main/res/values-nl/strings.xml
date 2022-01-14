@@ -280,4 +280,11 @@
     <string name="activity_scanner_flashlight_on">Zaklamp aan</string>
     <string name="activity_scanner_flashlight_off">Zaklamp uit</string>
 
+    <string name="action_search">Zoeken op</string>
+    <string name="action_open">Open</string>
+    <string name="fragment_result_text_dialog_message">Wilt u deze tekst zoeken op %s? Dit zal de tekst doorsturen naar de zoekmachine.</string>
+    <string name="fragment_result_text_dialog_positive_button">Zoeken op</string>
+    <string name="fragment_result_text_dialog_title">Zoeken op</string>
+    <string name="none">Geen</string>
+
 </resources>

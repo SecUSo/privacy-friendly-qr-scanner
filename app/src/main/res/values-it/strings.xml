@@ -284,5 +284,12 @@
     <string name="activity_scanner_flashlight_on">Torcia accesa</string>
     <string name="activity_scanner_flashlight_off">Torcia spenta</string>
 
+    <string name="action_search">Cerca</string>
+    <string name="action_open">Aprire</string>
+    <string name="fragment_result_text_dialog_message">Vuoi cercare questo testo su %s? Questo inoltrerà il testo al motore di ricerca.</string>
+    <string name="fragment_result_text_dialog_positive_button">Cerca</string>
+    <string name="fragment_result_text_dialog_title">Cerca</string>
+    <string name="none">-</string>
+
 </resources>
 

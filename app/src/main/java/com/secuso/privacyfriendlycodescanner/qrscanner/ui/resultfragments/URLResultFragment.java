@@ -107,4 +107,9 @@ public class URLResultFragment extends ResultFragment {
             }
         }
     }
+
+    @Override
+    public String getProceedButtonTitle(Context context) {
+        return context.getString(R.string.action_open);
+    }
 }
