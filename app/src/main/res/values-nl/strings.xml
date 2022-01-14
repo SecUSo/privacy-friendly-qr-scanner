@@ -276,4 +276,8 @@
     <string name="hello_world">Hallo Wereld</string>
     <string name="generate">genereren</string>
 
+
+    <string name="activity_scanner_flashlight_on">Zaklamp aan</string>
+    <string name="activity_scanner_flashlight_off">Zaklamp uit</string>
+
 </resources>

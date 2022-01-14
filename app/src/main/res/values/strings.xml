@@ -287,6 +287,10 @@
     <string name="activity_result_toast_error_cant_load">Something went wrong when loading the result.</string>
     <string name="activity_enter_toast_missing_data">No data</string>
     <string name="activity_result_type_uri" translatable="false">URL</string>
+
+    <string name="activity_scanner_flashlight_on">Flashlight On</string>
+    <string name="activity_scanner_flashlight_off">Flashlight Off</string>
+
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>

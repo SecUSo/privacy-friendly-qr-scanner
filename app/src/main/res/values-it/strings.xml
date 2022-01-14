@@ -280,5 +280,9 @@
     <string name="hello_world">Ciao mondo</string>
     <string name="generate">creare</string>
 
+
+    <string name="activity_scanner_flashlight_on">Torcia accesa</string>
+    <string name="activity_scanner_flashlight_off">Torcia spenta</string>
+
 </resources>
 

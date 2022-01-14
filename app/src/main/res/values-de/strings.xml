@@ -268,4 +268,7 @@
     <string name="hello_world">Hallo Welt</string>
     <string name="generate">generieren</string>
 
+    <string name="activity_scanner_flashlight_on">Taschenlampe an</string>
+    <string name="activity_scanner_flashlight_off">Taschenlampe aus</string>
+
 </resources>
