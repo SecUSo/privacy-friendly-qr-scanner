@@ -2,9 +2,11 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -30,6 +32,7 @@ public class URLResultFragment extends ResultFragment {
 
     private boolean checked = false;
     private final boolean trust = false;
+    private SharedPreferences preferences;
     private String qrurl;
 
     public URLResultFragment() {
@@ -70,13 +73,17 @@ public class URLResultFragment extends ResultFragment {
 
         resultText.setText(WordtoSpan);
 
+        preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
         // checked = trust = getBoolean("trust", false);
 
         final CheckBox knowDomain = (CheckBox) v.findViewById(R.id.checkBoxKnowRisks);
 
         // wenn bereits vertraut wurde, checkbox setzen
-        if(trust)
+        if (trust || !preferences.getBoolean("pref_require_link_confirmation", true)) {
             knowDomain.setChecked(true);
+            checked = true;
+        }
 
         knowDomain.setOnClickListener(v1 -> checked = knowDomain.isChecked());
 
