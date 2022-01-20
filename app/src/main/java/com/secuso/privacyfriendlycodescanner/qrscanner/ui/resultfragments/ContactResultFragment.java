@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.zxing.client.result.AddressBookParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.ContactResultAdapter;
+import com.secuso.privacyfriendlycodescanner.qrscanner.util.ContactUtil;
 
 import java.util.ArrayList;
 
@@ -49,7 +50,6 @@ public class ContactResultFragment extends ResultFragment {
         return v;
     }
 
-    // TODO: Rework this...
     //TODO: Add missing: multiple names, all nicknames, pronunciation, instant messenger, birthday, geo
     //See: zxing/core/src/main/java/com/google/zxing/client/result/AddressBookParsedResult.java
     public void onProceedPressed(Context context) {
@@ -66,46 +66,20 @@ public class ContactResultFragment extends ResultFragment {
                             contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, result.getTitle());
                             contact.putExtra(ContactsContract.Intents.Insert.NOTES, result.getNote());
 
-                            //TODO: Improve the implementation of addressTypes,.... Google has some predefined values which we should map to for standard values ("home", "work", "")
-                            //TODO: Maybe even use this class to store the information: ContactsContract.CommonDataKinds.StructuredPostal
-                            if(result.getPhoneNumbers()!=null) for(String phoneNumber : result.getPhoneNumbers()) {
-                                contact.putExtra(ContactsContract.Intents.Insert.PHONE, phoneNumber);
-                            }
-
-                            if(result.getEmails()!=null) for(String email : result.getEmails()) {
-                                contact.putExtra(ContactsContract.Intents.Insert.EMAIL, email);
-                            }
-                            if(result.getEmailTypes()!=null) for(String emailType : result.getEmailTypes()) {
-                                contact.putExtra(ContactsContract.Intents.Insert.EMAIL_TYPE, emailType);
-                            }
-
-                            if(result.getAddresses()!=null) for(String address :  result.getAddresses()){
-                                contact.putExtra(ContactsContract.Intents.Insert.POSTAL, address);
-                            }
-                            if(result.getAddressTypes()!=null) for(String addressType :  result.getAddressTypes()){
-                                if (addressType != null && !addressType.equals(""))
-                                    contact.putExtra(ContactsContract.Intents.Insert.POSTAL_TYPE, addressType);
-                            }
-
-
-                            // ---------- Add values not supported directly by the ContactsContract insert intent
-                            // Defines an array list to contain the ContentValues objects for each row
                             ArrayList<ContentValues> contactData = new ArrayList<>();
-                            // Sets up the row as a ContentValues object
-                            ContentValues urlRow = new ContentValues();
 
-                            // Specifies the MIME type for this data row (all data rows must be marked by their type)
-                            urlRow.put(
-                                    ContactsContract.Data.MIMETYPE,
-                                    ContactsContract.CommonDataKinds.Website.CONTENT_ITEM_TYPE
-                            );
+                            // add phone numbers
+                            contactData.addAll(ContactUtil.buildPhoneValues(result.getPhoneNumbers(), result.getPhoneTypes()));
 
-                            // Adds the email address and its type to the row
-                            if(result.getURLs()!=null) for(String url : result.getURLs()) {
-                                urlRow.put(ContactsContract.CommonDataKinds.Website.URL, url);
-                            }
-                            // Adds the row to the array
-                            contactData.add(urlRow);
+                            // add emails
+                            contactData.addAll(ContactUtil.buildEmailValues(result.getEmails(), result.getEmailTypes()));
+
+                            // add addresses
+                            contactData.addAll(ContactUtil.buildAddressValues(result.getAddresses(), result.getAddressTypes()));
+
+                            // add websites
+                            contactData.addAll(ContactUtil.buildWebsiteValues(result.getURLs()));
+
                             contact.putParcelableArrayListExtra(ContactsContract.Intents.Insert.DATA, contactData);
 
                             String caption = getResources().getStringArray(R.array.vcard_array)[0];

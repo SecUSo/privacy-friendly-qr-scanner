@@ -1,11 +1,13 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     defaultConfig {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
         minSdkVersion 17
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 21
         versionName "3.2.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -52,11 +54,17 @@ dependencies {
     implementation 'com.google.zxing:core:3.4.1'
 
     implementation 'com.github.bumptech.glide:glide:4.11.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
-    implementation 'androidx.room:room-runtime:2.2.5'
-    annotationProcessor 'androidx.room:room-compiler:2.2.5'
-    androidTestImplementation 'androidx.room:room-testing:2.2.5'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'androidx.room:room-runtime:2.4.1'
+    kapt 'androidx.room:room-compiler:2.4.1'
+    androidTestImplementation 'androidx.room:room-testing:2.4.1'
 
-    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.code.gson:gson:2.8.8'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation "androidx.core:core-ktx:1.7.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
