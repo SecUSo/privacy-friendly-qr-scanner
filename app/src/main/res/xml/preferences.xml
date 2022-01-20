@@ -34,4 +34,10 @@
             android:summary="@string/pref_enable_beep_on_scan_summary"
             android:title="@string/pref_enable_beep_on_scan_title" />
 
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_require_link_confirmation"
+            android:summary="@string/pref_require_link_confirmation_title"
+            android:title="@string/pref_require_link_confirmation_summary" />
+
 </PreferenceScreen>
