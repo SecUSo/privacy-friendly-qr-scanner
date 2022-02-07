@@ -40,7 +40,7 @@
     <string name="about_author">Makers: </string>
     <string name="about_author_string">%s en bijdragers.</string>
     <string name="about_affiliation">In samenwerking met</string>
-    <string name="privacy_friendly">Deze app behoort tot de groep PRIVACYVRIENDELIJKE apps, ontwikkeld door de Technische Universiteit van Darmstadt. De broncode is vrijgegeven onder de GPLv3-licentie. Op de afbeeldingen berust auteursrecht van TU Darmstadt en copyright van Google Inc.</string>
+    <string name="privacy_friendly">Deze app behoort tot de groep PRIVACYVRIENDELIJKE apps, ontwikkeld door de SECUSO. De broncode is vrijgegeven onder de GPLv3-licentie. Op de afbeeldingen berust auteursrecht van Karlsruhe Institute of Technology en copyright van Google Inc.</string>
     <string name="more_info">Ga voor meer informatie naar onze</string>
     <string name="about_libraries">Gebruikte bibliotheken:</string>
     <string name="app_name_long">Privacyvriendelijke QR-scanner</string>
@@ -270,9 +270,24 @@
     <string name="activity_result_toast_saved">Opgeslagen in de geschiedenis.</string>
     <string name="fragment_result_product_label">Identificatie:</string>
     <string name="activity_result_toast_error_cant_load">Er is iets misgegaan tijdens het laden van het resultaat.</string>
+    <string name="activity_enter_toast_missing_data">Geen gegevens</string>
 
     <string name="text_enter">De tekst die u wilt coderen</string>
     <string name="hello_world">Hallo Wereld</string>
     <string name="generate">genereren</string>
+
+
+    <string name="activity_scanner_flashlight_on">Zaklamp aan</string>
+    <string name="activity_scanner_flashlight_off">Zaklamp uit</string>
+
+    <string name="action_search">Zoeken op</string>
+    <string name="action_open">Open</string>
+    <string name="fragment_result_text_dialog_message">Wilt u deze tekst zoeken op %s? Dit zal de tekst doorsturen naar de zoekmachine.</string>
+    <string name="fragment_result_text_dialog_positive_button">Zoeken op</string>
+    <string name="fragment_result_text_dialog_title">Zoeken op</string>
+    <string name="none">Geen</string>
+
+    <string name="pref_search_engine_enabled_title">Gebruik zoekmachines</string>
+    <string name="pref_search_engine_enabled_summary">Geef de toets "Zoeken" weer bij het scannen van tekst.</string>
 
 </resources>

@@ -40,7 +40,7 @@
     <string name="about_author">Autori: </string>
     <string name="about_author_string">%s e collaboratori.</string>
     <string name="about_affiliation">In affiliazione con</string>
-    <string name="privacy_friendly">Questa applicazione appartiene al gruppo delle applicazioni PRIVACY FRIENDLY sviluppate dalla Technische Universität Darmstadt. Il codice sorgente è concesso in licenza GPLv3. Il copyright per le immagini appartiene alla TU di Darmstadt e Google Inc.</string>
+    <string name="privacy_friendly">Questa applicazione appartiene al gruppo delle applicazioni PRIVACY FRIENDLY sviluppate dalla SECUSO. Il codice sorgente è concesso in licenza GPLv3. Il copyright per le immagini appartiene alla Karlsuhe Institute of Technology e Google Inc.</string>
     <string name="more_info">Maggiori informazioni sono disponibili qui:</string>
     <string name="about_libraries">Librerie utilizzate:</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
@@ -270,6 +270,7 @@
     <string name="activity_result_toast_saved">Salvato nella cronologia.</string>
     <string name="fragment_result_product_label">Identificatore:</string>
     <string name="activity_result_toast_error_cant_load">Qualcosa è andato storto durante il caricamento del risultato.</string>
+    <string name="activity_enter_toast_missing_data">Nessun dato</string>
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>
@@ -278,6 +279,21 @@
     <string name="text_enter">Il testo che vuoi codificare</string>
     <string name="hello_world">Ciao mondo</string>
     <string name="generate">creare</string>
+
+
+    <string name="activity_scanner_flashlight_on">Torcia accesa</string>
+    <string name="activity_scanner_flashlight_off">Torcia spenta</string>
+
+    <string name="action_search">Cerca</string>
+    <string name="action_open">Aprire</string>
+    <string name="fragment_result_text_dialog_message">Vuoi cercare questo testo su %s? Questo inoltrerà il testo al motore di ricerca.</string>
+    <string name="fragment_result_text_dialog_positive_button">Cerca</string>
+    <string name="fragment_result_text_dialog_title">Cerca</string>
+    <string name="none">-</string>
+
+    <string name="pref_search_engine_enabled_title">Utilizzare i motori di ricerca</string>
+    <string name="pref_search_engine_enabled_summary">Visualizzare il pulsante "Cerca" durante la scansione del testo.</string>
+
 
 </resources>
 

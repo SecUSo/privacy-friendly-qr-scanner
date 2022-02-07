@@ -2,12 +2,15 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -22,6 +25,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.ResultPoint;
 import com.google.zxing.client.android.BeepManager;
+import com.google.zxing.client.android.Intents;
 import com.journeyapps.barcodescanner.BarcodeCallback;
 import com.journeyapps.barcodescanner.BarcodeResult;
 import com.journeyapps.barcodescanner.CameraPreview;
@@ -30,6 +34,7 @@ import com.journeyapps.barcodescanner.DefaultDecoderFactory;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.BaseActivity;
 
+import java.lang.ref.WeakReference;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -46,6 +51,8 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     // UI
     private DecoratedBarcodeView barcodeScannerView;
     private TextView permissionNeededExplanation;
+    private MenuItem flashOnButton;
+    private MenuItem flashOffButton;
 
     // Logic
     private BeepManager beepManager;
@@ -136,10 +143,16 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        Intent intent = getIntent();
+        if(!intent.hasExtra(Intents.Scan.SCAN_TYPE)) {
+            intent.putExtra(Intents.Scan.SCAN_TYPE, Intents.Scan.MIXED_SCAN);
+        }
+
+        barcodeScannerView.setTorchListener(new TorchListener(this));
 
         Collection<BarcodeFormat> formats = Arrays.asList(BarcodeFormat.QR_CODE, BarcodeFormat.CODE_39);
         barcodeScannerView.getBarcodeView().setDecoderFactory(new DefaultDecoderFactory(formats));
-        barcodeScannerView.initializeFromIntent(getIntent());
+        barcodeScannerView.initializeFromIntent(intent);
         barcodeScannerView.decodeSingle(callback);
         barcodeScannerView.resume();
     }
@@ -157,8 +170,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
             showCameraPermissionRequirement(true);
         } else {
             barcodeScannerView.setStatusText(null);
-            barcodeScannerView.decodeSingle(callback);
-            barcodeScannerView.resume();
+            initScan();
         }
     }
 
@@ -204,6 +216,32 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.flashlight, menu);
+
+        flashOnButton = menu.findItem(R.id.menu_flashlight_on);
+        flashOffButton = menu.findItem(R.id.menu_flashlight_off);
+
+        barcodeScannerView.setTorchOff();
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_flashlight_on:
+                barcodeScannerView.setTorchOn();
+                return true;
+            case R.id.menu_flashlight_off:
+                barcodeScannerView.setTorchOff();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.activity_scanner_permission_needed_container:
@@ -211,6 +249,32 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
                 break;
             default:
                 break;
+        }
+    }
+
+
+    class TorchListener implements DecoratedBarcodeView.TorchListener {
+        WeakReference<ScannerActivity> mParent;
+
+        public TorchListener(@NonNull ScannerActivity parent) {
+            mParent = new WeakReference<>(parent);
+        }
+
+        @Override
+        public void onTorchOn() {
+            ScannerActivity parent = mParent.get();
+            if(parent != null) {
+                parent.flashOnButton.setVisible(false);
+                parent.flashOffButton.setVisible(true);
+            }
+        }
+        @Override
+        public void onTorchOff() {
+            ScannerActivity parent = mParent.get();
+            if(parent != null) {
+                parent.flashOnButton.setVisible(true);
+                parent.flashOffButton.setVisible(false);
+            }
         }
     }
 }

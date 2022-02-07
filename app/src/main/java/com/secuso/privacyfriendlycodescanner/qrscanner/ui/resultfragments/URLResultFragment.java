@@ -45,27 +45,24 @@ public class URLResultFragment extends ResultFragment {
         result = (URIParsedResult) parsedResult;
 
         qrurl = result.getURI();
-        final String qrurl2;
 
         TextView resultText = (TextView) v.findViewById(R.id.textDomain);
         TextView furtherInfo = (TextView) v.findViewById(R.id.textLink);
         furtherInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
-        qrurl2 = qrurl.replaceAll("\n", "");
-        String domain = qrurl2;
+        Uri uri = Uri.parse(qrurl);
+        String host = uri.getHost();
+        if(host == null) {
+            host = qrurl;
+        }
 
-        domain = domain.split("\n")[0];
-        if(!domain.endsWith("/")) domain = domain + '/';
+        Pattern pattern = Pattern.compile("([0-9a-zA-ZäöüÄÖÜß-]*\\.(co.uk|com.de|de.com|co.at|[a-zA-Z]{2,}))$");
 
-        Pattern pattern = Pattern.compile("([0-9a-zA-ZäöüÄÖÜß-]*.(co.uk|com.de|de.com|co.at|[a-z]{2,})/)");
+        Matcher m = pattern.matcher(host);
+        if(m.find()) host = m.group(1);
 
-        Matcher m = pattern.matcher(domain);
-        if(m.find()) domain = m.group(1);
-
-        if(domain.endsWith("/")) domain = domain.substring(0, domain.length()-1);
-
-        int start = qrurl.indexOf(domain);
-        int end = start + domain.length();
+        int start = qrurl.indexOf(host);
+        int end = start + host.length();
 
         Spannable WordtoSpan = new SpannableString(qrurl);
         WordtoSpan.setSpan(new ForegroundColorSpan(Color.BLACK), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -109,5 +106,10 @@ public class URLResultFragment extends ResultFragment {
 
             }
         }
+    }
+
+    @Override
+    public String getProceedButtonTitle(Context context) {
+        return context.getString(R.string.action_open);
     }
 }

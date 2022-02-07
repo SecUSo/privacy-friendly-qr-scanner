@@ -6,6 +6,7 @@ import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,6 +31,10 @@ public class UrlEnterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 result = qrResult.getText().toString();
+                if (result.isEmpty()) {
+                    Toast.makeText(UrlEnterActivity.this, R.string.activity_enter_toast_missing_data, Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Intent i = new Intent(UrlEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
                 i.putExtra("type", Contents.Type.WEB_URL);

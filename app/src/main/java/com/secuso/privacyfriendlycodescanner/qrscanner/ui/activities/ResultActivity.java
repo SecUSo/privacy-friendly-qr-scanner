@@ -5,9 +5,11 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,6 +54,8 @@ public class ResultActivity extends AppCompatActivity {
     private static BarcodeResult barcodeResult = null;
     private static HistoryItem historyItem = null;
 
+    private Button proceedButton = null;
+
     private ResultViewModel viewModel;
 
     private ResultFragment currentResultFragment;
@@ -75,6 +79,8 @@ public class ResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        proceedButton = findViewById(R.id.btnProceed);
 
         viewModel = new ViewModelProvider(this).get(ResultViewModel.class);
 
@@ -149,44 +155,45 @@ public class ResultActivity extends AppCompatActivity {
 
         Glide.with(this).load(viewModel.mCodeImage).into(qrImageView);
         String type = viewModel.mParsedResult.getType().name();
-//        switch(mParsedResult.getType()) {
-//            case ADDRESSBOOK:
-//                type = getString(R.string.activity_result_type_addressbook);
-//                break;
-//            case EMAIL_ADDRESS:
-//                type = getString(R.string.activity_result_type_emailaddress);
-//                break;
-//            case PRODUCT:
-//                type = getString(R.string.activity_result_type_product);
-//                break;
-//            case URI:
-//                type = getString(R.string.activity_result_type_uri);
-//                break;
-//            case GEO:
-//                type = getString(R.string.activity_result_type_geo);
-//                break;
-//            case TEL:
-//                type = getString(R.string.activity_result_type_tel);
-//                break;
-//            case WIFI:
-//                type = getString(R.string.activity_result_type_wifi);
-//                break;
-//            case SMS:
-//                type = getString(R.string.activity_result_type_sms);
-//                break;
-//            case CALENDAR:
-//                //type = getString(R.string.activity_result_type_calendar);
-//                //break;
-//            case ISBN:
-//                //type = getString(R.string.activity_result_type_isbn);
-//                //break;
-//            case VIN:
-//                //type = getString(R.string.activity_result_type_vin);
-//                //break;
-//            case TEXT: default:
-//                type = getString(R.string.activity_result_type_text);
-//                break;
-//        }
+        switch(viewModel.mParsedResult.getType()) {
+            case URI:
+                type = getString(R.string.activity_result_type_uri);
+                break;
+            case ADDRESSBOOK:
+                //type = getString(R.string.activity_result_type_addressbook);
+                //break;
+            case EMAIL_ADDRESS:
+                //type = getString(R.string.activity_result_type_emailaddress);
+                //break;
+            case PRODUCT:
+                //type = getString(R.string.activity_result_type_product);
+                //break;
+            case GEO:
+                //type = getString(R.string.activity_result_type_geo);
+                //break;
+            case TEL:
+                //type = getString(R.string.activity_result_type_tel);
+                //break;
+            case WIFI:
+                //type = getString(R.string.activity_result_type_wifi);
+                //break;
+            case SMS:
+                //type = getString(R.string.activity_result_type_sms);
+                //break;
+            case CALENDAR:
+                //type = getString(R.string.activity_result_type_calendar);
+                //break;
+            case ISBN:
+                //type = getString(R.string.activity_result_type_isbn);
+                //break;
+            case VIN:
+                //type = getString(R.string.activity_result_type_vin);
+                //break;
+            case TEXT: default:
+                //type = getString(R.string.activity_result_type_text);
+                type = viewModel.mParsedResult.getType().name();
+                break;
+        }
         qrTypeText.setText(type);
     }
 
@@ -269,6 +276,12 @@ public class ResultActivity extends AppCompatActivity {
             case TEXT:
             default:
                 resultFragment = new TextResultFragment();
+
+                // hide "search" button if search engines are disabled
+                if(!PreferenceManager.getDefaultSharedPreferences(this).getBoolean("pref_search_engine_enabled", true)) {
+                    proceedButton.setVisibility(View.GONE);
+                }
+
                 break;
         }
 
@@ -278,5 +291,7 @@ public class ResultActivity extends AppCompatActivity {
 
         ft.replace(R.id.activity_result_frame_layout, resultFragment);
         ft.commit();
+
+        proceedButton.setText(resultFragment.getProceedButtonTitle(this));
     }
 }

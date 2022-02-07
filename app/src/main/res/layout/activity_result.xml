@@ -91,6 +91,6 @@
         android:onClick="onClick"
         android:padding="4dp"
         android:text="@string/choose_action"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
