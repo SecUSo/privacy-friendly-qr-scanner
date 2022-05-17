@@ -30,10 +30,10 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_url_gnr);
+        setContentView(R.layout.activity_qr_generator_display);
 
-        Button btnstore = findViewById(R.id.btnstore);
-        ImageView myImage = findViewById(R.id.imageView1);
+        Button btnstore = findViewById(R.id.btnStore);
+        ImageView myImage = findViewById(R.id.resultQRCodeImage);
 
         Bundle QRData = getIntent().getExtras();//from QRGenerator
         qrInputText = QRData.getString("gn");

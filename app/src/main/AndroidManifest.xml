@@ -62,7 +62,8 @@
         <activity
             android:name=".ui.activities.generator.QrGeneratorDisplayActivity"
             android:label="URL"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:theme="@style/AppTheme.Material" />
         <activity
             android:name=".ui.activities.generator.MailEnterActivity"
             android:label="E-Mail"
