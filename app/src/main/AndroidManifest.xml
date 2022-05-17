@@ -93,10 +93,6 @@
             android:label="BizCard"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
         <activity
-            android:name=".ui.activities.generator.MmsEnterActivity"
-            android:label="MMS"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
-        <activity
             android:name=".ui.activities.generator.WifiEnterActivity"
             android:label="WIFI"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
