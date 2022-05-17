@@ -61,15 +61,12 @@ public class QrGeneratorOverviewActivity extends AppCompatActivity {
                         intent = new Intent(QrGeneratorOverviewActivity.this,BizCardEnterActivity.class);
                         break;
                     case 8:
-                        intent = new Intent(QrGeneratorOverviewActivity.this,MmsEnterActivity.class);
-                        break;
-                    case 9:
                         intent = new Intent(QrGeneratorOverviewActivity.this,WifiEnterActivity.class);
                         break;
-                    case 10:
+                    case 9:
                         intent = new Intent(QrGeneratorOverviewActivity.this,VcardEnterActivity.class);
                         break;
-                    case 11:
+                    case 10:
                         intent = new Intent(QrGeneratorOverviewActivity.this,MarketEnterActivity.class);
                         break;
                 }
