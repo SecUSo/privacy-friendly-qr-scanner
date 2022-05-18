@@ -42,4 +42,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Material.Button.ExtendedFloatingActionButton.Base" parent="AppTheme.Material">
+        <item name="backgroundTint">@color/colorAccent</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+    </style>
 </resources>
