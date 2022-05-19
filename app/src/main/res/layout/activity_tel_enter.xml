@@ -35,6 +35,19 @@
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/selectContactButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/import_from_contacts"
+        app:icon="@drawable/ic_person_accent_24dp"
+        app:layout_constraintEnd_toEndOf="@+id/editPhone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editPhone" />
+
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton style="@style/AppTheme.Material.Button.GenerateButton" />
 

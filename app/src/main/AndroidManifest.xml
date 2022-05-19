@@ -121,5 +121,11 @@
                 android:resource="@xml/fileprovider_path" />
         </provider>
     </application>
-
+    <queries>
+        <!-- Make packages visible to this app that can provide a contact picker (API >= 30)-->
+        <intent>
+            <action android:name="android.intent.action.PICK" />
+            <data android:mimeType="*/*" />
+        </intent>
+    </queries>
 </manifest>
