@@ -4,25 +4,26 @@
     package="com.secuso.privacyfriendlycodescanner.qrscanner">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="28"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
 
     <application
-        android:installLocation="preferExternal"
-        android:hardwareAccelerated="true"
         android:allowBackup="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
+        android:installLocation="preferExternal"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:fullBackupContent="false">
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".ui.activities.SplashActivity"
-            android:label="@string/app_name"
             android:exported="true"
+            android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,8 +32,8 @@
         </activity>
         <activity
             android:name=".ui.activities.ScannerActivity"
-            android:label="@string/app_name"
             android:clearTaskOnLaunch="true"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.AboutActivity"
@@ -53,11 +54,11 @@
         <activity
             android:name=".ui.activities.TutorialActivity"
             android:parentActivityName=".ui.activities.ScannerActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.SettingsActivity"
-            android:parentActivityName=".ui.activities.ScannerActivity"
-            android:label="@string/Settings"/>
+            android:label="@string/Settings"
+            android:parentActivityName=".ui.activities.ScannerActivity" />
         <activity android:name=".ui.activities.ResultActivity" />
         <activity
             android:name=".ui.activities.generator.QrGeneratorDisplayActivity"
@@ -105,11 +106,13 @@
         <activity
             android:name=".ui.activities.generator.MarketEnterActivity"
             android:label="Market"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
         <activity
             android:name=".ui.activities.generator.TextEnterActivity"
             android:label="Text"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"/>
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:theme="@style/AppTheme.Material"
+            android:windowSoftInputMode="adjustResize" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
