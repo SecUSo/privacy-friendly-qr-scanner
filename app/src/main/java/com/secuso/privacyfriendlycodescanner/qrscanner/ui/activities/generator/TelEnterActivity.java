@@ -1,7 +1,10 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.generator;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.InputFilter;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +17,8 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 
 public class TelEnterActivity extends AppCompatActivity {
+
+    private static final int REQUEST_SELECT_PHONE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,5 +49,41 @@ public class TelEnterActivity extends AppCompatActivity {
 
         });
 
+        findViewById(R.id.selectContactButton).setOnClickListener(view -> selectPhoneNumber());
+
+    }
+
+    private void selectPhoneNumber() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(intent, REQUEST_SELECT_PHONE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_SELECT_PHONE && resultCode == RESULT_OK) {
+            Uri contactUri = data.getData();
+            String[] projection =
+                    {
+                            ContactsContract.CommonDataKinds.Phone._ID,
+                            ContactsContract.CommonDataKinds.Phone.NUMBER,
+                            ContactsContract.CommonDataKinds.Phone.TYPE,
+                            ContactsContract.CommonDataKinds.Phone.LABEL
+                    };
+            try {
+                Cursor cursor = getContentResolver().query(contactUri, projection, null, null, null);
+                if (cursor.moveToFirst()) {
+                    int phoneNoIdx = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+                    String phoneNo = cursor.getString(phoneNoIdx);
+                    ((EditText) findViewById(R.id.editPhone)).setText(phoneNo);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

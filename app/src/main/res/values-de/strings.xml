@@ -280,5 +280,6 @@
 
     <string name="pref_search_engine_enabled_title">Suchmaschinen nutzen</string>
     <string name="pref_search_engine_enabled_summary">"Suchen"-Button beim Suchen von Text anzeigen.</string>
+    <string name="import_from_contacts">Aus Kontakten importieren</string>
 
 </resources>

@@ -226,6 +226,7 @@
     <string name="hello_world">Hello World</string>
     <string name="generate">generate</string>
 
+    <string name="import_from_contacts">Import from contacts</string>
     <string name="sms_text">SMS text</string>
     <string name="mms">MMS</string>
     <string name="network_name">Network name</string>
