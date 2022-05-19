@@ -21,7 +21,7 @@ public class TelEnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tel_enter);
 
         final EditText qrResult = (EditText) findViewById(R.id.editPhone);
-        Button generate = (Button) findViewById(R.id.generate);
+        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 15;
         qrResult.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
