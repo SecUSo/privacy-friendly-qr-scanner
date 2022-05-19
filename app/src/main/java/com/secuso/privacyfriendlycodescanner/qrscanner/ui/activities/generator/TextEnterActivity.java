@@ -21,7 +21,7 @@ public class TextEnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_text_enter);
 
         final EditText qrText = (EditText) findViewById(R.id.editText);
-        Button generate = (Button) findViewById(R.id.generate);
+        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 1817;
         qrText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
