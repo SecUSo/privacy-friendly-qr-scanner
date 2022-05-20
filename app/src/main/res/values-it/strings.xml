@@ -63,7 +63,7 @@
     <string name="action_about">Al riguardo</string>
     <string name="history_disabled">Cronologia disabilitata</string>
     <string name="to">Destinatario:</string>
-    <string name="subject">Soggetto:</string>
+    <string name="subject">Soggetto</string>
 
     <string name="usability_hint2">Se non puoi scansionare un codice QR, aumenta la distanza tra lo scanner ed il codice.</string>
 

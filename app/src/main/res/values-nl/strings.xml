@@ -63,7 +63,7 @@
     <string name="action_about">Over</string>
     <string name="history_disabled">Geschiedenis bijhouden is uitgeschakeld</string>
     <string name="to">Geadresseerde:</string>
-    <string name="subject">Onderwerp:</string>
+    <string name="subject">Onderwerp</string>
 
     <string name="usability_hint2">Als je een code niet kunt scannen, vergroot dan de afstand tussen je apparaat en de code.</string>
 
