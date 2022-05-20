@@ -8,6 +8,7 @@ android {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
         minSdkVersion 17
         targetSdkVersion 31
+        multiDexEnabled true
         versionCode 23
         versionName "3.3.1"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
@@ -34,6 +35,7 @@ android {
         abortOnError false
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
@@ -52,6 +54,9 @@ dependencies {
 
     implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
     implementation 'com.google.zxing:core:3.4.1'
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    implementation "androidx.multidex:multidex:2.0.1"
 
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.9.0'
