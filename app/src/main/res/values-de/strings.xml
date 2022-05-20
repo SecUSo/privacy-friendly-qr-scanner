@@ -47,7 +47,7 @@
     <string name="about_libraries">Verwendete Bibliotheken:</string>
     <string name="history_disabled">Verlauf deaktiviert</string>
     <string name="to">Empfänger:</string>
-    <string name="subject">Betreff:</string>
+    <string name="subject">Betreff</string>
 
     <string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie ihn etwas weiter entfernt zu scannen.</string>
 
