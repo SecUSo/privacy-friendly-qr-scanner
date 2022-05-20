@@ -17,7 +17,7 @@
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/btnStore"
-        style="@style/AppTheme.Material.Button.ExtendedFloatingActionButton.Base"
+        style="@style/AppTheme.Button.ExtendedFloatingActionButton.Base"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"

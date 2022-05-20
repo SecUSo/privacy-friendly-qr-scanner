@@ -63,8 +63,7 @@
         <activity
             android:name=".ui.activities.generator.QrGeneratorDisplayActivity"
             android:label="URL"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
-            android:theme="@style/AppTheme.Material" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
         <activity
             android:name=".ui.activities.generator.MailEnterActivity"
             android:label="E-Mail"
@@ -73,7 +72,6 @@
             android:name=".ui.activities.generator.TelEnterActivity"
             android:label="Phone number"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
-            android:theme="@style/AppTheme.Material"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activities.generator.UrlEnterActivity"
@@ -111,7 +109,6 @@
             android:name=".ui.activities.generator.TextEnterActivity"
             android:label="Text"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
-            android:theme="@style/AppTheme.Material"
             android:windowSoftInputMode="adjustResize" />
 
         <provider
