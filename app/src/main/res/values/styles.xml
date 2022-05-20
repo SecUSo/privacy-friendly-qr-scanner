@@ -8,6 +8,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorGeneratorIcons">@color/lightlightblue</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -48,6 +49,11 @@
         <item name="icon">@drawable/ic_baseline_qr_code_24dp</item>
     </style>
 
-    <item name="btnGenerate" type="id" />
+    <style name="AppTheme.Generator.Icon" parent="AppTheme">
+        <item name="tint">?attr/colorGeneratorIcons</item>
+    </style>
+
+    <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    </style>
 
 </resources>
