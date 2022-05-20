@@ -7,6 +7,7 @@
 
     <ImageView
         android:id="@+id/iconImageView"
+        style="@style/AppTheme.Generator.Icon"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
@@ -18,7 +19,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        style="@style/AppTheme.Generator.TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"

@@ -7,5 +7,6 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorOnPrimary">@color/black</item>
         <item name="android:windowBackground">@color/darkgrey</item>
+        <item name="colorGeneratorIcons">@color/lightlightblue</item>
     </style>
 </resources>
