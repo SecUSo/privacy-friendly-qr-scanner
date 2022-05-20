@@ -293,6 +293,7 @@
     <string name="pref_search_engine_enabled_title">Utilizzare i motori di ricerca</string>
     <string name="pref_search_engine_enabled_summary">Visualizzare il pulsante "Cerca" durante la scansione del testo.</string>
     <string name="import_from_contacts">Importazione da contatti</string>
+    <string name="message">Messaggio</string>
 
 
 </resources>
