@@ -19,22 +19,19 @@ public class SmsEnterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sms_enter);
 
-        final EditText qrSms=(EditText) findViewById(R.id.editTel);
-        final EditText qrText=(EditText) findViewById(R.id.editText1);
-        Button generate=(Button) findViewById(R.id.generate);
+        final EditText phoneNumber = (EditText) findViewById(R.id.editPhone);
+        final EditText smsContent = (EditText) findViewById(R.id.editSMSContent);
+        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 15;
-        qrSms.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
-
-        int maxLength2 = 300;
-        qrText.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength2)});
-
+        phoneNumber.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
+
             @Override
             public void onClick(View v) {
-                result = qrSms.getText().toString()+":"+qrText.getText().toString();
+                result = phoneNumber.getText().toString() + ":" + smsContent.getText().toString();
                 Intent i = new Intent(SmsEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
                 i.putExtra("type", Contents.Type.SMS);
