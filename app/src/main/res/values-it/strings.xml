@@ -296,6 +296,9 @@
     <string name="message">Messaggio</string>
     <string name="generator_text_textfield">Testo</string>
     <string name="generator_text_explanation">È possibile inserire il testo che si desidera codificare. Sono consentite più righe.</string>
+    <string name="address">Indirizzo</string>
+    <string name="country">Paese</string>
+    <string name="zip_code">Codice postale</string>
 
 
 </resources>

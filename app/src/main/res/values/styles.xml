@@ -56,4 +56,7 @@
     <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
     </style>
 
+    <style name="AppTheme.Generator.TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+    </style>
+
 </resources>

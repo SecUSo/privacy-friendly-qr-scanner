@@ -284,5 +284,8 @@
     <string name="message">Nachricht</string>
     <string name="generator_text_textfield">Text</string>
     <string name="generator_text_explanation">Sie können jeden beliebigen Text eingeben, den Sie kodieren möchten. Mehrere Zeilen sind erlaubt.</string>
+    <string name="zip_code">Postleitzahl</string>
+    <string name="country">Land</string>
+    <string name="address">Adresse</string>
 
 </resources>
