@@ -37,9 +37,11 @@
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="top"
             android:hint="@string/generator_text_textfield"
             android:inputType="textMultiLine|text"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:minLines="3" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
