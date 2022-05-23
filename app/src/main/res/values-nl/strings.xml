@@ -292,5 +292,8 @@
     <string name="message">Besked</string>
     <string name="generator_text_textfield">Tekst</string>
     <string name="generator_text_explanation">U kunt elke tekst invoeren die u wilt coderen. Meerdere regels zijn toegestaan.</string>
+    <string name="zip_code">Postcode</string>
+    <string name="address">Adres</string>
+    <string name="country">Land</string>
 
 </resources>

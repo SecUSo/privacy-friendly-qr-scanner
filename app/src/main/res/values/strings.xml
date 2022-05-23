@@ -231,6 +231,10 @@
     <string name="message">Message</string>
     <string name="subject">Subject</string>
 
+    <string name="address">Address</string>
+    <string name="zip_code">Zip</string>
+    <string name="country">Country</string>
+
     <string name="import_from_contacts">Import from contacts</string>
     <string name="sms_text">SMS text</string>
     <string name="mms">MMS</string>
