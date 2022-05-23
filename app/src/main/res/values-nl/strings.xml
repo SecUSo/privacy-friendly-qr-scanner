@@ -290,5 +290,7 @@
     <string name="pref_search_engine_enabled_summary">Geef de toets "Zoeken" weer bij het scannen van tekst.</string>
     <string name="import_from_contacts">Importeren uit contacten</string>
     <string name="message">Besked</string>
+    <string name="generator_text_textfield">Tekst</string>
+    <string name="generator_text_explanation">U kunt elke tekst invoeren die u wilt coderen. Meerdere regels zijn toegestaan.</string>
 
 </resources>

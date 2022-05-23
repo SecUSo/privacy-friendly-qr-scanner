@@ -225,6 +225,9 @@
     <string name="hello_world">Hello World</string>
     <string name="generate">generate</string>
 
+    <string name="generator_text_textfield">Text</string>
+    <string name="generator_text_explanation">You can enter any text you want to encode. Multiple lines are allowed.</string>
+
     <string name="message">Message</string>
     <string name="subject">Subject</string>
 

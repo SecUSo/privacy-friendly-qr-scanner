@@ -26,6 +26,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
+        app:helperText="@string/generator_text_explanation"
         app:layout_constraintBottom_toTopOf="@+id/btnGenerate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iconImageView"
@@ -36,7 +37,7 @@
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/text_enter"
+            android:hint="@string/generator_text_textfield"
             android:inputType="textMultiLine|text"
             android:minHeight="48dp" />
     </com.google.android.material.textfield.TextInputLayout>

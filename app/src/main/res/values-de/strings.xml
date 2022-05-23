@@ -282,5 +282,7 @@
     <string name="pref_search_engine_enabled_summary">"Suchen"-Button beim Suchen von Text anzeigen.</string>
     <string name="import_from_contacts">Aus Kontakten importieren</string>
     <string name="message">Nachricht</string>
+    <string name="generator_text_textfield">Text</string>
+    <string name="generator_text_explanation">Sie können jeden beliebigen Text eingeben, den Sie kodieren möchten. Mehrere Zeilen sind erlaubt.</string>
 
 </resources>
