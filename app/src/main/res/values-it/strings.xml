@@ -299,6 +299,7 @@
     <string name="address">Indirizzo</string>
     <string name="country">Paese</string>
     <string name="zip_code">Codice postale</string>
+    <string name="generator_url_explanation">È possibile inserire un indirizzo web. Ad esempio.</string>
 
 
 </resources>

@@ -228,6 +228,10 @@
     <string name="generator_text_textfield">Text</string>
     <string name="generator_text_explanation">You can enter any text you want to encode. Multiple lines are allowed.</string>
 
+    <string name="URL" translatable="false">URL</string>
+    <string name="generator_example_url" translatable="false">https://example.com</string>
+    <string name="generator_url_explanation">You can enter a web address. E.g.</string>
+
     <string name="message">Message</string>
     <string name="subject">Subject</string>
 

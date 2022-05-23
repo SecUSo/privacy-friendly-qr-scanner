@@ -287,5 +287,6 @@
     <string name="zip_code">Postleitzahl</string>
     <string name="country">Land</string>
     <string name="address">Adresse</string>
+    <string name="generator_url_explanation">Sie können eine Webadresse eingeben. z.B.</string>
 
 </resources>

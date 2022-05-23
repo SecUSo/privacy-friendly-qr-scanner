@@ -295,5 +295,6 @@
     <string name="zip_code">Postcode</string>
     <string name="address">Adres</string>
     <string name="country">Land</string>
+    <string name="generator_url_explanation">U kunt een webadres invoeren. Bijv.</string>
 
 </resources>
