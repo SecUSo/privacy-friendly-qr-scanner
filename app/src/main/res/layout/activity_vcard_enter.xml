@@ -5,285 +5,301 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="32dp" />
-
-    <ImageView
-        android:id="@+id/iconImageView"
-        style="@style/AppTheme.Generator.Icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toTopOf="@id/editFirstnameInputLayout"
-        app:srcCompat="@drawable/ic_person_accent_24dp"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/iconImageView2"
-        style="@style/AppTheme.Generator.Icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toTopOf="@id/editPhoneInputLayout"
-        app:srcCompat="@drawable/ic_phone_accent_24dp"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/iconImageView3"
-        style="@style/AppTheme.Generator.Icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toTopOf="@id/editAddressInputLayout"
-        app:srcCompat="@drawable/ic_address_accent_24dp"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/iconImageView4"
-        style="@style/AppTheme.Generator.Icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toTopOf="@id/editMailInputLayout"
-        app:srcCompat="@drawable/ic_email_accent_24dp"
-        tools:ignore="ContentDescription" />
-
-    <ImageView
-        android:id="@+id/iconImageView5"
-        style="@style/AppTheme.Generator.Icon"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toTopOf="@id/editCompanyInputLayout"
-        app:srcCompat="@drawable/ic_org_accent_24dp"
-        tools:ignore="ContentDescription" />
-
-    <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/iconBarrier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:barrierDirection="end"
-        app:constraint_referenced_ids="iconImageView,iconImageView2,iconImageView3,iconImageView4,iconImageView5"
-        tools:layout_editor_absoluteX="40dp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editFirstnameInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@id/editLastnameInputLayout"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGenerate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editFirstname"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/firstname"
-            android:inputType="textPersonName"
-            android:nextFocusDown="@id/editText1" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editLastnameInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/editFirstnameInputLayout"
-        app:layout_constraintTop_toTopOf="parent">
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="32dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editLastname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/lastname"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/iconImageView"
+                style="@style/AppTheme.Generator.Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/editFirstnameInputLayout"
+                app:srcCompat="@drawable/ic_person_accent_24dp"
+                tools:ignore="ContentDescription" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editPhoneInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
-        app:layout_constraintTop_toBottomOf="@id/editFirstnameInputLayout">
+            <ImageView
+                android:id="@+id/iconImageView2"
+                style="@style/AppTheme.Generator.Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/editPhoneInputLayout"
+                app:srcCompat="@drawable/ic_phone_accent_24dp"
+                tools:ignore="ContentDescription" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/phone_number"
-            android:inputType="phone" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/iconImageView3"
+                style="@style/AppTheme.Generator.Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/editAddressInputLayout"
+                app:srcCompat="@drawable/ic_address_accent_24dp"
+                tools:ignore="ContentDescription" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editAddressInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
-        app:layout_constraintTop_toBottomOf="@id/editPhoneInputLayout">
+            <ImageView
+                android:id="@+id/iconImageView4"
+                style="@style/AppTheme.Generator.Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/editMailInputLayout"
+                app:srcCompat="@drawable/ic_email_accent_24dp"
+                tools:ignore="ContentDescription" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/address"
-            android:inputType="textPostalAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:id="@+id/iconImageView5"
+                style="@style/AppTheme.Generator.Icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintTop_toTopOf="@id/editCompanyInputLayout"
+                app:srcCompat="@drawable/ic_org_accent_24dp"
+                tools:ignore="ContentDescription" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editCityInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@id/editZipCodeInputLayout"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
-        app:layout_constraintTop_toBottomOf="@id/editAddressInputLayout">
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/iconBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="end"
+                app:constraint_referenced_ids="iconImageView,iconImageView2,iconImageView3,iconImageView4,iconImageView5"
+                tools:layout_editor_absoluteX="40dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editCity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/city"
-            android:inputType="textPostalAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editFirstnameInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/editLastnameInputLayout"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editZipCodeInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/editCityInputLayout"
-        app:layout_constraintTop_toBottomOf="@id/editAddressInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editFirstname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/firstname"
+                    android:inputType="textPersonName"
+                    android:nextFocusDown="@id/editText1" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editZipCode"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/zip_code"
-            android:inputType="number"
-            android:minEms="5" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editLastnameInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/editFirstnameInputLayout"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editCountryInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
-        app:layout_constraintTop_toBottomOf="@id/editCityInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editLastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lastname"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editCountry"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/country"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editPhoneInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@id/editFirstnameInputLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editMailInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
-        app:layout_constraintTop_toBottomOf="@id/editCountryInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editMail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/e_mail_address"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editAddressInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@id/editPhoneInputLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editCompanyInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
-        app:layout_constraintTop_toBottomOf="@id/editMailInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/address"
+                    android:inputType="textPostalAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editCompany"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/company"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editCityInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/editZipCodeInputLayout"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@id/editAddressInputLayout">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editTitleInputLayout"
-        style="@style/AppTheme.Generator.TextInputLayout.Dense"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@id/iconBarrier"
-        app:layout_constraintTop_toBottomOf="@id/editCompanyInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/city"
+                    android:inputType="textPostalAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/title"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editZipCodeInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/editCityInputLayout"
+                app:layout_constraintTop_toBottomOf="@id/editAddressInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/zip_code"
+                    android:inputType="number"
+                    android:minEms="5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editCountryInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@id/editCityInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/country"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editMailInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@id/editCountryInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/e_mail_address"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editCompanyInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@id/editMailInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/company"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editTitleInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@id/editCompanyInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/title"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@id/btnGenerate"
@@ -296,5 +312,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
