@@ -32,27 +32,15 @@ public class VcardEnterActivity extends AppCompatActivity {
 
         int maxLength = 75;
         qrFirstname.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
-
-        int maxLength2 = 75;
-        qrPhone.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
-
-        int maxLength3 = 75;
-        qrMail.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength3)});
-
-        int maxLength4 = 75;
-        qrAddress.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength4)});
-
-        int maxLength5 = 75;
-        qrCity.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength5)});
-
-        int maxLength6 = 75;
-        qrZipCode.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength6)});
-
-        int maxLength7 = 75;
-        qrTitle.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength7)});
-
-        int maxLength8 = 75;
-        qrTitle.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength8)});
+        qrLastname.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrPhone.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrMail.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrAddress.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrCity.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrZipCode.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrCountry.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrTitle.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrCompany.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
 
         Button generate = (Button) findViewById(R.id.btnGenerate);
@@ -63,8 +51,7 @@ public class VcardEnterActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                result = "N:" + qrLastname.getText().toString() + "\n"
-                        + "FN:" + qrFirstname.getText().toString() + "\n"
+                result = "N:" + qrLastname.getText().toString() + ";" + qrFirstname.getText().toString() + "\n"
                         + "ORG:" + qrCompany.getText().toString() + "\n"
                         + "TITLE:" + qrTitle.getText().toString() + "\n"
                         + "ADR:;;" + qrAddress.getText().toString() + ";"
