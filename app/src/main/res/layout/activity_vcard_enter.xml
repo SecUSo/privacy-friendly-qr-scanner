@@ -151,6 +151,27 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editMailInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/iconBarrier"
+                app:layout_constraintTop_toBottomOf="@+id/editPhoneInputLayout">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/e_mail_address"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editAddressInputLayout"
                 style="@style/AppTheme.Generator.TextInputLayout.Dense"
                 android:layout_width="0dp"
@@ -161,7 +182,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@id/iconBarrier"
-                app:layout_constraintTop_toBottomOf="@id/editPhoneInputLayout">
+                app:layout_constraintTop_toBottomOf="@id/editMailInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editAddress"
@@ -236,27 +257,6 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editMailInputLayout"
-                style="@style/AppTheme.Generator.TextInputLayout.Dense"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@id/iconBarrier"
-                app:layout_constraintTop_toBottomOf="@id/editCountryInputLayout">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editMail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/e_mail_address"
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/editCompanyInputLayout"
                 style="@style/AppTheme.Generator.TextInputLayout.Dense"
                 android:layout_width="0dp"
@@ -267,7 +267,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@id/iconBarrier"
-                app:layout_constraintTop_toBottomOf="@id/editMailInputLayout">
+                app:layout_constraintTop_toBottomOf="@id/editCountryInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editCompany"
