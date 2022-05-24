@@ -19,9 +19,9 @@ public class GeoLocationEnterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_geo_location_enter);
 
-        final EditText qrLatitude=(EditText) findViewById(R.id.editGeo1);
-        final EditText qrLongitude=(EditText) findViewById(R.id.editGeo2);
-        Button generate=(Button) findViewById(R.id.generate);
+        final EditText qrLatitude=(EditText) findViewById(R.id.editLatitude);
+        final EditText qrLongitude=(EditText) findViewById(R.id.editLongitude);
+        Button generate=(Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 11;
         qrLatitude.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});

@@ -87,7 +87,8 @@
         <activity
             android:name=".ui.activities.generator.GeoLocationEnterActivity"
             android:label="Geo location"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activities.generator.MeCardEnterActivity"
             android:label="MeCard"
