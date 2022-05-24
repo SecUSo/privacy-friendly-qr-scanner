@@ -289,5 +289,6 @@
     <string name="address">Adresse</string>
     <string name="generator_url_explanation">Sie können eine Webadresse eingeben. z.B.</string>
     <string name="no_encryption">Keine Verschlüsselung</string>
+    <string name="name">Name</string>
 
 </resources>
