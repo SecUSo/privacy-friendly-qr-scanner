@@ -33,7 +33,7 @@ public class UrlEnterActivity extends AppCompatActivity {
         // Set Input field helper text:
         inputLayout.setHelperText(getString(R.string.generator_url_explanation) + " " + getString(R.string.generator_example_url));
 
-        int maxLength = 150;
+        int maxLength = 600;
         qrResult.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
         generate.setOnClickListener(new View.OnClickListener() {

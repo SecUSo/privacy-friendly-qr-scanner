@@ -26,6 +26,9 @@ public class SmsEnterActivity extends AppCompatActivity {
         int maxLength = 15;
         phoneNumber.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
+        int maxLength2 = 600;
+        smsContent.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
+
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
 

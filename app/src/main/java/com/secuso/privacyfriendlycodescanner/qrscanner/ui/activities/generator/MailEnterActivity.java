@@ -28,6 +28,10 @@ public class MailEnterActivity extends AppCompatActivity {
 
         int maxLength = 50;
         emailAddress.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        int maxLength2 = 100;
+        emailSubject.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
+        int maxLength3 = 1000;
+        emailContent.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength3)});
 
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
