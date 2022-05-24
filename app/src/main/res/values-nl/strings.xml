@@ -220,7 +220,7 @@
 
     <string name="sms_text">SMS-tekst</string>
     <string name="mms">MMS</string>
-    <string name="network_name">Netwerknaam</string>
+    <string name="network_name">Netwerknaam (SSID)</string>
     <string name="password">Wachtwoord</string>
     <string name="company">Bedrijf</string>
     <string name="lastname">Achternaam</string>
@@ -296,5 +296,6 @@
     <string name="address">Adres</string>
     <string name="country">Land</string>
     <string name="generator_url_explanation">U kunt een webadres invoeren. Bijv.</string>
+    <string name="no_encryption">Geen encryptie</string>
 
 </resources>

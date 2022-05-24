@@ -235,6 +235,8 @@
     <string name="message">Message</string>
     <string name="subject">Subject</string>
 
+    <string name="no_encryption">No encryption</string>
+
     <string name="address">Address</string>
     <string name="zip_code">Zip</string>
     <string name="country">Country</string>
@@ -242,7 +244,7 @@
     <string name="import_from_contacts">Import from contacts</string>
     <string name="sms_text">SMS text</string>
     <string name="mms">MMS</string>
-    <string name="network_name">Network name</string>
+    <string name="network_name">Network name (SSID)</string>
     <string name="password">Password</string>
     <string name="company">Company</string>
     <string name="lastname">Lastname</string>

@@ -59,4 +59,7 @@
     <style name="AppTheme.Generator.TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
     </style>
 
+    <style name="AppTheme.Generator.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+    </style>
+
 </resources>

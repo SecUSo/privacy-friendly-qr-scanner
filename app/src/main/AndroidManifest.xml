@@ -100,11 +100,13 @@
         <activity
             android:name=".ui.activities.generator.WifiEnterActivity"
             android:label="WIFI"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activities.generator.VcardEnterActivity"
             android:label="vcard"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activities.generator.MarketEnterActivity"
             android:label="Market"
