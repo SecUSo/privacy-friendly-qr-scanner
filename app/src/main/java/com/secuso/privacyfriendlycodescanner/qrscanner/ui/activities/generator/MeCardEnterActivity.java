@@ -20,42 +20,45 @@ public class MeCardEnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_me_card_enter);
 
 
-        final EditText qrName=(EditText) findViewById(R.id.editName);
-        final EditText qrPhone=(EditText) findViewById(R.id.editPhone);
-        final EditText qrMail=(EditText) findViewById(R.id.editMail);
-        final EditText qrStreet=(EditText) findViewById(R.id.editStreet);
-        final EditText qrCity=(EditText) findViewById(R.id.editCity);
-        final EditText qrPostal=(EditText) findViewById(R.id.editPostal);
+        final EditText qrName = (EditText) findViewById(R.id.editName);
+        final EditText qrPhone = (EditText) findViewById(R.id.editPhone);
+        final EditText qrMail = (EditText) findViewById(R.id.editMail);
+        final EditText qrStreet = (EditText) findViewById(R.id.editAddress);
+        final EditText qrCity = (EditText) findViewById(R.id.editCity);
+        final EditText qrZipCode = (EditText) findViewById(R.id.editZipCode);
 
         int maxLength = 75;
-        qrName.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
+        qrName.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
         int maxLength2 = 75;
-        qrPhone.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength2)});
+        qrPhone.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
 
         int maxLength3 = 75;
-        qrMail.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength3)});
+        qrMail.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength3)});
 
         int maxLength4 = 75;
-        qrStreet.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength4)});
+        qrStreet.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength4)});
 
         int maxLength5 = 75;
-        qrCity.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength5)});
+        qrCity.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength5)});
 
         int maxLength6 = 75;
-        qrPostal.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength6)});
+        qrZipCode.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength6)});
 
 
-
-        Button generate=(Button) findViewById(R.id.generate);
+        Button generate = (Button) findViewById(R.id.btnGenerate);
 
 
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
+
             @Override
             public void onClick(View v) {
                 //MECARD:N:Owen,Sean;ADR:76 9th Avenue, 4th Floor, New York, NY 10011;TEL:12125551212;EMAIL:srowen@example.com;;
-                result = qrName.getText().toString()+";ADR:"+qrStreet.getText().toString()+","+qrCity.getText().toString()+","+qrPostal.getText().toString()+";TEL:"+qrPhone.getText().toString()+";EMAIL:"+qrMail.getText().toString()+";;";
+                result = qrName.getText().toString()
+                        + ";ADR:" + qrStreet.getText().toString() + "," + qrCity.getText().toString() + "," + qrZipCode.getText().toString()
+                        + ";TEL:" + qrPhone.getText().toString()
+                        + ";EMAIL:" + qrMail.getText().toString() + ";;";
                 Intent i = new Intent(MeCardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
                 i.putExtra("type", Contents.Type.Me_Card);

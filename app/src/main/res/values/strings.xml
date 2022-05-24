@@ -237,6 +237,7 @@
 
     <string name="no_encryption">No encryption</string>
 
+    <string name="name">Name</string>
     <string name="address">Address</string>
     <string name="zip_code">Zip</string>
     <string name="country">Country</string>

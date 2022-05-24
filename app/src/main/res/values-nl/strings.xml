@@ -297,5 +297,6 @@
     <string name="country">Land</string>
     <string name="generator_url_explanation">U kunt een webadres invoeren. Bijv.</string>
     <string name="no_encryption">Geen encryptie</string>
+    <string name="name">Naam</string>
 
 </resources>

@@ -301,6 +301,7 @@
     <string name="zip_code">Codice postale</string>
     <string name="generator_url_explanation">È possibile inserire un indirizzo web. Ad esempio.</string>
     <string name="no_encryption">Nessuna crittografia</string>
+    <string name="name">Nome</string>
 
 
 </resources>
