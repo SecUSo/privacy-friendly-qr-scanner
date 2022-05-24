@@ -106,7 +106,7 @@ public  class QRCodeEncoder {
         } else if (type.equals(Contents.Type.WIFI)) {
             data = trim(data);
             if (data != null) {
-                contents = "WIFI:T:" + data;
+                contents = "WIFI:" + data;
                // displayContents = PhoneNumberUtils.formatNumber(data);
                 title = "WIFI";
             }

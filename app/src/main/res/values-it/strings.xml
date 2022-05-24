@@ -220,7 +220,7 @@
 
     <string name="sms_text">Testo SMS</string>
     <string name="mms">MMS</string>
-    <string name="network_name">Nome rete</string>
+    <string name="network_name">Nome rete (SSID)</string>
     <string name="password">Password</string>
     <string name="company">Azienda</string>
     <string name="lastname">Cognome</string>
@@ -300,6 +300,7 @@
     <string name="country">Paese</string>
     <string name="zip_code">Codice postale</string>
     <string name="generator_url_explanation">È possibile inserire un indirizzo web. Ad esempio.</string>
+    <string name="no_encryption">Nessuna crittografia</string>
 
 
 </resources>

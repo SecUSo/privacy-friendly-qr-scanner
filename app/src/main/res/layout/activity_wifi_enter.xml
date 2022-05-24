@@ -1,52 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/generate"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/button_fullwidth"
-        android:padding="1dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/imageView"
-        android:layout_margin="3dp"
-        android:text="Generate"
-        android:textColor="@android:color/white" />
-
-    <EditText
-        android:id="@+id/editNetwork"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="197dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/network_name" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
 
-    <EditText
-        android:id="@+id/editPassword"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/iconImageView"
+        style="@style/AppTheme.Generator.Icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/editWifiSSIDInputLayout"
+        app:srcCompat="@drawable/ic_baseline_wifi_24dp"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editWifiSSIDInputLayout"
+        style="@style/AppTheme.Generator.TextInputLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/editNetwork"
-        android:layout_below="@+id/editNetwork"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:hint="@string/password"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iconImageView"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="150dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editWifiSSID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/network_name"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/iconImageView2"
+        style="@style/AppTheme.Generator.Icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@id/editWifiEncryptionInputLayout"
+        app:srcCompat="@drawable/ic_baseline_wifi_lock_24dp"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editWifiEncryptionInputLayout"
+        style="@style/AppTheme.Generator.ExposedDropdownMenu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/editNetwork"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="73dp"
-        />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/editWifiSSIDInputLayout"
+        app:layout_constraintStart_toEndOf="@+id/iconImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/editWifiSSIDInputLayout">
 
-</RelativeLayout>
+        <AutoCompleteTextView
+            android:id="@+id/editWifiEncryption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/encryption"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/iconImageView3"
+        style="@style/AppTheme.Generator.Icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/editWifiPasswordInputLayout"
+        app:srcCompat="@drawable/ic_baseline_key_24dp"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editWifiPasswordInputLayout"
+        style="@style/AppTheme.Generator.TextInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iconImageView3"
+        app:layout_constraintTop_toBottomOf="@+id/editWifiEncryptionInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editWifiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@id/btnGenerate"
+        style="@style/AppTheme.Button.GenerateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

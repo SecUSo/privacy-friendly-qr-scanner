@@ -195,7 +195,7 @@
     <string name="phone_number">Telefonnummer</string>
     <string name="sms_text">SMS-Text</string>
     <string name="mms">MMS</string>
-    <string name="network_name">Netzwerkname</string>
+    <string name="network_name">Netzwerkname (SSID)</string>
     <string name="password">Passwort</string>
     <string name="company">Firma</string>
     <string name="lastname">Nachname</string>
@@ -288,5 +288,6 @@
     <string name="country">Land</string>
     <string name="address">Adresse</string>
     <string name="generator_url_explanation">Sie können eine Webadresse eingeben. z.B.</string>
+    <string name="no_encryption">Keine Verschlüsselung</string>
 
 </resources>

@@ -4,10 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,42 +18,71 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 public class WifiEnterActivity extends AppCompatActivity {
 
 
-    private static final String[] auth = {"WEP", "WPA"};
+    private String[] auth;
+    private ArrayAdapter<String> dropdownAdapter;
+    private AutoCompleteTextView dropdownMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wifi_enter);
 
+        auth = new String[]{getString(R.string.no_encryption), "WEP", "WPA/WPA2"};
 
-        final Spinner  spinner = (Spinner)findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(WifiEnterActivity.this, android.R.layout.simple_spinner_item,auth);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        dropdownMenu = (AutoCompleteTextView) findViewById(R.id.editWifiEncryption);
+        dropdownAdapter = new ArrayAdapter<String>(WifiEnterActivity.this, android.R.layout.simple_spinner_item, auth);
+        dropdownAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        dropdownMenu.setAdapter(dropdownAdapter);
+        dropdownMenu.setText(auth[2], false);
+        dropdownMenu.setAdapter(dropdownAdapter);
 
-        final EditText qrNetwork = (EditText) findViewById(R.id.editNetwork);
-        final EditText qrPassword = (EditText) findViewById(R.id.editPassword);
-        Button generate = (Button) findViewById(R.id.generate);
+        final EditText qrNetwork = (EditText) findViewById(R.id.editWifiSSID);
+        final EditText qrPassword = (EditText) findViewById(R.id.editWifiPassword);
+        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 25;
-        qrNetwork.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength)});
+        qrNetwork.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
-        int maxLength2 = 20;
-        qrPassword.setFilters(new InputFilter[] {new InputFilter.LengthFilter(maxLength2)});
+        int maxLength2 = 40;
+        qrPassword.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
+
+
+        dropdownMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if (dropdownMenu.getText().toString().equals(auth[0])) {
+                    //disable password field if no encryption was selected
+                    findViewById(R.id.editWifiPasswordInputLayout).setEnabled(false);
+                } else {
+                    findViewById(R.id.editWifiPasswordInputLayout).setEnabled(true);
+                }
+            }
+        });
 
 
         generate.setOnClickListener(new View.OnClickListener() {
-            String result;
             @Override
             public void onClick(View v) {
+                //  WIFI:S:mynetwork;T:WPA;P:mypass;;
+                String result = "";
 
-                //  WIFI:T:WPA;S:mynetwork;P:mypass;;
-                if(spinner.getSelectedItemPosition()==0) {
-                    result = "WEP;S:" + qrNetwork.getText().toString() + ";P:" + qrPassword.getText().toString() + ";;";
+                result += "S:" + qrNetwork.getText().toString();
+
+                // Add encryption type if encryption was selected
+                if (!dropdownMenu.getText().toString().equals(auth[0])) {
+                    result += ";T:";
+                    if (dropdownMenu.getText().toString().equals(auth[1])) {
+                        result += "WEP";
+                    } else if (dropdownMenu.getText().toString().equals(auth[2])) {
+                        result += "WPA";
+                    }
+
+                    // Add password
+                    if (!qrPassword.getText().toString().isEmpty()) {
+                        result += ";P:" + qrPassword.getText().toString();
+                    }
                 }
-                else if (spinner.getSelectedItemPosition()==1) {
-                    result = "WPA;S:" + qrNetwork.getText().toString() + ";P:" + qrPassword.getText().toString() + ";;";
-                }
+                result += ";;";
 
                 Intent i = new Intent(WifiEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
@@ -60,5 +90,20 @@ public class WifiEnterActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Set adapter on resume to prevent missing dropdown items in some cases
+        dropdownAdapter = new ArrayAdapter<String>(WifiEnterActivity.this, android.R.layout.simple_spinner_item, auth);
+        dropdownAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        dropdownMenu.setAdapter(dropdownAdapter);
+        if (dropdownMenu.getText().toString().equals(auth[0])) {
+            //disable password field if no encryption was selected
+            findViewById(R.id.editWifiPasswordInputLayout).setEnabled(false);
+        } else {
+            findViewById(R.id.editWifiPasswordInputLayout).setEnabled(true);
+        }
     }
 }
