@@ -92,11 +92,13 @@
         <activity
             android:name=".ui.activities.generator.MeCardEnterActivity"
             android:label="MeCard"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activities.generator.BizCardEnterActivity"
             android:label="BizCard"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activities.generator.WifiEnterActivity"
             android:label="WIFI"
