@@ -122,7 +122,7 @@ public  class QRCodeEncoder {
         } else if (type.equals(Contents.Type.Biz_Card)) {
             data = trim(data);
             if (data != null) {
-                contents = "BIZCARD:N:" + data;
+                contents = "BIZCARD:" + data;
                 displayContents = data;
                 title = "BizCard";
             }
