@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 
@@ -20,11 +21,17 @@ public class MarketEnterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_market_enter);
 
-        final EditText qrMarket = (EditText) findViewById(R.id.editText);
-        Button generate = (Button) findViewById(R.id.generate);
+        final EditText qrMarket = (EditText) findViewById(R.id.editPackageName);
+        final TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.editPackageNameInputLayout);
+        Button generate = (Button) findViewById(R.id.btnGenerate);
 
-        int maxLength = 75;
+        int maxLength = 150;
         qrMarket.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+
+        inputLayout.setHelperText(getString(R.string.generator_market_explanation)
+                + " " + getString(R.string.generator_example_package)
+                + "\n" + getString(R.string.generator_market_explanation_2));
+
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
 

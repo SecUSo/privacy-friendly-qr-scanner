@@ -112,7 +112,8 @@
         <activity
             android:name=".ui.activities.generator.MarketEnterActivity"
             android:label="Market"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
+            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.activities.generator.TextEnterActivity"
             android:label="Text"

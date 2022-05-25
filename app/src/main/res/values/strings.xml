@@ -242,6 +242,11 @@
     <string name="zip_code">Zip</string>
     <string name="country">Country</string>
 
+    <string name="generator_package_name">Package name</string>
+    <string name="generator_example_package" translatable="false">org.example.foo</string>
+    <string name="generator_market_explanation">Here you can enter the app\'s package name. E.g.</string>
+    <string name="generator_market_explanation_2">The generated QR code then points to the corresponding app on Google Play.</string>
+
     <string name="import_from_contacts">Import from contacts</string>
     <string name="sms_text">SMS text</string>
     <string name="mms">MMS</string>

@@ -298,5 +298,8 @@
     <string name="generator_url_explanation">U kunt een webadres invoeren. Bijv.</string>
     <string name="no_encryption">Geen encryptie</string>
     <string name="name">Naam</string>
+    <string name="generator_package_name">Pakketnaam</string>
+    <string name="generator_market_explanation">Hier kunt u de pakketnaam van de app invoeren. Bijv.</string>
+    <string name="generator_market_explanation_2">De gegenereerde QR-code wijst dan naar de overeenkomstige app op Google Play.</string>
 
 </resources>
