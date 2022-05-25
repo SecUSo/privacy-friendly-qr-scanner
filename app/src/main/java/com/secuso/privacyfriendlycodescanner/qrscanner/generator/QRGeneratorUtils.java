@@ -42,7 +42,7 @@ public class QRGeneratorUtils {
     private static Uri cache = null;
 
     public static void shareImage(AppCompatActivity context, Uri imageUri) {
-        if(context == null) {
+        if (context == null) {
             throw new IllegalArgumentException("Context may not be null.");
         }
 
@@ -67,7 +67,7 @@ public class QRGeneratorUtils {
         return cache;
     }
 
-    public static Uri createImage(Context context, String qrInputText, String qrType) {
+    public static Uri createImage(Context context, String qrInputText, Contents.Type qrType) {
 
         //Find screen size
         WindowManager manager = (WindowManager) context.getSystemService(WINDOW_SERVICE);
@@ -134,17 +134,18 @@ public class QRGeneratorUtils {
 
             // Tell the media scanner about the new file so that it is
             // immediately available to the user.
-            MediaScannerConnection.scanFile(context, new String[] { file.toString() }, null,
-                (path, uri) -> {
-                    Log.i("ExternalStorage", "Scanned " + path + ":");
-                    Log.i("ExternalStorage", "-> uri=" + uri);
-                }
+            MediaScannerConnection.scanFile(context, new String[]{file.toString()}, null,
+                    (path, uri) -> {
+                        Log.i("ExternalStorage", "Scanned " + path + ":");
+                        Log.i("ExternalStorage", "-> uri=" + uri);
+                    }
             );
         }
 
     }
 
-    private static @NonNull String buildFileString() {
+    private static @NonNull
+    String buildFileString() {
         // Define name
         StringBuffer sb = new StringBuffer();
         sb.append("QrCode_");
@@ -154,18 +155,19 @@ public class QRGeneratorUtils {
         return sb.toString();
     }
 
-    private static @Nullable File writeToFile(@NonNull File file, @NonNull Bitmap image) {
+    private static @Nullable
+    File writeToFile(@NonNull File file, @NonNull Bitmap image) {
         File outFile = file;
         StringBuilder sb = new StringBuilder(file.toString());
 
         // if multiple codes are generated on the same day.. name them with numbers
-        for(int i = 2; outFile.exists(); i++) {
+        for (int i = 2; outFile.exists(); i++) {
             sb.delete(sb.length() - 4, sb.length());
             sb.append("_(").append(i).append(").png");
             outFile = new File(sb.toString());
         }
 
-        try(FileOutputStream fOut = new FileOutputStream(outFile)){
+        try (FileOutputStream fOut = new FileOutputStream(outFile)) {
             image.compress(Bitmap.CompressFormat.PNG, 100, fOut);
         } catch (IOException e) {
             e.printStackTrace();

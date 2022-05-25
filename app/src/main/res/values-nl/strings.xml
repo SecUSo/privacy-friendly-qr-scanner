@@ -147,7 +147,22 @@
         <item>Wi-Fi</item>
         <item>VCard</item>
         <item>App-winkel</item>
-
+    </string-array>
+    <string-array name="content_types">
+        <item>UNDEFINED</item>
+        <item>Tekst</item>
+        <item>E-mailadres</item>
+        <item>Telefoonnummer</item>
+        <item>SMS</item>
+        <item>MMS</item>
+        <item>URL</item>
+        <item>Wifi</item>
+        <item>VCard</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>Market</item>
+        <item>Contact</item>
+        <item>Geolocatie</item>
     </string-array>
     <string name="copied_to_clipboard">Gekopieerd naar het klembord.</string>
     <string name="noname">Geen naam opgegeven</string>

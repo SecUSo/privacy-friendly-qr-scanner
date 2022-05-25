@@ -25,7 +25,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     ClipData clipData;
 
     String qrInputText = "";
-    String qrInputType = Contents.Type.UNDEFINED;
+    Contents.Type qrInputType = Contents.Type.UNDEFINED;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,9 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
 
         Bundle QRData = getIntent().getExtras();//from QRGenerator
         qrInputText = QRData.getString("gn");
-        qrInputType = QRData.getString("type");
+        qrInputType = (Contents.Type) QRData.getSerializable("type");
+
+        setTitle(qrInputType.toLocalizedString(getApplicationContext()));
 
         Glide.with(this).load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType)).into(myImage);
 
@@ -62,7 +64,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.share:
                 QRGeneratorUtils.shareImage(this, QRGeneratorUtils.getCachedUri());
                 return true;
@@ -71,7 +73,6 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-
 
 
 }
