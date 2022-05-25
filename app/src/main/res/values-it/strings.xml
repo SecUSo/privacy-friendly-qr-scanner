@@ -302,6 +302,9 @@
     <string name="generator_url_explanation">È possibile inserire un indirizzo web. Ad esempio.</string>
     <string name="no_encryption">Nessuna crittografia</string>
     <string name="name">Nome</string>
+    <string name="generator_package_name">Nome del pacchetto</string>
+    <string name="generator_market_explanation">Qui è possibile inserire il nome del pacchetto dell\'applicazione. Ad esempio.</string>
+    <string name="generator_market_explanation_2">Il codice QR generato punta all\'applicazione corrispondente su Google Play.</string>
 
 
 </resources>

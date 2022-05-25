@@ -290,5 +290,8 @@
     <string name="generator_url_explanation">Sie können eine Webadresse eingeben. z.B.</string>
     <string name="no_encryption">Keine Verschlüsselung</string>
     <string name="name">Name</string>
+    <string name="generator_package_name">Paketname</string>
+    <string name="generator_market_explanation">Hier können Sie den Paketnamen der App eingeben. z.B.</string>
+    <string name="generator_market_explanation_2">Der generierte QR-Code verweist dann auf die entsprechende App auf Google Play.</string>
 
 </resources>
