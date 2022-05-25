@@ -11,6 +11,7 @@ import com.google.zxing.client.result.ResultParser;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
+import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ResultActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.HistoryAdapter;
 
@@ -27,17 +28,19 @@ public class HistoryItemViewModel extends BaseObservable {
     private final Context context;
     private final HistoryItem entry;
     private final ParsedResult parsed;
+    private final String type;
     private boolean disabled = false;
 
     public HistoryItemViewModel(Context context, HistoryItem entry) {
         this.context = context;
         this.entry = entry;
         this.parsed = ResultParser.parseResult(entry.getResult());
+        this.type = Contents.Type.parseParsedResultType(parsed.getType()).toLocalizedString(context);
     }
 
     public View.OnClickListener onClickItem() {
         return v -> {
-            if(!isDisabled()) {
+            if (!isDisabled()) {
                 ResultActivity.startResultActivity(context, entry);
             }
         };
@@ -45,7 +48,7 @@ public class HistoryItemViewModel extends BaseObservable {
 
     public View.OnLongClickListener onLongClickItem() {
         return v -> {
-            if(!isDisabled()) {
+            if (!isDisabled()) {
                 AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
                 dialogBuilder.setTitle(R.string.dialog_history_delete_title);
                 dialogBuilder.setMessage(R.string.dialog_history_delete_message);
@@ -62,7 +65,7 @@ public class HistoryItemViewModel extends BaseObservable {
     }
 
     public String getTimestamp() {
-        if(entry.getTimestamp() != 0) {
+        if (entry.getTimestamp() != 0) {
             DateFormat df = DateFormat.getDateTimeInstance();
             return df.format(new Date(entry.getTimestamp()));
         }
@@ -74,10 +77,7 @@ public class HistoryItemViewModel extends BaseObservable {
     }
 
     public String getType() {
-        if(parsed.getType().name() != null) {
-            return parsed.getType().name();
-        }
-        return "";
+        return type;
     }
 
     public String getText() {
