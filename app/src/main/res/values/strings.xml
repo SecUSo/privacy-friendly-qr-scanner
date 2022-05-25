@@ -152,6 +152,7 @@
     </string-array>
 
     <string-array name="content_types">
+        <!-- Array used by utility classes to convert internal code types into localized strings -->
         <item>UNDEFINED</item>
         <item>Text</item>
         <item>E-Mail</item>
@@ -166,6 +167,12 @@
         <item>Market</item>
         <item>Contact</item>
         <item>Geo location</item>
+
+        <item>Address book</item>
+        <item>Product</item>
+        <item>Calendar</item>
+        <item>ISBN</item>
+        <item>Vehicle Identification Number (VIN)</item>
     </string-array>
 
     <string name="copied_to_clipboard">Copied to clipboard.</string>

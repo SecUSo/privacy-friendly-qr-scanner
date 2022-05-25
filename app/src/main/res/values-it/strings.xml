@@ -163,6 +163,12 @@
         <item>Market</item>
         <item>Contatto</item>
         <item>Geolocalizzazione</item>
+
+        <item>Libro indirizzi</item>
+        <item>Prodotto</item>
+        <item>Calendario</item>
+        <item>ISBN</item>
+        <item>Numero di identificazione del veicolo (VIN)</item>
     </string-array>
     <string name="copied_to_clipboard">Copiato nella clipboard.</string>
     <string name="noname">Nessun nome specificato</string>
