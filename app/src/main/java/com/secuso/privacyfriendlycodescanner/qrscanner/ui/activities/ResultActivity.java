@@ -25,6 +25,7 @@ import com.google.zxing.client.result.ParsedResult;
 import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
+import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ContactResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.GeoResultFragment;
@@ -43,6 +44,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ResultViewMo
  * Use the method {@link #startResultActivity(Context, BarcodeResult)} if called from a scan.<br>
  * Use the method {@link #startResultActivity(Context, HistoryItem)} if called from the history.
  * </p>
+ *
  * @author Christopher Beckmann
  * @see HistoryActivity
  * @see ScannerActivity
@@ -87,11 +89,11 @@ public class ResultActivity extends AppCompatActivity {
         initStateIfNecessary(savedInstanceState);
 
         ActionBar ab = getSupportActionBar();
-        if(ab != null) {
+        if (ab != null) {
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
-        if(isFinishing()) {
+        if (isFinishing()) {
             return;
         }
 
@@ -109,15 +111,16 @@ public class ResultActivity extends AppCompatActivity {
      * </ul>
      * If the state can not be created the activity will call {@link AppCompatActivity#finish()}
      * This method will also update the {@link HistoryItem} in the database with a recreation of the QR Code if the image is missing.
+     *
      * @param savedInstanceState is the bundle that is given to the {@link #onCreate(Bundle)} or {@link #onRestoreInstanceState(Bundle)} Methods
      */
     private void initStateIfNecessary(Bundle savedInstanceState) {
         boolean hasHistoryItem = getIntent().getBooleanExtra(HISTORY_DATA, false);
 
-        if(savedInstanceState == null) {
-            if(hasHistoryItem && historyItem != null) {
+        if (savedInstanceState == null) {
+            if (hasHistoryItem && historyItem != null) {
                 viewModel.initFromHistoryItem(historyItem);
-            } else if(barcodeResult != null) {
+            } else if (barcodeResult != null) {
                 viewModel.initFromScan(barcodeResult);
             } else {
                 // no data to display -> exit
@@ -130,8 +133,8 @@ public class ResultActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.share,menu);
-        getMenuInflater().inflate(R.menu.copy,menu);
+        getMenuInflater().inflate(R.menu.share, menu);
+        getMenuInflater().inflate(R.menu.copy, menu);
         getMenuInflater().inflate(R.menu.save, menu);
 
         return true;
@@ -139,9 +142,9 @@ public class ResultActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-        if(menu != null) {
+        if (menu != null) {
             MenuItem saveMi = menu.findItem(R.id.save);
-            if(saveMi != null) {
+            if (saveMi != null) {
                 saveMi.setVisible(!viewModel.mSavedToHistory);
             }
         }
@@ -154,52 +157,12 @@ public class ResultActivity extends AppCompatActivity {
         TextView qrTypeText = findViewById(R.id.textView);
 
         Glide.with(this).load(viewModel.mCodeImage).into(qrImageView);
-        String type = viewModel.mParsedResult.getType().name();
-        switch(viewModel.mParsedResult.getType()) {
-            case URI:
-                type = getString(R.string.activity_result_type_uri);
-                break;
-            case ADDRESSBOOK:
-                //type = getString(R.string.activity_result_type_addressbook);
-                //break;
-            case EMAIL_ADDRESS:
-                //type = getString(R.string.activity_result_type_emailaddress);
-                //break;
-            case PRODUCT:
-                //type = getString(R.string.activity_result_type_product);
-                //break;
-            case GEO:
-                //type = getString(R.string.activity_result_type_geo);
-                //break;
-            case TEL:
-                //type = getString(R.string.activity_result_type_tel);
-                //break;
-            case WIFI:
-                //type = getString(R.string.activity_result_type_wifi);
-                //break;
-            case SMS:
-                //type = getString(R.string.activity_result_type_sms);
-                //break;
-            case CALENDAR:
-                //type = getString(R.string.activity_result_type_calendar);
-                //break;
-            case ISBN:
-                //type = getString(R.string.activity_result_type_isbn);
-                //break;
-            case VIN:
-                //type = getString(R.string.activity_result_type_vin);
-                //break;
-            case TEXT: default:
-                //type = getString(R.string.activity_result_type_text);
-                type = viewModel.mParsedResult.getType().name();
-                break;
-        }
-        qrTypeText.setText(type);
+        qrTypeText.setText(Contents.Type.parseParsedResultType(viewModel.mParsedResult.getType()).toLocalizedString(getApplicationContext()));
     }
 
     public void onClick(View view) {
         if (view.getId() == R.id.btnProceed) {
-            if(currentResultFragment != null) {
+            if (currentResultFragment != null) {
                 currentResultFragment.onProceedPressed(this);
             }
         }
@@ -207,12 +170,12 @@ public class ResultActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.share:
-                Intent sharingIntent= new Intent(Intent.ACTION_SEND);
+                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 sharingIntent.putExtra(Intent.EXTRA_TEXT, viewModel.mParsedResult.getDisplayResult());
-                startActivity(Intent.createChooser(sharingIntent,getString(R.string.share_via)));
+                startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_via)));
                 return true;
 
             case R.id.save:
@@ -222,7 +185,7 @@ public class ResultActivity extends AppCompatActivity {
                 return true;
 
             case R.id.copy:
-                ClipboardManager clipboardManager =(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
+                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
                 ClipData clipData = ClipData.newPlainText("Text", viewModel.mParsedResult.getDisplayResult());
                 clipboardManager.setPrimaryClip(clipData);
                 Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
@@ -278,7 +241,7 @@ public class ResultActivity extends AppCompatActivity {
                 resultFragment = new TextResultFragment();
 
                 // hide "search" button if search engines are disabled
-                if(!PreferenceManager.getDefaultSharedPreferences(this).getBoolean("pref_search_engine_enabled", true)) {
+                if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean("pref_search_engine_enabled", true)) {
                     proceedButton.setVisibility(View.GONE);
                 }
 

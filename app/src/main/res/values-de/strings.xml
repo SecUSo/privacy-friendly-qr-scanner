@@ -130,6 +130,12 @@
         <item>Market</item>
         <item>Kontakt</item>
         <item>Geo Standort</item>
+
+        <item>Adressbuch</item>
+        <item>Produkt</item>
+        <item>Kalender</item>
+        <item>ISBN</item>
+        <item>Fahrzeug-Identifizierungsnummer (FIN)</item>
     </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
