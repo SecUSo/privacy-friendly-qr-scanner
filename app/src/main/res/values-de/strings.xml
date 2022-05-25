@@ -115,6 +115,22 @@
         <item>VCard</item>
         <item>Market</item>
     </string-array>
+    <string-array name="content_types">
+        <item>UNDEFINIERT</item>
+        <item>Text</item>
+        <item>E-Mail</item>
+        <item>Telefonnummer</item>
+        <item>SMS</item>
+        <item>MMS</item>
+        <item>URL</item>
+        <item>Wifi</item>
+        <item>VCard</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>Market</item>
+        <item>Kontakt</item>
+        <item>Geo Standort</item>
+    </string-array>
     <string-array name="url_array">
         <item>URL öffnen</item>
         <item>Nichts tun</item>

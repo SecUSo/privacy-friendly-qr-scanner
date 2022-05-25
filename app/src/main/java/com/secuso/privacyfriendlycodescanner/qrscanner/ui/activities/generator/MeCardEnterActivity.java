@@ -61,7 +61,7 @@ public class MeCardEnterActivity extends AppCompatActivity {
                         + ";EMAIL:" + qrMail.getText().toString() + ";;";
                 Intent i = new Intent(MeCardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
-                i.putExtra("type", Contents.Type.Me_Card);
+                i.putExtra("type", Contents.Type.ME_CARD);
                 startActivity(i);
             }
 

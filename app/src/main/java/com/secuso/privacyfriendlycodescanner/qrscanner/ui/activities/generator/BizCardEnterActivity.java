@@ -60,7 +60,7 @@ public class BizCardEnterActivity extends AppCompatActivity {
                         + ";;";
                 Intent i = new Intent(BizCardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
-                i.putExtra("type", Contents.Type.Biz_Card);
+                i.putExtra("type", Contents.Type.BIZ_CARD);
                 startActivity(i);
             }
         });

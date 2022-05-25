@@ -63,7 +63,7 @@ public class VcardEnterActivity extends AppCompatActivity {
                         + "END:VCARD";
                 Intent i = new Intent(VcardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
-                i.putExtra("type", Contents.Type.V_Card);
+                i.putExtra("type", Contents.Type.V_CARD);
                 startActivity(i);
             }
         });

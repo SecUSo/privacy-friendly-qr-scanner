@@ -149,8 +149,25 @@
         <item>Wifi</item>
         <item>VCard</item>
         <item>Market</item>
-
     </string-array>
+
+    <string-array name="content_types">
+        <item>UNDEFINED</item>
+        <item>Text</item>
+        <item>E-Mail</item>
+        <item>Phone number</item>
+        <item>SMS</item>
+        <item>MMS</item>
+        <item>URL</item>
+        <item>Wifi</item>
+        <item>VCard</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>Market</item>
+        <item>Contact</item>
+        <item>Geo location</item>
+    </string-array>
+
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>
 

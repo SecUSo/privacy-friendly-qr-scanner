@@ -44,7 +44,7 @@ public class MarketEnterActivity extends AppCompatActivity {
                 }
                 Intent i = new Intent(MarketEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
-                i.putExtra("type", Contents.Type.Market);
+                i.putExtra("type", Contents.Type.MARKET);
                 startActivity(i);
             }
 
