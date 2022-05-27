@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable name="viewModel" type="com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.HistoryItemViewModel" />
+
+        <variable
+            name="viewModel"
+            type="com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.HistoryItemViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/itemView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:clickable="true"
         android:focusable="true"
         android:longClickable="true"
@@ -24,15 +29,15 @@
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_gravity="center"
+                android:layout_margin="8dp"
                 android:innerRadius="0dp"
                 android:shape="ring"
                 android:thicknessRatio="1.9"
-                android:layout_margin="8dp"
-                app:cardBackgroundColor="@color/lightgrey"
+                app:cardBackgroundColor="?attr/colorHistoryIconBackground"
                 app:cardCornerRadius="28dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/item_history_image"
@@ -41,41 +46,57 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center"
-                    android:scaleType="centerCrop"
+                    android:layout_margin="10dp"
                     android:contentDescription="@string/activity_history_list_item_qr_image_descriptor"
-                    app:srcCompat="@drawable/ic_no_image_accent_24dp"/>
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_no_image_accent_24dp"
+                    app:tint="?attr/colorHistoryIcons" />
 
             </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/item_history_type_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toEndOf="@id/item_history_image_container"
+                app:layout_constraintTop_toTopOf="@+id/item_history_image_container"
+                app:srcCompat="@drawable/ic_no_image_accent_24dp"
+                app:tint="?attr/colorHistoryIcons" />
 
             <TextView
                 android:id="@+id/item_history_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:text="@{viewModel.type}"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintStart_toEndOf="@id/item_history_image_container"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBottom_toBottomOf="@+id/item_history_type_image"
+                app:layout_constraintStart_toEndOf="@id/item_history_type_image"
+                app:layout_constraintTop_toTopOf="@+id/item_history_type_image" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="@{viewModel.text}"
-                app:layout_constraintStart_toEndOf="@id/item_history_image_container"
-                app:layout_constraintTop_toBottomOf="@id/item_history_type" />
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/item_history_image_container"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/item_history_image_container" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:layout_marginTop="16dp"
                 android:text="@{viewModel.timestamp}"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="@+id/item_history_type" />
 
             <CheckBox
                 android:id="@+id/checkbox"

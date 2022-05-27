@@ -2,5 +2,7 @@
 <resources>
     <declare-styleable name="AppTheme">
         <attr name="colorGeneratorIcons" format="color" />
+        <attr name="colorHistoryIconBackground" format="color" />
+        <attr name="colorHistoryIcons" format="color" />
     </declare-styleable>
 </resources>

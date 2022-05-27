@@ -9,6 +9,8 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorGeneratorIcons">@color/lightlightblue</item>
+        <item name="colorHistoryIconBackground">@color/lightgrey</item>
+        <item name="colorHistoryIcons">@color/lightlightblue</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
