@@ -8,5 +8,7 @@
         <item name="colorOnPrimary">@color/black</item>
         <item name="android:windowBackground">@color/darkgrey</item>
         <item name="colorGeneratorIcons">@color/lightlightblue</item>
+        <item name="colorHistoryIconBackground">@color/lightgrey</item>
+        <item name="colorHistoryIcons">@color/lightlightblue</item>
     </style>
 </resources>

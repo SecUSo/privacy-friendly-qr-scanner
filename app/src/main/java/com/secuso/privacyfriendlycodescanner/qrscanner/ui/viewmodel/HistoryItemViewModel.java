@@ -1,6 +1,7 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel;
 
 import android.content.Context;
+import android.text.format.DateUtils;
 import android.view.View;
 
 import androidx.appcompat.app.AlertDialog;
@@ -15,7 +16,6 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ResultActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.HistoryAdapter;
 
-import java.text.DateFormat;
 import java.util.Date;
 
 /**
@@ -66,8 +66,8 @@ public class HistoryItemViewModel extends BaseObservable {
 
     public String getTimestamp() {
         if (entry.getTimestamp() != 0) {
-            DateFormat df = DateFormat.getDateTimeInstance();
-            return df.format(new Date(entry.getTimestamp()));
+            Date now = new Date();
+            return DateUtils.getRelativeTimeSpanString(entry.getTimestamp(), now.getTime(), 0, DateUtils.FORMAT_ABBREV_RELATIVE).toString();
         }
         return "";
     }

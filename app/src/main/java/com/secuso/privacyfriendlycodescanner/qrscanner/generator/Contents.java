@@ -3,6 +3,7 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.generator;
 import android.content.Context;
 import android.provider.ContactsContract;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 
 import com.google.zxing.client.result.ParsedResultType;
@@ -72,6 +73,12 @@ public final class Contents {
         VIN;
 
 
+        /**
+         * Returns a localized string representation of this {@link Type}.
+         *
+         * @param context
+         * @return
+         */
         public String toLocalizedString(Context context) {
             switch (this) {
                 case TEXT:
@@ -117,6 +124,53 @@ public final class Contents {
             }
         }
 
+        /**
+         * Returns the resource reference of a icon representing this {@link Type}.
+         *
+         * @return
+         */
+        public @DrawableRes
+        Integer getIcon() {
+            switch (this) {
+                case TEXT:
+                    return R.drawable.ic_baseline_subject_24dp;
+                case EMAIL:
+                    return R.drawable.ic_email_accent_24dp;
+                case PHONE:
+                    return R.drawable.ic_phone_accent_24dp;
+                case WEB_URL:
+                case URI:
+                    return R.drawable.ic_baseline_public_24dp;
+                case WIFI:
+                    return R.drawable.ic_baseline_wifi_24dp;
+                case V_CARD:
+                case ME_CARD:
+                case BIZ_CARD:
+                case CONTACT:
+                case ADDRESSBOOK:
+                    return R.drawable.ic_person_accent_24dp;
+                case MARKET:
+                    return R.drawable.ic_baseline_shop_24dp;
+                case LOCATION:
+                    return R.drawable.ic_baseline_place_24dp;
+                case PRODUCT:
+                    return R.drawable.ic_baseline_shopping_cart_24dp;
+                case CALENDAR:
+                    return R.drawable.ic_baseline_event_24dp;
+                case ISBN:
+                case VIN:
+                    return R.drawable.ic_barcode_24dp;
+                default:
+                    return R.drawable.ic_no_image_accent_24dp;
+            }
+        }
+
+        /**
+         * Returns a {@link Type} based on the given {@link ParsedResultType}.
+         *
+         * @param type
+         * @return
+         */
         public static Type parseParsedResultType(@NonNull ParsedResultType type) {
             switch (type) {
                 case ADDRESSBOOK:
