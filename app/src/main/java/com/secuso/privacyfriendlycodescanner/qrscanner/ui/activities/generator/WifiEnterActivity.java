@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
 
 public class WifiEnterActivity extends AppCompatActivity {
 
@@ -30,7 +31,7 @@ public class WifiEnterActivity extends AppCompatActivity {
         auth = new String[]{getString(R.string.no_encryption), "WEP", "WPA/WPA2"};
 
         dropdownMenu = (AutoCompleteTextView) findViewById(R.id.editWifiEncryption);
-        dropdownAdapter = new ArrayAdapter<String>(WifiEnterActivity.this, android.R.layout.simple_spinner_item, auth);
+        dropdownAdapter = new ArrayAdapter<>(WifiEnterActivity.this, android.R.layout.simple_spinner_item, auth);
         dropdownAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         dropdownMenu.setAdapter(dropdownAdapter);
         dropdownMenu.setText(auth[2], false);
@@ -47,15 +48,12 @@ public class WifiEnterActivity extends AppCompatActivity {
         qrPassword.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
 
 
-        dropdownMenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                if (dropdownMenu.getText().toString().equals(auth[0])) {
-                    //disable password field if no encryption was selected
-                    findViewById(R.id.editWifiPasswordInputLayout).setEnabled(false);
-                } else {
-                    findViewById(R.id.editWifiPasswordInputLayout).setEnabled(true);
-                }
+        dropdownMenu.setOnItemClickListener((adapterView, view, i, l) -> {
+            if (dropdownMenu.getText().toString().equals(auth[0])) {
+                //disable password field if no encryption was selected
+                findViewById(R.id.editWifiPasswordInputLayout).setEnabled(false);
+            } else {
+                findViewById(R.id.editWifiPasswordInputLayout).setEnabled(true);
             }
         });
 
@@ -66,7 +64,7 @@ public class WifiEnterActivity extends AppCompatActivity {
                 //  WIFI:S:mynetwork;T:WPA;P:mypass;;
                 String result = "";
 
-                result += "S:" + qrNetwork.getText().toString();
+                result += "S:" + QRGeneratorUtils.escapeQRPropertyValue(qrNetwork.getText().toString());
 
                 // Add encryption type if encryption was selected
                 if (!dropdownMenu.getText().toString().equals(auth[0])) {
@@ -79,7 +77,7 @@ public class WifiEnterActivity extends AppCompatActivity {
 
                     // Add password
                     if (!qrPassword.getText().toString().isEmpty()) {
-                        result += ";P:" + qrPassword.getText().toString();
+                        result += ";P:" + QRGeneratorUtils.escapeQRPropertyValue(qrPassword.getText().toString());
                     }
                 }
                 result += ";;";
@@ -96,7 +94,7 @@ public class WifiEnterActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // Set adapter on resume to prevent missing dropdown items in some cases
-        dropdownAdapter = new ArrayAdapter<String>(WifiEnterActivity.this, android.R.layout.simple_spinner_item, auth);
+        dropdownAdapter = new ArrayAdapter<>(WifiEnterActivity.this, android.R.layout.simple_spinner_item, auth);
         dropdownAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         dropdownMenu.setAdapter(dropdownAdapter);
         if (dropdownMenu.getText().toString().equals(auth[0])) {

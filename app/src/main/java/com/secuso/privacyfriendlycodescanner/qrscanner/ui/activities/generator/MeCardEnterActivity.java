@@ -20,7 +20,8 @@ public class MeCardEnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_me_card_enter);
 
 
-        final EditText qrName = (EditText) findViewById(R.id.editName);
+        final EditText qrFirstname = (EditText) findViewById(R.id.editFirstname);
+        final EditText qrLastname = (EditText) findViewById(R.id.editLastname);
         final EditText qrPhone = (EditText) findViewById(R.id.editPhone);
         final EditText qrMail = (EditText) findViewById(R.id.editMail);
         final EditText qrStreet = (EditText) findViewById(R.id.editAddress);
@@ -28,7 +29,8 @@ public class MeCardEnterActivity extends AppCompatActivity {
         final EditText qrZipCode = (EditText) findViewById(R.id.editZipCode);
 
         int maxLength = 75;
-        qrName.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrFirstname.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+        qrLastname.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
         int maxLength2 = 75;
         qrPhone.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
@@ -55,10 +57,14 @@ public class MeCardEnterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //MECARD:N:Owen,Sean;ADR:76 9th Avenue, 4th Floor, New York, NY 10011;TEL:12125551212;EMAIL:srowen@example.com;;
-                result = qrName.getText().toString()
-                        + ";ADR:" + qrStreet.getText().toString() + "," + qrCity.getText().toString() + "," + qrZipCode.getText().toString()
+                result = qrLastname.getText().toString()
+                        + "," + qrFirstname.getText().toString()
+                        + ";ADR:" + qrStreet.getText().toString()
+                        + "," + qrCity.getText().toString()
+                        + "," + qrZipCode.getText().toString()
                         + ";TEL:" + qrPhone.getText().toString()
-                        + ";EMAIL:" + qrMail.getText().toString() + ";;";
+                        + ";EMAIL:" + qrMail.getText().toString()
+                        + ";;";
                 Intent i = new Intent(MeCardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);
                 i.putExtra("type", Contents.Type.ME_CARD);

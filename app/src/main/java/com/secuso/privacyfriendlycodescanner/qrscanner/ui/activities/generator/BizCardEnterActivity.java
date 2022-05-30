@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
 
 public class BizCardEnterActivity extends AppCompatActivity {
 
@@ -50,13 +51,15 @@ public class BizCardEnterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //BIZCARD:N:Sean;X:Owen;T:Software Engineer;C:Google;A:76 9th Avenue, New York, NY 10011;B:+12125551212;E:srowen@google.com;;
 
-                result = "N:" + qrFirstname.getText().toString()
-                        + ";X:" + qrLastname.getText().toString()
-                        + ";T:" + qrTitle.getText().toString()
-                        + ";C:" + qrCompany.getText().toString()
-                        + ";A:" + qrStreet.getText().toString() + "," + qrCity.getText().toString() + "," + qrZipCode.getText().toString()
-                        + ";B:" + qrPhone.getText().toString()
-                        + ";E:" + qrMail.getText().toString()
+                result = "N:" + QRGeneratorUtils.escapeQRPropertyValue(qrFirstname.getText().toString())
+                        + ";X:" + QRGeneratorUtils.escapeQRPropertyValue(qrLastname.getText().toString())
+                        + ";T:" + QRGeneratorUtils.escapeQRPropertyValue(qrTitle.getText().toString())
+                        + ";C:" + QRGeneratorUtils.escapeQRPropertyValue(qrCompany.getText().toString())
+                        + ";A:" + QRGeneratorUtils.escapeQRPropertyValue(qrStreet.getText().toString())
+                        + "," + QRGeneratorUtils.escapeQRPropertyValue(qrCity.getText().toString())
+                        + "," + QRGeneratorUtils.escapeQRPropertyValue(qrZipCode.getText().toString())
+                        + ";B:" + QRGeneratorUtils.escapeQRPropertyValue(qrPhone.getText().toString())
+                        + ";E:" + QRGeneratorUtils.escapeQRPropertyValue(qrMail.getText().toString())
                         + ";;";
                 Intent i = new Intent(BizCardEnterActivity.this, QrGeneratorDisplayActivity.class);
                 i.putExtra("gn", result);

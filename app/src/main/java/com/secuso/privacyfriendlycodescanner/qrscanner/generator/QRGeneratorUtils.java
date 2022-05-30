@@ -177,4 +177,16 @@ public class QRGeneratorUtils {
         return outFile;
     }
 
+    /**
+     * Escapes all occurrences of the characters ",", ";", ":" and "\" with a backslash "\".
+     *
+     * @param value
+     * @return
+     */
+    public static String escapeQRPropertyValue(String value) {
+        return value.replace("\\", "\\\\")
+                .replace(",", "\\,")
+                .replace(":", "\\:")
+                .replace(";", "\\;");
+    }
 }
