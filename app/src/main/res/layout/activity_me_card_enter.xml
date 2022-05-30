@@ -32,7 +32,7 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="12dp"
                 app:layout_constraintStart_toStartOf="@id/guidelineStart"
-                app:layout_constraintTop_toTopOf="@id/editNameInputLayout"
+                app:layout_constraintTop_toTopOf="@id/editFirstnameInputLayout"
                 app:srcCompat="@drawable/ic_person_accent_24dp"
                 tools:ignore="ContentDescription" />
 
@@ -78,22 +78,43 @@
                 tools:layout_editor_absoluteX="40dp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/editNameInputLayout"
+                android:id="@+id/editFirstnameInputLayout"
                 style="@style/AppTheme.Generator.TextInputLayout.Dense"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@id/editLastnameInputLayout"
                 app:layout_constraintStart_toEndOf="@id/iconBarrier"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editName"
+                    android:id="@+id/editFirstname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/name"
+                    android:hint="@string/firstname"
+                    android:inputType="textPersonName"
+                    android:nextFocusDown="@id/editText1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editLastnameInputLayout"
+                style="@style/AppTheme.Generator.TextInputLayout.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/editFirstnameInputLayout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editLastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/lastname"
                     android:inputType="textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,7 +129,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@id/iconBarrier"
-                app:layout_constraintTop_toBottomOf="@id/editNameInputLayout">
+                app:layout_constraintTop_toBottomOf="@id/editFirstnameInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/editPhone"
