@@ -1,11 +1,13 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
+import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -99,6 +101,31 @@ public class ResultActivity extends AppCompatActivity {
 
         loadFragment(viewModel.mParsedResult);
         displayGeneralData();
+
+        findViewById(R.id.btnRawData).setOnClickListener(view -> {
+            AlertDialog.Builder builder;
+            String rawData = viewModel.currentHistoryItem.getResult().getText();
+
+            LayoutInflater inflater = getLayoutInflater();
+            View dialogView = inflater.inflate(R.layout.dialog_raw_data, null);
+            TextView textView = dialogView.findViewById(R.id.textView);
+            textView.setText(rawData);
+
+            builder = new AlertDialog.Builder(this);
+            builder.setView(dialogView);
+            builder.setTitle(R.string.raw_data);
+            builder.setIcon(R.drawable.ic_baseline_qr_code_24dp);
+            builder.setCancelable(true);
+            builder.setPositiveButton(R.string.okay, null);
+            builder.setNegativeButton(R.string.copy_to_clipboard, (dialogInterface, i) -> {
+                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                ClipData clipData = ClipData.newPlainText("Text", rawData);
+                clipboardManager.setPrimaryClip(clipData);
+                Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
+            });
+
+            builder.create().show();
+        });
     }
 
     /**

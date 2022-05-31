@@ -297,11 +297,14 @@
     <string name="code_stored">QR code stored in gallery</string>
     <string name="Ofeatures">Other features</string>
     <string name="OfeaturesAnswer">You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
+    <string name="copy_to_clipboard">Copy to clipboard</string>
     <string name="Content_copied">Content copied</string>
     <string name="Share_via">Share via</string>
     <string name="select_all">Select All</string>
     <string name="selected_1">Selected</string>
     <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
+
+    <string name="raw_data">Raw data</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -322,5 +322,7 @@
     <string name="generator_package_name">Pakketnaam</string>
     <string name="generator_market_explanation">Hier kunt u de pakketnaam van de app invoeren. Bijv.</string>
     <string name="generator_market_explanation_2">De gegenereerde QR-code wijst dan naar de overeenkomstige app op Google Play.</string>
+    <string name="raw_data">Ruwe gegevens</string>
+    <string name="copy_to_clipboard">Kopieer naar klembord</string>
 
 </resources>
