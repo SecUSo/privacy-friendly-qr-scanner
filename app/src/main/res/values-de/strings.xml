@@ -221,7 +221,7 @@
     <string name="password">Passwort</string>
     <string name="company">Firma</string>
     <string name="lastname">Nachname</string>
-    <string name="title">Title</string>
+    <string name="title">Titel</string>
     <string name="city">Stadt</string>
     <string name="street_number">Hausnummer</string>
     <string name="postal_address">Postleitzahl</string>
