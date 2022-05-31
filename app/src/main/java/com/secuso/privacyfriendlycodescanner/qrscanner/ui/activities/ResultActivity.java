@@ -58,7 +58,7 @@ public class ResultActivity extends AppCompatActivity {
     private static BarcodeResult barcodeResult = null;
     private static HistoryItem historyItem = null;
 
-    private Button proceedButton = null;
+    private Button chooseActionButton = null;
 
     private ResultViewModel viewModel;
 
@@ -84,7 +84,7 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        proceedButton = findViewById(R.id.btnProceed);
+        chooseActionButton = findViewById(R.id.btnChooseAction);
 
         viewModel = new ViewModelProvider(this).get(ResultViewModel.class);
 
@@ -102,30 +102,9 @@ public class ResultActivity extends AppCompatActivity {
         loadFragment(viewModel.mParsedResult);
         displayGeneralData();
 
-        findViewById(R.id.btnRawData).setOnClickListener(view -> {
-            AlertDialog.Builder builder;
-            String rawData = viewModel.currentHistoryItem.getResult().getText();
+        findViewById(R.id.btnChooseAction).setOnClickListener(this::onChooseActionButtonClick);
 
-            LayoutInflater inflater = getLayoutInflater();
-            View dialogView = inflater.inflate(R.layout.dialog_raw_data, null);
-            TextView textView = dialogView.findViewById(R.id.textView);
-            textView.setText(rawData);
-
-            builder = new AlertDialog.Builder(this);
-            builder.setView(dialogView);
-            builder.setTitle(R.string.raw_data);
-            builder.setIcon(R.drawable.ic_baseline_qr_code_24dp);
-            builder.setCancelable(true);
-            builder.setPositiveButton(R.string.okay, null);
-            builder.setNegativeButton(R.string.copy_to_clipboard, (dialogInterface, i) -> {
-                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-                ClipData clipData = ClipData.newPlainText("Text", rawData);
-                clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
-            });
-
-            builder.create().show();
-        });
+        findViewById(R.id.btnRawData).setOnClickListener(this::onRawDataButtonClick);
     }
 
     /**
@@ -187,12 +166,35 @@ public class ResultActivity extends AppCompatActivity {
         qrTypeText.setText(Contents.Type.parseParsedResultType(viewModel.mParsedResult.getType()).toLocalizedString(getApplicationContext()));
     }
 
-    public void onClick(View view) {
-        if (view.getId() == R.id.btnProceed) {
-            if (currentResultFragment != null) {
-                currentResultFragment.onProceedPressed(this);
-            }
+    private void onChooseActionButtonClick(View view) {
+        if (currentResultFragment != null) {
+            currentResultFragment.onProceedPressed(this);
         }
+    }
+
+    private void onRawDataButtonClick(View view) {
+        AlertDialog.Builder builder;
+        String rawData = viewModel.currentHistoryItem.getResult().getText();
+
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_raw_data, null);
+        TextView textView = dialogView.findViewById(R.id.textView);
+        textView.setText(rawData);
+
+        builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+        builder.setTitle(R.string.raw_data);
+        builder.setIcon(R.drawable.ic_baseline_qr_code_24dp);
+        builder.setCancelable(true);
+        builder.setNegativeButton(R.string.okay, null);
+        builder.setPositiveButton(R.string.copy_to_clipboard, (dialogInterface, i) -> {
+            ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            ClipData clipData = ClipData.newPlainText("Text", rawData);
+            clipboardManager.setPrimaryClip(clipData);
+            Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
+        });
+
+        builder.create().show();
     }
 
     @Override
@@ -269,7 +271,7 @@ public class ResultActivity extends AppCompatActivity {
 
                 // hide "search" button if search engines are disabled
                 if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean("pref_search_engine_enabled", true)) {
-                    proceedButton.setVisibility(View.GONE);
+                    chooseActionButton.setVisibility(View.GONE);
                 }
 
                 break;
@@ -282,6 +284,6 @@ public class ResultActivity extends AppCompatActivity {
         ft.replace(R.id.activity_result_frame_layout, resultFragment);
         ft.commit();
 
-        proceedButton.setText(resultFragment.getProceedButtonTitle(this));
+        chooseActionButton.setText(resultFragment.getProceedButtonTitle(this));
     }
 }

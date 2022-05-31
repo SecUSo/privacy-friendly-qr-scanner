@@ -79,28 +79,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/space"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/activity_result_qr_type_card"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <View
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-    <Button
-        android:id="@+id/btnProceed"
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnChooseAction"
+        style="@style/AppTheme.Button.ExtendedFloatingActionButton.Base"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/button_normal"
-        android:onClick="onClick"
-        android:padding="4dp"
+        android:clickable="true"
         android:text="@string/choose_action"
-        android:textColor="@android:color/white" />
+        android:textAlignment="center"
+        app:icon="@drawable/ic_baseline_next_plan_24dp" />
 
 </RelativeLayout>
