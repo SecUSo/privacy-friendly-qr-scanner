@@ -23,11 +23,13 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bumptech.glide.Glide;
+import com.google.zxing.BarcodeFormat;
 import com.google.zxing.client.result.ParsedResult;
 import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ContactResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.GeoResultFragment;
@@ -105,6 +107,8 @@ public class ResultActivity extends AppCompatActivity {
         findViewById(R.id.btnChooseAction).setOnClickListener(this::onChooseActionButtonClick);
 
         findViewById(R.id.btnRawData).setOnClickListener(this::onRawDataButtonClick);
+
+        findViewById(R.id.activity_result_qr_image).setOnClickListener(this::onQRImageClick);
     }
 
     /**
@@ -166,6 +170,20 @@ public class ResultActivity extends AppCompatActivity {
         qrTypeText.setText(Contents.Type.parseParsedResultType(viewModel.mParsedResult.getType()).toLocalizedString(getApplicationContext()));
     }
 
+    private void onQRImageClick(View view) {
+        AlertDialog.Builder builder;
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.dialog_image_view, null);
+        ImageView imageView = dialogView.findViewById(R.id.imageView);
+
+        builder = new AlertDialog.Builder(this);
+        builder.setView(dialogView);
+        builder.setCancelable(true);
+        builder.create().show();
+
+        Glide.with(this).load(Utils.generateCode(viewModel.currentHistoryItem.getText(), BarcodeFormat.QR_CODE, 500, 500, null, null)).into(imageView);
+    }
+
     private void onChooseActionButtonClick(View view) {
         if (currentResultFragment != null) {
             currentResultFragment.onProceedPressed(this);
@@ -174,7 +192,7 @@ public class ResultActivity extends AppCompatActivity {
 
     private void onRawDataButtonClick(View view) {
         AlertDialog.Builder builder;
-        String rawData = viewModel.currentHistoryItem.getResult().getText();
+        String rawData = viewModel.currentHistoryItem.getText();
 
         LayoutInflater inflater = getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.dialog_raw_data, null);
@@ -199,33 +217,29 @@ public class ResultActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.share:
-                Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                sharingIntent.putExtra(Intent.EXTRA_TEXT, viewModel.mParsedResult.getDisplayResult());
-                startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_via)));
-                return true;
-
-            case R.id.save:
-                viewModel.saveHistoryItem(viewModel.currentHistoryItem);
-                invalidateOptionsMenu();
-                Toast.makeText(this, R.string.activity_result_toast_saved, Toast.LENGTH_SHORT).show();
-                return true;
-
-            case R.id.copy:
-                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-                ClipData clipData = ClipData.newPlainText("Text", viewModel.mParsedResult.getDisplayResult());
-                clipboardManager.setPrimaryClip(clipData);
-                Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
-                return true;
-
-            case android.R.id.home:
-                onBackPressed();
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.share) {
+            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            sharingIntent.putExtra(Intent.EXTRA_TEXT, viewModel.mParsedResult.getDisplayResult());
+            startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_via)));
+            return true;
+        } else if (itemId == R.id.save) {
+            viewModel.saveHistoryItem(viewModel.currentHistoryItem);
+            invalidateOptionsMenu();
+            Toast.makeText(this, R.string.activity_result_toast_saved, Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (itemId == R.id.copy) {
+            ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+            ClipData clipData = ClipData.newPlainText("Text", viewModel.mParsedResult.getDisplayResult());
+            clipboardManager.setPrimaryClip(clipData);
+            Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (itemId == android.R.id.home) {
+            onBackPressed();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 
