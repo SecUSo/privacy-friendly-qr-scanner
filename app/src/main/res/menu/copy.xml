@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <item
+    <item
         android:id="@+id/copy"
         android:icon="@drawable/ic_content_copy_white_24dp"
-        android:title="Copy"
+        android:title="@string/copy_to_clipboard"
         app:showAsAction="always" />
 
 </menu>

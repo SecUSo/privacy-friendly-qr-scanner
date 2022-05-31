@@ -326,6 +326,8 @@
     <string name="generator_package_name">Nome del pacchetto</string>
     <string name="generator_market_explanation">Qui è possibile inserire il nome del pacchetto dell\'applicazione. Ad esempio.</string>
     <string name="generator_market_explanation_2">Il codice QR generato punta all\'applicazione corrispondente su Google Play.</string>
+    <string name="raw_data">Dati grezzi</string>
+    <string name="copy_to_clipboard">Copia negli appunti</string>
 
 
 </resources>
