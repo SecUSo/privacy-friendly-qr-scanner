@@ -317,5 +317,8 @@
     <string name="generator_market_explanation_2">Der generierte QR-Code verweist dann auf die entsprechende App auf Google Play.</string>
     <string name="raw_data">Rohdaten</string>
     <string name="copy_to_clipboard">In Zwischenablage kopieren</string>
+    <string name="close">Schließen</string>
+    <string name="image_stored_in_gallery">Bild in Galerie gespeichert</string>
+    <string name="generated_code_image_explanation">Hinweis: Der hier gezeigte Code wurde auf der Grundlage des Inhalts des gescannten Codes erstellt und kann daher anders aussehen. Die darin enthaltenen Daten sind jedoch dieselben.</string>
 
 </resources>

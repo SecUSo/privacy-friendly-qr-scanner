@@ -328,6 +328,9 @@
     <string name="generator_market_explanation_2">Il codice QR generato punta all\'applicazione corrispondente su Google Play.</string>
     <string name="raw_data">Dati grezzi</string>
     <string name="copy_to_clipboard">Copia negli appunti</string>
+    <string name="close">Chiudere</string>
+    <string name="image_stored_in_gallery">Immagine salvata in galleria</string>
+    <string name="generated_code_image_explanation">Nota: il codice qui riportato è stato generato in base al contenuto del codice scansionato e può quindi avere un aspetto diverso. Tuttavia, i dati contenuti sono gli stessi.</string>
 
 
 </resources>

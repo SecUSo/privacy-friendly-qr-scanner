@@ -43,16 +43,12 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
 
         Glide.with(this).load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType)).into(myImage);
 
-        btnstore.setOnClickListener(new View.OnClickListener() {
+        btnstore.setOnClickListener(view -> {
+            QRGeneratorUtils.saveCachedImageToExternalStorage(QrGeneratorDisplayActivity.this);
 
-            @Override
-            public void onClick(View v) {
-                QRGeneratorUtils.saveCachedImageToExternalStorage(QrGeneratorDisplayActivity.this);
-
-                Intent i = new Intent(QrGeneratorDisplayActivity.this, ScannerActivity.class);
-                startActivity(i);
-                Toast.makeText(QrGeneratorDisplayActivity.this, "QR code stored in gallery", Toast.LENGTH_LONG).show();
-            }
+            Intent i = new Intent(QrGeneratorDisplayActivity.this, ScannerActivity.class);
+            startActivity(i);
+            Toast.makeText(QrGeneratorDisplayActivity.this, R.string.image_stored_in_gallery, Toast.LENGTH_LONG).show();
         });
     }
 
@@ -64,14 +60,11 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.share:
-                QRGeneratorUtils.shareImage(this, QRGeneratorUtils.getCachedUri());
-                return true;
-
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId() == R.id.share) {
+            QRGeneratorUtils.shareImage(this, QRGeneratorUtils.getCachedUri());
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
 
