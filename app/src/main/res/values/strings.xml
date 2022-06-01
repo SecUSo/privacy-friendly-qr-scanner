@@ -305,6 +305,9 @@
     <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
 
     <string name="raw_data">Raw data</string>
+    <string name="generated_code_image_explanation">Note: The code shown here was generated based on the content of the scanned code and may therefore look different. However, the data it contains is the same.</string>
+    <string name="image_stored_in_gallery">Image saved to gallery</string>
+    <string name="close">Close</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -324,5 +324,8 @@
     <string name="generator_market_explanation_2">De gegenereerde QR-code wijst dan naar de overeenkomstige app op Google Play.</string>
     <string name="raw_data">Ruwe gegevens</string>
     <string name="copy_to_clipboard">Kopieer naar klembord</string>
+    <string name="close">Sluiten</string>
+    <string name="image_stored_in_gallery">Beeld opgeslagen in galerij</string>
+    <string name="generated_code_image_explanation">Opmerking: De hier getoonde code is gegenereerd op basis van de inhoud van de gescande code en kan er daarom anders uitzien. De gegevens die erin staan zijn echter dezelfde.</string>
 
 </resources>
