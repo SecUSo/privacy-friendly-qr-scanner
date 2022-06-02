@@ -84,7 +84,7 @@ public class QRCodeEncoder {
                 title = "E-Mail";
             }
         } else if (type.equals(Contents.Type.WEB_URL)) {
-            data = trim(data);
+            data = trim(data).toLowerCase();
             if (data != null) {
                 if (!data.startsWith("http://") && !data.startsWith("https://")) {
                     contents = "http://" + data;

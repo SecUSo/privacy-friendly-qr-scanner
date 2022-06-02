@@ -54,7 +54,7 @@ public class ResultViewModel extends AndroidViewModel {
         mParsedResult = ResultParser.parseResult(currentHistoryItem.getResult());
         mCodeImage = currentHistoryItem.getImage();
         if(mCodeImage == null) {
-            mCodeImage = Utils.generateCode(currentHistoryItem.getText(), BarcodeFormat.QR_CODE, null, null);
+            mCodeImage = Utils.generateCode(currentHistoryItem.getText(), BarcodeFormat.QR_CODE, null);
             currentHistoryItem.setImage(mCodeImage);
             currentHistoryItem.setFormat(BarcodeFormat.QR_CODE);
             updateHistoryItem(currentHistoryItem);
