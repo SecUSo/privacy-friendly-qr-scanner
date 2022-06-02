@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -66,7 +67,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
         binding.itemView.setOnLongClickListener(viewModel.onLongClickItem());
 
         Contents.Type contentType = Contents.Type.parseParsedResultType(ResultParser.parseResult(historyItem.getResult()).getType());
-        Glide.with(context).load(contentType.getIcon()).placeholder(R.drawable.ic_no_image_accent_24dp).into(binding.itemHistoryImage);
+        Glide.with(context).load(AppCompatResources.getDrawable(context, contentType.getIcon())).placeholder(AppCompatResources.getDrawable(context, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryImage);
 
         @DrawableRes Integer codeTypeDrawableRes;
         switch (historyItem.getFormat()) {
@@ -77,7 +78,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
                 codeTypeDrawableRes = R.drawable.ic_barcode_24dp;
                 break;
         }
-        Glide.with(context).load(codeTypeDrawableRes).placeholder(R.drawable.ic_no_image_accent_24dp).into(binding.itemHistoryTypeImage);
+        Glide.with(context).load(AppCompatResources.getDrawable(context, codeTypeDrawableRes)).placeholder(AppCompatResources.getDrawable(context, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryTypeImage);
     }
 
     @Override

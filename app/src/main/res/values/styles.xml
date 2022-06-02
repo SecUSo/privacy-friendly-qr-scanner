@@ -8,7 +8,8 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorGeneratorIcons">@color/lightlightblue</item>
+        <item name="colorIcons">@color/lightlightblue</item>
+        <item name="colorGeneratorIcons">?attr/colorIcons</item>
         <item name="colorHistoryIconBackground">@color/lightgrey</item>
         <item name="colorHistoryIcons">@color/lightlightblue</item>
     </style>
