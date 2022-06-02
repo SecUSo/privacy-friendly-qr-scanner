@@ -22,28 +22,6 @@ public class Utils {
     public static final int DEFAULT_CODE_WIDTH = 100;
     public static final int DEFAULT_CODE_HEIGHT = 100;
 
-    public static Bitmap generateCode(String data, BarcodeFormat format, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
-        return generateCode(data, format, DEFAULT_CODE_WIDTH, DEFAULT_CODE_HEIGHT, hints, metadata);
-    }
-
-    public static Bitmap generateCode(String data, BarcodeFormat format, int width, int height, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
-        if (hints == null) {
-            hints = new EnumMap<>(EncodeHintType.class);
-        }
-
-        if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL)) {
-            Object ec = metadata.get(ERROR_CORRECTION_LEVEL);
-            if (ec != null) {
-                hints.put(ERROR_CORRECTION, ec);
-            }
-        }
-        if (!hints.containsKey(ERROR_CORRECTION) && format != BarcodeFormat.AZTEC) {
-            hints.put(ERROR_CORRECTION, ErrorCorrectionLevel.L.name());
-        }
-
-        return generateCode(data, getFormat(format), width, height, hints); // only reshow as QR Codes
-    }
-
     private static BarcodeFormat getFormat(BarcodeFormat format) {
         switch (format) {
             case EAN_8:
@@ -65,13 +43,34 @@ public class Utils {
         }
     }
 
-    public static Bitmap generateCode(String data, BarcodeFormat format, Map<EncodeHintType, ?> hints) {
-        return generateCode(data, format, DEFAULT_CODE_WIDTH, DEFAULT_CODE_HEIGHT, hints);
+    public static Bitmap generateCode(String data, BarcodeFormat format, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
+        return generateCode(data, format, DEFAULT_CODE_WIDTH, DEFAULT_CODE_HEIGHT, hints, metadata);
     }
 
-    public static Bitmap generateCode(String data, BarcodeFormat format, int imgWidth, int imgHeight, Map<EncodeHintType, ?> hints) {
+    public static Bitmap generateCode(String data, BarcodeFormat format, Map<EncodeHintType, Object> hints) {
+        return generateCode(data, format, DEFAULT_CODE_WIDTH, DEFAULT_CODE_HEIGHT, hints, null);
+    }
+
+    public static Bitmap generateCode(String data, BarcodeFormat format, int imgWidth, int imgHeight, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
+        format = getFormat(format);
         try {
             MultiFormatWriter writer = new MultiFormatWriter();
+            if (hints == null) {
+                hints = new EnumMap<>(EncodeHintType.class);
+            }
+
+            if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL)) {
+                Object ec = metadata.get(ERROR_CORRECTION_LEVEL);
+                if (ec != null) {
+                    hints.put(ERROR_CORRECTION, ec);
+                }
+            }
+            if (!hints.containsKey(ERROR_CORRECTION) && format != BarcodeFormat.AZTEC) {
+                hints.put(ERROR_CORRECTION, ErrorCorrectionLevel.L.name());
+            }
+            if(!hints.containsKey(EncodeHintType.CHARACTER_SET)) {
+                hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
+            }
             BitMatrix result = writer.encode(data, format, imgWidth, imgHeight, hints);
             int width = result.getWidth();
             int height = result.getHeight();
