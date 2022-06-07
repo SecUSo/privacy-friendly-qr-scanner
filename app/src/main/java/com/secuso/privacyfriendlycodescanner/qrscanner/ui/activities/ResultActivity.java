@@ -1,21 +1,16 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,19 +21,13 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bumptech.glide.Glide;
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.zxing.BarcodeFormat;
-import com.google.zxing.Result;
 import com.google.zxing.client.result.ParsedResult;
 import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
-import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
-import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.GenerateCodeTask;
-import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
-import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.generator.QrGeneratorDisplayActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.QRCodeImageDialogFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.RawDataDialogFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ContactResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.GeoResultFragment;
@@ -180,36 +169,8 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void onQRImageClick(View view) {
-        // Inflate dialog layout
-        AlertDialog.Builder builder;
-        LayoutInflater inflater = getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.dialog_image_view, null);
-        ImageView imageView = dialogView.findViewById(R.id.imageView);
-        ProgressBar progressBar = dialogView.findViewById(R.id.progressBar);
-        FloatingActionButton btnClose = dialogView.findViewById(R.id.btnClose);
-        Button btnStore = dialogView.findViewById(R.id.btnStore);
-
-        builder = new AlertDialog.Builder(this);
-        builder.setView(dialogView);
-        builder.setCancelable(true);
-        Dialog dialog = builder.create();
-        dialog.show();
-
-        // generate image in async task
-        Result result = viewModel.currentHistoryItem.getResult();
-        GenerateCodeTask generateCodeTask = new GenerateCodeTask(imageView, progressBar, 500, 500, result.getBarcodeFormat(), result.getResultMetadata());
-        generateCodeTask.execute(result.getText());
-
-        // set listeners for dialog buttons
-        btnClose.setOnClickListener(view1 -> dialog.dismiss());
-        btnStore.setOnClickListener(view1 -> {
-            BitmapDrawable image = (BitmapDrawable) imageView.getDrawable();
-            if (image != null) {
-                QRGeneratorUtils.cacheImage(ResultActivity.this, ((BitmapDrawable) imageView.getDrawable()).getBitmap());
-                QRGeneratorUtils.saveCachedImageToExternalStorage(ResultActivity.this);
-                Toast.makeText(ResultActivity.this, R.string.image_stored_in_gallery, Toast.LENGTH_LONG).show();
-            }
-        });
+        QRCodeImageDialogFragment fragment = new QRCodeImageDialogFragment();
+        fragment.show(getSupportFragmentManager(), QRCodeImageDialogFragment.TAG);
     }
 
     private void onChooseActionButtonClick(View view) {
@@ -219,28 +180,8 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     private void onRawDataButtonClick(View view) {
-        AlertDialog.Builder builder;
-        String rawData = viewModel.currentHistoryItem.getText();
-
-        LayoutInflater inflater = getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.dialog_raw_data, null);
-        TextView textView = dialogView.findViewById(R.id.textView);
-        textView.setText(rawData);
-
-        builder = new AlertDialog.Builder(this);
-        builder.setView(dialogView);
-        builder.setTitle(R.string.raw_data);
-        builder.setIcon(R.drawable.ic_baseline_qr_code_24dp);
-        builder.setCancelable(true);
-        builder.setNegativeButton(R.string.okay, null);
-        builder.setPositiveButton(R.string.copy_to_clipboard, (dialogInterface, i) -> {
-            ClipboardManager clipboardManager = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-            ClipData clipData = ClipData.newPlainText("Text", rawData);
-            clipboardManager.setPrimaryClip(clipData);
-            Toast.makeText(getApplicationContext(), R.string.content_copied, Toast.LENGTH_SHORT).show();
-        });
-
-        builder.create().show();
+        RawDataDialogFragment fragment = RawDataDialogFragment.Companion.newInstance(viewModel.currentHistoryItem.getText());
+        fragment.show(getSupportFragmentManager(), RawDataDialogFragment.TAG);
     }
 
     @Override
