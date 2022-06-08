@@ -10,7 +10,7 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorIcons">@color/lightlightblue</item>
         <item name="colorGeneratorIcons">?attr/colorIcons</item>
-        <item name="colorHistoryIconBackground">@color/lightgrey</item>
+        <item name="colorHistoryIconBackground">@color/white</item>
         <item name="colorHistoryIcons">@color/lightlightblue</item>
     </style>
 

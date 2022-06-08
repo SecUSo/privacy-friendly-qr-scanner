@@ -9,7 +9,7 @@
         <item name="android:windowBackground">@color/darkgrey</item>
         <item name="colorIcons">@color/lightlightblue</item>
         <item name="colorGeneratorIcons">?attr/colorIcons</item>
-        <item name="colorHistoryIconBackground">@color/lightgrey</item>
+        <item name="colorHistoryIconBackground">@color/middlegrey</item>
         <item name="colorHistoryIcons">@color/lightlightblue</item>
     </style>
 </resources>
