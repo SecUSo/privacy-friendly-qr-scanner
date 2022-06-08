@@ -1,5 +1,8 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.helpers;
 
+import static com.google.zxing.EncodeHintType.ERROR_CORRECTION;
+import static com.google.zxing.ResultMetadataType.ERROR_CORRECTION_LEVEL;
+
 import android.graphics.Bitmap;
 import android.graphics.Color;
 
@@ -13,9 +16,6 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import java.util.EnumMap;
 import java.util.Map;
-
-import static com.google.zxing.EncodeHintType.ERROR_CORRECTION;
-import static com.google.zxing.ResultMetadataType.ERROR_CORRECTION_LEVEL;
 
 public class Utils {
 
@@ -65,10 +65,10 @@ public class Utils {
                     hints.put(ERROR_CORRECTION, ec);
                 }
             }
-            if (!hints.containsKey(ERROR_CORRECTION) && format != BarcodeFormat.AZTEC) {
+            if (!hints.containsKey(ERROR_CORRECTION) && format != BarcodeFormat.AZTEC && format != BarcodeFormat.PDF_417) {
                 hints.put(ERROR_CORRECTION, ErrorCorrectionLevel.L.name());
             }
-            if(!hints.containsKey(EncodeHintType.CHARACTER_SET)) {
+            if (!hints.containsKey(EncodeHintType.CHARACTER_SET)) {
                 hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
             }
             BitMatrix result = writer.encode(data, format, imgWidth, imgHeight, hints);
