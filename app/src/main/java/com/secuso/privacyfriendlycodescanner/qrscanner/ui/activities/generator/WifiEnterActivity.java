@@ -4,17 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.GeneratorKeyboardListener;
 
 public class WifiEnterActivity extends AppCompatActivity {
 
@@ -39,7 +40,6 @@ public class WifiEnterActivity extends AppCompatActivity {
 
         final EditText qrNetwork = (EditText) findViewById(R.id.editWifiSSID);
         final EditText qrPassword = (EditText) findViewById(R.id.editWifiPassword);
-        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 25;
         qrNetwork.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
@@ -57,6 +57,11 @@ public class WifiEnterActivity extends AppCompatActivity {
             }
         });
 
+        ExtendedFloatingActionButton generate = (ExtendedFloatingActionButton) findViewById(R.id.btnGenerate);
+
+        ConstraintLayout rootView = (ConstraintLayout) findViewById(R.id.rootView);
+        GeneratorKeyboardListener listener = new GeneratorKeyboardListener(rootView, generate, R.id.btnGenerate, getApplicationContext().getResources().getDisplayMetrics().densityDpi);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(listener);
 
         generate.setOnClickListener(new View.OnClickListener() {
             @Override

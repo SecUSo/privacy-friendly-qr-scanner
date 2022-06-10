@@ -4,14 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.GeneratorKeyboardListener;
 
 public class BizCardEnterActivity extends AppCompatActivity {
 
@@ -42,7 +44,11 @@ public class BizCardEnterActivity extends AppCompatActivity {
         qrTitle.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
 
-        Button generate = (Button) findViewById(R.id.btnGenerate);
+        ExtendedFloatingActionButton generate = (ExtendedFloatingActionButton) findViewById(R.id.btnGenerate);
+
+        ConstraintLayout rootView = (ConstraintLayout) findViewById(R.id.rootView);
+        GeneratorKeyboardListener listener = new GeneratorKeyboardListener(rootView, generate, R.id.btnGenerate, getApplicationContext().getResources().getDisplayMetrics().densityDpi);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(listener);
 
         generate.setOnClickListener(new View.OnClickListener() {
             String result;

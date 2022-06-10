@@ -5,14 +5,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.GeneratorKeyboardListener;
 
 public class MailEnterActivity extends AppCompatActivity {
 
@@ -24,7 +26,6 @@ public class MailEnterActivity extends AppCompatActivity {
         final EditText emailAddress = (EditText) findViewById(R.id.editMail);
         final EditText emailSubject = (EditText) findViewById(R.id.editMailSubject);
         final EditText emailContent = (EditText) findViewById(R.id.editMailContent);
-        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 50;
         emailAddress.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
@@ -32,6 +33,12 @@ public class MailEnterActivity extends AppCompatActivity {
         emailSubject.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength2)});
         int maxLength3 = 1000;
         emailContent.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength3)});
+
+        ExtendedFloatingActionButton generate = (ExtendedFloatingActionButton) findViewById(R.id.btnGenerate);
+
+        ConstraintLayout rootView = (ConstraintLayout) findViewById(R.id.rootView);
+        GeneratorKeyboardListener listener = new GeneratorKeyboardListener(rootView, generate, R.id.btnGenerate, getApplicationContext().getResources().getDisplayMetrics().densityDpi);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(listener);
 
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
