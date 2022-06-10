@@ -40,6 +40,9 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.URLRes
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.WifiResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ResultViewModel;
 
+import java.text.DateFormat;
+import java.util.Date;
+
 /**
  * This activity displays the results of scan. Either from the history or from a scan directly.<br>
  * <p>
@@ -163,9 +166,16 @@ public class ResultActivity extends AppCompatActivity {
     private void displayGeneralData() {
         ImageView qrImageView = findViewById(R.id.activity_result_qr_image);
         TextView qrTypeText = findViewById(R.id.textView);
+        TextView timestampTextView = findViewById(R.id.textViewTimestamp);
 
         Glide.with(this).load(viewModel.mCodeImage).into(qrImageView);
         qrTypeText.setText(Contents.Type.parseParsedResultType(viewModel.mParsedResult.getType()).toLocalizedString(getApplicationContext()));
+
+        long timestamp = viewModel.currentHistoryItem.getTimestamp();
+        if (timestamp != 0) {
+            DateFormat df = DateFormat.getDateTimeInstance();
+            timestampTextView.setText(df.format(new Date(timestamp)));
+        }
     }
 
     private void onQRImageClick(View view) {
