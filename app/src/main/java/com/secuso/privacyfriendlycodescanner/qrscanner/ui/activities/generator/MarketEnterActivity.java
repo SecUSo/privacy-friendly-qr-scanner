@@ -4,15 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.textfield.TextInputLayout;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.GeneratorKeyboardListener;
 
 public class MarketEnterActivity extends AppCompatActivity {
 
@@ -23,7 +25,6 @@ public class MarketEnterActivity extends AppCompatActivity {
 
         final EditText qrMarket = (EditText) findViewById(R.id.editPackageName);
         final TextInputLayout inputLayout = (TextInputLayout) findViewById(R.id.editPackageNameInputLayout);
-        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 150;
         qrMarket.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
@@ -31,6 +32,12 @@ public class MarketEnterActivity extends AppCompatActivity {
         inputLayout.setHelperText(getString(R.string.generator_market_explanation)
                 + " " + getString(R.string.generator_example_package)
                 + "\n" + getString(R.string.generator_market_explanation_2));
+
+        ExtendedFloatingActionButton generate = (ExtendedFloatingActionButton) findViewById(R.id.btnGenerate);
+
+        ConstraintLayout rootView = (ConstraintLayout) findViewById(R.id.rootView);
+        GeneratorKeyboardListener listener = new GeneratorKeyboardListener(rootView, generate, R.id.btnGenerate, getApplicationContext().getResources().getDisplayMetrics().densityDpi);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(listener);
 
         generate.setOnClickListener(new View.OnClickListener() {
             String result;

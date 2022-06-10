@@ -7,14 +7,16 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.InputFilter;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.GeneratorKeyboardListener;
 
 public class TelEnterActivity extends AppCompatActivity {
 
@@ -26,10 +28,15 @@ public class TelEnterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tel_enter);
 
         final EditText qrResult = (EditText) findViewById(R.id.editPhone);
-        Button generate = (Button) findViewById(R.id.btnGenerate);
 
         int maxLength = 15;
         qrResult.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
+
+        ExtendedFloatingActionButton generate = (ExtendedFloatingActionButton) findViewById(R.id.btnGenerate);
+
+        ConstraintLayout rootView = (ConstraintLayout) findViewById(R.id.rootView);
+        GeneratorKeyboardListener listener = new GeneratorKeyboardListener(rootView, generate, R.id.btnGenerate, getApplicationContext().getResources().getDisplayMetrics().densityDpi);
+        rootView.getViewTreeObserver().addOnGlobalLayoutListener(listener);
 
         generate.setOnClickListener(new View.OnClickListener() {
             String result;
@@ -81,6 +88,7 @@ public class TelEnterActivity extends AppCompatActivity {
                     String phoneNo = cursor.getString(phoneNoIdx);
                     ((EditText) findViewById(R.id.editPhone)).setText(phoneNo);
                 }
+                cursor.close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
