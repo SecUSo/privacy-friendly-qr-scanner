@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.AndroidViewModel;
 
 import com.google.zxing.BarcodeFormat;
+import com.google.zxing.ResultPoint;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 import com.journeyapps.barcodescanner.BarcodeResult;
@@ -53,7 +54,7 @@ public class ResultViewModel extends AndroidViewModel {
         currentHistoryItem = historyItem;
         mParsedResult = ResultParser.parseResult(currentHistoryItem.getResult());
         mCodeImage = currentHistoryItem.getImage();
-        if(mCodeImage == null) {
+        if (mCodeImage == null) {
             mCodeImage = Utils.generateCode(currentHistoryItem.getText(), BarcodeFormat.QR_CODE, null);
             currentHistoryItem.setImage(mCodeImage);
             currentHistoryItem.setFormat(BarcodeFormat.QR_CODE);
@@ -65,10 +66,11 @@ public class ResultViewModel extends AndroidViewModel {
     public void initFromScan(BarcodeResult barcodeResult) {
         currentBarcodeResult = barcodeResult;
         mParsedResult = ResultParser.parseResult(currentBarcodeResult.getResult());
+        fillMissingResultPoints();
         mCodeImage = currentBarcodeResult.getBitmapWithResultPoints(ContextCompat.getColor(getApplication(), R.color.colorAccent));
 
         createHistoryItem();
-        if(mPreferences.getBoolean("bool_history",true)){
+        if (mPreferences.getBoolean("bool_history", true)) {
             this.saveHistoryItem(currentHistoryItem);
         }
     }
@@ -88,20 +90,20 @@ public class ResultViewModel extends AndroidViewModel {
 
         Bitmap image;
         boolean prefSaveRealImage = mPreferences.getBoolean(PREF_SAVE_REAL_IMAGE_TO_HISTORY, false);
-        if(prefSaveRealImage) {
+        if (prefSaveRealImage) {
             float height;
             float width;
-            if(mCodeImage.getWidth() == 0 || mCodeImage.getWidth() == 0) {
+            if (mCodeImage.getWidth() == 0 || mCodeImage.getWidth() == 0) {
                 height = 200f;
                 width = 200f;
-            } else if(mCodeImage.getWidth() > mCodeImage.getHeight()) {
-                height = (float)mCodeImage.getHeight() / (float)mCodeImage.getWidth() * 200f;
+            } else if (mCodeImage.getWidth() > mCodeImage.getHeight()) {
+                height = (float) mCodeImage.getHeight() / (float) mCodeImage.getWidth() * 200f;
                 width = 200f;
             } else {
-                width = (float)mCodeImage.getWidth() / (float)mCodeImage.getHeight() * 200f;
+                width = (float) mCodeImage.getWidth() / (float) mCodeImage.getHeight() * 200f;
                 height = 200f;
             }
-            image = Bitmap.createScaledBitmap(mCodeImage, (int)width, (int)height, false);
+            image = Bitmap.createScaledBitmap(mCodeImage, (int) width, (int) height, false);
         } else {
             image = Utils.generateCode(currentBarcodeResult.getText(), currentBarcodeResult.getBarcodeFormat(), null, currentBarcodeResult.getResult().getResultMetadata());
         }
@@ -113,6 +115,28 @@ public class ResultViewModel extends AndroidViewModel {
         currentHistoryItem.setResultPoints(currentBarcodeResult.getResult().getResultPoints());
         currentHistoryItem.setText(currentBarcodeResult.getResult().getText());
         currentHistoryItem.setTimestamp(currentBarcodeResult.getResult().getTimestamp());
+    }
+
+    /**
+     * Sometimes the result points array of currentBarcodeResult includes null objects, what might lead to crashes.
+     * This function fills the array with duplicates from a valid ResultPoint or with a new ResultPoint with coordinates (0.0,0.0).
+     */
+    private void fillMissingResultPoints() {
+        if (currentBarcodeResult != null && currentBarcodeResult.getResultPoints() != null) {
+            ResultPoint[] orig = currentBarcodeResult.getResultPoints();
+            ResultPoint valid = new ResultPoint(0, 0);
+            for (ResultPoint point : orig) {
+                if (point != null) {
+                    valid = point;
+                    break;
+                }
+            }
+            for (int i = 0; i < orig.length; i++) {
+                if (orig[i] == null) {
+                    orig[i] = valid;
+                }
+            }
+        }
     }
 
 }
