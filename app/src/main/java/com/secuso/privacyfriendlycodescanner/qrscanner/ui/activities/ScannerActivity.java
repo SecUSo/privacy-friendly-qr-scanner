@@ -2,9 +2,11 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.Manifest;
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -20,6 +22,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.zxing.BarcodeFormat;
@@ -33,6 +36,7 @@ import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 import com.journeyapps.barcodescanner.DefaultDecoderFactory;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.BaseActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ScannerViewModel;
 
 import java.lang.ref.WeakReference;
 import java.util.Arrays;
@@ -47,6 +51,8 @@ import java.util.List;
  */
 public class ScannerActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final int PERMISSION_CAMERA_REQUEST = 0;
+    private static final int PICK_IMAGE_INTENT = 1;
+    private static final int PERMISSION_READ_EXTERNAL_STORAGE_REQUEST = 2;
 
     // UI
     private DecoratedBarcodeView barcodeScannerView;
@@ -57,30 +63,34 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     // Logic
     private BeepManager beepManager;
 
+    private ScannerViewModel viewModel;
+
     private final CameraPreview.StateListener stateListener = new CameraPreview.StateListener() {
-        @Override public void previewSized() { }
-        @Override public void previewStarted() { }
-        @Override public void previewStopped() { }
-        @Override public void cameraError(Exception error) { }
-        @Override public void cameraClosed() { }
+        @Override
+        public void previewSized() {
+        }
+
+        @Override
+        public void previewStarted() {
+        }
+
+        @Override
+        public void previewStopped() {
+        }
+
+        @Override
+        public void cameraError(Exception error) {
+        }
+
+        @Override
+        public void cameraClosed() {
+        }
     };
 
     private final BarcodeCallback callback = new BarcodeCallback() {
         @Override
         public void barcodeResult(BarcodeResult result) {
-            String contents = result.toString();
-            if(contents.isEmpty()) {
-                return;
-            }
-
-            barcodeScannerView.setStatusText(result.getText());
-
-            beepManager.playBeepSoundAndVibrate();
-
-            ResultActivity.startResultActivity(ScannerActivity.this, result);
-//            Intent resultIntent = new Intent(ScannerActivity.this, ResultActivity.class);
-//            resultIntent.putExtra("QRResult", new ParcelableResultDecorator(result.getResult()), result.getBitmapWithResultPoints());
-//            startActivity(resultIntent);
+            onBarcodeResult(result);
         }
 
         @Override
@@ -88,9 +98,27 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         }
     };
 
+    private void onBarcodeResult(BarcodeResult result) {
+        String contents = result.toString();
+        if (contents.isEmpty()) {
+            return;
+        }
+
+        barcodeScannerView.setStatusText(result.getText());
+
+        beepManager.playBeepSoundAndVibrate();
+
+        ResultActivity.startResultActivity(ScannerActivity.this, result);
+//            Intent resultIntent = new Intent(ScannerActivity.this, ResultActivity.class);
+//            resultIntent.putExtra("QRResult", new ParcelableResultDecorator(result.getResult()), result.getBitmapWithResultPoints());
+//            startActivity(resultIntent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        Intent intent = getIntent();
 
         setContentView(R.layout.activity_scanner);
 
@@ -103,14 +131,49 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
         beepManager = new BeepManager(this);
 
+        viewModel = new ViewModelProvider(this).get(ScannerViewModel.class);
+        viewModel.isProcessingScan().observe(this, processing -> {
+            View progressView = findViewById(R.id.image_processing_progress);
+            if (progressView != null) {
+                progressView.setVisibility(processing ? View.VISIBLE : View.GONE);
+            }
+            if (processing) {
+                barcodeScannerView.pauseAndWait();
+            } else {
+                barcodeScannerView.resume();
+            }
+        });
+
+        viewModel.isScanComplete().observe(this, scanComplete -> {
+            if (scanComplete) {
+                BarcodeResult result = viewModel.getScanResult().getValue();
+                viewModel.clearScanResult();
+                if (result == null) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setMessage(R.string.no_code_in_image_explanation)
+                            .setTitle(R.string.app_name)
+                            .setIcon(R.drawable.ic_baseline_qr_code_24dp)
+                            .setCancelable(true)
+                            .setPositiveButton(R.string.okay, null);
+                    builder.create().show();
+                } else {
+                    onBarcodeResult(result);
+                }
+            }
+        });
+
         if (!preferences.getBoolean("pref_enable_beep_on_scan", true)) {
             beepManager.setBeepEnabled(false);
         }
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            initScanWithPermissionCheck();
+        if (Intent.ACTION_SEND.equals(intent.getAction()) && intent.getType() != null && intent.getType().startsWith("image/")) {
+            handleSendImage(intent);
         } else {
-            initScan();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                initScanWithPermissionCheck();
+            } else {
+                initScan();
+            }
         }
     }
 
@@ -129,10 +192,12 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     private void showCameraPermissionRequirement(boolean show) {
         barcodeScannerView.setVisibility(show ? View.GONE : View.VISIBLE);
 
-        if(show) {
+        if (show) {
             barcodeScannerView.pause();
         } else {
-            barcodeScannerView.resume();
+            if (Boolean.FALSE.equals(viewModel.isProcessingScan().getValue())) {
+                barcodeScannerView.resume();
+            }
         }
 
         permissionNeededExplanation.setVisibility(show ? View.VISIBLE : View.GONE);
@@ -144,7 +209,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         Intent intent = getIntent();
-        if(!intent.hasExtra(Intents.Scan.SCAN_TYPE)) {
+        if (!intent.hasExtra(Intents.Scan.SCAN_TYPE)) {
             intent.putExtra(Intents.Scan.SCAN_TYPE, Intents.Scan.MIXED_SCAN);
         }
 
@@ -154,7 +219,9 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         barcodeScannerView.getBarcodeView().setDecoderFactory(new DefaultDecoderFactory(formats));
         barcodeScannerView.initializeFromIntent(intent);
         barcodeScannerView.decodeSingle(callback);
-        barcodeScannerView.resume();
+        if (Boolean.FALSE.equals(viewModel.isProcessingScan().getValue())) {
+            barcodeScannerView.resume();
+        }
     }
 
     @Override
@@ -166,7 +233,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     protected void onResume() {
         super.onResume();
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             showCameraPermissionRequirement(true);
         } else {
             barcodeScannerView.setStatusText(null);
@@ -186,7 +253,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         //outState.putInt(SAVED_ORIENTATION_LOCK, this.orientationLock);
     }
@@ -213,11 +280,18 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
                 // TODO
                 Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
             }
+        } else if (requestCode == PERMISSION_READ_EXTERNAL_STORAGE_REQUEST) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                openImagePicker();
+            } else {
+                Toast.makeText(this, "storage permission denied", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.select_image, menu);
         getMenuInflater().inflate(R.menu.flashlight, menu);
 
         flashOnButton = menu.findItem(R.id.menu_flashlight_on);
@@ -230,16 +304,52 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_flashlight_on:
-                barcodeScannerView.setTorchOn();
-                return true;
-            case R.id.menu_flashlight_off:
-                barcodeScannerView.setTorchOff();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == R.id.menu_flashlight_on) {
+            barcodeScannerView.setTorchOn();
+            return true;
+        } else if (itemId == R.id.menu_flashlight_off) {
+            barcodeScannerView.setTorchOff();
+            return true;
+        } else if (itemId == R.id.select_image) {
+            openImagePicker();
+            return true;
         }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void handleSendImage(Intent intent) {
+        Uri imageUri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
+        if (imageUri != null) {
+            viewModel.getBarcodeResultFromImage(imageUri);
+        }
+    }
+
+    private void openImagePicker() {
+        Intent getIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        getIntent.setType("image/*");
+        Intent pickIntent = new Intent(Intent.ACTION_PICK);
+        pickIntent.setDataAndType(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+        Intent chooserIntent = Intent.createChooser(getIntent, getResources().getString(R.string.select_image_from_gallery));
+        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{pickIntent});
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PERMISSION_READ_EXTERNAL_STORAGE_REQUEST);
+            } else {
+                startActivityForResult(chooserIntent, PICK_IMAGE_INTENT);
+            }
+        } else {
+            startActivityForResult(chooserIntent, PICK_IMAGE_INTENT);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == PICK_IMAGE_INTENT && resultCode == RESULT_OK && data.getData() != null) {
+            viewModel.getBarcodeResultFromImage(data.getData());
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     public void onClick(View view) {
@@ -263,15 +373,16 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         @Override
         public void onTorchOn() {
             ScannerActivity parent = mParent.get();
-            if(parent != null) {
+            if (parent != null) {
                 parent.flashOnButton.setVisible(false);
                 parent.flashOffButton.setVisible(true);
             }
         }
+
         @Override
         public void onTorchOff() {
             ScannerActivity parent = mParent.get();
-            if(parent != null) {
+            if (parent != null) {
                 parent.flashOnButton.setVisible(true);
                 parent.flashOffButton.setVisible(false);
             }

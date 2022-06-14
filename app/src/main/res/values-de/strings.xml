@@ -320,5 +320,8 @@
     <string name="close">Schließen</string>
     <string name="image_stored_in_gallery">Bild in Galerie gespeichert</string>
     <string name="generated_code_image_explanation">Hinweis: Der hier gezeigte Code wurde auf der Grundlage des Inhalts des gescannten Codes erstellt und kann daher anders aussehen. Die darin enthaltenen Daten sind jedoch dieselben.</string>
+    <string name="select_image_from_gallery">Bild aus der Galerie auswählen</string>
+    <string name="image_is_being_processed">Bild wird verarbeitet…</string>
+    <string name="no_code_in_image_explanation">Leider konnte in diesem Bild kein Code gefunden werden. Um das Ergebnis zu verbessern, können Sie das Bild zuschneiden oder begradigen und es erneut versuchen.</string>
 
 </resources>
