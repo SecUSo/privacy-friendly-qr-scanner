@@ -67,7 +67,11 @@ public class ResultViewModel extends AndroidViewModel {
         currentBarcodeResult = barcodeResult;
         mParsedResult = ResultParser.parseResult(currentBarcodeResult.getResult());
         fillMissingResultPoints();
-        mCodeImage = currentBarcodeResult.getBitmapWithResultPoints(ContextCompat.getColor(getApplication(), R.color.colorAccent));
+        try {
+            mCodeImage = currentBarcodeResult.getBitmapWithResultPoints(ContextCompat.getColor(getApplication(), R.color.colorAccent));
+        } catch (NullPointerException e) {
+            mCodeImage = Utils.generateCode(currentBarcodeResult.getText(), currentBarcodeResult.getBarcodeFormat(), null, currentBarcodeResult.getResult().getResultMetadata());
+        }
 
         createHistoryItem();
         if (mPreferences.getBoolean("bool_history", true)) {

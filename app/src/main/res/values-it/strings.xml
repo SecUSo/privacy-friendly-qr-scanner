@@ -331,6 +331,9 @@
     <string name="close">Chiudere</string>
     <string name="image_stored_in_gallery">Immagine salvata in galleria</string>
     <string name="generated_code_image_explanation">Nota: il codice qui riportato è stato generato in base al contenuto del codice scansionato e può quindi avere un aspetto diverso. Tuttavia, i dati contenuti sono gli stessi.</string>
+    <string name="select_image_from_gallery">Selezionare l\'immagine dalla galleria</string>
+    <string name="image_is_being_processed">L\'immagine è in fase di elaborazione…</string>
+    <string name="no_code_in_image_explanation">Purtroppo non è stato possibile trovare alcun codice in questa immagine. Per migliorare il risultato, è possibile ritagliare o raddrizzare l\'immagine e riprovare.</string>
 
 
 </resources>
