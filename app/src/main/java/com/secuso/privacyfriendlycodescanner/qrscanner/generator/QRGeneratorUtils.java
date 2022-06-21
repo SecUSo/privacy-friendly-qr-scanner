@@ -54,6 +54,20 @@ public class QRGeneratorUtils {
         context.startActivity(Intent.createChooser(intent, "Share via"));
     }
 
+    public static void purgeCacheFolder(Context context) {
+        try {
+            File imageFilePath = new File(context.getCacheDir(), "images/");
+            File[] files = imageFilePath.listFiles();
+            if (files != null) {
+                for (File file : files) {
+                    file.delete();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static Uri cacheImage(Context context, Bitmap image) {
         File imageFilePath = new File(context.getCacheDir(), "images/");
         imageFilePath.mkdir();
