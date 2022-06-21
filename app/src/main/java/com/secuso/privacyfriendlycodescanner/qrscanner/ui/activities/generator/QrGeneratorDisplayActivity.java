@@ -99,6 +99,10 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        QRGeneratorUtils.purgeCacheFolder(this);
+    }
 }
 
