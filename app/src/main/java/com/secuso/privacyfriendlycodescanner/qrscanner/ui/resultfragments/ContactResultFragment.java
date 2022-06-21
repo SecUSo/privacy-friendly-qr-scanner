@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,7 +37,7 @@ public class ContactResultFragment extends ResultFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
 
         result = (AddressBookParsedResult) parsedResult;
@@ -69,16 +70,20 @@ public class ContactResultFragment extends ResultFragment {
                             ArrayList<ContentValues> contactData = new ArrayList<>();
 
                             // add phone numbers
-                            contactData.addAll(ContactUtil.buildPhoneValues(result.getPhoneNumbers(), result.getPhoneTypes()));
+                            if (result.getPhoneNumbers() != null)
+                                contactData.addAll(ContactUtil.buildPhoneValues(result.getPhoneNumbers(), result.getPhoneTypes()));
 
                             // add emails
-                            contactData.addAll(ContactUtil.buildEmailValues(result.getEmails(), result.getEmailTypes()));
+                            if (result.getEmails() != null)
+                                contactData.addAll(ContactUtil.buildEmailValues(result.getEmails(), result.getEmailTypes()));
 
                             // add addresses
-                            contactData.addAll(ContactUtil.buildAddressValues(result.getAddresses(), result.getAddressTypes()));
+                            if (result.getAddresses() != null)
+                                contactData.addAll(ContactUtil.buildAddressValues(result.getAddresses(), result.getAddressTypes()));
 
                             // add websites
-                            contactData.addAll(ContactUtil.buildWebsiteValues(result.getURLs()));
+                            if (result.getURLs() != null)
+                                contactData.addAll(ContactUtil.buildWebsiteValues(result.getURLs()));
 
                             contact.putParcelableArrayListExtra(ContactsContract.Intents.Insert.DATA, contactData);
 
