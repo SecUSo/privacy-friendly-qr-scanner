@@ -163,7 +163,7 @@ public class QRGeneratorUtils {
         // Define name
         StringBuffer sb = new StringBuffer();
         sb.append("QrCode_");
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd'T'HHmmss'Z'", Locale.getDefault());
         sdf.format(Calendar.getInstance().getTime(), sb, new FieldPosition(SimpleDateFormat.DATE_FIELD));
         sb.append(".png");
         return sb.toString();
