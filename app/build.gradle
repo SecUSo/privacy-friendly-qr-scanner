@@ -69,6 +69,12 @@ dependencies {
     implementation "androidx.core:core-ktx:1.7.0"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation project(path: ':backup-api')
+    def work_version = "2.4.0"
+    implementation "androidx.work:work-runtime:$work_version"
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+    androidTestImplementation "androidx.work:work-testing:$work_version"
 }
 repositories {
     mavenCentral()

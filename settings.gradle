@@ -1,1 +1,3 @@
 include ':app'
+include ':backup-api'
+project(':backup-api').projectDir = new File('libs/privacy-friendly-backup-api/BackupAPI')
