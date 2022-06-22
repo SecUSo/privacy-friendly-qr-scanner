@@ -11,7 +11,12 @@
         <item name="colorIcons">@color/lightlightblue</item>
         <item name="colorGeneratorIcons">?attr/colorIcons</item>
         <item name="colorHistoryIconBackground">@color/white</item>
-        <item name="colorHistoryIcons">@color/lightlightblue</item>
+        <item name="colorHistoryIcons">?attr/colorIcons</item>
+        <item name="colorHighlight">@color/highlight_transparent_light</item>
+        <item name="colorSelectableItemHighlight">@color/highlight_selectable_transparent_dark
+        </item>
+        <item name="colorNavbarHeaderBackground">@color/white</item>
+        <item name="colorNavbarHeaderText">@color/colorPrimary</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -39,6 +44,13 @@
         <item name="windowActionBarOverlay">true</item>
     </style>
 
+    <style name="AppTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="android:background">?attr/colorNavbarHeaderBackground</item>
+        <item name="itemTextColor">?attr/colorOnBackground</item>
+        <item name="itemIconTint">?attr/colorOnBackground</item>
+        <item name="itemShapeFillColor">?attr/colorSelectableItemHighlight</item>
+    </style>
+
     <style name="AppTheme.Button.ExtendedFloatingActionButton.Base" parent="AppTheme">
         <item name="backgroundTint">?attr/colorAccent</item>
         <item name="android:textAllCaps">true</item>
@@ -56,13 +68,10 @@
         <item name="tint">?attr/colorGeneratorIcons</item>
     </style>
 
-    <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-    </style>
+    <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"></style>
 
-    <style name="AppTheme.Generator.TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-    </style>
+    <style name="AppTheme.Generator.TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"></style>
 
-    <style name="AppTheme.Generator.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
-    </style>
+    <style name="AppTheme.Generator.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"></style>
 
 </resources>

@@ -11,11 +11,15 @@
     <color name="middleblue">#8aa5ce</color>
     <color name="darkblue">#024265</color>
     <color name="middlegrey">#A8A8A8</color>
+    <color name="middledarkgrey">#555555</color>
     <color name="darkgrey">#121212</color>
     <color name="yellow">#f6d126</color>
     <color name="red">#B71C1C</color>
     <color name="green">#388E3C</color>
     <color name="lightgrey">#ffd1d1d1</color>
+
+    <color name="highlight_transparent_light">#0DFFFFFF</color>
+    <color name="highlight_transparent_dark">#0D000000</color>
 
     <!-- dots inactive colors -->
     <color name="dot_dark_screen">#026499</color>

@@ -1,6 +1,5 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments
 
-import android.app.AlertDialog
 import android.app.Dialog
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -9,13 +8,14 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.secuso.privacyfriendlycodescanner.qrscanner.R
 
 class RawDataDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
-            val builder = AlertDialog.Builder(context)
+            val builder = MaterialAlertDialogBuilder(context!!, R.style.AppTheme_CustomMaterialDialog)
             val rawData: String = arguments!!.getString("rawDataString") ?: ""
             val dialogView = activity!!.layoutInflater.inflate(R.layout.dialog_raw_data, null)
             val textView = dialogView.findViewById<TextView>(R.id.textView)

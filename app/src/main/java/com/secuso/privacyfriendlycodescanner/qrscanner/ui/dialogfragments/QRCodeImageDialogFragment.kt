@@ -1,6 +1,5 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments
 
-import android.app.AlertDialog
 import android.app.Dialog
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
@@ -10,6 +9,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.secuso.privacyfriendlycodescanner.qrscanner.R
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils
@@ -23,7 +23,7 @@ class QRCodeImageDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
-            val builder = AlertDialog.Builder(this.context)
+            val builder = MaterialAlertDialogBuilder(context!!, R.style.AppTheme_CustomMaterialDialog)
             val dialogView = it.layoutInflater.inflate(R.layout.dialog_image_view, null)
             val imageView = dialogView.findViewById<ImageView>(R.id.imageView)
             val progressBar = dialogView.findViewById<ProgressBar>(R.id.progressBar)

@@ -5,11 +5,39 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
         <item name="android:windowBackground">@color/darkgrey</item>
-        <item name="colorIcons">@color/lightlightblue</item>
+        <item name="colorIcons">@color/colorAccent</item>
         <item name="colorGeneratorIcons">?attr/colorIcons</item>
-        <item name="colorHistoryIconBackground">@color/middlegrey</item>
-        <item name="colorHistoryIcons">@color/lightlightblue</item>
+        <item name="colorHistoryIconBackground">@color/middledarkgrey</item>
+        <item name="colorHistoryIcons">?attr/colorIcons</item>
+        <item name="colorHighlight">@color/highlight_transparent_light</item>
+        <item name="colorSelectableItemHighlight">@color/highlight_selectable_transparent_light
+        </item>
+        <item name="colorNavbarHeaderBackground">@color/darkgrey</item>
+        <item name="colorNavbarHeaderText">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.CustomMaterialDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">?attr/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NavigationView" parent="Widget.MaterialComponents.NavigationView">
+        <item name="android:background">#131212</item>
+        <item name="itemTextColor">?attr/colorOnBackground</item>
+        <item name="itemIconTint">?attr/colorOnBackground</item>
+        <item name="itemShapeFillColor">?attr/colorSelectableItemHighlight</item>
+    </style>
+
+    <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="colorPrimary">?attr/colorAccent</item>
+        <item name="android:textColorHint">@color/lightgrey</item>
+        <item name="theme">@style/AppTheme.Generator.TextInputLayout</item>
+    </style>
+
+    <style name="AppTheme.Generator.TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorPrimary">?attr/colorAccent</item>
+        <item name="android:textColorHint">@color/lightgrey</item>
+        <item name="theme">@style/AppTheme.Generator.TextInputLayout</item>
     </style>
 </resources>
