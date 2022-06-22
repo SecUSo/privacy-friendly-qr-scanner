@@ -5,5 +5,9 @@
         <attr name="colorGeneratorIcons" format="color" />
         <attr name="colorHistoryIconBackground" format="color" />
         <attr name="colorHistoryIcons" format="color" />
+        <attr name="colorSelectableItemHighlight" format="color" />
+        <attr name="colorHighlight" format="color" />
+        <attr name="colorNavbarHeaderBackground" format="color" />
+        <attr name="colorNavbarHeaderText" format="color" />
     </declare-styleable>
 </resources>
