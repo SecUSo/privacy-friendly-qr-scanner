@@ -66,8 +66,10 @@ public class MeCardEnterActivity extends AppCompatActivity {
                 result = qrLastname.getText().toString()
                         + "," + qrFirstname.getText().toString()
                         + ";ADR:" + qrStreet.getText().toString()
-                        + "," + qrCity.getText().toString()
-                        + "," + qrZipCode.getText().toString()
+                        + (!qrStreet.getText().toString().isEmpty() && !qrCity.getText().toString().isEmpty() ? "," : "")
+                        + qrCity.getText().toString()
+                        + ((!qrStreet.getText().toString().isEmpty() || !qrCity.getText().toString().isEmpty()) && !qrZipCode.getText().toString().isEmpty() ? "," : "")
+                        + qrZipCode.getText().toString()
                         + ";TEL:" + qrPhone.getText().toString()
                         + ";EMAIL:" + qrMail.getText().toString()
                         + ";;";
