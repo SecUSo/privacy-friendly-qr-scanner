@@ -70,20 +70,16 @@ public class ContactResultFragment extends ResultFragment {
                             ArrayList<ContentValues> contactData = new ArrayList<>();
 
                             // add phone numbers
-                            if (result.getPhoneNumbers() != null)
-                                contactData.addAll(ContactUtil.buildPhoneValues(result.getPhoneNumbers(), result.getPhoneTypes()));
+                            contactData.addAll(ContactUtil.buildPhoneValues(result.getPhoneNumbers(), result.getPhoneTypes()));
 
                             // add emails
-                            if (result.getEmails() != null)
-                                contactData.addAll(ContactUtil.buildEmailValues(result.getEmails(), result.getEmailTypes()));
+                            contactData.addAll(ContactUtil.buildEmailValues(result.getEmails(), result.getEmailTypes()));
 
                             // add addresses
-                            if (result.getAddresses() != null)
-                                contactData.addAll(ContactUtil.buildAddressValues(result.getAddresses(), result.getAddressTypes()));
+                            contactData.addAll(ContactUtil.buildAddressValues(result.getAddresses(), result.getAddressTypes()));
 
                             // add websites
-                            if (result.getURLs() != null)
-                                contactData.addAll(ContactUtil.buildWebsiteValues(result.getURLs()));
+                            contactData.addAll(ContactUtil.buildWebsiteValues(result.getURLs()));
 
                             contact.putParcelableArrayListExtra(ContactsContract.Intents.Insert.DATA, contactData);
 
