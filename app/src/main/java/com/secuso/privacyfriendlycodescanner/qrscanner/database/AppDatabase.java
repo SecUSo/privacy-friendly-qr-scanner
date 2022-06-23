@@ -25,7 +25,7 @@ import java.util.GregorianCalendar;
 @Database(entities = {HistoryItem.class}, version = 2)
 @TypeConverters({Converters.class})
 public abstract class AppDatabase extends RoomDatabase {
-    private static final String DB_NAME = "DB.db";
+    public static final String DB_NAME = "DB.db";
 
     public abstract HistoryDao historyDao();
 
