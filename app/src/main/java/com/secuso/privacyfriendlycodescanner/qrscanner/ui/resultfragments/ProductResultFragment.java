@@ -1,8 +1,6 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 
 import com.google.zxing.client.result.ExpandedProductParsedResult;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ProductParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.util.WebSearchUtil;
 
 public class ProductResultFragment extends ResultFragment {
 
@@ -49,19 +47,11 @@ public class ProductResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
-                .setItems(R.array.product_array, (dialog, which) -> {
-                    if (which == 0) {
-                        // TODO: ?! I don't see this working..
-                        String url = getProductID(parsedResult);
-                        Intent intent = new Intent(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(url));
+        WebSearchUtil.openWebSearchDialog(context, getProductID(parsedResult));
+    }
 
-                        String caption = getResources().getStringArray(R.array.product_array)[0];
-                        startActivity(Intent.createChooser(intent, caption));
-                    }
-                });
-        builder.create().show();
+    @Override
+    public String getProceedButtonTitle(Context context) {
+        return context.getString(R.string.action_search);
     }
 }
