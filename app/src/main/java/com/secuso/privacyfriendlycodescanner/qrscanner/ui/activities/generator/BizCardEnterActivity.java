@@ -62,8 +62,10 @@ public class BizCardEnterActivity extends AppCompatActivity {
                         + ";T:" + QRGeneratorUtils.escapeQRPropertyValue(qrTitle.getText().toString())
                         + ";C:" + QRGeneratorUtils.escapeQRPropertyValue(qrCompany.getText().toString())
                         + ";A:" + QRGeneratorUtils.escapeQRPropertyValue(qrStreet.getText().toString())
-                        + "," + QRGeneratorUtils.escapeQRPropertyValue(qrCity.getText().toString())
-                        + "," + QRGeneratorUtils.escapeQRPropertyValue(qrZipCode.getText().toString())
+                        + (!qrStreet.getText().toString().isEmpty() && !qrCity.getText().toString().isEmpty() ? "," : "")
+                        + QRGeneratorUtils.escapeQRPropertyValue(qrCity.getText().toString())
+                        + ((!qrStreet.getText().toString().isEmpty() || !qrCity.getText().toString().isEmpty()) && !qrZipCode.getText().toString().isEmpty() ? "," : "")
+                        + QRGeneratorUtils.escapeQRPropertyValue(qrZipCode.getText().toString())
                         + ";B:" + QRGeneratorUtils.escapeQRPropertyValue(qrPhone.getText().toString())
                         + ";E:" + QRGeneratorUtils.escapeQRPropertyValue(qrMail.getText().toString())
                         + ";;";
