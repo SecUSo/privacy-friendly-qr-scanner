@@ -1,8 +1,10 @@
-package com.secuso.privacyfriendlycodescanner.qrscanner.backup
+package com.secuso.privacyfriendlycodescanner.qrscanner
 
 import android.app.Application
 import android.util.Log
 import androidx.work.Configuration
+import com.secuso.privacyfriendlycodescanner.qrscanner.backup.BackupCreator
+import com.secuso.privacyfriendlycodescanner.qrscanner.backup.BackupRestorer
 import org.secuso.privacyfriendlybackup.api.pfa.BackupManager
 
 class PFACodeScannerApplication : Application(), Configuration.Provider {
