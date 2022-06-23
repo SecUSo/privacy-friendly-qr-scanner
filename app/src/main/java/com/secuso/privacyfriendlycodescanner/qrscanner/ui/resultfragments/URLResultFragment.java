@@ -2,7 +2,7 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Spannable;
@@ -11,6 +11,7 @@ import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,20 +53,25 @@ public class URLResultFragment extends ResultFragment {
 
         Uri uri = Uri.parse(qrurl);
         String host = uri.getHost();
-        if(host == null) {
+        if (host == null) {
             host = qrurl;
         }
 
         Pattern pattern = Pattern.compile("([0-9a-zA-ZäöüÄÖÜß-]*\\.(co.uk|com.de|de.com|co.at|[a-zA-Z]{2,}))$");
 
         Matcher m = pattern.matcher(host);
-        if(m.find()) host = m.group(1);
+        if (m.find()) host = m.group(1);
 
         int start = qrurl.indexOf(host);
         int end = start + host.length();
 
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme = getContext().getTheme();
+        theme.resolveAttribute(R.attr.colorURLHighlight, typedValue, true);
+        int highlightColor = typedValue.data;
+
         Spannable WordtoSpan = new SpannableString(qrurl);
-        WordtoSpan.setSpan(new ForegroundColorSpan(Color.BLACK), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        WordtoSpan.setSpan(new ForegroundColorSpan(highlightColor), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         WordtoSpan.setSpan(new StyleSpan(android.graphics.Typeface.BOLD), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         resultText.setText(WordtoSpan);
@@ -75,7 +81,7 @@ public class URLResultFragment extends ResultFragment {
         final CheckBox knowDomain = (CheckBox) v.findViewById(R.id.checkBoxKnowRisks);
 
         // wenn bereits vertraut wurde, checkbox setzen
-        if(trust)
+        if (trust)
             knowDomain.setChecked(true);
 
         knowDomain.setOnClickListener(v1 -> checked = knowDomain.isChecked());
@@ -84,21 +90,20 @@ public class URLResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(Context context) {
-        if(!checked) {
-            Toast.makeText(context,R.string.conform_url,Toast.LENGTH_LONG).show();
+        if (!checked) {
+            Toast.makeText(context, R.string.conform_url, Toast.LENGTH_LONG).show();
         } else {
             String caption = "";
-            String qrurl3="";
+            String qrurl3 = "";
             final String lowercase_qrurl = qrurl.toLowerCase();
-            if(!lowercase_qrurl.startsWith("http://") && !lowercase_qrurl.startsWith("https://"))
-            {
+            if (!lowercase_qrurl.startsWith("http://") && !lowercase_qrurl.startsWith("https://")) {
                 qrurl3 = "http://" + qrurl;
 
                 Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
                 url.setData(Uri.parse(qrurl3));
                 caption = getResources().getStringArray(R.array.url_array)[0];
-                startActivity(Intent.createChooser(url, caption));}
-            else {
+                startActivity(Intent.createChooser(url, caption));
+            } else {
                 Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
                 url.setData(Uri.parse(qrurl));
                 caption = getResources().getStringArray(R.array.url_array)[0];
