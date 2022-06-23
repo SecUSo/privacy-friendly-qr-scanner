@@ -162,7 +162,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
             }
         });
 
-        if (!preferences.getBoolean("pref_enable_beep_on_scan", true)) {
+        if (!preferences.getBoolean("pref_enable_beep_on_scan", false)) {
             beepManager.setBeepEnabled(false);
         }
 
