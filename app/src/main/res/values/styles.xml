@@ -17,6 +17,7 @@
         </item>
         <item name="colorNavbarHeaderBackground">@color/white</item>
         <item name="colorNavbarHeaderText">@color/colorPrimary</item>
+        <item name="colorURLHighlight">@color/black</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

@@ -9,5 +9,6 @@
         <attr name="colorHighlight" format="color" />
         <attr name="colorNavbarHeaderBackground" format="color" />
         <attr name="colorNavbarHeaderText" format="color" />
+        <attr name="colorURLHighlight" format="color" />
     </declare-styleable>
 </resources>

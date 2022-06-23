@@ -16,6 +16,7 @@
         </item>
         <item name="colorNavbarHeaderBackground">@color/darkgrey</item>
         <item name="colorNavbarHeaderText">@color/colorAccent</item>
+        <item name="colorURLHighlight">@color/white</item>
     </style>
 
     <style name="AppTheme.CustomMaterialDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
