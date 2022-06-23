@@ -222,11 +222,16 @@ public class ResultActivity extends AppCompatActivity {
         }
     }
 
-    private void loadFragment(@NonNull ParsedResult parsedResult) {
+    private void loadFragment(ParsedResult parsedResult) {
+        if (parsedResult == null) {
+            Toast.makeText(this.getBaseContext(), R.string.activity_result_toast_error_cant_load, Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
+
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
         ResultFragment resultFragment;
-
         switch (parsedResult.getType()) {
             case ADDRESSBOOK:
                 resultFragment = new ContactResultFragment();
