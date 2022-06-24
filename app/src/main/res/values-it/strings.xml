@@ -334,6 +334,7 @@
     <string name="select_image_from_gallery">Selezionare l\'immagine dalla galleria</string>
     <string name="image_is_being_processed">L\'immagine è in fase di elaborazione…</string>
     <string name="no_code_in_image_explanation">Purtroppo non è stato possibile trovare alcun codice in questa immagine. Per migliorare il risultato, è possibile ritagliare o raddrizzare l\'immagine e riprovare.</string>
+    <string name="select_image_from_gallery_explanation">Questa funzione consente di aprire le immagini della propria galleria e di scansionare i codici in esse contenuti. Ciò richiede l\'accesso alle immagini.</string>
 
 
 </resources>
