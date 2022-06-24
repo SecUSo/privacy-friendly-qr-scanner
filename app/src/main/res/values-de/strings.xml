@@ -7,8 +7,8 @@
     <string name="slide1_heading">Herzlich willkommen!</string>
     <string name="slide1_text">Willkommen beim Privacy Friendly QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollen.</string>
     <string name="slide2_heading">Was gibt es?</string>
-    <string name="text_slide2">Sie können entweder einen QR-Code mit dem &quot;QR-Scanner&quot; scannen oder einen QR-Code mit der Funktion &quot;QR-Generator&quot; generieren.</string>
-    <string name="slide3_heading">Mehr Funktionen</string>
+    <string name="text_slide2">Mit dieser App können Sie QR-Codes sowohl scannen als auch erstellen.</string>
+    <string name="slide3_heading">Weitere Funktionen</string>
     <string name="text_slide3">Der QR-Code, den Sie gescannt haben, kann im Verlauf gespeichert werden. Außerdem können Sie ihn teilen oder kopieren.</string>
     <string name="wecome">Herzlich willkommen!</string>
     <string name="skip">Überspringen</string>
@@ -194,7 +194,7 @@
     <string name="help_privacy">What makes the app privacy-friendly?</string>
     <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
     <string name="help_permission">Welche Berechtigungen benötigt der PRIVACY FRIENDLY QR Scanner?</string>
-    <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen.</string>
+    <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen. Die App benötigt außerdem die Erlaubnis, auf Ihren Speicher zuzugreifen, um Codes von Ihren Bildern zu scannen oder generierte Codes in Ihren Bildern zu speichern.</string>
 
 
     <string name="help_whatis_answer">Mit dem PRIVACY FRIENDLY QR Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen / generieren. Sie können auch gescannten QR-Code mit anderen Apps kopieren / teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
@@ -212,7 +212,7 @@
     <string name="canncelled_scan">Sie haben den Scanvorgang abgebrochen</string>
     <string name="Scan_qr">Scan</string>
     <string name="okay">Ok</string>
-    <string name="next">Nächster</string>
+    <string name="next">Weiter</string>
     <string name="Store_in_gallery">Speichern</string>
     <string name="phone_number">Telefonnummer</string>
     <string name="sms_text">SMS-Text</string>
