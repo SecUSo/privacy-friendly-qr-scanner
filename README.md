@@ -22,14 +22,15 @@ Further development requires Android Studio, we recommend to use the latest vers
 ### API Reference
 
 Mininum SDK: 17
-Target SDK: 28 
+Target SDK: 32 
 
 This app uses the help of the [ZXing Projekt](https://github.com/zxing).
 
 ## License
 
 Privacy Friendly QR Scanner is licensed under the GPLv3.
-Copyright (C) 2015-2017 Philipp Rack 2018-2020 Christopher Beckmann
+Copyright (C) 2015-2017 Philipp Rack <br>
+Copyright (C) 2018-2022 Christopher Beckmann <br>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -48,18 +49,17 @@ The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http:
 
 ## Contributors
 
-App-Icon: <br />
-Markus Hau & Tatjana Albrandt<br />
+App-Icon: Markus Hau & Tatjana Albrandt<br />
 
-Github-Users: <br />
+p-rack (Philipp Rack) <br />
+yonjuni (Karola Marky) <br />
+Kamuno (Christopher Beckmann) <br />
+sleep-yearning (Noah Schlegel)  <br />
+udenr (Tobias Länge)<br />
 bassel-hanna<br />
-Kamuno<br />
-yonjuni<br />
-p-rack<br />
 Vistaus<br />
 naofum (Japanese translation)<br />
 YannAries<br />
-sleep-yearning<br />
 heapifyman<br />
 derEisbaerX<br />
 robo-w<br />
