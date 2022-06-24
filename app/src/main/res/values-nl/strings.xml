@@ -26,10 +26,10 @@
     <string name="slide1_heading">Welkom!</string>
     <string name="slide1_text">Welkom bij de privacyvriendelijke QR-scanner. In deze rondleiding krijg je de belangrijkste functies te zien.</string>
     <string name="slide2_heading">Wat kan ik doen?</string>
-    <string name="text_slide2">Je kunt een QR-code scannen met de QR-scanner of een QR-code genereren met de QR-generator.</string>
+    <string name="text_slide2">Met deze app kunt u QR codes zowel scannen als maken.</string>
     <string name="slide3_heading">Meer functies</string>
     <string name="text_slide3">De gescande QR-code kun je opslaan in de geschiedenis, delen of kopiëren.</string>
-    <string name="wecome">Welkom</string>
+    <string name="wecome">Welkom!</string>
     <string name="skip">Overslaan</string>
     <string name="next">Volgende</string>
     <string name="help_">Hulp</string>
@@ -213,7 +213,7 @@
     <string name="help_privacy">Wat maakt de app privacyvriendelijk?</string>
     <string name="help_privacy_answer">Privacy Friendly QR-scanner vereist geen enkele machtiging. Daarnaast wordt er niks bijgehouden en geen reclame getoond.</string>
     <string name="help_permission">Welke machtigingen vereist de PRIVACYVRIENDELIJKE QR-scanner?</string>
-    <string name="help_permission_answer">Deze app vereist de cameramachtiging om barcodes and QR-codes te kunnen scannen middels de camera.</string>
+    <string name="help_permission_answer">Deze app vereist de cameramachtiging om barcodes and QR-codes te kunnen scannen middels de camera. De app vereist ook de toestemming om toegang te krijgen tot uw opslag om codes van uw afbeeldingen te scannen of gegenereerde codes op uw afbeeldingen op te slaan.</string>
     <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->

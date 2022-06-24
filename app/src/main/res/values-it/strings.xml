@@ -26,10 +26,10 @@
     <string name="slide1_heading">Benvenuto!</string>
     <string name="slide1_text">Benvenuto su privacy friendly QR scanner. Questo tutorial ti illustrerà le cose più importanti che devi conoscere.</string>
     <string name="slide2_heading">Quali funzionalità?</string>
-    <string name="text_slide2">Puoi scansionare un codice QR usando QR Scanner o generare un codice QR con QR generator.</string>
+    <string name="text_slide2">Con questa applicazione è possibile scansionare e creare codici QR.</string>
     <string name="slide3_heading">Più caratteristiche</string>
     <string name="text_slide3">Il codice QR che hai scansionato può essere salvato nella Cronologia. Inoltre puoi condivederlo o copiarlo.</string>
-    <string name="wecome">Benvenuto</string>
+    <string name="wecome">Benvenuto!</string>
     <string name="skip">Salta</string>
     <string name="next">Continua</string>
     <string name="help_">Aiuto</string>
@@ -213,7 +213,7 @@
     <string name="help_privacy">Cosa rende l\'app privacy-friendly?</string>
     <string name="help_privacy_answer">L\'app Privacy Friendly non richiede alcun permesso. Inoltre non include alcun meccanismo di tracking od annuncio.</string>
     <string name="help_permission">Quali permessi sono richiesti da PRIVACY FRIENDLY QR Scanner?</string>
-    <string name="help_permission_answer">L\'applicazione richiede il permesso di accedere alla fotocamera, utilizzata per scansionare i codici a barre ed i codici QR.</string>
+    <string name="help_permission_answer">L\'applicazione richiede il permesso di accedere alla fotocamera, utilizzata per scansionare i codici a barre ed i codici QR. L\'applicazione richiede inoltre l\'autorizzazione ad accedere alla memoria dell\'utente per scansionare i codici dalle immagini o salvare i codici generati nelle immagini.</string>
     <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->

@@ -25,11 +25,11 @@
 
     <string name="slide1_heading">Welcome!</string>
     <string name="slide1_text">Welcome to privacy friendly QR scanner. This tutorial will cover the most important things you need to know.</string>
-    <string name="slide2_heading">what is there?</string>
-    <string name="text_slide2">You either scan QR code by using QR Scanner or generate QR code by using QR Generator.</string>
+    <string name="slide2_heading">What is there?</string>
+    <string name="text_slide2">With this app you can both scan and create QR codes.</string>
     <string name="slide3_heading">More features</string>
     <string name="text_slide3">The QR code you scanned can be saved in History. Furthermore you can share it or copy it.</string>
-    <string name="wecome">welcome</string>
+    <string name="wecome">Welcome!</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
     <string name="help_">Help</string>
@@ -218,7 +218,7 @@
     <string name="help_privacy">What makes the app privacy-friendly?</string>
     <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
     <string name="help_permission">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
-    <string name="help_permission_answer">The app requires the camera permission, which is used to scan barcodes and qr codes via camera.</string>
+    <string name="help_permission_answer">The app requires the camera permission, which is used to scan barcodes and qr codes via camera. The app also requires the permission to access your storage to scan codes from your images or save generated codes to your images.</string>
     <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->
