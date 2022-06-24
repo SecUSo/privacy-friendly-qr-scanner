@@ -55,7 +55,7 @@ class BackupRestorer : IBackupRestorer {
         while (reader.hasNext()) {
             val name: String = reader.nextName()
             when (name) {
-                "bool_history", "pref_save_real_image_to_history", "pref_search_engine_enabled", "pref_enable_beep_on_scan" -> pref.edit()
+                "bool_history", "pref_save_real_image_to_history", "pref_search_engine_enabled", "pref_enable_beep_on_scan", "image_picker_first_click" -> pref.edit()
                     .putBoolean(name, reader.nextBoolean()).apply()
                 "pref_search_engine" -> pref.edit().putString(name, reader.nextString()).apply()
                 else -> throw RuntimeException("Unknown preference $name")

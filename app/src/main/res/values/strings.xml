@@ -304,6 +304,7 @@
     <string name="selected_1">Selected</string>
     <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
 
+    <string name="select_image_from_gallery_explanation">This function allows you to open images from your gallery and scan codes contained in them. This requires access to the images.</string>
     <string name="select_image_from_gallery">Select image from gallery</string>
     <string name="image_is_being_processed">Image is being processed…</string>
     <string name="no_code_in_image_explanation">Unfortunately, no code could be found in this image. To improve the result, you can crop or straighten the image and try again.</string>

@@ -312,7 +312,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
             barcodeScannerView.setTorchOff();
             return true;
         } else if (itemId == R.id.select_image) {
-            openImagePicker();
+            onOpenImagePickerClick();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -322,6 +322,17 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         Uri imageUri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
         if (imageUri != null) {
             viewModel.getBarcodeResultFromImage(imageUri);
+        }
+    }
+
+    private void onOpenImagePickerClick() {
+        if (PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("image_picker_first_click", true)) {
+            new AlertDialog.Builder(ScannerActivity.this).setMessage(R.string.select_image_from_gallery_explanation).setPositiveButton(R.string.proceed, (dialogInterface, i) -> {
+                openImagePicker();
+                PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putBoolean("image_picker_first_click", Boolean.FALSE).apply();
+            }).setTitle(R.string.select_image_from_gallery).setCancelable(true).create().show();
+        } else {
+            openImagePicker();
         }
     }
 
