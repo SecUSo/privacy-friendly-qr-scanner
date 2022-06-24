@@ -3,6 +3,13 @@
 
 [Mastodon]: https://xn--baw-joa.social/@SECUSO_Research
 [Twitter]: https://twitter.com/SECUSOResearch
+<img src="https://github.com/SecUSo/privacy-friendly-qr-scanner/raw/master/fastlane/metadata/android/en-US/images/icon.png"
+     alt="Privacy Friendly QR Scanner Icon"
+     width="80px"
+     align="right"
+     style="float: right; margin-right: 10px;" />
+
+
 # Privacy Friendly QR Scanner
 
 [<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=com.secuso.privacyFriendlyCodeScanner)<a href="https://play.google.com/store/apps/details?id=com.secuso.privacyFriendlyCodeScanner"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="60"></a>
