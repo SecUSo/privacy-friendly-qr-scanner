@@ -103,6 +103,11 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         loadFragment(viewModel.mParsedResult);
+
+        if (isFinishing()) {
+            return;
+        }
+
         displayGeneralData();
 
         findViewById(R.id.btnChooseAction).setOnClickListener(this::onChooseActionButtonClick);
