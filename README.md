@@ -58,6 +58,11 @@ The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http:
 
 App-Icon: Markus Hau & Tatjana Albrandt<br />
 
+<a href="https://github.com/SecUSo/privacy-friendly-qr-scanner/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=SecUSo/privacy-friendly-qr-scanner&max=100&columns=20" />
+</a>
+<br />
+<br />
 p-rack (Philipp Rack) <br />
 yonjuni (Karola Marky) <br />
 Kamuno (Christopher Beckmann) <br />
