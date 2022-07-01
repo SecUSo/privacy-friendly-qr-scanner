@@ -63,20 +63,4 @@ App-Icon: Markus Hau & Tatjana Albrandt<br />
 <a href="https://github.com/SecUSo/privacy-friendly-qr-scanner/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=SecUSo/privacy-friendly-qr-scanner&max=100&columns=20" />
 </a>
-<br />
-<br />
-p-rack (Philipp Rack) <br />
-yonjuni (Karola Marky) <br />
-Kamuno (Christopher Beckmann) <br />
-sleep-yearning (Noah Schlegel)  <br />
-udenr (Tobias Länge)<br />
-bassel-hanna<br />
-Vistaus<br />
-naofum (Japanese translation)<br />
-YannAries<br />
-heapifyman<br />
-derEisbaerX<br />
-robo-w<br />
-corvinusWiz<br />
-vanMacG<br />
-wesinator<br />
+
