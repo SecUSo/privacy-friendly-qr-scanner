@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 4.0.1 *(2022-06-30)*
+----------------------------
+
+* Fixed a crash that would occur when the scan result is null
+
+
 Version 4.0.0 *(2022-06-24)*
 ----------------------------
 
