@@ -1,0 +1,367 @@
+<resources>
+    <string name="app_name">Karekod Tarayıcı</string>
+
+    <string name="navigation_drawer_open">Gezinti çekmecesini aç</string>
+    <string name="navigation_drawer_close">Gezinti çekmecesini kapat</string>
+    <string name="qr_scanner">Karekod Tarayıcı</string>
+    <string name="qr_generator">Karekod Oluşturucu</string>
+    <string name="history">Geçmiş</string>
+    <string name="settings">Ayarlar</string>
+    <string name="help">Yardım</string>
+    <string name="about">Hakkında</string>
+    <string name="title_activity_qrscanner">Karekod Tarayıcı</string>
+
+    <string name="action_settings">Ayarlar</string>
+    <string name="title_activity_qr_scanner">Karekod Tarayıcı</string>
+    <string name="title_activity_qr_generator">Karekod Oluşturucu</string>
+    <string name="title_activity_history">Geçmiş</string>
+    <string name="title_activity_settings">Ayarlar</string>
+    <string name="title_activity_help">Yardım</string>
+    <string name="title_activity_about">Hakkında</string>
+    <string name="Settings">Ayarlar</string>
+    <string name="QRScanner">Karekod Tarayıcı</string>
+    <string name="QRGenerator">Karekod Oluşturucu</string>
+    <string name="History">Geçmiş</string>
+
+    <string name="slide1_heading">Hoşgeldiniz!</string>
+    <string name="slide1_text">Gizlilik dostu Karekod Tarayıcısına hoş geldiniz. Bu rehber bilmeniz gereken en önemli şeyleri kapsayacaktır.</string>
+    <string name="slide2_heading">Orada ne var?</string>
+    <string name="text_slide2">Bu uygulama ile karekodu hem tarayabilir hem de oluşturabilirsiniz.</string>
+    <string name="slide3_heading">Diğer özellikler</string>
+    <string name="text_slide3">Taradığınız karekod geçmişe kaydedilebilir. Ayrıca paylaşabilir veya kopyalayabilirsiniz.</string>
+    <string name="wecome">Hoşgeldiniz!</string>
+    <string name="skip">Atla</string>
+    <string name="next">Sonraki</string>
+    <string name="help_">Yardım</string>
+
+    <string name="tutorial">Rehber</string>
+
+    <!--###ABOUT###-->
+    <string name="about_author">Geliştiriciler: </string>
+    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
+    <string name="about_author_string">%s ve katkıda bulunanlar.</string>
+    <string name="about_affiliation">ile bağlantılı olarak</string>
+    <string name="privacy_friendly">Bu uygulama SECUSO tarafından geliştirilen Gizlilik Dostu Uygulamalar grubuna aittir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı Karlsruhe Teknoloji Enstitüsü ve Google Inc\'e aittir.</string>
+    <string name="more_info">Daha fazla bilgi için:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="about_libraries">Kullanılan kütüphaneler:</string>
+    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
+    <string name="app_name_long">Gizlilik Dostu Karekod Tarayıcı</string>
+    <string name="version_number">Sürüm v%s</string>
+    <string name="delete_items">Öğeleri sil</string>
+
+    <string name="scan_text">Bu pencereyi çözmek istediğiniz kodun üzerine yerleştirin.</string>
+    <string name="action_clear">Geçmişi Temizle</string>
+    <string name="cannot_clear">Geçmiş zaten boş</string>
+    <string name="knowRisks">Bağlantıyı kontrol ettim ve web sitesini ziyaret etmek istiyorum.</string>
+    <string name="domain">Alan Adı</string>
+    <string name="urlExplanation">Karekodlar kişisel verilerinizi tehlikeye atabilecek (kimlik avı web sitesi) veya cihazınıza kötü amaçlı yazılım (ör. virüsler) aktarabilecek sahte bir web sitesine yönlendiren bağlantılar içerebilir.\n\nSonuç olarak, aşağıdaki bağlantının beklediğiniz bağlantı olup olmadığını <b>kontrol</b> etmelisiniz:</string>
+    <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Information</a> on how to check links.</string>
+    <string name="delete_history">Geçmişi silmek istiyor musunuz?</string>
+    <string name="ok">Tamam</string>
+    <string name="element_removed">Öğe kaldırıldı.</string>
+    <string name="conform_url">Lütfen bağlantıyı kontrol ettiğinizi onaylayın.</string>
+    <string name="wifi_explanation">Uygulamanın bu sürümü, ihtiyaç duyulacak izin nedeniyle kablosuz ağlara otomatik olarak bağlanamaz. Aşağıda ağ ile ilgili bazı detaylar verilmiştir.</string>
+    <string name="encryption">Şifreleme</string>
+    <string name="action_about">Hakkında</string>
+    <string name="history_disabled">Geçmiş devre dışı</string>
+    <string name="to">Alıcı:</string>
+
+    <string name="usability_hint2">Bir kodu tarayamazsanız, cihaz ile kod arasındaki mesafeyi artırın.</string>
+
+    <string name="description_contact">The QR-Code you scanned contains contact information. In order to <i>import</i> it into your address book, click Proceed.</string>
+    <string name="description_email">The QR-Code you scanned contains an email address. In order to <i>send an email</i> or <i>add it to a contact</i>, click Proceed.</string>
+    <string name="description_send_email">The QR-Code you scanned contains a filled email. In order to <i>send</i> it or <i>add the address a contact</i>, click Proceed.</string>
+    <string name="description_product">The code you scanned contains a product code. In order to <i>search the web</i> for product information, click Proceed.</string>
+    <string name="description_tel">The QR-Code you scanned contains a phone number. In order to <i>start a call</i> or <i>add it to a contact</i>, just click Proceed.</string>
+    <string name="description_sms">The QR-Code you scanned contains an SMS. In order to <i>send</i> the SMS or <i>add the number to a contact</i>, click Proceed.</string>
+    <string name="description_text">The QR-Code you scanned contains plain text. In order to <i>search the web</i> for information, click Proceed.</string>
+
+    <string name="choose_action">Devam et</string>
+    <string name="abort_action">İptal et</string>
+
+    <string name="proceed">İlerle</string>
+    <string name="back">Geri git</string>
+
+    <string name="choose_action_url">Devam et</string>
+    <string name="abort_action_url">İptal et</string>
+
+    <string-array name="text_array">
+        <item>Web\'de ara</item>
+        <item>Hiçbir şey yapma</item>
+    </string-array>
+    <string-array name="email_array">
+        <item>E-posta gönder</item>
+        <item>Kişilere ekle</item>
+    </string-array>
+    <string-array name="vcard_array">
+        <item>Kişilere ekle</item>
+        <item>Hiçbir şey yapma</item>
+    </string-array>
+    <string-array name="send_email_array">
+        <item>E-posta gönder</item>
+        <item>Kişilere ekle</item>
+    </string-array>
+    <string-array name="sms_array">
+        <item>SMS gönder</item>
+        <item>Numarayı ara</item>
+        <item>Kişilere ekle</item>
+    </string-array>
+    <string-array name="mms_array">
+        <item>MMS gönder</item>
+        <item>Numarayı ara</item>
+        <item>Kişilere ekle</item>
+    </string-array>
+    <string-array name="tel_array">
+        <item>Numarayı ara</item>
+        <item>Kişilere ekle</item>
+    </string-array>
+    <string-array name="geo_array">
+        <item>Haritalar uygulamasını aç</item>
+        <item>Hiçbir şey yapma</item>
+    </string-array>
+    <string-array name="url_array">
+        <item>URL\'yi ziyaret et</item>
+        <item>Hiçbir şey yapma</item>
+    </string-array>
+    <string-array name="product_array">
+        <item>Web\'de ara</item>
+        <item>Hiçbir şey yapma</item>
+    </string-array>
+    <string-array name="wifi_array">
+        <item>Parolayı kopyala</item>
+        <item>Hiçbir şey yapma</item>
+    </string-array>
+    <string-array name="history_array">
+        <item>Panoya kopyala</item>
+        <item>Girdiyi sil</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>Metin</item>
+        <item>E-posta</item>
+        <item>URL</item>
+        <item>Telefon numarası</item>
+        <item>SMS</item>
+        <item>Konum belirleme</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>Kablosuz ağ</item>
+        <item>VCard</item>
+        <item>Market</item>
+    </string-array>
+
+    <string-array name="content_types">
+        <!-- Array used by utility classes to convert internal code types into localized strings -->
+        <item>BELİRSİZ</item>
+        <item>Metin</item>
+        <item>E-posta</item>
+        <item>Telefon numarası</item>
+        <item>SMS</item>
+        <item>MMS</item>
+        <item>URL</item>
+        <item>Kablosuz ağ</item>
+        <item>VCard</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>Market</item>
+        <item>Contact</item>
+        <item>Konum belirleme</item>
+
+        <item>Adres rehberi</item>
+        <item>Ürün</item>
+        <item>Takvim</item>
+        <item>İSBN</item>
+        <item>Araç şase numarası (VIN)</item>
+    </string-array>
+
+    <string name="copied_to_clipboard">Panoya kopyalandı.</string>
+    <string name="noname">İsim belirtilmemiş</string>
+
+    <string name="title_activity_result_url">Bağlantı bulundu</string>
+    <string name="title_activity_result_text">Metin bulundu</string>
+    <string name="title_activity_result_sms">SMS bulundu</string>
+    <string name="title_activity_result_email">E-posta adresi bulundu</string>
+    <string name="title_activity_result_send_email">E-posta bulundu</string>
+    <string name="title_activity_result_product">Ürün bulundu</string>
+    <string name="title_activity_result_tel">Telefon numarası bulundu</string>
+    <string name="title_activity_result_wifi">Kablosuz ağ bulundu</string>
+    <string name="title_activity_result_contact">İletişim bulundu</string>
+    <string name="action_help">Yardım</string>
+
+    <!-- ### WELCOME DIALOG ### -->
+    <string name="welcome_text">GİZLİLİK DOSTU Karekod Tarayıcı Uygulaması, Minimum izin seti gerektirirken ve kötü amaçlı bağlantıların algılanmasını desteklerken çeşitli içeriğe sahip barkodları ve karekodları taramanızı sağlar.</string>
+    <string name="welcome">Hoşgeldiniz</string>
+    <string name="viewhelp">Yardımı Görüntüle</string>
+
+    <!--<string name="help_privacy_heading">Privacy Info</string>
+    <string name="about_author_contributors">Contributors</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="more_info">More information can be found on:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
+    <string name="help_permission1_description">Uygulama, barkodları ve karekodları kamera aracılığıyla taramak için kullanılan kamera iznini gerektirir.</string>
+    <string name="help_permission1_heading">Kamera</string>
+    <string name="help_privacy_heading">GİZLİLİK DOSTU Karekod Tarayıcı için hangi izinler gereklidir?</string>
+    <string name="help_category_example">Tarama çalışmıyor, ne yapabilirim?</string>
+    <string name="help_overview_heading">GİZLİLİK DOSTU Karekod Tarayıcı nedir?</string>
+    <string name="help_intro">GİZLİLİK DOSTU Karekod Tarayıcı ile çeşitli içeriklere sahip barkodları ve karekodları tarayabilirsiniz.</string>
+    <string name="help_whatis_answer">GİZLİLİK DOSTU Karekod Tarayıcı ile çeşitli içeriklere sahip barkodları ve karekodları tarayabilir/oluşturabilirsiniz. Ayrıca taranan karekodu diğer uygulamalarla kopyalayabilir / paylaşabilir, ayrıca oluşturulan karekodu galeriye kaydedebilir ve paylaşabilirsiniz.</string>
+
+
+    <!--###HELP###-->
+
+
+    <string name="help_whatis">GİZLİLİK DOSTU Karekod Tarayıcı nedir?</string>
+
+    <string name="help_usability">Tarama çalışmıyor, ne yapabilirim?</string>
+    <string name="help_usability_answer">Bir kodu tarayamazsanız, tarayıcı ile kod arasındaki mesafeyi artırın.</string>
+    <string name="help_privacy">Uygulamayı gizlilik dostu yapan nedir?</string>
+    <string name="help_privacy_answer">Gizlilik Dostu Uygulama örneği herhangi bir izin gerektirmez. Ayrıca herhangi bir izleme mekanizması veya reklam içermez.</string>
+    <string name="help_permission">GİZLİLİK DOSTU Karekod Tarayıcı için hangi izinler gereklidir?</string>
+    <string name="help_permission_answer">Uygulama, barkodları ve karekodları kamera aracılığıyla taramak için kullanılan kamera iznini gerektirir. Uygulama ayrıca resimlerinizdeki kodları taramak veya oluşturulan kodları resimlere kaydetmek için depolama alanınıza erişme izni gerektirir.</string>
+    <!-- Strings related to SettingsActivity -->
+
+    <!-- Example General settings -->
+    <string name="pref_title_enable_history">Geçmişi Etkinleştir</string>
+    <string name="pref_description_enable_history">Önceki taramalar tekrar gösterebilmeniz için kaydedilir</string>
+    <string name="pref_keep_duplicates">Yinelenenleri sakla</string>
+    <string name="pref_keep_duplicates_explanation">Yinelemeler geçmişe kaydedilir</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_title_beep">Sinyal tonu</string>
+    <string name="description_Mms">Taradığınız Karekod bir MMS içeriyor.</string>
+    <string name="geoInfo">Tarattığınız Karekod coğrafi bir bilgi içermektedir.</string>
+    <string name="content_copied">İçerik kopyalandı</string>
+    <string name="share_via">Üzerinden paylaş</string>
+    <string name="no_content_in_history">Geçmişte içerik yok!</string>
+    <string name="selected_item">öğe seçildi</string>
+    <string name="selected_items">öğe seçildi</string>
+    <string name="removed_item">öğe kaldırıldı</string>
+    <string name="removed_items">öğe kaldırıldı</string>
+    <string name="canncelled_scan">Taramayı iptal ettiniz</string>
+    <string name="Scan_qr">Tarama</string>
+    <string name="okay">Tamam</string>
+    <string name="Store_in_gallery">Mağaza</string>
+    <string name="phone_number">Telefon numarası</string>
+
+    <!-- Generator activities -->
+    <string name="text_enter">Kodlamak istediğiniz metin</string>
+    <string name="hello_world">Merhaba Dünya</string>
+    <string name="generate">oluştur</string>
+
+    <string name="generator_text_textfield">Metin</string>
+    <string name="generator_text_explanation">Kodlamak istediğiniz herhangi bir metni girebilirsiniz. Birden fazla satıra izin verilir.</string>
+
+    <string name="URL" translatable="false">URL</string>
+    <string name="generator_example_url" translatable="false">https://example.com</string>
+    <string name="generator_url_explanation">Bir web adresi girebilirsiniz. Örn.</string>
+
+    <string name="message">Mesaj</string>
+    <string name="subject">Konu</string>
+
+    <string name="no_encryption">Şifreleme yok</string>
+
+    <string name="name">Ad</string>
+    <string name="address">Adres</string>
+    <string name="zip_code">Zip</string>
+    <string name="country">Ülke</string>
+
+    <string name="generator_package_name">Paket adı</string>
+    <string name="generator_example_package" translatable="false">org.example.foo</string>
+    <string name="generator_market_explanation">Burada uygulamanın paket adını girebilirsiniz. Örn.</string>
+    <string name="generator_market_explanation_2">Oluşturulan karekod daha sonra Google Play'deki ilgili uygulamaya işaret eder.</string>
+
+    <string name="import_from_contacts">Kişilerden içe aktar</string>
+    <string name="sms_text">SMS metni</string>
+    <string name="mms">MMS</string>
+    <string name="network_name">Ağ adı (SSID)</string>
+    <string name="password">Şifre</string>
+    <string name="company">Şirket</string>
+    <string name="lastname">Soyadı</string>
+    <string name="title">Başlık</string>
+    <string name="city">Şehir</string>
+    <string name="street_number">Sokak numarası</string>
+    <string name="postal_address">Posta adresi</string>
+    <string name="e_mail_address">E-posta adresi</string>
+    <string name="firstname">İlk ad</string>
+    <string name="street_name_and_number">Sokak adı ve numarası</string>
+    <string name="delete_content">İçeriği silmek istediğinizden emin misiniz?</string>
+    <string name="delete_all">Tüm içeriği sil</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="D_all">Tüm kayıtları sil</string>
+    <string name="all_records">Tüm kayıtları silmek istiyor musunuz?</string>
+    <string name="Del">Seçilen kayıtları silmek istiyor musunuz?</string>
+    <string name="confirmation">Onay</string>
+    <string name="selected">Seçilmiş</string>
+    <string name="code_stored">Galeride saklanan karekod</string>
+    <string name="Ofeatures">Diğer özellikler</string>
+    <string name="OfeaturesAnswer">Taranan karekodu kopyalayabilir/diğer uygulamalarla paylaşabilir, ayrıca oluşturulan karekodu galeriye kaydedebilir ve paylaşabilirsiniz.</string>
+    <string name="copy_to_clipboard">Panoya kopyala</string>
+    <string name="Content_copied">İçerik kopyalandı</string>
+    <string name="Share_via">Üzerinden paylaş</string>
+    <string name="select_all">Tümünü Seç</string>
+    <string name="selected_1">Seçilmiş</string>
+    <string name="activity_scanner_permission_needed_explanation">Uygulama, karekodları taramak için kamera iznine ihtiyaç duyar.</string>
+
+    <string name="select_image_from_gallery_explanation">Bu fonksiyon galerinizdeki resimleri açmanızı ve içindeki kodları taramanızı sağlar. Bunun için resimlere erişim gerekir.</string>
+    <string name="select_image_from_gallery">Galeriden resim seç</string>
+    <string name="image_is_being_processed">Resim işleniyor...</string>
+    <string name="no_code_in_image_explanation">Ne yazık ki bu görüntüde herhangi bir kod bulunamadı. Sonucu iyileştirmek için görüntüyü kırpabilir ya da düzeltebilir ve tekrar deneyebilirsiniz.</string>
+
+    <string name="raw_data">Ham veri</string>
+    <string name="generated_code_image_explanation">Not: Burada gösterilen kod, taranan kodun içeriğine göre oluşturulmuştur ve bu nedenle farklı görünebilir. Ancak içerdiği veriler aynıdır.</string>
+    <string name="image_stored_in_gallery">Resim galeriye kaydedildi</string>
+    <string name="close">Kapat</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Merhaba boş parça</string>
+
+    <!--Settings for Default Search Engine-->
+    <string name="pref_search_engine_title">Varsayılan Arama Motoru</string>
+    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
+        "https://duckduckgo.com/?q=%s"
+    </string>
+    <string name="pref_search_engine_uri_google" translatable="false">
+        "https://www.google.com/search?q=%s"
+    </string>
+    <string name="pref_enable_beep_on_scan_title">Tarama esnasında bip sesi</string>
+    <string name="pref_enable_beep_on_scan_summary">Tarama sırasında bir onay sesi çalar</string>
+    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
+    <string name="delete">sil</string>
+    <string name="dialog_history_delete_message">Bu girdiyi gerçekten silmek istiyor musunuz?</string>
+    <string name="dialog_history_delete_title">Girdiyi Sil</string>
+    <string name="pref_save_real_image_to_history_title">Gerçek kodu kaydet</string>
+    <string name="pref_save_real_image_to_history_summary">Yeniden oluşturmak yerine kodun gerçek bir görüntüsünü kaydeder</string>
+    <string name="item_result_email_to">Kime:</string>
+    <string name="item_result_email_cc">KK:</string>
+    <string name="item_result_email_bcc">GKK:</string>
+    <string name="item_result_email_subject">Konu:</string>
+    <string name="item_result_email_body">İleti:</string>
+    <string name="activity_result_toast_saved">Geçmişe kaydedildi.</string>
+    <string name="fragment_result_product_label">Tanımlayıcı:</string>
+    <string name="activity_result_toast_error_cant_load">Sonuç yüklenirken bir şeyler yanlış gitti.</string>
+    <string name="activity_enter_toast_missing_data">No data</string>
+    <string name="activity_result_type_uri" translatable="false">URL</string>
+
+    <string name="activity_scanner_flashlight_on">El Feneri Açık</string>
+    <string name="activity_scanner_flashlight_off">El Feneri Kapalı</string>
+    <string name="action_search">Ara</string>
+    <string name="fragment_result_text_dialog_message">Bu metni %s üzerinde aramak istiyor musunuz? Bu potansiyel olarak bilgi sızdırabilir ve metni arama motoruna gönderir.</string>
+    <string name="fragment_result_text_dialog_positive_button">Ara</string>
+    <string name="fragment_result_text_dialog_title">Arama</string>
+    <string name="none">Hiçbiri</string>
+    <string name="action_open">Aç</string>
+    <string name="pref_search_engine_enabled_title">Arama motorlarını kullan</string>
+    <string name="pref_search_engine_enabled_summary">Metin tararken \"Ara\" düğmesini görüntüler.</string>
+
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+    </string-array>
+    <string-array name="pref_search_engine_values">
+        <item>DUCK_DUCK_GO</item>
+        <item>GOOGLE</item>
+    </string-array>
+
+</resources>
