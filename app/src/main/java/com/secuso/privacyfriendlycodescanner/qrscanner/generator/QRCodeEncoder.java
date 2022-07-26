@@ -247,14 +247,16 @@ public class QRCodeEncoder {
         }
     }
 
-    public Bitmap encodeAsBitmap() throws WriterException {
+    public Bitmap encodeAsBitmap(String errorCorrectionLevel) throws WriterException {
         if (!encoded) return null;
 
-        Map<EncodeHintType, Object> hints = null;
+        Map<EncodeHintType, Object> hints = new EnumMap<EncodeHintType, Object>(EncodeHintType.class);
         String encoding = guessAppropriateEncoding(contents);
         if (encoding != null) {
-            hints = new EnumMap<EncodeHintType, Object>(EncodeHintType.class);
             hints.put(EncodeHintType.CHARACTER_SET, encoding);
+        }
+        if(format.equals(BarcodeFormat.QR_CODE) || format.equals(BarcodeFormat.AZTEC) || format.equals(BarcodeFormat.PDF_417)) {
+            hints.put(EncodeHintType.ERROR_CORRECTION, errorCorrectionLevel);
         }
         MultiFormatWriter writer = new MultiFormatWriter();
         BitMatrix result = writer.encode(contents, format, dimension, dimension, hints);

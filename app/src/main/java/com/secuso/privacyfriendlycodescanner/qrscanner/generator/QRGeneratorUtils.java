@@ -22,6 +22,7 @@ import androidx.core.content.FileProvider;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -69,6 +70,9 @@ public class QRGeneratorUtils {
     }
 
     public static Uri cacheImage(Context context, Bitmap image) {
+        if (image == null) {
+            throw new IllegalArgumentException("Image must not be null");
+        }
         File imageFilePath = new File(context.getCacheDir(), "images/");
         imageFilePath.mkdir();
         imageFilePath = new File(imageFilePath, buildFileString());
@@ -81,7 +85,7 @@ public class QRGeneratorUtils {
         return cache;
     }
 
-    public static Uri createImage(Context context, String qrInputText, Contents.Type qrType) {
+    public static Uri createImage(Context context, String qrInputText, Contents.Type qrType, BarcodeFormat barcodeFormat, String errorCorrectionLevel) {
 
         //Find screen size
         WindowManager manager = (WindowManager) context.getSystemService(WINDOW_SERVICE);
@@ -97,11 +101,11 @@ public class QRGeneratorUtils {
         QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
                 null,
                 qrType,
-                BarcodeFormat.QR_CODE.toString(),
+                barcodeFormat.toString(),
                 smallerDimension);
         Bitmap bitmap_ = null;
         try {
-            bitmap_ = qrCodeEncoder.encodeAsBitmap();
+            bitmap_ = qrCodeEncoder.encodeAsBitmap(errorCorrectionLevel);
             // return bitmap_;
 
         } catch (WriterException e) {

@@ -324,5 +324,8 @@
     <string name="image_is_being_processed">Bild wird verarbeitet…</string>
     <string name="no_code_in_image_explanation">Leider konnte in diesem Bild kein Code gefunden werden. Um das Ergebnis zu verbessern, können Sie das Bild zuschneiden oder begradigen und es erneut versuchen.</string>
     <string name="select_image_from_gallery_explanation">Mit dieser Funktion können Sie Bilder aus Ihrer Galerie öffnen und darin enthaltene Codes scannen. Dazu ist der Zugriff auf die Bilder erforderlich.</string>
+    <string name="error_correction_level">Fehlerkorrektur-Level</string>
+    <string name="barcode_format">Format</string>
+    <string name="code_generation_error">Es konnte kein Code generiert werden.</string>
 
 </resources>
