@@ -331,5 +331,8 @@
     <string name="image_is_being_processed">Beeld wordt verwerkt…</string>
     <string name="no_code_in_image_explanation">Helaas kon in dit beeld geen code worden gevonden. Om het resultaat te verbeteren, kunt u de afbeelding bijsnijden of rechtzetten en het opnieuw proberen.</string>
     <string name="select_image_from_gallery_explanation">Met deze functie kunt u afbeeldingen uit uw galerij openen en de codes in de afbeeldingen scannen. Hiervoor is toegang tot de afbeeldingen nodig.</string>
+    <string name="error_correction_level">Foutcorrectieniveau</string>
+    <string name="barcode_format">Formaat</string>
+    <string name="code_generation_error">Er kon geen code worden gegenereerd.</string>
 
 </resources>

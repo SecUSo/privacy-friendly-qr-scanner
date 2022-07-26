@@ -335,6 +335,9 @@
     <string name="image_is_being_processed">L\'immagine è in fase di elaborazione…</string>
     <string name="no_code_in_image_explanation">Purtroppo non è stato possibile trovare alcun codice in questa immagine. Per migliorare il risultato, è possibile ritagliare o raddrizzare l\'immagine e riprovare.</string>
     <string name="select_image_from_gallery_explanation">Questa funzione consente di aprire le immagini della propria galleria e di scansionare i codici in esse contenuti. Ciò richiede l\'accesso alle immagini.</string>
+    <string name="error_correction_level">Livello di correzione degli errori</string>
+    <string name="barcode_format">Formato</string>
+    <string name="code_generation_error">Non è stato possibile generare alcun codice.</string>
 
 
 </resources>
