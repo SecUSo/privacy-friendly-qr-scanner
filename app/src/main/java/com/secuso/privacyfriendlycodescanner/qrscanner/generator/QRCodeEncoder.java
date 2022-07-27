@@ -258,6 +258,9 @@ public class QRCodeEncoder {
         if(format.equals(BarcodeFormat.QR_CODE) || format.equals(BarcodeFormat.AZTEC) || format.equals(BarcodeFormat.PDF_417)) {
             hints.put(EncodeHintType.ERROR_CORRECTION, errorCorrectionLevel);
         }
+        if (format.equals(BarcodeFormat.QR_CODE) || format.equals(BarcodeFormat.PDF_417) || format.equals(BarcodeFormat.CODE_128)) {
+            hints.put(EncodeHintType.MARGIN, 0);
+        }
         MultiFormatWriter writer = new MultiFormatWriter();
         BitMatrix result = writer.encode(contents, format, dimension, dimension, hints);
         int width = result.getWidth();

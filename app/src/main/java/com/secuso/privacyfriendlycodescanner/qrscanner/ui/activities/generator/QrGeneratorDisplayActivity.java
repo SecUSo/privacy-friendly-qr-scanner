@@ -22,6 +22,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
@@ -159,7 +160,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         String errorCorrectionLevel = errorCorrectionMenu.getText().toString();
         try {
             Log.d(getClass().getSimpleName(), "Creating image...");
-            Glide.with(this).load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType, barcodeFormat, errorCorrectionLevel)).into(myImage);
+            Glide.with(this).asBitmap().load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType, barcodeFormat, errorCorrectionLevel)).into(new BitmapImageViewTarget(myImage));
         } catch (IllegalArgumentException e) {
             Toast.makeText(this, R.string.code_generation_error, Toast.LENGTH_SHORT).show();
             Log.d(getClass().getSimpleName(), "Error during code generation.", e);
