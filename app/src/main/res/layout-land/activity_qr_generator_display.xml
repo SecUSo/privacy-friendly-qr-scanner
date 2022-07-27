@@ -19,22 +19,16 @@
             android:id="@+id/scrollViewContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="80dp">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guidelineStart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="32dp" />
+            android:paddingBottom="0dp">
 
             <ImageView
                 android:id="@+id/iconImageView"
                 style="@style/AppTheme.Generator.Icon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="@id/guidelineStart"
+                app:layout_constraintStart_toStartOf="@id/centerGuidline"
                 app:layout_constraintTop_toTopOf="@+id/editBarcodeFormatInputLayout"
                 app:srcCompat="@drawable/ic_baseline_qr_code_24dp"
                 tools:ignore="ContentDescription" />
@@ -46,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="48dp"
-                app:layout_constraintEnd_toEndOf="@+id/resultQRCodeImage"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/iconImageView"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -68,8 +62,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="48dp"
-                app:layout_constraintEnd_toEndOf="@+id/resultQRCodeImage"
+                app:layout_constraintEnd_toEndOf="@+id/editBarcodeFormatInputLayout"
                 app:layout_constraintStart_toEndOf="@id/iconImageView"
                 app:layout_constraintTop_toBottomOf="@id/editBarcodeFormatInputLayout">
 
@@ -81,19 +74,33 @@
                     android:inputType="none" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centerGuidline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
             <ImageView
                 android:id="@+id/resultQRCodeImage"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="8dp"
                 android:background="@color/white"
                 android:padding="2dp"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/centerGuidline"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editErrorCorrectionInputLayout"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_no_image_accent_24dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/btnStore"
@@ -109,5 +116,5 @@
         app:icon="@drawable/ic_baseline_save_alt_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,15 +52,16 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
             R.drawable.ic_data_matrix_code_24dp,
             R.drawable.ic_pdf_417_code_24dp,
             R.drawable.ic_barcode_24dp};
-    private AutoCompleteTextView dropdownMenuBarcodeFormat;
+    private IconArrayAdapter barcodeFormatAdapter;
+    private AutoCompleteTextView barcodeFormatMenu;
     private BarcodeFormat barcodeFormat = BarcodeFormat.QR_CODE;
-    private BarcodeFormat lastFormat = barcodeFormat;
 
     private final String[] errorCorrectionsQR = new String[]{ErrorCorrectionLevel.L.name(), ErrorCorrectionLevel.M.name(), ErrorCorrectionLevel.Q.name(), ErrorCorrectionLevel.H.name()};
     private final String[] errorCorrectionsAztec = new String[]{"25", "50", "75", "90"};
     private final String[] errorCorrectionsPDF417 = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8"};
-    private ArrayAdapter<String> dropdownAdapterErrorCorrection;
-    private AutoCompleteTextView dropdownMenuErrorCorrection;
+    private String[] currentErrorCorrections = errorCorrectionsQR;
+    private ArrayAdapter<String> errorCorrectionAdapter;
+    private AutoCompleteTextView errorCorrectionMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,24 +69,16 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_qr_generator_display);
 
         Button btnstore = findViewById(R.id.btnStore);
-
-        dropdownMenuBarcodeFormat = findViewById(R.id.editBarcodeFormat);
-        IconArrayAdapter dropdownAdapterBarcodeFormat = new IconArrayAdapter(this, R.layout.list_item_generator, barcodeFormats, barcodeFormatIcons);
-        dropdownMenuBarcodeFormat.setAdapter(dropdownAdapterBarcodeFormat);
-        dropdownMenuBarcodeFormat.setText(barcodeFormats[0], false);
-        dropdownMenuBarcodeFormat.setAdapter(dropdownAdapterBarcodeFormat);
+        barcodeFormatMenu = findViewById(R.id.editBarcodeFormat);
+        errorCorrectionMenu = findViewById(R.id.editErrorCorrection);
 
 
-        dropdownMenuBarcodeFormat.setOnItemClickListener((parent, view, position, id) -> generateAndUpdateImage());
+        barcodeFormatMenu.setOnItemClickListener((parent, view, position, id) -> {
+            updateDropDownMenus();
+            generateAndUpdateImage();
+        });
 
-        dropdownMenuErrorCorrection = findViewById(R.id.editErrorCorrection);
-        dropdownAdapterErrorCorrection = new ArrayAdapter<>(QrGeneratorDisplayActivity.this, android.R.layout.simple_spinner_item, errorCorrectionsQR);
-        dropdownAdapterErrorCorrection.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-        dropdownMenuErrorCorrection.setAdapter(dropdownAdapterErrorCorrection);
-        dropdownMenuErrorCorrection.setText(errorCorrectionsQR[0], false);
-        dropdownMenuErrorCorrection.setAdapter(dropdownAdapterErrorCorrection);
-
-        dropdownMenuErrorCorrection.setOnItemClickListener((adapterView, view, i, l) -> generateAndUpdateImage());
+        errorCorrectionMenu.setOnItemClickListener((adapterView, view, i, l) -> generateAndUpdateImage());
 
 
         Bundle QRData = getIntent().getExtras();//from QRGenerator
@@ -93,8 +86,6 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         qrInputType = (Contents.Type) QRData.getSerializable("type");
 
         setTitle(qrInputType.toLocalizedString(getApplicationContext()));
-
-        generateAndUpdateImage();
 
         btnstore.setOnClickListener(view -> {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
@@ -107,50 +98,80 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
                 saveImageToStorage();
             }
         });
+
+        initDropDownMenus();
+    }
+
+    private void initDropDownMenus() {
+        barcodeFormatAdapter = newBarcodeFormatAdapter();
+        barcodeFormatMenu.setAdapter(barcodeFormatAdapter);
+        barcodeFormatMenu.setText(barcodeFormats[0], false);
+        barcodeFormatMenu.setAdapter(barcodeFormatAdapter);
+
+        errorCorrectionAdapter = newErrorCorrectionAdapter(errorCorrectionsQR);
+        errorCorrectionAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        errorCorrectionMenu.setAdapter(errorCorrectionAdapter);
+        errorCorrectionMenu.setText(errorCorrectionsQR[0], false);
+        errorCorrectionMenu.setAdapter(errorCorrectionAdapter);
+    }
+
+    private void updateDropDownMenus() {
+        barcodeFormat = BarcodeFormat.valueOf(barcodeFormatMenu.getText().toString());
+
+        if (barcodeFormat.equals(BarcodeFormat.QR_CODE)) {
+            currentErrorCorrections = errorCorrectionsQR;
+        } else if (barcodeFormat.equals(BarcodeFormat.AZTEC)) {
+            currentErrorCorrections = errorCorrectionsAztec;
+        } else if (barcodeFormat.equals(BarcodeFormat.PDF_417)) {
+            currentErrorCorrections = errorCorrectionsPDF417;
+        } else {
+            currentErrorCorrections = null;
+        }
+        updateErrorCorrectionMenu();
+        //Update icon
+        ImageView barcodeFormatIcon = findViewById(R.id.iconImageView);
+        Glide.with(this).load(AppCompatResources.getDrawable(this, barcodeFormatIcons[Arrays.asList(barcodeFormats).indexOf(barcodeFormat.name())])).into(barcodeFormatIcon);
+
+    }
+
+    private void updateErrorCorrectionMenu() {
+        TextInputLayout errorCorrectionLayout = findViewById(R.id.editErrorCorrectionInputLayout);
+        //only show error correction input field if the selected format supports error correction
+        if (currentErrorCorrections == null) {
+            errorCorrectionLayout.setVisibility(View.INVISIBLE);
+        } else {
+            errorCorrectionLayout.setVisibility(View.VISIBLE);
+            errorCorrectionAdapter = newErrorCorrectionAdapter(currentErrorCorrections);
+            errorCorrectionAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+            errorCorrectionMenu.setAdapter(errorCorrectionAdapter);
+
+            if (!Arrays.asList(currentErrorCorrections).contains(errorCorrectionMenu.getText().toString())) {
+                errorCorrectionMenu.setText(currentErrorCorrections[0], false);
+                errorCorrectionMenu.setAdapter(errorCorrectionAdapter);
+            }
+        }
     }
 
     private void generateAndUpdateImage() {
         ImageView myImage = findViewById(R.id.resultQRCodeImage);
-        TextInputLayout errorCorrectionLayout = findViewById(R.id.editErrorCorrectionInputLayout);
 
-        barcodeFormat = BarcodeFormat.valueOf(dropdownMenuBarcodeFormat.getText().toString());
-
-        if (!barcodeFormat.equals(lastFormat)) {
-            //format has changed
-            lastFormat = barcodeFormat;
-            String[] errorCorrectionOptions = null;
-            if (barcodeFormat.equals(BarcodeFormat.QR_CODE)) {
-                errorCorrectionOptions = errorCorrectionsQR;
-            } else if (barcodeFormat.equals(BarcodeFormat.AZTEC)) {
-                errorCorrectionOptions = errorCorrectionsAztec;
-            } else if (barcodeFormat.equals(BarcodeFormat.PDF_417)) {
-                errorCorrectionOptions = errorCorrectionsPDF417;
-            }
-
-            //only show error correction input field if the selected format supports error correction
-            if (errorCorrectionOptions == null) {
-                errorCorrectionLayout.setVisibility(View.INVISIBLE);
-            } else {
-                errorCorrectionLayout.setVisibility(View.VISIBLE);
-                dropdownAdapterErrorCorrection = new ArrayAdapter<>(QrGeneratorDisplayActivity.this, android.R.layout.simple_spinner_item, errorCorrectionOptions);
-                dropdownAdapterErrorCorrection.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-                dropdownMenuErrorCorrection.setAdapter(dropdownAdapterErrorCorrection);
-                dropdownMenuErrorCorrection.setText(errorCorrectionOptions[0], false);
-                dropdownMenuErrorCorrection.setAdapter(dropdownAdapterErrorCorrection);
-            }
-
-            //Update icon
-            ImageView barcodeFormatIcon = findViewById(R.id.iconImageView);
-            Glide.with(this).load(AppCompatResources.getDrawable(this, barcodeFormatIcons[Arrays.asList(barcodeFormats).indexOf(barcodeFormat.name())])).into(barcodeFormatIcon);
-        }
-
-        String errorCorrectionLevel = dropdownMenuErrorCorrection.getText().toString();
+        barcodeFormat = BarcodeFormat.valueOf(barcodeFormatMenu.getText().toString());
+        String errorCorrectionLevel = errorCorrectionMenu.getText().toString();
         try {
+            Log.d(getClass().getSimpleName(), "Creating image...");
             Glide.with(this).load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType, barcodeFormat, errorCorrectionLevel)).into(myImage);
         } catch (IllegalArgumentException e) {
             Toast.makeText(this, R.string.code_generation_error, Toast.LENGTH_SHORT).show();
             Log.d(getClass().getSimpleName(), "Error during code generation.", e);
         }
+    }
+
+    private IconArrayAdapter newBarcodeFormatAdapter() {
+        return new IconArrayAdapter(this, R.layout.list_item_generator, barcodeFormats, barcodeFormatIcons);
+    }
+
+    private ArrayAdapter<String> newErrorCorrectionAdapter(String[] items) {
+        return new ArrayAdapter<>(QrGeneratorDisplayActivity.this, android.R.layout.simple_spinner_item, items);
     }
 
     @Override
@@ -193,6 +214,20 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         QRGeneratorUtils.purgeCacheFolder(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Set adapter on resume to prevent missing dropdown items in some cases (e.g. screen rotation)
+        barcodeFormatAdapter = newBarcodeFormatAdapter();
+        barcodeFormatMenu.setAdapter(barcodeFormatAdapter);
+
+        errorCorrectionAdapter = newErrorCorrectionAdapter(currentErrorCorrections);
+        errorCorrectionMenu.setAdapter(errorCorrectionAdapter);
+        updateDropDownMenus();
+        generateAndUpdateImage();
     }
 }
 
