@@ -59,7 +59,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
 
     private final String[] errorCorrectionsQR = new String[]{ErrorCorrectionLevel.L.name(), ErrorCorrectionLevel.M.name(), ErrorCorrectionLevel.Q.name(), ErrorCorrectionLevel.H.name()};
     private final String[] errorCorrectionsAztec = new String[]{"25", "50", "75", "90"};
-    private final String[] errorCorrectionsPDF417 = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8"};
+    private final String[] errorCorrectionsPDF417 = new String[]{"2", "3", "4", "5", "6", "7", "8"};
     private String[] currentErrorCorrections = errorCorrectionsQR;
     private ArrayAdapter<String> errorCorrectionAdapter;
     private AutoCompleteTextView errorCorrectionMenu;
