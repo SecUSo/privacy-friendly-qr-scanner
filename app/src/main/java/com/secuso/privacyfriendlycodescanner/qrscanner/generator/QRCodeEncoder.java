@@ -58,14 +58,10 @@ public class QRCodeEncoder {
                 // Ignore it then
             }
         }
-        if (format == null || format == BarcodeFormat.QR_CODE) {
+        if (format == null) {
             this.format = BarcodeFormat.QR_CODE;
-            encodeQRCodeContents(data, bundle, type);
-        } else if (data != null && data.length() > 0) {
-            contents = data;
-            displayContents = data;
-            title = "Text";
         }
+        encodeQRCodeContents(data, bundle, type);
         return contents != null && contents.length() > 0;
     }
 
