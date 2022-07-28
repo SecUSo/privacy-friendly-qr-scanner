@@ -41,13 +41,13 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     String qrInputText = "";
     Contents.Type qrInputType = Contents.Type.UNDEFINED;
 
-    private final String[] barcodeFormats = new String[]{
+    private String[] barcodeFormats = new String[]{
             BarcodeFormat.QR_CODE.name(),
             BarcodeFormat.AZTEC.name(),
             BarcodeFormat.DATA_MATRIX.name(),
             BarcodeFormat.PDF_417.name(),
             BarcodeFormat.CODE_128.name()};
-    private final Integer[] barcodeFormatIcons = new Integer[]{
+    private Integer[] barcodeFormatIcons = new Integer[]{
             R.drawable.ic_baseline_qr_code_24dp,
             R.drawable.ic_aztec_code_24dp,
             R.drawable.ic_data_matrix_code_24dp,
@@ -73,6 +73,10 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         barcodeFormatMenu = findViewById(R.id.editBarcodeFormat);
         errorCorrectionMenu = findViewById(R.id.editErrorCorrection);
 
+        if (Build.VERSION.SDK_INT < 19) {
+            barcodeFormats = new String[]{BarcodeFormat.QR_CODE.name(), BarcodeFormat.CODE_128.name()};
+            barcodeFormatIcons = new Integer[]{R.drawable.ic_baseline_qr_code_24dp, R.drawable.ic_barcode_24dp};
+        }
 
         barcodeFormatMenu.setOnItemClickListener((parent, view, position, id) -> {
             updateDropDownMenus();
