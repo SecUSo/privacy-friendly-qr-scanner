@@ -22,9 +22,10 @@ import java.util.GregorianCalendar;
  *
  * @author Christopher Beckmann
  */
-@Database(entities = {HistoryItem.class}, version = 2)
+@Database(entities = {HistoryItem.class}, version = AppDatabase.VERSION)
 @TypeConverters({Converters.class})
 public abstract class AppDatabase extends RoomDatabase {
+    public static final int VERSION = 2;
     public static final String DB_NAME = "DB.db";
 
     public abstract HistoryDao historyDao();
