@@ -108,7 +108,7 @@ class BackupRestorer : IBackupRestorer {
                 }
             }
             reader.endObject()
-            true
+            exitProcess(0)
         } catch (e: Exception) {
             false
         }
