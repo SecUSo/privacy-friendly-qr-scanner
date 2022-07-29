@@ -138,6 +138,8 @@ public final class Contents {
                     return R.drawable.ic_email_accent_24dp;
                 case PHONE:
                     return R.drawable.ic_phone_accent_24dp;
+                case SMS:
+                    return R.drawable.ic_baseline_sms_24dp;
                 case WEB_URL:
                 case URI:
                     return R.drawable.ic_baseline_public_24dp;
