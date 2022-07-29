@@ -2,10 +2,12 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.backup
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.database.sqlite.SQLiteDatabase
 import android.preference.PreferenceManager
 import android.util.JsonWriter
 import android.util.Log
+import androidx.sqlite.db.SupportSQLiteDatabase
+import androidx.sqlite.db.SupportSQLiteOpenHelper
+import androidx.sqlite.db.framework.FrameworkSQLiteOpenHelperFactory
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppDatabase
 import org.secuso.privacyfriendlybackup.api.backup.DatabaseUtil.writeDatabase
 import org.secuso.privacyfriendlybackup.api.backup.PreferenceUtil.writePreferences
@@ -24,11 +26,25 @@ class BackupCreator : IBackupCreator {
 
         try {
             writer.beginObject()
-            val dataBase: SQLiteDatabase = SQLiteDatabase.openDatabase(
-                context.getDatabasePath(AppDatabase.DB_NAME).path,
-                null,
-                SQLiteDatabase.OPEN_READONLY
+
+            val callback: SupportSQLiteOpenHelper.Callback =
+                object : SupportSQLiteOpenHelper.Callback(AppDatabase.VERSION) {
+                    override fun onCreate(db: SupportSQLiteDatabase) {}
+                    override fun onUpgrade(
+                        db: SupportSQLiteDatabase,
+                        oldVersion: Int,
+                        newVersion: Int
+                    ) {
+                    }
+                }
+
+            val helper = FrameworkSQLiteOpenHelperFactory().create(
+                SupportSQLiteOpenHelper.Configuration.builder(context).name(AppDatabase.DB_NAME)
+                    .callback(callback).build()
             )
+
+            val dataBase = helper.writableDatabase
+
             Log.d("PFA BackupCreator", "Writing database")
             writer.name("database")
             writeDatabase(writer, dataBase)
