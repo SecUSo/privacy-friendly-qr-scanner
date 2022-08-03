@@ -79,16 +79,17 @@ class BackupRestorer : IBackupRestorer {
     @Throws(IOException::class)
     private fun readPreferences(@NonNull reader: JsonReader, @NonNull context: Context) {
         reader.beginObject()
-        val pref: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        val pref: SharedPreferences.Editor = PreferenceManager.getDefaultSharedPreferences(context).edit()
         while (reader.hasNext()) {
             val name: String = reader.nextName()
             when (name) {
-                "bool_history", "pref_save_real_image_to_history", "pref_search_engine_enabled", "pref_enable_beep_on_scan", "image_picker_first_click" -> pref.edit()
-                    .putBoolean(name, reader.nextBoolean()).apply()
-                "pref_search_engine" -> pref.edit().putString(name, reader.nextString()).apply()
+                "bool_history", "pref_save_real_image_to_history", "pref_search_engine_enabled", "pref_enable_beep_on_scan", "image_picker_first_click" -> pref
+                    .putBoolean(name, reader.nextBoolean())
+                "pref_search_engine" -> pref.putString(name, reader.nextString())
                 else -> throw RuntimeException("Unknown preference $name")
             }
         }
+        pref.commit()
         reader.endObject()
     }
 
