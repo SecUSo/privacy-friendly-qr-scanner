@@ -322,12 +322,6 @@
 
     <!--Settings for Default Search Engine-->
     <string name="pref_search_engine_title">Default Search Engine</string>
-    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
-        "https://duckduckgo.com/?q=%s"
-    </string>
-    <string name="pref_search_engine_uri_google" translatable="false">
-        "https://www.google.com/search?q=%s"
-    </string>
     <string name="pref_enable_beep_on_scan_title">Beep on scan</string>
     <string name="pref_enable_beep_on_scan_summary">Play a confirmation tone when scanning</string>
     <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
@@ -361,10 +355,20 @@
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>
+        <item>Startpage</item>
+        <item>Brave</item>
     </string-array>
-    <string-array name="pref_search_engine_values">
+    <string-array name="pref_search_engine_values" translatable="false">
         <item>DUCK_DUCK_GO</item>
         <item>GOOGLE</item>
+        <item>STARTPAGE</item>
+        <item>BRAVE</item>
+    </string-array>
+    <string-array name="pref_search_engine_uris" translatable="false">
+        <item>"https://duckduckgo.com/?q=%s"</item>
+        <item>"https://www.google.com/search?q=%s"</item>
+        <item>"https://www.startpage.com/search?query=%s"</item>
+        <item>"https://search.brave.com/search?q=%s"</item>
     </string-array>
 
 </resources>

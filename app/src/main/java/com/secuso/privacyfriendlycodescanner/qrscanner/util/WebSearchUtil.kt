@@ -1,7 +1,6 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.util
 
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.net.Uri
 import android.preference.PreferenceManager
@@ -22,7 +21,8 @@ object WebSearchUtil {
             )
             .setIcon(R.drawable.ic_warning)
             .setTitle(R.string.fragment_result_text_dialog_title)
-            .setPositiveButton(R.string.fragment_result_text_dialog_positive_button
+            .setPositiveButton(
+                R.string.fragment_result_text_dialog_positive_button
             ) { _, _ ->
                 val uri =
                     Uri.parse(String.format(searchEngineURI, content))
@@ -35,22 +35,7 @@ object WebSearchUtil {
         dialog.show()
     }
 
-    private fun getSearchEngineURI(context: Context): String {
-        val duckDuckGo =
-            context.resources
-                .getStringArray(R.array.pref_search_engine_values)[0]
-        val pref = PreferenceManager.getDefaultSharedPreferences(context)
-        val searchEngineType = pref.getString("pref_search_engine", duckDuckGo)
-        return if (duckDuckGo == searchEngineType) {
-            context.resources.getString(R.string.pref_search_engine_uri_duckduckgo)
-        } else {
-            context.resources.getString(
-                R.string.pref_search_engine_uri_google
-            )
-        }
-    }
-
-    private fun getSearchEngineName(context: Context): String {
+    private fun getPrefSearchEngineIndex(context: Context): Int {
         val searchEngines: Array<String> =
             context.resources.getStringArray(R.array.pref_search_engine_values)
         val pref = PreferenceManager.getDefaultSharedPreferences(context)
@@ -62,10 +47,22 @@ object WebSearchUtil {
             }
             i++
         }
+        return if (i < searchEngines.size) {
+            i
+        } else 0
+    }
+
+    private fun getSearchEngineURI(context: Context): String {
+        val searchEngineIndex = getPrefSearchEngineIndex(context)
+        val searchEngineUris: Array<String> =
+            context.resources.getStringArray(R.array.pref_search_engine_uris)
+        return searchEngineUris[searchEngineIndex]
+    }
+
+    private fun getSearchEngineName(context: Context): String {
+        val searchEngineIndex = getPrefSearchEngineIndex(context)
         val searchEnginesEntries: Array<String> =
             context.resources.getStringArray(R.array.pref_search_engine_entries)
-        return if (i < searchEnginesEntries.size) {
-            searchEnginesEntries[i]
-        } else context.resources.getString(R.string.none)
+        return searchEnginesEntries[searchEngineIndex]
     }
 }

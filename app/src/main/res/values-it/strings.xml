@@ -291,10 +291,6 @@
     <string name="fragment_result_product_label">Identificatore:</string>
     <string name="activity_result_toast_error_cant_load">Qualcosa è andato storto durante il caricamento del risultato.</string>
     <string name="activity_enter_toast_missing_data">Nessun dato</string>
-    <string-array name="pref_search_engine_entries">
-        <item>DuckDuckGo</item>
-        <item>Google</item>
-    </string-array>
 
     <string name="text_enter">Il testo che vuoi codificare</string>
     <string name="hello_world">Ciao mondo</string>
