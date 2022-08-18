@@ -12,7 +12,7 @@ class QuickTileService : TileService() {
         super.onClick()
 
         val intent = Intent(this, ScannerActivity::class.java)
-            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
 
         startActivityAndCollapse(intent)
     }
