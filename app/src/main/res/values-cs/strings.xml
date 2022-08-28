@@ -38,7 +38,7 @@
     <string name="privacy_friendly">Tato aplikace patří ke skupině aplikací Privacy Friendly Apps, vyvíjené výzumnou skupinou SECUSO. Zdrojový kód je k dispozici pod licensí GPLv3. Obrázky copyright Instituce technologie Karlsruhe and Google Inc.</string>
     <string name="more_info">Více informací najdete na:</string>
     <string name="about_libraries">Použité knihovny:</string>
-    <string name="app_name_long">Čtečka QR kódů respektující Vaše soukromů</string>
+    <string name="app_name_long">Soukromá čtečka QR kódů</string>
     <string name="version_number">Verze v%s</string>
     <string name="delete_items">Smazat položky</string>
     <string name="scan_text">Umístěte toto okno nad kód, který chcete načíst.</string>
