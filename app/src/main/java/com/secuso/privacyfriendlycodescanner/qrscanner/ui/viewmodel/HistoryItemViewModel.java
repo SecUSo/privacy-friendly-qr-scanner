@@ -4,9 +4,9 @@ import android.content.Context;
 import android.text.format.DateUtils;
 import android.view.View;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.databinding.BaseObservable;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.ResultParser;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
@@ -49,15 +49,15 @@ public class HistoryItemViewModel extends BaseObservable {
     public View.OnLongClickListener onLongClickItem() {
         return v -> {
             if (!isDisabled()) {
-                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
-                dialogBuilder.setTitle(R.string.dialog_history_delete_title);
-                dialogBuilder.setMessage(R.string.dialog_history_delete_message);
-                dialogBuilder.setPositiveButton(R.string.delete, (dialog, which) -> {
-                    disabled = true;
-                    AppRepository.getInstance(context).deleteHistoryEntry(entry);
-                });
-                dialogBuilder.setNegativeButton(android.R.string.cancel, null);
-                dialogBuilder.create().show();
+                new MaterialAlertDialogBuilder(context)
+                        .setTitle(R.string.dialog_history_delete_title)
+                        .setMessage(R.string.dialog_history_delete_message)
+                        .setPositiveButton(R.string.delete, (dialog, which) -> {
+                            disabled = true;
+                            AppRepository.getInstance(context).deleteHistoryEntry(entry);
+                        })
+                        .setNegativeButton(android.R.string.cancel, null)
+                        .show();
                 return true;
             }
             return false;

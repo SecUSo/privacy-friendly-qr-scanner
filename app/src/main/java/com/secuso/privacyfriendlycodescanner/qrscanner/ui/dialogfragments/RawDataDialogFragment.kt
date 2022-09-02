@@ -15,7 +15,7 @@ class RawDataDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
-            val builder = MaterialAlertDialogBuilder(context!!, R.style.AppTheme_CustomMaterialDialog)
+            val builder = MaterialAlertDialogBuilder(context!!)
             val rawData: String = arguments!!.getString("rawDataString") ?: ""
             val dialogView = activity!!.layoutInflater.inflate(R.layout.dialog_raw_data, null)
             val textView = dialogView.findViewById<TextView>(R.id.textView)

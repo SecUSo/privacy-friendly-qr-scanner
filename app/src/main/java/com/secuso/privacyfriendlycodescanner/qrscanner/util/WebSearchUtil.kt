@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.preference.PreferenceManager
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.secuso.privacyfriendlycodescanner.qrscanner.R
 
 object WebSearchUtil {
@@ -12,7 +12,7 @@ object WebSearchUtil {
     @JvmStatic
     fun openWebSearchDialog(context: Context, content: String) {
         val searchEngineURI = getSearchEngineURI(context)
-        val dialog: AlertDialog = AlertDialog.Builder(context)
+        MaterialAlertDialogBuilder(context)
             .setMessage(
                 context.resources.getString(
                     R.string.fragment_result_text_dialog_message,
@@ -31,8 +31,8 @@ object WebSearchUtil {
                     context.resources.getStringArray(R.array.text_array).get(0)
                 context.startActivity(Intent.createChooser(search, caption))
             }
-            .setNegativeButton(android.R.string.cancel, null).create()
-        dialog.show()
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
     }
 
     private fun getPrefSearchEngineIndex(context: Context): Int {

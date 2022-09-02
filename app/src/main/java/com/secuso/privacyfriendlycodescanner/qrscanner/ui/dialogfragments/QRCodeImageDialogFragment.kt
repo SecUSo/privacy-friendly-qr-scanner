@@ -23,7 +23,7 @@ class QRCodeImageDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
-            val builder = MaterialAlertDialogBuilder(context!!, R.style.AppTheme_CustomMaterialDialog)
+            val builder = MaterialAlertDialogBuilder(context!!)
             val dialogView = it.layoutInflater.inflate(R.layout.dialog_image_view, null)
             val imageView = dialogView.findViewById<ImageView>(R.id.imageView)
             val progressBar = dialogView.findViewById<ProgressBar>(R.id.progressBar)

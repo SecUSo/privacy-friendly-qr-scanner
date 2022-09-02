@@ -7,13 +7,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.HistoryAdapter;
@@ -64,7 +64,8 @@ public class HistoryActivity extends AppCompatActivity {
                     icon.setTint(getResources().getColor(R.color.red));
                 }
             }
-            new AlertDialog.Builder(this)
+
+            new MaterialAlertDialogBuilder(this)
                     .setTitle(R.string.D_all)
                     .setMessage(R.string.all_records)
                     .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
