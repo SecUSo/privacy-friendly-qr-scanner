@@ -99,6 +99,10 @@
         <item>Add to Contacts</item>
         <item>Do nothing</item>
     </string-array>
+    <string-array name="calendar_array">
+        <item>Add to Calendar</item>
+        <item>Do nothing</item>
+    </string-array>
     <string-array name="send_email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>

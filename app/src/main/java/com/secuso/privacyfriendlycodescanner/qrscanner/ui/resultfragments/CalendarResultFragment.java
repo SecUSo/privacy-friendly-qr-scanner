@@ -41,42 +41,27 @@ public class CalendarResultFragment extends ResultFragment {
         return v;
     }
 
-    //TODO: Add missing: multiple names, all nicknames, pronunciation, instant messenger, birthday, geo
-    //See: zxing/core/src/main/java/com/google/zxing/client/result/AddressBookParsedResult.java
     public void onProceedPressed(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(R.string.choose_action)
-                .setItems(R.array.vcard_array, (dialog, which) -> {
-                    switch (which) {
+                .setItems(R.array.calendar_array, (dialog, which) -> {
+                    switch(which) {
                         case 0:
-                            Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
-                            contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+                            Intent event = new Intent(Intent.ACTION_INSERT);
+                            event.setData(CalendarContract.Events.CONTENT_URI);
 
-                            contact.putExtra(ContactsContract.Intents.Insert.NAME, result.getNames()[0]);
-                            contact.putExtra(ContactsContract.Intents.Insert.COMPANY, result.getOrg());
-                            contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, result.getTitle());
-                            contact.putExtra(ContactsContract.Intents.Insert.NOTES, result.getNote());
+                            event.putExtra(CalendarContract.Events.TITLE, result.getTitle());
+                            event.putExtra(CalendarContract.Events.DESCRIPTION, result.getDescription());
+                            event.putExtra(CalendarContract.Events.EVENT_LOCATION, result.getLocation());
+                            event.putExtra(CalendarContract.EXTRA_EVENT_ALL_DAY, result.isAllDayEvent());
+                            event.putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, result.getStartTimeMS());
+                            event.putExtra(CalendarContract.EXTRA_EVENT_END_TIME, result.getEndTimeMS());
 
-                            ArrayList<ContentValues> contactData = new ArrayList<>();
-
-                            // add phone numbers
-                            contactData.addAll(ContactUtil.buildPhoneValues(result.getPhoneNumbers(), result.getPhoneTypes()));
-
-                            // add emails
-                            contactData.addAll(ContactUtil.buildEmailValues(result.getEmails(), result.getEmailTypes()));
-
-                            // add addresses
-                            contactData.addAll(ContactUtil.buildAddressValues(result.getAddresses(), result.getAddressTypes()));
-
-                            // add websites
-                            contactData.addAll(ContactUtil.buildWebsiteValues(result.getURLs()));
-
-                            contact.putParcelableArrayListExtra(ContactsContract.Intents.Insert.DATA, contactData);
-
-                            String caption = getResources().getStringArray(R.array.vcard_array)[0];
-                            startActivity(Intent.createChooser(contact, caption));
+                            String caption = getResources().getStringArray(R.array.calendar_array)[0];
+                            startActivity(Intent.createChooser(event, caption));
                             break;
 
+                        case 1:
                         default:
                     }
                 });
