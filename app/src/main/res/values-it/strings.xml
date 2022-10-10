@@ -334,6 +334,7 @@
     <string name="error_correction_level">Livello di correzione degli errori</string>
     <string name="barcode_format">Formato</string>
     <string name="code_generation_error">Non è stato possibile generare alcun codice.</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
 
 
 </resources>

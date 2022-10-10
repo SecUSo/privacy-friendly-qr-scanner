@@ -334,5 +334,6 @@
     <string name="error_correction_level">Foutcorrectieniveau</string>
     <string name="barcode_format">Formaat</string>
     <string name="code_generation_error">Er kon geen code worden gegenereerd.</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
 
 </resources>
