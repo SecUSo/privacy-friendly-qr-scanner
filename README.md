@@ -56,6 +56,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the app logo) copyright Karlsruhe Institute of Technology (2016-2020).
 
+## languages
+
+- [English](README.md)
+
+- [Arabic](README_ar.md)
+
 ## Contributors
 
 App-Icon: Markus Hau & Tatjana Albrandt<br />
