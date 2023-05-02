@@ -24,6 +24,7 @@ public class Utils {
 
     private static BarcodeFormat getFormat(BarcodeFormat format) {
         switch (format) {
+            //These are the formats supported by MultiFormatWriter. We encode as QR-Code for everything else.
             case EAN_8:
             case UPC_E:
             case EAN_13:
@@ -51,15 +52,14 @@ public class Utils {
         return generateCode(data, format, DEFAULT_CODE_WIDTH, DEFAULT_CODE_HEIGHT, hints, null);
     }
 
-    public static Bitmap generateCode(String data, BarcodeFormat format, int imgWidth, int imgHeight, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
-        format = getFormat(format);
+    public static Bitmap generateCode(String data, BarcodeFormat original_format, int imgWidth, int imgHeight, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
+        BarcodeFormat format = getFormat(original_format);
         try {
             MultiFormatWriter writer = new MultiFormatWriter();
-            if (hints == null) {
+            if (hints == null || !format.equals(original_format)) {
                 hints = new EnumMap<>(EncodeHintType.class);
             }
-
-            if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL)) {
+            if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL) && format.equals(original_format)) {
                 Object ec = metadata.get(ERROR_CORRECTION_LEVEL);
                 if (ec != null) {
                     hints.put(ERROR_CORRECTION, ec);
