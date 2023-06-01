@@ -51,7 +51,7 @@ class BackupRestorer : IBackupRestorer {
         val db = restoreDatabase.openHelper.writableDatabase
 
         db.beginTransaction()
-        db.setVersion(version)
+        db.version = version
 
         // make sure no tables are in the database
         deleteTables(db)
