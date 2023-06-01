@@ -73,7 +73,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
         switch (historyItem.getFormat()) {
             case QR_CODE:
             case MAXICODE:
-                codeTypeDrawableRes = R.drawable.ic_baseline_qr_code_24dp;
+                codeTypeDrawableRes = R.drawable.ic_maxicode_24dp;
                 break;
             case CODABAR:
             case CODE_39:
