@@ -99,6 +99,10 @@
         <item>Add to Contacts</item>
         <item>Do nothing</item>
     </string-array>
+    <string-array name="calendar_array">
+        <item>Add to Calendar</item>
+        <item>Do nothing</item>
+    </string-array>
     <string-array name="send_email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>
@@ -335,6 +339,11 @@
     <string name="item_result_email_bcc">BCC:</string>
     <string name="item_result_email_subject">Subject:</string>
     <string name="item_result_email_body">Body:</string>
+    <string name="item_result_calendar_title">Title:</string>
+    <string name="item_result_calendar_description">Description:</string>
+    <string name="item_result_calendar_location">Location:</string>
+    <string name="item_result_calendar_start">Begin:</string>
+    <string name="item_result_calendar_end">End:</string>
     <string name="activity_result_toast_saved">Saved to history.</string>
     <string name="fragment_result_product_label">Identifier:</string>
     <string name="activity_result_toast_error_cant_load">Something went wrong when loading the result.</string>
