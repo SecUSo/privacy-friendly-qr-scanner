@@ -2,7 +2,6 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;

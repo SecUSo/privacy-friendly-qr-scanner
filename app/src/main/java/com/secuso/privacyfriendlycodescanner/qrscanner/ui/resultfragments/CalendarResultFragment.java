@@ -9,10 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.CalendarParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.CalendarResultAdapter;
@@ -23,7 +23,8 @@ public class CalendarResultFragment extends ResultFragment {
     CalendarResultWrapper result;
     RecyclerView resultList;
 
-    public CalendarResultFragment() {}
+    public CalendarResultFragment() {
+    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -42,10 +43,9 @@ public class CalendarResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
+        new MaterialAlertDialogBuilder(context).setTitle(R.string.choose_action)
                 .setItems(R.array.calendar_array, (dialog, which) -> {
-                    switch(which) {
+                    switch (which) {
                         case 0:
                             Intent event = new Intent(Intent.ACTION_INSERT);
                             event.setData(CalendarContract.Events.CONTENT_URI);
@@ -64,7 +64,7 @@ public class CalendarResultFragment extends ResultFragment {
                         case 1:
                         default:
                     }
-                });
-        builder.create().show();
+                })
+                .show();
     }
 }
