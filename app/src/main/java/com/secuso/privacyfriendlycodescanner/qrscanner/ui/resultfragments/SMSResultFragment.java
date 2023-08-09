@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.ParsedResult;
 import com.google.zxing.client.result.SMSParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
@@ -41,7 +41,7 @@ public class SMSResultFragment extends ResultFragment {
         TextView subjectLabel = (TextView) v.findViewById(R.id.fragment_result_sms_subject_label);
         TextView body = (TextView) v.findViewById(R.id.fragment_result_sms_body);
 
-        if(result != null) {
+        if (result != null) {
             StringBuilder numberSb = new StringBuilder();
             ParsedResult.maybeAppend(result.getNumbers(), numberSb);
 
@@ -66,14 +66,14 @@ public class SMSResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
+        new MaterialAlertDialogBuilder(context)
+                .setTitle(R.string.choose_action)
                 .setItems(R.array.sms_array, (dialog, which) -> {
                     String caption = "";
                     switch (which) {
                         case 0:
                             Intent sms = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + result.getNumbers()[0]));
-                            sms.putExtra("address",  result.getNumbers()[0]);
+                            sms.putExtra("address", result.getNumbers()[0]);
                             sms.putExtra("sms_body", result.getBody());
                             caption = getResources().getStringArray(R.array.sms_array)[0];
                             startActivity(Intent.createChooser(sms, caption));
@@ -93,7 +93,7 @@ public class SMSResultFragment extends ResultFragment {
                             break;
                         default:
                     }
-                });
-        builder.create().show();
+                })
+                .show();
     }
 }

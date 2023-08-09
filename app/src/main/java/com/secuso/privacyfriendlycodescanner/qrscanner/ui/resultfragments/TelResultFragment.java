@@ -10,8 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
-
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.TelParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
@@ -38,8 +37,8 @@ public class TelResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(final Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
+        new MaterialAlertDialogBuilder(context)
+                .setTitle(R.string.choose_action)
                 .setItems(R.array.tel_array, (dialog, which) -> {
                     switch (which) {
                         case 0:
@@ -52,7 +51,7 @@ public class TelResultFragment extends ResultFragment {
                             break;
                         default:
                     }
-                });
-        builder.create().show();
+                })
+                .show();
     }
 }

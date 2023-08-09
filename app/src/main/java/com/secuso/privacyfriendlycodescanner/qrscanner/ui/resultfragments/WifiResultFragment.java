@@ -8,8 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
-
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.WifiParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
@@ -46,8 +45,8 @@ public class WifiResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(final Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
+        new MaterialAlertDialogBuilder(context)
+                .setTitle(R.string.choose_action)
                 .setItems(R.array.wifi_array, (dialog, which) -> {
                     switch (which) {
                         case 0:
@@ -57,7 +56,7 @@ public class WifiResultFragment extends ResultFragment {
 
                         default:
                     }
-                });
-        builder.create().show();
+                })
+                .show();
     }
 }

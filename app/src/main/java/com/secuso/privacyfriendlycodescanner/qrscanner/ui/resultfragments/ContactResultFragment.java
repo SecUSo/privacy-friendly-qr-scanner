@@ -10,10 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.AddressBookParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.ContactResultAdapter;
@@ -54,8 +54,8 @@ public class ContactResultFragment extends ResultFragment {
     //TODO: Add missing: multiple names, all nicknames, pronunciation, instant messenger, birthday, geo
     //See: zxing/core/src/main/java/com/google/zxing/client/result/AddressBookParsedResult.java
     public void onProceedPressed(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
+        new MaterialAlertDialogBuilder(context)
+                .setTitle(R.string.choose_action)
                 .setItems(R.array.vcard_array, (dialog, which) -> {
                     switch (which) {
                         case 0:
@@ -89,7 +89,7 @@ public class ContactResultFragment extends ResultFragment {
 
                         default:
                     }
-                });
-        builder.create().show();
+                })
+                .show();
     }
 }
