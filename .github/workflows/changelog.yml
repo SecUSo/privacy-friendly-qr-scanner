@@ -1,0 +1,23 @@
+name: Changelog Generation
+
+on:
+  release:
+    types: [published, released]
+  workflow_dispatch:
+
+jobs:
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+          ref: master
+      - uses: rhysd/changelog-from-release/action@v3
+        with:
+          file: CHANGELOG.md
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_summary_template: 'update changelog for %s changes'
+          args: -l 2
+          header: |
+            # Changelog
