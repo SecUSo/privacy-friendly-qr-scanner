@@ -287,6 +287,14 @@
     <string name="pref_search_engine_title">Standaard zoekmachine</string>
     <string name="pref_enable_beep_on_scan_title">Piepen na scannen</string>
     <string name="pref_enable_beep_on_scan_summary">Speel een bevestigingsgeluid af na het scannen</string>
+
+    <string name="pref_app_theme_title">Thema</string>
+    <string-array name="pref_app_theme_entries">
+        <item>Licht</item>
+        <item>Donker</item>
+        <item>Systeem standaard</item>
+    </string-array>
+
     <string name="delete">Verwijderen</string>
     <string name="dialog_history_delete_message">Weet je zeker dat je dit item wilt verwijderen?</string>
     <string name="dialog_history_delete_title">Item verwijderen</string>

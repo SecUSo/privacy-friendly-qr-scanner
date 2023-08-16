@@ -371,12 +371,27 @@
     <string name="pref_search_engine_enabled_title">Use search engines</string>
     <string name="pref_search_engine_enabled_summary">Display the \"Search\" button when scanning text.</string>
 
+    <string name="pref_app_theme_title">Theme</string>
+    <string-array name="pref_app_theme_entries">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System default</item>
+    </string-array>
+    <string name="pref_app_theme_default" translatable="false">SYSTEM</string>
+    <string-array name="pref_app_theme_values" translatable="false">
+        <item>LIGHT</item>
+        <item>DARK</item>
+        <item>SYSTEM</item>
+    </string-array>
+
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
+
+    <string name="pref_search_engine_default" translatable="false">DUCK_DUCK_GO</string>
     <string-array name="pref_search_engine_values" translatable="false">
         <item>DUCK_DUCK_GO</item>
         <item>GOOGLE</item>

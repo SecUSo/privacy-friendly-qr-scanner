@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <SwitchPreference
-            android:defaultValue="true"
-            android:key="bool_history"
-            android:summary="@string/pref_description_enable_history"
-            android:title="@string/pref_title_enable_history" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="bool_history"
+        android:summary="@string/pref_description_enable_history"
+        android:title="@string/pref_title_enable_history" />
 
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="pref_save_real_image_to_history"
-            android:summary="@string/pref_save_real_image_to_history_summary"
-            android:title="@string/pref_save_real_image_to_history_title"/>
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="pref_save_real_image_to_history"
+        android:summary="@string/pref_save_real_image_to_history_summary"
+        android:title="@string/pref_save_real_image_to_history_title" />
 
-        <SwitchPreference
-                android:defaultValue="true"
-                android:key="pref_search_engine_enabled"
-                android:summary="@string/pref_search_engine_enabled_summary"
-                android:title="@string/pref_search_engine_enabled_title"/>
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="pref_search_engine_enabled"
+        android:summary="@string/pref_search_engine_enabled_summary"
+        android:title="@string/pref_search_engine_enabled_title" />
 
-        <ListPreference
-            android:dependency="pref_search_engine_enabled"
-            android:key="pref_search_engine"
-            android:title="@string/pref_search_engine_title"
-            android:summary="%s"
-            android:entries="@array/pref_search_engine_entries"
-            android:entryValues="@array/pref_search_engine_values"
-            android:defaultValue="DUCK_DUCK_GO" />
+    <ListPreference
+        android:defaultValue="@string/pref_search_engine_default"
+        android:dependency="pref_search_engine_enabled"
+        android:entries="@array/pref_search_engine_entries"
+        android:entryValues="@array/pref_search_engine_values"
+        android:key="pref_search_engine"
+        android:summary="%s"
+        android:title="@string/pref_search_engine_title" />
 
-        <SwitchPreference
-            android:defaultValue="false"
-            android:key="pref_enable_beep_on_scan"
-            android:summary="@string/pref_enable_beep_on_scan_summary"
-            android:title="@string/pref_enable_beep_on_scan_title" />
+    <ListPreference
+        android:defaultValue="@string/pref_app_theme_default"
+        android:entries="@array/pref_app_theme_entries"
+        android:entryValues="@array/pref_app_theme_values"
+        android:key="pref_app_theme"
+        android:summary="%s"
+        android:title="@string/pref_app_theme_title" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="pref_enable_beep_on_scan"
+        android:summary="@string/pref_enable_beep_on_scan_summary"
+        android:title="@string/pref_enable_beep_on_scan_title" />
 
 </PreferenceScreen>
