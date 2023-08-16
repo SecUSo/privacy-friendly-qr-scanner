@@ -129,6 +129,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Wachtwoord kopiëren</item>
+        <item>WiFi-netwerk toevoegen</item>
         <item>Niets doen</item>
     </string-array>
     <string-array name="history_array">
@@ -269,6 +270,15 @@
     <string name="select_all">Alles selecteren</string>
     <string name="selected_1">Geselecteerd</string>
     <string name="activity_scanner_permission_needed_explanation">Deze app vereist de cameramachtiging om QR-codes te kunnen scannen.</string>
+
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">Deze WiFi-codering wordt momenteel niet ondersteund: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Codering: %1$s</string>
+    <string name="password_value">Wachtwoord: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">Uw Android-versie ondersteunt deze functie niet.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hallo blanco fragment</string>

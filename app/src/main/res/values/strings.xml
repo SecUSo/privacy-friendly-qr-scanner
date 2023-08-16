@@ -135,6 +135,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Copy Password</item>
+        <item>Add WiFi network</item>
         <item>Do nothing</item>
     </string-array>
     <string-array name="history_array">
@@ -320,6 +321,15 @@
     <string name="generated_code_image_explanation">Note: The code shown here was generated based on the content of the scanned code and may therefore look different. However, the data it contains is the same.</string>
     <string name="image_stored_in_gallery">Image saved to gallery</string>
     <string name="close">Close</string>
+
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">This WiFi encryption is currently not supported: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Encryption: %1$s</string>
+    <string name="password_value">Password: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">Your Android version does not support this feature.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
