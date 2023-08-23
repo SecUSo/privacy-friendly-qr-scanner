@@ -129,6 +129,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Copia Password</item>
+        <item>Aggiungere una rete WiFi</item>
         <item>Non fare niente</item>
     </string-array>
     <string-array name="history_array">
@@ -269,6 +270,15 @@
     <string name="select_all">Seleziona Tutto</string>
     <string name="selected_1">Selezionato</string>
     <string name="activity_scanner_permission_needed_explanation">L\'applicazione richiede il permesso di accedere alla fotocamera per poter scansionare i codici QR.</string>
+
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">Questa crittografia WiFi non è attualmente supportata: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Crittografia: %1$s</string>
+    <string name="password_value">Password: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">La versione di Android in uso non supporta questa funzione.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

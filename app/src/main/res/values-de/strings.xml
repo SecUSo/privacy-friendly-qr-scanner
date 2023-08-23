@@ -147,6 +147,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Passwort kopieren</item>
+        <item>WiFi-Netzwerk hinzufügen</item>
         <item>Nichts tun</item>
     </string-array>
     <string-array name="history_array">
@@ -263,6 +264,15 @@
     <string name="pref_keep_duplicates">Doppelte Einträge speichern</string>
     <string name="pref_keep_duplicates_explanation">Duplikate werden auch in der Historie gespeichert</string>
     <string name="pref_title_beep">Signalton</string>
+
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">Diese WiFi-Verschlüsselung wird derzeit nicht unterstützt: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Verschlüsselung: %1$s</string>
+    <string name="password_value">Passwort: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">Ihre Android-Version unterstützt diese Funktion nicht.</string>
 
     <string name="hello_blank_fragment">Hallo leeres fragment</string>
 
