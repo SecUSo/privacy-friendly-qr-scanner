@@ -280,6 +280,14 @@
     <string name="pref_search_engine_title">Standardsuchmaschine</string>
     <string name="pref_enable_beep_on_scan_title">Bestätigungston</string>
     <string name="pref_enable_beep_on_scan_summary">Beim Scannen einen Ton abspielen</string>
+
+    <string name="pref_app_theme_title">Design</string>
+    <string-array name="pref_app_theme_entries">
+        <item>Hell</item>
+        <item>Dunkel</item>
+        <item>Systemstandard</item>
+    </string-array>
+
     <string name="delete">Löschen</string>
     <string name="dialog_history_delete_message">Möchten Sie diesen Eintrag wirklich löschen?</string>
     <string name="dialog_history_delete_title">Eintrag löschen</string>

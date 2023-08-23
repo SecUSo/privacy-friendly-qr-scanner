@@ -5,10 +5,10 @@ import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import android.util.JsonReader
 import android.util.Log
-import androidx.annotation.NonNull
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppDatabase
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PreferenceKeys
 import org.secuso.privacyfriendlybackup.api.backup.DatabaseUtil.deleteRoomDatabase
 import org.secuso.privacyfriendlybackup.api.backup.DatabaseUtil.deleteTables
 import org.secuso.privacyfriendlybackup.api.backup.DatabaseUtil.readDatabaseContent
@@ -23,7 +23,7 @@ import kotlin.system.exitProcess
 class BackupRestorer : IBackupRestorer {
 
     @Throws(IOException::class)
-    private fun readDatabase(@NonNull reader: JsonReader, @NonNull context: Context) {
+    private fun readDatabase(reader: JsonReader, context: Context) {
         reader.beginObject()
         val n1: String = reader.nextName()
         if (n1 != "version") {
@@ -77,7 +77,7 @@ class BackupRestorer : IBackupRestorer {
     }
 
     @Throws(IOException::class)
-    private fun readPreferences(@NonNull reader: JsonReader, @NonNull context: Context) {
+    private fun readPreferences(reader: JsonReader, context: Context) {
         reader.beginObject()
         val pref: SharedPreferences.Editor = PreferenceManager.getDefaultSharedPreferences(context).edit()
         while (reader.hasNext()) {
@@ -85,7 +85,8 @@ class BackupRestorer : IBackupRestorer {
             when (name) {
                 "bool_history", "pref_save_real_image_to_history", "pref_search_engine_enabled", "pref_enable_beep_on_scan", "image_picker_first_click" -> pref
                     .putBoolean(name, reader.nextBoolean())
-                "pref_search_engine" -> pref.putString(name, reader.nextString())
+
+                PreferenceKeys.SEARCH_ENGINE, PreferenceKeys.APP_THEME -> pref.putString(name, reader.nextString())
                 else -> throw RuntimeException("Unknown preference $name")
             }
         }
@@ -111,6 +112,7 @@ class BackupRestorer : IBackupRestorer {
             reader.endObject()
             exitProcess(0)
         } catch (e: Exception) {
+            e.printStackTrace()
             false
         }
     }
