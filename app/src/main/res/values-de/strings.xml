@@ -345,5 +345,7 @@
     <string name="error_correction_level">Fehlerkorrektur-Level</string>
     <string name="barcode_format">Format</string>
     <string name="code_generation_error">Es konnte kein Code generiert werden.</string>
+    <string name="something_went_wrong">Etwas ist schief gelaufen</string>
+    <string name="save_to_history">In der Historie speichern</string>
 
 </resources>
