@@ -1,5 +1,7 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel;
 
+import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
+
 import android.app.Application;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -19,8 +21,6 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
-
-import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
 
 public class ResultViewModel extends AndroidViewModel {
 
@@ -73,7 +73,7 @@ public class ResultViewModel extends AndroidViewModel {
             mCodeImage = Utils.generateCode(currentBarcodeResult.getText(), currentBarcodeResult.getBarcodeFormat(), null, currentBarcodeResult.getResult().getResultMetadata());
         }
 
-        createHistoryItem();
+        currentHistoryItem = Utils.createHistoryItem(mCodeImage, barcodeResult, mPreferences.getBoolean(PREF_SAVE_REAL_IMAGE_TO_HISTORY, false));
         if (mPreferences.getBoolean("bool_history", true)) {
             this.saveHistoryItem(currentHistoryItem);
         }
@@ -87,38 +87,6 @@ public class ResultViewModel extends AndroidViewModel {
 
     public void updateHistoryItem(HistoryItem item) {
         AppRepository.getInstance(getApplication()).updateHistoryEntry(item);
-    }
-
-    private void createHistoryItem() {
-        currentHistoryItem = new HistoryItem();
-
-        Bitmap image;
-        boolean prefSaveRealImage = mPreferences.getBoolean(PREF_SAVE_REAL_IMAGE_TO_HISTORY, false);
-        if (prefSaveRealImage) {
-            float height;
-            float width;
-            if (mCodeImage.getWidth() == 0 || mCodeImage.getWidth() == 0) {
-                height = 200f;
-                width = 200f;
-            } else if (mCodeImage.getWidth() > mCodeImage.getHeight()) {
-                height = (float) mCodeImage.getHeight() / (float) mCodeImage.getWidth() * 200f;
-                width = 200f;
-            } else {
-                width = (float) mCodeImage.getWidth() / (float) mCodeImage.getHeight() * 200f;
-                height = 200f;
-            }
-            image = Bitmap.createScaledBitmap(mCodeImage, (int) width, (int) height, false);
-        } else {
-            image = Utils.generateCode(currentBarcodeResult.getText(), currentBarcodeResult.getBarcodeFormat(), null, currentBarcodeResult.getResult().getResultMetadata());
-        }
-        currentHistoryItem.setImage(image);
-
-        currentHistoryItem.setFormat(currentBarcodeResult.getResult().getBarcodeFormat());
-        currentHistoryItem.setNumBits(currentBarcodeResult.getResult().getNumBits());
-        currentHistoryItem.setRawBytes(currentBarcodeResult.getResult().getRawBytes());
-        currentHistoryItem.setResultPoints(currentBarcodeResult.getResult().getResultPoints());
-        currentHistoryItem.setText(currentBarcodeResult.getResult().getText());
-        currentHistoryItem.setTimestamp(currentBarcodeResult.getResult().getTimestamp());
     }
 
     /**
