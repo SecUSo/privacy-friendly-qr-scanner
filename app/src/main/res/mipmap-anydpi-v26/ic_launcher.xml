@@ -3,6 +3,10 @@
     <background android:drawable="@color/ic_launcher_background"/>
     <foreground>
         <inset android:drawable="@drawable/ic_launcher_foreground"
-            android:inset="20%"/>
+            android:inset="22%"/>
     </foreground>
+    <monochrome>
+        <inset android:drawable="@drawable/ic_launcher_monochrome"
+            android:inset="22%"/>
+    </monochrome>
 </adaptive-icon>
