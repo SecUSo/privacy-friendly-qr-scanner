@@ -13,6 +13,8 @@ import com.google.zxing.ResultMetadataType;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.journeyapps.barcodescanner.BarcodeResult;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -89,5 +91,38 @@ public class Utils {
         } catch (WriterException e) {
             return null;
         }
+    }
+
+    public static HistoryItem createHistoryItem(Bitmap mCodeImage, BarcodeResult currentBarcodeResult, boolean prefSaveRealImage) {
+        HistoryItem currentHistoryItem = new HistoryItem();
+
+        Bitmap image;
+        if (prefSaveRealImage) {
+            float height;
+            float width;
+            if (mCodeImage.getWidth() == 0 || mCodeImage.getWidth() == 0) {
+                height = 200f;
+                width = 200f;
+            } else if (mCodeImage.getWidth() > mCodeImage.getHeight()) {
+                height = (float) mCodeImage.getHeight() / (float) mCodeImage.getWidth() * 200f;
+                width = 200f;
+            } else {
+                width = (float) mCodeImage.getWidth() / (float) mCodeImage.getHeight() * 200f;
+                height = 200f;
+            }
+            image = Bitmap.createScaledBitmap(mCodeImage, (int) width, (int) height, false);
+        } else {
+            image = Utils.generateCode(currentBarcodeResult.getText(), currentBarcodeResult.getBarcodeFormat(), null, currentBarcodeResult.getResult().getResultMetadata());
+        }
+        currentHistoryItem.setImage(image);
+
+        currentHistoryItem.setFormat(currentBarcodeResult.getResult().getBarcodeFormat());
+        currentHistoryItem.setNumBits(currentBarcodeResult.getResult().getNumBits());
+        currentHistoryItem.setRawBytes(currentBarcodeResult.getResult().getRawBytes());
+        currentHistoryItem.setResultPoints(currentBarcodeResult.getResult().getResultPoints());
+        currentHistoryItem.setText(currentBarcodeResult.getResult().getText());
+        currentHistoryItem.setTimestamp(currentBarcodeResult.getResult().getTimestamp());
+
+        return currentHistoryItem;
     }
 }
