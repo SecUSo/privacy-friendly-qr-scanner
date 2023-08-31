@@ -267,8 +267,6 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         barcodeFormatAdapter = newBarcodeFormatAdapter();
         barcodeFormatMenu.setAdapter(barcodeFormatAdapter);
 
-        errorCorrectionAdapter = newErrorCorrectionAdapter(currentErrorCorrections);
-        errorCorrectionMenu.setAdapter(errorCorrectionAdapter);
         updateDropDownMenus();
         generateAndUpdateImage();
     }
