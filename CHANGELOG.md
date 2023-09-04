@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="v4.3.1"></a>
+## [QR Scanner (Privacy Friendly) v4.3.1](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.3.1) - 04 Sep 2023
+
+## What's Changed
+* Add permission check to QRCodeImageDialogFragment by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/178
+* Fix NPE in some cases by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/179
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.0...v4.3.1
+
+[Changes][v4.3.1]
+
+
 <a name="v4.3.0"></a>
 ## [QR Scanner (Privacy Friendly) v4.3.0](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.3.0) - 30 Aug 2023
 
@@ -213,6 +225,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.3.1]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.0...v4.3.1
 [v4.3.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.2.0...v4.3.0
 [v4.2.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.1.0...v4.2.0
 [v4.1.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.0.1...v4.1.0
