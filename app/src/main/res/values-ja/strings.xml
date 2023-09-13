@@ -38,15 +38,13 @@
 
     <!--###ABOUT###-->
     <string name="about_author">作者: </string>
-    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
     <string name="about_author_string">%s、そして協力の方々</string>
     <string name="about_affiliation">所属</string>
-    <string name="privacy_friendly">このアプリは PRIVACY FRIENDLY Apps グループの所属です。開発はダルムシュタット工科大学。ソースコードのライセンスは GPLv3。画像の著作権は TU Darmstadt と Google Inc 所有です。</string>
+    <string name="privacy_friendly">このアプリは PRIVACY FRIENDLY Apps グループの所属です。開発はダルムシュタット工科大学。ソースコードのライセンスは GPLv3。画像の著作権は Karlsruhe Institute of Technology と Google Inc 所有です。</string>
     <string name="more_info">詳しい情報は:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github レポジトリ</a></string>
-    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSOのウェブサイト</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github レポジトリ</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSOのウェブサイト</a></string>
     <string name="about_libraries">使用ライブラリ:</string>
-    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
     <string name="version_number">バージョン v%s</string>
     <string name="delete_items">削除された項目</string>
@@ -132,6 +130,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>パスワードをコピー</item>
+        <item>WiFiネットワークを追加する</item>
         <item>やめる</item>
     </string-array>
     <string-array name="history_array">
@@ -147,11 +146,9 @@
         <item>位置情報</item>
         <item>MeCard</item>
         <item>BizCard</item>
-        <item>MMS</item>
         <item>Wifi</item>
         <item>VCard</item>
         <item>Market</item>
-
     </string-array>
     <string name="copied_to_clipboard">クリップボードにコピーしました。</string>
     <string name="noname">名前が空欄です</string>
@@ -263,15 +260,8 @@
 
     <!--Settings for Default Search Engine-->
     <string name="pref_search_engine_title">使用する検索エンジン</string>
-    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
-        "https://duckduckgo.com/?q=%s"
-    </string>
-    <string name="pref_search_engine_uri_google" translatable="false">
-        "https://www.google.com/search?q=%s"
-    </string>
     <string name="pref_enable_beep_on_scan_title">検知音を鳴らす</string>
-    <string name="pref_enable_beep_on_scan_summary"></string>
-    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR コード</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR コード</string>
     <string name="delete">削除</string>
     <string name="dialog_history_delete_message">削除しますか?</string>
     <string name="dialog_history_delete_title">削除</string>
@@ -288,10 +278,8 @@
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>
-    </string-array>
-    <string-array name="pref_search_engine_values">
-        <item>DUCK_DUCK_GO</item>
-        <item>GOOGLE</item>
+        <item>Startpage</item>
+        <item>Brave</item>
     </string-array>
 
 </resources>
