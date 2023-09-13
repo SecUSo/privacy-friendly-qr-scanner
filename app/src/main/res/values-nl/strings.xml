@@ -352,7 +352,9 @@
     <string name="error_correction_level">Foutcorrectieniveau</string>
     <string name="barcode_format">Formaat</string>
     <string name="code_generation_error">Er kon geen code worden gegenereerd.</string>
-    <string name="something_went_wrong">Er ging iets mis</string>
+    <string name="something_went_wrong">Er ging iets mis.</string>
     <string name="save_to_history">Opslaan in geschiedenis</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
 
 </resources>

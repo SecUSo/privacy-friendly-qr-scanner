@@ -43,8 +43,8 @@
     <string name="about_affiliation">In affiliation with</string>
     <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by SECUSO. Sourcecode licensed under GPLv3. Images copyright Karlsruhe Institute of Technology and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">Used libraries:</string>
     <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
@@ -180,7 +180,7 @@
         <item>Vehicle Identification Number (VIN)</item>
     </string-array>
 
-    <string name="something_went_wrong">Something went wrong</string>
+    <string name="something_went_wrong">Something went wrong.</string>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>
 

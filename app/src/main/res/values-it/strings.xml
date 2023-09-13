@@ -352,8 +352,10 @@
     <string name="error_correction_level">Livello di correzione degli errori</string>
     <string name="barcode_format">Formato</string>
     <string name="code_generation_error">Non è stato possibile generare alcun codice.</string>
-    <string name="something_went_wrong">Qualcosa è andato storto</string>
+    <string name="something_went_wrong">Qualcosa è andato storto.</string>
     <string name="save_to_history">Salva nella cronologia</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
 
 
 </resources>
