@@ -1,0 +1,286 @@
+<resources>
+    <string name="app_name">QR Scanner</string>
+
+    <string name="navigation_drawer_open">Abrir cadro de navegación</string>
+    <string name="navigation_drawer_close">Pechar cadro de navegación</string>
+    <string name="qr_scanner">QR Scanner</string>
+    <string name="qr_generator">QR Generator</string>
+    <string name="history">Historial</string>
+    <string name="settings">Axustes</string>
+    <string name="help">Axuda</string>
+    <string name="about">Acerca de</string>
+    <string name="title_activity_qrscanner">QR Scanner</string>
+
+    <string name="action_settings">Axustes</string>
+    <string name="title_activity_qr_scanner">QR Scanner</string>
+    <string name="title_activity_qr_generator">QR Generator</string>
+    <string name="title_activity_history">Historial</string>
+    <string name="title_activity_settings">Axustes</string>
+    <string name="title_activity_help">Axuda</string>
+    <string name="title_activity_about">Acerca de</string>
+    <string name="Settings">Axustes</string>
+    <string name="QRScanner">QR Scanner</string>
+    <string name="QRGenerator">QR Generator</string>
+    <string name="History">Historial</string>
+
+    <string name="slide1_heading">Benvida!</string>
+    <string name="slide1_text">Benvida ao QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
+    <string name="slide2_heading">que hai ahí?</string>
+    <string name="text_slide2">Podes escanear un código QR con QR Scanner ou crear un códgio QR con QR Generator.</string>
+    <string name="slide3_heading">Máis características</string>
+    <string name="text_slide3">O código QR code escaneado pódese gardar no historial. Incluso podes compartilo ou copialo.</string>
+    <string name="wecome">saúdo</string>
+    <string name="skip">Omitir</string>
+    <string name="next">Seguinte</string>
+    <string name="help_">Axuda</string>
+
+    <string name="tutorial">Titorial</string>
+
+    <!--###ABOUT###-->
+    <string name="about_author">Autoría: </string>
+    <string name="about_author_string">%s e colaboradoras.</string>
+    <string name="about_affiliation">En asociación con</string>
+    <string name="privacy_friendly">Esta aplicación pertence ao grupo PRIVACY FRIENDLY Apps desenvoltas pola SECUSO. Código fonte baixo licenza GPLv3. Copyright das imaxes Karlsruhe Institute of Technology e Google Inc.</string>
+    <string name="more_info">Tes máis información en:</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="about_libraries">Bibliotecas utilizadas:</string>
+    <string name="app_name_long">Privacy Friendly QR Scanner</string>
+    <string name="version_number">Versión v%s</string>
+    <string name="delete_items">Eliminar elementos</string>
+
+    <string name="scan_text">Sitúa esta ventá sobre o código que queres descifrar.</string>
+    <string name="action_clear">Baleirar historial</string>
+    <string name="cannot_clear">O historial xa está baleiro</string>
+    <string name="knowRisks">Comprobei a ligazón e quero visitar o sitio web.</string>
+    <string name="domain">Dominio</string>
+    <string name="urlExplanation">Os códigos QR poden conter ligazóns que poden ser enganosas e comprometer a túa información persoal (webs de phishing) ou instalar malware (ex. virus) no teu dispositivo.\n\nPor isto deberías <b>comprobar</b> se a seguinte ligazón é a que agardabas:</string>
+    <string name="further_info">Mira esta <a href="https://www.secuso.informatik.tu-darmstadt.de/de/research/results/nophish-flyer-deutsch/unterstuetzung-bei-der-erkennung-von-phishing-angriffen/">información</a> sobre cómo comprobar as ligazóns grazas aos colegas da TU Darmstadt. Se non confías na ligazón, preme en non confiar e non a gardes.</string>
+    <string name="delete_history">Queres eliminar o historial?</string>
+    <string name="ok">Si</string>
+    <string name="element_removed">Elemento eliminado.</string>
+    <string name="conform_url">Confirma que comprobaches a ligazón.</string>
+    <string name="wifi_explanation">Esta versión da app non pode conectarse a redes WiFi automáticamente debido aos permisos que necesitaría. Embaixo tes máis detalles sobre a rede.</string>
+    <string name="encryption">Cifrado</string>
+    <string name="action_about">Acerca de</string>
+    <string name="history_disabled">Historial desactivado</string>
+    <string name="to">Correspondente:</string>
+    <string name="subject">Asunto:</string>
+
+    <string name="usability_hint2">Se non podes escanear o código, aumenta a distancia entre o escáner e o código.</string>
+
+    <string name="description_contact">O código QR que escaneaches ten información de contacto. Para poder <i>importala</i> á túa libreta de enderezos, preme en Proceder.</string>
+    <string name="description_email">O código QR que escaneaches é un enderzo de email. Para poder <i>enviar un email</i> ou <i>engadirllo a un contacto</i>, preme en Proceder.</string>
+    <string name="description_send_email">O código QR que escaneaches contén un email completo. Para <i>envialo</i> tal como está ou <i>engadirllo a un contacto</i>, preme en Proceder.</string>
+    <string name="description_product">O código escaneado contén un código de produto. Para facer una <i>busca na web</i> de información do produto, preme en Proceder.</string>
+    <string name="description_tel">O código QR que escaneaches contén un número de teléfono. Para <i>iniciar unha chamada</i> ou <i>engadirllo a un contacto</i>, simplemente preme en Proceder.</string>
+    <string name="description_sms">O código QR que escaneaches contén un SMS. Para <i>enviar</i> o SMS ou <i>engadir o número a un contacto</i>, preme en Proceder.</string>
+    <string name="description_text">O código QR que escaneaches contén texto plano. Para <i>buscar na web</i> a información, preme en Proceder.</string>
+
+    <string name="choose_action">Proceder</string>
+    <string name="abort_action">Abortar </string>
+
+    <string name="proceed">Proceder</string>
+    <string name="back">Atrás</string>
+
+    <string name="choose_action_url">Proceder</string>
+    <string name="abort_action_url">Abortar</string>
+
+    <string-array name="text_array">
+        <item>Buscar na Web</item>
+        <item>Non facer nada</item>
+    </string-array>
+    <string-array name="email_array">
+        <item>Enviar Email</item>
+        <item>Engadir a contactos</item>
+    </string-array>
+    <string-array name="vcard_array">
+        <item>Engadir a contactos</item>
+        <item>Non facer nada</item>
+    </string-array>
+    <string-array name="send_email_array">
+        <item>Enviar Email</item>
+        <item>Engadir a contactos</item>
+    </string-array>
+    <string-array name="sms_array">
+        <item>Enviar SMS</item>
+        <item>Chamar ao número</item>
+        <item>Engadir a contactos</item>
+    </string-array>
+    <string-array name="mms_array">
+        <item>Enviar MMS</item>
+        <item>Chamar ao número</item>
+        <item>Engadir a contactos</item>
+    </string-array>
+    <string-array name="tel_array">
+        <item>Chamar ao número</item>
+        <item>Engadir a contactos</item>
+    </string-array>
+    <string-array name="geo_array">
+        <item>Abrir App de mapas</item>
+        <item>Non facer nada</item>
+    </string-array>
+    <string-array name="url_array">
+        <item>Visitar URL</item>
+        <item>Non facer nada</item>
+    </string-array>
+    <string-array name="product_array">
+        <item>Buscar na Web</item>
+        <item>Non facer nada</item>
+    </string-array>
+    <string-array name="wifi_array">
+        <item>Copiar contrasinal</item>
+        <item>Engadir rede WiFi</item>
+        <item>Non facer nada</item>
+    </string-array>
+    <string-array name="history_array">
+        <item>Copiar ao portapapeis</item>
+        <item>Eliminar entrada</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>Texto</item>
+        <item>Email</item>
+        <item>URL</item>
+        <item>Número de teléfono</item>
+        <item>SMS</item>
+        <item>Localización Xeo</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>Wifi</item>
+        <item>VCard</item>
+        <item>Market</item>
+    </string-array>
+    <string name="copied_to_clipboard">Copiado ao portapapeis.</string>
+    <string name="noname">Sen nome establecido</string>
+
+    <string name="title_activity_result_url">Ligazón atopada</string>
+    <string name="title_activity_result_text">Texto atopado</string>
+    <string name="title_activity_result_sms">SMS atopado</string>
+    <string name="title_activity_result_email">Enderezo de email atopado</string>
+    <string name="title_activity_result_send_email">Email atopado</string>
+    <string name="title_activity_result_product">Produto atopado</string>
+    <string name="title_activity_result_tel">Número de teléfono atopado</string>
+    <string name="title_activity_result_wifi">Wifi atopado</string>
+    <string name="title_activity_result_contact">Contacto atopado</string>
+    <string name="action_help">Axuda</string>
+
+    <!-- ### WELCOME DIALOG ### -->
+    <string name="welcome_text">QR Code Scanner é unha App que RESPECTA A TÚA PRIVACIDADE e permíteche escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
+    <string name="welcome">Benvida</string>
+    <string name="viewhelp">Ver Axuda</string>
+
+    <!--<string name="help_privacy_heading">Privacy Info</string>
+    <string name="about_author_contributors">Contributors</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="more_info">More information can be found on:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
+    <string name="help_permission1_description">A app requiere o acceso á cámara, pois é preciso para escanear os códigos de barras e QR.</string>
+    <string name="help_permission1_heading">Cámara</string>
+    <string name="help_privacy_heading">Que permisos precisa QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
+    <string name="help_category_example">Non funciona o escáner, que podo facer?</string>
+    <string name="help_overview_heading">Que é QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
+    <string name="help_intro">Con QR Scanner RESPETUOSO DA PRIVACIDADE podes escanear códigos de barras e QR con diferentes contidos.</string>
+    <string name="help_whatis_answer">Con QR Scanner RESPETUOSO DA PRIVACIDADE podes escanear/crear códigos de barras e QR con varios contidos. Tamén che permite copiar/compartir o código QR con outras aplicacións, e ademáis podes gardar o código QR creado na galería e compartilo tamén alí.</string>
+
+
+    <!--###HELP###-->
+
+
+    <string name="help_whatis">Qué é QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
+
+    <string name="help_usability">O escáner non funciona, que podo facer?</string>
+    <string name="help_usability_answer">Se non podes escanear un código, aumenta a distancia entre a cámara e o código.</string>
+    <string name="help_privacy">De que xeito é respetuosa coa privacidade?</string>
+    <string name="help_privacy_answer">Unha App xenérica Respetuosa da Privacidade non require ningún permiso. Tampouco incluiría ningún mecanismo de rastrexo e/ou publicidade.</string>
+    <string name="help_permission">Que permisos require QR Scanner RESPECTUOSA da PRIVACIDADE?</string>
+    <string name="help_permission_answer">A App require o acceso á cámara, que se utiliza para escanear códigos de barras e QR.</string>
+    <!-- Strings related to SettingsActivity -->
+
+    <!-- Example General settings -->
+    <string name="pref_title_enable_history">Activar historial</string>
+    <string name="pref_description_enable_history">Os escaneos recentes quedan rexistrados para telos a man</string>
+    <string name="pref_keep_duplicates">Manter duplicados</string>
+    <string name="pref_keep_duplicates_explanation">Os duplicados gárdanse no historial</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_title_beep">Sinal de aviso</string>
+    <string name="description_Mms">O código QR que escaneaches contén un MMS.</string>
+    <string name="geoInfo">O código QR que escaneaches contén información xeográfica.</string>
+    <string name="content_copied">Contido copiado</string>
+    <string name="share_via">Compartir via</string>
+    <string name="no_content_in_history">Non hai contidos no historial!</string>
+    <string name="selected_item">elemento seleccionado</string>
+    <string name="selected_items">elementos seleccionados</string>
+    <string name="removed_item">elemento eliminado</string>
+    <string name="removed_items">elementos eliminados</string>
+    <string name="canncelled_scan">Cancelaches o escaneo</string>
+    <string name="Scan_qr">Escanear</string>
+    <string name="okay">OK</string>
+    <string name="Store_in_gallery">Gardar</string>
+    <string name="phone_number">Número de teléfono</string>
+
+    <!-- Generator activities -->
+    <string name="text_enter">O texto que queres codificar</string>
+    <string name="hello_world">Ola Mundo!</string>
+    <string name="generate">crear</string>
+
+    <string name="sms_text">Texto SMS</string>
+    <string name="mms">MMS</string>
+    <string name="network_name">Nome da Rede</string>
+    <string name="password">Contrasinal</string>
+    <string name="company">Empresa</string>
+    <string name="lastname">Apelido</string>
+    <string name="title">Título</string>
+    <string name="city">Cidade</string>
+    <string name="street_number">Número na rúa</string>
+    <string name="postal_address">Enderzo Postal</string>
+    <string name="e_mail_address">Enderezos de email</string>
+    <string name="firstname">Nome</string>
+    <string name="street_name_and_number">Nome da rúa e número</string>
+    <string name="delete_content">Tes a certeza de querer borrar o contido?</string>
+    <string name="delete_all">Eliminar todo o contido</string>
+    <string name="yes">Si</string>
+    <string name="no">Non</string>
+    <string name="D_all">Eliminar tódolos rexistro(s)</string>
+    <string name="all_records">Queres eliminar tódolos rexistro(s)?</string>
+    <string name="Del">Queres eliminar o(s) rexistro(s) elexido(s)?</string>
+    <string name="confirmation">Confirmación</string>
+    <string name="selected">Elexido</string>
+    <string name="code_stored">Código QR gardado na galería</string>
+    <string name="Ofeatures">Outras ferramentas</string>
+    <string name="OfeaturesAnswer">Podes copiar/compartir o código QR escaneado con outras aplicacións, ademáis podes gardar o código QR creado na galería e compartilo alí tamén.</string>
+    <string name="Content_copied">Contido copiado</string>
+    <string name="Share_via">Compartir vía</string>
+    <string name="select_all">Elexir todo</string>
+    <string name="selected_1">Elexido</string>
+    <string name="activity_scanner_permission_needed_explanation">A App precisa permiso á cámara para escanear códigos QR.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Ola fragmento en branco</string>
+
+    <!--Settings for Default Search Engine-->
+    <string name="pref_search_engine_title">Motor de busca por defecto</string>
+    <string name="pref_enable_beep_on_scan_title">Beep ao escanear</string>
+    <string name="pref_enable_beep_on_scan_summary">Reproduce un ton de confirmación ao escanear</string>
+    <string name="activity_history_list_item_qr_image_descriptor">Código QR</string>
+    <string name="delete">eliminar</string>
+    <string name="dialog_history_delete_message">Realmente desexas eliminar esta entrada?</string>
+    <string name="dialog_history_delete_title">Eliminar entrada</string>
+    <string name="pref_save_real_image_to_history_title">Gardar o código real</string>
+    <string name="pref_save_real_image_to_history_summary">Garda unha imaxe real do código no lugar da súa recreación</string>
+    <string name="item_result_email_to">Para:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="item_result_email_bcc">BCC:</string>
+    <string name="item_result_email_subject">Asunto:</string>
+    <string name="item_result_email_body">Corpo:</string>
+    <string name="activity_result_toast_saved">Gardado no historial.</string>
+    <string name="fragment_result_product_label">Identificador:</string>
+    <string name="activity_result_toast_error_cant_load">Algo fallou ao cargar o resultado.</string>
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Startpage</item>
+        <item>Brave</item>
+    </string-array>
+
+</resources>
