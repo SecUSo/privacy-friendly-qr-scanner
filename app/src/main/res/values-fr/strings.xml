@@ -38,15 +38,11 @@
 
     <!--###ABOUT###-->
     <string name="about_author">Auteurs: </string>
-    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack, Tobias Länge</string>
     <string name="about_author_string">%s et des contributeurs.</string>
     <string name="about_affiliation">En affiliation avec</string>
     <string name="privacy_friendly">Cette application appartient au groupe des applications respectueuses de la vie privée développées par SECUSO. Code source sous licence GPLv3. Images copyright Karlsruhe Institute of Technology et Google Inc.</string>
     <string name="more_info">Plus d\'informations sont disponibles sur:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">Bibliothèques utilisées :</string>
-    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="app_name_long">Scanner de codes QR respectueux de la vie privée</string>
     <string name="version_number">Version v%s</string>
     <string name="delete_items">Supprimer les éléments</string>
@@ -253,8 +249,6 @@
 
     <string name="generator_text_textfield">Texte</string>
     <string name="generator_text_explanation">Vous pouvez saisir n\'importe quel texte que vous souhaitez encoder. Les lignes multiples sont autorisées.</string>
-    <string name="URL" translatable="false">URL</string>
-    <string name="generator_example_url" translatable="false">https://example.com</string>
     <string name="generator_url_explanation">Vous pouvez entrer une adresse Web. Par exemple:</string>
 
     <string name="message">Message</string>
@@ -268,7 +262,6 @@
     <string name="country">Pays</string>
 
     <string name="generator_package_name">Nom du package</string>
-    <string name="generator_example_package" translatable="false">org.example.foo</string>
     <string name="generator_market_explanation">Ici, vous pouvez entrer le nom du package de l\'application. Par exemple:</string>
     <string name="generator_market_explanation_2">Le code QR généré pointe ensuite vers l\'application correspondante sur Google Play.</string>
 
@@ -322,7 +315,7 @@
     <string name="pref_search_engine_title">Moteur de recherche par défaut</string>
     <string name="pref_enable_beep_on_scan_title">Bip sur scan</string>
     <string name="pref_enable_beep_on_scan_summary">Joue une tonalité de confirmation lors de la numérisation</string>
-    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">Code QR</string>
+    <string name="activity_history_list_item_qr_image_descriptor">Code QR</string>
     <string name="delete">supprimer</string>
     <string name="dialog_history_delete_message">Voulez-vous vraiment supprimer cette entrée ? </string>
     <string name="dialog_history_delete_title">Supprimer l\'entrée</string>
@@ -337,7 +330,6 @@
     <string name="fragment_result_product_label">Identifiant:</string>
     <string name="activity_result_toast_error_cant_load">Un problème est survenu lors du chargement du résultat.</string>
     <string name="activity_enter_toast_missing_data">Pas de données</string>
-    <string name="activity_result_type_uri" translatable="false">URL</string>
 
     <string name="activity_scanner_flashlight_on">Flashlight On</string>
     <string name="activity_scanner_flashlight_off">Flashlight Off</string>
@@ -355,18 +347,6 @@
         <item>Google</item>
         <item>Startpage</item>
         <item>Brave</item>
-    </string-array>
-    <string-array name="pref_search_engine_values" translatable="false">
-        <item>DUCK_DUCK_GO</item>
-        <item>GOOGLE</item>
-        <item>STARTPAGE</item>
-        <item>BRAVE</item>
-    </string-array>
-    <string-array name="pref_search_engine_uris" translatable="false">
-        <item>"https://duckduckgo.com/?q=%s"</item>
-        <item>"https://www.google.com/search?q=%s"</item>
-        <item>"https://www.startpage.com/search?query=%s"</item>
-        <item>"https://search.brave.com/search?q=%s"</item>
     </string-array>
 
 </resources>
