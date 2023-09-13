@@ -38,15 +38,13 @@
 
     <!--###ABOUT###-->
     <string name="about_author">Geliştiriciler: </string>
-    <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack</string>
     <string name="about_author_string">%s ve katkıda bulunanlar.</string>
     <string name="about_affiliation">ile bağlantılı olarak</string>
     <string name="privacy_friendly">Bu uygulama SECUSO tarafından geliştirilen Gizlilik Dostu Uygulamalar grubuna aittir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı Karlsruhe Teknoloji Enstitüsü ve Google Inc\'e aittir.</string>
     <string name="more_info">Daha fazla bilgi için:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">Kullanılan kütüphaneler:</string>
-    <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="app_name_long">Gizlilik Dostu Karekod Tarayıcı</string>
     <string name="version_number">Sürüm v%s</string>
     <string name="delete_items">Öğeleri sil</string>
@@ -131,6 +129,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Parolayı kopyala</item>
+        <item>Wifi ağı ekle</item>
         <item>Hiçbir şey yapma</item>
     </string-array>
     <string-array name="history_array">
@@ -252,8 +251,6 @@
     <string name="generator_text_textfield">Metin</string>
     <string name="generator_text_explanation">Kodlamak istediğiniz herhangi bir metni girebilirsiniz. Birden fazla satıra izin verilir.</string>
 
-    <string name="URL" translatable="false">URL</string>
-    <string name="generator_example_url" translatable="false">https://example.com</string>
     <string name="generator_url_explanation">Bir web adresi girebilirsiniz. Örn.</string>
 
     <string name="message">Mesaj</string>
@@ -267,9 +264,8 @@
     <string name="country">Ülke</string>
 
     <string name="generator_package_name">Paket adı</string>
-    <string name="generator_example_package" translatable="false">org.example.foo</string>
     <string name="generator_market_explanation">Burada uygulamanın paket adını girebilirsiniz. Örn.</string>
-    <string name="generator_market_explanation_2">Oluşturulan karekod daha sonra Google Play'deki ilgili uygulamaya işaret eder.</string>
+    <string name="generator_market_explanation_2">Oluşturulan karekod daha sonra Google Play\'deki ilgili uygulamaya işaret eder.</string>
 
     <string name="import_from_contacts">Kişilerden içe aktar</string>
     <string name="sms_text">SMS metni</string>
@@ -306,7 +302,7 @@
 
     <string name="select_image_from_gallery_explanation">Bu fonksiyon galerinizdeki resimleri açmanızı ve içindeki kodları taramanızı sağlar. Bunun için resimlere erişim gerekir.</string>
     <string name="select_image_from_gallery">Galeriden resim seç</string>
-    <string name="image_is_being_processed">Resim işleniyor...</string>
+    <string name="image_is_being_processed">Resim işleniyor…</string>
     <string name="no_code_in_image_explanation">Ne yazık ki bu görüntüde herhangi bir kod bulunamadı. Sonucu iyileştirmek için görüntüyü kırpabilir ya da düzeltebilir ve tekrar deneyebilirsiniz.</string>
 
     <string name="raw_data">Ham veri</string>
@@ -319,15 +315,9 @@
 
     <!--Settings for Default Search Engine-->
     <string name="pref_search_engine_title">Varsayılan Arama Motoru</string>
-    <string name="pref_search_engine_uri_duckduckgo" translatable="false">
-        "https://duckduckgo.com/?q=%s"
-    </string>
-    <string name="pref_search_engine_uri_google" translatable="false">
-        "https://www.google.com/search?q=%s"
-    </string>
     <string name="pref_enable_beep_on_scan_title">Tarama esnasında bip sesi</string>
     <string name="pref_enable_beep_on_scan_summary">Tarama sırasında bir onay sesi çalar</string>
-    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
     <string name="delete">sil</string>
     <string name="dialog_history_delete_message">Bu girdiyi gerçekten silmek istiyor musunuz?</string>
     <string name="dialog_history_delete_title">Girdiyi Sil</string>
@@ -342,7 +332,6 @@
     <string name="fragment_result_product_label">Tanımlayıcı:</string>
     <string name="activity_result_toast_error_cant_load">Sonuç yüklenirken bir şeyler yanlış gitti.</string>
     <string name="activity_enter_toast_missing_data">No data</string>
-    <string name="activity_result_type_uri" translatable="false">URL</string>
 
     <string name="activity_scanner_flashlight_on">El Feneri Açık</string>
     <string name="activity_scanner_flashlight_off">El Feneri Kapalı</string>
@@ -358,10 +347,8 @@
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>
-    </string-array>
-    <string-array name="pref_search_engine_values">
-        <item>DUCK_DUCK_GO</item>
-        <item>GOOGLE</item>
+        <item>Startpage</item>
+        <item>Brave</item>
     </string-array>
 
 </resources>
