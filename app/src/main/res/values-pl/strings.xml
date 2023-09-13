@@ -221,4 +221,7 @@
     <string name="help_intro">Za pomocą przyjaznego dla prywatności skanera QR możesz skanować kody kreskowe i kody QR o różnej zawartości.</string>
     <string name="help_privacy_heading">Jakie uprawnienia są wymagane przez przyjazny dla prywatności skaner QR\?</string>
     <string name="title_activity_result_send_email">Wykryto e-mail</string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">Strona SECUSO</a></string>
+    <string name="activity_history_list_item_qr_image_descriptor">Kod QR</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repozytorium na GitHubie</a></string>
 </resources>
