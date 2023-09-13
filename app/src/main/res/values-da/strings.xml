@@ -1,0 +1,286 @@
+<resources>
+    <string name="app_name">QR Scanner</string>
+
+    <string name="navigation_drawer_open">Åbn navigering</string>
+    <string name="navigation_drawer_close">Luk navigering</string>
+    <string name="qr_scanner">QR Scanner</string>
+    <string name="qr_generator">QR Generator</string>
+    <string name="history">Historik</string>
+    <string name="settings">Indstillinger</string>
+    <string name="help">Hjælp</string>
+    <string name="about">Omkring</string>
+    <string name="title_activity_qrscanner">QR Scanner</string>
+
+    <string name="action_settings">Indstillinger</string>
+    <string name="title_activity_qr_scanner">QR Scanner</string>
+    <string name="title_activity_qr_generator">QR Generator</string>
+    <string name="title_activity_history">Historik</string>
+    <string name="title_activity_settings">Indstillinger</string>
+    <string name="title_activity_help">Hjælp</string>
+    <string name="title_activity_about">Omkring</string>
+    <string name="Settings">Indstillinger</string>
+    <string name="QRScanner">QR Scanner</string>
+    <string name="QRGenerator">QR Generator</string>
+    <string name="History">Historik</string>
+
+    <string name="slide1_heading">Velkommen!</string>
+    <string name="slide1_text">Velkommen til den privatlisvenlige QR Scanner. Denne vejledning vil dække de mest nødvendige ting, du burde vide.</string>
+    <string name="slide2_heading">Hvad kan den?</string>
+    <string name="text_slide2">Du kan enten scanne en QR-kode ved at bruger QR Scanner, eller generére en QR-kode, ved at bruge QR Generator.</string>
+    <string name="slide3_heading">Flere funktioner</string>
+    <string name="text_slide3">QR-koden du har scannet kan gemmes i Historik. Ydermere, kan du dele den eller kopiére den,</string>
+    <string name="wecome">Velkommen</string>
+    <string name="skip">Spring over</string>
+    <string name="next">Næste</string>
+    <string name="help_">Hjælp</string>
+
+    <string name="tutorial">Vejledning</string>
+
+    <!--###ABOUT###-->
+    <string name="about_author">Forfattere: </string>
+    <string name="about_author_string">%s og bidragsydere.</string>
+    <string name="about_affiliation">I tilknytning med</string>
+    <string name="privacy_friendly">Denne applikation tilhører gruppen af PRIVACY FRIENDLY Apps udviklet af SECUSO. Source kode licenseret under GPLv3. Billeder copyright Karlsruhe Institute of Technology og Google Inc.</string>
+    <string name="more_info">Mere information kan blive fundet på:</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="about_libraries">Brugte biblioteker:</string>
+    <string name="app_name_long">Privacy Friendly QR Scanner</string>
+    <string name="version_number">Version v%s</string>
+    <string name="delete_items">Slet emner</string>
+
+    <string name="scan_text">Placér dette vindue over koden du vil afkode.</string>
+    <string name="action_clear">Ryd historik</string>
+    <string name="cannot_clear">Historikken er allerede tom</string>
+    <string name="knowRisks">Jeg har tjekket linket og vil gerne besøge hjemmesiden.</string>
+    <string name="domain">Domæne</string>
+    <string name="urlExplanation">QR-koder kan indeholde links, der leder til en falsk hjemmeside, der kan stjæle din personlige data (phishing hjemmeside) eller overføre malware (viruser) til din enhed.\n\nSom en konsekvens burde du <b>tjekke</b> om det følgende link er det, du forventede:</string>
+    <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Information</a> omkring hvordan du tjekker links.</string>
+    <string name="delete_history">Vil du slette historikken?</string>
+    <string name="ok">Okay</string>
+    <string name="element_removed">Element fjernet.</string>
+    <string name="conform_url">Bekræft venligst, at du har tjekket linket.</string>
+    <string name="wifi_explanation">Denne version af appen kan ikke forbinde automatisk til Wi-Fi netværker, på grund af den tilladelse, der ville være nødvændig. Nedenfor er nogle detaljer om netværket.</string>
+    <string name="encryption">Kryptering</string>
+    <string name="action_about">Omkring</string>
+    <string name="history_disabled">Historik deaktivéret</string>
+    <string name="to">Modtager:</string>
+    <string name="subject">Emne:</string>
+
+    <string name="usability_hint2">Hvis du ikke kan scanne en kode, skal du øge afstanden mellem scanneren og koden.</string>
+
+    <string name="description_contact">QR-koden du har scannet, indeholder kontaktoplysninger. For at <i>importére</i> dem til din kontaktbog, tryk Fortsæt.</string>
+    <string name="description_email">QR-koden du har scannet, indeholder en e-mail adresse. For at <i>sende en e-mail</i> eller <i>tilføje den til en kontakt</i>, tryk Fortsæt.</string>
+    <string name="description_send_email">QR-koden du har scannet indeholder en udfyldt e-mail. For at <i>sende</i> den eller <i>tilføje adressen som kontakt</i>, tryk Fortsæt.</string>
+    <string name="description_product">QR-koden du har scannet indeholder en produktkode. For at <i>søge på internettet</i> efter produkt information, tryk Fortsæt.</string>
+    <string name="description_tel">QR-koden du har scannet indeholder et telefonnummer. For at <i>ringe op</i> eller <i>tilføje det til en kontakt</i>, tryk Fortsæt.</string>
+    <string name="description_sms">QR-koden du har scannet indeholder en SMS. For at <i>sende</i> SMS\'en eller <i>tilføje nummeret til en kontakt</i>, tryk Fortsæt.</string>
+    <string name="description_text">QR-koden du har scannet indeholder ren tekst. For at <i>søge på internettet</i> efter information, tryk Fortsæt.</string>
+
+    <string name="choose_action">Fortsæt</string>
+    <string name="abort_action">Afbryd</string>
+
+    <string name="proceed">Fortsæt</string>
+    <string name="back">Tilbage</string>
+
+    <string name="choose_action_url">Fortsæt</string>
+    <string name="abort_action_url">Afbryd</string>
+
+    <string-array name="text_array">
+        <item>Søg på internettet</item>
+        <item>Gør ingenting</item>
+    </string-array>
+    <string-array name="email_array">
+        <item>Send e-mail</item>
+        <item>Tilføj til kontakter</item>
+    </string-array>
+    <string-array name="vcard_array">
+        <item>Tilføj til kontakter</item>
+        <item>Gør ingenting</item>
+    </string-array>
+    <string-array name="send_email_array">
+        <item>Send e-mail</item>
+        <item>Tilføj til kontakter</item>
+    </string-array>
+    <string-array name="sms_array">
+        <item>Send SMS</item>
+        <item>Foretag opkald</item>
+        <item>Tilføj til kontakter</item>
+    </string-array>
+    <string-array name="mms_array">
+        <item>Send MMS</item>
+        <item>Foretag opkald</item>
+        <item>Tilføj til kontakter</item>
+    </string-array>
+    <string-array name="tel_array">
+        <item>Foretag opkald</item>
+        <item>Tilføj til kontakter</item>
+    </string-array>
+    <string-array name="geo_array">
+        <item>Åbn kortviser app</item>
+        <item>Gør ingenting</item>
+    </string-array>
+    <string-array name="url_array">
+        <item>Besøg URL</item>
+        <item>Gør ingenting</item>
+    </string-array>
+    <string-array name="product_array">
+        <item>Søg på internettet</item>
+        <item>Gør ingenting</item>
+    </string-array>
+    <string-array name="wifi_array">
+        <item>Kopiér adgangskode</item>
+        <item>Tilføj WiFi-netværk</item>
+        <item>Gør ingenting</item>
+    </string-array>
+    <string-array name="history_array">
+        <item>Kopiér tl udklipsholder</item>
+        <item>Slet entry</item>
+    </string-array>
+    <string-array name="generator_array">
+        <item>Text</item>
+        <item>E-mail</item>
+        <item>URL</item>
+        <item>Telefonnummer</item>
+        <item>SMS</item>
+        <item>Geo lokation</item>
+        <item>MeCard</item>
+        <item>BizCard</item>
+        <item>Wi-Fi</item>
+        <item>VCard</item>
+        <item>Marked</item>
+    </string-array>
+    <string name="copied_to_clipboard">Kopiéret til udklipsholder.</string>
+    <string name="noname">Intet navn angivet</string>
+
+    <string name="title_activity_result_url">Link fundet</string>
+    <string name="title_activity_result_text">Tekst fundet</string>
+    <string name="title_activity_result_sms">SMS fundet</string>
+    <string name="title_activity_result_email">E-mail adresse fundet</string>
+    <string name="title_activity_result_send_email">E-mail fundet</string>
+    <string name="title_activity_result_product">Produkt fundet</string>
+    <string name="title_activity_result_tel">Telefonnummer fundet</string>
+    <string name="title_activity_result_wifi">Wi-Fi fundet</string>
+    <string name="title_activity_result_contact">Kontakt fundet</string>
+    <string name="action_help">Hjælp</string>
+
+    <!-- ### WELCOME DIALOG ### -->
+    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner appen giver mulighed for at scanne stregkoder og QR-koder med forskelligt indhold, samtidig med at der kræves minimal sæt af tilladelser og understøtter identifikation af ondsindede links.</string>
+    <string name="welcome">Velkommen</string>
+    <string name="viewhelp">Se hjælp</string>
+
+    <!--<string name="help_privacy_heading">Privatliv info</string>
+    <string name="about_author_contributors">Bidragsydere</string>
+    <string name="privacy_friendly">Denne applikation tilhører gruppen af PRIVACY FRIENDLY Apps udviklet af Technische Universität Darmstadt. Source kode licenseret under GPLv3. Billeder copyright TU Darmstadt og Google Inc.</string>
+    <string name="more_info">Mere information kan findes på:</string>
+    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
+    <string name="help_permission1_description">Denne app kræver kamera tilladelse, der bruges til at scanne stregkoder og QR-koder via kamera.</string>
+    <string name="help_permission1_heading">Kamera</string>
+    <string name="help_privacy_heading">Hvilke tilladelser er påkrævet af PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_category_example">Scanningen virker ikke, hvad kan jeg gøre?</string>
+    <string name="help_overview_heading">Hvad er PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_intro">Med PRIVACY FRIENDLY QR Scanner kan du scanne stregkoder og QR-koder med forskelligt indhold.</string>
+    <string name="help_whatis_answer">Med PRIVACY FRIENDLY QR Scanner kan du scanne og generére stregkoder og QR-koder med forskelligt indhold.</string>
+
+
+    <!--###HELP###-->
+
+
+    <string name="help_whatis">Hvad er PRIVACY FRIENDLY QR Scanner?</string>
+
+    <string name="help_usability">Scanningen virker ikke, hvad kan jeg gøre?</string>
+    <string name="help_usability_answer">Hvis du ikke kan scanne en kode, skal du øge afstanden mellem scanneren og koden.</string>
+    <string name="help_privacy">Hvad gør appen privatlivsvenlig?</string>
+    <string name="help_privacy_answer">Privacy Friendly App Example kræver ikke nogen tilladelse. Den omfatter endvidere ikke nogen sporingsmekanismer eller reklamer.</string>
+    <string name="help_permission">Hvilke tilladelser er påkrævet af PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_permission_answer">Denne app kræver kamera tilladelse, der bruges til at scanne stregkoder og QR-koder via kamera.</string>
+    <!-- Strings related to SettingsActivity -->
+
+    <!-- Example General settings -->
+    <string name="pref_title_enable_history">Aktivér historik</string>
+    <string name="pref_description_enable_history">Tidligere scanninger er logget for at du kan se dem igen</string>
+    <string name="pref_keep_duplicates">Behold duplikater</string>
+    <string name="pref_keep_duplicates_explanation">Duplikater er gemt i historikken</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_title_beep">Signal tone</string>
+    <string name="description_Mms">QR-koden du scannede indeholder en MMS.</string>
+    <string name="geoInfo">QR-koden du har scannet indeholder geografisk information.</string>
+    <string name="content_copied">Indhold kopiéret</string>
+    <string name="share_via">Del via</string>
+    <string name="no_content_in_history">Der er intet indhold i historikken!</string>
+    <string name="selected_item">emne valgt</string>
+    <string name="selected_items">emner valgt</string>
+    <string name="removed_item">emne fjernet</string>
+    <string name="removed_items">emner fjernet</string>
+    <string name="canncelled_scan">Du annullérede scanningen</string>
+    <string name="Scan_qr">Scan</string>
+    <string name="okay">Okay</string>
+    <string name="Store_in_gallery">Opbevar</string>
+    <string name="phone_number">Telefonnummer</string>
+
+    <!-- Generator activities -->
+    <string name="text_enter">Teksten du gerne vil have kodet ind</string>
+    <string name="hello_world">Hej verden</string>
+    <string name="generate">generér</string>
+
+    <string name="sms_text">SMS tekst</string>
+    <string name="mms">MMS</string>
+    <string name="network_name">Netværksnavn</string>
+    <string name="password">Adgangskode</string>
+    <string name="company">Firma</string>
+    <string name="lastname">Efternavn</string>
+    <string name="title">Titel</string>
+    <string name="city">By</string>
+    <string name="street_number">Gadenummer</string>
+    <string name="postal_address">Postnummer</string>
+    <string name="e_mail_address">E-mail adresse</string>
+    <string name="firstname">Fornavn</string>
+    <string name="street_name_and_number">Gadenavn og nummer</string>
+    <string name="delete_content">Er du sikker på at du vil slette alt indhold?</string>
+    <string name="delete_all">Slet alt indhold</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nej</string>
+    <string name="D_all">Slet alle emner</string>
+    <string name="all_records">Vil du slette alle emner??</string>
+    <string name="Del">Vil du slette de valgte emne(r)?</string>
+    <string name="confirmation">Bekræftelse</string>
+    <string name="selected">Valgt</string>
+    <string name="code_stored">QR-kode opbevaret i galleri</string>
+    <string name="Ofeatures">Andre funktioner</string>
+    <string name="OfeaturesAnswer">Du kan kopiére og dele scannede QR-koder med andre applikatoner, ydermere kan du gemme den generérede QR-kode i galleriet og dele den derfra.</string>
+    <string name="Content_copied">Indhold kopiéret</string>
+    <string name="Share_via">Del via</string>
+    <string name="select_all">Vælg alle</string>
+    <string name="selected_1">Valgt</string>
+    <string name="activity_scanner_permission_needed_explanation">Appen har brug for kameraets tilladelse for at kunne scanne QR-koder.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hej blanke fragment</string>
+
+    <!--Settings for Default Search Engine-->
+    <string name="pref_search_engine_title">Standard søgemaskine</string>
+    <string name="pref_enable_beep_on_scan_title">Bip ved scanning</string>
+    <string name="pref_enable_beep_on_scan_summary">Afspil en bekræftelsestone, når du scanner</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
+    <string name="delete">slet</string>
+    <string name="dialog_history_delete_message">Vil du virkelig slette dette emne?</string>
+    <string name="dialog_history_delete_title">Slet emne</string>
+    <string name="pref_save_real_image_to_history_title">Gem rigtig kode</string>
+    <string name="pref_save_real_image_to_history_summary">Gemmer et rigtigt billede af koden i stedet for en rekonstruering</string>
+    <string name="item_result_email_to">Til:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="item_result_email_bcc">BCC:</string>
+    <string name="item_result_email_subject">Emne:</string>
+    <string name="item_result_email_body">Indhold:</string>
+    <string name="activity_result_toast_saved">Gemt i historik.</string>
+    <string name="fragment_result_product_label">Identifikator:</string>
+    <string name="activity_result_toast_error_cant_load">Noget gik galt, da resultatet skulle indlæses.</string>
+    <string-array name="pref_search_engine_entries">
+        <item>DuckDuckGo</item>
+        <item>Google</item>
+        <item>Startpage</item>
+        <item>Brave</item>
+    </string-array>
+
+</resources>
