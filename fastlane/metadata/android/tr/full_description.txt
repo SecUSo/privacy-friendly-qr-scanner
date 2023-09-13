@@ -1,0 +1,17 @@
+Karekodlar giderek daha önemli hale geliyor. Hatta bazı alanlarda geleneksel barkodun yerini almışlardır. Bir karekod yedi bine kadar karakter depolayabilir ve bu nedenle vCard'lar gibi daha karmaşık içerikler için uygundur. Bu nedenle günümüzde karekodlar neredeyse her reklam afişinde bulunabilmekte ve kullanıcının akıllı telefonuyla taramasını sağlamaktadır. Böylece artık elle yazılmış bir not almaya gerek kalmıyor, sadece karekodu taramak yeterli oluyor. Buna paralel olarak, Google Play Mağazası'nda halihazırda birçok karekod tarayıcı uygulaması mevcut. Darmstadt Teknik Üniversitesi'ndeki SECUSO araştırma grubu tarafından geliştirilen Gizlilik Dostu Uygulamalar grubuna aittir. Daha fazla bilgi secuso.org/pfa adresinde bulunabilir.
+
+Gizlilik Dostu Karekod Tarayıcı uygulamamız iki açıdan farklılık göstermektedir:
+
+1. Gizlilik Dostu Karekod Tarayıcı Uygulaması yalnızca minimum miktarda izin gerektirir:
+Google Play Mağazası'nda bulunan karekod tarayıcı uygulamalarının çoğu, gerekli olanlara ek olarak çeşitli izinlere ihtiyaç duyar: örneğin kişileri veya arama kaydınızı okumak ve internetten veri almak gibi. Bu gereksinimlerin çoğu, aslında sağlamaları gereken işlevsellik için gerekli değildir.
+
+2. Gizlilik Dostu Karekod Tarayıcı Uygulaması, kullanıcılarını kötü amaçlı bağlantıları tespit etmede destekler: Karekodlar, kötü amaçlı bağlantılar, yani kimlik avı web sayfalarına veya kötü amaçlı yazılımların otomatik olarak indirileceği web sayfalarına bağlantılar içerebileceğinden, karekodlar bir saldırgan için yeni olanaklar sağlar. Bu nedenle, ilgili web sayfasına erişmeden önce bağlantıyı dikkatlice kontrol etmek önemlidir. Kullanıcının kötü amaçlı bağlantıları tespit etmesi zor olduğundan, Gizlilik dostu Karekod Tarayıcı Uygulaması etki alanını vurgulayarak kullanıcıyı destekler (örneğin, bu durumda https://www.secuso.org için secuso.org vurgulanır). Bağlantıyı ve özellikle vurgulanan etki alanını dikkatlice kontrol etmemekten kaçınmak için, uygulama olası dolandırıcılık hakkında bilgi sağlar ve kullanıcılarının bağlantıyı kontrol ettiklerini ve güvenilir olduğunu onaylamaları gerekir. URL tabanlı bir karekod tarandıktan sonra gösterilen bilgilerin her URL için özelleştirilmediğini unutmayın. Bu nedenle, kullanıcıya genel olarak nasıl davranacağı hakkında bir tavsiye olarak düşünülmelidir.
+
+Gizlilik Dostu Karekod Tarayıcı Uygulaması, normal karekod türlerinin çoğunu destekler. Barkodlar ve diğer yaygın olarak kullanılan kodlar da desteklenir.
+
+Uygulama, SECUSO araştırma grubu tarafından geliştirilen gizlilik dostu uygulamalar grubuna aittir. Daha fazla bilgi https://secuso.org/pfa adresinde bulunabilir.
+
+Bize ulaşabileceğiniz adresler
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+İş ilanı - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
