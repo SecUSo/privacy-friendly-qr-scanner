@@ -340,7 +340,7 @@
     <string name="pref_search_engine_title">Default Search Engine</string>
     <string name="pref_enable_beep_on_scan_title">Beep on scan</string>
     <string name="pref_enable_beep_on_scan_summary">Play a confirmation tone when scanning</string>
-    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
     <string name="delete">delete</string>
     <string name="dialog_history_delete_message">Do you really want to delete this entry?</string>
     <string name="dialog_history_delete_title">Delete Entry</string>
