@@ -129,6 +129,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Copia Password</item>
+        <item>Aggiungere una rete WiFi</item>
         <item>Non fare niente</item>
     </string-array>
     <string-array name="history_array">
@@ -270,6 +271,15 @@
     <string name="selected_1">Selezionato</string>
     <string name="activity_scanner_permission_needed_explanation">L\'applicazione richiede il permesso di accedere alla fotocamera per poter scansionare i codici QR.</string>
 
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">Questa crittografia WiFi non è attualmente supportata: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Crittografia: %1$s</string>
+    <string name="password_value">Password: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">La versione di Android in uso non supporta questa funzione.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -277,6 +287,14 @@
     <string name="pref_search_engine_title">Motore di ricerca predefinito</string>
     <string name="pref_enable_beep_on_scan_title">Beep durante la scansione</string>
     <string name="pref_enable_beep_on_scan_summary">Riproduci un suono di conferma durante la scansione</string>
+
+    <string name="pref_app_theme_title">Tema</string>
+    <string-array name="pref_app_theme_entries">
+        <item>Chiaro</item>
+        <item>Scuro</item>
+        <item>Sistema predefinito</item>
+    </string-array>
+
     <string name="delete">cancella</string>
     <string name="dialog_history_delete_message">Vuoi veramente cancellare questo elemento?</string>
     <string name="dialog_history_delete_title">Cancella Elemento</string>
@@ -334,6 +352,10 @@
     <string name="error_correction_level">Livello di correzione degli errori</string>
     <string name="barcode_format">Formato</string>
     <string name="code_generation_error">Non è stato possibile generare alcun codice.</string>
+    <string name="something_went_wrong">Qualcosa è andato storto.</string>
+    <string name="save_to_history">Salva nella cronologia</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
 
 
 </resources>

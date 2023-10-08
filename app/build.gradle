@@ -3,21 +3,21 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 32
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
         minSdkVersion 17
-        targetSdkVersion 32
+        targetSdkVersion 33
         multiDexEnabled true
-        versionCode 27
-        versionName "4.2.0"
+        versionCode 29
+        versionName "4.3.1"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildFeatures.dataBinding = true
         vectorDrawables.useSupportLibrary = true
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = ["room.schemaLocation":"$projectDir/schemas".toString()]
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
             }
         }
 
@@ -26,9 +26,10 @@ android {
         }
     }
 
-    applicationVariants.all { variant ->
+    android.applicationVariants.all { variant ->
         variant.outputs.all {
-            outputFileName = "pfa-qr-scanner-${variant.name}-v${variant.versionName}.apk"
+            def appName = "pfa-qr-scanner"
+            outputFileName = appName + "-${variant.name}-v${variant.versionName}.apk"
         }
     }
 
@@ -50,39 +51,53 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.preference:preference-ktx:1.2.1'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.cardview:cardview:1.0.0'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
-    implementation 'com.google.zxing:core:3.4.1'
+    implementation 'com.google.zxing:core:3.4.1' //newer version requires java.nio.charset.StandardCharsets in Encoder.java -> minSdkVersion = 19
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.8'
     implementation "androidx.multidex:multidex:2.0.1"
 
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.9.0'
-    implementation 'androidx.room:room-runtime:2.4.2'
-    kapt 'androidx.room:room-compiler:2.4.2'
-    androidTestImplementation 'androidx.room:room-testing:2.4.2'
+    implementation 'androidx.room:room-runtime:2.5.2'
+    kapt 'androidx.room:room-compiler:2.5.2'
+    androidTestImplementation 'androidx.room:room-testing:2.5.2'
 
-    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'com.google.code.gson:gson:2.9.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.core:core-ktx:1.8.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
+    implementation "androidx.core:core-ktx:1.10.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation project(path: ':backup-api')
-    def work_version = "2.7.1"
+    def work_version = "2.8.1"
     implementation "androidx.work:work-runtime:$work_version"
     implementation "androidx.work:work-runtime-ktx:$work_version"
     androidTestImplementation "androidx.work:work-testing:$work_version"
 }
+
+tasks.withType(Test) {
+    testLogging {
+        events "passed", "skipped", "failed", "standard_out"
+        exceptionFormat "full"
+        afterSuite { desc, result ->
+            if (!desc.parent) {
+                println("\nResult: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} passed, ${result.failedTestCount} failed, ${result.skippedTestCount} skipped)\n")
+            }
+        }
+    }
+}
+
 repositories {
     mavenCentral()
 }

@@ -18,7 +18,7 @@ import kotlin.text.Charsets.UTF_8
 
 
 class BackupCreator : IBackupCreator {
-    override fun writeBackup(context: Context, outputStream: OutputStream) {
+    override fun writeBackup(context: Context, outputStream: OutputStream): Boolean {
         Log.d("PFA BackupCreator", "createBackup() started")
         val outputStreamWriter = OutputStreamWriter(outputStream, UTF_8)
         val writer = JsonWriter(outputStreamWriter)
@@ -60,8 +60,10 @@ class BackupCreator : IBackupCreator {
         } catch (e: Exception) {
             Log.e("PFA BackupCreator", "Error occurred", e)
             e.printStackTrace()
+            return false
         }
 
         Log.d("PFA BackupCreator", "Backup created successfully")
+        return true
     }
 }

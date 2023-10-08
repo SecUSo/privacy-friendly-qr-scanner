@@ -13,6 +13,8 @@ import com.google.zxing.ResultMetadataType;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.journeyapps.barcodescanner.BarcodeResult;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 
 import java.util.EnumMap;
 import java.util.Map;
@@ -24,6 +26,7 @@ public class Utils {
 
     private static BarcodeFormat getFormat(BarcodeFormat format) {
         switch (format) {
+            //These are the formats supported by MultiFormatWriter. We encode as QR-Code for everything else.
             case EAN_8:
             case UPC_E:
             case EAN_13:
@@ -51,15 +54,14 @@ public class Utils {
         return generateCode(data, format, DEFAULT_CODE_WIDTH, DEFAULT_CODE_HEIGHT, hints, null);
     }
 
-    public static Bitmap generateCode(String data, BarcodeFormat format, int imgWidth, int imgHeight, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
-        format = getFormat(format);
+    public static Bitmap generateCode(String data, BarcodeFormat original_format, int imgWidth, int imgHeight, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {
+        BarcodeFormat format = getFormat(original_format);
         try {
             MultiFormatWriter writer = new MultiFormatWriter();
-            if (hints == null) {
+            if (hints == null || !format.equals(original_format)) {
                 hints = new EnumMap<>(EncodeHintType.class);
             }
-
-            if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL)) {
+            if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL) && format.equals(original_format)) {
                 Object ec = metadata.get(ERROR_CORRECTION_LEVEL);
                 if (ec != null) {
                     hints.put(ERROR_CORRECTION, ec);
@@ -89,5 +91,38 @@ public class Utils {
         } catch (WriterException e) {
             return null;
         }
+    }
+
+    public static HistoryItem createHistoryItem(Bitmap mCodeImage, BarcodeResult currentBarcodeResult, boolean prefSaveRealImage) {
+        HistoryItem currentHistoryItem = new HistoryItem();
+
+        Bitmap image;
+        if (prefSaveRealImage) {
+            float height;
+            float width;
+            if (mCodeImage.getWidth() == 0 || mCodeImage.getWidth() == 0) {
+                height = 200f;
+                width = 200f;
+            } else if (mCodeImage.getWidth() > mCodeImage.getHeight()) {
+                height = (float) mCodeImage.getHeight() / (float) mCodeImage.getWidth() * 200f;
+                width = 200f;
+            } else {
+                width = (float) mCodeImage.getWidth() / (float) mCodeImage.getHeight() * 200f;
+                height = 200f;
+            }
+            image = Bitmap.createScaledBitmap(mCodeImage, (int) width, (int) height, false);
+        } else {
+            image = Utils.generateCode(currentBarcodeResult.getText(), currentBarcodeResult.getBarcodeFormat(), null, currentBarcodeResult.getResult().getResultMetadata());
+        }
+        currentHistoryItem.setImage(image);
+
+        currentHistoryItem.setFormat(currentBarcodeResult.getResult().getBarcodeFormat());
+        currentHistoryItem.setNumBits(currentBarcodeResult.getResult().getNumBits());
+        currentHistoryItem.setRawBytes(currentBarcodeResult.getResult().getRawBytes());
+        currentHistoryItem.setResultPoints(currentBarcodeResult.getResult().getResultPoints());
+        currentHistoryItem.setText(currentBarcodeResult.getResult().getText());
+        currentHistoryItem.setTimestamp(currentBarcodeResult.getResult().getTimestamp());
+
+        return currentHistoryItem;
     }
 }

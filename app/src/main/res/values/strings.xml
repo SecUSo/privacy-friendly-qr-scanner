@@ -25,7 +25,7 @@
 
     <string name="slide1_heading">Welcome!</string>
     <string name="slide1_text">Welcome to privacy friendly QR scanner. This tutorial will cover the most important things you need to know.</string>
-    <string name="slide2_heading">What is there?</string>
+    <string name="slide2_heading">What are the features?</string>
     <string name="text_slide2">With this app you can both scan and create QR codes.</string>
     <string name="slide3_heading">More features</string>
     <string name="text_slide3">The QR code you scanned can be saved in History. Furthermore you can share it or copy it.</string>
@@ -43,8 +43,8 @@
     <string name="about_affiliation">In affiliation with</string>
     <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by SECUSO. Sourcecode licensed under GPLv3. Images copyright Karlsruhe Institute of Technology and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
-    <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso" translatable="false"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">Used libraries:</string>
     <string name="lib_url" translatable="false"><a href="https://github.com/zxing">ZXing</a></string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
@@ -99,6 +99,10 @@
         <item>Add to Contacts</item>
         <item>Do nothing</item>
     </string-array>
+    <string-array name="calendar_array">
+        <item>Add to Calendar</item>
+        <item>Do nothing</item>
+    </string-array>
     <string-array name="send_email_array">
         <item>Send Email</item>
         <item>Add to Contacts</item>
@@ -131,6 +135,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Copy Password</item>
+        <item>Add WiFi network</item>
         <item>Do nothing</item>
     </string-array>
     <string-array name="history_array">
@@ -175,6 +180,7 @@
         <item>Vehicle Identification Number (VIN)</item>
     </string-array>
 
+    <string name="something_went_wrong">Something went wrong.</string>
     <string name="copied_to_clipboard">Copied to clipboard.</string>
     <string name="noname">No name specified</string>
 
@@ -251,6 +257,7 @@
     <string name="barcode_format">Format</string>
     <string name="error_correction_level">Error correction level</string>
     <string name="code_generation_error">No code could be generated.</string>
+    <string name="save_to_history">Save to history</string>
 
     <string name="generator_text_textfield">Text</string>
     <string name="generator_text_explanation">You can enter any text you want to encode. Multiple lines are allowed.</string>
@@ -317,6 +324,15 @@
     <string name="image_stored_in_gallery">Image saved to gallery</string>
     <string name="close">Close</string>
 
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">This WiFi encryption is currently not supported: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Encryption: %1$s</string>
+    <string name="password_value">Password: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">Your Android version does not support this feature.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -324,7 +340,7 @@
     <string name="pref_search_engine_title">Default Search Engine</string>
     <string name="pref_enable_beep_on_scan_title">Beep on scan</string>
     <string name="pref_enable_beep_on_scan_summary">Play a confirmation tone when scanning</string>
-    <string name="activity_history_list_item_qr_image_descriptor" translatable="false">QR Code</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
     <string name="delete">delete</string>
     <string name="dialog_history_delete_message">Do you really want to delete this entry?</string>
     <string name="dialog_history_delete_title">Delete Entry</string>
@@ -335,6 +351,11 @@
     <string name="item_result_email_bcc">BCC:</string>
     <string name="item_result_email_subject">Subject:</string>
     <string name="item_result_email_body">Body:</string>
+    <string name="item_result_calendar_title">Title:</string>
+    <string name="item_result_calendar_description">Description:</string>
+    <string name="item_result_calendar_location">Location:</string>
+    <string name="item_result_calendar_start">Begin:</string>
+    <string name="item_result_calendar_end">End:</string>
     <string name="activity_result_toast_saved">Saved to history.</string>
     <string name="fragment_result_product_label">Identifier:</string>
     <string name="activity_result_toast_error_cant_load">Something went wrong when loading the result.</string>
@@ -352,12 +373,27 @@
     <string name="pref_search_engine_enabled_title">Use search engines</string>
     <string name="pref_search_engine_enabled_summary">Display the \"Search\" button when scanning text.</string>
 
+    <string name="pref_app_theme_title">Theme</string>
+    <string-array name="pref_app_theme_entries">
+        <item>Light</item>
+        <item>Dark</item>
+        <item>System default</item>
+    </string-array>
+    <string name="pref_app_theme_default" translatable="false">SYSTEM</string>
+    <string-array name="pref_app_theme_values" translatable="false">
+        <item>LIGHT</item>
+        <item>DARK</item>
+        <item>SYSTEM</item>
+    </string-array>
+
     <string-array name="pref_search_engine_entries">
         <item>DuckDuckGo</item>
         <item>Google</item>
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
+
+    <string name="pref_search_engine_default" translatable="false">DUCK_DUCK_GO</string>
     <string-array name="pref_search_engine_values" translatable="false">
         <item>DUCK_DUCK_GO</item>
         <item>GOOGLE</item>

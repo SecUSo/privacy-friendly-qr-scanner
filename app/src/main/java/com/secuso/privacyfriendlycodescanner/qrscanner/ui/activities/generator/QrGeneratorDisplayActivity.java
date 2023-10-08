@@ -1,10 +1,15 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.generator;
 
+import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,18 +25,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ScannerActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.IconArrayAdapter;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ScannerViewModel;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 public class QrGeneratorDisplayActivity extends AppCompatActivity {
@@ -203,6 +215,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.share, menu);
+        getMenuInflater().inflate(R.menu.save, menu);
         return true;
     }
 
@@ -211,6 +224,31 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.share) {
             QRGeneratorUtils.shareImage(this, QRGeneratorUtils.getCachedUri());
             return true;
+        } else if (item.getItemId() == R.id.save) {
+            // Use an instance of ScannerViewModel to get the BarcodeResult by 'scanning' the image
+            ScannerViewModel scannerViewModel = new ViewModelProvider(this).get(ScannerViewModel.class);
+            scannerViewModel.isScanComplete().observe(this, scanComplete -> {
+                if (scanComplete) {
+                    BarcodeResult result = scannerViewModel.getScanResult().getValue();
+                    scannerViewModel.clearScanResult();
+                    if (result == null) {
+                        Toast.makeText(this, getText(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
+                    } else {
+                        try {
+                            //Get the Bitmap, create the HistoryItem and insert it into the db.
+                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), QRGeneratorUtils.getCachedUri());
+                            HistoryItem historyItem = Utils.createHistoryItem(bitmap, result, PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getBoolean(PREF_SAVE_REAL_IMAGE_TO_HISTORY, false));
+                            AppRepository.getInstance(getApplication()).insertHistoryEntry(historyItem);
+
+                            Toast.makeText(this, getText(R.string.activity_result_toast_saved), Toast.LENGTH_SHORT).show();
+                        } catch (IOException e) {
+                            Toast.makeText(this, getText(R.string.something_went_wrong), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            });
+            //Start the 'scan'
+            scannerViewModel.getBarcodeResultFromImage(QRGeneratorUtils.getCachedUri());
         }
         return super.onOptionsItemSelected(item);
     }
@@ -229,8 +267,6 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         barcodeFormatAdapter = newBarcodeFormatAdapter();
         barcodeFormatMenu.setAdapter(barcodeFormatAdapter);
 
-        errorCorrectionAdapter = newErrorCorrectionAdapter(currentErrorCorrections);
-        errorCorrectionMenu.setAdapter(errorCorrectionAdapter);
         updateDropDownMenus();
         generateAndUpdateImage();
     }

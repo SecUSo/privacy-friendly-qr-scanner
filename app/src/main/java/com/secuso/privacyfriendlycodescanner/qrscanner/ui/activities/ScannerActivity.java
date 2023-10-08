@@ -2,7 +2,6 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -24,6 +23,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.ResultPoint;
@@ -149,13 +149,13 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
                 BarcodeResult result = viewModel.getScanResult().getValue();
                 viewModel.clearScanResult();
                 if (result == null) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                    builder.setMessage(R.string.no_code_in_image_explanation)
+                    new MaterialAlertDialogBuilder(this)
+                            .setMessage(R.string.no_code_in_image_explanation)
                             .setTitle(R.string.app_name)
                             .setIcon(R.drawable.ic_baseline_qr_code_24dp)
                             .setCancelable(true)
-                            .setPositiveButton(R.string.okay, null);
-                    builder.create().show();
+                            .setPositiveButton(R.string.okay, null)
+                            .show();
                 } else {
                     onBarcodeResult(result);
                 }
@@ -327,10 +327,17 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
     private void onOpenImagePickerClick() {
         if (PreferenceManager.getDefaultSharedPreferences(getBaseContext()).getBoolean("image_picker_first_click", true)) {
-            new AlertDialog.Builder(ScannerActivity.this).setMessage(R.string.select_image_from_gallery_explanation).setPositiveButton(R.string.proceed, (dialogInterface, i) -> {
-                openImagePicker();
-                PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putBoolean("image_picker_first_click", Boolean.FALSE).apply();
-            }).setTitle(R.string.select_image_from_gallery).setCancelable(true).create().show();
+            new MaterialAlertDialogBuilder(ScannerActivity.this)
+                    .setMessage(R.string.select_image_from_gallery_explanation)
+                    .setPositiveButton(R.string.proceed, (dialogInterface, i) ->
+                    {
+                        openImagePicker();
+                        PreferenceManager.getDefaultSharedPreferences(getBaseContext()).edit().putBoolean("image_picker_first_click", Boolean.FALSE).apply();
+                    })
+                    .setTitle(R.string.select_image_from_gallery)
+                    .setCancelable(true)
+                    .create()
+                    .show();
         } else {
             openImagePicker();
         }

@@ -1,0 +1,17 @@
+Kody QR stają się coraz ważniejsze. W niektórych obszarach zastąpiły nawet tradycyjny kod kreskowy. Kod QR jest w stanie zapisać do siedmiu tysięcy znaków i dlatego nadaje się do bardziej skomplikowanych treści, np.: vCards. Stąd kody QR można znaleźć obecnie na prawie każdym plakacie reklamowym i zachęcają użytkownika do zeskanowania go smartfonem. Dzięki temu nie trzeba już sporządzać odręcznej notatki, wystarczy zeskanować kod QR. Z tego powodu w sklepie Google Play dostępnych jest już wiele aplikacji do skanowania kodów QR.
+
+Nasza przyjazna dla prywatności aplikacja skanera QR różni się pod dwoma względami:
+
+1. Wymaga jedynie minimalnej liczby uprawnień, a mianowicie:
+Większość aplikacji do skanowania kodów QR dostępnych w sklepie Google Play oprócz tych wymaganych uprawnień potrzebuje też kilku innych: np. odczytywania kontaktów lub rejestru połączeń i pobierania danych z Internetu. Większość z tych wymagań nie jest konieczna do funkcjonalności, którą faktycznie mają zapewniać.
+
+2. Wspiera swoich użytkowników w wykrywaniu złośliwych linków: kody QR dostarczają atakującemu nowych możliwości, ponieważ mogą zawierać złośliwe linki, np. linki do stron phishingowych lub stron internetowych, z których automatycznie pobierane jest złośliwe oprogramowanie. Dlatego ważne jest, aby dokładnie sprawdzić link przed wejściem na wskazaną stronę internetową. Ponieważ użytkownikowi trudno jest wykryć złośliwe linki, przyjazna dla prywatności aplikacja skanera QR wspiera użytkownika, podświetlając domenę (np. w przypadku https://www.secuso.org zostanie podświetlona secuso.org). Aby uniknąć niedokładnego sprawdzenia linku, a w szczególności zaznaczonej domeny, aplikacja dostarcza informacji o możliwym oszustwie, a jej użytkownicy muszą potwierdzić, że sprawdzili link i jest on godny zaufania. Uwaga: informacje wyświetlane po zeskanowaniu kodu QR opartego na adresie URL nie są dostosowane do każdego adresu URL, stąd należy traktować to jako poradę dla użytkownika jak się ogólnie zachować.
+
+Przyjazna dla prywatności aplikacja skanera QR obsługuje większość popularnych typów kodów QR. Obsługiwane są także kody kreskowe i inne powszechnie stosowane kody.
+
+Aplikacja należy do grupy Privacy Friendly Apps tworzonych przez grupę badawczą SECUSO na Technische Universität Darmstadt. Więcej informacji można znaleźć na secuso.org/pfa
+
+Można się z nami skontaktować przez
+Twitter — @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon – @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Oferty pracy - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php

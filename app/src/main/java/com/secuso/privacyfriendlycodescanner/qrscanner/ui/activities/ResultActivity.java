@@ -28,6 +28,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.QRCodeImageDialogFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.RawDataDialogFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.CalendarResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ContactResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.GeoResultFragment;
@@ -241,6 +242,9 @@ public class ResultActivity extends AppCompatActivity {
             case ADDRESSBOOK:
                 resultFragment = new ContactResultFragment();
                 break;
+            case CALENDAR:
+                resultFragment = new CalendarResultFragment();
+                break;
             case EMAIL_ADDRESS:
                 resultFragment = new EmailResultFragment();
                 break;
@@ -266,8 +270,6 @@ public class ResultActivity extends AppCompatActivity {
                 // TODO: add isbn fragment
             case VIN:
                 // TODO: add vin fragment
-            case CALENDAR:
-                // TODO: add calendar fragment
             case TEXT:
             default:
                 resultFragment = new TextResultFragment();

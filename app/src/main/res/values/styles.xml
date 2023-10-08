@@ -13,12 +13,14 @@
         <item name="colorHistoryIconBackground">@color/white</item>
         <item name="colorHistoryIcons">?attr/colorIcons</item>
         <item name="colorHighlight">@color/highlight_transparent_light</item>
-        <item name="colorSelectableItemHighlight">@color/highlight_selectable_transparent_dark
-        </item>
+        <item name="colorSelectableItemHighlight">@color/highlight_selectable_transparent_dark</item>
         <item name="colorNavbarHeaderBackground">@color/white</item>
         <item name="colorNavbarHeaderText">@color/colorPrimary</item>
         <item name="colorURLHighlight">@color/black</item>
+        <item name="materialAlertDialogTheme">@style/AppTheme.CustomMaterialDialog</item>
     </style>
+
+    <style name="AppTheme.CustomMaterialDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog" />
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>

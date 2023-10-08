@@ -129,6 +129,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Wachtwoord kopiëren</item>
+        <item>WiFi-netwerk toevoegen</item>
         <item>Niets doen</item>
     </string-array>
     <string-array name="history_array">
@@ -270,6 +271,15 @@
     <string name="selected_1">Geselecteerd</string>
     <string name="activity_scanner_permission_needed_explanation">Deze app vereist de cameramachtiging om QR-codes te kunnen scannen.</string>
 
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">Deze WiFi-codering wordt momenteel niet ondersteund: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Codering: %1$s</string>
+    <string name="password_value">Wachtwoord: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">Uw Android-versie ondersteunt deze functie niet.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hallo blanco fragment</string>
 
@@ -277,6 +287,14 @@
     <string name="pref_search_engine_title">Standaard zoekmachine</string>
     <string name="pref_enable_beep_on_scan_title">Piepen na scannen</string>
     <string name="pref_enable_beep_on_scan_summary">Speel een bevestigingsgeluid af na het scannen</string>
+
+    <string name="pref_app_theme_title">Thema</string>
+    <string-array name="pref_app_theme_entries">
+        <item>Licht</item>
+        <item>Donker</item>
+        <item>Systeem standaard</item>
+    </string-array>
+
     <string name="delete">Verwijderen</string>
     <string name="dialog_history_delete_message">Weet je zeker dat je dit item wilt verwijderen?</string>
     <string name="dialog_history_delete_title">Item verwijderen</string>
@@ -334,5 +352,9 @@
     <string name="error_correction_level">Foutcorrectieniveau</string>
     <string name="barcode_format">Formaat</string>
     <string name="code_generation_error">Er kon geen code worden gegenereerd.</string>
+    <string name="something_went_wrong">Er ging iets mis.</string>
+    <string name="save_to_history">Opslaan in geschiedenis</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
 
 </resources>

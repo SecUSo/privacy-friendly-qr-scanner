@@ -11,8 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AlertDialog;
-
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.GeoParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
@@ -59,8 +58,8 @@ public class GeoResultFragment extends ResultFragment {
     }
 
     public void onProceedPressed(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
+        new MaterialAlertDialogBuilder(context)
+                .setTitle(R.string.choose_action)
                 .setItems(R.array.geo_array, (dialog, which) -> {
                     String caption = "";
                     switch (which) {
@@ -70,13 +69,10 @@ public class GeoResultFragment extends ResultFragment {
                             mapIntent.setData(gmmIntentUri);
 
                             startActivity(Intent.createChooser(mapIntent, caption));
-
-
                             break;
-
                         default:
                     }
-                });
-        builder.create().show();
+                })
+                .show();
     }
 }

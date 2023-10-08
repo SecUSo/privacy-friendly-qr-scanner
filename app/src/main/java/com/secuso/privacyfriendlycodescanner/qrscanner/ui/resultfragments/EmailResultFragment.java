@@ -10,10 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.zxing.client.result.EmailAddressParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.EmailResultAdapter;
@@ -46,8 +46,8 @@ public class EmailResultFragment extends ResultFragment {
     @Override
     public void onProceedPressed(Context context) {
         // TODO: rework this..
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle(R.string.choose_action)
+        new MaterialAlertDialogBuilder(context)
+                .setTitle(R.string.choose_action)
                 .setItems(R.array.send_email_array, (dialog, which) -> {
                     String caption = "";
                     switch (which) {
@@ -57,7 +57,7 @@ public class EmailResultFragment extends ResultFragment {
                             email.putExtra(Intent.EXTRA_EMAIL, result.getTos());
                             email.putExtra(Intent.EXTRA_SUBJECT, result.getSubject());
                             email.putExtra(Intent.EXTRA_TEXT, result.getBody());
-                            caption =getResources().getStringArray(R.array.send_email_array)[0];
+                            caption = getResources().getStringArray(R.array.send_email_array)[0];
                             startActivity(Intent.createChooser(email, caption));
                             break;
                         case 1:
@@ -68,8 +68,8 @@ public class EmailResultFragment extends ResultFragment {
                             break;
                         default:
                     }
-                });
-        builder.create().show();
+                })
+                .show();
     }
 
 

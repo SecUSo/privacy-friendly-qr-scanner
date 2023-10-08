@@ -147,6 +147,7 @@
     </string-array>
     <string-array name="wifi_array">
         <item>Passwort kopieren</item>
+        <item>WiFi-Netzwerk hinzufügen</item>
         <item>Nichts tun</item>
     </string-array>
     <string-array name="history_array">
@@ -264,12 +265,29 @@
     <string name="pref_keep_duplicates_explanation">Duplikate werden auch in der Historie gespeichert</string>
     <string name="pref_title_beep">Signalton</string>
 
+    <!-- ResultFragment -->
+    <string name="unsupported_wifi_encryption">Diese WiFi-Verschlüsselung wird derzeit nicht unterstützt: %1$s</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="encryption_value">Verschlüsselung: %1$s</string>
+    <string name="password_value">Passwort: %1$s</string>
+
+    <!-- Others -->
+    <string name="android_version_does_not_support_feature">Ihre Android-Version unterstützt diese Funktion nicht.</string>
+
     <string name="hello_blank_fragment">Hallo leeres fragment</string>
 
     <!--Settings for used Search Engine-->
     <string name="pref_search_engine_title">Standardsuchmaschine</string>
     <string name="pref_enable_beep_on_scan_title">Bestätigungston</string>
     <string name="pref_enable_beep_on_scan_summary">Beim Scannen einen Ton abspielen</string>
+
+    <string name="pref_app_theme_title">Design</string>
+    <string-array name="pref_app_theme_entries">
+        <item>Hell</item>
+        <item>Dunkel</item>
+        <item>Systemstandard</item>
+    </string-array>
+
     <string name="delete">Löschen</string>
     <string name="dialog_history_delete_message">Möchten Sie diesen Eintrag wirklich löschen?</string>
     <string name="dialog_history_delete_title">Eintrag löschen</string>
@@ -327,5 +345,9 @@
     <string name="error_correction_level">Fehlerkorrektur-Level</string>
     <string name="barcode_format">Format</string>
     <string name="code_generation_error">Es konnte kein Code generiert werden.</string>
+    <string name="something_went_wrong">Etwas ist schief gelaufen.</string>
+    <string name="save_to_history">In der Historie speichern</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
 
 </resources>
