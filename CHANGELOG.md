@@ -1,5 +1,31 @@
 # Changelog
 
+<a name="v4.4.0"></a>
+## [QR Scanner (Privacy Friendly) v4.4.0](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.4.0) - 08 Nov 2023
+
+## What's Changed
+* Added French translation by [@judemont](https://github.com/judemont) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/155
+* Added Japanese translation. by [@notepad-ja](https://github.com/notepad-ja) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/114
+* Added Turkish Translation by [@metezd](https://github.com/metezd) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/130
+* Added Danish translation by [@shoddysheep](https://github.com/shoddysheep) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/112
+* strings.xml to galician by [@xmgz](https://github.com/xmgz) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/101
+* Translations update from Hosted Weblate by [@weblate](https://github.com/weblate) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/181
+* Added Chinese translation. by [@surkaa](https://github.com/surkaa) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/185
+
+## New Contributors
+* [@judemont](https://github.com/judemont) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/155
+* [@notepad-ja](https://github.com/notepad-ja) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/114
+* [@metezd](https://github.com/metezd) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/130
+* [@shoddysheep](https://github.com/shoddysheep) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/112
+* [@xmgz](https://github.com/xmgz) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/101
+* [@weblate](https://github.com/weblate) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/181
+* [@surkaa](https://github.com/surkaa) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/185
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.1...v4.4.0
+
+[Changes][v4.4.0]
+
+
 <a name="v4.3.1"></a>
 ## [QR Scanner (Privacy Friendly) v4.3.1](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.3.1) - 04 Sep 2023
 
@@ -225,6 +251,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.4.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.1...v4.4.0
 [v4.3.1]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.0...v4.3.1
 [v4.3.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.2.0...v4.3.0
 [v4.2.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.1.0...v4.2.0
