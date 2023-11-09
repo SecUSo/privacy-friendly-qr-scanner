@@ -1,13 +1,16 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
+}
 
 android {
-    compileSdkVersion 33
     defaultConfig {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
         minSdkVersion 17
-        targetSdkVersion 33
+        compileSdk 34
+        targetSdkVersion 34
         multiDexEnabled true
         versionCode 30
         versionName "4.4.0"
@@ -26,7 +29,7 @@ android {
         }
     }
 
-    android.applicationVariants.all { variant ->
+    android.applicationVariants.configureEach { variant ->
         variant.outputs.all {
             def appName = "pfa-qr-scanner"
             outputFileName = appName + "-${variant.name}-v${variant.versionName}.apk"
@@ -39,11 +42,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         coreLibraryDesugaringEnabled true
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+
+    kotlin {
+        jvmToolchain(17)
+    }
+
     namespace 'com.secuso.privacyfriendlycodescanner.qrscanner'
     lint {
         abortOnError false
@@ -55,7 +68,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference-ktx:1.2.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.cardview:cardview:1.0.0'
     testImplementation 'junit:junit:4.13.2'
@@ -65,19 +78,21 @@ dependencies {
     implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
     implementation 'com.google.zxing:core:3.4.1' //newer version requires java.nio.charset.StandardCharsets in Encoder.java -> minSdkVersion = 19
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.8'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
     implementation "androidx.multidex:multidex:2.0.1"
 
     implementation 'com.github.bumptech.glide:glide:4.11.0'
-    kapt 'com.github.bumptech.glide:compiler:4.9.0'
-    implementation 'androidx.room:room-runtime:2.5.2'
-    kapt 'androidx.room:room-compiler:2.5.2'
-    androidTestImplementation 'androidx.room:room-testing:2.5.2'
+    ksp 'com.github.bumptech.glide:compiler:4.9.0'
+
+    def room_version = "2.5.2"
+    implementation "androidx.room:room-runtime:$room_version"
+    ksp "androidx.room:room-compiler:$room_version"
+    androidTestImplementation "androidx.room:room-testing:$room_version"
 
     implementation 'com.google.code.gson:gson:2.9.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.core:core-ktx:1.10.1"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation project(path: ':backup-api')
