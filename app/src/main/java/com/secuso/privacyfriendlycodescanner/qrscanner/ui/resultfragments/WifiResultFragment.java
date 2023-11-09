@@ -64,6 +64,15 @@ public class WifiResultFragment extends ResultFragment {
                             break;
                         case 1:
                             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.R) {
+                                if ((!result.getNetworkEncryption().equalsIgnoreCase("NOPASS") && !result.getNetworkEncryption().equalsIgnoreCase(""))
+                                        && pw == null) {
+                                    new MaterialAlertDialogBuilder(context)
+                                            .setTitle(android.R.string.dialog_alert_title)
+                                            .setMessage(R.string.cannot_connect_to_encrypted_wifi_without_password)
+                                            .setNegativeButton(android.R.string.ok, null)
+                                            .show();
+                                    return;
+                                }
                                 WifiNetworkSuggestion suggestion;
                                 switch (result.getNetworkEncryption().toUpperCase()) {
                                     case "NOPASS":
