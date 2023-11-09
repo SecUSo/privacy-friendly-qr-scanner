@@ -54,6 +54,7 @@
 
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@id/btnGenerate"
         style="@style/AppTheme.Button.GenerateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

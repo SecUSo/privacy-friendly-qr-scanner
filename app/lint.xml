@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Disable the NotificationPermission check for glide -->
+    <issue id="NotificationPermission">
+        <ignore regexp="com.bumptech.glide.request.target.NotificationTarget" />
+    </issue>
+
+    <!-- Set the severity of missing translations to warning instead of error -->
+    <issue id="MissingTranslation" severity="warning" />
+</lint>

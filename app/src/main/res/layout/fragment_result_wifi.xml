@@ -4,22 +4,18 @@
     android:orientation="vertical">
 
     <ScrollView
+        android:id="@+id/scrollView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView5"
-        android:layout_above="@+id/btnProceed"
         android:layout_alignParentTop="true"
-        android:fillViewport="true"
-        android:layout_alignRight="@+id/btnProceed"
-        android:layout_alignEnd="@+id/btnProceed"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentEnd="true"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp" >
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/result_field_wifi_exlanation"
@@ -35,23 +31,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="20sp"
-                android:textIsSelectable="true" />
+                android:textIsSelectable="true"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/result_field_wifi_encryption"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:gravity="center_vertical|center_horizontal" />
+                android:gravity="center_vertical|center_horizontal"
+                android:textSize="20sp" />
 
             <TextView
+                android:id="@+id/result_field_wifi_pw"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/result_field_wifi_pw"
                 android:gravity="center_horizontal"
                 android:textIsSelectable="true"
-                android:textSize="20sp"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
