@@ -59,7 +59,7 @@ android {
 
     namespace 'com.secuso.privacyfriendlycodescanner.qrscanner'
     lint {
-        abortOnError false
+        lintConfig = file("lint.xml")
     }
 }
 

@@ -11,13 +11,16 @@
         android:maxSdkVersion="28" />
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
+        android:name=".PFACodeScannerApplication"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
-        android:name=".PFACodeScannerApplication"
         android:installLocation="preferExternal"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -25,14 +28,13 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <provider
-            android:name="androidx.work.impl.WorkManagerInitializer"
-            android:authorities="${applicationId}.workmanager-init"
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
             tools:node="remove" />
 
         <activity
             android:name=".ui.activities.SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,7 +45,6 @@
             android:name=".ui.activities.ScannerActivity"
             android:clearTaskOnLaunch="true"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -143,16 +144,15 @@
             android:process=":backup"
             tools:ignore="ExportedService">
             <intent-filter>
-                <action
-                    android:name="org.secuso.privacyfriendlybackup.api.pfa.PFAAuthService" />
+                <action android:name="org.secuso.privacyfriendlybackup.api.pfa.PFAAuthService" />
             </intent-filter>
         </service>
 
         <service
             android:name=".QuickTileService"
+            android:exported="true"
             android:icon="@drawable/ic_tile"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
 
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />

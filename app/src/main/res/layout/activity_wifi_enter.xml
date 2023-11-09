@@ -75,7 +75,6 @@
                 style="@style/AppTheme.Generator.ExposedDropdownMenu"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/editNetwork"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"

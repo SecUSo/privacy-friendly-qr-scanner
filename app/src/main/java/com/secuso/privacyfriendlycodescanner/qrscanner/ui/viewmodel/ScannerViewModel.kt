@@ -21,12 +21,12 @@ import kotlinx.coroutines.withContext
 import java.util.*
 
 class ScannerViewModel(application: Application) : AndroidViewModel(application) {
-    private val scanResult: MutableLiveData<BarcodeResult> = MutableLiveData()
+    private val scanResult: MutableLiveData<BarcodeResult?> = MutableLiveData()
     private val processingScan: MutableLiveData<Boolean> = MutableLiveData(false)
     private val scanComplete: MutableLiveData<Boolean> = MutableLiveData(false)
 
 
-    fun getScanResult(): LiveData<BarcodeResult> {
+    fun getScanResult(): LiveData<BarcodeResult?> {
         return scanResult
     }
 
