@@ -267,6 +267,7 @@
 
     <!-- ResultFragment -->
     <string name="unsupported_wifi_encryption">Diese WiFi-Verschlüsselung wird derzeit nicht unterstützt: %1$s</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">Ohne Passwort kann keine Verbindung zu einem verschlüsselten WiFi-Netzwerk hergestellt werden.</string>
     <string name="ssid_value">SSID: %1$s</string>
     <string name="encryption_value">Verschlüsselung: %1$s</string>
     <string name="password_value">Passwort: %1$s</string>
