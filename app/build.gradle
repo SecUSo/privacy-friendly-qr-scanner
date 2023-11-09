@@ -39,13 +39,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
-    }
     compileOptions {
         coreLibraryDesugaringEnabled true
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
+    }
+    namespace 'com.secuso.privacyfriendlycodescanner.qrscanner'
+    lint {
+        abortOnError false
     }
 }
 
