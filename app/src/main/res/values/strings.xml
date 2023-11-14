@@ -319,6 +319,8 @@
     <string name="image_is_being_processed">Image is being processed…</string>
     <string name="no_code_in_image_explanation">Unfortunately, no code could be found in this image. To improve the result, you can crop or straighten the image and try again.</string>
 
+    <string name="switch_camera">Switch camera</string>
+
     <string name="raw_data">Raw data</string>
     <string name="generated_code_image_explanation">Note: The code shown here was generated based on the content of the scanned code and may therefore look different. However, the data it contains is the same.</string>
     <string name="image_stored_in_gallery">Image saved to gallery</string>
