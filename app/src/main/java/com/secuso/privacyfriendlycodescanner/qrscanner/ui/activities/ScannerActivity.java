@@ -5,6 +5,7 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ import com.journeyapps.barcodescanner.CameraPreview;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 import com.journeyapps.barcodescanner.DefaultDecoderFactory;
 import com.journeyapps.barcodescanner.camera.CameraInstance;
+import com.journeyapps.barcodescanner.camera.CameraSettings;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.BaseActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ScannerViewModel;
@@ -315,6 +317,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.select_image, menu);
         getMenuInflater().inflate(R.menu.flashlight, menu);
+        getMenuInflater().inflate(R.menu.select_camera, menu);
 
         flashOnButton = menu.findItem(R.id.menu_flashlight_on);
         flashOffButton = menu.findItem(R.id.menu_flashlight_off);
@@ -336,6 +339,15 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         } else if (itemId == R.id.select_image) {
             onOpenImagePickerClick();
             return true;
+        } else if (itemId == R.id.select_camera) {
+            CameraSettings cameraSettings = barcodeScannerView.getCameraSettings();
+            cameraSettings.setRequestedCameraId(cameraSettings.getRequestedCameraId() + 1);
+            if (cameraSettings.getRequestedCameraId() >= Camera.getNumberOfCameras()) {
+                cameraSettings.setRequestedCameraId(0);
+            }
+            barcodeScannerView.setCameraSettings(cameraSettings);
+            barcodeScannerView.pause();
+            barcodeScannerView.resume();
         }
         return super.onOptionsItemSelected(item);
     }

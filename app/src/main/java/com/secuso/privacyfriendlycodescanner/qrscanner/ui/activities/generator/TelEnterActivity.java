@@ -29,7 +29,7 @@ public class TelEnterActivity extends AppCompatActivity {
 
         final EditText qrResult = (EditText) findViewById(R.id.editPhone);
 
-        int maxLength = 15;
+        int maxLength = 75;
         qrResult.setFilters(new InputFilter[]{new InputFilter.LengthFilter(maxLength)});
 
         ExtendedFloatingActionButton generate = (ExtendedFloatingActionButton) findViewById(R.id.btnGenerate);
