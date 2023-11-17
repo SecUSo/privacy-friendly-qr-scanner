@@ -13,6 +13,8 @@ import android.preference.PreferenceManager;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -35,6 +37,7 @@ import com.journeyapps.barcodescanner.BarcodeResult;
 import com.journeyapps.barcodescanner.CameraPreview;
 import com.journeyapps.barcodescanner.DecoratedBarcodeView;
 import com.journeyapps.barcodescanner.DefaultDecoderFactory;
+import com.journeyapps.barcodescanner.camera.CameraInstance;
 import com.journeyapps.barcodescanner.camera.CameraSettings;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.BaseActivity;
@@ -66,6 +69,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
     private BeepManager beepManager;
 
     private ScannerViewModel viewModel;
+    private ScaleGestureDetector scaleGestureDetector;
 
     private final CameraPreview.StateListener stateListener = new CameraPreview.StateListener() {
         @Override
@@ -164,6 +168,9 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
             }
         });
 
+        scaleGestureDetector = new ScaleGestureDetector(this, viewModel.getOnScaleGestureListener());//new ScaleGestureDetector(this, new CustomOnScaleGestureListener());
+        viewModel.getCameraZoomLevel().observe(this, this::updateCameraZoom);
+
         if (!preferences.getBoolean("pref_enable_beep_on_scan", false)) {
             beepManager.setBeepEnabled(false);
         }
@@ -176,6 +183,20 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
             } else {
                 initScan();
             }
+        }
+    }
+
+    private void updateCameraZoom(Float zoomLevel) {
+        CameraInstance camera = barcodeScannerView.getBarcodeView().getCameraInstance();
+        if (camera != null) {
+            camera.changeCameraParameters(parameters -> {
+                if (parameters.isZoomSupported()) {
+                    int maxZoom = parameters.getMaxZoom();
+                    int newZoomLevel = (int) (zoomLevel * maxZoom);
+                    parameters.setZoom(newZoomLevel);
+                }
+                return parameters;
+            });
         }
     }
 
@@ -241,6 +262,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
             barcodeScannerView.setStatusText(null);
             initScan();
         }
+        updateCameraZoom(viewModel.getCameraZoomLevel().getValue());
     }
 
     @Override
@@ -392,6 +414,11 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
         }
     }
 
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        scaleGestureDetector.onTouchEvent(ev);
+        return super.dispatchTouchEvent(ev);
+    }
 
     class TorchListener implements DecoratedBarcodeView.TorchListener {
         WeakReference<ScannerActivity> mParent;
