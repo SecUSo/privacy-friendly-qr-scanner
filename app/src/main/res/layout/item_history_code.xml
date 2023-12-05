@@ -9,7 +9,7 @@
             type="com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.HistoryItemViewModel" />
     </data>
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/itemView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,7 +19,6 @@
         android:layout_marginEnd="10dp"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
         android:longClickable="true"
         app:cardCornerRadius="10dp">
 
@@ -91,7 +90,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/item_history_image_container"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/checkbox"
                 app:layout_constraintStart_toEndOf="@id/item_history_image_container" />
 
             <TextView
@@ -99,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:text="@{viewModel.timestamp}"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/checkbox"
                 app:layout_constraintTop_toTopOf="@+id/item_history_type" />
 
             <CheckBox
@@ -117,6 +116,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </layout>

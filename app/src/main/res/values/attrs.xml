@@ -10,5 +10,6 @@
         <attr name="colorNavbarHeaderBackground" format="color" />
         <attr name="colorNavbarHeaderText" format="color" />
         <attr name="colorURLHighlight" format="color" />
+        <attr name="colorItemSelected" format="color" />
     </declare-styleable>
 </resources>

@@ -301,7 +301,7 @@
     <string name="no">No</string>
     <string name="D_all">Delete all record(s)</string>
     <string name="all_records">Do you  want to delete all record(s)?</string>
-    <string name="Del">Do you  want to delete selected record(s)?</string>
+    <string name="Del">Do you want to delete selected record(s)?</string>
     <string name="confirmation">Confirmation</string>
     <string name="selected">Selected</string>
     <string name="code_stored">QR code stored in gallery</string>
@@ -312,6 +312,7 @@
     <string name="Share_via">Share via</string>
     <string name="select_all">Select All</string>
     <string name="selected_1">Selected</string>
+    <string name="entries_selected">%1$d selected</string>
     <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
 
     <string name="select_image_from_gallery_explanation">This function allows you to open images from your gallery and scan codes contained in them. This requires access to the images.</string>
