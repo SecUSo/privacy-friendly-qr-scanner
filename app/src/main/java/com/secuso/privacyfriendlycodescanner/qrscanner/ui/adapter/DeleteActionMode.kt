@@ -1,8 +1,6 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter
 
-import android.content.res.ColorStateList
-import android.graphics.Color
-import android.os.Build
+import android.util.Log
 import android.view.ActionMode
 import android.view.Menu
 import android.view.MenuItem
@@ -10,8 +8,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.secuso.privacyfriendlycodescanner.qrscanner.R
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem
-import com.secuso.privacyfriendlycodescanner.qrscanner.databinding.ItemHistoryCodeBinding
-import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.AttributeHelper
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.HistoryActivity
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter.HistoryAdapter.HistoryItemViewHolder
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.HistoryViewModel
@@ -78,29 +74,13 @@ class DeleteActionMode(private val historyActivity: HistoryActivity) : ActionMod
     fun selectItem(holder: HistoryItemViewHolder) {
         val s: HistoryItem = historyActivity.historyAdapter.historyEntries.get(holder.adapterPosition)
         if (!selectList.contains(s)) {
-            setSelected(holder.binding, true)
+            holder.binding.itemView.isChecked = true
             selectList.add(s)
         } else {
-            setSelected(holder.binding, false)
+            holder.binding.itemView.isChecked = false
             selectList.remove(s)
         }
-        ViewModelProvider(historyActivity).get<HistoryViewModel>(HistoryViewModel::class.java).setSelectedItemCount(selectList.size)
-    }
-
-    private var defaultColor: ColorStateList? = null
-
-    fun setSelected(binding: ItemHistoryCodeBinding, select: Boolean) {
-        if (defaultColor == null) {
-            defaultColor = binding.itemView.cardForegroundColor
-        }
-        if (select) {
-            binding.checkbox.isChecked = true
-            binding.itemView.setCardForegroundColor(ColorStateList.valueOf(AttributeHelper.getColor(historyActivity, R.attr.colorItemSelected, Color.LTGRAY)))
-        } else {
-            binding.checkbox.isChecked = false
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                binding.itemView.setCardForegroundColor(defaultColor)
-            }
-        }
+        Log.d("TAG", "Color" + holder.binding.itemView.cardForegroundColor + " " + holder.binding.itemView.cardBackgroundColor)
+        ViewModelProvider(historyActivity)[HistoryViewModel::class.java].setSelectedItemCount(selectList.size)
     }
 }

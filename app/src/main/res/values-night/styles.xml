@@ -17,7 +17,6 @@
         <item name="colorNavbarHeaderText">@color/colorAccent</item>
         <item name="colorURLHighlight">@color/white</item>
         <item name="materialAlertDialogTheme">@style/AppTheme.CustomMaterialDialog</item>
-        <item name="colorItemSelected">@color/bluetint</item>
     </style>
 
     <style name="AppTheme.CustomMaterialDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">

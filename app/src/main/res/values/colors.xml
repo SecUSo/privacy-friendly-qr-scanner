@@ -17,7 +17,6 @@
     <color name="red">#B71C1C</color>
     <color name="green">#388E3C</color>
     <color name="lightgrey">#ffd1d1d1</color>
-    <color name="bluetint">#1A0274B2</color>
 
     <color name="highlight_transparent_light">#0DFFFFFF</color>
     <color name="highlight_transparent_dark">#0D000000</color>

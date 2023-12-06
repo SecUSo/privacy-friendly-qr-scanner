@@ -18,7 +18,7 @@
         <item name="colorNavbarHeaderText">@color/colorPrimary</item>
         <item name="colorURLHighlight">@color/black</item>
         <item name="materialAlertDialogTheme">@style/AppTheme.CustomMaterialDialog</item>
-        <item name="colorItemSelected">@color/bluetint</item>
+        <item name="materialCardViewStyle">@style/AppTheme.MaterialComponents.CardView</item>
     </style>
 
     <style name="AppTheme.CustomMaterialDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog" />
@@ -70,6 +70,11 @@
 
     <style name="AppTheme.Generator.Icon" parent="AppTheme">
         <item name="tint">?attr/colorGeneratorIcons</item>
+    </style>
+
+    <style name="AppTheme.MaterialComponents.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardForegroundColor">@color/card_view_foreground</item>
+        <item name="rippleColor">@color/card_view_ripple</item>
     </style>
 
     <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />

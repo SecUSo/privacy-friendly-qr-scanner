@@ -1,7 +1,6 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.DrawableRes;
@@ -73,7 +72,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
             if (!deleteActionMode.isDeleteModeActive()) {
                 ((AppCompatActivity) v.getContext()).startActionMode(deleteActionMode);
                 deleteActionMode.selectItem(historyItemViewHolder);
-                notifyDataSetChanged();
             } else {
                 deleteActionMode.selectItem(historyItemViewHolder);
             }
@@ -88,16 +86,10 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
             }
         });
 
-        if (deleteActionMode.isDeleteModeActive()) {
-            binding.checkbox.setVisibility(View.VISIBLE);
-        } else {
-            binding.checkbox.setVisibility(View.GONE);
-        }
-
         if (deleteActionMode.isSelectAll()) {
-            deleteActionMode.setSelected(binding, true);
+            binding.itemView.setChecked(true);
         } else {
-            deleteActionMode.setSelected(binding, deleteActionMode.getSelectList().contains(historyItem));
+            binding.itemView.setChecked(deleteActionMode.getSelectList().contains(historyItem));
         }
 
         Contents.Type contentType = Contents.Type.parseParsedResultType(ResultParser.parseResult(historyItem.getResult()).getType());

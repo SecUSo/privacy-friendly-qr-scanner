@@ -53,7 +53,6 @@ public class HistoryActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_clear) {
             this.startActionMode(mDeleteActionMode);
-            mHistoryAdapter.notifyDataSetChanged();
             return true;
         }
         return false;
