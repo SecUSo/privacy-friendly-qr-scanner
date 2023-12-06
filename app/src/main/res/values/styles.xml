@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="zxing_CaptureTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen"></style>
+    <style name="zxing_CaptureTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen" />
 
     <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
@@ -18,6 +18,7 @@
         <item name="colorNavbarHeaderText">@color/colorPrimary</item>
         <item name="colorURLHighlight">@color/black</item>
         <item name="materialAlertDialogTheme">@style/AppTheme.CustomMaterialDialog</item>
+        <item name="materialCardViewStyle">@style/AppTheme.MaterialComponents.CardView</item>
     </style>
 
     <style name="AppTheme.CustomMaterialDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog" />
@@ -71,10 +72,15 @@
         <item name="tint">?attr/colorGeneratorIcons</item>
     </style>
 
-    <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox"></style>
+    <style name="AppTheme.MaterialComponents.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardForegroundColor">@color/card_view_foreground</item>
+        <item name="rippleColor">@color/card_view_ripple</item>
+    </style>
 
-    <style name="AppTheme.Generator.TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"></style>
+    <style name="AppTheme.Generator.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
-    <style name="AppTheme.Generator.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"></style>
+    <style name="AppTheme.Generator.TextInputLayout.Dense" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense" />
+
+    <style name="AppTheme.Generator.ExposedDropdownMenu" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu" />
 
 </resources>
