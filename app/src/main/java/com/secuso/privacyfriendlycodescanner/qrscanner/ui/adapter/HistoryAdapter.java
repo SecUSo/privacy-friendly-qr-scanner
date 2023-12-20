@@ -96,7 +96,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
         Glide.with(activity).load(AppCompatResources.getDrawable(activity, contentType.getIcon())).placeholder(AppCompatResources.getDrawable(activity, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryImage);
 
         @DrawableRes int codeTypeDrawableRes = switch (historyItem.getFormat()) {
-            case QR_CODE, MAXICODE -> R.drawable.ic_maxicode_24dp;
+            case QR_CODE -> R.drawable.ic_baseline_qr_code_24dp;
+            case MAXICODE -> R.drawable.ic_maxicode_24dp;
             case CODABAR, CODE_39, CODE_93, CODE_128, EAN_8, EAN_13, ITF, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, UPC_EAN_EXTENSION -> R.drawable.ic_barcode_24dp;
             case PDF_417 -> R.drawable.ic_pdf_417_code_24dp;
             case DATA_MATRIX -> R.drawable.ic_data_matrix_code_24dp;
