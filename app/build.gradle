@@ -12,8 +12,8 @@ android {
         compileSdk 34
         targetSdkVersion 34
         multiDexEnabled true
-        versionCode 30
-        versionName "4.4.0"
+        versionCode 31
+        versionName "4.5.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildFeatures.dataBinding = true
         vectorDrawables.useSupportLibrary = true
