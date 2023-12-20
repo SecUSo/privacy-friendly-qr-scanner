@@ -17,6 +17,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.databinding.ItemHistoryCodeBinding;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.HistoryActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ResultActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.HistoryItemViewModel;
@@ -95,14 +96,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
         Contents.Type contentType = Contents.Type.parseParsedResultType(ResultParser.parseResult(historyItem.getResult()).getType());
         Glide.with(activity).load(AppCompatResources.getDrawable(activity, contentType.getIcon())).placeholder(AppCompatResources.getDrawable(activity, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryImage);
 
-        @DrawableRes int codeTypeDrawableRes = switch (historyItem.getFormat()) {
-            case QR_CODE -> R.drawable.ic_baseline_qr_code_24dp;
-            case MAXICODE -> R.drawable.ic_maxicode_24dp;
-            case CODABAR, CODE_39, CODE_93, CODE_128, EAN_8, EAN_13, ITF, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, UPC_EAN_EXTENSION -> R.drawable.ic_barcode_24dp;
-            case PDF_417 -> R.drawable.ic_pdf_417_code_24dp;
-            case DATA_MATRIX -> R.drawable.ic_data_matrix_code_24dp;
-            case AZTEC -> R.drawable.ic_aztec_code_24dp;
-        };
+        @DrawableRes int codeTypeDrawableRes = Utils.getBarcodeFormatIcon(historyItem.getFormat());
         Glide.with(activity).load(AppCompatResources.getDrawable(activity, codeTypeDrawableRes)).placeholder(AppCompatResources.getDrawable(activity, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryTypeImage);
     }
 

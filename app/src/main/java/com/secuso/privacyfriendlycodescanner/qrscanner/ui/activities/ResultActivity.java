@@ -14,9 +14,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -26,6 +28,7 @@ import com.journeyapps.barcodescanner.BarcodeResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.QRCodeImageDialogFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.RawDataDialogFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.CalendarResultFragment;
@@ -173,6 +176,13 @@ public class ResultActivity extends AppCompatActivity {
         ImageView qrImageView = findViewById(R.id.activity_result_qr_image);
         TextView qrTypeText = findViewById(R.id.textView);
         TextView timestampTextView = findViewById(R.id.textViewTimestamp);
+        TextView codeTypeText = findViewById(R.id.textViewCodeType);
+        ImageView codeTypeImageView = findViewById(R.id.item_history_type_image);
+
+        @DrawableRes int codeTypeDrawableRes = Utils.getBarcodeFormatIcon(viewModel.currentHistoryItem.getFormat());
+        Glide.with(this).load(AppCompatResources.getDrawable(this, codeTypeDrawableRes)).placeholder(AppCompatResources.getDrawable(this, R.drawable.ic_no_image_accent_24dp)).into(codeTypeImageView);
+
+        codeTypeText.setText(viewModel.currentHistoryItem.getFormat().toString());
 
         Glide.with(this).load(viewModel.mCodeImage).into(qrImageView);
         qrTypeText.setText(Contents.Type.parseParsedResultType(viewModel.mParsedResult.getType()).toLocalizedString(getApplicationContext()));
