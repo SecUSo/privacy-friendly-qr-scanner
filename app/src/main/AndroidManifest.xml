@@ -66,8 +66,20 @@
             android:parentActivityName=".ui.activities.ScannerActivity" />
         <activity
             android:name=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:exported="true"
             android:label="@string/QRGenerator"
-            android:parentActivityName=".ui.activities.ScannerActivity" />
+            android:parentActivityName=".ui.activities.ScannerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/x-vcard" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.activities.TutorialActivity"
             android:parentActivityName=".ui.activities.ScannerActivity"
