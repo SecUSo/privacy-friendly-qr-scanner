@@ -1,5 +1,27 @@
 # Changelog
 
+<a name="v4.5.0"></a>
+## [QR Scanner (Privacy Friendly) v4.5.0](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.5.0) - 11 Jan 2024
+
+## What's Changed
+* Update changelog for "v4.4.0" by [@github-actions](https://github.com/github-actions) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/186
+* Update dependencies and sdk by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/187
+* Fix crash if wifi password is null for encrypted networks by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/188
+* Fix lint errors by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/189
+* Increase phone number length limit by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/191
+* Add camera selector button by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/194
+* Add zoom functionality by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/193
+* Feat/multiselect entries in scan history by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/197
+* Normalize scheme to fix uppercase urls not working by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/198
+* Add Generator to share dialog by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/201
+* Update to version 4.5.0 by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/202
+
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.4.0...v4.5.0
+
+[Changes][v4.5.0]
+
+
 <a name="v4.4.0"></a>
 ## [QR Scanner (Privacy Friendly) v4.4.0](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.4.0) - 08 Nov 2023
 
@@ -251,6 +273,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.5.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.4.0...v4.5.0
 [v4.4.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.1...v4.4.0
 [v4.3.1]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.0...v4.3.1
 [v4.3.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.2.0...v4.3.0
