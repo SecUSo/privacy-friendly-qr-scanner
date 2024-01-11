@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.secuso.privacyfriendlycodescanner.qrscanner">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission
@@ -12,13 +11,16 @@
         android:maxSdkVersion="28" />
 
     <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
+        android:name=".PFACodeScannerApplication"
         android:allowBackup="true"
         android:fullBackupContent="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
-        android:name=".PFACodeScannerApplication"
         android:installLocation="preferExternal"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -26,14 +28,13 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <provider
-            android:name="androidx.work.impl.WorkManagerInitializer"
-            android:authorities="${applicationId}.workmanager-init"
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
             tools:node="remove" />
 
         <activity
             android:name=".ui.activities.SplashActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,7 +45,6 @@
             android:name=".ui.activities.ScannerActivity"
             android:clearTaskOnLaunch="true"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -66,8 +66,20 @@
             android:parentActivityName=".ui.activities.ScannerActivity" />
         <activity
             android:name=".ui.activities.generator.QrGeneratorOverviewActivity"
+            android:exported="true"
             android:label="@string/QRGenerator"
-            android:parentActivityName=".ui.activities.ScannerActivity" />
+            android:parentActivityName=".ui.activities.ScannerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/x-vcard" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".ui.activities.TutorialActivity"
             android:parentActivityName=".ui.activities.ScannerActivity"
@@ -144,16 +156,15 @@
             android:process=":backup"
             tools:ignore="ExportedService">
             <intent-filter>
-                <action
-                    android:name="org.secuso.privacyfriendlybackup.api.pfa.PFAAuthService" />
+                <action android:name="org.secuso.privacyfriendlybackup.api.pfa.PFAAuthService" />
             </intent-filter>
         </service>
 
         <service
             android:name=".QuickTileService"
+            android:exported="true"
             android:icon="@drawable/ic_tile"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
 
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />

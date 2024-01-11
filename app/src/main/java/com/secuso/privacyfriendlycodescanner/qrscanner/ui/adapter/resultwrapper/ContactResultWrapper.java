@@ -23,17 +23,17 @@ public class ContactResultWrapper {
     public int getDataCount() {
         int itemCount = 0;
 
-        if(hasNames() || hasNickNames() || hasPronunciation())  itemCount ++;
-                                                                itemCount += getPhoneNumberCount();
-                                                                itemCount += getEmailCount();
-        if(hasInstantMessenger())                               itemCount ++;
-        if(hasNote())                                           itemCount ++;
-                                                                itemCount += getAddressCount();
-        if(hasOrganisation())                                   itemCount ++;
-        if(hasBirthday())                                       itemCount ++;
-        if(hasTitle())                                          itemCount ++;
-                                                                itemCount += getUrlCount();
-                                                                itemCount += getGeoCount();
+        if (hasNames() || hasNickNames() || hasPronunciation()) itemCount++;
+        itemCount += getPhoneNumberCount();
+        itemCount += getEmailCount();
+        if (hasInstantMessenger()) itemCount++;
+        if (hasNote()) itemCount++;
+        itemCount += getAddressCount();
+        if (hasOrganisation()) itemCount++;
+        if (hasBirthday()) itemCount++;
+        if (hasTitle()) itemCount++;
+        itemCount += getUrlCount();
+        itemCount += getGeoCount();
 
         return itemCount;
     }
@@ -41,58 +41,58 @@ public class ContactResultWrapper {
     public int getDataIndex(int position) {
         int itemCount = 0;
 
-        if(hasNames() || hasNickNames() || hasPronunciation())  itemCount++;
-        if(position < itemCount) {
+        if (hasNames() || hasNickNames() || hasPronunciation()) itemCount++;
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
         itemCount += getPhoneNumberCount();
-        if(position < itemCount) {
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
         itemCount += getEmailCount();
-        if(position < itemCount) {
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
-        if(hasInstantMessenger()) itemCount ++;
-        if(position < itemCount) {
+        if (hasInstantMessenger()) itemCount++;
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
-        if(hasNote()) itemCount ++;
-        if(position < itemCount) {
+        if (hasNote()) itemCount++;
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
         itemCount += getAddressCount();
-        if(position < itemCount) {
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
-        if(hasOrganisation()) itemCount ++;
-        if(position < itemCount) {
+        if (hasOrganisation()) itemCount++;
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
-        if(hasBirthday()) itemCount ++;
-        if(position < itemCount) {
+        if (hasBirthday()) itemCount++;
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
-        if(hasTitle()) itemCount ++;
-        if(position < itemCount) {
+        if (hasTitle()) itemCount++;
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
         itemCount += getUrlCount();
-        if(position < itemCount) {
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
         itemCount += getGeoCount();
-        if(position < itemCount) {
+        if (position < itemCount) {
             return itemCount - position - 1;
         }
 
@@ -109,48 +109,49 @@ public class ContactResultWrapper {
     }
 
     public String getPronunciation() {
-        if(hasPronunciation() && !result.getPronunciation().isEmpty()) {
+        if (hasPronunciation() && !result.getPronunciation().isEmpty()) {
             return result.getPronunciation();
         }
         return "";
     }
 
     public String getAddressType(int index) {
-        if(hasAddressType(index)) {
+        if (hasAddressType(index)) {
             return result.getAddressTypes()[index];
         }
         return "";
     }
 
     public String getPhoneNumber(int index) {
-        if(hasPhoneNumbers() && result.getPhoneNumbers().length > 0) {
+        if (hasPhoneNumbers() && result.getPhoneNumbers().length > 0) {
             return result.getPhoneNumbers()[index];
         }
         return "";
     }
 
     public String getUrl(int index) {
-        if(hasUrls() && result.getURLs().length > 0) {
+        if (hasUrls() && result.getURLs().length > 0) {
             return result.getURLs()[index];
         }
         return "";
     }
+
     public String getGeo(int index) {
-        if(hasGeo() && result.getGeo().length > 0) {
+        if (hasGeo() && result.getGeo().length > 0) {
             return result.getGeo()[index];
         }
         return "";
     }
 
     public String getEmail(int index) {
-        if(hasEmails() && result.getEmails().length > 0) {
+        if (hasEmails() && result.getEmails().length > 0) {
             return result.getEmails()[index];
         }
         return "";
     }
 
     public String getEmailType(int index) {
-        if(hasEmailType(index)) {
+        if (hasEmailType(index)) {
             return result.getEmailTypes()[index];
         }
         return "";
@@ -165,7 +166,7 @@ public class ContactResultWrapper {
     }
 
     public String getPhoneNumberType(int index) {
-        if(hasPhoneNumberType(index)) {
+        if (hasPhoneNumberType(index)) {
             return result.getPhoneTypes()[index];
         }
         return "";
@@ -176,7 +177,7 @@ public class ContactResultWrapper {
     }
 
     public String getAddress(int index) {
-        if(hasAddresses() && result.getAddresses().length > 0) {
+        if (hasAddresses() && result.getAddresses().length > 0) {
             return result.getAddresses()[index];
         }
         return "";
@@ -213,55 +214,70 @@ public class ContactResultWrapper {
     public boolean hasNames() {
         return result.getNames() != null;
     }
+
     public boolean hasNickNames() {
         return result.getNicknames() != null;
     }
+
     public boolean hasPronunciation() {
         return result.getPronunciation() != null;
     }
+
     public boolean hasPhoneNumbers() {
         return result.getPhoneNumbers() != null;
     }
+
     public boolean hasPhoneTypes() {
         return result.getPhoneTypes() != null;
     }
+
     public boolean hasEmails() {
         return result.getEmails() != null;
     }
+
     public boolean hasEmailTypes() {
         return result.getEmailTypes() != null;
     }
+
     public boolean hasInstantMessenger() {
         return result.getInstantMessenger() != null;
     }
+
     public boolean hasNote() {
         return result.getNote() != null;
     }
+
     public boolean hasAddresses() {
         return result.getAddresses() != null;
     }
+
     public boolean hasAddressTypes() {
         return result.getAddressTypes() != null;
     }
+
     public boolean hasOrganisation() {
         return result.getOrg() != null;
     }
+
     public boolean hasBirthday() {
         return result.getBirthday() != null;
     }
+
     public boolean hasTitle() {
         return result.getTitle() != null;
     }
+
     public boolean hasUrls() {
         return result.getURLs() != null;
     }
+
     public boolean hasGeo() {
         return result.getGeo() != null;
     }
 
     void append(String value, StringBuilder sb) {
-        if(value != null) {
-            if(sb.length() > 0) {
+        if (value != null) {
+            if (sb.length() > 0) {
                 sb.append(" ");
             }
             sb.append(value);
@@ -269,8 +285,8 @@ public class ContactResultWrapper {
     }
 
     void append(String[] values, StringBuilder sb) {
-        if(values != null) {
-            for(String value : values) {
+        if (values != null) {
+            for (String value : values) {
                 append(value, sb);
             }
         }

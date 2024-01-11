@@ -209,6 +209,7 @@
     <string name="selected_item">Artikel ausgewählt</string>
     <string name="removed_item">Artikel entfernt</string>
     <string name="selected_items">Artikel ausgewählt</string>
+    <string name="entries_selected">%1$d ausgewählt</string>
     <string name="removed_items">Artikel entfernt</string>
     <string name="canncelled_scan">Sie haben den Scanvorgang abgebrochen</string>
     <string name="Scan_qr">Scan</string>
@@ -267,6 +268,7 @@
 
     <!-- ResultFragment -->
     <string name="unsupported_wifi_encryption">Diese WiFi-Verschlüsselung wird derzeit nicht unterstützt: %1$s</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">Ohne Passwort kann keine Verbindung zu einem verschlüsselten WiFi-Netzwerk hergestellt werden.</string>
     <string name="ssid_value">SSID: %1$s</string>
     <string name="encryption_value">Verschlüsselung: %1$s</string>
     <string name="password_value">Passwort: %1$s</string>

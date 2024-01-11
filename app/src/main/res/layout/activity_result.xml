@@ -44,14 +44,45 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/qqr" />
 
+                    <ImageView
+                        android:id="@+id/item_history_type_image"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="QR-Code"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        app:layout_constraintBottom_toTopOf="@+id/textView"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@id/activity_result_qr_image"
+                        app:layout_constraintTop_toTopOf="@id/activity_result_qr_image"
+                        app:srcCompat="@drawable/ic_no_image_accent_24dp"
+                        app:tint="?attr/colorHistoryIcons" />
+
+                    <TextView
+                        android:id="@+id/textViewCodeType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="QR-Code"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        app:layout_constraintBottom_toTopOf="@+id/textView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@id/item_history_type_image"
+                        app:layout_constraintTop_toTopOf="@id/activity_result_qr_image" />
+
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
                         android:text="Error"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         app:layout_constraintBottom_toBottomOf="@id/activity_result_qr_image"
@@ -75,12 +106,12 @@
                     <Button
                         android:id="@+id/btnRawData"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:textColor="?attr/colorAccent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="2dp"
                         android:text="@string/raw_data"
+                        android:textColor="?attr/colorAccent"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent" />
 

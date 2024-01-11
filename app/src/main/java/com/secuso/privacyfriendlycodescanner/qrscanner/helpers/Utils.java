@@ -6,6 +6,8 @@ import static com.google.zxing.ResultMetadataType.ERROR_CORRECTION_LEVEL;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 
+import androidx.annotation.DrawableRes;
+
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
@@ -14,6 +16,7 @@ import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import com.journeyapps.barcodescanner.BarcodeResult;
+import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 
 import java.util.EnumMap;
@@ -44,6 +47,18 @@ public class Utils {
             default:
                 return BarcodeFormat.QR_CODE;
         }
+    }
+
+    @DrawableRes
+    public static Integer getBarcodeFormatIcon(BarcodeFormat format) {
+        return switch (format) {
+            case QR_CODE -> R.drawable.ic_baseline_qr_code_24dp;
+            case MAXICODE -> R.drawable.ic_maxicode_24dp;
+            case CODABAR, CODE_39, CODE_93, CODE_128, EAN_8, EAN_13, ITF, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, UPC_EAN_EXTENSION -> R.drawable.ic_barcode_24dp;
+            case PDF_417 -> R.drawable.ic_pdf_417_code_24dp;
+            case DATA_MATRIX -> R.drawable.ic_data_matrix_code_24dp;
+            case AZTEC -> R.drawable.ic_aztec_code_24dp;
+        };
     }
 
     public static Bitmap generateCode(String data, BarcodeFormat format, Map<EncodeHintType, Object> hints, Map<ResultMetadataType, Object> metadata) {

@@ -33,8 +33,6 @@ class PFACodeScannerApplication : MultiDexApplication(), Configuration.Provider 
         }
     }
 
-    override fun getWorkManagerConfiguration(): Configuration {
-        return Configuration.Builder().setMinimumLoggingLevel(Log.INFO).build()
-    }
+    override val workManagerConfiguration = Configuration.Builder().setMinimumLoggingLevel(Log.INFO).build()
 
 }

@@ -56,8 +56,8 @@ public abstract class AppDatabase extends RoomDatabase {
 
                     while (!c.isAfterLast()) {
                         items[i] = new HistoryItem();
-                        items[i].set_id(c.getInt(c.getColumnIndex("_id")));
-                        items[i].setText(c.getString(c.getColumnIndex("text")));
+                        items[i].set_id(c.getInt(c.getColumnIndexOrThrow("_id")));
+                        items[i].setText(c.getString(c.getColumnIndexOrThrow("text")));
                         items[i].setImage(Utils.generateCode(items[i].getText(), BarcodeFormat.QR_CODE, null));
 
                         i++;

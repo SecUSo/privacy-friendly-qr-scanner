@@ -4,19 +4,19 @@
     android:orientation="vertical">
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:nestedScrollingEnabled="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:fillViewport="true"
-        android:layout_above="@+id/btnProceed"
-        android:layout_alignParentTop="true">
+        android:nestedScrollingEnabled="false">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp" >
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/hints4"
@@ -33,8 +33,8 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center_horizontal"
                 android:text="@string/domain"
-                android:textSize="15sp"
-                android:textIsSelectable="true" />
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
 
             <CheckBox
                 android:id="@+id/checkBoxKnowRisks"
@@ -51,12 +51,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="@string/further_info"
-                android:textSize="15sp"
-                android:linksClickable="true"
-                android:enabled="true"
                 android:clickable="true"
-                android:focusable="true" />
+                android:enabled="true"
+                android:focusable="true"
+                android:linksClickable="true"
+                android:text="@string/further_info"
+                android:textSize="15sp" />
 
         </LinearLayout>
     </ScrollView>

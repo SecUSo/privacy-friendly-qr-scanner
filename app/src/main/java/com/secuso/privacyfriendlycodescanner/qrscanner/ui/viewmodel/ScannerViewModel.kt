@@ -8,25 +8,46 @@ import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
 import android.util.Log
+import android.view.ScaleGestureDetector
+import android.view.ScaleGestureDetector.SimpleOnScaleGestureListener
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.google.zxing.*
+import com.google.zxing.BinaryBitmap
+import com.google.zxing.DecodeHintType
+import com.google.zxing.MultiFormatReader
+import com.google.zxing.NotFoundException
+import com.google.zxing.RGBLuminanceSource
+import com.google.zxing.Result
 import com.google.zxing.common.HybridBinarizer
 import com.journeyapps.barcodescanner.BarcodeResult
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.util.*
+import java.util.EnumMap
 
 class ScannerViewModel(application: Application) : AndroidViewModel(application) {
-    private val scanResult: MutableLiveData<BarcodeResult> = MutableLiveData()
+    private val scanResult: MutableLiveData<BarcodeResult?> = MutableLiveData()
     private val processingScan: MutableLiveData<Boolean> = MutableLiveData(false)
     private val scanComplete: MutableLiveData<Boolean> = MutableLiveData(false)
 
+    val onScaleGestureListener = CustomOnScaleGestureListener(this)
+    private var _cameraZoomLevel: MutableLiveData<Float> = MutableLiveData(0.0f);
 
-    fun getScanResult(): LiveData<BarcodeResult> {
+    val cameraZoomLevel: LiveData<Float>
+        get() = _cameraZoomLevel
+
+    class CustomOnScaleGestureListener(private val viewModel: ScannerViewModel) : SimpleOnScaleGestureListener() {
+        override fun onScale(detector: ScaleGestureDetector): Boolean {
+            val scaleFactor = detector.scaleFactor
+            val timeDelta = detector.timeDelta.toFloat()
+            viewModel._cameraZoomLevel.value = 1f.coerceAtMost(0f.coerceAtLeast(viewModel._cameraZoomLevel.value!! + (scaleFactor - 1.0f) * 0.03f * timeDelta))
+            return true
+        }
+    }
+
+    fun getScanResult(): LiveData<BarcodeResult?> {
         return scanResult
     }
 

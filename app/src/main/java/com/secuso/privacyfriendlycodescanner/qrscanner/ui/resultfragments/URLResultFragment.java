@@ -19,6 +19,8 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+
 import com.google.zxing.client.result.URIParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
@@ -38,7 +40,7 @@ public class URLResultFragment extends ResultFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
 
         View v = inflater.inflate(R.layout.fragment_result_url, container, false);
@@ -66,7 +68,7 @@ public class URLResultFragment extends ResultFragment {
         int end = start + host.length();
 
         TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = getContext().getTheme();
+        Resources.Theme theme = requireContext().getTheme();
         theme.resolveAttribute(R.attr.colorURLHighlight, typedValue, true);
         int highlightColor = typedValue.data;
 
@@ -93,8 +95,8 @@ public class URLResultFragment extends ResultFragment {
         if (!checked) {
             Toast.makeText(context, R.string.conform_url, Toast.LENGTH_LONG).show();
         } else {
-            String caption = "";
-            String qrurl3 = "";
+            String caption;
+            String qrurl3;
             final String lowercase_qrurl = qrurl.toLowerCase();
             if (!lowercase_qrurl.startsWith("http://") && !lowercase_qrurl.startsWith("https://")) {
                 qrurl3 = "http://" + qrurl;
@@ -105,7 +107,7 @@ public class URLResultFragment extends ResultFragment {
                 startActivity(Intent.createChooser(url, caption));
             } else {
                 Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
-                url.setData(Uri.parse(qrurl));
+                url.setData(Uri.parse(qrurl).normalizeScheme());
                 caption = getResources().getStringArray(R.array.url_array)[0];
                 startActivity(Intent.createChooser(url, caption));
 

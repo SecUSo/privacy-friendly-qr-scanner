@@ -1,11 +1,11 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,10 +13,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.google.zxing.client.result.ResultParser;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.databinding.ItemHistoryCodeBinding;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.HistoryActivity;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ResultActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.HistoryItemViewModel;
 
 import java.util.ArrayList;
@@ -29,12 +32,14 @@ import java.util.List;
  */
 public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryItemViewHolder> {
 
-    private final Context context;
+    private final HistoryActivity activity;
     private final List<HistoryItem> historyEntries;
+    private final DeleteActionMode deleteActionMode;
 
-    public HistoryAdapter(Context context) {
-        this.context = context;
+    public HistoryAdapter(HistoryActivity activity, DeleteActionMode deleteActionMode) {
+        this.activity = activity;
         this.historyEntries = new ArrayList<>();
+        this.deleteActionMode = deleteActionMode;
 
         setHasStableIds(true);
     }
@@ -61,48 +66,38 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
     public void onBindViewHolder(@NonNull HistoryItemViewHolder historyItemViewHolder, int i) {
         HistoryItem historyItem = historyEntries.get(i);
         ItemHistoryCodeBinding binding = historyItemViewHolder.binding;
-        HistoryItemViewModel viewModel = new HistoryItemViewModel(context, historyItem);
+        HistoryItemViewModel viewModel = new HistoryItemViewModel(activity, historyItem);
         binding.setViewModel(viewModel);
-        binding.itemView.setOnClickListener(viewModel.onClickItem());
-        binding.itemView.setOnLongClickListener(viewModel.onLongClickItem());
+
+        binding.itemView.setOnLongClickListener(v -> {
+            if (!deleteActionMode.isDeleteModeActive()) {
+                ((AppCompatActivity) v.getContext()).startActionMode(deleteActionMode);
+                deleteActionMode.selectItem(historyItemViewHolder);
+            } else {
+                deleteActionMode.selectItem(historyItemViewHolder);
+            }
+            return true;
+        });
+
+        binding.itemView.setOnClickListener(v -> {
+            if (deleteActionMode.isDeleteModeActive()) {
+                deleteActionMode.selectItem(historyItemViewHolder);
+            } else {
+                ResultActivity.startResultActivity(activity, historyItem);
+            }
+        });
+
+        if (deleteActionMode.isSelectAll()) {
+            binding.itemView.setChecked(true);
+        } else {
+            binding.itemView.setChecked(deleteActionMode.getSelectList().contains(historyItem));
+        }
 
         Contents.Type contentType = Contents.Type.parseParsedResultType(ResultParser.parseResult(historyItem.getResult()).getType());
-        Glide.with(context).load(AppCompatResources.getDrawable(context, contentType.getIcon())).placeholder(AppCompatResources.getDrawable(context, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryImage);
+        Glide.with(activity).load(AppCompatResources.getDrawable(activity, contentType.getIcon())).placeholder(AppCompatResources.getDrawable(activity, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryImage);
 
-        @DrawableRes Integer codeTypeDrawableRes;
-        switch (historyItem.getFormat()) {
-            case QR_CODE:
-            case MAXICODE:
-                codeTypeDrawableRes = R.drawable.ic_maxicode_24dp;
-                break;
-            case CODABAR:
-            case CODE_39:
-            case CODE_93:
-            case CODE_128:
-            case EAN_8:
-            case EAN_13:
-            case ITF:
-            case RSS_14:
-            case RSS_EXPANDED:
-            case UPC_A:
-            case UPC_E:
-            case UPC_EAN_EXTENSION:
-                codeTypeDrawableRes = R.drawable.ic_barcode_24dp;
-                break;
-            case PDF_417:
-                codeTypeDrawableRes = R.drawable.ic_pdf_417_code_24dp;
-                break;
-            case DATA_MATRIX:
-                codeTypeDrawableRes = R.drawable.ic_data_matrix_code_24dp;
-                break;
-            case AZTEC:
-                codeTypeDrawableRes = R.drawable.ic_aztec_code_24dp;
-                break;
-            default:
-                codeTypeDrawableRes = R.drawable.ic_baseline_qr_code_24dp;
-                break;
-        }
-        Glide.with(context).load(AppCompatResources.getDrawable(context, codeTypeDrawableRes)).placeholder(AppCompatResources.getDrawable(context, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryTypeImage);
+        @DrawableRes int codeTypeDrawableRes = Utils.getBarcodeFormatIcon(historyItem.getFormat());
+        Glide.with(activity).load(AppCompatResources.getDrawable(activity, codeTypeDrawableRes)).placeholder(AppCompatResources.getDrawable(activity, R.drawable.ic_no_image_accent_24dp)).into(binding.itemHistoryTypeImage);
     }
 
     @Override
@@ -110,9 +105,17 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryI
         return historyEntries.size();
     }
 
+    public void deleteEntry(HistoryItem item) {
+        AppRepository.getInstance(activity).deleteHistoryEntry(item);
+    }
+
     @Override
     public long getItemId(int i) {
         return historyEntries.get(i).get_id();
+    }
+
+    public List<HistoryItem> getHistoryEntries() {
+        return historyEntries;
     }
 
     public static class HistoryItemViewHolder extends RecyclerView.ViewHolder {

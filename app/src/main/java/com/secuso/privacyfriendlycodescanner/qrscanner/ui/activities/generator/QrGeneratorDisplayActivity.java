@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -84,6 +85,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         Button btnstore = findViewById(R.id.btnStore);
         barcodeFormatMenu = findViewById(R.id.editBarcodeFormat);
         errorCorrectionMenu = findViewById(R.id.editErrorCorrection);
+        TextView codeContentTextView = findViewById(R.id.codeContentTextView);
 
         if (Build.VERSION.SDK_INT < 19) {
             barcodeFormats = new String[]{BarcodeFormat.QR_CODE.name(), BarcodeFormat.CODE_128.name()};
@@ -101,6 +103,8 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         Bundle QRData = getIntent().getExtras();//from QRGenerator
         qrInputText = QRData.getString("gn");
         qrInputType = (Contents.Type) QRData.getSerializable("type");
+
+        codeContentTextView.setText(qrInputText);
 
         setTitle(qrInputType.toLocalizedString(getApplicationContext()));
 
