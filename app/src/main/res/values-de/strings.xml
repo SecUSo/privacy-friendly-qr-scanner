@@ -319,4 +319,7 @@
     <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
     <string name="item_result_calendar_title">Titel:</string>
     <string name="item_result_calendar_description">Beschreibung:</string>
+    <string name="item_result_calendar_location">Ort:</string>
+    <string name="item_result_calendar_start">Beginn:</string>
+    <string name="item_result_calendar_end">Ende:</string>
 </resources>
