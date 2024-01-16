@@ -94,16 +94,6 @@
             android:label="URL"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity" />
         <activity
-            android:name=".ui.activities.generator.MailEnterActivity"
-            android:label="E-Mail"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".ui.activities.generator.TelEnterActivity"
-            android:label="Phone number"
-            android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"
-            android:windowSoftInputMode="adjustResize" />
-        <activity
             android:name=".ui.activities.generator.UrlEnterActivity"
             android:label="URL"
             android:parentActivityName=".ui.activities.generator.QrGeneratorOverviewActivity"

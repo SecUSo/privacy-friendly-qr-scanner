@@ -138,9 +138,7 @@
     </string-array>
     <string-array name="generator_array">
         <item>Metin</item>
-        <item>E-posta</item>
         <item>URL</item>
-        <item>Telefon numarası</item>
         <item>SMS</item>
         <item>Konum belirleme</item>
         <item>MeCard</item>

@@ -104,9 +104,7 @@
     </string-array>
     <string-array name="generator_array">
         <item>Text</item>
-        <item>E-Mail</item>
         <item>URL</item>
-        <item>Telefonnummer</item>
         <item>SMS</item>
         <item>Geo Standort</item>
         <item>MeCard</item>
