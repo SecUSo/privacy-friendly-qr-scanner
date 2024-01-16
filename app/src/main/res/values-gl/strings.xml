@@ -139,7 +139,9 @@
     </string-array>
     <string-array name="generator_array">
         <item>Texto</item>
+        <item>Email</item>
         <item>URL</item>
+        <item>Número de teléfono</item>
         <item>SMS</item>
         <item>Localización Xeo</item>
         <item>MeCard</item>

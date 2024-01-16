@@ -55,14 +55,16 @@ public class QrGeneratorOverviewActivity extends AppCompatActivity {
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Intent intent = switch (position) {
                 case 0 -> new Intent(QrGeneratorOverviewActivity.this, TextEnterActivity.class);
-                case 1 -> new Intent(QrGeneratorOverviewActivity.this, UrlEnterActivity.class);
-                case 2 -> new Intent(QrGeneratorOverviewActivity.this, SmsEnterActivity.class);
-                case 3 -> new Intent(QrGeneratorOverviewActivity.this, GeoLocationEnterActivity.class);
-                case 4 -> new Intent(QrGeneratorOverviewActivity.this, MeCardEnterActivity.class);
-                case 5 -> new Intent(QrGeneratorOverviewActivity.this, BizCardEnterActivity.class);
-                case 6 -> new Intent(QrGeneratorOverviewActivity.this, WifiEnterActivity.class);
-                case 7 -> new Intent(QrGeneratorOverviewActivity.this, VcardEnterActivity.class);
-                case 8 -> new Intent(QrGeneratorOverviewActivity.this, MarketEnterActivity.class);
+                case 1 -> new Intent(QrGeneratorOverviewActivity.this, MailEnterActivity.class);
+                case 2 -> new Intent(QrGeneratorOverviewActivity.this, UrlEnterActivity.class);
+                case 3 -> new Intent(QrGeneratorOverviewActivity.this, TelEnterActivity.class);
+                case 4 -> new Intent(QrGeneratorOverviewActivity.this, SmsEnterActivity.class);
+                case 5 -> new Intent(QrGeneratorOverviewActivity.this, GeoLocationEnterActivity.class);
+                case 6 -> new Intent(QrGeneratorOverviewActivity.this, MeCardEnterActivity.class);
+                case 7 -> new Intent(QrGeneratorOverviewActivity.this, BizCardEnterActivity.class);
+                case 8 -> new Intent(QrGeneratorOverviewActivity.this, WifiEnterActivity.class);
+                case 9 -> new Intent(QrGeneratorOverviewActivity.this, VcardEnterActivity.class);
+                case 10 -> new Intent(QrGeneratorOverviewActivity.this, MarketEnterActivity.class);
                 default -> null;
             };
             startActivity(intent);

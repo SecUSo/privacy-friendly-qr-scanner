@@ -279,7 +279,9 @@
     </string-array>
     <string-array name="generator_array">
         <item>文本</item>
+        <item>电子邮件</item>
         <item>网址</item>
+        <item>电话号码</item>
         <item>短信</item>
         <item>地理位置</item>
         <item>MeCard</item>

@@ -139,7 +139,9 @@
     </string-array>
     <string-array name="generator_array">
         <item>文</item>
+        <item>メールアドレス</item>
         <item>URL</item>
+        <item>電話番号</item>
         <item>ショートメッセージ</item>
         <item>位置情報</item>
         <item>MeCard</item>
