@@ -1,5 +1,21 @@
 # Changelog
 
+<a name="v4.5.7"></a>
+## [QR Scanner (Privacy Friendly) v4.5.7](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.5.7) - 17 Jan 2024
+
+## What's Changed
+* documentation: Added info re: Privacy Friendly Backup by [@jahway603](https://github.com/jahway603) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/199
+* Fix privacy policy issues for Google Play release by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/205
+* Fix crash when scanning barcodes by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/206
+
+## New Contributors
+* [@jahway603](https://github.com/jahway603) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/199
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.0...v4.5.7
+
+[Changes][v4.5.7]
+
+
 <a name="v4.5.0"></a>
 ## [QR Scanner (Privacy Friendly) v4.5.0](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.5.0) - 11 Jan 2024
 
@@ -273,6 +289,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.5.7]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.0...v4.5.7
 [v4.5.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.4.0...v4.5.0
 [v4.4.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.1...v4.4.0
 [v4.3.1]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.0...v4.3.1
