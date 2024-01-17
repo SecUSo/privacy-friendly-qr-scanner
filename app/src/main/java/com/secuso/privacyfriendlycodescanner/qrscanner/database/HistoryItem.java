@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.os.Parcel;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
@@ -28,6 +29,7 @@ public class HistoryItem {
     private Bitmap image;
     @NonNull
     private String text = "";
+    @Nullable
     private byte[] rawBytes;
     private int numBits;
     private ResultPoint[] resultPoints;
