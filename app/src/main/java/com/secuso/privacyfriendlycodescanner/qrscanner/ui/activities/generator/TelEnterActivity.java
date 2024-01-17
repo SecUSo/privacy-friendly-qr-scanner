@@ -20,6 +20,8 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.GeneratorKeybo
 
 public class TelEnterActivity extends AppCompatActivity {
 
+    private static final int REQUEST_SELECT_PHONE = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,5 +55,43 @@ public class TelEnterActivity extends AppCompatActivity {
             }
 
         });
+
+        findViewById(R.id.selectContactButton).setOnClickListener(view -> selectPhoneNumber());
+
+    }
+
+    private void selectPhoneNumber() {
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setType(ContactsContract.CommonDataKinds.Phone.CONTENT_TYPE);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(intent, REQUEST_SELECT_PHONE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == REQUEST_SELECT_PHONE && resultCode == RESULT_OK) {
+            Uri contactUri = data.getData();
+            String[] projection =
+                    {
+                            ContactsContract.CommonDataKinds.Phone._ID,
+                            ContactsContract.CommonDataKinds.Phone.NUMBER,
+                            ContactsContract.CommonDataKinds.Phone.TYPE,
+                            ContactsContract.CommonDataKinds.Phone.LABEL
+                    };
+            try {
+                Cursor cursor = getContentResolver().query(contactUri, projection, null, null, null);
+                if (cursor.moveToFirst()) {
+                    int phoneNoIdx = cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER);
+                    String phoneNo = cursor.getString(phoneNoIdx);
+                    ((EditText) findViewById(R.id.editPhone)).setText(phoneNo);
+                }
+                cursor.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
