@@ -18,7 +18,7 @@
     <string name="scan_text">Platzieren Sie den Scanner über dem Code den Sie decodieren möchten.</string>
     <string name="about_author">Autoren: </string>
     <string name="about_author_string">%s und Mitwirkende.</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der "Privacy Friendly Apps" entwickelt von SECUSO. Quelltext lizenziert unter GPLv3. Bilder copyright Karlsruher Institut für Technologie und Google Inc.</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von SECUSO. Quelltext lizenziert unter GPLv3. Bilder copyright Karlsruher Institut für Technologie und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
     <string name="app_name">QR Scanner</string>
     <string name="version_number">Version v%s</string>
