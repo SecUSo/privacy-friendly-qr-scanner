@@ -224,4 +224,7 @@
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Strona SECUSO</a></string>
     <string name="activity_history_list_item_qr_image_descriptor">Kod QR</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repozytorium na GitHubie</a></string>
+    <string name="entries_selected">%1$d wybrane</string>
+    <string name="switch_camera">Przełącz aparat</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">Nie można nawiązać połączenia z szyfrowaną siecią Wi-Fi bez hasła.</string>
 </resources>
