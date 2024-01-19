@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
+import androidx.annotation.Nullable;
 import androidx.room.TypeConverter;
 
 import com.google.gson.Gson;
@@ -16,15 +17,15 @@ import java.io.ByteArrayOutputStream;
 /**
  * This class offers type converters for the room database.
  *
- * @see AppDatabase
- *
  * @author Christopher Beckmann
+ * @see AppDatabase
  */
 public final class Converters {
 
     @TypeConverter
+    @Nullable
     public static String encodeImage(Bitmap bitmap) {
-        if(bitmap == null) return null;
+        if (bitmap == null) return null;
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
         byte[] byteArray = byteArrayOutputStream.toByteArray();
@@ -32,13 +33,15 @@ public final class Converters {
     }
 
     @TypeConverter
+    @Nullable
     public static Bitmap decodeImage(String encodedImage) {
-        if(encodedImage == null) return null;
+        if (encodedImage == null) return null;
         byte[] decodedBytes = Base64.decode(encodedImage, Base64.NO_WRAP);
         return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
     }
 
     @TypeConverter
+    @Nullable
     public static BarcodeFormat fromText(String text) {
         try {
             return BarcodeFormat.valueOf(text);
@@ -53,12 +56,14 @@ public final class Converters {
     }
 
     @TypeConverter
+    @Nullable
     public static String fromResultPoints(ResultPoint[] rp) {
         Gson gson = new Gson();
         return gson.toJson(rp);
     }
 
     @TypeConverter
+    @Nullable
     public static ResultPoint[] convertResultPointFromJson(String jsonString) {
         Gson gson = new Gson();
         return gson.fromJson(jsonString, ResultPoint[].class);
