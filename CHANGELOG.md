@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="v4.5.8"></a>
+## [QR Scanner (Privacy Friendly) v4.5.8](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.5.8) - 19 Jan 2024
+
+## What's Changed
+* Fix error if database values are null by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/210
+* Fix quick tile not working on Android 14+ by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/209
+* Translations update from Hosted Weblate by [@weblate](https://github.com/weblate) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/195
+
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.7...v4.5.8
+
+[Changes][v4.5.8]
+
+
 <a name="v4.5.7"></a>
 ## [QR Scanner (Privacy Friendly) v4.5.7](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.5.7) - 17 Jan 2024
 
@@ -289,6 +303,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.5.8]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.7...v4.5.8
 [v4.5.7]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.0...v4.5.7
 [v4.5.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.4.0...v4.5.0
 [v4.4.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.3.1...v4.4.0
