@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="v4.5.9"></a>
+## [QR Scanner (Privacy Friendly) v4.5.9](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.5.9) - 24 Jan 2024
+
+## What's Changed
+* Fix null pointer if contact has no name by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/214
+
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.8...v4.5.9
+
+[Changes][v4.5.9]
+
+
 <a name="v4.5.8"></a>
 ## [QR Scanner (Privacy Friendly) v4.5.8](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.5.8) - 19 Jan 2024
 
@@ -303,6 +315,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.5.9]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.8...v4.5.9
 [v4.5.8]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.7...v4.5.8
 [v4.5.7]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.0...v4.5.7
 [v4.5.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.4.0...v4.5.0
