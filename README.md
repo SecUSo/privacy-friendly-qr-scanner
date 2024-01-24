@@ -32,7 +32,7 @@ Further development requires Android Studio, we recommend to use the latest vers
 ### API Reference
 
 Mininum SDK: 17
-Target SDK: 32 
+Target SDK: 34
 
 This app uses the help of the [ZXing Projekt](https://github.com/zxing).
 
