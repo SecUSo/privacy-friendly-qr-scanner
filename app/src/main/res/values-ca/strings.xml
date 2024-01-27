@@ -220,4 +220,11 @@
     <string name="lastname">Cognoms</string>
     <string name="confirmation">Confirmació</string>
     <string name="help_permission1_description">Aquesta aplicació requereix el permís per a accedir a la càmera, que s\'usa per a escanejar codis de barres i codis QR.</string>
+    <string name="privacy_friendly">Aquesta aplicació pertany al grup d\'aplicacions respectuoses amb la privadesa, desenvolupat per SECUSO. El codi font és llicenciat sota la llicència GPLv3. Copyright de Karlsruhe Institute of Technology i Google Inc.</string>
+    <string name="welcome_text">L\'aplicació PRIVACY FRIENDLY QR Code Scanner us permet escanejar codis de barres i codis QR amb diversos continguts, alhora que requereix un conjunt mínim de permisos i admet la detecció d\'enllaços maliciosos.</string>
+    <string name="help_whatis_answer">Amb PRIVACY FRIENDLY QR Scanner podeu escanejar i generar codis de barres i codis QR amb diversos continguts. També podeu copiar i compartir un codi QR escanejat amb altres aplicacions, a més podeu desar el codi QR generat a la galeria i compartir-lo també.</string>
+    <string name="help_privacy_answer">Una aplicació respectuosa amb la privadesa d\'exemple no requereix cap permís. A més, no inclou cap mecanisme de seguiment ni publicitat.</string>
+    <string name="help_permission_answer">L\'aplicació requereix el permís d\'accés a la càmera, que s\'utilitza per a escanejar codis de barres i codis QR. L\'aplicació també requereix el permís per a accedir a l\'emmagatzematge per a escanejar codis des de les imatges o desar els codis generats en imatges.</string>
+    <string name="no_code_in_image_explanation">Malauradament, no s\'ha pogut trobar cap codi en aquesta imatge. Per a millorar el resultat, podeu escapçar o redreçar la imatge i tornar-ho a provar.</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">Sense contrasenya, no es pot establir cap connexió a una xarxa WiFi xifrada.</string>
 </resources>
