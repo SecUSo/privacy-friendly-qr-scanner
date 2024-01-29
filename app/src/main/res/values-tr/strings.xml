@@ -21,13 +21,13 @@
     <string name="QRScanner">Karekod Tarayıcı</string>
     <string name="QRGenerator">Karekod Oluşturucu</string>
     <string name="History">Geçmiş</string>
-    <string name="slide1_heading">Hoşgeldiniz!</string>
+    <string name="slide1_heading">Hoş geldiniz!</string>
     <string name="slide1_text">Gizlilik dostu Karekod Tarayıcısına hoş geldiniz. Bu rehber bilmeniz gereken en önemli şeyleri kapsayacaktır.</string>
     <string name="slide2_heading">Orada ne var?</string>
     <string name="text_slide2">Bu uygulama ile karekodu hem tarayabilir hem de oluşturabilirsiniz.</string>
     <string name="slide3_heading">Diğer özellikler</string>
     <string name="text_slide3">Taradığınız karekod geçmişe kaydedilebilir. Ayrıca paylaşabilir veya kopyalayabilirsiniz.</string>
-    <string name="wecome">Hoşgeldiniz!</string>
+    <string name="wecome">Hoş geldiniz!</string>
     <string name="skip">Atla</string>
     <string name="next">Sonraki</string>
     <string name="help_">Yardım</string>
@@ -38,8 +38,8 @@
     <string name="about_affiliation">ile bağlantılı olarak</string>
     <string name="privacy_friendly">Bu uygulama SECUSO tarafından geliştirilen Gizlilik Dostu Uygulamalar grubuna aittir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı Karlsruhe Teknoloji Enstitüsü ve Google Inc\'e aittir.</string>
     <string name="more_info">Daha fazla bilgi için:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Deposu</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-İnternet-Sitesi</a></string>
     <string name="about_libraries">Kullanılan kütüphaneler:</string>
     <string name="app_name_long">Gizlilik Dostu Karekod Tarayıcı</string>
     <string name="version_number">Sürüm v%s</string>
@@ -50,7 +50,7 @@
     <string name="knowRisks">Bağlantıyı kontrol ettim ve web sitesini ziyaret etmek istiyorum.</string>
     <string name="domain">Alan Adı</string>
     <string name="urlExplanation">Karekodlar kişisel verilerinizi tehlikeye atabilecek (kimlik avı web sitesi) veya cihazınıza kötü amaçlı yazılım (ör. virüsler) aktarabilecek sahte bir web sitesine yönlendiren bağlantılar içerebilir.\n\nSonuç olarak, aşağıdaki bağlantının beklediğiniz bağlantı olup olmadığını <b>kontrol</b> etmelisiniz:</string>
-    <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Information</a> on how to check links.</string>
+    <string name="further_info">Bağlantıların nasıl denetleneceği hakkında <a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">bilgiler</a>.</string>
     <string name="delete_history">Geçmişi silmek istiyor musunuz?</string>
     <string name="ok">Tamam</string>
     <string name="element_removed">Öğe kaldırıldı.</string>
@@ -61,18 +61,18 @@
     <string name="history_disabled">Geçmiş devre dışı</string>
     <string name="to">Alıcı:</string>
     <string name="usability_hint2">Bir kodu tarayamazsanız, cihaz ile kod arasındaki mesafeyi artırın.</string>
-    <string name="description_contact">The QR-Code you scanned contains contact information. In order to <i>import</i> it into your address book, click Proceed.</string>
-    <string name="description_email">The QR-Code you scanned contains an email address. In order to <i>send an email</i> or <i>add it to a contact</i>, click Proceed.</string>
-    <string name="description_send_email">The QR-Code you scanned contains a filled email. In order to <i>send</i> it or <i>add the address a contact</i>, click Proceed.</string>
-    <string name="description_product">The code you scanned contains a product code. In order to <i>search the web</i> for product information, click Proceed.</string>
-    <string name="description_tel">The QR-Code you scanned contains a phone number. In order to <i>start a call</i> or <i>add it to a contact</i>, just click Proceed.</string>
-    <string name="description_sms">The QR-Code you scanned contains an SMS. In order to <i>send</i> the SMS or <i>add the number to a contact</i>, click Proceed.</string>
-    <string name="description_text">The QR-Code you scanned contains plain text. In order to <i>search the web</i> for information, click Proceed.</string>
-    <string name="choose_action">Devam et</string>
+    <string name="description_contact">Tarattığınız QR-Kodu iletişim bilgileri içeriyor. Bu bilgileri adres defterinize <i>aktarmak</i> için İlerle\'ye tıklayın.</string>
+    <string name="description_email">Tarattığınız QR-Kodu bir e-posta adresi içeriyor. <i>E-posta göndermek</i> veya <i>bir kişiye eklemek</i> için İlerle\'ye tıklayın.</string>
+    <string name="description_send_email">Tarattığınız QR-Kodu doldurulmuş bir e-posta içeriyor. <i>Göndermek</i> veya <i>adresi bir kişiye eklemek</i> için İlerle\'ye tıklayın.</string>
+    <string name="description_product">Taradığınız kod bir ürün kodu içeriyor. Ürün bilgilerini <i>internette aramak</i> için İlerle\'ye tıklayın.</string>
+    <string name="description_tel">Taradığınız QR-Kodu bir telefon numarası içeriyor. <i>Bir arama başlatmak</i> veya <i>bir kişiye eklemek</i> için İlerle\'ye tıklayın.</string>
+    <string name="description_sms">Tarattığınız QR-Kodu bir SMS içeriyor. SMS\'i <i>göndermek</i> veya <i>numarayı bir kişiye eklemek</i> için İlerle\'ye tıklayın.</string>
+    <string name="description_text">Taradığınız QR-Kodu düz metin içeriyor. <i>İnternette aramak</i> için İlerle\'ye tıklayın.</string>
+    <string name="choose_action">İlerle</string>
     <string name="abort_action">İptal et</string>
     <string name="proceed">İlerle</string>
     <string name="back">Geri git</string>
-    <string name="choose_action_url">Devam et</string>
+    <string name="choose_action_url">İlerle</string>
     <string name="abort_action_url">İptal et</string>
     <string-array name="text_array">
         <item>Web\'de ara</item>
@@ -239,7 +239,7 @@
     <string name="sms_text">SMS metni</string>
     <string name="mms">MMS</string>
     <string name="network_name">Ağ adı (SSID)</string>
-    <string name="password">Şifre</string>
+    <string name="password">Parola</string>
     <string name="company">Şirket</string>
     <string name="lastname">Soyadı</string>
     <string name="title">Başlık</string>
