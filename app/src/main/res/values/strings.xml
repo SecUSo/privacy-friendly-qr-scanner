@@ -312,7 +312,10 @@
     <string name="Share_via">Share via</string>
     <string name="select_all">Select All</string>
     <string name="selected_1">Selected</string>
-    <string name="entries_selected">%1$d selected</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d entry selected</item>
+        <item quantity="other">%1$d entries selected</item>
+    </plurals>
     <string name="activity_scanner_permission_needed_explanation">The app needs the camera permission in order to scan QR codes.</string>
 
     <string name="select_image_from_gallery_explanation">This function allows you to open images from your gallery and scan codes contained in them. This requires access to the images.</string>
