@@ -223,6 +223,10 @@
     <string name="Share_via">Teilen per</string>
     <string name="select_all">Wählen Sie Alle</string>
     <string name="selected_1">Ausgewählt</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d Eintrag ausgewählt</item>
+        <item quantity="other">%1$d Einträge ausgewählt</item>
+    </plurals>
     <string name="D_all">Alle Einträge löschen</string>
     <string name="History">Historie</string>
     <string name="QRGenerator">QR Generator</string>
