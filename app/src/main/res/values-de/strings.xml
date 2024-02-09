@@ -187,7 +187,6 @@
     <string name="selected_item">Artikel ausgewählt</string>
     <string name="removed_item">Artikel entfernt</string>
     <string name="selected_items">Artikel ausgewählt</string>
-    <string name="entries_selected">%1$d ausgewählt</string>
     <string name="removed_items">Artikel entfernt</string>
     <string name="canncelled_scan">Sie haben den Scanvorgang abgebrochen</string>
     <string name="Scan_qr">Scan</string>
