@@ -23,14 +23,15 @@ class DeleteActionMode(private val historyActivity: HistoryActivity) : ActionMod
     override fun onCreateActionMode(mode: ActionMode, menu: Menu?): Boolean {
         val menuInflater = mode.menuInflater
         menuInflater.inflate(R.menu.multi_delete_menu, menu)
+        mode.title = historyActivity.resources.getQuantityString(R.plurals.entries_selected, 0, 0)
+        ViewModelProvider(historyActivity)[HistoryViewModel::class.java].selectedItemCount.observe(historyActivity) { count: Int ->
+            mode.title = historyActivity.resources.getQuantityString(R.plurals.entries_selected, count, count)
+        }
         return true
     }
 
     override fun onPrepareActionMode(mode: ActionMode, menu: Menu?): Boolean {
         isDeleteModeActive = true
-        ViewModelProvider(historyActivity)[HistoryViewModel::class.java].selectedItemCount.observe(historyActivity) { count: Int? ->
-            mode.title = String.format(historyActivity.resources.getString(R.string.entries_selected), count)
-        }
         return true
     }
 
@@ -68,6 +69,7 @@ class DeleteActionMode(private val historyActivity: HistoryActivity) : ActionMod
         isDeleteModeActive = false
         isSelectAll = false
         selectList.clear()
+        ViewModelProvider(historyActivity)[HistoryViewModel::class.java].setSelectedItemCount(0)
         historyActivity.historyAdapter.notifyDataSetChanged()
     }
 
