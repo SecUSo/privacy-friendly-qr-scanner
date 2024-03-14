@@ -64,13 +64,13 @@
     <string name="to">宛先:</string>
     <string name="subject">題:</string>
     <string name="usability_hint2">近すぎると読み取れないことがあります。なかなか読み取れない場合は離してみてください。</string>
-    <string name="description_contact">スキャンした QR コードには連絡先が含まれています。アドレス帳に<i>インポート</i>するには、「続行」を押してください。</string>
-    <string name="description_email">スキャンした QR コードにはメールアドレスが含まれています。<i>メールを送信</i>したり、<i>アドレス帳に登録</i>したりするには、「続行」を押してください。</string>
-    <string name="description_send_email">スキャンした QR コードにはメールファイルが含まれています。<i>メールを送信</i>したり、<i>メールアドレスをアドレス帳に登録</i>したりするには、「続行」を押してください。</string>
+    <string name="description_contact">スキャンした QR コードは連絡先です。アドレス帳に<i>インポート</i>するには、「続行」を押してください。</string>
+    <string name="description_email">スキャンした QR コードはメールアドレスです。<i>メールを送信</i>したり、<i>アドレス帳に登録</i>したりするには、「続行」を押してください。</string>
+    <string name="description_send_email">スキャンした QR コードはメールファイルです。<i>メールを送信</i>したり、<i>メールアドレスをアドレス帳に登録</i>したりするには、「続行」を押してください。</string>
     <string name="description_product">スキャンしたコードには製品コードが含まれています。製品情報を<i>ウェブで検索</i>するには、「続行」を押してください。</string>
-    <string name="description_tel">スキャンした QR コードには電話番号が含まれています。<i>電話を発信</i>したり、<i>アドレス帳に登録</i>したりするには、「続行」を押してください。</string>
-    <string name="description_sms">スキャンした QR コードにはショートメッセージが含まれています。<i>SMS を送信</i>したり、<i>電話番号をアドレス帳に登録</i>したりするには、「続行」を押してください。</string>
-    <string name="description_text">スキャンした QR コードにはテキストが含まれています。情報を<i>ウェブで検索</i>するには、「続行」を押してください。</string>
+    <string name="description_tel">スキャンした QR コードは電話番号です。<i>電話を発信</i>したり、<i>アドレス帳に登録</i>したりするには、「続行」を押してください。</string>
+    <string name="description_sms">スキャンした QR コードはショートメッセージです。<i>SMS を送信</i>したり、<i>電話番号をアドレス帳に登録</i>したりするには、「続行」を押してください。</string>
+    <string name="description_text">スキャンした QR コードはテキストです。情報を<i>ウェブで検索</i>するには、「続行」を押してください。</string>
     <string name="choose_action">続行</string>
     <string name="abort_action">取り消す</string>
     <string name="proceed">続行</string>
@@ -144,39 +144,39 @@
     <string name="copied_to_clipboard">クリップボードにコピーしました。</string>
     <string name="noname">名前が空欄です</string>
     <string name="title_activity_result_url">リンクです</string>
-    <string name="title_activity_result_text">文章です</string>
-    <string name="title_activity_result_sms">SMSです</string>
+    <string name="title_activity_result_text">テキストです</string>
+    <string name="title_activity_result_sms">SMS です</string>
     <string name="title_activity_result_email">メールアドレスです</string>
-    <string name="title_activity_result_send_email">メールアドレスです</string>
+    <string name="title_activity_result_send_email">メールです</string>
     <string name="title_activity_result_product">製品コードです</string>
     <string name="title_activity_result_tel">電話番号です</string>
-    <string name="title_activity_result_wifi">Wifiです</string>
+    <string name="title_activity_result_wifi">Wifi です</string>
     <string name="title_activity_result_contact">連絡先です</string>
     <string name="action_help">ヘルプ</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">このアプリ「PRIVACY FRIENDLY QR Code Scanner」では、バーコードに加え、様々な内容のQRコードをスキャンできます。必要な権限は最小限。危険なリンクの検知も可能です。</string>
+    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner は、最小限の権限でさまざまな内容のバーコード・QR コードをスキャンできるアプリです。危険なリンクの検知もできます。</string>
     <string name="welcome">ようこそ</string>
-    <string name="viewhelp">ヘルプ</string>
+    <string name="viewhelp">ヘルプを表示</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
-    <string name="help_permission1_description">必要な権限はカメラだけです。</string>
+    <string name="help_permission1_description">アプリに必要な権限は、バーコードと QR コードのスキャンに使用するカメラのみです。</string>
     <string name="help_permission1_heading">カメラ</string>
-    <string name="help_privacy_heading">このアプリ「PRIVACY FRIENDLY QR Scanner」に必要な権限は?</string>
-    <string name="help_category_example">スキャンできない場合は、どうすれば良いですか?</string>
-    <string name="help_overview_heading">このアプリ「PRIVACY FRIENDLY QR Scanner」とは?</string>
-    <string name="help_intro">このアプリ「PRIVACY FRIENDLY QR Scanner」では、バーコードと、様々な内容のQRコードをスキャンできます。</string>
-    <string name="help_whatis_answer">このアプリ「PRIVACY FRIENDLY QR Scanner」では、バーコードと、様々な内容のQRコードをスキャン・作成できます。コードはコピーしたり、他のアプリで開いたりできますし、作成したコードは保存もできます。</string>
+    <string name="help_privacy_heading">PRIVACY FRIENDLY QR Scanner に必要な権限は？</string>
+    <string name="help_category_example">スキャンできない場合の対処法は？</string>
+    <string name="help_overview_heading">PRIVACY FRIENDLY QR Scanner とは？</string>
+    <string name="help_intro">PRIVACY FRIENDLY QR Scanner は、さまざまな内容のバーコードと、QR コードをスキャンできます。</string>
+    <string name="help_whatis_answer">PRIVACY FRIENDLY QR Scanner は、さまざまな内容のバーコードと QR コードをスキャン/作成できます。コードはコピーしたり、他のアプリで共有したりできますし、保存もできます。</string>
     <!--###HELP###-->
-    <string name="help_whatis">このアプリ「PRIVACY FRIENDLY QR Scanner」とは?</string>
-    <string name="help_usability">スキャンできない時は?</string>
-    <string name="help_usability_answer">近過ぎるとスキャンできます。離してみて下さい。</string>
-    <string name="help_privacy">このアプリは、どう個人情報に配慮していますか?</string>
+    <string name="help_whatis">PRIVACY FRIENDLY QR Scanner とは？</string>
+    <string name="help_usability">スキャンできない場合の対処法は？</string>
+    <string name="help_usability_answer">近すぎると読み取れないことがあります。なかなか読み取れない場合は離してみてください。</string>
+    <string name="help_privacy">どこがプライバシーフレンドリー？</string>
     <string name="help_privacy_answer">カメラ以外の権限は使いません。使用者を追跡したり、広告を表示したりもしません。</string>
-    <string name="help_permission">必要な権限は?</string>
-    <string name="help_permission_answer">カメラ以外の権限は使いません。</string>
+    <string name="help_permission">PRIVACY FRIENDLY QR Scanner に必要な権限は？</string>
+    <string name="help_permission_answer">バーコードと QR コードをスキャンするためにカメラ権限を使用します。撮影済みの画像からコードをスキャンしたり、作成したコードを保存したりするためにストレージ権限を使用します。</string>
     <!-- Strings related to SettingsActivity -->
     <!-- Example General settings -->
     <string name="pref_title_enable_history">履歴を保存</string>
@@ -185,8 +185,8 @@
     <string name="pref_keep_duplicates_explanation">保存したコードは「履歴」から開いて下さい</string>
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">検知音</string>
-    <string name="description_Mms">スキャンした QR コードには MMS が含まれています。</string>
-    <string name="geoInfo">スキャンした QR コードには位置情報が含まれています。</string>
+    <string name="description_Mms">スキャンした QR コードは MMS です。</string>
+    <string name="geoInfo">スキャンした QR コードは位置情報です。</string>
     <string name="content_copied">コピーしました。</string>
     <string name="share_via">開く方法を選択:</string>
     <string name="no_content_in_history">履歴は空です</string>
@@ -258,4 +258,5 @@
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
+    <string name="something_went_wrong">何か問題が発生しました。</string>
 </resources>
