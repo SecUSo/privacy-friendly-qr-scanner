@@ -1,0 +1,17 @@
+QR kódy se stávají stále důležitějšími. V některých oblastech dokonce nahradily tradiční čárové kódy. QR kód dokáže pojmout až sedm tisíc znaků a hodí se tak pro složitější obsah, např. vizitky (vCards). QR kód lze tím pádem dnes nalézt na téměř každém reklamním plakátu a vyzývá uživatele k tomu, aby ho svým smartphonem načetl. Není už tedy potřeba psát si ručně poznámku, stačí načíst QR kód. V důsledku toho se v obchodě Google Play nachází mnoho aplikací ke čtení QR kódů. Tato aplikace patří do skupiny aplikací respektujících soukromí (Privacy Friendly Apps) vyvinutých výzkumnou skupinou SECUSO na Technické univerzitě v Darmstadtu. Více informací lze nalézt na secuso.org/pfa
+
+Naše Soukromí respektující čtečka QR se liší ve dvou aspektech:
+
+1. Aplikace Soukromí respektující čtečka QR vyžaduje pouze minimum oprávnění, konkrétně:
+Většina čteček QR kódů v obchodě Google Play vyžaduje různá oprávnění nad rámec těch, která jsou potřeba: např. přístup ke kontaktům a výpisu hovorů nebo stahování dat z internetu. Většina z těchto oprávnění není potřeba k zajištění funkcí, které mají tyto aplikace ve skutečnosti mít.
+
+2. Aplikace Soukromí respektující čtečka QR podporuje své uživatele v detekci podvodných odkazů: QR kódy poskytují útočníkům nové možnosti tím, že mohou obsahovat podvodné odkazy, např. odkazy na phishingové stránky nebo na stránky, za kterých se může automaticky stáhnout škodlivý software. Před návštěvou internetové stránky je tím pádem důležité pečlivě zkontrolovat odkaz. Tím, že je pro uživatele obtížné si podvodných odkazů všimnout, pomáhá mu aplikace Soukromí respektující čtečka QR tím, že zvýrazní doménu (např. pro https://www.secuso.org zvýrazní secuso.org). Aby se aplikace vyhnula tomu, že uživatel odkaz a zejména zvýrazněnou doménu pečlivě nezkontroluje, tak zobrazí informaci o možném podvodu a uživatel musí potvrdit, že odkaz zkontroloval a že je důvěryhodný. Mějte na paměti, že tato informace, zobrazená po načtení QR kódu obsahujícím internetový odkaz, není upravena pro každý odkaz zvlášť. Měla by tedy být brána jako rada, jak by se měl uživatel obecně chovat.
+
+Aplikace Soukromí respektující čtečka QR podporuje většinu obvyklých typů QR kódů. Čárové kódy a další běžně používané kódy jsou také podporovány.
+
+Tato aplikace patří do skupiny soukromí respektujících aplikací, které jsou vyvíjeny výzkumnou skupinou SECUSO. Více informací lze nalézt na https://secuso.org/pfa
+
+Můžete se s námi spojit zde:
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Volné pozice - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php

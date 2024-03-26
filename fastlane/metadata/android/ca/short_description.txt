@@ -1,0 +1,1 @@
+(SECUSO) Un escàner de codis QR respectuós amb la privadesa amb permisos mínims
