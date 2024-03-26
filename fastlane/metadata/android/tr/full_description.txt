@@ -11,7 +11,7 @@ Gizlilik Dostu Karekod Tarayıcı Uygulaması, normal karekod türlerinin çoğu
 
 Uygulama, SECUSO araştırma grubu tarafından geliştirilen gizlilik dostu uygulamalar grubuna aittir. Daha fazla bilgi https://secuso.org/pfa adresinde bulunabilir.
 
-Bize ulaşabileceğiniz adresler
+Bize şu adreslerden ulaşabilirsiniz:
 Twitter - @SECUSOResearch https://twitter.com/secusoresearch
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
-İş ilanı - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
+İş ilanları - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php

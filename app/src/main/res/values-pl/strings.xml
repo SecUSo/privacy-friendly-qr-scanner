@@ -112,7 +112,7 @@
     <string name="code_generation_error">Nie udało się wygenerować żadnego kodu.</string>
     <string name="ok">OK</string>
     <string name="lastname">Nazwisko</string>
-    <string name="conform_url">Potwierdź, że sprawdziłeś(-aś) link.</string>
+    <string name="conform_url">Potwierdź, że sprawdziłeś(-aś) link</string>
     <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Informacje</a> na temat sprawdzania linków.</string>
     <string name="description_text">Zeskanowany przez Ciebie kod QR zawiera zwykły tekst. Aby <i>przeszukać Internet</i> w celu znalezienia informacji, naciśnij Kontynuuj.</string>
     <string name="something_went_wrong">Coś poszło nie tak</string>

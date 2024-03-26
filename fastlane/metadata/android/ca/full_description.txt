@@ -1,0 +1,17 @@
+Els codis QR són cada vegada més importants. En algunes zones fins i tot han substituït el codi de barres tradicional. Un codi QR és capaç d'emmagatzemar fins a set mil caràcters i, per tant, està qualificat per a contingut més complex, per exemple vCards. Per tant, avui dia els codis QR es poden trobar en gairebé tots els cartells publicitaris i animar l'usuari a escanejar-lo amb el seu telèfon intel·ligent. Per tant, ja no cal prendre nota escrita a mà, n'hi ha prou amb escanejar el codi QR. En conseqüència, ja hi ha moltes aplicacions d'escàner de codi QR disponibles a la Google Play Store. Aquesta aplicaicó forma part del grup d'aplicacions respectuoses amb la privadesa desenvolupat pel grup de recerca SECUSO al Technische Universität Darmstadt. Podeu trobar més informació a secuso.org/pfa
+
+La nostra aplicació Privacy Friendly QR Scanner us respecta en dos aspectes:
+
+1. L'aplicació Privacy Friendly QR Scanner només requereix la quantitat mínima de permisos, a saber:
+La majoria de les aplicacions d'escàner de codi QR disponibles a la Google Play Store necessiten diversos permisos a més a més dels necessaris: per exemple, llegir contactes o el registre de trucades i recuperar dades d'Internet. La majoria d'aquests requisits no són necessaris per a la funcionalitat que realment han de proporcionar.
+
+2. L'aplicació Privacy Friendly QR Scanner dona suport als seus usuaris amb la detecció d'enllaços maliciosos: Els codis QR proporcionen noves possibilitats per a un atacant, ja que els codis QR poden contenir enllaços maliciosos, és a dir, enllaços a pàgines web de phishing o pàgines web des de les quals es descarregaria automàticament el programari maliciós. Per tant, és important consultar atentament l'enllaç abans d'accedir a la pàgina web corresponent. Atès que és difícil per a l'usuari detectar enllaços maliciosos, l'aplicació Privacy Friendly QR Scanner dona suport a l'usuari ressaltant el domini (p. ex. en aquest cas per a https://www.secuso.org, secuso.org seria ressaltat). Per a evitar no comprovar l'enllaç i en particular el domini destacat amb cura, l'aplicació proporciona informació sobre possibles fraus i els seus usuaris necessiten confirmar que han comprovat l'enllaç i que és de confiança. Nota: la informació que es mostra després d'escanejar un codi QR basat en un URL no és personalitzada per a cada URL. Per tant, s'ha de considerar com un consell per a l'usuari com comportar-se en general.
+
+L'aplicació Privacy Friendly QR Scanner suporta la majoria dels tipus de codi QR habituals. També s'admeten codis de barres i altres codis àmpliament utilitzats.
+
+L'app pertany al grup d'aplicacions respectuoses amb la privacitat, que desenvolupa el grup de recerca SECUSO. Podeu trobar més informació a https://secuso.org/pfa
+
+Podeu arribar-hi via
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Ofertes laborals - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
