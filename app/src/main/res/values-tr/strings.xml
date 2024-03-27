@@ -322,7 +322,10 @@
     <string name="pref_app_theme_title">Tema</string>
     <string name="ssid_value">SSID: %1$s</string>
     <string name="item_result_calendar_end">Bitiş:</string>
-    <string name="entries_selected">%1$d seçildi</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d seçilmiş</item>
+        <item quantity="other">%1$d seçildi</item>
+    </plurals>
     <string name="switch_camera">Kamera değiştir</string>
     <string name="unsupported_wifi_encryption">Bu WiFi şifrelemesi şu anda desteklenmiyor: %1$s</string>
     <string name="cannot_connect_to_encrypted_wifi_without_password">Şifreli bir WiFi ağına parola olmadan bağlantı kurulamaz.</string>

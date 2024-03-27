@@ -12,8 +12,8 @@ android {
         compileSdk 34
         targetSdkVersion 34
         multiDexEnabled true
-        versionCode 40
-        versionName "4.5.9"
+        versionCode 42
+        versionName "4.6.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildFeatures.dataBinding = true
         vectorDrawables.useSupportLibrary = true
@@ -76,7 +76,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
-    implementation 'com.google.zxing:core:3.4.1' //newer version requires java.nio.charset.StandardCharsets in Encoder.java -> minSdkVersion = 19
+    implementation 'com.google.zxing:core:3.5.3'
 
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
     implementation "androidx.multidex:multidex:2.0.1"
@@ -89,10 +89,10 @@ dependencies {
     ksp "androidx.room:room-compiler:$room_version"
     androidTestImplementation "androidx.room:room-testing:$room_version"
 
-    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.google.code.gson:gson:2.9.1' //Versions newer than 2.9 only work on API levels > 21 (https://github.com/google/gson/issues/2310). App crashes e.g. when saving a generated QR code to history on API 17.
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "androidx.core:core-ktx:1.12.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2" //2.7.0+ not compatible with API < 19
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation project(path: ':backup-api')

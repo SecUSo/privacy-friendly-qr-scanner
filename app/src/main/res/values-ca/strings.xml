@@ -151,7 +151,10 @@
     <string name="Content_copied">S\'ha copiat el contingut</string>
     <string name="Share_via">Comparteix via</string>
     <string name="select_all">Selecciona-ho tot</string>
-    <string name="entries_selected">%1$d seleccionats</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d seleccionat</item>
+        <item quantity="other">%1$d seleccionats</item>
+    </plurals>
     <string name="activity_scanner_permission_needed_explanation">Aquesta aplicació necessita el permís d\'accés a la càmera per a poder escanejar codis QR.</string>
     <string name="generator_text_explanation">Podeu introduir qualsevol text que vulgueu codificar. Es permeten línies múltiples.</string>
     <string name="generator_market_explanation">Aquí podeu introduir el nom del paquet de l\'aplicació. P. ex.</string>

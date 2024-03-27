@@ -96,7 +96,11 @@
     <string name="Share_via">Sdílet přes</string>
     <string name="select_all">Vybrat vše</string>
     <string name="selected_1">Zvoleno</string>
-    <string name="entries_selected">%1$d zvoleno</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d vybraný</item>
+        <item quantity="few">%1$d vybrané</item>
+        <item quantity="many">%1$d vybraných</item>
+    </plurals>
     <string name="activity_scanner_permission_needed_explanation">Tato aplikace vyžaduje přístup k fotoaparátu pro čtení QR kódů.</string>
     <string name="app_name">Čtečka QR</string>
     <string name="history">Historie</string>
