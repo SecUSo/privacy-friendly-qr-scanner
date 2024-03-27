@@ -327,4 +327,5 @@
     <string name="item_result_calendar_location">Ort:</string>
     <string name="item_result_calendar_start">Beginn:</string>
     <string name="item_result_calendar_end">Ende:</string>
+    <string name="switch_camera">Kamera wechseln</string>
 </resources>
