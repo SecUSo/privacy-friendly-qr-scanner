@@ -171,6 +171,7 @@
     <string name="more_info">Weitere Infos unter:</string>
     <string name="about_author_contributors">Mitwirkende</string>-->
     <string name="help_whatis">Was ist PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_whatis_answer">Mit dem PRIVACY FRIENDLY QR Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen / generieren. Sie können auch gescannten QR-Code mit anderen Apps kopieren / teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
     <string name="Ofeatures">andere Funktionen</string>
     <string name="help_usability">Das Scannen funktioniert nicht, was kann ich tun?</string>
     <string name="help_usability_answer">Wenn Sie keinen Code scannen können, vergrößern Sie den Abstand zwischen Scanner und Code.</string>
@@ -178,7 +179,8 @@
     <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
     <string name="help_permission">Welche Berechtigungen benötigt der PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen. Die App benötigt außerdem die Erlaubnis, auf Ihren Speicher zuzugreifen, um Codes von Ihren Bildern zu scannen oder generierte Codes in Ihren Bildern zu speichern.</string>
-    <string name="help_whatis_answer">Mit dem PRIVACY FRIENDLY QR Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen / generieren. Sie können auch gescannten QR-Code mit anderen Apps kopieren / teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
+    <string name="help_data_backup">Wie kann ich meine Daten sichern?</string>
+    <string name="help_data_backup_answer">Mit der App Privacy Friendly Backup können die Daten dieser App gesichert und wiederhergestellt werden. Damit können die Daten auch auf ein neues Smatphone übertragen werden.</string>
     <string name="description_Mms">Der gescannte QR-Code enthält eine MMS.</string>
     <string name="geoInfo">Der gescannte QR-Code enthält eine geographisch Information.</string>
     <string name="content_copied">Inhalt kopiert</string>
