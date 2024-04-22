@@ -28,6 +28,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class URLResultFragment extends ResultFragment {
+    private static final String VALID_RFC3986_PROTOCOL_SCHEME = "^[a-zA-Z][a-zA-Z0-9+.-]*:.*$";
 
     URIParsedResult result;
 
@@ -96,7 +97,7 @@ public class URLResultFragment extends ResultFragment {
             Toast.makeText(context, R.string.conform_url, Toast.LENGTH_LONG).show();
         } else {
             String urlForIntentData = qrurl;
-            if (!qrurl.toLowerCase().contains("://")) {
+            if (!qrurl.matches(VALID_RFC3986_PROTOCOL_SCHEME)) {
                 urlForIntentData = "http://" + qrurl;
             }
             Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
