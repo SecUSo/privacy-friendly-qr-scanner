@@ -211,20 +211,19 @@
     <string name="help_category_example">The scanning does not work, what can I do?</string>
     <string name="help_overview_heading">What is PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">With PRIVACY FRIENDLY QR Scanner you can scan barcodes and qr-codes with various contents.</string>
-    <string name="help_whatis_answer">With PRIVACY FRIENDLY QR Scanner you can scan/generate barcodes and qr-codes with various contents. Also You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
 
 
     <!--###HELP###-->
-
-
     <string name="help_whatis">What is PRIVACY FRIENDLY QR Scanner?</string>
-
+    <string name="help_whatis_answer">With PRIVACY FRIENDLY QR Scanner you can scan/generate barcodes and qr-codes with various contents. Also You can copy/share scanned QR code with other applications, furthermore you can save the generated QR code in the gallery and share it as well.</string>
     <string name="help_usability">The scanning does not work, what can I do?</string>
     <string name="help_usability_answer">If you cannot scan a code, increase the distance between the scanner and the code.</string>
     <string name="help_privacy">What makes the app privacy-friendly?</string>
     <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
     <string name="help_permission">What permissions are required by PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_permission_answer">The app requires the camera permission, which is used to scan barcodes and qr codes via camera. The app also requires the permission to access your storage to scan codes from your images or save generated codes to your images.</string>
+    <string name="help_data_backup">How do I backup my data?</string>
+    <string name="help_data_backup_answer">You can use the separate Privacy Friendly Backup app to backup and restore this application\'s data. This can also be used to migrate your data to a new phone.</string>
     <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->
