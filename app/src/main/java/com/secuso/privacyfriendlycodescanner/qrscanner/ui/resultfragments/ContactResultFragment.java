@@ -62,7 +62,7 @@ public class ContactResultFragment extends ResultFragment {
                             Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
                             contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
-                            contact.putExtra(ContactsContract.Intents.Insert.NAME, result.getNames() != null ? result.getNames()[0] : null);
+                            contact.putExtra(ContactsContract.Intents.Insert.NAME, result.getNames() != null && result.getNames().length > 0 ? result.getNames()[0] : null);
                             contact.putExtra(ContactsContract.Intents.Insert.COMPANY, result.getOrg());
                             contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, result.getTitle());
                             contact.putExtra(ContactsContract.Intents.Insert.NOTES, result.getNote());

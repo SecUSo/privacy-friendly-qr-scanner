@@ -79,7 +79,9 @@ public class Utils {
             if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL) && format.equals(original_format)) {
                 Object ec = metadata.get(ERROR_CORRECTION_LEVEL);
                 if (ec != null) {
-                    hints.put(ERROR_CORRECTION, ec);
+                    String errorCorrection = ec.toString();
+                    errorCorrection = errorCorrection.replace("%", ""); // Sometimes the error correction value contains a percent sign
+                    hints.put(ERROR_CORRECTION, errorCorrection);
                 }
             }
             if (!hints.containsKey(ERROR_CORRECTION) && format != BarcodeFormat.AZTEC && format != BarcodeFormat.PDF_417) {

@@ -1,10 +1,15 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.generator;
 
+import static android.content.Context.WINDOW_SERVICE;
+
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Point;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
@@ -15,14 +20,19 @@ import android.util.Log;
 import android.view.Display;
 import android.view.WindowManager;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import com.google.zxing.BarcodeFormat;
+import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.google.zxing.qrcode.encoder.ByteMatrix;
+import com.google.zxing.qrcode.encoder.Encoder;
+import com.google.zxing.qrcode.encoder.QRCode;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -31,9 +41,9 @@ import java.io.OutputStream;
 import java.text.FieldPosition;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.Locale;
-
-import static android.content.Context.WINDOW_SERVICE;
+import java.util.Map;
 
 public class QRGeneratorUtils {
 
@@ -85,8 +95,7 @@ public class QRGeneratorUtils {
         return cache;
     }
 
-    public static Uri createImage(Context context, String qrInputText, Contents.Type qrType, BarcodeFormat barcodeFormat, String errorCorrectionLevel) {
-
+    private static int getDimension(Context context) {
         //Find screen size
         WindowManager manager = (WindowManager) context.getSystemService(WINDOW_SERVICE);
         Display display = manager.getDefaultDisplay();
@@ -94,25 +103,105 @@ public class QRGeneratorUtils {
         display.getSize(point);
         int width = point.x;
         int height = point.y;
-        int smallerDimension = width < height ? width : height;
-        smallerDimension = smallerDimension * 3 / 4;
+        int smallerDimension = Math.min(width, height);
+        return smallerDimension * 3 / 4;
+    }
 
-        //Encode with a QR Code image
-        QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
-                null,
-                qrType,
-                barcodeFormat.toString(),
-                smallerDimension);
+    public static Uri createImage(Context context, String qrInputText, Contents.Type qrType, BarcodeFormat barcodeFormat, String errorCorrectionLevel, boolean dots) {
+        int smallerDimension = getDimension(context);
+
         Bitmap bitmap_ = null;
-        try {
-            bitmap_ = qrCodeEncoder.encodeAsBitmap(errorCorrectionLevel);
-            // return bitmap_;
-
-        } catch (WriterException e) {
-            e.printStackTrace();
+        if (!dots) {
+            //Encode with a QR Code image
+            QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
+                    null,
+                    qrType,
+                    barcodeFormat.toString(),
+                    smallerDimension);
+            try {
+                bitmap_ = qrCodeEncoder.encodeAsBitmap(errorCorrectionLevel);
+            } catch (WriterException e) {
+                e.printStackTrace();
+            }
+        } else {
+            final Map<EncodeHintType, Object> hints = new HashMap<>();
+            hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
+            hints.put(EncodeHintType.MARGIN, 1);
+            QRCode code;
+            try {
+                code = Encoder.encode(qrInputText, ErrorCorrectionLevel.valueOf(errorCorrectionLevel), hints);
+            } catch (WriterException e) {
+                throw new RuntimeException(e);
+            }
+            bitmap_ = createDotQRCode(code, smallerDimension, smallerDimension, Color.BLACK, Color.WHITE, 1);
         }
 
         return cacheImage(context, bitmap_);
+    }
+
+    private static Bitmap createDotQRCode(QRCode code, int width, int height, @ColorInt int color, @ColorInt int backgroundColor, int quietZone) {
+        Bitmap image = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(image);
+        canvas.drawColor(backgroundColor);
+        Paint paint = new Paint();
+        paint.setColor(color);
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.FILL);
+
+
+        ByteMatrix input = code.getMatrix();
+        if (input == null) {
+            throw new IllegalArgumentException();
+        }
+
+        final int QR_WIDTH = input.getWidth() + (quietZone * 2);
+        final int QR_HEIGHT = input.getHeight() + (quietZone * 2);
+        final int OUTPUT_WIDTH = Math.max(width, QR_WIDTH);
+        final int OUTPUT_HEIGHT = Math.max(height, QR_HEIGHT);
+
+        final float SCALE = Math.min((float) OUTPUT_WIDTH / (float) QR_WIDTH, (float) OUTPUT_HEIGHT / (float) QR_HEIGHT); //scale from ByteMatrix to Canvas
+        final int POSITION_PATTERN_SIZE = 7; //size of the position pattern inside the ByteMatrix
+        final float POSITION_PATTERN_RADIUS = (SCALE * POSITION_PATTERN_SIZE) / 2f;
+        final float CIRCLE_RADIUS = (SCALE * 0.35f);
+        final float PADDING_LEFT = (OUTPUT_WIDTH - (input.getWidth() * SCALE)) / 2.0f + CIRCLE_RADIUS / 2.0f;
+        final float PADDING_TOP = (OUTPUT_HEIGHT - (input.getHeight() * SCALE)) / 2.0f + CIRCLE_RADIUS / 2.0f;
+
+        for (int y = 0; y < input.getHeight(); y++) {
+            for (int x = 0; x < input.getWidth(); x++) {
+                if (input.get(x, y) == 1) {
+                    boolean isInPositionPatternArea = //do not draw anything inside the position pattern regions
+                            x <= POSITION_PATTERN_SIZE && y <= POSITION_PATTERN_SIZE || //top left position pattern
+                                    x >= input.getWidth() - POSITION_PATTERN_SIZE && y <= POSITION_PATTERN_SIZE || //top right position pattern
+                                    x <= POSITION_PATTERN_SIZE && y >= input.getHeight() - POSITION_PATTERN_SIZE; //bottom left position pattern
+                    if (!isInPositionPatternArea) {
+                        float outputX = PADDING_LEFT + x * SCALE;
+                        float outputY = PADDING_TOP + y * SCALE;
+                        canvas.drawCircle(outputX + CIRCLE_RADIUS, outputY + CIRCLE_RADIUS, CIRCLE_RADIUS, paint);
+                    }
+                }
+            }
+        }
+
+        //draw position patterns
+        drawPositionPattern(canvas, color, backgroundColor, PADDING_LEFT, PADDING_TOP, POSITION_PATTERN_RADIUS);
+        drawPositionPattern(canvas, color, backgroundColor, PADDING_LEFT + (input.getWidth() - POSITION_PATTERN_SIZE) * SCALE, PADDING_TOP, POSITION_PATTERN_RADIUS);
+        drawPositionPattern(canvas, color, backgroundColor, PADDING_LEFT, PADDING_TOP + (input.getHeight() - POSITION_PATTERN_SIZE) * SCALE, POSITION_PATTERN_RADIUS);
+
+        return image;
+    }
+
+    private static void drawPositionPattern(Canvas canvas, @ColorInt int color, @ColorInt int backgroundColor, float x, float y, float patternRadius) {
+        final float BACKGROUND_CIRCLE_RADIUS = patternRadius * 5f / 7f;
+        final float MIDDLE_DOT_RADIUS = patternRadius * 3f / 7f;
+
+        Paint paint = new Paint();
+        paint.setColor(color);
+        Paint bgPaint = new Paint();
+        bgPaint.setColor(backgroundColor);
+
+        canvas.drawCircle(x + patternRadius, y + patternRadius, patternRadius, paint);
+        canvas.drawCircle(x + patternRadius, y + patternRadius, BACKGROUND_CIRCLE_RADIUS, bgPaint);
+        canvas.drawCircle(x + patternRadius, y + patternRadius, MIDDLE_DOT_RADIUS, paint);
     }
 
     public static void saveCachedImageToExternalStorage(Context context) {
