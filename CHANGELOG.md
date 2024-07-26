@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="v4.6.1"></a>
+## [QR Scanner (Privacy Friendly) v4.6.1](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.1) - 26 Jul 2024
+
+## What's Changed
+* Added info re: Privacy Friendly Backup to app Help screen by [@jahway603](https://github.com/jahway603) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/230
+* Allow opening deeplinks with custom schema by [@jokakilla](https://github.com/jokakilla) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/225
+* declare android:installLocation to auto by [@9mdv](https://github.com/9mdv) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/236
+* Fix some small bugs by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/240
+* Add generator for dot qr codes by [@udenr](https://github.com/udenr) in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/241
+
+## New Contributors
+* [@jokakilla](https://github.com/jokakilla) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/225
+* [@9mdv](https://github.com/9mdv) made their first contribution in https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/236
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.0...v4.6.1
+
+[Changes][v4.6.1]
+
+
 <a name="v4.6.0"></a>
 ## [QR Scanner (Privacy Friendly) v4.6.0](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.0) - 27 Mar 2024
 
@@ -330,6 +349,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.6.1]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.0...v4.6.1
 [v4.6.0]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.9...v4.6.0
 [v4.5.9]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.8...v4.5.9
 [v4.5.8]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.5.7...v4.5.8
