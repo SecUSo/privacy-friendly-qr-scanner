@@ -334,4 +334,6 @@
     <string name="android_version_does_not_support_feature">Android sürümünüz bu özelliği desteklemiyor.</string>
     <string name="item_result_calendar_location">Konum:</string>
     <string name="item_result_calendar_start">Başlangıç:</string>
+    <string name="help_data_backup_answer">Bu uygulamanın verilerini yedeklemek ve geri yüklemek için ayrı Gizlilik Dostu Yedekleme uygulamasını kullanabilirsiniz. Bu, verilerinizi yeni bir telefona taşımak için de kullanılabilir.</string>
+    <string name="help_data_backup">Verilerimi nasıl yedeklerim?</string>
 </resources>
