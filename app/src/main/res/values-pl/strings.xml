@@ -226,4 +226,12 @@
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repozytorium na GitHubie</a></string>
     <string name="switch_camera">Przełącz aparat</string>
     <string name="cannot_connect_to_encrypted_wifi_without_password">Nie można nawiązać połączenia z szyfrowaną siecią Wi-Fi bez hasła.</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d zaznaczony element</item>
+        <item quantity="few">%1$d zaznaczone elementy</item>
+        <item quantity="many">%1$d zaznaczonych elementów</item>
+        <item quantity="other">%1$d zaznaczonych elementów</item>
+    </plurals>
+    <string name="help_data_backup_answer">Możesz użyć oddzielnej aplikacji Privacy Friendly Backup, aby wykonać kopię zapasową i przywrócić dane tej aplikacji. Można jej również użyć do migracji danych do nowego telefonu.</string>
+    <string name="help_data_backup">Jak mogę wykonać kopię zapasową danych?</string>
 </resources>
