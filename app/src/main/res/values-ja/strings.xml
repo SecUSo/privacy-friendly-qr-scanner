@@ -200,7 +200,7 @@
     <string name="Store_in_gallery">保存</string>
     <string name="phone_number">電話番号</string>
     <!-- Generator activities -->
-    <string name="text_enter">以下の文をQRコード化</string>
+    <string name="text_enter">コード化する文字列</string>
     <string name="hello_world">Hello World</string>
     <string name="generate">作成</string>
     <string name="sms_text">SMS</string>
@@ -259,4 +259,17 @@
         <item>Brave</item>
     </string-array>
     <string name="something_went_wrong">何か問題が発生しました。</string>
+    <string name="action_search">検索</string>
+    <string name="barcode_format">フォーマット</string>
+    <string name="fragment_result_text_dialog_positive_button">検索</string>
+    <string name="activity_scanner_flashlight_off">ライト オフ</string>
+    <string name="fragment_result_text_dialog_title">検索</string>
+    <string name="pref_app_theme_title">テーマ</string>
+    <string name="pref_search_engine_enabled_summary">文字列をスキャンしたとき、「検索」ボタンを表示します。</string>
+    <string name="pref_search_engine_enabled_title">検索エンジンを使用</string>
+    <string name="action_open">開く</string>
+    <string name="none">なし</string>
+    <string name="help_data_backup_answer">外部アプリの Privacy Friendly Backup アプリを使用すると、このアプリのデータのバックアップと復元をできます。新しい端末へのデータ移行にも使えます。</string>
+    <string name="help_data_backup">どうすればデータをバックアップできますか？</string>
+    <string name="error_correction_level">誤り訂正レベル</string>
 </resources>
