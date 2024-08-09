@@ -272,4 +272,5 @@
     <string name="help_data_backup_answer">外部アプリの Privacy Friendly Backup アプリを使用すると、このアプリのデータのバックアップと復元をできます。新しい端末へのデータ移行にも使えます。</string>
     <string name="help_data_backup">どうすればデータをバックアップできますか？</string>
     <string name="error_correction_level">誤り訂正レベル</string>
+    <string name="activity_scanner_flashlight_on">ライト オン</string>
 </resources>
