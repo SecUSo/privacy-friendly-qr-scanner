@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QR Scanner</string>
-
     <string name="navigation_drawer_open">Abrir cadro de navegación</string>
     <string name="navigation_drawer_close">Pechar cadro de navegación</string>
     <string name="qr_scanner">QR Scanner</string>
@@ -10,7 +10,6 @@
     <string name="help">Axuda</string>
     <string name="about">Acerca de</string>
     <string name="title_activity_qrscanner">QR Scanner</string>
-
     <string name="action_settings">Axustes</string>
     <string name="title_activity_qr_scanner">QR Scanner</string>
     <string name="title_activity_qr_generator">QR Generator</string>
@@ -22,7 +21,6 @@
     <string name="QRScanner">QR Scanner</string>
     <string name="QRGenerator">QR Generator</string>
     <string name="History">Historial</string>
-
     <string name="slide1_heading">Benvida!</string>
     <string name="slide1_text">Benvida ao QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
     <string name="slide2_heading">que hai ahí?</string>
@@ -33,9 +31,7 @@
     <string name="skip">Omitir</string>
     <string name="next">Seguinte</string>
     <string name="help_">Axuda</string>
-
     <string name="tutorial">Titorial</string>
-
     <!--###ABOUT###-->
     <string name="about_author">Autoría: </string>
     <string name="about_author_string">%s e colaboradoras.</string>
@@ -48,7 +44,6 @@
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
     <string name="version_number">Versión v%s</string>
     <string name="delete_items">Eliminar elementos</string>
-
     <string name="scan_text">Sitúa esta ventá sobre o código que queres descifrar.</string>
     <string name="action_clear">Baleirar historial</string>
     <string name="cannot_clear">O historial xa está baleiro</string>
@@ -66,9 +61,7 @@
     <string name="history_disabled">Historial desactivado</string>
     <string name="to">Correspondente:</string>
     <string name="subject">Asunto:</string>
-
     <string name="usability_hint2">Se non podes escanear o código, aumenta a distancia entre o escáner e o código.</string>
-
     <string name="description_contact">O código QR que escaneaches ten información de contacto. Para poder <i>importala</i> á túa libreta de enderezos, preme en Proceder.</string>
     <string name="description_email">O código QR que escaneaches é un enderzo de email. Para poder <i>enviar un email</i> ou <i>engadirllo a un contacto</i>, preme en Proceder.</string>
     <string name="description_send_email">O código QR que escaneaches contén un email completo. Para <i>envialo</i> tal como está ou <i>engadirllo a un contacto</i>, preme en Proceder.</string>
@@ -76,16 +69,12 @@
     <string name="description_tel">O código QR que escaneaches contén un número de teléfono. Para <i>iniciar unha chamada</i> ou <i>engadirllo a un contacto</i>, simplemente preme en Proceder.</string>
     <string name="description_sms">O código QR que escaneaches contén un SMS. Para <i>enviar</i> o SMS ou <i>engadir o número a un contacto</i>, preme en Proceder.</string>
     <string name="description_text">O código QR que escaneaches contén texto plano. Para <i>buscar na web</i> a información, preme en Proceder.</string>
-
     <string name="choose_action">Proceder</string>
     <string name="abort_action">Abortar </string>
-
     <string name="proceed">Proceder</string>
     <string name="back">Atrás</string>
-
     <string name="choose_action_url">Proceder</string>
     <string name="abort_action_url">Abortar</string>
-
     <string-array name="text_array">
         <item>Buscar na Web</item>
         <item>Non facer nada</item>
@@ -152,7 +141,6 @@
     </string-array>
     <string name="copied_to_clipboard">Copiado ao portapapeis.</string>
     <string name="noname">Sen nome establecido</string>
-
     <string name="title_activity_result_url">Ligazón atopada</string>
     <string name="title_activity_result_text">Texto atopado</string>
     <string name="title_activity_result_sms">SMS atopado</string>
@@ -163,12 +151,10 @@
     <string name="title_activity_result_wifi">Wifi atopado</string>
     <string name="title_activity_result_contact">Contacto atopado</string>
     <string name="action_help">Axuda</string>
-
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">QR Code Scanner é unha App que RESPECTA A TÚA PRIVACIDADE e permíteche escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
     <string name="welcome">Benvida</string>
     <string name="viewhelp">Ver Axuda</string>
-
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
@@ -181,13 +167,10 @@
     <string name="help_overview_heading">Que é QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
     <string name="help_intro">Con QR Scanner RESPETUOSO DA PRIVACIDADE podes escanear códigos de barras e QR con diferentes contidos.</string>
     <string name="help_whatis_answer">Con QR Scanner RESPETUOSO DA PRIVACIDADE podes escanear/crear códigos de barras e QR con varios contidos. Tamén che permite copiar/compartir o código QR con outras aplicacións, e ademáis podes gardar o código QR creado na galería e compartilo tamén alí.</string>
-
-
     <!--###HELP###-->
 
 
     <string name="help_whatis">Qué é QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
-
     <string name="help_usability">O escáner non funciona, que podo facer?</string>
     <string name="help_usability_answer">Se non podes escanear un código, aumenta a distancia entre a cámara e o código.</string>
     <string name="help_privacy">De que xeito é respetuosa coa privacidade?</string>
@@ -201,7 +184,6 @@
     <string name="pref_description_enable_history">Os escaneos recentes quedan rexistrados para telos a man</string>
     <string name="pref_keep_duplicates">Manter duplicados</string>
     <string name="pref_keep_duplicates_explanation">Os duplicados gárdanse no historial</string>
-
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Sinal de aviso</string>
     <string name="description_Mms">O código QR que escaneaches contén un MMS.</string>
@@ -218,12 +200,10 @@
     <string name="okay">OK</string>
     <string name="Store_in_gallery">Gardar</string>
     <string name="phone_number">Número de teléfono</string>
-
     <!-- Generator activities -->
     <string name="text_enter">O texto que queres codificar</string>
     <string name="hello_world">Ola Mundo!</string>
     <string name="generate">crear</string>
-
     <string name="sms_text">Texto SMS</string>
     <string name="mms">MMS</string>
     <string name="network_name">Nome da Rede</string>
@@ -251,13 +231,11 @@
     <string name="OfeaturesAnswer">Podes copiar/compartir o código QR escaneado con outras aplicacións, ademáis podes gardar o código QR creado na galería e compartilo alí tamén.</string>
     <string name="Content_copied">Contido copiado</string>
     <string name="Share_via">Compartir vía</string>
-    <string name="select_all">Elexir todo</string>
+    <string name="select_all">Seleccionar todo</string>
     <string name="selected_1">Elexido</string>
     <string name="activity_scanner_permission_needed_explanation">A App precisa permiso á cámara para escanear códigos QR.</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Ola fragmento en branco</string>
-
     <!--Settings for Default Search Engine-->
     <string name="pref_search_engine_title">Motor de busca por defecto</string>
     <string name="pref_enable_beep_on_scan_title">Beep ao escanear</string>
@@ -282,5 +260,4 @@
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
-
 </resources>
