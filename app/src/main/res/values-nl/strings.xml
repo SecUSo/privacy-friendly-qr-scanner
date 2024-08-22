@@ -328,7 +328,10 @@
     <string name="activity_history_list_item_qr_image_descriptor">QR-code</string>
     <string name="item_result_calendar_start">Begin:</string>
     <string name="item_result_calendar_end">Einde:</string>
-    <string name="entries_selected">%1$d geselecteerd</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d item geselecteerd</item>
+        <item quantity="other">%1$d items geselecteerd</item>
+    </plurals>
     <string name="switch_camera">Verander van camera</string>
     <string name="item_result_calendar_title">Titel:</string>
     <string name="item_result_calendar_description">Beschrijving:</string>
