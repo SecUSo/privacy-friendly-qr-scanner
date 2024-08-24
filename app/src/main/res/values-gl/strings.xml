@@ -260,4 +260,61 @@
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
+    <string name="something_went_wrong">Algo fallou.</string>
+    <string name="message">Mensaxe</string>
+    <string name="copy_to_clipboard">Copiar ao portapapeis</string>
+    <string name="raw_data">Datos en cru</string>
+    <string name="select_image_from_gallery">Escolle unha imaxe da galería</string>
+    <string name="image_is_being_processed">Estase a procesar a imaxe…</string>
+    <string name="no_code_in_image_explanation">Non se atopou ningún código nesta imaxe. Para mellorar os resultados podes recortar e endereitar a imaxe e volver a intentalo.</string>
+    <string name="unsupported_wifi_encryption">Actualmente non hai compatibilidade con esta cifraxe WiFi: %1$s</string>
+    <string name="android_version_does_not_support_feature">A túa versión de Android non é compatible con esta función.</string>
+    <string name="encryption_value">Cifraxe: %1$s</string>
+    <string name="password_value">Contrasinal: %1$s</string>
+    <string name="item_result_calendar_title">Título:</string>
+    <string name="item_result_calendar_location">Localización:</string>
+    <string name="item_result_calendar_start">Inicio:</string>
+    <string name="item_result_calendar_end">Fin:</string>
+    <string name="activity_enter_toast_missing_data">Sen datos</string>
+    <string name="activity_scanner_flashlight_on">Lámpada acesa</string>
+    <string name="activity_scanner_flashlight_off">Lámpada apagada</string>
+    <string name="action_search">Buscar</string>
+    <string name="pref_app_theme_title">Decorado</string>
+    <string name="pref_search_engine_enabled_title">Usar motores de busca</string>
+    <string name="action_open">Abrir</string>
+    <string name="pref_search_engine_enabled_summary">Mostrar o botón \"Buscar\" ao escanear un texto.</string>
+    <string name="help_data_backup">Como fago copia de apoio?</string>
+    <string name="barcode_format">Formato</string>
+    <string name="error_correction_level">Erro a nivel de conexión</string>
+    <string name="code_generation_error">Non se puido crear un código.</string>
+    <string name="save_to_history">Gardar no historial</string>
+    <string name="generator_text_textfield">Texto</string>
+    <string name="generator_text_explanation">Podes escribir calquera texto que queiras. Permítense varias liñas.</string>
+    <string name="generator_url_explanation">Podes escribir un enderezo web. Ex.</string>
+    <string name="no_encryption">Sen cifrar</string>
+    <string name="name">Nome</string>
+    <string name="address">Enderezo</string>
+    <string name="zip_code">Zip</string>
+    <string name="country">País</string>
+    <string name="generator_package_name">Nome do paquete</string>
+    <string name="generator_market_explanation_2">O código QR creado dirixirá cara a aplicación correspondente en Google Play.</string>
+    <string name="switch_camera">Cambiar de cámara</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="item_result_calendar_description">Descrición:</string>
+    <string name="help_data_backup_answer">Podes usar a aplicación Privacy Friendly Backup para facer una copia de apoio e restablecer os datos desta aplicación. Tamén podes usala para migrar o datos a outro teléfono.</string>
+    <string name="generator_market_explanation">Aquí podes engadir o nome do paquete da app. Ex.</string>
+    <string name="import_from_contacts">Importar dos contactos</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d entrada seleccionada</item>
+        <item quantity="other">%1$d entradas seleccionadas</item>
+    </plurals>
+    <string name="select_image_from_gallery_explanation">Esta función permíteche abrir imaxes da galería e escanear os códigos que conteñan. Require acceso ás imaxes.</string>
+    <string name="generated_code_image_explanation">Nota: o código que aquí se mostra foi creado a partir do contido do código escaneado e por tanto podería parecer diferente. Porén, os datos que contén son os mesmos.</string>
+    <string name="image_stored_in_gallery">Imaxe gardada na galería</string>
+    <string name="close">Pechar</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">Non se pode conectar cunha rede WiFi cifrada sen un contrasinal.</string>
+    <string name="fragment_result_text_dialog_message">Queres buscar este texto en %s? Potencialmente isto podería filtrar información ao enviar o texto ao motor de busca.</string>
+    <string name="fragment_result_text_dialog_positive_button">Buscar</string>
+    <string name="fragment_result_text_dialog_title">Buscar</string>
+    <string name="none">Nada</string>
 </resources>
