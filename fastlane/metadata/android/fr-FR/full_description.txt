@@ -1,0 +1,17 @@
+Les codes QR deviennent de plus en plus importants. Dans certains domaines, ils ont même remplacé le code-barres traditionnel. Un code QR peut stocker jusqu'à sept mille caractères et se prête donc à des contenus plus complexes, comme les cartes virtuelles. C'est pourquoi on trouve aujourd'hui des codes QR sur presque toutes les affiches publicitaires et ils incitent l'utilisateur à les scanner à l'aide de son smartphone. Ainsi, il n'est plus nécessaire de prendre une note manuscrite, il suffit de scanner le code QR. En conséquence, il existe déjà de nombreuses applications de scanner de code QR disponibles dans le Google Play Store. Elle appartient au groupe Privacy Friendly Apps développé par le groupe de recherche SECUSO de la Technische Universität Darmstadt. Pour plus d'informations, consultez le site secuso.org/pfa.
+
+Notre application QR Scanner respectueuse de la vie privée se distingue par deux aspects :
+
+1. L'application QR Scanner respectueuse de la vie privée ne nécessite qu'un minimum d'autorisations :
+La plupart des applications de scanner de codes QR disponibles dans le Google Play Store requièrent plusieurs autorisations en plus de celles qui sont nécessaires : par exemple, lire les contacts ou votre journal d'appels et extraire des données d'Internet. La plupart de ces exigences ne sont pas nécessaires pour la fonctionnalité qu'elles sont censées fournir.
+
+2. L'application QR Scanner, respectueuse de la vie privée, aide ses utilisateurs à détecter les liens malveillants : Les codes QR offrent de nouvelles possibilités aux pirates, car ils peuvent contenir des liens malveillants, c'est-à-dire des liens vers des pages web d'hameçonnage ou des pages web à partir desquelles des logiciels malveillants seraient automatiquement téléchargés. Il est donc important de vérifier soigneusement le lien avant d'accéder à la page web correspondante. Comme il est difficile pour l'utilisateur de repérer les liens malveillants, l'application QR Scanner, respectueuse de la vie privée, aide l'utilisateur en mettant en évidence le domaine (par exemple, dans ce cas, pour https://www.secuso.org, secuso.org serait mis en évidence). Pour éviter de ne pas vérifier soigneusement le lien et en particulier le domaine mis en évidence, l'application fournit des informations sur les fraudes possibles et les utilisateurs doivent confirmer qu'ils ont vérifié le lien et qu'il est digne de confiance. Il convient de noter que les informations affichées après avoir scanné un code QR basé sur une URL ne sont pas personnalisées pour chaque URL. Elles doivent donc être considérées comme un conseil à l'intention de l'utilisateur sur la manière de se comporter en général.
+
+L'application QR Scanner respectueuse de la vie privée prend en charge la plupart des types de codes QR habituels. Les codes-barres et autres codes largement utilisés sont également pris en charge.
+
+L'application appartient au groupe des applications respectueuses de la vie privée développées par le groupe de recherche SECUSO. Pour plus d'informations, consultez le site https://secuso.org/pfa
+
+Vous pouvez nous contacter via
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Offres d'emploi - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
