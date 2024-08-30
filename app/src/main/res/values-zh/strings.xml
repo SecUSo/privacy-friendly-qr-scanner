@@ -37,7 +37,7 @@
     <string name="about_affiliation">隶属于</string>
     <string name="privacy_friendly">此应用程序属于隐私友好应用程序组。 由达姆施塔特工业大学开发。 源代码许可证是 GPLv3。 图片版权卡尔斯鲁厄理工学院和谷歌公司。</string>
     <string name="more_info">更多信息请参见：</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">使用的库：</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
@@ -83,7 +83,7 @@
     <string name="title_activity_result_send_email">电子邮箱</string>
     <string name="title_activity_result_product">产品</string>
     <string name="title_activity_result_tel">电话号码</string>
-    <string name="title_activity_result_wifi">WiFi</string>
+    <string name="title_activity_result_wifi">Wi-Fi</string>
     <string name="title_activity_result_contact">联系人</string>
     <string name="action_help">帮助</string>
     <string name="welcome_text">本应用允许扫描具有各种内容的条形码和二维码，同时需要最少的权限集并支持恶意链接的检测。</string>
