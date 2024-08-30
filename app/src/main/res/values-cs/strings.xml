@@ -52,7 +52,7 @@
     <string name="scan_text">Umístěte toto okno nad kód, který chcete dekódovat.</string>
     <string name="action_clear">Vymazat historii</string>
     <string name="cannot_clear">Historie je už prázdná</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repozitář na Githubu</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repozitář na GitHubu</a></string>
     <string name="app_name_long">Soukromí respektující čtečka QR</string>
     <string name="domain">Doména</string>
     <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Informace</a> jak kontrolovat odkazy.</string>
