@@ -38,7 +38,7 @@
     <string name="about_affiliation">En asociación con</string>
     <string name="privacy_friendly">Esta aplicación pertence ao grupo PRIVACY FRIENDLY Apps desenvoltas pola SECUSO. Código fonte baixo licenza GPLv3. Copyright das imaxes Karlsruhe Institute of Technology e Google Inc.</string>
     <string name="more_info">Tes máis información en:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Web de SECUSO</a></string>
     <string name="about_libraries">Bibliotecas utilizadas:</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
@@ -148,7 +148,7 @@
     <string name="title_activity_result_send_email">Email atopado</string>
     <string name="title_activity_result_product">Produto atopado</string>
     <string name="title_activity_result_tel">Número de teléfono atopado</string>
-    <string name="title_activity_result_wifi">Wifi atopado</string>
+    <string name="title_activity_result_wifi">Wi-Fi atopado</string>
     <string name="title_activity_result_contact">Contacto atopado</string>
     <string name="action_help">Axuda</string>
     <!-- ### WELCOME DIALOG ### -->
