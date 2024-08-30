@@ -167,7 +167,7 @@
     <string name="title_activity_result_send_email">E-mail trouvé</string>
     <string name="title_activity_result_product">Produit trouvé</string>
     <string name="title_activity_result_tel">Numéro de téléphone trouvé</string>
-    <string name="title_activity_result_wifi">Wifi trouvé</string>
+    <string name="title_activity_result_wifi">Wi-Fi trouvé</string>
     <string name="title_activity_result_contact">Contact trouvé</string>
     <string name="action_help">Aide</string>
     <!-- ### BOÎTE DE DIALOGUE DE BIENVENUE ### -->
@@ -287,7 +287,7 @@
     <string name="pref_search_engine_title">Moteur de recherche par défaut</string>
     <string name="pref_enable_beep_on_scan_title">Bip sur scan</string>
     <string name="pref_enable_beep_on_scan_summary">Joue une tonalité de confirmation lors de la numérisation</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="activity_history_list_item_qr_image_descriptor">Code QR</string>
     <string name="delete">supprimer</string>
@@ -329,7 +329,7 @@
     <plurals name="entries_selected">
         <item quantity="one">%1$d entrée sélectionnée</item>
         <item quantity="many">%1$d entrées sélectionnées</item>
-        <item quantity="other"></item>
+        <item quantity="other"/>
     </plurals>
     <string name="switch_camera">Changement de caméra</string>
     <string name="cannot_connect_to_encrypted_wifi_without_password">Aucune connexion à un réseau WiFi chiffré ne peut être établie sans mot de passe.</string>
