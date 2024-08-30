@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QR Scanner</string>
-
     <string name="navigation_drawer_open">Åbn navigering</string>
     <string name="navigation_drawer_close">Luk navigering</string>
     <string name="qr_scanner">QR Scanner</string>
@@ -10,7 +10,6 @@
     <string name="help">Hjælp</string>
     <string name="about">Omkring</string>
     <string name="title_activity_qrscanner">QR Scanner</string>
-
     <string name="action_settings">Indstillinger</string>
     <string name="title_activity_qr_scanner">QR Scanner</string>
     <string name="title_activity_qr_generator">QR Generator</string>
@@ -22,7 +21,6 @@
     <string name="QRScanner">QR Scanner</string>
     <string name="QRGenerator">QR Generator</string>
     <string name="History">Historik</string>
-
     <string name="slide1_heading">Velkommen!</string>
     <string name="slide1_text">Velkommen til den privatlisvenlige QR Scanner. Denne vejledning vil dække de mest nødvendige ting, du burde vide.</string>
     <string name="slide2_heading">Hvad kan den?</string>
@@ -33,22 +31,19 @@
     <string name="skip">Spring over</string>
     <string name="next">Næste</string>
     <string name="help_">Hjælp</string>
-
     <string name="tutorial">Vejledning</string>
-
     <!--###ABOUT###-->
     <string name="about_author">Forfattere: </string>
     <string name="about_author_string">%s og bidragsydere.</string>
     <string name="about_affiliation">I tilknytning med</string>
     <string name="privacy_friendly">Denne applikation tilhører gruppen af PRIVACY FRIENDLY Apps udviklet af SECUSO. Source kode licenseret under GPLv3. Billeder copyright Karlsruhe Institute of Technology og Google Inc.</string>
     <string name="more_info">Mere information kan blive fundet på:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">Brugte biblioteker:</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
     <string name="version_number">Version v%s</string>
     <string name="delete_items">Slet emner</string>
-
     <string name="scan_text">Placér dette vindue over koden du vil afkode.</string>
     <string name="action_clear">Ryd historik</string>
     <string name="cannot_clear">Historikken er allerede tom</string>
@@ -66,9 +61,7 @@
     <string name="history_disabled">Historik deaktivéret</string>
     <string name="to">Modtager:</string>
     <string name="subject">Emne:</string>
-
     <string name="usability_hint2">Hvis du ikke kan scanne en kode, skal du øge afstanden mellem scanneren og koden.</string>
-
     <string name="description_contact">QR-koden du har scannet, indeholder kontaktoplysninger. For at <i>importére</i> dem til din kontaktbog, tryk Fortsæt.</string>
     <string name="description_email">QR-koden du har scannet, indeholder en e-mail adresse. For at <i>sende en e-mail</i> eller <i>tilføje den til en kontakt</i>, tryk Fortsæt.</string>
     <string name="description_send_email">QR-koden du har scannet indeholder en udfyldt e-mail. For at <i>sende</i> den eller <i>tilføje adressen som kontakt</i>, tryk Fortsæt.</string>
@@ -76,16 +69,12 @@
     <string name="description_tel">QR-koden du har scannet indeholder et telefonnummer. For at <i>ringe op</i> eller <i>tilføje det til en kontakt</i>, tryk Fortsæt.</string>
     <string name="description_sms">QR-koden du har scannet indeholder en SMS. For at <i>sende</i> SMS\'en eller <i>tilføje nummeret til en kontakt</i>, tryk Fortsæt.</string>
     <string name="description_text">QR-koden du har scannet indeholder ren tekst. For at <i>søge på internettet</i> efter information, tryk Fortsæt.</string>
-
     <string name="choose_action">Fortsæt</string>
     <string name="abort_action">Afbryd</string>
-
     <string name="proceed">Fortsæt</string>
     <string name="back">Tilbage</string>
-
     <string name="choose_action_url">Fortsæt</string>
     <string name="abort_action_url">Afbryd</string>
-
     <string-array name="text_array">
         <item>Søg på internettet</item>
         <item>Gør ingenting</item>
@@ -152,7 +141,6 @@
     </string-array>
     <string name="copied_to_clipboard">Kopiéret til udklipsholder.</string>
     <string name="noname">Intet navn angivet</string>
-
     <string name="title_activity_result_url">Link fundet</string>
     <string name="title_activity_result_text">Tekst fundet</string>
     <string name="title_activity_result_sms">SMS fundet</string>
@@ -163,12 +151,10 @@
     <string name="title_activity_result_wifi">Wi-Fi fundet</string>
     <string name="title_activity_result_contact">Kontakt fundet</string>
     <string name="action_help">Hjælp</string>
-
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner appen giver mulighed for at scanne stregkoder og QR-koder med forskelligt indhold, samtidig med at der kræves minimal sæt af tilladelser og understøtter identifikation af ondsindede links.</string>
     <string name="welcome">Velkommen</string>
     <string name="viewhelp">Se hjælp</string>
-
     <!--<string name="help_privacy_heading">Privatliv info</string>
     <string name="about_author_contributors">Bidragsydere</string>
     <string name="privacy_friendly">Denne applikation tilhører gruppen af PRIVACY FRIENDLY Apps udviklet af Technische Universität Darmstadt. Source kode licenseret under GPLv3. Billeder copyright TU Darmstadt og Google Inc.</string>
@@ -181,13 +167,10 @@
     <string name="help_overview_heading">Hvad er PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">Med PRIVACY FRIENDLY QR Scanner kan du scanne stregkoder og QR-koder med forskelligt indhold.</string>
     <string name="help_whatis_answer">Med PRIVACY FRIENDLY QR Scanner kan du scanne og generére stregkoder og QR-koder med forskelligt indhold.</string>
-
-
     <!--###HELP###-->
 
 
     <string name="help_whatis">Hvad er PRIVACY FRIENDLY QR Scanner?</string>
-
     <string name="help_usability">Scanningen virker ikke, hvad kan jeg gøre?</string>
     <string name="help_usability_answer">Hvis du ikke kan scanne en kode, skal du øge afstanden mellem scanneren og koden.</string>
     <string name="help_privacy">Hvad gør appen privatlivsvenlig?</string>
@@ -201,7 +184,6 @@
     <string name="pref_description_enable_history">Tidligere scanninger er logget for at du kan se dem igen</string>
     <string name="pref_keep_duplicates">Behold duplikater</string>
     <string name="pref_keep_duplicates_explanation">Duplikater er gemt i historikken</string>
-
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Signal tone</string>
     <string name="description_Mms">QR-koden du scannede indeholder en MMS.</string>
@@ -218,12 +200,10 @@
     <string name="okay">Okay</string>
     <string name="Store_in_gallery">Opbevar</string>
     <string name="phone_number">Telefonnummer</string>
-
     <!-- Generator activities -->
     <string name="text_enter">Teksten du gerne vil have kodet ind</string>
     <string name="hello_world">Hej verden</string>
     <string name="generate">generér</string>
-
     <string name="sms_text">SMS tekst</string>
     <string name="mms">MMS</string>
     <string name="network_name">Netværksnavn</string>
@@ -254,10 +234,8 @@
     <string name="select_all">Vælg alle</string>
     <string name="selected_1">Valgt</string>
     <string name="activity_scanner_permission_needed_explanation">Appen har brug for kameraets tilladelse for at kunne scanne QR-koder.</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hej blanke fragment</string>
-
     <!--Settings for Default Search Engine-->
     <string name="pref_search_engine_title">Standard søgemaskine</string>
     <string name="pref_enable_beep_on_scan_title">Bip ved scanning</string>
@@ -282,5 +260,4 @@
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
-
 </resources>
