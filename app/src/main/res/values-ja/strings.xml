@@ -38,7 +38,7 @@
     <string name="about_affiliation">グループ</string>
     <string name="privacy_friendly">このアプリは、SECUSO が開発する Privacy Friendly Apps のグループのうちのひとつです。ソースコードは GPLv3 の下でライセンスされています。画像はカールスルーエ工科大学 (Karlsruhe Institute of Technology) と Google Inc. の 著作物です。</string>
     <string name="more_info">詳細情報:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github リポジトリー</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub リポジトリー</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO ウェブサイト</a></string>
     <string name="about_libraries">使用したライブラリー:</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
@@ -150,7 +150,7 @@
     <string name="title_activity_result_send_email">メールです</string>
     <string name="title_activity_result_product">製品コードです</string>
     <string name="title_activity_result_tel">電話番号です</string>
-    <string name="title_activity_result_wifi">Wifi です</string>
+    <string name="title_activity_result_wifi">Wi-Fi です</string>
     <string name="title_activity_result_contact">連絡先です</string>
     <string name="action_help">ヘルプ</string>
     <!-- ### WELCOME DIALOG ### -->
