@@ -38,7 +38,7 @@
     <string name="about_affiliation">ile bağlantılı olarak</string>
     <string name="privacy_friendly">Bu uygulama SECUSO tarafından geliştirilen Gizlilik Dostu Uygulamalar grubuna aittir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı Karlsruhe Teknoloji Enstitüsü ve Google Inc\'e aittir.</string>
     <string name="more_info">Daha fazla bilgi için:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Deposu</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Deposu</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-İnternet-Sitesi</a></string>
     <string name="about_libraries">Kullanılan kütüphaneler:</string>
     <string name="app_name_long">Gizlilik Dostu Karekod Tarayıcı</string>
