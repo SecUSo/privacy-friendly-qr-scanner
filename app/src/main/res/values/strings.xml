@@ -46,7 +46,7 @@
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
     <string name="version_number">Version v%s</string>
     <string name="delete_items">Delete items</string>
-    <string name="scan_text">Place this window above the code u want to decode.</string>
+    <string name="scan_text">Place this window atop the code you want to decode.</string>
     <string name="action_clear">Clear History</string>
     <string name="cannot_clear">The history is already empty</string>
     <string name="knowRisks">I checked the link and want to visit the website.</string>
