@@ -21,13 +21,13 @@
     <string name="QRScanner">QR Scanner</string>
     <string name="QRGenerator">QR Generator</string>
     <string name="History">History</string>
-    <string name="slide1_heading">Welcome!</string>
-    <string name="slide1_text">Welcome to privacy friendly QR scanner. This tutorial will cover the most important things you need to know.</string>
+    <string name="slide1_heading">Welcome</string>
+    <string name="slide1_text">Welcome to Privacy friendly QR scanner. This tutorial will cover the most important things you need to know.</string>
     <string name="slide2_heading">What are the features?</string>
     <string name="text_slide2">With this app you can both scan and create QR codes.</string>
     <string name="slide3_heading">More features</string>
     <string name="text_slide3">The QR code you scanned can be saved in History. Furthermore you can share it or copy it.</string>
-    <string name="wecome">Welcome!</string>
+    <string name="wecome">Welcome</string>
     <string name="skip">Skip</string>
     <string name="next">Next</string>
     <string name="help_">Help</string>
@@ -37,7 +37,7 @@
     <string name="about_author_names" translatable="false">Christopher Beckmann, Bassel Hanna, Philipp Rack, Tobias Länge</string>
     <string name="about_author_string">%s and contributors.</string>
     <string name="about_affiliation">In affiliation with</string>
-    <string name="privacy_friendly">This application belongs to the group of Privacy Friendly Apps developed by SECUSO. Sourcecode licensed under GPLv3. Images copyright Karlsruhe Institute of Technology and Google Inc.</string>
+    <string name="privacy_friendly">This is one of many privacy-friendly apps developed by SECUSO. Source code licensed GPLv3. Images copyright Karlsruhe Institute of Technology and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
@@ -180,7 +180,7 @@
     <string name="title_activity_result_contact">Contact found</string>
     <string name="action_help">Help</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App allows to scan barcodes and qr-codes with various content while requiring Minimal set of permissions and supporting the detection of malicious links.</string>
+    <string name="welcome_text">Privacy friendly QR scanner allows scanning barcodes and QR-codes with various content with a minimal set of permissions, and supports detection of malicious links.</string>
     <string name="welcome">Welcome</string>
     <string name="viewhelp">View Help</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
