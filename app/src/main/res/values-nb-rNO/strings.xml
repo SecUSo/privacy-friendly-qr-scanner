@@ -50,4 +50,10 @@
     <string name="to">Mottager:</string>
     <string name="action_help">Hjelp</string>
     <string name="domain">Domene</string>
+    <string name="slide1_heading">Velkommen</string>
+    <string name="slide2_heading">Hvilke funksjoner forefinnes?</string>
+    <string name="text_slide2">Du kan både skanne og lage QR-koder med dette programmet.</string>
+    <string name="about_author">Utviklere:</string>
+    <string name="about_author_string">%s og bidragsytere.</string>
+    <string name="about_affiliation">I samarbeid med</string>
 </resources>
