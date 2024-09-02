@@ -58,4 +58,5 @@
     <string name="about_affiliation">I samarbeid med</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-kodelager</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-nettsiden</a></string>
+    <string name="okay">OK</string>
 </resources>
