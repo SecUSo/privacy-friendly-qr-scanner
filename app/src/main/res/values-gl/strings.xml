@@ -21,13 +21,13 @@
     <string name="QRScanner">QR Scanner</string>
     <string name="QRGenerator">Xerador de QR</string>
     <string name="History">Historial</string>
-    <string name="slide1_heading">Benvida!</string>
-    <string name="slide1_text">Benvida ao QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
+    <string name="slide1_heading">Benvida</string>
+    <string name="slide1_text">Benvida a Privacy QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
     <string name="slide2_heading">que hai ahí?</string>
     <string name="text_slide2">Podes escanear un código QR con QR Scanner ou crear un códgio QR con QR Generator.</string>
     <string name="slide3_heading">Máis características</string>
     <string name="text_slide3">O código QR code escaneado pódese gardar no historial. Incluso podes compartilo ou copialo.</string>
-    <string name="wecome">Benvida!</string>
+    <string name="wecome">Benvida</string>
     <string name="skip">Omitir</string>
     <string name="next">Seguinte</string>
     <string name="help_">Axuda</string>
@@ -36,7 +36,7 @@
     <string name="about_author">Autoría: </string>
     <string name="about_author_string">%s e colaboradoras.</string>
     <string name="about_affiliation">En asociación con</string>
-    <string name="privacy_friendly">Esta aplicación pertence ao grupo PRIVACY FRIENDLY Apps desenvoltas pola SECUSO. Código fonte baixo licenza GPLv3. Copyright das imaxes Karlsruhe Institute of Technology e Google Inc.</string>
+    <string name="privacy_friendly">Esta é unha das aplicacións respetuosas da privacidade desenvoltas por SECUSO. Código fonte baixo licenza GPLv3. Copyright das imaxes Karlsruhe Institute of Technology e Google Inc.</string>
     <string name="more_info">Tes máis información en:</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Web de SECUSO</a></string>
@@ -152,7 +152,7 @@
     <string name="title_activity_result_contact">Contacto atopado</string>
     <string name="action_help">Axuda</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">QR Code Scanner é unha App que RESPECTA A TÚA PRIVACIDADE e permíteche escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
+    <string name="welcome_text">Escáner QR respetuoso coa privacidade que che permite escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
     <string name="welcome">Benvida</string>
     <string name="viewhelp">Ver Axuda</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
