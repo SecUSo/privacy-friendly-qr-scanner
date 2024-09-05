@@ -173,7 +173,7 @@
     <string name="title_activity_result_contact">İletişim bulundu</string>
     <string name="action_help">Yardım</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Gizlilik dostu QR tarayıcı, çeşitli içeriklere sahip barkodların ve QR kodlarının en az sayıda izinle taranmasına olanak tanır ve kötü amaçlı bağlantıların algılanmasını destekler.</string>
+    <string name="welcome_text">Gizlilik dostu QR tarayıcı, çeşitli içeriklere sahip barkodların ve QR kodlarının en az sayıda izinle taranmasına olanak tanır ve kötü amaçlı bağlantıların algılanmasına yardım eder.</string>
     <string name="welcome">Hoşgeldiniz</string>
     <string name="viewhelp">Yardımı Görüntüle</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
