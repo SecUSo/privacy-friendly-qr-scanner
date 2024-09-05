@@ -4,7 +4,7 @@
     <string name="navigation_drawer_open">Abrir cadro de navegación</string>
     <string name="navigation_drawer_close">Pechar cadro de navegación</string>
     <string name="qr_scanner">QR Scanner</string>
-    <string name="qr_generator">QR Generator</string>
+    <string name="qr_generator">Xerador de QR</string>
     <string name="history">Historial</string>
     <string name="settings">Axustes</string>
     <string name="help">Axuda</string>
@@ -12,22 +12,22 @@
     <string name="title_activity_qrscanner">QR Scanner</string>
     <string name="action_settings">Axustes</string>
     <string name="title_activity_qr_scanner">QR Scanner</string>
-    <string name="title_activity_qr_generator">QR Generator</string>
+    <string name="title_activity_qr_generator">Xerador de QR</string>
     <string name="title_activity_history">Historial</string>
     <string name="title_activity_settings">Axustes</string>
     <string name="title_activity_help">Axuda</string>
     <string name="title_activity_about">Acerca de</string>
     <string name="Settings">Axustes</string>
     <string name="QRScanner">QR Scanner</string>
-    <string name="QRGenerator">QR Generator</string>
+    <string name="QRGenerator">Xerador de QR</string>
     <string name="History">Historial</string>
-    <string name="slide1_heading">Benvida!</string>
-    <string name="slide1_text">Benvida ao QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
+    <string name="slide1_heading">Benvida</string>
+    <string name="slide1_text">Benvida a Privacy QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
     <string name="slide2_heading">que hai ahí?</string>
     <string name="text_slide2">Podes escanear un código QR con QR Scanner ou crear un códgio QR con QR Generator.</string>
     <string name="slide3_heading">Máis características</string>
     <string name="text_slide3">O código QR code escaneado pódese gardar no historial. Incluso podes compartilo ou copialo.</string>
-    <string name="wecome">saúdo</string>
+    <string name="wecome">Benvida</string>
     <string name="skip">Omitir</string>
     <string name="next">Seguinte</string>
     <string name="help_">Axuda</string>
@@ -36,15 +36,15 @@
     <string name="about_author">Autoría: </string>
     <string name="about_author_string">%s e colaboradoras.</string>
     <string name="about_affiliation">En asociación con</string>
-    <string name="privacy_friendly">Esta aplicación pertence ao grupo PRIVACY FRIENDLY Apps desenvoltas pola SECUSO. Código fonte baixo licenza GPLv3. Copyright das imaxes Karlsruhe Institute of Technology e Google Inc.</string>
+    <string name="privacy_friendly">Esta é unha das aplicacións respetuosas da privacidade desenvoltas por SECUSO. Código fonte baixo licenza GPLv3. Copyright das imaxes Karlsruhe Institute of Technology e Google Inc.</string>
     <string name="more_info">Tes máis información en:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
-    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">Web de SECUSO</a></string>
     <string name="about_libraries">Bibliotecas utilizadas:</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
     <string name="version_number">Versión v%s</string>
     <string name="delete_items">Eliminar elementos</string>
-    <string name="scan_text">Sitúa esta ventá sobre o código que queres descifrar.</string>
+    <string name="scan_text">Sitúa esta xanela sobre o código que queres descifrar.</string>
     <string name="action_clear">Baleirar historial</string>
     <string name="cannot_clear">O historial xa está baleiro</string>
     <string name="knowRisks">Comprobei a ligazón e quero visitar o sitio web.</string>
@@ -52,7 +52,7 @@
     <string name="urlExplanation">Os códigos QR poden conter ligazóns que poden ser enganosas e comprometer a túa información persoal (webs de phishing) ou instalar malware (ex. virus) no teu dispositivo.\n\nPor isto deberías <b>comprobar</b> se a seguinte ligazón é a que agardabas:</string>
     <string name="further_info">Mira esta <a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">información</a> sobre cómo comprobar as ligazóns grazas aos colegas da TU Darmstadt. Se non confías na ligazón, preme en non confiar e non a gardes.</string>
     <string name="delete_history">Queres eliminar o historial?</string>
-    <string name="ok">Si</string>
+    <string name="ok">OK</string>
     <string name="element_removed">Elemento eliminado.</string>
     <string name="conform_url">Confirma que comprobaches a ligazón.</string>
     <string name="wifi_explanation">Esta versión da app non pode conectarse a redes WiFi automáticamente debido aos permisos que necesitaría. Embaixo tes máis detalles sobre a rede.</string>
@@ -60,7 +60,7 @@
     <string name="action_about">Acerca de</string>
     <string name="history_disabled">Historial desactivado</string>
     <string name="to">Correspondente:</string>
-    <string name="subject">Asunto:</string>
+    <string name="subject">Asunto</string>
     <string name="usability_hint2">Se non podes escanear o código, aumenta a distancia entre o escáner e o código.</string>
     <string name="description_contact">O código QR que escaneaches ten información de contacto. Para poder <i>importala</i> á túa libreta de enderezos, preme en Proceder.</string>
     <string name="description_email">O código QR que escaneaches é un enderzo de email. Para poder <i>enviar un email</i> ou <i>engadirllo a un contacto</i>, preme en Proceder.</string>
@@ -148,11 +148,11 @@
     <string name="title_activity_result_send_email">Email atopado</string>
     <string name="title_activity_result_product">Produto atopado</string>
     <string name="title_activity_result_tel">Número de teléfono atopado</string>
-    <string name="title_activity_result_wifi">Wifi atopado</string>
+    <string name="title_activity_result_wifi">Wi-Fi atopado</string>
     <string name="title_activity_result_contact">Contacto atopado</string>
     <string name="action_help">Axuda</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">QR Code Scanner é unha App que RESPECTA A TÚA PRIVACIDADE e permíteche escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
+    <string name="welcome_text">Escáner QR respetuoso coa privacidade que che permite escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
     <string name="welcome">Benvida</string>
     <string name="viewhelp">Ver Axuda</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
@@ -202,7 +202,7 @@
     <string name="phone_number">Número de teléfono</string>
     <!-- Generator activities -->
     <string name="text_enter">O texto que queres codificar</string>
-    <string name="hello_world">Ola Mundo!</string>
+    <string name="hello_world">Ola Mundo</string>
     <string name="generate">crear</string>
     <string name="sms_text">Texto SMS</string>
     <string name="mms">MMS</string>
@@ -260,4 +260,61 @@
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
+    <string name="something_went_wrong">Algo fallou.</string>
+    <string name="message">Mensaxe</string>
+    <string name="copy_to_clipboard">Copiar ao portapapeis</string>
+    <string name="raw_data">Datos en cru</string>
+    <string name="select_image_from_gallery">Escolle unha imaxe da galería</string>
+    <string name="image_is_being_processed">Estase a procesar a imaxe…</string>
+    <string name="no_code_in_image_explanation">Non se atopou ningún código nesta imaxe. Para mellorar os resultados podes recortar e endereitar a imaxe e volver a intentalo.</string>
+    <string name="unsupported_wifi_encryption">Actualmente non hai compatibilidade con esta cifraxe WiFi: %1$s</string>
+    <string name="android_version_does_not_support_feature">A túa versión de Android non é compatible con esta función.</string>
+    <string name="encryption_value">Cifraxe: %1$s</string>
+    <string name="password_value">Contrasinal: %1$s</string>
+    <string name="item_result_calendar_title">Título:</string>
+    <string name="item_result_calendar_location">Localización:</string>
+    <string name="item_result_calendar_start">Inicio:</string>
+    <string name="item_result_calendar_end">Fin:</string>
+    <string name="activity_enter_toast_missing_data">Sen datos</string>
+    <string name="activity_scanner_flashlight_on">Lámpada acesa</string>
+    <string name="activity_scanner_flashlight_off">Lámpada apagada</string>
+    <string name="action_search">Buscar</string>
+    <string name="pref_app_theme_title">Decorado</string>
+    <string name="pref_search_engine_enabled_title">Usar motores de busca</string>
+    <string name="action_open">Abrir</string>
+    <string name="pref_search_engine_enabled_summary">Mostrar o botón \"Buscar\" ao escanear un texto.</string>
+    <string name="help_data_backup">Como fago copia de apoio?</string>
+    <string name="barcode_format">Formato</string>
+    <string name="error_correction_level">Erro a nivel de conexión</string>
+    <string name="code_generation_error">Non se puido crear un código.</string>
+    <string name="save_to_history">Gardar no historial</string>
+    <string name="generator_text_textfield">Texto</string>
+    <string name="generator_text_explanation">Podes escribir calquera texto que queiras. Permítense varias liñas.</string>
+    <string name="generator_url_explanation">Podes escribir un enderezo web. Ex.</string>
+    <string name="no_encryption">Sen cifrar</string>
+    <string name="name">Nome</string>
+    <string name="address">Enderezo</string>
+    <string name="zip_code">Zip</string>
+    <string name="country">País</string>
+    <string name="generator_package_name">Nome do paquete</string>
+    <string name="generator_market_explanation_2">O código QR creado dirixirá cara a aplicación correspondente en Google Play.</string>
+    <string name="switch_camera">Cambiar de cámara</string>
+    <string name="ssid_value">SSID: %1$s</string>
+    <string name="item_result_calendar_description">Descrición:</string>
+    <string name="help_data_backup_answer">Podes usar a aplicación Privacy Friendly Backup para facer una copia de apoio e restablecer os datos desta aplicación. Tamén podes usala para migrar o datos a outro teléfono.</string>
+    <string name="generator_market_explanation">Aquí podes engadir o nome do paquete da app. Ex.</string>
+    <string name="import_from_contacts">Importar dos contactos</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d entrada seleccionada</item>
+        <item quantity="other">%1$d entradas seleccionadas</item>
+    </plurals>
+    <string name="select_image_from_gallery_explanation">Esta función permíteche abrir imaxes da galería e escanear os códigos que conteñan. Require acceso ás imaxes.</string>
+    <string name="generated_code_image_explanation">Nota: o código que aquí se mostra foi creado a partir do contido do código escaneado e por tanto podería parecer diferente. Porén, os datos que contén son os mesmos.</string>
+    <string name="image_stored_in_gallery">Imaxe gardada na galería</string>
+    <string name="close">Pechar</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">Non se pode conectar cunha rede WiFi cifrada sen un contrasinal.</string>
+    <string name="fragment_result_text_dialog_message">Queres buscar este texto en %s? Potencialmente isto podería filtrar información ao enviar o texto ao motor de busca.</string>
+    <string name="fragment_result_text_dialog_positive_button">Buscar</string>
+    <string name="fragment_result_text_dialog_title">Buscar</string>
+    <string name="none">Nada</string>
 </resources>

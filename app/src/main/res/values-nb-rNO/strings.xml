@@ -1,2 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="navigation_drawer_open">Åpne navigasjonsskuff</string>
+    <string name="app_name">QR-skanner</string>
+    <string name="navigation_drawer_close">Lukk navigasjonsskuff</string>
+    <string name="qr_scanner">QR-skanner</string>
+    <string name="qr_generator">QR-generator</string>
+    <string name="history">Historikk</string>
+    <string name="settings">Innstillinger</string>
+    <string name="help">Hjelp</string>
+    <string name="about">Om</string>
+    <string name="title_activity_qrscanner">QR-skanner</string>
+    <string name="action_settings">Innstillinger</string>
+    <string name="title_activity_qr_scanner">QR-skanner</string>
+    <string name="title_activity_qr_generator">QR-generator</string>
+    <string name="title_activity_history">Historikk</string>
+    <string name="title_activity_settings">Innstillinger</string>
+    <string name="title_activity_help">Hjelp</string>
+    <string name="title_activity_about">Om</string>
+    <string name="Settings">Innstillinger</string>
+    <string name="QRScanner">QR-skanner</string>
+    <string name="QRGenerator">QR-generator</string>
+    <string name="History">Historikk</string>
+    <string name="slide3_heading">Flere funksjoner</string>
+    <string name="wecome">Velkommen</string>
+    <string name="skip">Hopp over</string>
+    <string name="version_number">Versjon v%s</string>
+    <string name="delete_items">Slett elementer</string>
+    <string name="action_clear">Tøm historikk</string>
+    <string name="cannot_clear">Historikken er allerede tom</string>
+    <string name="ok">OK</string>
+    <string name="element_removed">Element fjernet.</string>
+    <string name="something_went_wrong">Noe gikk galt.</string>
+    <string name="choose_action">Fortsett</string>
+    <string name="abort_action">Avbryt</string>
+    <string name="proceed">Fortsett</string>
+    <string name="back">Tilbake</string>
+    <string name="help_permission1_heading">Kamera</string>
+    <string name="next">Neste</string>
+    <string name="help_">Hjelp</string>
+    <string name="tutorial">Veiledning</string>
+    <string name="more_info">Mer info er å finne på:</string>
+    <string name="choose_action_url">Fortsett</string>
+    <string name="viewhelp">Vis hjelp</string>
+    <string name="history_disabled">Historikk avskrudd</string>
+    <string name="abort_action_url">Avbryt</string>
+    <string name="copied_to_clipboard">Kopiert til utklippstavle.</string>
+    <string name="welcome">Velkommen</string>
+    <string name="action_about">Om</string>
+    <string name="to">Mottager:</string>
+    <string name="action_help">Hjelp</string>
+    <string name="domain">Domene</string>
+    <string name="slide1_heading">Velkommen</string>
+    <string name="slide2_heading">Hvilke funksjoner forefinnes?</string>
+    <string name="text_slide2">Du kan både skanne og lage QR-koder med dette programmet.</string>
+    <string name="about_author">Utviklere:</string>
+    <string name="about_author_string">%s og bidragsytere.</string>
+    <string name="about_affiliation">I samarbeid med</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-kodelager</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-nettsiden</a></string>
+    <string name="okay">OK</string>
+</resources>

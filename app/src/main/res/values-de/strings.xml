@@ -321,7 +321,7 @@
     <string name="code_generation_error">Es konnte kein Code generiert werden.</string>
     <string name="something_went_wrong">Etwas ist schiefgelaufen.</string>
     <string name="save_to_history">Im Verlauf speichern</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="activity_history_list_item_qr_image_descriptor">QR-Code</string>
     <string name="item_result_calendar_title">Titel:</string>

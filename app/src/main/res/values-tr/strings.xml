@@ -21,13 +21,13 @@
     <string name="QRScanner">Karekod Tarayıcı</string>
     <string name="QRGenerator">Karekod Oluşturucu</string>
     <string name="History">Geçmiş</string>
-    <string name="slide1_heading">Hoş geldiniz!</string>
+    <string name="slide1_heading">Hoş geldiniz</string>
     <string name="slide1_text">Gizlilik dostu Karekod Tarayıcısına hoş geldiniz. Bu rehber bilmeniz gereken en önemli şeyleri kapsayacaktır.</string>
     <string name="slide2_heading">Orada ne var?</string>
     <string name="text_slide2">Bu uygulama ile karekodu hem tarayabilir hem de oluşturabilirsiniz.</string>
     <string name="slide3_heading">Diğer özellikler</string>
     <string name="text_slide3">Taradığınız karekod geçmişe kaydedilebilir. Ayrıca paylaşabilir veya kopyalayabilirsiniz.</string>
-    <string name="wecome">Hoş geldiniz!</string>
+    <string name="wecome">Hoş geldiniz</string>
     <string name="skip">Atla</string>
     <string name="next">Sonraki</string>
     <string name="help_">Yardım</string>
@@ -36,9 +36,9 @@
     <string name="about_author">Geliştiriciler: </string>
     <string name="about_author_string">%s ve katkıda bulunanlar.</string>
     <string name="about_affiliation">ile bağlantılı olarak</string>
-    <string name="privacy_friendly">Bu uygulama SECUSO tarafından geliştirilen Gizlilik Dostu Uygulamalar grubuna aittir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı Karlsruhe Teknoloji Enstitüsü ve Google Inc\'e aittir.</string>
+    <string name="privacy_friendly">Bu, SECUSO tarafından geliştirilen birçok gizlilik dostu uygulamadan biridir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı Karlsruhe Teknoloji Enstitüsü ve Google Inc\'e aittir.</string>
     <string name="more_info">Daha fazla bilgi için:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Deposu</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Deposu</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-İnternet-Sitesi</a></string>
     <string name="about_libraries">Kullanılan kütüphaneler:</string>
     <string name="app_name_long">Gizlilik Dostu Karekod Tarayıcı</string>
@@ -173,7 +173,7 @@
     <string name="title_activity_result_contact">İletişim bulundu</string>
     <string name="action_help">Yardım</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">GİZLİLİK DOSTU Karekod Tarayıcı Uygulaması, Minimum izin seti gerektirirken ve kötü amaçlı bağlantıların algılanmasını desteklerken çeşitli içeriğe sahip barkodları ve karekodları taramanızı sağlar.</string>
+    <string name="welcome_text">Gizlilik dostu QR tarayıcı, çeşitli içeriklere sahip barkodların ve QR kodlarının en az sayıda izinle taranmasına olanak tanır ve kötü amaçlı bağlantıların algılanmasını destekler.</string>
     <string name="welcome">Hoşgeldiniz</string>
     <string name="viewhelp">Yardımı Görüntüle</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>

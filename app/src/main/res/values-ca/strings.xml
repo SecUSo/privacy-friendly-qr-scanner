@@ -38,7 +38,7 @@
     <string name="about_author_string">%s i col·laboradors.</string>
     <string name="about_affiliation">En associació amb</string>
     <string name="more_info">Podeu trobar més informació a:</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repositori de Github</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repositori de GitHub</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Lloc web SECUSO</a></string>
     <string name="about_libraries">Biblioteques usades:</string>
     <string name="app_name_long">Un escàner de codis QR respectuós amb la privadesa</string>
@@ -78,7 +78,7 @@
     <string name="action_help">Ajuda</string>
     <string name="title_activity_result_product">S\'ha trobat un producte</string>
     <string name="title_activity_result_tel">S\'ha trobat un número de telèfon</string>
-    <string name="title_activity_result_wifi">S\'ha trobat una WiFi</string>
+    <string name="title_activity_result_wifi">S\'ha trobat una Wi-Fi</string>
     <string name="title_activity_result_contact">S\'ha trobat un contacte</string>
     <string name="welcome">Benvingut</string>
     <string name="viewhelp">Mostra l\'ajuda</string>

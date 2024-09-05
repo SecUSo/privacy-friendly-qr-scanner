@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QR Scanner</string>
-
     <string name="navigation_drawer_open">Apri il drawer di navigazione</string>
     <string name="navigation_drawer_close">Chiudi il drawer di navigazione</string>
     <string name="qr_scanner">QR Scanner</string>
@@ -10,7 +10,6 @@
     <string name="help">Aiuto</string>
     <string name="about">Al riguardo</string>
     <string name="title_activity_qrscanner">QR Scanner</string>
-
     <string name="action_settings">Impostazioni</string>
     <string name="title_activity_qr_scanner">QR Scanner</string>
     <string name="title_activity_qr_generator">QR Generator</string>
@@ -22,7 +21,6 @@
     <string name="QRScanner">QR Scanner</string>
     <string name="QRGenerator">QR Generator</string>
     <string name="History">Cronologia</string>
-
     <string name="slide1_heading">Benvenuto!</string>
     <string name="slide1_text">Benvenuto su privacy friendly QR scanner. Questo tutorial ti illustrerà le cose più importanti che devi conoscere.</string>
     <string name="slide2_heading">Quali funzionalità?</string>
@@ -33,9 +31,7 @@
     <string name="skip">Salta</string>
     <string name="next">Continua</string>
     <string name="help_">Aiuto</string>
-
     <string name="tutorial">Tutorial</string>
-
     <!--###ABOUT###-->
     <string name="about_author">Autori: </string>
     <string name="about_author_string">%s e collaboratori.</string>
@@ -46,7 +42,6 @@
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
     <string name="version_number">Versione v%s</string>
     <string name="delete_items">Cancella elementi</string>
-
     <string name="scan_text">Posiziona questa finestra sopra il codice che vuoi scansionare.</string>
     <string name="action_clear">Cancella Cronologia</string>
     <string name="cannot_clear">La cronologia è già vuota</string>
@@ -64,27 +59,20 @@
     <string name="history_disabled">Cronologia disabilitata</string>
     <string name="to">Destinatario:</string>
     <string name="subject">Soggetto</string>
-
     <string name="usability_hint2">Se non puoi scansionare un codice QR, aumenta la distanza tra lo scanner ed il codice.</string>
-
     <string name="description_contact">Il codice QR che hai scansionato contiene informazioni di contatto.</string>
     <string name="description_email">Il codice QR che hai scansionato contiene un indirizzo e-mail.</string>
     <string name="description_send_email">Il codice QR che hai scansionato contiene un\'e-mail.</string>
     <string name="description_product">Il codice QR che hai scansionato contiene un codice prodotto.</string>
     <string name="description_tel">Il codice QR che hai scansionato contiene un numero di telefono.</string>
     <string name="description_sms">Il codice QR che hai scansionato contiene un SMS.</string>
-
     <string name="description_text">Il codice QR che hai scansionato contiene del testo semplice.</string>
-
     <string name="choose_action">Continua</string>
     <string name="abort_action">Annulla </string>
-
     <string name="proceed">Continua</string>
     <string name="back">Indietro</string>
-
     <string name="choose_action_url">Continua</string>
     <string name="abort_action_url">Annulla</string>
-
     <string-array name="text_array">
         <item>Cerca sul Web</item>
         <item>Non fare niente</item>
@@ -164,7 +152,6 @@
         <item>Market</item>
         <item>Contatto</item>
         <item>Geolocalizzazione</item>
-
         <item>Libro indirizzi</item>
         <item>Prodotto</item>
         <item>Calendario</item>
@@ -173,7 +160,6 @@
     </string-array>
     <string name="copied_to_clipboard">Copiato nella clipboard.</string>
     <string name="noname">Nessun nome specificato</string>
-
     <string name="title_activity_result_url">Link trovato</string>
     <string name="title_activity_result_text">Testo trovato</string>
     <string name="title_activity_result_sms">SMS trovato</string>
@@ -181,15 +167,13 @@
     <string name="title_activity_result_send_email">E-mail trovata</string>
     <string name="title_activity_result_product">Prodotto trovato</string>
     <string name="title_activity_result_tel">Numero di telefono trovato</string>
-    <string name="title_activity_result_wifi">WiFi trovata</string>
+    <string name="title_activity_result_wifi">Wi-Fi trovata</string>
     <string name="title_activity_result_contact">Contatto trovato</string>
     <string name="action_help">Aiuto</string>
-
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">L\'app PRIVACY FRIENDLY QR Code Scanner consente di scansionare codici a barre e codici-QR di varia tipologia richiedendo un numero minimo di permessi e rilevando link dannosi.</string>
     <string name="welcome">Benvenuto</string>
     <string name="viewhelp">Visualizza Aiuto</string>
-
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
@@ -202,13 +186,10 @@
     <string name="help_overview_heading">Che cos\'è PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">Con PRIVACY FRIENDLY QR Scanner puoi scansionare codici a barre e codici QR di varia tipologia.</string>
     <string name="help_whatis_answer">Con PRIVACY FRIENDLY QR Scanner puoi scansionare e generare codici a barre e codici QR di varia tipologia. Inoltre puoi copiare e condividere i codici QR scansionati con altre applicazioni, e salvare i codici QR generati nella galleria e condividerli.</string>
-
-
     <!--###HELP###-->
 
 
     <string name="help_whatis">Che cos\'è PRIVACY FRIENDLY QR Scanner?</string>
-
     <string name="help_usability">La scansione non funziona, cosa posso fare?</string>
     <string name="help_usability_answer">Se non puoi scansionare un codice, aumenta la distanza tra lo scanner ed il codice.</string>
     <string name="help_privacy">Cosa rende l\'app privacy-friendly?</string>
@@ -222,7 +203,6 @@
     <string name="pref_description_enable_history">Le scansioni precedenti vengono salvate, puoi visualizzarle nuovamente</string>
     <string name="pref_keep_duplicates">Mantieni i duplicati</string>
     <string name="pref_keep_duplicates_explanation">I duplicati vengono salvati nella cronologia</string>
-
     <!-- Example settings for Notifications -->
     <string name="pref_title_beep">Tono beep</string>
     <string name="description_Mms">Il codice QR che hai scansionato contiene un MMS.</string>
@@ -239,7 +219,6 @@
     <string name="okay">Okay</string>
     <string name="Store_in_gallery">Salva</string>
     <string name="phone_number">Numero di telefono</string>
-
     <string name="sms_text">Testo SMS</string>
     <string name="mms">MMS</string>
     <string name="network_name">Nome rete (SSID)</string>
@@ -270,31 +249,25 @@
     <string name="select_all">Seleziona Tutto</string>
     <string name="selected_1">Selezionato</string>
     <string name="activity_scanner_permission_needed_explanation">L\'applicazione richiede il permesso di accedere alla fotocamera per poter scansionare i codici QR.</string>
-
     <!-- ResultFragment -->
     <string name="unsupported_wifi_encryption">Questa crittografia WiFi non è attualmente supportata: %1$s</string>
     <string name="ssid_value">SSID: %1$s</string>
     <string name="encryption_value">Crittografia: %1$s</string>
     <string name="password_value">Password: %1$s</string>
-
     <!-- Others -->
     <string name="android_version_does_not_support_feature">La versione di Android in uso non supporta questa funzione.</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <!--Settings for Default Search Engine-->
     <string name="pref_search_engine_title">Motore di ricerca predefinito</string>
     <string name="pref_enable_beep_on_scan_title">Beep durante la scansione</string>
     <string name="pref_enable_beep_on_scan_summary">Riproduci un suono di conferma durante la scansione</string>
-
     <string name="pref_app_theme_title">Tema</string>
     <string-array name="pref_app_theme_entries">
         <item>Chiaro</item>
         <item>Scuro</item>
         <item>Sistema predefinito</item>
     </string-array>
-
     <string name="delete">cancella</string>
     <string name="dialog_history_delete_message">Vuoi veramente cancellare questo elemento?</string>
     <string name="dialog_history_delete_title">Cancella Elemento</string>
@@ -309,22 +282,17 @@
     <string name="fragment_result_product_label">Identificatore:</string>
     <string name="activity_result_toast_error_cant_load">Qualcosa è andato storto durante il caricamento del risultato.</string>
     <string name="activity_enter_toast_missing_data">Nessun dato</string>
-
     <string name="text_enter">Il testo che vuoi codificare</string>
     <string name="hello_world">Ciao mondo</string>
     <string name="generate">creare</string>
-
-
     <string name="activity_scanner_flashlight_on">Torcia accesa</string>
     <string name="activity_scanner_flashlight_off">Torcia spenta</string>
-
     <string name="action_search">Cerca</string>
     <string name="action_open">Aprire</string>
     <string name="fragment_result_text_dialog_message">Vuoi cercare questo testo su %s? Questo inoltrerà il testo al motore di ricerca.</string>
     <string name="fragment_result_text_dialog_positive_button">Cerca</string>
     <string name="fragment_result_text_dialog_title">Cerca</string>
     <string name="none">-</string>
-
     <string name="pref_search_engine_enabled_title">Utilizzare i motori di ricerca</string>
     <string name="pref_search_engine_enabled_summary">Visualizzare il pulsante "Cerca" durante la scansione del testo.</string>
     <string name="import_from_contacts">Importazione da contatti</string>
@@ -354,9 +322,6 @@
     <string name="code_generation_error">Non è stato possibile generare alcun codice.</string>
     <string name="something_went_wrong">Qualcosa è andato storto.</string>
     <string name="save_to_history">Salva nella cronologia</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
-
-
 </resources>
-
