@@ -180,7 +180,7 @@
     <string name="title_activity_result_contact">Contact found</string>
     <string name="action_help">Help</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Privacy friendly QR scanner allows scanning barcodes and QR-codes with various content with a minimal set of permissions, and supports detection of malicious links.</string>
+    <string name="welcome_text">Privacy friendly QR scanner allows scanning barcodes and QR-codes with various content with a minimal set of permissions, and helps in the detection of malicious links.</string>
     <string name="welcome">Welcome</string>
     <string name="viewhelp">View Help</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
