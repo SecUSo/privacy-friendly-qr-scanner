@@ -152,7 +152,7 @@
     <string name="title_activity_result_contact">Contacto atopado</string>
     <string name="action_help">Axuda</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Escáner QR respetuoso coa privacidade que che permite escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
+    <string name="welcome_text">Escáner QR respetuoso coa privacidade que che permite escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e detecta de ligazóns malignas.</string>
     <string name="welcome">Benvida</string>
     <string name="viewhelp">Ver Axuda</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
