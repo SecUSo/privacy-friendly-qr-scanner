@@ -15,7 +15,6 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.GeneratorListA
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.stream.IntStream;
 
 
 public class QrGeneratorOverviewActivity extends AppCompatActivity {
@@ -50,21 +49,15 @@ public class QrGeneratorOverviewActivity extends AppCompatActivity {
                 R.drawable.ic_person_accent_24dp,
                 R.drawable.ic_baseline_shopping_cart_24dp};
 
-        // Remove phone element (position 3) for Google Play version
-        String[] finalGenerator = generator;
-        Integer[] finalIcons = icons;
-        generator = IntStream.range(0, finalGenerator.length).filter(value -> value != 3).mapToObj(value -> finalGenerator[value]).toList().toArray(String[]::new);
-        icons = IntStream.range(0, finalIcons.length).filter(value -> value != 3).mapToObj(value -> finalIcons[value]).toList().toArray(Integer[]::new);
         GeneratorListAdapter adapter = new GeneratorListAdapter(this, generator, icons);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            // Skip position 3 for Google Play version
-            if (position >= 3) position++;
             Intent intent = switch (position) {
                 case 0 -> new Intent(QrGeneratorOverviewActivity.this, TextEnterActivity.class);
                 case 1 -> new Intent(QrGeneratorOverviewActivity.this, MailEnterActivity.class);
                 case 2 -> new Intent(QrGeneratorOverviewActivity.this, UrlEnterActivity.class);
+                case 3 -> new Intent(QrGeneratorOverviewActivity.this, TelEnterActivity.class);
                 case 4 -> new Intent(QrGeneratorOverviewActivity.this, SmsEnterActivity.class);
                 case 5 -> new Intent(QrGeneratorOverviewActivity.this, GeoLocationEnterActivity.class);
                 case 6 -> new Intent(QrGeneratorOverviewActivity.this, MeCardEnterActivity.class);
