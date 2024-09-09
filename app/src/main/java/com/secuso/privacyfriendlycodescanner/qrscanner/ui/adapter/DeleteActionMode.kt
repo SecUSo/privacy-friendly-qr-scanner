@@ -82,7 +82,6 @@ class DeleteActionMode(private val historyActivity: HistoryActivity) : ActionMod
             holder.binding.itemView.isChecked = false
             selectList.remove(s)
         }
-        Log.d("TAG", "Color" + holder.binding.itemView.cardForegroundColor + " " + holder.binding.itemView.cardBackgroundColor)
         ViewModelProvider(historyActivity)[HistoryViewModel::class.java].setSelectedItemCount(selectList.size)
     }
 }
