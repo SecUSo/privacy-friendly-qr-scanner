@@ -45,5 +45,23 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
 
+      - name: Run lint check
+        run: bash ./gradlew lint
+
+      - name: Upload lint result
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-results-debug
+          path: app/build/reports/lint-results-debug.html
+
       - name: Build the app
         run: bash ./gradlew build --stacktrace
+
+      - name: Build debug apk
+        run: bash ./gradlew assembleDebug
+
+      - name: Upload debug apk
+        uses: actions/upload-artifact@v4
+        with:
+          name: debug-apk
+          path: app/build/outputs/apk/debug/*.apk
