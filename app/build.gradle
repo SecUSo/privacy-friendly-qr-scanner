@@ -12,8 +12,8 @@ android {
         compileSdk 34
         targetSdkVersion 34
         multiDexEnabled true
-        versionCode 47
-        versionName "4.6.3"
+        versionCode 48
+        versionName "4.6.4"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildFeatures.dataBinding = true
         vectorDrawables.useSupportLibrary = true
@@ -30,7 +30,7 @@ android {
     }
 
     android.applicationVariants.configureEach { variant ->
-        variant.outputs.all {
+        variant.outputs.configureEach {
             def appName = "pfa-qr-scanner"
             outputFileName = appName + "-${variant.name}-v${variant.versionName}.apk"
         }
@@ -102,7 +102,7 @@ dependencies {
     androidTestImplementation "androidx.work:work-testing:$work_version"
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
     testLogging {
         events "passed", "skipped", "failed", "standard_out"
         exceptionFormat "full"
