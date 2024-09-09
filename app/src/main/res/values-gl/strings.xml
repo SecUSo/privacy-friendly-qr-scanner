@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QR Scanner</string>
-    <string name="navigation_drawer_open">Abrir cadro de navegación</string>
-    <string name="navigation_drawer_close">Pechar cadro de navegación</string>
+    <string name="navigation_drawer_open">Abrir panel de navegación</string>
+    <string name="navigation_drawer_close">Fechar panel de navegación</string>
     <string name="qr_scanner">QR Scanner</string>
     <string name="qr_generator">Xerador de QR</string>
     <string name="history">Historial</string>
     <string name="settings">Axustes</string>
     <string name="help">Axuda</string>
-    <string name="about">Acerca de</string>
+    <string name="about">Sobre</string>
     <string name="title_activity_qrscanner">QR Scanner</string>
     <string name="action_settings">Axustes</string>
     <string name="title_activity_qr_scanner">QR Scanner</string>
@@ -57,7 +57,7 @@
     <string name="conform_url">Confirma que comprobaches a ligazón.</string>
     <string name="wifi_explanation">Esta versión da app non pode conectarse a redes WiFi automáticamente debido aos permisos que necesitaría. Embaixo tes máis detalles sobre a rede.</string>
     <string name="encryption">Cifrado</string>
-    <string name="action_about">Acerca de</string>
+    <string name="action_about">Sobre</string>
     <string name="history_disabled">Historial desactivado</string>
     <string name="to">Correspondente:</string>
     <string name="subject">Asunto</string>
@@ -152,7 +152,7 @@
     <string name="title_activity_result_contact">Contacto atopado</string>
     <string name="action_help">Axuda</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Escáner QR respetuoso coa privacidade que che permite escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e soporta a detección de ligazóns malignas.</string>
+    <string name="welcome_text">Escáner QR respetuoso coa privacidade que che permite escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e detecta de ligazóns malignas.</string>
     <string name="welcome">Benvida</string>
     <string name="viewhelp">Ver Axuda</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
@@ -197,7 +197,7 @@
     <string name="removed_items">elementos eliminados</string>
     <string name="canncelled_scan">Cancelaches o escaneo</string>
     <string name="Scan_qr">Escanear</string>
-    <string name="okay">OK</string>
+    <string name="okay">Vale</string>
     <string name="Store_in_gallery">Gardar</string>
     <string name="phone_number">Número de teléfono</string>
     <!-- Generator activities -->
