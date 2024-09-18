@@ -219,7 +219,7 @@
     <string name="Del">Möchten Sie die ausgewählten Datensätze löschen?</string>
     <string name="confirmation">Bestätigung</string>
     <string name="pref_title_enable_history">Verlauf aktivieren</string>
-    <string name="pref_description_enable_history">Frühere Scans werden protokolliert, damit sie erneut anzeigen werden können</string>
+    <string name="pref_description_enable_history">Frühere Scans werden protokolliert, damit sie erneut angezeigt werden können</string>
     <string name="selected">ausgewählt</string>
     <string name="code_stored">QR-Code in der Galerie gespeichert</string>
     <string name="OfeaturesAnswer">Sie können den gescannten QR-Code mit anderen Anwendungen öffnen oder kopieren. Außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
