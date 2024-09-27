@@ -55,7 +55,7 @@
     <string name="help_permission1_heading">Cámara</string>
     <string name="help_privacy_heading">¿Qué permisos requiere PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_category_example">El escaneo no funciona, ¿qué puedo hacer?</string>
-    <string name="help_overview_heading">¿Qué es Privacy Friendly QR Scanner?</string>
+    <string name="help_overview_heading">¿Qué es PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">Con Privacy Friendly QR Scanner, puede escanear códigos de barras y códigos QR con contenido diverso.</string>
     <string name="help_whatis">¿Qué es Privacy Friendly QR Scanner?</string>
     <string name="help_whatis_answer">Con Privacy Friendly QR Scanner puede escanear y generar códigos de barras y códigos QR con diversos contenidos. También puede copiar y compartir el código QR escaneado con otras aplicaciones; tambien, puede guardar el código QR generado en la galería y compartirlo.</string>
@@ -66,7 +66,7 @@
     <string name="help_permission">¿Qué permisos requiere PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_data_backup">¿Cómo realizo una copia de seguridad de mis datos?</string>
     <string name="help_data_backup_answer">Puede utilizar la aplicación Privacy Friendly Backup para realizar copias de seguridad y restaurar datos de esta aplicación. También se puede usar para migrar sus datos a un nuevo teléfono.</string>
-    <string name="pref_description_enable_history">Los escaneos previos quedan registrados para que pueda volver a visualizarlos.</string>
+    <string name="pref_description_enable_history">Los escaneos previos quedan registrados para que pueda volver a visualizarlos</string>
     <string name="pref_keep_duplicates">Conservar duplicados</string>
     <string name="pref_keep_duplicates_explanation">Los duplicados se guardan en el historial</string>
     <string name="pref_title_beep">Tono de señal</string>
@@ -96,7 +96,7 @@
     <string name="title_activity_result_product">Producto encontrado</string>
     <string name="welcome">Bienvenido</string>
     <string name="help_permission1_description">La aplicación requiere el permiso de la cámara para escanear códigos de barras y códigos QR.</string>
-    <string name="help_permission_answer">La aplicación requiere del permiso de la cámara, el cual se utiliza para escanear códigos de barras y códigos QR a través de la cámara. La aplicación también requiere del permiso para acceder al almacenamiento del dispositivo para escanear códigos desde la galería de imágenes o guardar los códigos generados en el dispositivo.</string>
+    <string name="help_permission_answer">La aplicación requiere el permiso de la cámara, que se utiliza para escanear códigos de barras y códigos QR a través de la cámara. La aplicación también requiere el permiso para acceder a su almacenamiento para escanear códigos de sus imágenes o guardar códigos generados a sus imágenes.</string>
     <string name="pref_title_enable_history">Habilitar el historial</string>
     <string name="navigation_drawer_close">Cerrar menú de navegación</string>
     <string name="title_activity_qrscanner">Escáner QR</string>
@@ -227,7 +227,7 @@
     <string name="fragment_result_product_label">Identificador:</string>
     <string name="activity_result_toast_saved">Guardado en el historial.</string>
     <string name="item_result_calendar_end">Fin:</string>
-    <string name="item_result_calendar_start">Comienzo:</string>
+    <string name="item_result_calendar_start">Empieza:</string>
     <string name="item_result_calendar_location">Ubicación:</string>
     <string name="item_result_calendar_description">Descripción:</string>
     <string name="item_result_calendar_title">Título:</string>
