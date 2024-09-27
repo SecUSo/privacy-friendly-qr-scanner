@@ -217,4 +217,19 @@
     <string name="pref_enable_beep_on_scan_summary">Reproducir un tono de confirmación al escanear</string>
     <string name="encryption_value">Cifrado: %1$s</string>
     <string name="ssid_value">SSID: %1$s</string>
+    <string name="item_result_email_body">Cuerpo:</string>
+    <string name="item_result_email_bcc">CCO:</string>
+    <string name="item_result_email_cc">CC:</string>
+    <string name="activity_scanner_flashlight_off">Linterna apagada</string>
+    <string name="activity_scanner_flashlight_on">Linterna encendida</string>
+    <string name="activity_enter_toast_missing_data">Sin datos</string>
+    <string name="activity_result_toast_error_cant_load">Algo salió mal al cargar el resultado.</string>
+    <string name="fragment_result_product_label">Identificador:</string>
+    <string name="activity_result_toast_saved">Guardado en el historial.</string>
+    <string name="item_result_calendar_end">Fin:</string>
+    <string name="item_result_calendar_start">Comienzo:</string>
+    <string name="item_result_calendar_location">Ubicación:</string>
+    <string name="item_result_calendar_description">Descripción:</string>
+    <string name="item_result_calendar_title">Título:</string>
+    <string name="item_result_email_subject">Sujeto:</string>
 </resources>
