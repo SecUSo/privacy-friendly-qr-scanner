@@ -192,7 +192,7 @@
     <string name="activity_scanner_permission_needed_explanation">La aplicación necesita el permiso de la cámara para escanear códigos QR.</string>
     <string name="select_image_from_gallery_explanation">Esta función le permite abrir imágenes de su galería y escanear los códigos que contienen. Para ello es necesario tener acceso a las imágenes.</string>
     <string name="select_image_from_gallery">Seleccionar imagen de la galería</string>
-    <string name="image_is_being_processed">La imagen está siendo procesada…</string>
+    <string name="image_is_being_processed">Procesando la imagen…</string>
     <string name="no_code_in_image_explanation">Lamentablemente, no se pudo encontrar ningún código en esta imagen. Para mejorar el resultado, puede recortar o enderezar la imagen y volver a intentarlo.</string>
     <string name="switch_camera">Cambiar de cámara</string>
     <string name="generated_code_image_explanation">Nota: El código mostrado aquí fue generado en base al contenido del código escaneado por lo tanto puede verse diferente. Sin embargo, los datos que contiene son los mismos.</string>
@@ -207,7 +207,7 @@
     <string name="pref_enable_beep_on_scan_title">Pitido al escanear</string>
     <string name="activity_history_list_item_qr_image_descriptor">Código QR</string>
     <string name="delete">borrar</string>
-    <string name="dialog_history_delete_message">¿Realmente desea eliminar esta entrada?</string>
+    <string name="dialog_history_delete_message">¿Está seguro de que desea eliminar esta entrada?</string>
     <string name="dialog_history_delete_title">Borrar la entrada</string>
     <string name="pref_save_real_image_to_history_title">Guarda código real</string>
     <string name="pref_save_real_image_to_history_summary">Guarda una imagen real del código en lugar de una recreación</string>
