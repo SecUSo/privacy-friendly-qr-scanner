@@ -169,7 +169,7 @@
     <string name="urlExplanation">Los códigos QR pueden contener enlaces que conducen a páginas web engañosas, las cuales pueden comprometer sus datos personales (páginas web de phishing) o instalar malware (por ejemplo, virus) en su dispositivo.
 \n
 \nPor lo tanto, se recomienda <b>verificar</b> si el siguiente enlace es el que esperaba:</string>
-    <string name="delete_history">¿Desea eliminar el historial?</string>
+    <string name="delete_history">¿Quiere borrar el historial?</string>
     <string name="Scan_qr">Escanear</string>
     <string name="okay">De acuerdo</string>
     <string name="generate">generar</string>
