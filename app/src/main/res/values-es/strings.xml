@@ -29,7 +29,7 @@
     <string name="description_sms">El código QR escaneado contiene un SMS. Para <i>enviar</i> el SMS o <i>agregar el número a un contacto</i>, haga clic en Continuar.</string>
     <string name="description_text">El código QR escaneado contiene texto sin formato. Para <i>buscar información en la web</i>, haga clic en Continuar.</string>
     <string name="choose_action">Proceder</string>
-    <string name="abort_action">Interrumpir</string>
+    <string name="abort_action">Abortar</string>
     <string name="proceed">Proceder</string>
     <string name="back">Atrás</string>
     <string name="choose_action_url">Proceder</string>
