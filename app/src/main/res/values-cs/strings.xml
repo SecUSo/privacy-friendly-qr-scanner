@@ -38,7 +38,7 @@
     <string name="Settings">Nastavení</string>
     <string name="QRScanner">Čtečka QR</string>
     <string name="QRGenerator">Generátor QR</string>
-    <string name="slide1_text">Vítejte ve čtečce QR, která dbá na vaše soukromí. Tento tutoriál vám ukáže nejdůležitější věci, které byste měli vědět.</string>
+    <string name="slide1_text">Vítejte ve Čtečce QR, která dbá na vaše soukromí. Tento tutoriál vám ukáže nejdůležitější věci, které byste měli vědět.</string>
     <string name="slide2_heading">Co aplikace umí?</string>
     <string name="text_slide3">Naskenovaný QR kód lze uložit do historie. Krom toho ho můžete sdílet nebo kopírovat.</string>
     <string name="slide3_heading">Další funkce</string>
@@ -97,9 +97,9 @@
     <string name="select_all">Vybrat vše</string>
     <string name="selected_1">Zvoleno</string>
     <plurals name="entries_selected">
-        <item quantity="one">%1$d vybraný</item>
-        <item quantity="few">%1$d vybrané</item>
-        <item quantity="many">%1$d vybraných</item>
+        <item quantity="one">%1$d položka vybrána</item>
+        <item quantity="few">%1$d položky vybrány</item>
+        <item quantity="other">%1$d položek vybráno</item>
     </plurals>
     <string name="activity_scanner_permission_needed_explanation">Tato aplikace vyžaduje přístup k fotoaparátu pro čtení QR kódů.</string>
     <string name="app_name">Čtečka QR</string>
@@ -112,9 +112,9 @@
     <string name="title_activity_qr_scanner">Čtečka QR</string>
     <string name="title_activity_help">Nápověda</string>
     <string name="History">Historie</string>
-    <string name="slide1_heading">Vítejte!</string>
+    <string name="slide1_heading">Vítejte</string>
     <string name="text_slide2">S touto aplikací můžete jak číst, tak generovat QR kódy.</string>
-    <string name="wecome">Vítejte!</string>
+    <string name="wecome">Vítejte</string>
     <string name="skip">Přeskočit</string>
     <string name="next">Další</string>
     <string name="help_">Nápověda</string>
@@ -215,7 +215,7 @@
     <string name="text_enter">Text, který chcete zakódovat</string>
     <string name="hello_world">Vítej, světe</string>
     <string name="generate">generovat</string>
-    <string name="privacy_friendly">Tato aplikace patří do skupiny aplíkající dbajících na soukromí, které vyvinulo SECUSO. Zdrojový kód je pod licencí GPLv3. Autorská práva k obrázkům vlastní Karlsruhe Institute of Technology a Google Inc.</string>
+    <string name="privacy_friendly">Toto je jedna z mnoha aplikací dbajících na soukromí, které vyvinulo SECUSO. Zdrojový kód je pod licencí GPLv3. Autorská práva k obrázkům vlastní Karlsruhe Institute of Technology a Google Inc.</string>
     <string name="urlExplanation">QR kódy mohou obsahovat odkazy, které vedou na podvodné stránky, které mohou zneužít vaše data (phishing) nebo nakazit malwarem (např. viry) vaše zařízení.
 \n
 \nProto byste měli <b>zkontrolovat</b>, jestli je následující odkaz takový, jaký byste čekali:</string>
@@ -223,7 +223,7 @@
     <string name="description_email">Načtený QR kód obsahuje emailovou adresu. Pro <i>odeslání emailu</i> nebo <i>přiřazení ke kontaktu</i> klikněte na Pokračovat.</string>
     <string name="description_tel">Načtený QR kód obsahuje telefonní číslo. Pro <i>zavolání</i> nebo <i>přidání ke kontaktu</i> klikněte na Pokračovat.</string>
     <string name="description_text">Načtený QR kód obsahuje čistý text. Pro <i>prohledání internetu</i> klikněte na Pokračovat.</string>
-    <string name="welcome_text">Aplikace Čtečka QR respektující soukromí umožňuje číst čárové a QR kódy s různým obsahem, vyžaduje pouze minimální oprávnění a podporuje detekci škodlivých odkazů.</string>
+    <string name="welcome_text">Čtečka QR respektující soukromí umožňuje číst čárové a QR kódy s různým obsahem, vyžaduje pouze minimální oprávnění a pomáhá s detekcí škodlivých odkazů.</string>
     <string name="welcome">Vítejte</string>
     <string name="help_permission1_description">Tato aplikace vyžaduje přístup k fotoaparátu, který je využit ke čtení čárových a QR kódů.</string>
     <string name="wifi_explanation">Tato verze aplikace se nedokáže k Wi-Fi připojit automaticky kvůli chybějícímu oprávnění. Níže jsou některé detaily o této síti.</string>
@@ -231,4 +231,6 @@
     <string name="select_image_from_gallery_explanation">Tato funkce umožňuje otevírat obrázky z galerie a číst kódy v nich uložené. K tomu je třeba přístup k obrázkům.</string>
     <string name="generated_code_image_explanation">Poznámka: zobrazený kód byl vytvořen na základě obsahu naskenovaného kódu a může tím pádem vypadat jinak. Jeho obsah je nicméně stejný.</string>
     <string name="fragment_result_text_dialog_message">Chcete vyhledat tento text pomocí %s? Tak mohou potenciálně uniknout informace a tento text se odešle do internetového vyhledávače.</string>
+    <string name="help_data_backup">Jak zálohuji svá data?</string>
+    <string name="help_data_backup_answer">Můžete použít aplikaci Privacy Friendly Backup k zálohování a obnově dat této aplikace. Tímto způsobem lze také přesunout vaše data do nového telefonu.</string>
 </resources>

@@ -170,13 +170,13 @@
     <!--###HELP###-->
 
 
-    <string name="help_whatis">Qué é QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
+    <string name="help_whatis">Qué é PRIVANCY FRIENDLY QR Scanner?</string>
     <string name="help_usability">O escáner non funciona, que podo facer?</string>
     <string name="help_usability_answer">Se non podes escanear un código, aumenta a distancia entre a cámara e o código.</string>
     <string name="help_privacy">De que xeito é respetuosa coa privacidade?</string>
     <string name="help_privacy_answer">Unha App xenérica Respetuosa da Privacidade non require ningún permiso. Tampouco incluiría ningún mecanismo de rastrexo e/ou publicidade.</string>
     <string name="help_permission">Que permisos require QR Scanner RESPECTUOSA da PRIVACIDADE?</string>
-    <string name="help_permission_answer">A App require o acceso á cámara, que se utiliza para escanear códigos de barras e QR.</string>
+    <string name="help_permission_answer">A aplicación require o acceso á cámara, que se utiliza para escanear códigos de barras e QR. A aplicación tamén precisa permiso de acceso á almacenaxe para poder ver os códigos que inclúan as túas imaxes ou gardar os códigos xerados a partir das túas imaxes.</string>
     <!-- Strings related to SettingsActivity -->
 
     <!-- Example General settings -->
