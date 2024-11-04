@@ -1,0 +1,17 @@
+QR-koodid muutuvad aina tähtsamaks. Mõnes valdkonnas on nad juba olulisemad, kui triipkoodid. QR-koodi võib salvestada kuni 7000 tähemärki ja seega sobib ta mahuka infovahetuse jaoks, sh virtuaalsete visiitkaartide jaoks (vCard). Seetõttu võib tänapäeval QR-koode leida peaaegu igal plakatid ja reklaamil ning huvilistel palutakse neid koode nutiseadmega skaneerida. Praktikas tähendab see, et enam ei pea käsitsi ülestähendusi tegema ja piisab vaid QR-koodi skaneerimisest. Seetõttu on ka Google Play rakendustepoes saadaval palju QR-koodi skaneerivaid rakendusi.
+
+Meie privaatsussõbralik QR-koodi skänner erineb teisetest kahes mõttes:
+
+1. Privaatsussõbralik QR-koodi skänner vajab tööks minimaalseid õigusi, nimelt:
+Enamus Google Play rakendustepoes leiduvaid skännereid vajavad tõesti vajalikele õigustele lisaks tööks palju täiendavaid õigusi, nagu kontaktandmete lugemine, kõnelogide avamine, andmete laadmine internetist. Enamus neist pole aga QR-koodi skaneerimiseks vajalikud.
+
+2. Privaatsussõbralik QR-koodi skänner aitab oma kasutajad pahatahtlike linkide tuvastamisel. Nimelt võivad QR-koodid sisaldada veebiaadresse ja see annab kurjategijatele võimaluse levitada linke õngitsuslehtedele või pahavara automaatseks allalaadimiseks. Mistõttu on oluline skaneeritud linke enne avamist hinnata. Kuna kasutajad ei pruugi lingi õiget sisu kergesti tabada, siis Privaatsussõbralik QR-koodi skänner tõstab lingist esile domeeni osa (näiteks https://www.secuso.org/pfa puhul oleks see secuso.org). See annab kasutajatele võimaluse märgata vastuolusid ja võimalikke pettusi ning teha otsust kas link on piisavalt turvaline, et seda tasub klikata. Palun arvesta, et QR-koodi skaneerimisel kuvatud lingi teave pole kohandatud iga veebiaadressi jaoks. Seetõttu on eelkõige tegemist üldise käitumissoovitusega.
+
+Privaatsussõbralik QR-koodi skänner toetab andmete lugemist kõikidest tavalistest QR-koodidest, triipkoodidest ja muudest sarnastest masinloetavatest koodidest.
+
+Meie rakendus kuulub privaatsussõbralike rakenduste (Privacy Friendly Apps) kogumisse, mida arendab SECUSO uurimisrühm Darmstadti Tehnikaülikoolis (Technische Universität Darmstadt). Lisateave leidub siin: secuso.org/pfa
+
+Meid võid leida:
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+Tööpakkumised - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
