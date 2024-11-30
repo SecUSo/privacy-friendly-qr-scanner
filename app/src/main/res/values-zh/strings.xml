@@ -21,21 +21,21 @@
     <string name="QRScanner">二维码扫描</string>
     <string name="QRGenerator">二维码生成</string>
     <string name="History">历史</string>
-    <string name="slide1_heading">欢迎！</string>
+    <string name="slide1_heading">欢迎</string>
     <string name="slide1_text">欢迎使用隐私友好的二维码扫描仪。 本教程将涵盖您需要了解的最重要的事情。</string>
     <string name="slide2_heading">有什么功能？</string>
-    <string name="text_slide2">这个app可以扫描或者生成二维码</string>
+    <string name="text_slide2">你可以用这个 app 扫描或者生成二维码.</string>
     <string name="slide3_heading">更多功能</string>
     <string name="text_slide3">您扫描的二维码可以保存在历史记录中。 此外，您可以共享或复制它。</string>
-    <string name="wecome">欢迎！</string>
+    <string name="wecome">欢迎</string>
     <string name="skip">跳过</string>
     <string name="next">下一个</string>
     <string name="help_">帮助</string>
     <string name="tutorial">教程</string>
-    <string name="about_author">作者</string>
+    <string name="about_author">作者：</string>
     <string name="about_author_string">%s 和贡献者。</string>
     <string name="about_affiliation">隶属于</string>
-    <string name="privacy_friendly">此应用程序属于隐私友好应用程序组。 由达姆施塔特工业大学开发。 源代码许可证是 GPLv3。 图片版权卡尔斯鲁厄理工学院和谷歌公司。</string>
+    <string name="privacy_friendly">这是由卡尔斯鲁厄理工学院 SECUSO 研究组开发的众多隐私友好应用中的一个。源代码许可证是 GPLv3。 图片版权归属卡尔斯鲁厄理工学院和谷歌公司。</string>
     <string name="more_info">更多信息请参见：</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
@@ -46,9 +46,9 @@
     <string name="scan_text">将此窗口放在您要解码的代码上方。</string>
     <string name="action_clear">清空历史</string>
     <string name="cannot_clear">历史已清空</string>
-    <string name="knowRisks">我已确认并想访问此网站</string>
+    <string name="knowRisks">我检查了这个链接想要访问该网站.</string>
     <string name="domain">链接</string>
-    <string name="urlExplanation">二维码可能包含指向虚假网站的链接，这可能会危及您的个人数据（网络钓鱼网站）或将恶意软件（例如病毒）传输到您的设备。 因此，您应该<b>检查</b>以下链接是否是您期望的链接：</string>
+    <string name="urlExplanation">二维码可能包含指向虚假网站的链接，这可能会危及您的个人数据（网络钓鱼网站）或将恶意软件（例如病毒）传输到您的设备。 \n\n因此，您应该<b>检查</b>以下链接是否是您期望的链接：</string>
     <string name="further_info">有关如何检查链接的<a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">信息</a>。</string>
     <string name="delete_history">您想删除此历史记录吗？</string>
     <string name="ok">好的</string>
@@ -57,7 +57,7 @@
     <string name="wifi_explanation">此版本的应用程序因无相关权限无法自动连接到 WIFI 网络。 以下是有关网络的一些详细信息。</string>
     <string name="encryption">加密</string>
     <string name="action_about">关于</string>
-    <string name="history_disabled">禁用历史</string>
+    <string name="history_disabled">已停用历史记录</string>
     <string name="to">接受者：</string>
     <string name="usability_hint2">如果无法扫描代码，请拉远扫描仪与二维码的距离。</string>
     <string name="description_contact">您扫描的二维码包含联系信息。 要将其<i>导入</i>到您的地址簿中，请单击“继续”。</string>
@@ -86,7 +86,7 @@
     <string name="title_activity_result_wifi">Wi-Fi</string>
     <string name="title_activity_result_contact">联系人</string>
     <string name="action_help">帮助</string>
-    <string name="welcome_text">本应用允许扫描具有各种内容的条形码和二维码，同时需要最少的权限集并支持恶意链接的检测。</string>
+    <string name="welcome_text">本应用是一款隐私友好的二维码扫描仪，允许用最少的权限扫描具有各种内容的条形码和二维码，并帮助检测恶意链接。</string>
     <string name="welcome">欢迎</string>
     <string name="viewhelp">查看帮助</string>
     <string name="help_permission1_description">该应用程序需要相机权限，用于通过相机扫描条形码和二维码。</string>
@@ -110,7 +110,7 @@
     <string name="pref_title_beep">检测声音</string>
     <string name="geoInfo">您扫描的二维码包含彩信。</string>
     <string name="content_copied">内容已复制</string>
-    <string name="share_via">分享到：</string>
+    <string name="share_via">分享方式</string>
     <string name="no_content_in_history">没有历史记录！</string>
     <string name="selected_item">已选择项目</string>
     <string name="selected_items">选定的项目</string>
@@ -169,13 +169,13 @@
     <string name="OfeaturesAnswer">您可以复制/与其他应用程序共享扫描的二维码，此外您还可以将生成的二维码保存在图库中并共享。</string>
     <string name="copy_to_clipboard">复制到剪贴板</string>
     <string name="Content_copied">内容已复制</string>
-    <string name="Share_via">分享到：</string>
+    <string name="Share_via">分享方式</string>
     <string name="select_all">选择所有</string>
     <string name="selected_1">已选择</string>
     <string name="activity_scanner_permission_needed_explanation">该应用程序需要相机权限才能扫描二维码。</string>
     <string name="select_image_from_gallery_explanation">此功能允许您从图库中打开图像并扫描其中包含的代码。 这需要访问图像。</string>
     <string name="select_image_from_gallery">从图库中选择图像</string>
-    <string name="image_is_being_processed">图像正在处理中...</string>
+    <string name="image_is_being_processed">正在处理图像…</string>
     <string name="raw_data">原始数据</string>
     <string name="generated_code_image_explanation">注意：此处显示的代码是根据扫描代码的内容生成的，因此可能看起来有所不同。 但是，它包含的数据是相同的。</string>
     <string name="image_stored_in_gallery">保存到相册</string>
@@ -194,7 +194,7 @@
     <string name="dialog_history_delete_message">你确定要删除吗？</string>
     <string name="dialog_history_delete_title">删除</string>
     <string name="pref_save_real_image_to_history_title">保存二维码</string>
-    <string name="pref_save_real_image_to_history_summary">您想将二维码保存为图像吗？</string>
+    <string name="pref_save_real_image_to_history_summary">保存代码的真实图像而非重新创建</string>
     <string name="item_result_email_to">目的地：</string>
     <string name="item_result_email_cc">CC：</string>
     <string name="item_result_email_bcc">BCC：</string>
@@ -221,7 +221,7 @@
     <string name="pref_search_engine_enabled_summary">扫描文本时显示“搜索”按钮。</string>
     <string name="pref_app_theme_title">主题</string>
     <string name="description_Mms">您扫描的二维码包含彩信。</string>
-    <string name="no_code_in_image_explanation">未能识别出二维码，请适当裁剪图片兵重试</string>
+    <string name="no_code_in_image_explanation">不幸的是，此图片中找不到代码。要改进结果，你可以裁剪并拉直图像并重试。</string>
     <string-array name="text_array">
         <item>在网上搜索</item>
         <item>不进行任何操作</item>
@@ -323,4 +323,11 @@
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
+    <plurals name="entries_selected">
+        <item quantity="other">选中了 %1$d 个条目</item>
+    </plurals>
+    <string name="switch_camera">切换相机</string>
+    <string name="help_data_backup">我怎样备份数据？</string>
+    <string name="help_data_backup_answer">你可以使用单独的 Privacy Friendly Backup 应用来备份并还原本程序的数据。它也可以用于将数据迁移到新手机上。</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">没有密码无法连接到加密的 WiFi 网络。</string>
 </resources>
