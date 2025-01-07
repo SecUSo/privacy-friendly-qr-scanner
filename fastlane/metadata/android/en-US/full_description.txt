@@ -14,4 +14,4 @@ The app belongs to the group of privacy friendly apps, that are developed by the
 You can reach us via
 Twitter - @SECUSOResearch https://twitter.com/secusoresearch
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
-Job opening - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
+Job opening - https://secuso.aifb.kit.edu/english/Job_Offers.php
