@@ -12,6 +12,6 @@ Die Privatsphären-freundliche QR-Scanner-App unterstützt die meisten der gäng
 Die App gehört zur Gruppe der Privacy Friendly Apps, die von der Forschungsgruppe SECUSO entwickelt werden. Mehr Informationen unter: https://secuso.org/pfa
 
 Kontaktieren Sie uns gerne über:
-Twitter - @SECUSOResearch https://twitter.com/secusoresearc)
+Twitter - @SECUSOResearch https://twitter.com/secusoresearch)
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
-Offene Stellen - https://secuso.aifb.kit.edu/83_1557.php
+Offene Stellen - https://secuso.aifb.kit.edu/83.php
