@@ -23,7 +23,7 @@
     <string name="History">Historial</string>
     <string name="slide1_heading">Benvida</string>
     <string name="slide1_text">Benvida a Privacy QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
-    <string name="slide2_heading">que hai ahí?</string>
+    <string name="slide2_heading">Que fai este escaner?</string>
     <string name="text_slide2">Podes escanear un código QR con QR Scanner ou crear un códgio QR con QR Generator.</string>
     <string name="slide3_heading">Máis características</string>
     <string name="text_slide3">O código QR code escaneado pódese gardar no historial. Incluso podes compartilo ou copialo.</string>
