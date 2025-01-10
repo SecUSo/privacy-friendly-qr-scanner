@@ -206,7 +206,7 @@
     <string name="Scan_qr">סריקה</string>
     <string name="okay">בסדר</string>
     <string name="item_result_email_to">אל:</string>
-    <string name="pref_save_real_image_to_history_summary">שומר תמונה אמיתית של הקוד במקום בילוי</string>
+    <string name="pref_save_real_image_to_history_summary">שומר תמונה אמיתית של הקוד</string>
     <string name="item_result_email_cc">עותק:</string>
     <string name="item_result_email_bcc">עותק סמוי:</string>
     <string name="item_result_email_subject">נושא:</string>
@@ -215,7 +215,7 @@
     <string name="activity_scanner_flashlight_off">פנס כבוי</string>
     <string name="item_result_calendar_title">כותרת:</string>
     <string name="activity_result_toast_saved">נשמר להיסטוריה.</string>
-    <string name="item_result_email_body">תוכן:</string>
+    <string name="item_result_email_body">גוף:</string>
     <string name="item_result_calendar_description">תיאור:</string>
     <string name="item_result_calendar_location">מקום:</string>
     <string name="fragment_result_product_label">מזהה:</string>
@@ -230,4 +230,5 @@
     <string name="fragment_result_text_dialog_positive_button">חיפוש</string>
     <string name="fragment_result_text_dialog_title">חיפוש</string>
     <string name="none">אין</string>
+    <string name="fragment_result_text_dialog_message">האם אתה רוצה לחפש את הטקסט הזה ב-%s? זה עלול להדליף מידע הטקסט ישלח למנוע החיפוש.</string>
 </resources>
