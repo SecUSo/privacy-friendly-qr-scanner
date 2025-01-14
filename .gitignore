@@ -35,4 +35,6 @@ Thumbs.db
 
 # APKs
 *.apk
-
+/pfa.properties
+/.idea/
+/app/release

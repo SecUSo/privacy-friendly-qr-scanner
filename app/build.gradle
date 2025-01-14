@@ -12,8 +12,8 @@ android {
         compileSdk 34
         targetSdkVersion 34
         multiDexEnabled true
-        versionCode 50
-        versionName "4.6.6"
+        versionCode 51
+        versionName "4.6.7"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildFeatures.dataBinding = true
         vectorDrawables.useSupportLibrary = true
@@ -65,20 +65,20 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1' // latest version still supporting API 17; 1.7.0 requires API 21
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference-ktx:1.2.1'
-    implementation 'com.google.android.material:material:1.11.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.11.0' // latest version still supporting API 17; 1.12.0 requires API 19
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // latest version still supporting API 17; 2.2.0 requires API 21
     implementation 'androidx.cardview:cardview:1.0.0'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5' // latest version still supporting API 17; 1.2.0 requires API 19
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // latest version still supporting API 17; 3.6.0 requires API 19
 
     implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
     implementation 'com.google.zxing:core:3.5.3'
 
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
     implementation "androidx.multidex:multidex:2.0.1"
 
     implementation 'com.github.bumptech.glide:glide:4.11.0'
@@ -91,12 +91,12 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.9.1' //Versions newer than 2.9 only work on API levels > 21 (https://github.com/google/gson/issues/2310). App crashes e.g. when saving a generated QR code to history on API 17.
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "androidx.core:core-ktx:1.12.0" // latest version still supporting API 17; 1.13.0 requires API 19
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2" //2.7.0+ not compatible with API < 19
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation project(path: ':backup-api')
-    def work_version = "2.9.0"
+    def work_version = "2.9.1" // latest version still supporting API 17; 2.10.0 requires API 21
     implementation "androidx.work:work-runtime:$work_version"
     implementation "androidx.work:work-runtime-ktx:$work_version"
     androidTestImplementation "androidx.work:work-testing:$work_version"
