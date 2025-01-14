@@ -1,5 +1,6 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner
 
+import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.content.Intent
 import android.os.Build
@@ -9,6 +10,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ScannerActi
 
 @RequiresApi(Build.VERSION_CODES.N)
 class QuickTileService : TileService() {
+    @SuppressLint("StartActivityAndCollapseDeprecated")
     override fun onClick() {
         super.onClick()
 
