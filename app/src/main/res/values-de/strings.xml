@@ -2,13 +2,13 @@
 <resources>
     <string name="qr_scanner">QR-Scanner</string>
     <string name="qr_generator">QR-Generator</string>
-    <string name="slide1_heading">Herzlich willkommen!</string>
+    <string name="slide1_heading">Willkommen</string>
     <string name="slide1_text">Willkommen beim Privacy-Friendly-QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollten.</string>
     <string name="slide2_heading">Was gibt es?</string>
     <string name="text_slide2">Mit dieser App können Sie QR-Codes sowohl scannen als auch erstellen.</string>
     <string name="slide3_heading">Weitere Funktionen</string>
     <string name="text_slide3">Der von Ihnen gescannte QR-Code kann im Verlauf gespeichert werden. Außerdem können Sie ihn teilen oder kopieren.</string>
-    <string name="wecome">Herzlich willkommen!</string>
+    <string name="wecome">Willkommen</string>
     <string name="skip">Überspringen</string>
     <string name="help_">Hilfe</string>
     <string name="settings">Einstellungen</string>
@@ -41,7 +41,7 @@
     <string name="action_about">Über</string>
     <string name="about_affiliation">In Zusammenarbeit mit:</string>
     <string name="about_libraries">Verwendete Bibliotheken:</string>
-    <string name="history_disabled">Verlauf deaktiviert</string>
+    <string name="history_disabled">Verlauf ausgeschaltet</string>
     <string name="to">Empfänger:</string>
     <string name="subject">Betreff</string>
     <string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie, ihn etwas weiter entfernt zu scannen.</string>

@@ -14,4 +14,4 @@ Aplikacja należy do grupy Privacy Friendly Apps tworzonych przez grupę badawcz
 Można się z nami skontaktować przez
 Twitter — @SECUSOResearch https://twitter.com/secusoresearch
 Mastodon – @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
-Oferty pracy - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
+Oferty pracy - https://secuso.aifb.kit.edu/english/Job_Offers.php
