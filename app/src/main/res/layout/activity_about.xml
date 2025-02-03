@@ -77,7 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            app:srcCompat="@drawable/secuso_logo_blau_blau" />
+            app:srcCompat="?attr/secusoLogoDrawable" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -11,5 +11,6 @@
         <attr name="colorNavbarHeaderText" format="color" />
         <attr name="colorURLHighlight" format="color" />
         <attr name="colorItemSelected" format="color" />
+        <attr name="secusoLogoDrawable" format="reference"/>
     </declare-styleable>
 </resources>
