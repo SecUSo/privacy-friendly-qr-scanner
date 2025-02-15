@@ -12,6 +12,6 @@ Przyjazna dla prywatności aplikacja skanera QR obsługuje większość popularn
 Aplikacja należy do grupy Privacy Friendly Apps tworzonych przez grupę badawczą SECUSO na Technische Universität Darmstadt. Więcej informacji można znaleźć na secuso.org/pfa
 
 Można się z nami skontaktować przez
-Twitter — @SECUSOResearch https://twitter.com/secusoresearch
+BlueSky - https://bsky.app/profile/secusoresearch.bsky.social
 Mastodon – @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
 Oferty pracy - https://secuso.aifb.kit.edu/english/Job_Offers.php
