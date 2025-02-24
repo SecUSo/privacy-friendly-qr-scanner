@@ -16,6 +16,7 @@
         <item name="colorNavbarHeaderBackground">@color/darkgrey</item>
         <item name="colorNavbarHeaderText">@color/colorAccent</item>
         <item name="colorURLHighlight">@color/white</item>
+        <item name="secusoLogoDrawable">@drawable/secuso_logo_white</item>
         <item name="materialAlertDialogTheme">@style/AppTheme.CustomMaterialDialog</item>
     </style>
 
