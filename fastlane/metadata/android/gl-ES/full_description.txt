@@ -11,6 +11,6 @@ Privacy Friendly QR Scanner App é compatible coa maioría de Códigos QR que se
 A app pertence ao grupo de aplicacións respectuosas da privacidade desenvoltas polo grupo de investigación SECUSO. Ten máis información dispoñible en https://secuso.org/pfa
 
 Contacte con nós en
-Twitter - @SECUSOResearch https://twitter.com/secusoresearch
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+BlueSky - https://bsky.app/profile/secusoresearch.bsky.social
 Ofertas de traballo - https://secuso.aifb.kit.edu/english/Job_Offers.php
