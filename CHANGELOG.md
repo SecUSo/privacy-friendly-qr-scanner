@@ -1,5 +1,20 @@
 # Changelog
 
+<a id="v4.6.8"></a>
+## [QR Scanner (Privacy Friendly) v4.6.8](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.8) - 2025-02-25
+
+## What's Changed
+* Update SECUSO logo by [@udenr](https://github.com/udenr) in [#279](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/279)
+* Add missing GPL headers to some source files by [@udenr](https://github.com/udenr) in [#280](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/280)
+* Translations update from Hosted Weblate by [@weblate](https://github.com/weblate) in [#277](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/277)
+* Fix incorrect content in qr code dispay activity by [@udenr](https://github.com/udenr) in [#282](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/282)
+
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.7...v4.6.8
+
+[Changes][v4.6.8]
+
+
 <a id="v4.6.7"></a>
 ## [QR Scanner (Privacy Friendly) v4.6.7](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.7) - 2025-01-14
 
@@ -402,6 +417,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.6.8]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.7...v4.6.8
 [v4.6.7]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.6...v4.6.7
 [v4.6.6]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.4...v4.6.6
 [v4.6.4]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.3...v4.6.4
