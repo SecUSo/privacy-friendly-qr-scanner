@@ -32,6 +32,7 @@ import android.graphics.Point;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -129,13 +130,13 @@ public class QRGeneratorUtils {
         int smallerDimension = getDimension(context);
 
         Bitmap bitmap_ = null;
+        //Encode with a QR Code image
+        QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
+                null,
+                qrType,
+                barcodeFormat.toString(),
+                smallerDimension);
         if (!dots) {
-            //Encode with a QR Code image
-            QRCodeEncoder qrCodeEncoder = new QRCodeEncoder(qrInputText,
-                    null,
-                    qrType,
-                    barcodeFormat.toString(),
-                    smallerDimension);
             try {
                 bitmap_ = qrCodeEncoder.encodeAsBitmap(errorCorrectionLevel);
             } catch (WriterException e) {
@@ -147,7 +148,11 @@ public class QRGeneratorUtils {
             hints.put(EncodeHintType.MARGIN, 1);
             QRCode code;
             try {
-                code = Encoder.encode(qrInputText, ErrorCorrectionLevel.valueOf(errorCorrectionLevel), hints);
+                /**
+                 We use qrCodeEncoder.getContents() to get the full content string including the type, e.g. WIFI: or BEGIN:VCARD
+                 (see {@link QRCodeEncoder#encodeQRCodeContents(String, Bundle, Contents.Type)})
+                 */
+                code = Encoder.encode(qrCodeEncoder.getContents(), ErrorCorrectionLevel.valueOf(errorCorrectionLevel), hints);
             } catch (WriterException e) {
                 throw new RuntimeException(e);
             }
