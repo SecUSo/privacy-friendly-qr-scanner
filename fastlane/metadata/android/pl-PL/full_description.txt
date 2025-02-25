@@ -9,7 +9,7 @@ Większość aplikacji do skanowania kodów QR dostępnych w sklepie Google Play
 
 Przyjazna dla prywatności aplikacja skanera QR obsługuje większość popularnych typów kodów QR. Obsługiwane są także kody kreskowe i inne powszechnie stosowane kody.
 
-Aplikacja należy do grupy Privacy Friendly Apps tworzonych przez grupę badawczą SECUSO na Technische Universität Darmstadt. Więcej informacji można znaleźć na secuso.org/pfa
+Aplikacja należy do grupy Privacy Friendly Apps tworzonych przez grupę badawczą SECUSO na Karlsruhe Institute of Technoloy. Więcej informacji można znaleźć na secuso.org/pfa
 
 Można się z nami skontaktować przez
 BlueSky - https://bsky.app/profile/secusoresearch.bsky.social

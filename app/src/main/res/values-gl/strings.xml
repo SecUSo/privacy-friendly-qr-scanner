@@ -50,7 +50,7 @@
     <string name="knowRisks">Comprobei a ligazón e quero visitar o sitio web.</string>
     <string name="domain">Dominio</string>
     <string name="urlExplanation">Os códigos QR poden conter ligazóns que poden ser enganosas e comprometer a túa información persoal (webs de phishing) ou instalar malware (ex. virus) no teu dispositivo.\n\nPor isto deberías <b>comprobar</b> se a seguinte ligazón é a que agardabas:</string>
-    <string name="further_info">Mira esta <a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">información</a> sobre cómo comprobar as ligazóns grazas aos colegas da TU Darmstadt. Se non confías na ligazón, preme en non confiar e non a gardes.</string>
+    <string name="further_info">Mira esta <a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">información</a> sobre cómo comprobar as ligazóns grazas aos colegas da KIT. Se non confías na ligazón, preme en non confiar e non a gardes.</string>
     <string name="delete_history">Queres eliminar o historial?</string>
     <string name="ok">OK</string>
     <string name="element_removed">Elemento eliminado.</string>
@@ -157,7 +157,7 @@
     <string name="viewhelp">Ver Axuda</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
-    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Technische Universität Darmstadt. Sourcecode licensed under GPLv3. Images copyright TU Darmstadt and Google Inc.</string>
+    <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Karlsruhe Institute of Technology. Sourcecode licensed under GPLv3. Images copyright KIT and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="help_permission1_description">A app requiere o acceso á cámara, pois é preciso para escanear os códigos de barras e QR.</string>
