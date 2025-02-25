@@ -1,5 +1,15 @@
 # Changelog
 
+<a id="v4.6.12"></a>
+## [QR Scanner (Privacy Friendly) v4.6.12](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.12) - 2025-02-25
+
+Update version to match Google Play version
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.8...v4.6.12
+
+[Changes][v4.6.12]
+
+
 <a id="v4.6.8"></a>
 ## [QR Scanner (Privacy Friendly) v4.6.8](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.8) - 2025-02-25
 
@@ -417,6 +427,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.6.12]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.8...v4.6.12
 [v4.6.8]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.7...v4.6.8
 [v4.6.7]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.6...v4.6.7
 [v4.6.6]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.4...v4.6.6
