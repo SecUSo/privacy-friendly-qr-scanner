@@ -56,6 +56,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRCodeEncoder;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ScannerActivity;
@@ -125,7 +126,12 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         qrInputText = QRData.getString("gn");
         qrInputType = (Contents.Type) QRData.getSerializable("type");
 
-        codeContentTextView.setText(qrInputText);
+        // Encode the content once to add the correct type tag to the content
+        codeContentTextView.setText((new QRCodeEncoder(qrInputText,
+                null,
+                qrInputType,
+                BarcodeFormat.QR_CODE.toString(),
+                100)).getContents());
 
         setTitle(qrInputType.toLocalizedString(getApplicationContext()));
 
