@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="qr_scanner">QR Scanner</string>
-    <string name="qr_generator">QR Generator</string>
-    <string name="slide1_heading">Herzlich willkommen!</string>
-    <string name="slide1_text">Willkommen beim Privacy Friendly QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollen.</string>
+    <string name="qr_scanner">QR-Scanner</string>
+    <string name="qr_generator">QR-Generator</string>
+    <string name="slide1_heading">Willkommen</string>
+    <string name="slide1_text">Willkommen beim Privacy-Friendly-QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollten.</string>
     <string name="slide2_heading">Was gibt es?</string>
     <string name="text_slide2">Mit dieser App können Sie QR-Codes sowohl scannen als auch erstellen.</string>
     <string name="slide3_heading">Weitere Funktionen</string>
-    <string name="text_slide3">Der QR-Code, den Sie gescannt haben, kann im Verlauf gespeichert werden. Außerdem können Sie ihn teilen oder kopieren.</string>
-    <string name="wecome">Herzlich willkommen!</string>
+    <string name="text_slide3">Der von Ihnen gescannte QR-Code kann im Verlauf gespeichert werden. Außerdem können Sie ihn teilen oder kopieren.</string>
+    <string name="wecome">Willkommen</string>
     <string name="skip">Überspringen</string>
     <string name="help_">Hilfe</string>
     <string name="settings">Einstellungen</string>
     <string name="help">Hilfe</string>
     <string name="about">Über</string>
     <string name="title_activity_qrscanner">QR-Scanner</string>
-    <string name="scan_text">Platzieren Sie den Scanner über dem Code den Sie decodieren möchten.</string>
+    <string name="scan_text">Platzieren Sie den Scanner über dem Code, den Sie dekodieren möchten.</string>
     <string name="about_author">Autoren: </string>
     <string name="about_author_string">%s und Mitwirkende.</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt von SECUSO. Quelltext lizenziert unter GPLv3. Bilder copyright Karlsruher Institut für Technologie und Google Inc.</string>
+    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy-Friendly-Apps, entwickelt von SECUSO. Quelltext lizenziert unter GPLv3. Bilder copyright Karlsruher Institut für Technologie und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
     <string name="app_name">QR Scanner</string>
     <string name="version_number">Version v%s</string>
@@ -28,21 +28,23 @@
     <string name="cannot_clear">Der Verlauf ist bereits leer.</string>
     <string name="knowRisks">Ich habe den Link geprüft und möchte die Webseite besuchen.</string>
     <string name="domain">Link:</string>
-    <string name="urlExplanation">QR-Codes können Links enthalten, die zu einer Webseite führen, auf der Ihre Daten gefährdet sind (z.B. Phishing Webseiten) oder über die Schadsoftware (z.B. Viren) auf Ihr Gerät geladen wird.\n\n<b>Überprüfen</b> Sie daher, ob folgender Link der ist, den Sie erwartet haben: </string>
+    <string name="urlExplanation">QR-Codes können Links enthalten, die zu einer Webseite führen, auf der Ihre Daten gefährdet sind (z. B. Phishing-Webseiten) oder über die Schadsoftware (z. B. Viren) auf Ihr Gerät geladen wird.
+\n
+\n<b>Überprüfen</b> Sie daher, ob folgender Link der ist, den Sie erwartet haben:</string>
     <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer">Informationen</a>, wie Sie den Link überprüfen.</string>
     <string name="delete_history">Möchten Sie den Verlauf wirklich löschen?</string>
     <string name="ok">Okay</string>
     <string name="element_removed">Element gelöscht.</string>
     <string name="conform_url">Bitte bestätigen Sie, dass Sie den Link geprüft haben.</string>
-    <string name="wifi_explanation">Aufgrund der nötigen Rechte, ermöglicht diese Version der App keine direkte Verbindung mit einem WIFI Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
+    <string name="wifi_explanation">Aufgrund der nötigen Rechte ermöglicht diese Version der App keine direkte Verbindung mit einem WLAN-Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
     <string name="encryption">Verschlüsselung</string>
     <string name="action_about">Über</string>
     <string name="about_affiliation">In Zusammenarbeit mit:</string>
     <string name="about_libraries">Verwendete Bibliotheken:</string>
-    <string name="history_disabled">Verlauf deaktiviert</string>
+    <string name="history_disabled">Verlauf ausgeschaltet</string>
     <string name="to">Empfänger:</string>
     <string name="subject">Betreff</string>
-    <string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie ihn etwas weiter entfernt zu scannen.</string>
+    <string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie, ihn etwas weiter entfernt zu scannen.</string>
     <string name="description_contact">Der gescannte QR-Code enthält Kontaktinformationen.</string>
     <string name="description_email">Der gescannte QR-Code enthält eine E-Mail-Adresse.</string>
     <string name="description_send_email">Der gescannte QR-Code enthält eine ausgefüllte E-Mail.</string>
@@ -143,7 +145,7 @@
     </string-array>
     <string name="copied_to_clipboard">In Zwischenablage kopiert.</string>
     <string name="noname">Kein Name angegeben</string>
-    <string name="title_activity_result_wifi">Wifi gefunden</string>
+    <string name="title_activity_result_wifi">WLAN gefunden</string>
     <string name="title_activity_result_url">Link gefunden</string>
     <string name="title_activity_result_text">Text gefunden</string>
     <string name="title_activity_result_sms">SMS gefunden</string>
@@ -152,13 +154,13 @@
     <string name="title_activity_result_tel">Telefonnummer gefunden</string>
     <string name="title_activity_result_product">Produkt gefunden</string>
     <string name="title_activity_result_contact">Kontakt gefunden</string>
-    <string name="app_name_long">Privacy friendly QR scanner</string>
+    <string name="app_name_long">Privacy-Friendly-QR-Scanner</string>
     <string name="action_help">Hilfe</string>
     <!-- ###DRAWER###-->
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Navigationsmenü öffnen</string>
+    <string name="navigation_drawer_close">Navigationsmenü schließen</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Die Privacy Friendly QR Code Scanner App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, wozu sie nur minimale Berechtigungen benötigt und zur Unterstützung bei der Erkennung von Links auf schadhafte Seiten dient.</string>
+    <string name="welcome_text">Die Privacy-Friendly-QR-Code-Scanner-App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, wozu sie nur minimale Berechtigungen benötigt und zur Unterstützung bei der Erkennung von Links auf schadhafte Seiten dient.</string>
     <string name="welcome">Willkommen</string>
     <string name="viewhelp">Hilfe zeigen</string>
     <string name="help_overview_heading">Übersicht</string>
@@ -170,28 +172,29 @@
     <!--<string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt vom Karlsruher Institut für Technologie. Quelltext lizenziert unter GPLv3. Bilder copyright KIT und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
     <string name="about_author_contributors">Mitwirkende</string>-->
-    <string name="help_whatis">Was ist PRIVACY FRIENDLY QR Scanner?</string>
-    <string name="Ofeatures">andere Funktionen</string>
+    <string name="help_whatis">Was ist PRIVACY-FRIENDLY-QR-Scanner?</string>
+    <string name="help_whatis_answer">Mit dem PRIVACY-FRIENDLY-QR-Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen/generieren. Sie können auch gescannten QR-Code mit anderen Apps kopieren/teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
+    <string name="Ofeatures">Andere Funktionen</string>
     <string name="help_usability">Das Scannen funktioniert nicht, was kann ich tun?</string>
     <string name="help_usability_answer">Wenn Sie keinen Code scannen können, vergrößern Sie den Abstand zwischen Scanner und Code.</string>
-    <string name="help_privacy">What makes the app privacy-friendly?</string>
-    <string name="help_privacy_answer">Privacy Friendly App Example does not require any permission. It further does not include any tracking mechanisms or advertisement.</string>
-    <string name="help_permission">Welche Berechtigungen benötigt der PRIVACY FRIENDLY QR Scanner?</string>
+    <string name="help_privacy">Was macht die App datenschutzfreundlich?</string>
+    <string name="help_privacy_answer">Diese App erfordert keine Berechtigung. Sie enthält auch keine Tracking-Mechanismen oder Werbung.</string>
+    <string name="help_permission">Welche Berechtigungen benötigt der PRIVACY-FRIENDLY-QR-Scanner?</string>
     <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen. Die App benötigt außerdem die Erlaubnis, auf Ihren Speicher zuzugreifen, um Codes von Ihren Bildern zu scannen oder generierte Codes in Ihren Bildern zu speichern.</string>
-    <string name="help_whatis_answer">Mit dem PRIVACY FRIENDLY QR Scanner können Sie Barcodes und QR-Codes mit verschiedenen Inhalten scannen / generieren. Sie können auch gescannten QR-Code mit anderen Apps kopieren / teilen, außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
+    <string name="help_data_backup">Wie kann ich meine Daten sichern?</string>
+    <string name="help_data_backup_answer">Mit der App Privacy Friendly Backup können die Daten dieser App gesichert und wiederhergestellt werden. Damit können die Daten auch auf ein neues Smatphone übertragen werden.</string>
     <string name="description_Mms">Der gescannte QR-Code enthält eine MMS.</string>
-    <string name="geoInfo">Der gescannte QR-Code enthält eine geographisch Information.</string>
+    <string name="geoInfo">Der gescannte QR-Code enthält geographische Informationen.</string>
     <string name="content_copied">Inhalt kopiert</string>
     <string name="share_via">Teilen per</string>
     <string name="no_content_in_history">Es gibt keine Inhalte im Verlauf!</string>
     <string name="selected_item">Artikel ausgewählt</string>
     <string name="removed_item">Artikel entfernt</string>
     <string name="selected_items">Artikel ausgewählt</string>
-    <string name="entries_selected">%1$d ausgewählt</string>
     <string name="removed_items">Artikel entfernt</string>
     <string name="canncelled_scan">Sie haben den Scanvorgang abgebrochen</string>
-    <string name="Scan_qr">Scan</string>
-    <string name="okay">Ok</string>
+    <string name="Scan_qr">Scannen</string>
+    <string name="okay">OK</string>
     <string name="next">Weiter</string>
     <string name="Store_in_gallery">Speichern</string>
     <string name="phone_number">Telefonnummer</string>
@@ -208,48 +211,52 @@
     <string name="e_mail_address">E-Mail-Adresse</string>
     <string name="firstname">Vorname</string>
     <string name="street_name_and_number">Straße und Nummer</string>
-    <string name="delete_content">Möchten Sie den Inhalt wirklich löschen?</string>
-    <string name="delete_all">Löschen Sie alle Inhalte</string>
+    <string name="delete_content">Möchten Sie die Inhalte wirklich löschen?</string>
+    <string name="delete_all">Alle Inhalte löschen</string>
     <string name="yes">Ja</string>
     <string name="no">Nein</string>
     <string name="all_records">Möchten Sie alle Datensätze löschen?</string>
     <string name="Del">Möchten Sie die ausgewählten Datensätze löschen?</string>
     <string name="confirmation">Bestätigung</string>
     <string name="pref_title_enable_history">Verlauf aktivieren</string>
-    <string name="pref_description_enable_history">Vorherige Scans werden protokolliert, damit Sie sie erneut anzeigen können</string>
+    <string name="pref_description_enable_history">Frühere Scans werden protokolliert, damit sie erneut angezeigt werden können</string>
     <string name="selected">ausgewählt</string>
-    <string name="code_stored">QR-Code in der Galerie gespeichert.</string>
+    <string name="code_stored">QR-Code in der Galerie gespeichert</string>
     <string name="OfeaturesAnswer">Sie können den gescannten QR-Code mit anderen Anwendungen öffnen oder kopieren. Außerdem können Sie den generierten QR-Code teilen oder in der Galerie speichern.</string>
     <string name="Content_copied">Inhalt kopiert</string>
     <string name="Share_via">Teilen per</string>
-    <string name="select_all">Wählen Sie Alle</string>
+    <string name="select_all">Alle auswählen</string>
     <string name="selected_1">Ausgewählt</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d Eintrag ausgewählt</item>
+        <item quantity="other">%1$d Einträge ausgewählt</item>
+    </plurals>
     <string name="D_all">Alle Einträge löschen</string>
-    <string name="History">Historie</string>
-    <string name="QRGenerator">QR Generator</string>
-    <string name="QRScanner">QR Scanner</string>
-    <string name="activity_scanner_permission_needed_explanation">Die App benötigt die Camera-Berechtigung um QR-Codes scannen zu dürfen.</string>
+    <string name="History">Verlauf</string>
+    <string name="QRGenerator">QR-Generator</string>
+    <string name="QRScanner">QR-Scanner</string>
+    <string name="activity_scanner_permission_needed_explanation">Die App benötigt die Kamera-Berechtigung, um QR-Codes scannen zu dürfen.</string>
     <string name="delete_items">Einträge löschen</string>
     <string name="title_activity_about">Über</string>
     <string name="title_activity_help">Hilfe</string>
-    <string name="title_activity_history">Historie</string>
+    <string name="title_activity_history">Verlauf</string>
     <string name="title_activity_qr_generator">QR-Generator</string>
     <string name="title_activity_qr_scanner">QR-Scanner</string>
     <string name="title_activity_settings">Einstellungen</string>
     <string name="tutorial">Tutorial</string>
     <string name="Settings">Einstellungen</string>
     <string name="pref_keep_duplicates">Doppelte Einträge speichern</string>
-    <string name="pref_keep_duplicates_explanation">Duplikate werden auch in der Historie gespeichert</string>
+    <string name="pref_keep_duplicates_explanation">Duplikate werden auch im Verlauf gespeichert</string>
     <string name="pref_title_beep">Signalton</string>
     <!-- ResultFragment -->
-    <string name="unsupported_wifi_encryption">Diese WiFi-Verschlüsselung wird derzeit nicht unterstützt: %1$s</string>
-    <string name="cannot_connect_to_encrypted_wifi_without_password">Ohne Passwort kann keine Verbindung zu einem verschlüsselten WiFi-Netzwerk hergestellt werden.</string>
+    <string name="unsupported_wifi_encryption">Diese WLAN-Verschlüsselung wird derzeit nicht unterstützt: %1$s</string>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">Ohne Passwort kann keine Verbindung zu einem verschlüsselten WLAN-Netzwerk hergestellt werden.</string>
     <string name="ssid_value">SSID: %1$s</string>
     <string name="encryption_value">Verschlüsselung: %1$s</string>
     <string name="password_value">Passwort: %1$s</string>
     <!-- Others -->
     <string name="android_version_does_not_support_feature">Ihre Android-Version unterstützt diese Funktion nicht.</string>
-    <string name="hello_blank_fragment">Hallo leeres fragment</string>
+    <string name="hello_blank_fragment">Hallo, leeres Fragment</string>
     <!--Settings for used Search Engine-->
     <string name="pref_search_engine_title">Standardsuchmaschine</string>
     <string name="pref_enable_beep_on_scan_title">Bestätigungston</string>
@@ -263,14 +270,14 @@
     <string name="delete">Löschen</string>
     <string name="dialog_history_delete_message">Möchten Sie diesen Eintrag wirklich löschen?</string>
     <string name="dialog_history_delete_title">Eintrag löschen</string>
-    <string name="pref_save_real_image_to_history_summary">Speichere ein Bild des codes statt einer Nachbildung</string>
-    <string name="pref_save_real_image_to_history_title">Speichere echten Code</string>
-    <string name="activity_result_toast_saved">In Historie abgespeichert.</string>
+    <string name="pref_save_real_image_to_history_summary">Ein Bild des Codes statt einer Nachbildung speichern</string>
+    <string name="pref_save_real_image_to_history_title">Echten Code speichern</string>
+    <string name="activity_result_toast_saved">Im Verlauf gespeichert.</string>
     <string name="fragment_result_product_label">Kennung:</string>
     <string name="item_result_email_bcc">BCC:</string>
     <string name="item_result_email_body">Nachricht:</string>
     <string name="item_result_email_cc">CC:</string>
-    <string name="item_result_email_subject">Titel:</string>
+    <string name="item_result_email_subject">Betreff:</string>
     <string name="item_result_email_to">Empfänger:</string>
     <string name="activity_result_toast_error_cant_load">Ein Fehler ist beim Laden des Codes aufgetreten.</string>
     <string name="activity_enter_toast_missing_data">Keine Daten</string>
@@ -286,7 +293,7 @@
     <string name="fragment_result_text_dialog_title">Suchen</string>
     <string name="none">Keine</string>
     <string name="pref_search_engine_enabled_title">Suchmaschinen nutzen</string>
-    <string name="pref_search_engine_enabled_summary">"Suchen"-Button beim Suchen von Text anzeigen.</string>
+    <string name="pref_search_engine_enabled_summary">„Suchen“-Button beim Suchen von Text anzeigen</string>
     <string name="import_from_contacts">Aus Kontakten importieren</string>
     <string name="message">Nachricht</string>
     <string name="generator_text_textfield">Text</string>
@@ -294,11 +301,11 @@
     <string name="zip_code">Postleitzahl</string>
     <string name="country">Land</string>
     <string name="address">Adresse</string>
-    <string name="generator_url_explanation">Sie können eine Webadresse eingeben. z.B.</string>
+    <string name="generator_url_explanation">Sie können eine Webadresse eingeben. z. B.</string>
     <string name="no_encryption">Keine Verschlüsselung</string>
     <string name="name">Name</string>
     <string name="generator_package_name">Paketname</string>
-    <string name="generator_market_explanation">Hier können Sie den Paketnamen der App eingeben. z.B.</string>
+    <string name="generator_market_explanation">Hier können Sie den Paketnamen der App eingeben. z. B.</string>
     <string name="generator_market_explanation_2">Der generierte QR-Code verweist dann auf die entsprechende App auf Google Play.</string>
     <string name="raw_data">Rohdaten</string>
     <string name="copy_to_clipboard">In Zwischenablage kopieren</string>
@@ -306,20 +313,21 @@
     <string name="image_stored_in_gallery">Bild in Galerie gespeichert</string>
     <string name="generated_code_image_explanation">Hinweis: Der hier gezeigte Code wurde auf der Grundlage des Inhalts des gescannten Codes erstellt und kann daher anders aussehen. Die darin enthaltenen Daten sind jedoch dieselben.</string>
     <string name="select_image_from_gallery">Bild aus der Galerie auswählen</string>
-    <string name="image_is_being_processed">Bild wird verarbeitet…</string>
+    <string name="image_is_being_processed">Bild wird verarbeitet …</string>
     <string name="no_code_in_image_explanation">Leider konnte in diesem Bild kein Code gefunden werden. Um das Ergebnis zu verbessern, können Sie das Bild zuschneiden oder begradigen und es erneut versuchen.</string>
     <string name="select_image_from_gallery_explanation">Mit dieser Funktion können Sie Bilder aus Ihrer Galerie öffnen und darin enthaltene Codes scannen. Dazu ist der Zugriff auf die Bilder erforderlich.</string>
     <string name="error_correction_level">Fehlerkorrektur-Level</string>
     <string name="barcode_format">Format</string>
     <string name="code_generation_error">Es konnte kein Code generiert werden.</string>
-    <string name="something_went_wrong">Etwas ist schief gelaufen.</string>
-    <string name="save_to_history">In der Historie speichern</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>
+    <string name="something_went_wrong">Etwas ist schiefgelaufen.</string>
+    <string name="save_to_history">Im Verlauf speichern</string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
-    <string name="activity_history_list_item_qr_image_descriptor">QR Code</string>
+    <string name="activity_history_list_item_qr_image_descriptor">QR-Code</string>
     <string name="item_result_calendar_title">Titel:</string>
     <string name="item_result_calendar_description">Beschreibung:</string>
     <string name="item_result_calendar_location">Ort:</string>
     <string name="item_result_calendar_start">Beginn:</string>
     <string name="item_result_calendar_end">Ende:</string>
+    <string name="switch_camera">Kamera umschalten</string>
 </resources>

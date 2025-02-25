@@ -52,7 +52,7 @@ public class DatabaseMigrationInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.secuso.privacyfriendlycodescanner.qrscanner", appContext.getPackageName());
+        assertEquals("com.secuso.privacyFriendlyCodeScanner", appContext.getPackageName());
     }
 
     @Before

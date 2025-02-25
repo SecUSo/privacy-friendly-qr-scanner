@@ -1,3 +1,21 @@
+/*
+    Privacy Friendly QR Scanner
+    Copyright (C) 2023-2025 Privacy Friendly QR Scanner authors and SECUSO
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.adapter
 
 import android.util.Log
@@ -23,14 +41,15 @@ class DeleteActionMode(private val historyActivity: HistoryActivity) : ActionMod
     override fun onCreateActionMode(mode: ActionMode, menu: Menu?): Boolean {
         val menuInflater = mode.menuInflater
         menuInflater.inflate(R.menu.multi_delete_menu, menu)
+        mode.title = historyActivity.resources.getQuantityString(R.plurals.entries_selected, 0, 0)
+        ViewModelProvider(historyActivity)[HistoryViewModel::class.java].selectedItemCount.observe(historyActivity) { count: Int ->
+            mode.title = historyActivity.resources.getQuantityString(R.plurals.entries_selected, count, count)
+        }
         return true
     }
 
     override fun onPrepareActionMode(mode: ActionMode, menu: Menu?): Boolean {
         isDeleteModeActive = true
-        ViewModelProvider(historyActivity)[HistoryViewModel::class.java].selectedItemCount.observe(historyActivity) { count: Int? ->
-            mode.title = String.format(historyActivity.resources.getString(R.string.entries_selected), count)
-        }
         return true
     }
 
@@ -68,6 +87,7 @@ class DeleteActionMode(private val historyActivity: HistoryActivity) : ActionMod
         isDeleteModeActive = false
         isSelectAll = false
         selectList.clear()
+        ViewModelProvider(historyActivity)[HistoryViewModel::class.java].setSelectedItemCount(0)
         historyActivity.historyAdapter.notifyDataSetChanged()
     }
 
@@ -80,7 +100,6 @@ class DeleteActionMode(private val historyActivity: HistoryActivity) : ActionMod
             holder.binding.itemView.isChecked = false
             selectList.remove(s)
         }
-        Log.d("TAG", "Color" + holder.binding.itemView.cardForegroundColor + " " + holder.binding.itemView.cardBackgroundColor)
         ViewModelProvider(historyActivity)[HistoryViewModel::class.java].setSelectedItemCount(selectList.size)
     }
 }

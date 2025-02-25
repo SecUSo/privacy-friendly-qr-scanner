@@ -23,6 +23,11 @@
             android:selectable="false"/>
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/help_data_backup">
+        <Preference
+            android:summary="@string/help_data_backup"
+            android:title="@string/help_data_backup" />
+    </PreferenceCategory>
 
 
 </PreferenceScreen>

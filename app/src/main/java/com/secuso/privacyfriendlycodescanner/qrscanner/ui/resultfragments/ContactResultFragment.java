@@ -1,3 +1,21 @@
+/*
+    Privacy Friendly QR Scanner
+    Copyright (C) 2020-2025 Privacy Friendly QR Scanner authors and SECUSO
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments;
 
 import android.content.ContentValues;
@@ -62,7 +80,7 @@ public class ContactResultFragment extends ResultFragment {
                             Intent contact = new Intent(ContactsContract.Intents.Insert.ACTION);
                             contact.setType(ContactsContract.RawContacts.CONTENT_TYPE);
 
-                            contact.putExtra(ContactsContract.Intents.Insert.NAME, result.getNames() != null ? result.getNames()[0] : null);
+                            contact.putExtra(ContactsContract.Intents.Insert.NAME, result.getNames() != null && result.getNames().length > 0 ? result.getNames()[0] : null);
                             contact.putExtra(ContactsContract.Intents.Insert.COMPANY, result.getOrg());
                             contact.putExtra(ContactsContract.Intents.Insert.JOB_TITLE, result.getTitle());
                             contact.putExtra(ContactsContract.Intents.Insert.NOTES, result.getNote());

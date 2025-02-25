@@ -1,0 +1,16 @@
+Os Códigos QR son cada vez máis importantes. Nalgunhas situacións xa substituíron aos tradicionais Códigos de Barras. Un Código QR pode almacenar ata setemil caracteres e por tanto é axeitado para contido máis complexo, por exemplo vCards. Actualmente os Códigos QR poden atoparse en moitos carteis publicitarios animando a que os escaneemos cos dispositivos móbiles. Deste xeito xa non é preciso tomar nota por escrito, abonda con escanear o Código QR. Para esta tarefa hai aplicacións dispoñibles en Google Play Store que escanean os Códigos QR. Esta aplicación pertence ao grupo Privacy Friendly Apps e desenvólvea o grupo SECUSO na Technische Univerität Darmstadt. Máis información en secuso.org/pfa
+
+A nosa Privacy Friendly QR Scanner App diferenciase en dous aspectos:
+
+1. Privacy Friendly QR Scanner App precisa o número mínimo de permisos. A maioría dos escáneres de Códigos QR de Google Play Store solicitan acceso a permisos a maiores dos necesarios: por exemplo, ler a súa libreta de contactos e o rexistro de chamadas así como recibir datos desde Internet. Moitos destes permisos non son necesarios para que a aplicación realice as funcións que se lle supoñen.
+
+2. Privacy Friendly QR Scanner App axuda ás persoas usuarias detectando ligazóns maliciosas: os Códigos QR ofrecen novas oportunidades aos atacantes, xa que poden conter ligazóns que levan a engano, por exemplo ligazóns falsas a páxinas web para obter datos privados ou con código malicioso para instalar no noso dispositivo. Por isto é importante comprobar con atención a ligazón antes de acceder á páxina web corrrespondente. Para uhna persoa común é dificil distinguir as ligazóns maliciosas, Privacy Friendly QR Scanner App axúdalle ao destacar o nome do dominio (exemplo: no caso de https://www.secuso.org sería secuso.org o que se destaca). Para evitar que non se comprobe o dominio e en particular o dominio destacado, a app proporciona información sobre un posible fraude e a usuaria debe confirmar que comprobou a ligazón e esta é de confianza. Teña en conta que a información sobre o URL que aparece despois de escanear o Código QR non está personalizada para cada URL, por tanto debe considerarse como un consello xenérico.
+
+Privacy Friendly QR Scanner App é compatible coa maioría de Códigos QR que se utilizan actualmente. Tamén admite Códigos de Barras e outros tipos de códigos que se utilizan.
+
+A app pertence ao grupo de aplicacións respectuosas da privacidade desenvoltas polo grupo de investigación SECUSO. Ten máis información dispoñible en https://secuso.org/pfa
+
+Contacte con nós en
+Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
+BlueSky - https://bsky.app/profile/secusoresearch.bsky.social
+Ofertas de traballo - https://secuso.aifb.kit.edu/english/Job_Offers.php

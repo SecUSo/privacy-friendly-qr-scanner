@@ -1,3 +1,21 @@
+/*
+    Privacy Friendly QR Scanner
+    Copyright (C) 2020-2025 Privacy Friendly QR Scanner authors and SECUSO
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.generator;
 
 import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
@@ -38,6 +56,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRCodeEncoder;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ScannerActivity;
@@ -54,14 +73,17 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     String qrInputText = "";
     Contents.Type qrInputType = Contents.Type.UNDEFINED;
 
+    private static final String BARCODE_FORMAT_QR_CODE_DOTS = BarcodeFormat.QR_CODE.name() + "_DOTS";
     private String[] barcodeFormats = new String[]{
             BarcodeFormat.QR_CODE.name(),
+            BARCODE_FORMAT_QR_CODE_DOTS,
             BarcodeFormat.AZTEC.name(),
             BarcodeFormat.DATA_MATRIX.name(),
             BarcodeFormat.PDF_417.name(),
             BarcodeFormat.CODE_128.name()};
     private Integer[] barcodeFormatIcons = new Integer[]{
             R.drawable.ic_baseline_qr_code_24dp,
+            R.drawable.ic_baseline_qr_code_dots_24dp,
             R.drawable.ic_aztec_code_24dp,
             R.drawable.ic_data_matrix_code_24dp,
             R.drawable.ic_pdf_417_code_24dp,
@@ -104,7 +126,12 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         qrInputText = QRData.getString("gn");
         qrInputType = (Contents.Type) QRData.getSerializable("type");
 
-        codeContentTextView.setText(qrInputText);
+        // Encode the content once to add the correct type tag to the content
+        codeContentTextView.setText((new QRCodeEncoder(qrInputText,
+                null,
+                qrInputType,
+                BarcodeFormat.QR_CODE.toString(),
+                100)).getContents());
 
         setTitle(qrInputType.toLocalizedString(getApplicationContext()));
 
@@ -137,7 +164,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     }
 
     private void updateDropDownMenus() {
-        barcodeFormat = BarcodeFormat.valueOf(barcodeFormatMenu.getText().toString());
+        UpdateBarcodeFormatFromMenuValue();
 
         if (barcodeFormat.equals(BarcodeFormat.QR_CODE)) {
             currentErrorCorrections = errorCorrectionsQR;
@@ -151,7 +178,7 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         updateErrorCorrectionMenu();
         //Update icon
         ImageView barcodeFormatIcon = findViewById(R.id.iconImageView);
-        Glide.with(this).load(AppCompatResources.getDrawable(this, barcodeFormatIcons[Arrays.asList(barcodeFormats).indexOf(barcodeFormat.name())])).into(barcodeFormatIcon);
+        Glide.with(this).load(AppCompatResources.getDrawable(this, barcodeFormatIcons[Arrays.asList(barcodeFormats).indexOf(barcodeFormatMenu.getText().toString())])).into(barcodeFormatIcon);
 
     }
 
@@ -176,11 +203,15 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     private void generateAndUpdateImage() {
         ImageView myImage = findViewById(R.id.resultQRCodeImage);
 
-        barcodeFormat = BarcodeFormat.valueOf(barcodeFormatMenu.getText().toString());
+        UpdateBarcodeFormatFromMenuValue();
         String errorCorrectionLevel = errorCorrectionMenu.getText().toString();
         try {
             Log.d(getClass().getSimpleName(), "Creating image...");
-            Glide.with(this).asBitmap().load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType, barcodeFormat, errorCorrectionLevel)).into(new BitmapImageViewTarget(myImage));
+            if (barcodeFormatMenu.getText().toString().equals(BARCODE_FORMAT_QR_CODE_DOTS)) {
+                Glide.with(this).asBitmap().load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType, barcodeFormat, errorCorrectionLevel, true)).into(new BitmapImageViewTarget(myImage));
+            } else {
+                Glide.with(this).asBitmap().load(QRGeneratorUtils.createImage(this, qrInputText, qrInputType, barcodeFormat, errorCorrectionLevel, false)).into(new BitmapImageViewTarget(myImage));
+            }
         } catch (IllegalArgumentException e) {
             Toast.makeText(this, R.string.code_generation_error, Toast.LENGTH_SHORT).show();
             Log.d(getClass().getSimpleName(), "Error during code generation.", e);
@@ -261,6 +292,14 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         QRGeneratorUtils.purgeCacheFolder(this);
+    }
+
+    private void UpdateBarcodeFormatFromMenuValue() {
+        if (barcodeFormatMenu.getText().toString().equals(BARCODE_FORMAT_QR_CODE_DOTS)) {
+            barcodeFormat = BarcodeFormat.QR_CODE;
+        } else {
+            barcodeFormat = BarcodeFormat.valueOf(barcodeFormatMenu.getText().toString());
+        }
     }
 
     @Override

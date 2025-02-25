@@ -1,3 +1,21 @@
+/*
+    Privacy Friendly QR Scanner
+    Copyright (C) 2019-2025 Privacy Friendly QR Scanner authors and SECUSO
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments;
 
 import android.content.Context;
@@ -28,6 +46,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class URLResultFragment extends ResultFragment {
+    private static final String VALID_RFC3986_PROTOCOL_SCHEME = "^[a-zA-Z][a-zA-Z0-9+.-]*:.*$";
 
     URIParsedResult result;
 
@@ -95,23 +114,14 @@ public class URLResultFragment extends ResultFragment {
         if (!checked) {
             Toast.makeText(context, R.string.conform_url, Toast.LENGTH_LONG).show();
         } else {
-            String caption;
-            String qrurl3;
-            final String lowercase_qrurl = qrurl.toLowerCase();
-            if (!lowercase_qrurl.startsWith("http://") && !lowercase_qrurl.startsWith("https://")) {
-                qrurl3 = "http://" + qrurl;
-
-                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
-                url.setData(Uri.parse(qrurl3));
-                caption = getResources().getStringArray(R.array.url_array)[0];
-                startActivity(Intent.createChooser(url, caption));
-            } else {
-                Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
-                url.setData(Uri.parse(qrurl).normalizeScheme());
-                caption = getResources().getStringArray(R.array.url_array)[0];
-                startActivity(Intent.createChooser(url, caption));
-
+            String urlForIntentData = qrurl;
+            if (!qrurl.matches(VALID_RFC3986_PROTOCOL_SCHEME)) {
+                urlForIntentData = "http://" + qrurl;
             }
+            Intent url = new Intent(Intent.ACTION_VIEW);/// !!!!
+            url.setData(Uri.parse(urlForIntentData).normalizeScheme());
+            String caption = getResources().getStringArray(R.array.url_array)[0];
+            startActivity(Intent.createChooser(url, caption));
         }
     }
 

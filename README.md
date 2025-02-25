@@ -36,13 +36,17 @@ Target SDK: 34
 
 This app uses the help of the [ZXing Projekt](https://github.com/zxing).
 
+## Data Backup
+
+You can use the [Privacy Friendly Backup app](https://github.com/SecUSo/privacy-friendly-backup) to backup and restore this application's data. This can also be used to migrate your data to a new phone.
+
 ## Translation
 
 If you want to help translate this app, you can use [Weblate](https://hosted.weblate.org/projects/pfa/qr-scanner/qr-scanner-android-app/).
 
-## Data Backup
-
-You can use the [Privacy Friendly Backup app](https://github.com/SecUSo/privacy-friendly-backup) to backup and restore this application's data. This can also be used to migrate your data to a new phone.
+<a href="https://hosted.weblate.org/engage/pfa/">
+<img src="https://hosted.weblate.org/widget/pfa/qr-scanner/qr-scanner-android-app/multi-auto.svg" alt="Translation status" />
+</a>
 
 ## License
 

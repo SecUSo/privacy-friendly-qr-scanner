@@ -60,7 +60,7 @@
     <string name="version_number">Wersja v%s</string>
     <string name="title_activity_result_sms">Wykryto SMS-a</string>
     <string name="description_Mms">Zeskanowany przez Ciebie kod QR zawiera MMS-a.</string>
-    <string name="welcome_text">Przyjazna dla prywatności aplikacja skanera kodów QR umożliwia skanowanie kodów kreskowych i kodów QR o różnej zawartości, wymagając minimalnego zestawu uprawnień i obsługując wykrywanie złośliwych linków.</string>
+    <string name="welcome_text">Przyjazna dla prywatności aplikacja skanera kodów QR umożliwia skanowanie kodów kreskowych i kodów QR o różnej zawartości, wymagając minimalnego zestawu uprawnień i pomagając w wykrywaniu złośliwych linków.</string>
     <string name="description_sms">Zeskanowany przez Ciebie kod QR zawiera SMS-a. Aby <i>wysłać</i> SMS-a lub <i>dodać numer do kontaktu</i>, naciśnij Kontynuuj.</string>
     <string name="help_permission1_description">Aplikacja wymaga uprawnienia do aparatu, które jest potrzebne do skanowania kodów kreskowych i kodów QR za pomocą aparatu.</string>
     <string name="import_from_contacts">Importuj z kontaktów</string>
@@ -112,7 +112,7 @@
     <string name="code_generation_error">Nie udało się wygenerować żadnego kodu.</string>
     <string name="ok">OK</string>
     <string name="lastname">Nazwisko</string>
-    <string name="conform_url">Potwierdź, że sprawdziłeś(-aś) link.</string>
+    <string name="conform_url">Potwierdź, że sprawdziłeś(-aś) link</string>
     <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Informacje</a> na temat sprawdzania linków.</string>
     <string name="description_text">Zeskanowany przez Ciebie kod QR zawiera zwykły tekst. Aby <i>przeszukać Internet</i> w celu znalezienia informacji, naciśnij Kontynuuj.</string>
     <string name="something_went_wrong">Coś poszło nie tak</string>
@@ -224,7 +224,14 @@
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Strona SECUSO</a></string>
     <string name="activity_history_list_item_qr_image_descriptor">Kod QR</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repozytorium na GitHubie</a></string>
-    <string name="entries_selected">%1$d wybrane</string>
     <string name="switch_camera">Przełącz aparat</string>
     <string name="cannot_connect_to_encrypted_wifi_without_password">Nie można nawiązać połączenia z szyfrowaną siecią Wi-Fi bez hasła.</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d zaznaczony element</item>
+        <item quantity="few">%1$d zaznaczone elementy</item>
+        <item quantity="many">%1$d zaznaczonych elementów</item>
+        <item quantity="other">%1$d zaznaczonych elementów</item>
+    </plurals>
+    <string name="help_data_backup_answer">Możesz użyć oddzielnej aplikacji Privacy Friendly Backup, aby wykonać kopię zapasową i przywrócić dane tej aplikacji. Można jej również użyć do migracji danych do nowego telefonu.</string>
+    <string name="help_data_backup">Jak mogę wykonać kopię zapasową danych?</string>
 </resources>

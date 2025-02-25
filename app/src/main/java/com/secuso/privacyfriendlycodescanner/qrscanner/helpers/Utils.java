@@ -1,3 +1,21 @@
+/*
+    Privacy Friendly QR Scanner
+    Copyright (C) 2020-2025 Privacy Friendly QR Scanner authors and SECUSO
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 package com.secuso.privacyfriendlycodescanner.qrscanner.helpers;
 
 import static com.google.zxing.EncodeHintType.ERROR_CORRECTION;
@@ -79,7 +97,9 @@ public class Utils {
             if (!hints.containsKey(ERROR_CORRECTION) && metadata != null && metadata.containsKey(ERROR_CORRECTION_LEVEL) && format.equals(original_format)) {
                 Object ec = metadata.get(ERROR_CORRECTION_LEVEL);
                 if (ec != null) {
-                    hints.put(ERROR_CORRECTION, ec);
+                    String errorCorrection = ec.toString();
+                    errorCorrection = errorCorrection.replace("%", ""); // Sometimes the error correction value contains a percent sign
+                    hints.put(ERROR_CORRECTION, errorCorrection);
                 }
             }
             if (!hints.containsKey(ERROR_CORRECTION) && format != BarcodeFormat.AZTEC && format != BarcodeFormat.PDF_417) {
