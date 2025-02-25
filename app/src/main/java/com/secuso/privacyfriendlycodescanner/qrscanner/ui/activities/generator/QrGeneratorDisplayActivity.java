@@ -1,3 +1,21 @@
+/*
+    Privacy Friendly QR Scanner
+    Copyright (C) 2020-2025 Privacy Friendly QR Scanner authors and SECUSO
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.generator;
 
 import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
@@ -38,6 +56,7 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
+import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRCodeEncoder;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.QRGeneratorUtils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities.ScannerActivity;
@@ -107,7 +126,12 @@ public class QrGeneratorDisplayActivity extends AppCompatActivity {
         qrInputText = QRData.getString("gn");
         qrInputType = (Contents.Type) QRData.getSerializable("type");
 
-        codeContentTextView.setText(qrInputText);
+        // Encode the content once to add the correct type tag to the content
+        codeContentTextView.setText((new QRCodeEncoder(qrInputText,
+                null,
+                qrInputType,
+                BarcodeFormat.QR_CODE.toString(),
+                100)).getContents());
 
         setTitle(qrInputType.toLocalizedString(getApplicationContext()));
 
