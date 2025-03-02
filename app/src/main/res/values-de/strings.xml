@@ -3,7 +3,7 @@
     <string name="qr_scanner">QR-Scanner</string>
     <string name="qr_generator">QR-Generator</string>
     <string name="slide1_heading">Willkommen</string>
-    <string name="slide1_text">Willkommen beim Privacy-Friendly-QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollten.</string>
+    <string name="slide1_text">Willkommen beim Privacy Friendly QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollten.</string>
     <string name="slide2_heading">Was gibt es?</string>
     <string name="text_slide2">Mit dieser App können Sie QR-Codes sowohl scannen als auch erstellen.</string>
     <string name="slide3_heading">Weitere Funktionen</string>
@@ -15,10 +15,10 @@
     <string name="help">Hilfe</string>
     <string name="about">Über</string>
     <string name="title_activity_qrscanner">QR-Scanner</string>
-    <string name="scan_text">Platzieren Sie den Scanner über dem Code, den Sie dekodieren möchten.</string>
+    <string name="scan_text">Platzieren Sie den Scanner über den Code, den Sie dekodieren möchten.</string>
     <string name="about_author">Autoren: </string>
     <string name="about_author_string">%s und Mitwirkende.</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy-Friendly-Apps, entwickelt von SECUSO. Quelltext lizenziert unter GPLv3. Bilder copyright Karlsruher Institut für Technologie und Google Inc.</string>
+    <string name="privacy_friendly">Dies ist eine von vielen Privacy Friendly Apps, entwickelt von SECUSO. Der Quelltext ist GPLv3 lizenziert. Das Copyright der Bilder hat das Karlsruher Institut für Technologie und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
     <string name="app_name">QR Scanner</string>
     <string name="version_number">Version v%s</string>
@@ -160,7 +160,7 @@
     <string name="navigation_drawer_open">Navigationsmenü öffnen</string>
     <string name="navigation_drawer_close">Navigationsmenü schließen</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Die Privacy-Friendly-QR-Code-Scanner-App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, wozu sie nur minimale Berechtigungen benötigt und zur Unterstützung bei der Erkennung von Links auf schadhafte Seiten dient.</string>
+    <string name="welcome_text">Der Privacy Friendly QR-Scanner ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, mit einer minimalen Anzahl von Berechtigungen, und unterstützt bei der Erkennung von Links auf schadhafte Seiten.</string>
     <string name="welcome">Willkommen</string>
     <string name="viewhelp">Hilfe zeigen</string>
     <string name="help_overview_heading">Übersicht</string>
