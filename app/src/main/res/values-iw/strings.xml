@@ -26,7 +26,7 @@
     <string name="help">עזרה</string>
     <string name="title_activity_settings">הגדרות</string>
     <string name="slide1_text">ברוך הבא לסורק QR ידידותי לפרטיות. מדריך זה יכסה את הדברים החשובים ביותר שאתה צריך לדעת.</string>
-    <string name="about">אודות</string>
+    <string name="about">על אודות</string>
     <string name="more_info">מידע נוסף ניתן למצוא ב:</string>
     <string name="ok">אוקיי</string>
     <string name="welcome">ברוכים הבאים</string>
@@ -43,9 +43,9 @@
     <string name="help_intro">עם PRIVACY FRIENDLY QR Scanner אתה יכול לסרוק ברקודים ו-qr-codes עם תכנים שונים.</string>
     <string name="help_whatis">מהו סורק ברקוד ידידותי לפרטיות?</string>
     <string name="help_whatis_answer">עם סורק QR ידידותי לפרטיות אתה יכול לסרוק/ליצור ברקודים ו-qr-codes עם תכנים שונים. כמו כן, אתה יכול להעתיק/לשתף קוד QR סרוק עם יישומים אחרים, בנוסף תוכל לשמור את קוד ה-QR שנוצר בגלריה ולשתף אותו גם כן.</string>
-    <string name="help_usability">״הסריקה לא עובדת, מה אני יכול לעשות?</string>
-    <string name="help_usability_answer">אם אינך יכול לסרוק קוד, הרחק מעט את המצלמה מהקוד.</string>
-    <string name="help_privacy">מה הופך את האפליקציה לידידותית לפרטיות?</string>
+    <string name="help_usability">הסריקה לא עובדת, מה אפשר לעשות?</string>
+    <string name="help_usability_answer">אם הקוד לא נסרק, נא להרחיק מעט את המצלמה מהקוד.</string>
+    <string name="help_privacy">מה הופך את היישומון לידידותי לפרטיות?</string>
     <string name="help_privacy_answer">דוגמה לאפליקציה ידידותית לפרטיות אינה דורשת שום הרשאה. בנוסף, האפליקציה אינה כולל מנגנוני מעקב או פרסומת.</string>
     <string name="title_activity_qr_generator">מחולל ברקוד</string>
     <string name="welcome_text">סורק QR ידידותי לפרטיות מאפשר לסרוק ברקודים וקודי QR עם תכנים שונים עם סט הרשאות מינימלי, ומסייע בזיהוי קישורים זדוניים.</string>
