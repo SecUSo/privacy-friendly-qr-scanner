@@ -22,7 +22,7 @@
     <string name="QRGenerator">Xerador de QR</string>
     <string name="History">Historial</string>
     <string name="slide1_heading">Benvida</string>
-    <string name="slide1_text">Benvida a Privacy QR scanner. Este titorial achégache o máis relevante que debes coñecer.</string>
+    <string name="slide1_text">Benvida ao Escáner QR con Privacidade. Este titorial achégache o máis relevante que debes coñecer.</string>
     <string name="slide2_heading">Que fai este escaner?</string>
     <string name="text_slide2">Podes escanear un código QR con QR Scanner ou crear un códgio QR con QR Generator.</string>
     <string name="slide3_heading">Máis características</string>
@@ -41,7 +41,7 @@
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Web de SECUSO</a></string>
     <string name="about_libraries">Bibliotecas utilizadas:</string>
-    <string name="app_name_long">Privacy Friendly QR Scanner</string>
+    <string name="app_name_long">Escáner QR con Privacidade</string>
     <string name="version_number">Versión v%s</string>
     <string name="delete_items">Eliminar elementos</string>
     <string name="scan_text">Sitúa esta xanela sobre o código que queres descifrar.</string>
@@ -152,7 +152,7 @@
     <string name="title_activity_result_contact">Contacto atopado</string>
     <string name="action_help">Axuda</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Escáner QR respetuoso coa privacidade que che permite escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e detecta de ligazóns malignas.</string>
+    <string name="welcome_text">Escáner QR con Privacidade permíteche escanear códigos de barras e códigos QR con diferentes contidos ao tempo que precisa mínimos permisos e detecta de ligazóns malignas.</string>
     <string name="welcome">Benvida</string>
     <string name="viewhelp">Ver Axuda</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
@@ -162,20 +162,20 @@
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="help_permission1_description">A app requiere o acceso á cámara, pois é preciso para escanear os códigos de barras e QR.</string>
     <string name="help_permission1_heading">Cámara</string>
-    <string name="help_privacy_heading">Que permisos precisa QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
+    <string name="help_privacy_heading">Que permisos precisa o Escáner QR con PRIVACIDADE?</string>
     <string name="help_category_example">Non funciona o escáner, que podo facer?</string>
-    <string name="help_overview_heading">Que é QR Scanner RESPETUOSO DA PRIVACIDADE?</string>
-    <string name="help_intro">Con QR Scanner RESPETUOSO DA PRIVACIDADE podes escanear códigos de barras e QR con diferentes contidos.</string>
-    <string name="help_whatis_answer">Con QR Scanner RESPETUOSO DA PRIVACIDADE podes escanear/crear códigos de barras e QR con varios contidos. Tamén che permite copiar/compartir o código QR con outras aplicacións, e ademáis podes gardar o código QR creado na galería e compartilo tamén alí.</string>
+    <string name="help_overview_heading">Que é Escáner QR con PRIVACIDADE?</string>
+    <string name="help_intro">Co QR Scanner con PRIVACIDADE podes escanear códigos de barras e QR con diferentes contidos.</string>
+    <string name="help_whatis_answer">Con QR Scanner con PRIVACIDADE podes escanear/crear códigos de barras e QR con varios contidos. Tamén che permite copiar/compartir o código QR con outras aplicacións, e ademáis podes gardar o código QR creado na galería e compartilo tamén alí.</string>
     <!--###HELP###-->
 
 
-    <string name="help_whatis">Qué é PRIVANCY FRIENDLY QR Scanner?</string>
+    <string name="help_whatis">Qué é Escáner QR con PRIVACIDADE?</string>
     <string name="help_usability">O escáner non funciona, que podo facer?</string>
     <string name="help_usability_answer">Se non podes escanear un código, aumenta a distancia entre a cámara e o código.</string>
     <string name="help_privacy">De que xeito é respetuosa coa privacidade?</string>
-    <string name="help_privacy_answer">Unha App xenérica Respetuosa da Privacidade non require ningún permiso. Tampouco incluiría ningún mecanismo de rastrexo e/ou publicidade.</string>
-    <string name="help_permission">Que permisos require QR Scanner RESPECTUOSA da PRIVACIDADE?</string>
+    <string name="help_privacy_answer">Unha App xenérica con Privacidade non require ningún permiso. Tampouco incluiría ningún mecanismo de rastrexo e/ou publicidade.</string>
+    <string name="help_permission">Que permisos require Escáner QR con PRIVACIDADE?</string>
     <string name="help_permission_answer">A aplicación require o acceso á cámara, que se utiliza para escanear códigos de barras e QR. A aplicación tamén precisa permiso de acceso á almacenaxe para poder ver os códigos que inclúan as túas imaxes ou gardar os códigos xerados a partir das túas imaxes.</string>
     <!-- Strings related to SettingsActivity -->
 
@@ -197,7 +197,7 @@
     <string name="removed_items">elementos eliminados</string>
     <string name="canncelled_scan">Cancelaches o escaneo</string>
     <string name="Scan_qr">Escanear</string>
-    <string name="okay">Vale</string>
+    <string name="okay">OK</string>
     <string name="Store_in_gallery">Gardar</string>
     <string name="phone_number">Número de teléfono</string>
     <!-- Generator activities -->
