@@ -151,11 +151,11 @@
     <string name="action_search">Otsi</string>
     <string name="fragment_result_text_dialog_positive_button">Otsi</string>
     <string name="fragment_result_text_dialog_title">Otsi</string>
-    <string name="none">Määratlemata</string>
+    <string name="none">Puudub</string>
     <string name="action_open">Ava</string>
     <string name="pref_search_engine_enabled_title">Kasuta otsingumootoreid</string>
     <string name="pref_search_engine_enabled_summary">Teksti skaneerimisel kuva nupp „Otsi“.</string>
-    <string name="pref_app_theme_title">Kujundust</string>
+    <string name="pref_app_theme_title">Kujundus</string>
     <string name="removed_item">objekt eemaldatud</string>
     <string name="removed_items">objekti eemaldatud</string>
     <string name="share_via">Jaga rakendusega</string>
