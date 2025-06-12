@@ -343,6 +343,10 @@
     <string name="pref_search_engine_enabled_title">Use search engines</string>
     <string name="pref_search_engine_enabled_summary">Display the \"Search\" button when scanning text.</string>
     <string name="pref_app_theme_title">Theme</string>
+    <string name="dialog_goodbye_google_title">Goodbye Google Play 😢</string>
+    <string name="dialog_goodbye_google_desc">Our apps will have to say goodbye to Google Play. You can continue to use the app but you will not receive any updates in the future.\nYou can find more info about the reasons and why this isn’t the end of the Privacy Friendly Apps on our website:\n\n<a href="https://secuso.aifb.kit.edu/english/2809.php">Click here to learn more</a>
+    </string>
+    <string name="dialog_goodbye_google_deactivate_notice">Don\'t show this notice again.</string>
     <string-array name="pref_app_theme_entries">
         <item>Light</item>
         <item>Dark</item>
