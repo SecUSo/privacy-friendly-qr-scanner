@@ -61,6 +61,8 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.BaseActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ScannerViewModel;
 
+import com.secuso.privacyfriendlycodescanner.qrscanner.GoodbyeGoogleHelperKt;
+
 import java.lang.ref.WeakReference;
 import java.util.Arrays;
 import java.util.Collection;
@@ -202,6 +204,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
                 initScan();
             }
         }
+        GoodbyeGoogleHelperKt.checkGoodbyeGoogle(this, getLayoutInflater());
     }
 
     private void updateCameraZoom(Float zoomLevel) {
