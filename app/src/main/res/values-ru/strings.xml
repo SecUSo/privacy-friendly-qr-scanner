@@ -18,7 +18,7 @@
     <string name="title_activity_qrscanner">Сканер</string>
     <string name="action_settings">Настройки</string>
     <string name="title_activity_qr_scanner">Сканер</string>
-    <string name="title_activity_settings">Установки</string>
+    <string name="title_activity_settings">Настройки</string>
     <string name="slide1_heading">Добро пожаловать</string>
     <string name="slide1_text">Добро пожаловать в QR scanner. Это руководство поможет вам начать.</string>
     <string name="slide2_heading">Что может это приложение?</string>
@@ -32,8 +32,8 @@
     <string name="tutorial">Руководство</string>
     <string name="about_author">Авторы：</string>
     <string name="about_author_string">%s и помощники.</string>
-    <string name="about_affiliation">Вместе с</string>
-    <string name="more_info">Подробнее можно узнать на:</string>
+    <string name="about_affiliation">В сотрудничестве с</string>
+    <string name="more_info">Больше информации на:</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-репозиторий</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">сайт SECUSO</a></string>
     <string name="about_libraries">Использованные библиотеки:</string>
@@ -69,14 +69,14 @@
     <string name="action_help">Помощь</string>
     <string name="welcome_text">QR Scanner позволяет сканировать штрих и QR-коды с минимальным набором разрешений, и помогает обнаружить вредоносные ссылки.</string>
     <string name="welcome">Добро пожаловать</string>
-    <string name="viewhelp">Показать справку</string>
+    <string name="viewhelp">Смотреть Справку</string>
     <string name="help_permission1_heading">Камера</string>
     <string name="help_privacy_heading">Какие разрешения нужны приложению QR Scanner?</string>
     <string name="help_overview_heading">Что такое Сканер QR?</string>
     <string name="help_usability">Если сканирование не работает, что я могу сделать?</string>
     <string name="help_usability_answer">Если не получается сканировать код, измените дистанцию между сканером и кодом.</string>
-    <string name="help_privacy">Что делает приложение конфиденциальным?</string>
-    <string name="help_privacy_answer">Конфиденциальное приложение по умолчанию не требует разрешений. А также в нем нет отслеживающих механизмов или рекламы.</string>
+    <string name="help_privacy">Что делает это приложение конфиденциальным?</string>
+    <string name="help_privacy_answer">Эта игра не требует для работы никаких разрешений, не имеет встроенных механизмов отслеживания и не показывает рекламу.</string>
     <string name="help_permission">Какие разрешения нужны QR Scanner?</string>
     <string name="help_data_backup">Как я могу восстановить мои данные?</string>
     <string name="help_data_backup_answer">Вы можете использовать наше приложение Privacy Friendly Backup чтобы сохранять и восстанавливать данные приложений. Вы также можете использовать его когда покупаете новый смартфон.</string>
