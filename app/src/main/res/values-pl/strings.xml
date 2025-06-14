@@ -30,7 +30,7 @@
     <string name="all_records">Czy chcesz usunąć wszystkie wpisy\?</string>
     <string name="action_clear">Wyczyść historię</string>
     <string name="generated_code_image_explanation">Uwaga: Wyświetlony tutaj kod został wygenerowany na podstawie zawartości zeskanowanego kodu i dlatego może wyglądać inaczej. Jednak zawarte w nim dane są takie same.</string>
-    <string name="slide1_heading">Witamy</string>
+    <string name="slide1_heading">Witaj!</string>
     <string name="item_result_email_subject">Temat:</string>
     <string name="sms_text">Tekst SMS-a</string>
     <string name="activity_result_toast_saved">Zapisano w historii</string>
@@ -71,7 +71,7 @@
     <string name="text_enter">Tekst, który chcesz zakodować</string>
     <string name="Del">Czy chcesz usunąć wybrane wpisy\?</string>
     <string name="share_via">Udostępnij przez</string>
-    <string name="navigation_drawer_close">Zamknij szufladę nawigacyjną</string>
+    <string name="navigation_drawer_close">Zamknij szufladę nawigacji</string>
     <string name="none">Brak</string>
     <string name="item_result_email_bcc">UDW:</string>
     <string name="activity_scanner_permission_needed_explanation">Aplikacja potrzebuje uprawnienia do aparatu, aby skanować kody QR.</string>
@@ -88,7 +88,7 @@
     <string name="title_activity_help">Pomoc</string>
     <string name="street_name_and_number">Nazwa i numer ulicy</string>
     <string name="yes">Tak</string>
-    <string name="more_info">Więcej informacji można znaleźć na stronie:</string>
+    <string name="more_info">Więcej informacji można znaleźć na:</string>
     <string name="image_is_being_processed">Obraz jest przetwarzany…</string>
     <string name="title_activity_result_wifi">Wykryto Wi-Fi</string>
     <string name="title_activity_result_text">Wykryto tekst</string>
@@ -129,7 +129,7 @@
     <string name="wifi_explanation">Ta wersja aplikacji nie może automatycznie łączyć się z sieciami Wi-Fi ze względu na wymagane uprawnienie. Poniżej znajduje się kilka szczegółów na temat sieci.</string>
     <string name="title_activity_qr_generator">Generator QR</string>
     <string name="removed_items">usunięte elementy</string>
-    <string name="about">O</string>
+    <string name="about">O aplikacji</string>
     <string name="abort_action">Porzuć</string>
     <string name="country">Kraj</string>
     <string name="title_activity_result_product">Wykryto produkt</string>
@@ -173,7 +173,7 @@
     <string name="domain">Domena</string>
     <string name="action_search">Szukaj</string>
     <string name="help_permission">Jakie uprawnienia są wymagane przez przyjazny dla prywatności skaner QR\?</string>
-    <string name="okay">Ok</string>
+    <string name="okay">OK</string>
     <string name="help_privacy">Co sprawia, że aplikacja jest przyjazna dla prywatności\?</string>
     <string name="delete_content">Czy na pewno chcesz usunąć zawartość\?</string>
     <string name="selected_items">wybrane elementy</string>
