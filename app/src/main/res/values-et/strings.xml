@@ -49,7 +49,7 @@
     <string name="History">Ajalugu</string>
     <string name="slide1_heading">Tere tulemast</string>
     <string name="slide1_text">Tere tulemast kasutama privaatsussõbralikku QR-koodi skannerit. Järgnev juhend selgitab olulisemaid asju, mida sa peaksid teadma.</string>
-    <string name="slide2_heading">Misa see rakendus oskab teha?</string>
+    <string name="slide2_heading">Mida see rakendus oskab teha?</string>
     <string name="text_slide2">Selle rakendusega saad nii skaneerida kui luua QR-koode.</string>
     <string name="slide3_heading">Lisavõimalused</string>
     <string name="text_slide3">Sinu skaneeritud QR-koodi saad salvestada ajaloos. Lisaks saad teda jagada või kopeerida.</string>
@@ -151,11 +151,11 @@
     <string name="action_search">Otsi</string>
     <string name="fragment_result_text_dialog_positive_button">Otsi</string>
     <string name="fragment_result_text_dialog_title">Otsi</string>
-    <string name="none">Määratlemata</string>
+    <string name="none">Puudub</string>
     <string name="action_open">Ava</string>
     <string name="pref_search_engine_enabled_title">Kasuta otsingumootoreid</string>
     <string name="pref_search_engine_enabled_summary">Teksti skaneerimisel kuva nupp „Otsi“.</string>
-    <string name="pref_app_theme_title">Kujundust</string>
+    <string name="pref_app_theme_title">Kujundus</string>
     <string name="removed_item">objekt eemaldatud</string>
     <string name="removed_items">objekti eemaldatud</string>
     <string name="share_via">Jaga rakendusega</string>
