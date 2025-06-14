@@ -19,13 +19,13 @@
     <string name="action_settings">Настройки</string>
     <string name="title_activity_qr_scanner">Сканер</string>
     <string name="title_activity_settings">Настройки</string>
-    <string name="slide1_heading">Добро Пожаловать</string>
+    <string name="slide1_heading">Добро пожаловать</string>
     <string name="slide1_text">Добро пожаловать в QR scanner. Эта инструкция содержит все необходимое чтобы начать.</string>
-    <string name="slide2_heading">Какие имеются функции?</string>
-    <string name="text_slide2">В этом приложении вы можете как сканировать, так и генерировать QR-коды.</string>
-    <string name="slide3_heading">Еще больше функций</string>
-    <string name="text_slide3">QR-коды которые вы сканируете могут сохранятся в Истории. А также вы можете копировать и отправлять их.</string>
-    <string name="wecome">Добро Пожаловать</string>
+    <string name="slide2_heading">Что может это приложение?</string>
+    <string name="text_slide2">Это приложение сканирует и генерирует QR-коды.</string>
+    <string name="slide3_heading">Что еще есть</string>
+    <string name="text_slide3">Сканированые QR-коды могут сохраняться в Историю. Кроме того, вы можете копировать и отправлять их.</string>
+    <string name="wecome">Добро пожаловать</string>
     <string name="skip">Пропустить</string>
     <string name="next">Дальше</string>
     <string name="help_">Помощь</string>
@@ -42,8 +42,8 @@
     <string name="delete_items">Удаленные</string>
     <string name="scan_text">Place this window atop the code you want to decode.</string>
     <string name="knowRisks">Я проверил ссылку и хочу посетить сайт.</string>
-    <string name="urlExplanation">В QR-кодах могут содержатся ссылки, ведущие на поддельные сайты, которые могут украсть ваши данные (фишинговые сайты) или занести вредоносный код (например вирусы) на ваше устройство.\n\nПоэтому вам следует <b>проверять</b> следующие ссылки:</string>
-    <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Информация</a> как проверять ссылки.</string>
+    <string name="urlExplanation">В QR-кодах могут содержатся ссылки, ведущие на поддельные сайты, которые могут украсть ваши данные (фишинговые сайты) или занести вредоносный код (например вирусы) на ваше устройство.\n\nПоэтому вам следует <b>проверить</b> следующую ссылку:</string>
+    <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Информация</a> про то, как проверять ссылки.</string>
     <string name="delete_history">Вы хотите удалить историю?</string>
     <string name="ok">Хорошо</string>
     <string name="element_removed">Удалено.</string>
@@ -52,7 +52,7 @@
     <string name="action_about">О приложении</string>
     <string name="history_disabled">История не сохраняется</string>
     <string name="to">Получатель:</string>
-    <string name="usability_hint2">Если не получается сканировать код, попробуйте изменить расстояние между сканером и кодом.</string>
+    <string name="usability_hint2">Если у вас не получается сканировать код, попробуйте отдалить или приблизить камеру к коду.</string>
     <string name="description_send_email">В сканированном QR-коде содержится заполенная почта. Чтобы <i>отправить</i> его или <i>добавить адрес контакта</i>, нажмите Далее.</string>
     <string name="description_product">В сканированном коде содержится код продукта. Чтобы <i>поискать в интернете</i> информацию о продукте, нажмите Далее.</string>
     <string name="description_sms">В сканированном QR-коде содержится SMS. Чтобы <i>отправить</i> его или <i>добавить номер телефона в контакты</i>, нажмите Далее.</string>
@@ -68,7 +68,7 @@
     <string name="title_activity_result_contact">Контакт найден</string>
     <string name="action_help">Справка</string>
     <string name="welcome_text">QR Scanner позволяет сканировать штрих- и QR-коды с минимальным набором разрешений, и помогает обнаружать вредоносные ссылки.</string>
-    <string name="welcome">Добро Пожаловать</string>
+    <string name="welcome">Добро пожаловать</string>
     <string name="viewhelp">Посмотреть помощь</string>
     <string name="help_permission1_heading">Камера</string>
     <string name="help_privacy_heading">Какие разрешения нужны приложению QR Scanner?</string>
@@ -160,7 +160,7 @@
     <string name="title_activity_result_url">Ссылка найдена</string>
     <string name="help_permission1_description">Приложение требует разрешение на доступ к камере, который используется чтобы сканировать штрих- и qr-коды через камеру.</string>
     <string name="barcode_format">Формат</string>
-    <string name="help_whatis_answer">С помощью QR Scanner вы можете сканировать/генерировать штрих- и qr-коды. Также вы можете копировать/делится сканированными QR-кодами с другими приложениями, и еще вы можете генерировать QR-коды в галерею и делится ими.</string>
+    <string name="help_whatis_answer">С помощью QR Scanner вы можете сканировать/генерировать штрих- и qr-коды. Также вы можете копировать/делится сканированными QR-кодами с другими приложениями или сохранить их в галерею.</string>
     <string name="copied_to_clipboard">Скопировано в буфер обмена.</string>
     <string name="title_activity_result_email">Почтовый адрес найден</string>
     <string name="help_category_example">Если сканирование не работает, что я могу сделать?</string>
@@ -229,4 +229,6 @@
     <string name="fragment_result_text_dialog_message">Вы точно хотите искать этот текст через %s? Текст будет отправлен в поисковую систему, что может быть расценено как утечка информации.</string>
     <string name="fragment_result_text_dialog_positive_button">Поиск</string>
     <string name="action_open">Открыть</string>
+    <string name="none">Отсутствует</string>
+    <string name="pref_app_theme_title">Тема</string>
 </resources>
