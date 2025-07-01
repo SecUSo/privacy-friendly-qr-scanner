@@ -331,7 +331,7 @@
     <string name="item_result_calendar_end">Ende:</string>
     <string name="switch_camera">Kamera umschalten</string>
     <string name="dialog_goodbye_google_title">Wir verlassen Google Play 😢</string>
-    <string name="dialog_goodbye_google_desc">Unsere Apps müssen sich leider von Google Play verabschieden. Sie können die App weiterhin nutzen, erhalten jedoch keine Updates mehr.\nWeitere Informationen zu den Gründen und warum das nicht das Ende der Privacy Friendly Apps ist, finden Sie auf unserer Website:\n\n<a href="https://secuso.aifb.kit.edu/2809.php">Hier klicken, um mehr zu erfahren</a>
+    <string name="dialog_goodbye_google_desc">Unsere Apps müssen sich leider von Google Play verabschieden. Die App ist weiterhin nutzbar, erhält jedoch keine Updates mehr.\nWeitere Informationen zu den Gründen und warum das nicht das Ende der Privacy Friendly Apps ist, finden Sie auf unserer Website:\n\n<a href="https://secuso.aifb.kit.edu/2809.php">Hier klicken, um mehr zu erfahren</a>
     </string>
     <string name="dialog_goodbye_google_deactivate_notice">Zeige diese Mitteilung nicht nochmal</string>
 </resources>
