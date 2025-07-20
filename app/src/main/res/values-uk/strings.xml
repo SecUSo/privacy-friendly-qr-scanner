@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about">Про програму</string>
+    <string name="title_activity_qrscanner">QR-сканер</string>
+    <string name="app_name">QR-сканер</string>
+    <string name="qr_scanner">QR-сканер</string>
+</resources>
