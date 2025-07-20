@@ -29,11 +29,11 @@
     <string name="text_slide3">Taradığınız karekod geçmişe kaydedilebilir. Ayrıca paylaşabilir veya kopyalayabilirsiniz.</string>
     <string name="wecome">Hoş geldiniz</string>
     <string name="skip">Atla</string>
-    <string name="next">Sonraki</string>
+    <string name="next">İleri</string>
     <string name="help_">Yardım</string>
-    <string name="tutorial">Rehber</string>
+    <string name="tutorial">Öğretici</string>
     <!--###ABOUT###-->
-    <string name="about_author">Geliştiriciler: </string>
+    <string name="about_author">Yazarlar:</string>
     <string name="about_author_string">%s ve katkıda bulunanlar.</string>
     <string name="about_affiliation">ile bağlantılı olarak</string>
     <string name="privacy_friendly">Bu, SECUSO tarafından geliştirilen birçok gizlilik dostu uygulamadan biridir. Kaynak kodu GPLv3 altında lisanslanmıştır. Görsellerin telif hakkı Karlsruhe Teknoloji Enstitüsü ve Google Inc\'e aittir.</string>
@@ -71,7 +71,7 @@
     <string name="choose_action">İlerle</string>
     <string name="abort_action">İptal et</string>
     <string name="proceed">İlerle</string>
-    <string name="back">Geri git</string>
+    <string name="back">Geri</string>
     <string name="choose_action_url">İlerle</string>
     <string name="abort_action_url">İptal et</string>
     <string-array name="text_array">
@@ -174,7 +174,7 @@
     <string name="action_help">Yardım</string>
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">Gizlilik dostu QR tarayıcı, çeşitli içeriklere sahip barkodların ve QR kodlarının en az sayıda izinle taranmasına olanak tanır ve kötü amaçlı bağlantıların algılanmasına yardım eder.</string>
-    <string name="welcome">Hoşgeldiniz</string>
+    <string name="welcome">Hoş geldiniz</string>
     <string name="viewhelp">Yardımı Görüntüle</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
@@ -268,7 +268,7 @@
     <string name="selected_1">Seçilmiş</string>
     <string name="activity_scanner_permission_needed_explanation">Uygulama, karekodları taramak için kamera iznine ihtiyaç duyar.</string>
     <string name="select_image_from_gallery_explanation">Bu fonksiyon galerinizdeki resimleri açmanızı ve içindeki kodları taramanızı sağlar. Bunun için resimlere erişim gerekir.</string>
-    <string name="select_image_from_gallery">Galeriden resim seç</string>
+    <string name="select_image_from_gallery">Galeriden görsel seçin</string>
     <string name="image_is_being_processed">Resim işleniyor…</string>
     <string name="no_code_in_image_explanation">Ne yazık ki bu görüntüde herhangi bir kod bulunamadı. Sonucu iyileştirmek için görüntüyü kırpabilir ya da düzeltebilir ve tekrar deneyebilirsiniz.</string>
     <string name="raw_data">Ham veri</string>
