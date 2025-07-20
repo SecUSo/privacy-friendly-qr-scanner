@@ -69,7 +69,7 @@
     <string name="action_help">Помощь</string>
     <string name="welcome_text">QR Scanner позволяет сканировать штрих и QR-коды с минимальным набором разрешений, и помогает обнаружить вредоносные ссылки.</string>
     <string name="welcome">Добро пожаловать</string>
-    <string name="viewhelp">Смотреть Справку</string>
+    <string name="viewhelp">Просмотр справки</string>
     <string name="help_permission1_heading">Камера</string>
     <string name="help_privacy_heading">Какие разрешения нужны приложению QR Scanner?</string>
     <string name="help_overview_heading">Что такое Сканер QR?</string>
@@ -231,5 +231,5 @@
     <string name="action_open">Открыть</string>
     <string name="none">Отсутствует</string>
     <string name="pref_app_theme_title">Тема</string>
-    <string name="hello_blank_fragment">Пустой фрагмент</string>
+    <string name="hello_blank_fragment">Здравствуйте, пустой фрагмент</string>
 </resources>
