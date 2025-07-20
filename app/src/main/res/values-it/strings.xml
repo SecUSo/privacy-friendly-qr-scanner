@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QR Scanner</string>
-    <string name="navigation_drawer_open">Apri il drawer di navigazione</string>
-    <string name="navigation_drawer_close">Chiudi il drawer di navigazione</string>
+    <string name="navigation_drawer_open">Apri menu di navigazione</string>
+    <string name="navigation_drawer_close">Chiudi menu di navigazione</string>
     <string name="qr_scanner">QR Scanner</string>
     <string name="qr_generator">QR Generator</string>
     <string name="history">Cronologia</string>
     <string name="settings">Impostazioni</string>
     <string name="help">Aiuto</string>
-    <string name="about">Al riguardo</string>
+    <string name="about">Informazioni</string>
     <string name="title_activity_qrscanner">QR Scanner</string>
     <string name="action_settings">Impostazioni</string>
     <string name="title_activity_qr_scanner">QR Scanner</string>
@@ -55,7 +55,7 @@
     <string name="conform_url">Per favore, conferma di aver controllato il link.</string>
     <string name="wifi_explanation">Questa versione dell\'app non può connettersi a reti WIFI automaticamente a causa dei permessi necessari. Qui sotto trovi alcuni dettagli sulla rete.</string>
     <string name="encryption">Crittografia</string>
-    <string name="action_about">Al riguardo</string>
+    <string name="action_about">Informazioni</string>
     <string name="history_disabled">Cronologia disabilitata</string>
     <string name="to">Destinatario:</string>
     <string name="subject">Soggetto</string>
