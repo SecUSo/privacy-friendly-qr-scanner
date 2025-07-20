@@ -26,14 +26,14 @@
     <string name="slide3_heading">Что ещё есть</string>
     <string name="text_slide3">Сканированные QR-коды могут сохраняться в Историю. Кроме того, вы можете копировать и отправлять их.</string>
     <string name="wecome">Добро пожаловать</string>
-    <string name="skip">Пропустить</string>
-    <string name="next">Далее</string>
+    <string name="skip">Пропуск</string>
+    <string name="next">Дальше</string>
     <string name="help_">Помощь</string>
     <string name="tutorial">Руководство</string>
     <string name="about_author">Авторы：</string>
     <string name="about_author_string">%s и помощники.</string>
-    <string name="about_affiliation">В сотрудничестве с</string>
-    <string name="more_info">Подробнее читайте на:</string>
+    <string name="about_affiliation">Вместе с</string>
+    <string name="more_info">Подробнее можно узнать на:</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-репозиторий</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">сайт SECUSO</a></string>
     <string name="about_libraries">Использованные библиотеки:</string>
@@ -66,7 +66,7 @@
     <string name="something_went_wrong">Что-то пошло не так.</string>
     <string name="title_activity_result_wifi">Wi-Fi найден</string>
     <string name="title_activity_result_contact">Контакт найден</string>
-    <string name="action_help">Справка</string>
+    <string name="action_help">Помощь</string>
     <string name="welcome_text">QR Scanner позволяет сканировать штрих и QR-коды с минимальным набором разрешений, и помогает обнаружить вредоносные ссылки.</string>
     <string name="welcome">Добро пожаловать</string>
     <string name="viewhelp">Показать справку</string>
@@ -84,7 +84,7 @@
     <string name="pref_description_enable_history">Предыдущие сканирования сохраняются чтобы вы могли из просмотреть</string>
     <string name="pref_keep_duplicates">Сохранять дубликаты</string>
     <string name="pref_title_beep">Тон сигнала</string>
-    <string name="okay">Ладно</string>
+    <string name="okay">Хорошо</string>
     <string name="generator_text_explanation">Здесь вы можете ввести текст который нужно закодировать. Перевод строк разрешён.</string>
     <string name="message">Сообщение</string>
     <string name="subject">Объект</string>
