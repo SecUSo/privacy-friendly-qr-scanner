@@ -43,7 +43,7 @@
     <string name="choose_action">Kontynuuj</string>
     <string name="content_copied">Skopiowano zawartość</string>
     <string name="about_affiliation">We współpracy z</string>
-    <string name="tutorial">Samouczek</string>
+    <string name="tutorial">Przewodnik</string>
     <string name="item_result_calendar_title">Tytuł:</string>
     <string name="company">Firma</string>
     <string name="select_image_from_gallery">Wybierz obraz z galerii</string>
@@ -110,7 +110,7 @@
     <string name="selected">Wybrane</string>
     <string name="city">Miasto</string>
     <string name="code_generation_error">Nie udało się wygenerować żadnego kodu.</string>
-    <string name="ok">OK</string>
+    <string name="ok">Okej</string>
     <string name="lastname">Nazwisko</string>
     <string name="conform_url">Potwierdź, że sprawdziłeś(-aś) link</string>
     <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Informacje</a> na temat sprawdzania linków.</string>
@@ -173,7 +173,7 @@
     <string name="domain">Domena</string>
     <string name="action_search">Szukaj</string>
     <string name="help_permission">Jakie uprawnienia są wymagane przez przyjazny dla prywatności skaner QR\?</string>
-    <string name="okay">OK</string>
+    <string name="okay">Okej</string>
     <string name="help_privacy">Co sprawia, że aplikacja jest przyjazna dla prywatności\?</string>
     <string name="delete_content">Czy na pewno chcesz usunąć zawartość\?</string>
     <string name="selected_items">wybrane elementy</string>
