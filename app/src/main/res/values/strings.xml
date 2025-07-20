@@ -28,8 +28,8 @@
     <string name="slide3_heading">More features</string>
     <string name="text_slide3">The QR code you scanned can be saved in History. Furthermore you can share it or copy it.</string>
     <string name="wecome">Welcome</string>
-    <string name="skip">Skip</string>
-    <string name="next">Next</string>
+    <string name="skip">Passer</string>
+    <string name="next">Suivant</string>
     <string name="help_">Help</string>
     <string name="tutorial">Tutorial</string>
     <!--###ABOUT###-->
@@ -182,7 +182,7 @@
     <!-- ### WELCOME DIALOG ### -->
     <string name="welcome_text">Privacy friendly QR scanner allows scanning barcodes and QR-codes with various content with a minimal set of permissions, and helps in the detection of malicious links.</string>
     <string name="welcome">Welcome</string>
-    <string name="viewhelp">View Help</string>
+    <string name="viewhelp">Voir l\'aide</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Karlsruhe Institute of Technology. Sourcecode licensed under GPLv3. Images copyright KIT and Google Inc.</string>
@@ -225,7 +225,7 @@
     <string name="removed_items">items removed</string>
     <string name="canncelled_scan">You cancelled the scanning</string>
     <string name="Scan_qr">Scan</string>
-    <string name="okay">Okay</string>
+    <string name="okay">Ok</string>
     <string name="Store_in_gallery">Store</string>
     <string name="phone_number">Phone number</string>
     <!-- Generator activities -->
