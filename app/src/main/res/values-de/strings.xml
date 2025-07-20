@@ -3,7 +3,7 @@
     <string name="qr_scanner">QR-Scanner</string>
     <string name="qr_generator">QR-Generator</string>
     <string name="slide1_heading">Willkommen</string>
-    <string name="slide1_text">Willkommen beim Privacy-Friendly-QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollten.</string>
+    <string name="slide1_text">Willkommen beim Privacy Friendly QR-Scanner. Dieses Tutorial behandelt die wichtigsten Dinge, die Sie wissen sollten.</string>
     <string name="slide2_heading">Was gibt es?</string>
     <string name="text_slide2">Mit dieser App können Sie QR-Codes sowohl scannen als auch erstellen.</string>
     <string name="slide3_heading">Weitere Funktionen</string>
@@ -15,19 +15,19 @@
     <string name="help">Hilfe</string>
     <string name="about">Über</string>
     <string name="title_activity_qrscanner">QR-Scanner</string>
-    <string name="scan_text">Platzieren Sie den Scanner über dem Code, den Sie dekodieren möchten.</string>
+    <string name="scan_text">Platzieren Sie den Scanner über den Code, den Sie dekodieren möchten.</string>
     <string name="about_author">Autoren: </string>
     <string name="about_author_string">%s und Mitwirkende.</string>
-    <string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy-Friendly-Apps, entwickelt von SECUSO. Quelltext lizenziert unter GPLv3. Bilder copyright Karlsruher Institut für Technologie und Google Inc.</string>
+    <string name="privacy_friendly">Dies ist eine von vielen Privacy Friendly Apps, entwickelt von SECUSO. Der Quelltext ist GPLv3 lizenziert. Das Copyright der Bilder hat das Karlsruher Institut für Technologie und Google Inc.</string>
     <string name="more_info">Weitere Infos unter:</string>
     <string name="app_name">QR Scanner</string>
     <string name="version_number">Version v%s</string>
     <string name="action_settings">Einstellungen</string>
     <string name="history">Verlauf</string>
     <string name="action_clear">Verlauf löschen</string>
-    <string name="cannot_clear">Der Verlauf ist bereits leer.</string>
+    <string name="cannot_clear">Der Verlauf ist bereits leer</string>
     <string name="knowRisks">Ich habe den Link geprüft und möchte die Webseite besuchen.</string>
-    <string name="domain">Link:</string>
+    <string name="domain">Domain</string>
     <string name="urlExplanation">QR-Codes können Links enthalten, die zu einer Webseite führen, auf der Ihre Daten gefährdet sind (z. B. Phishing-Webseiten) oder über die Schadsoftware (z. B. Viren) auf Ihr Gerät geladen wird.
 \n
 \n<b>Überprüfen</b> Sie daher, ob folgender Link der ist, den Sie erwartet haben:</string>
@@ -39,19 +39,19 @@
     <string name="wifi_explanation">Aufgrund der nötigen Rechte ermöglicht diese Version der App keine direkte Verbindung mit einem WLAN-Netzwerk. Dennoch erhalten Sie im Folgenden einige Informationen.</string>
     <string name="encryption">Verschlüsselung</string>
     <string name="action_about">Über</string>
-    <string name="about_affiliation">In Zusammenarbeit mit:</string>
+    <string name="about_affiliation">In Zusammenarbeit mit</string>
     <string name="about_libraries">Verwendete Bibliotheken:</string>
     <string name="history_disabled">Verlauf ausgeschaltet</string>
     <string name="to">Empfänger:</string>
     <string name="subject">Betreff</string>
     <string name="usability_hint2">Wenn Sie Probleme beim Scannen eines Codes haben, versuchen Sie, ihn etwas weiter entfernt zu scannen.</string>
-    <string name="description_contact">Der gescannte QR-Code enthält Kontaktinformationen.</string>
-    <string name="description_email">Der gescannte QR-Code enthält eine E-Mail-Adresse.</string>
-    <string name="description_send_email">Der gescannte QR-Code enthält eine ausgefüllte E-Mail.</string>
-    <string name="description_product">Der gescannte Code enthält einen Produktcode.</string>
-    <string name="description_tel">Der gescannte QR-Code enthält eine Telefonnummer.</string>
-    <string name="description_sms">Der gescannte QR-Code enthält eine SMS.</string>
-    <string name="description_text">Der gescannte QR-Code enthält Text.</string>
+    <string name="description_contact">Der gescannte QR-Code enthält Kontaktinformationen. Um sie in dein Adressbuch zu <i>importieren</i>, klicke auf Fortfahren.</string>
+    <string name="description_email">Der gescannte QR-Code enthält eine E-Mail-Adresse. Um <i>eine Email zu senden</i> oder <i>sie einem Kontakt hinzuzufügen</i>, klcke auf Fortfahren.</string>
+    <string name="description_send_email">Der gescannte QR-Code enthält eine ausgefüllte E-Mail. Um sie <i>zu senden</i> oder <i>die Adresse zu einem Kontakt hinzuzufügen</i>, klicke auf Fortfahren.</string>
+    <string name="description_product">Der gescannte Code enthält einen Produktcode. Um nach Produktinformationen <i>im Web zu suchen</i>, klicke auf Fortfahren.</string>
+    <string name="description_tel">Der gescannte QR-Code enthält eine Telefonnummer. Um <i>einen Anruf zu starten</i> oder <i>sie zu einem Kontakt hinzuzufügen</i>, klicke auf Fortfahren.</string>
+    <string name="description_sms">Der gescannte QR-Code enthält eine SMS. Um die SMS zu <i>senden</i> oder <i>die Nummer zu einem Kontakt hinzuzufügen</i>, klicke auf Fortfahren.</string>
+    <string name="description_text">Der gescannte QR-Code enthält Text. Um nach Information <i>im Web zu suchen</i>, klicke auf Fortfahren.</string>
     <string name="choose_action">Fortfahren </string>
     <string name="abort_action">Abbrechen </string>
     <string name="proceed">Fortfahren</string>
@@ -160,13 +160,13 @@
     <string name="navigation_drawer_open">Navigationsmenü öffnen</string>
     <string name="navigation_drawer_close">Navigationsmenü schließen</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">Die Privacy-Friendly-QR-Code-Scanner-App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, wozu sie nur minimale Berechtigungen benötigt und zur Unterstützung bei der Erkennung von Links auf schadhafte Seiten dient.</string>
+    <string name="welcome_text">Der Privacy Friendly QR-Scanner ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten, mit einer minimalen Anzahl von Berechtigungen, und unterstützt bei der Erkennung von Links auf schadhafte Seiten.</string>
     <string name="welcome">Willkommen</string>
-    <string name="viewhelp">Hilfe zeigen</string>
-    <string name="help_overview_heading">Übersicht</string>
+    <string name="viewhelp">Hilfe anzeigen</string>
+    <string name="help_overview_heading">Was ist der PRIVACY FRIENDLY QR Scanner?</string>
     <string name="help_intro">Diese App ermöglicht das Scannen von Barcodes und QR-Codes mit verschiedensten Inhalten.</string>
-    <string name="help_category_example">Allgemeine Hinweise</string>
-    <string name="help_privacy_heading">Datenschutzinfo</string>
+    <string name="help_category_example">Das Scannen funktioniert nicht, was kann ich tun?</string>
+    <string name="help_privacy_heading">Welche Berechtigungen sind für den PRIVACY FRIENDLY QR Scanner erforderlich?</string>
     <string name="help_permission1_heading">Kamera</string>
     <string name="help_permission1_description">Wird benötigt um über die Kamera Barcodes oder QR-Codes zu scannen.</string>
     <!--<string name="privacy_friendly">Diese App gehört zur Gruppe der Privacy Friendly Apps entwickelt vom Karlsruher Institut für Technologie. Quelltext lizenziert unter GPLv3. Bilder copyright KIT und Google Inc.</string>
@@ -180,7 +180,7 @@
     <string name="help_privacy">Was macht die App datenschutzfreundlich?</string>
     <string name="help_privacy_answer">Diese App erfordert keine Berechtigung. Sie enthält auch keine Tracking-Mechanismen oder Werbung.</string>
     <string name="help_permission">Welche Berechtigungen benötigt der PRIVACY-FRIENDLY-QR-Scanner?</string>
-    <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen. Die App benötigt außerdem die Erlaubnis, auf Ihren Speicher zuzugreifen, um Codes von Ihren Bildern zu scannen oder generierte Codes in Ihren Bildern zu speichern.</string>
+    <string name="help_permission_answer">Die App benötigt die Kamera-Erlaubnis, die verwendet wird, um Barcodes und QR-Codes über die Kamera zu scannen. Die App benötigt außerdem die Erlaubnis, auf deinen Speicher zuzugreifen, um Codes von deinen Bildern zu scannen oder generierte Codes in deinen Bildern zu speichern.</string>
     <string name="help_data_backup">Wie kann ich meine Daten sichern?</string>
     <string name="help_data_backup_answer">Mit der App Privacy Friendly Backup können die Daten dieser App gesichert und wiederhergestellt werden. Damit können die Daten auch auf ein neues Smatphone übertragen werden.</string>
     <string name="description_Mms">Der gescannte QR-Code enthält eine MMS.</string>
@@ -194,7 +194,7 @@
     <string name="removed_items">Artikel entfernt</string>
     <string name="canncelled_scan">Sie haben den Scanvorgang abgebrochen</string>
     <string name="Scan_qr">Scannen</string>
-    <string name="okay">OK</string>
+    <string name="okay">Okay</string>
     <string name="next">Weiter</string>
     <string name="Store_in_gallery">Speichern</string>
     <string name="phone_number">Telefonnummer</string>
@@ -256,7 +256,7 @@
     <string name="password_value">Passwort: %1$s</string>
     <!-- Others -->
     <string name="android_version_does_not_support_feature">Ihre Android-Version unterstützt diese Funktion nicht.</string>
-    <string name="hello_blank_fragment">Hallo, leeres Fragment</string>
+    <string name="hello_blank_fragment">Hallo leeres Fragment</string>
     <!--Settings for used Search Engine-->
     <string name="pref_search_engine_title">Standardsuchmaschine</string>
     <string name="pref_enable_beep_on_scan_title">Bestätigungston</string>
@@ -278,7 +278,7 @@
     <string name="item_result_email_body">Nachricht:</string>
     <string name="item_result_email_cc">CC:</string>
     <string name="item_result_email_subject">Betreff:</string>
-    <string name="item_result_email_to">Empfänger:</string>
+    <string name="item_result_email_to">An:</string>
     <string name="activity_result_toast_error_cant_load">Ein Fehler ist beim Laden des Codes aufgetreten.</string>
     <string name="activity_enter_toast_missing_data">Keine Daten</string>
     <string name="text_enter">Der Text, den Sie codieren möchten</string>
@@ -293,7 +293,7 @@
     <string name="fragment_result_text_dialog_title">Suchen</string>
     <string name="none">Keine</string>
     <string name="pref_search_engine_enabled_title">Suchmaschinen nutzen</string>
-    <string name="pref_search_engine_enabled_summary">„Suchen“-Button beim Suchen von Text anzeigen</string>
+    <string name="pref_search_engine_enabled_summary">„Suchen“-Button beim Scannen von Text anzeigen</string>
     <string name="import_from_contacts">Aus Kontakten importieren</string>
     <string name="message">Nachricht</string>
     <string name="generator_text_textfield">Text</string>
@@ -322,7 +322,7 @@
     <string name="something_went_wrong">Etwas ist schiefgelaufen.</string>
     <string name="save_to_history">Im Verlauf speichern</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
-    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Webseite</a></string>
     <string name="activity_history_list_item_qr_image_descriptor">QR-Code</string>
     <string name="item_result_calendar_title">Titel:</string>
     <string name="item_result_calendar_description">Beschreibung:</string>

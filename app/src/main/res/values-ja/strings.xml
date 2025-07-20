@@ -214,7 +214,7 @@
     <string name="street_number">番地</string>
     <string name="postal_address">住所</string>
     <string name="e_mail_address">メールアドレス</string>
-    <string name="firstname">名</string>
+    <string name="firstname">email</string>
     <string name="street_name_and_number">番地等</string>
     <string name="delete_content">本当に削除しますか？</string>
     <string name="delete_all">すべて削除</string>

@@ -18,7 +18,7 @@
     <string name="slide2_heading">¿Cuáles son las características?</string>
     <string name="text_slide2">Con esta aplicación puedes escanear y crear códigos QR.</string>
     <string name="slide3_heading">Más funciones</string>
-    <string name="skip">Saltar</string>
+    <string name="skip">Omitir</string>
     <string name="next">Siguiente</string>
     <string name="help_">Ayuda</string>
     <string name="tutorial">Tutorial</string>
@@ -35,12 +35,12 @@
     <string name="choose_action_url">Proceder</string>
     <string name="abort_action_url">Interrumpir</string>
     <string name="something_went_wrong">Algo salió mal.</string>
-    <string name="more_info">Para obtener más información, consulte:</string>
+    <string name="more_info">Más información en:</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repositorio de GitHub</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Sitio web de SECUSO</a></string>
     <string name="about_libraries">Librerías utilizadas:</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>
-    <string name="version_number">Versión v%s</string>
+    <string name="version_number">Versión %s</string>
     <string name="delete_items">Eliminar elementos</string>
     <string name="description_contact">El código QR escaneado contiene información de contacto. Para <i>importarla</i> a tu lista de contactos, haz clic en Continuar.</string>
     <string name="title_activity_result_url">Enlace encontrado</string>
@@ -171,7 +171,7 @@
 \nPor lo tanto, se recomienda <b>verificar</b> si el siguiente enlace es el que esperaba:</string>
     <string name="delete_history">¿Quiere borrar el historial?</string>
     <string name="Scan_qr">Escanear</string>
-    <string name="okay">De acuerdo</string>
+    <string name="okay">Ok</string>
     <string name="generate">generar</string>
     <string name="save_to_history">Guardar en el historial</string>
     <string name="zip_code">Código postal</string>
