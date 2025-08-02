@@ -157,7 +157,7 @@
     <string name="viewhelp">Se hjælp</string>
     <!--<string name="help_privacy_heading">Privatliv info</string>
     <string name="about_author_contributors">Bidragsydere</string>
-    <string name="privacy_friendly">Denne applikation tilhører gruppen af PRIVACY FRIENDLY Apps udviklet af Technische Universität Darmstadt. Source kode licenseret under GPLv3. Billeder copyright TU Darmstadt og Google Inc.</string>
+    <string name="privacy_friendly">Denne applikation tilhører gruppen af PRIVACY FRIENDLY Apps udviklet af Karlsruhe Institute of Technology. Source kode licenseret under GPLv3. Billeder copyright KIT og Google Inc.</string>
     <string name="more_info">Mere information kan findes på:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
     <string name="help_permission1_description">Denne app kræver kamera tilladelse, der bruges til at scanne stregkoder og QR-koder via kamera.</string>

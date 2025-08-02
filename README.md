@@ -15,7 +15,7 @@
 
 # Privacy Friendly QR Scanner
 
-[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=com.secuso.privacyFriendlyCodeScanner)<a href="https://play.google.com/store/apps/details?id=com.secuso.privacyFriendlyCodeScanner"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="60"></a>
+[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60">](https://f-droid.org/repository/browse/?fdid=com.secuso.privacyFriendlyCodeScanner)
 
 The Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps. The app supports its users in detecting malicious links: QR Codes provide new possibilities for an attacker, as QR Codes can contain malicious links, i.e. links to phishing webpages or webpages from which malware would automatically be downloaded. Therefore it is important to carefully check the link before accessing the corresponding webpage.
 
@@ -67,7 +67,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the app logo) copyright Karlsruhe Institute of Technology (2016-2020).
+The icons used in the nagivation drawer are licensed under the [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/). In addition to them the app uses icons from [Google Design Material Icons](https://design.google.com/icons/index.html) licensed under Apache License Version 2.0. All other images (the logo of Privacy Friendly Apps, the SECUSO logo and the app logo) copyright [SECUSO](www.secuso.org) (2016-2020).
 
 ## Contributors
 
