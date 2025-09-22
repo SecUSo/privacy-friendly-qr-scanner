@@ -29,6 +29,7 @@ import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +43,8 @@ import androidx.annotation.NonNull;
 import com.google.zxing.client.result.URIParsedResult;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -73,9 +76,19 @@ public class URLResultFragment extends ResultFragment {
         furtherInfo.setMovementMethod(LinkMovementMethod.getInstance());
 
         Uri uri = Uri.parse(qrurl);
-        String host = uri.getHost();
-        if (host == null) {
-            host = qrurl;
+        URL url = null;
+        try {
+            url = new URL(qrurl);
+        } catch (MalformedURLException e) {
+            Log.d(this.getClass().getName(), "Error: Malformed url.");
+            e.printStackTrace();
+        }
+        String hostDecoded = uri.getHost(); // This automatically decodes hex-encoded elements, e.g. %2e -> .
+        String host = qrurl;
+        if (url != null && url.getHost() != null && hostDecoded != null) {
+            String hostRaw = url.getHost();
+            qrurl = qrurl.replace(hostRaw, hostDecoded);
+            host = hostDecoded;
         }
 
         Pattern pattern = Pattern.compile("([0-9a-zA-ZäöüÄÖÜß-]*\\.(co.uk|com.de|de.com|co.at|[a-zA-Z]{2,}))$");
