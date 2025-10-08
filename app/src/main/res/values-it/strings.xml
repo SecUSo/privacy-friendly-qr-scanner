@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QR Scanner</string>
-    <string name="navigation_drawer_open">Apri il drawer di navigazione</string>
-    <string name="navigation_drawer_close">Chiudi il drawer di navigazione</string>
+    <string name="navigation_drawer_open">Apri menu di navigazione</string>
+    <string name="navigation_drawer_close">Chiudi menu di navigazione</string>
     <string name="qr_scanner">QR Scanner</string>
     <string name="qr_generator">QR Generator</string>
     <string name="history">Cronologia</string>
     <string name="settings">Impostazioni</string>
     <string name="help">Aiuto</string>
-    <string name="about">Al riguardo</string>
+    <string name="about">Informazioni</string>
     <string name="title_activity_qrscanner">QR Scanner</string>
     <string name="action_settings">Impostazioni</string>
     <string name="title_activity_qr_scanner">QR Scanner</string>
@@ -55,7 +55,7 @@
     <string name="conform_url">Per favore, conferma di aver controllato il link.</string>
     <string name="wifi_explanation">Questa versione dell\'app non può connettersi a reti WIFI automaticamente a causa dei permessi necessari. Qui sotto trovi alcuni dettagli sulla rete.</string>
     <string name="encryption">Crittografia</string>
-    <string name="action_about">Al riguardo</string>
+    <string name="action_about">Informazioni</string>
     <string name="history_disabled">Cronologia disabilitata</string>
     <string name="to">Destinatario:</string>
     <string name="subject">Soggetto</string>
@@ -324,4 +324,18 @@
     <string name="save_to_history">Salva nella cronologia</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="switch_camera">Cambia fotocamera</string>
+    <plurals name="entries_selected">
+        <item quantity="one">%1$d voce selezionata</item>
+        <item quantity="many">%1$d voci selezionate</item>
+        <item quantity="other">%1$d voci selezionate</item>
+    </plurals>
+    <string name="cannot_connect_to_encrypted_wifi_without_password">La connessione a una rete WiFi crittografata non può essere stabilita senza password.</string>
+    <string name="item_result_calendar_title">Titolo:</string>
+    <string name="item_result_calendar_description">Descrizione:</string>
+    <string name="item_result_calendar_end">Fine:</string>
+    <string name="help_data_backup">Come posso fare una copia di riserva dei miei dati?</string>
+    <string name="help_data_backup_answer">Puoi usare l\'app Privacy Friendly Backup per fare una copia di riserva dei dati e per ripristinarli. E puoi usarla anche per trasferire i tuoi dati su un nuovo telefono.</string>
+    <string name="item_result_calendar_location">Posizione:</string>
+    <string name="item_result_calendar_start">Inizio:</string>
 </resources>

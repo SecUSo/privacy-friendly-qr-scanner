@@ -36,7 +36,7 @@
     <string name="about_author_string">%s 和贡献者。</string>
     <string name="about_affiliation">隶属于</string>
     <string name="privacy_friendly">这是由卡尔斯鲁厄理工学院 SECUSO 研究组开发的众多隐私友好应用中的一个。源代码许可证是 GPLv3。 图片版权归属卡尔斯鲁厄理工学院和谷歌公司。</string>
-    <string name="more_info">更多信息请参见：</string>
+    <string name="more_info">更多信息可以在下面链接中找到：</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
     <string name="about_libraries">使用的库：</string>
