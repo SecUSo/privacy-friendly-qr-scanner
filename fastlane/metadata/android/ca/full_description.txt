@@ -12,6 +12,6 @@ L'aplicació Privacy Friendly QR Scanner suporta la majoria dels tipus de codi Q
 L'app pertany al grup d'aplicacions respectuoses amb la privacitat, que desenvolupa el grup de recerca SECUSO. Podeu trobar més informació a https://secuso.org/pfa
 
 Podeu arribar-hi via
-Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Bluesky - @secusoresearch.bsky.social https://bsky.app/profile/secusoresearch.bsky.social
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
-Ofertes laborals - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
+Ofertes laborals - https://secuso.aifb.kit.edu/english/Job_Offers.php

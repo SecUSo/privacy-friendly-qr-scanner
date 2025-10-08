@@ -12,6 +12,6 @@ Aplikace Soukromí respektující čtečka QR podporuje většinu obvyklých typ
 Tato aplikace patří do skupiny soukromí respektujících aplikací, které jsou vyvíjeny výzkumnou skupinou SECUSO. Více informací lze nalézt na https://secuso.org/pfa
 
 Můžete se s námi spojit zde:
-BlueSky - https://bsky.app/profile/secusoresearch.bsky.social
+Bluesky - @secusoresearch.bsky.social https://bsky.app/profile/secusoresearch.bsky.social
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
-Volné pozice - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
+Volné pozice - https://secuso.aifb.kit.edu/english/Job_Offers.php

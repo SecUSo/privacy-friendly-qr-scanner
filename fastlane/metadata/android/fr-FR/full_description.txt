@@ -12,6 +12,6 @@ L'application QR Scanner respectueuse de la vie privée prend en charge la plupa
 L'application appartient au groupe des applications respectueuses de la vie privée développées par le groupe de recherche SECUSO. Pour plus d'informations, consultez le site https://secuso.org/pfa
 
 Vous pouvez nous contacter via
-Twitter - @SECUSOResearch https://twitter.com/secusoresearch
+Bluesky - @secusoresearch.bsky.social https://bsky.app/profile/secusoresearch.bsky.social
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
-Offres d'emploi - https://secuso.aifb.kit.edu/english/Job_Offers_1557.php
+Offres d'emploi - https://secuso.aifb.kit.edu/english/Job_Offers.php
