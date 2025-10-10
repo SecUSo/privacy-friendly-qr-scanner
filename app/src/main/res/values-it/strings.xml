@@ -21,13 +21,13 @@
     <string name="QRScanner">QR Scanner</string>
     <string name="QRGenerator">QR Generator</string>
     <string name="History">Cronologia</string>
-    <string name="slide1_heading">Benvenuto!</string>
-    <string name="slide1_text">Benvenuto su privacy friendly QR scanner. Questo tutorial ti illustrerà le cose più importanti che devi conoscere.</string>
+    <string name="slide1_heading">Benvenuto</string>
+    <string name="slide1_text">Benvenuto sullo scanner QR privacy friendly. Questo tutorial ti illustrerà le cose più importanti che devi conoscere.</string>
     <string name="slide2_heading">Quali funzionalità?</string>
     <string name="text_slide2">Con questa applicazione è possibile scansionare e creare codici QR.</string>
     <string name="slide3_heading">Più caratteristiche</string>
     <string name="text_slide3">Il codice QR che hai scansionato può essere salvato nella Cronologia. Inoltre puoi condivederlo o copiarlo.</string>
-    <string name="wecome">Benvenuto!</string>
+    <string name="wecome">Benvenuto</string>
     <string name="skip">Salta</string>
     <string name="next">Continua</string>
     <string name="help_">Aiuto</string>
@@ -36,7 +36,7 @@
     <string name="about_author">Autori: </string>
     <string name="about_author_string">%s e collaboratori.</string>
     <string name="about_affiliation">In affiliazione con</string>
-    <string name="privacy_friendly">Questa applicazione appartiene al gruppo delle applicazioni PRIVACY FRIENDLY sviluppate dalla SECUSO. Il codice sorgente è concesso in licenza GPLv3. Il copyright per le immagini appartiene alla Karlsuhe Institute of Technology e Google Inc.</string>
+    <string name="privacy_friendly">Questa è una delle tante applicazioni PRIVACY FRIENDLY sviluppate dalla SECUSO. Il codice sorgente è concesso in licenza GPLv3. Il copyright per le immagini appartiene alla Karlsuhe Institute of Technology e Google Inc.</string>
     <string name="more_info">Maggiori informazioni sono disponibili qui:</string>
     <string name="about_libraries">Librerie utilizzate:</string>
     <string name="app_name_long">Privacy Friendly QR Scanner</string>

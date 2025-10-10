@@ -217,7 +217,7 @@
     <string name="removed_items">éléments supprimés</string>
     <string name="canncelled_scan">Vous avez annulé la numérisation</string>
     <string name="Scan_qr">Numériser</string>
-    <string name="okay">OK</string>
+    <string name="okay">Okay</string>
     <string name="Store_in_gallery">Enregistrer</string>
     <string name="phone_number">Numéro de téléphone</string>
     <!-- Activités du générateur -->
@@ -310,7 +310,7 @@
     <string name="fragment_result_text_dialog_message">Voulez-vous rechercher ce texte sur %s ? Ceci pourrait potentiellement entraîner une fuite d\'informations et enverra le texte au moteur de recherche.</string>
     <string name="fragment_result_text_dialog_positive_button">Recherche</string>
     <string name="fragment_result_text_dialog_title">Recherche</string>
-    <string name="none">None</string>
+    <string name="none">Aucun</string>
     <string name="action_open">Ouvrir</string>
     <string name="pref_search_engine_enabled_title">Utiliser les moteurs de recherche</string>
     <string name="pref_search_engine_enabled_summary">Affiche le bouton \"Recherche\" lors de la numérisation d\'un texte.</string>
