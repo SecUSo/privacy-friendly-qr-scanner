@@ -1,5 +1,20 @@
 # Changelog
 
+<a id="v4.6.18"></a>
+## [QR Scanner (Privacy Friendly) v4.6.18](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.18) - 2025-10-15
+
+## What's Changed
+* Fix issue with hex-encoded host by [@udenr](https://github.com/udenr) in [#306](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/306)
+* Translations update from Hosted Weblate by [@weblate](https://github.com/weblate) in [#286](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/286)
+* Translations update from Hosted Weblate by [@weblate](https://github.com/weblate) in [#307](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/307)
+* Translations update from Hosted Weblate by [@weblate](https://github.com/weblate) in [#309](https://github.com/SecUSo/privacy-friendly-qr-scanner/pull/309)
+
+
+**Full Changelog**: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.17...v4.6.18
+
+[Changes][v4.6.18]
+
+
 <a id="v4.6.17"></a>
 ## [QR Scanner (Privacy Friendly) v4.6.17](https://github.com/SecUSo/privacy-friendly-qr-scanner/releases/tag/v4.6.17) - 2025-08-02
 
@@ -447,6 +462,7 @@ It belongs to the group of Privacy Friendly Apps from the research group SecUSo 
 [Changes][v1.4]
 
 
+[v4.6.18]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.17...v4.6.18
 [v4.6.17]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.12...v4.6.17
 [v4.6.12]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.8...v4.6.12
 [v4.6.8]: https://github.com/SecUSo/privacy-friendly-qr-scanner/compare/v4.6.7...v4.6.8
