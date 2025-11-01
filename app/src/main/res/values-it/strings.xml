@@ -171,7 +171,7 @@
     <string name="title_activity_result_contact">Contatto trovato</string>
     <string name="action_help">Aiuto</string>
     <!-- ### WELCOME DIALOG ### -->
-    <string name="welcome_text">L\'app PRIVACY FRIENDLY QR Code Scanner consente di scansionare codici a barre e codici-QR di varia tipologia richiedendo un numero minimo di permessi e rilevando link dannosi.</string>
+    <string name="welcome_text">Lo scanner QR rispettoso della privacy che consente di scansionare codici a barre e codici QR con vari contenuti con un set minimo di autorizzazioni e aiuta a rilevare link dannosi.</string>
     <string name="welcome">Benvenuto</string>
     <string name="viewhelp">Visualizza Aiuto</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
@@ -338,4 +338,5 @@
     <string name="help_data_backup_answer">Puoi usare l\'app Privacy Friendly Backup per fare una copia di riserva dei dati e per ripristinarli. E puoi usarla anche per trasferire i tuoi dati su un nuovo telefono.</string>
     <string name="item_result_calendar_location">Posizione:</string>
     <string name="item_result_calendar_start">Inizio:</string>
+    <string name="activity_history_list_item_qr_image_descriptor">Codice QR</string>
 </resources>

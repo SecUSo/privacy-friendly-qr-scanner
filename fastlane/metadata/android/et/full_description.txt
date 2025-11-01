@@ -12,7 +12,6 @@ Privaatsussõbralik QR-koodi skänner toetab andmete lugemist kõikidest tavalis
 Meie rakendus kuulub privaatsussõbralike rakenduste (Privacy Friendly Apps) kogumisse, mida arendab SECUSO uurimisrühm Darmstadti Tehnikaülikoolis (Technische Universität Darmstadt). Lisateave leidub siin: secuso.org/pfa
 
 Meid võid leida:
-
 BlueSky - https://bsky.app/profile/secusoresearch.bsky.social
 Mastodon - @SECUSO_Research@bawü.social https://xn--baw-joa.social/@SECUSO_Research/
 Tööpakkumised - https://secuso.aifb.kit.edu/english/Job_Offers.php

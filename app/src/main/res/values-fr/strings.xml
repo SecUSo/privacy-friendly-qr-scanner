@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Scanneur QR</string>
-    <string name="navigation_drawer_open">Ouvrir le menu de navigation</string>
+    <string name="app_name">Scanneur code QR</string>
+    <string name="navigation_drawer_open">Afficher le menu de navigation</string>
     <string name="navigation_drawer_close">Fermer le menu de navigation</string>
     <string name="qr_scanner">Scanneur QR</string>
     <string name="qr_generator">Générateur QR</string>
@@ -10,7 +10,7 @@
     <string name="help">Aide</string>
     <string name="about">À propos</string>
     <string name="title_activity_qrscanner">Scanneur QR</string>
-    <string name="action_settings">Paramètres</string>
+    <string name="action_settings">Paramètres globaux</string>
     <string name="title_activity_qr_scanner">Scanneur QR</string>
     <string name="title_activity_qr_generator">Générateur QR</string>
     <string name="title_activity_history">Historique</string>
@@ -28,16 +28,16 @@
     <string name="slide3_heading">Plus de fonctionnalités</string>
     <string name="text_slide3">Le code QR que vous avez scanné peut être enregistré dans l\'historique. En outre, vous pouvez le partager ou le copier.</string>
     <string name="wecome">Bienvenue</string>
-    <string name="skip">Passer</string>
+    <string name="skip">Ignorer</string>
     <string name="next">Suivant</string>
     <string name="help_">Aide</string>
     <string name="tutorial">Tutoriel</string>
     <!--###ABOUT###-->
-    <string name="about_author">Auteur(e)s :</string>
+    <string name="about_author">Auteurs :</string>
     <string name="about_author_string">%s et des contributeurs.</string>
-    <string name="about_affiliation">Affilié à</string>
+    <string name="about_affiliation">En partenariat avec</string>
     <string name="privacy_friendly">C\'est une des nombreuses application respectueuse de la vie privée développées par SECUSO. Le code source est sous licence GPLv3. Images sous copyright par Karlsruhe Institute of Technology et Google Inc.</string>
-    <string name="more_info">Plus d\'informations peuvent être consultées depuis :</string>
+    <string name="more_info">Des informations complémentaires sont disponibles sur :</string>
     <string name="about_libraries">Bibliothèques utilisées :</string>
     <string name="app_name_long">Scanneur de QR codes Respectueux de la Vie Privée</string>
     <string name="version_number">Version v%s</string>
@@ -171,9 +171,9 @@
     <string name="title_activity_result_contact">Contact trouvé</string>
     <string name="action_help">Aide</string>
     <!-- ### BOÎTE DE DIALOGUE DE BIENVENUE ### -->
-    <string name="welcome_text">PRIVACY FRIENDLY QR Code Scanner App permet de scanner des codes-barres et des codes QR au contenu varié tout en exigeant un minimum d\'autorisations et en prenant en charge la détection des liens malveillants.</string>
+    <string name="welcome_text">Privacy friendly QR scanner permet de scanner des codes-barres et des codes QR au contenu varié en n\'utilisant qu\'un minimum d\'autorisations, et peut détecter des liens malveillants.</string>
     <string name="welcome">Bienvenue</string>
-    <string name="viewhelp">Voir l\'aide</string>
+    <string name="viewhelp">Afficher l\'aide</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Karlsruhe Institute of Technology. Sourcecode licensed under GPLv3. Images copyright KIT and Google Inc.</string>
@@ -192,7 +192,7 @@
     <string name="help_whatis">Qu\'est-ce que Scanneur QR RESPECTUEUX DE LA VIE PRIVÉE ?</string>
     <string name="help_usability">La numérisation ne fonctionne pas, que puis-je faire ?</string>
     <string name="help_usability_answer">Si vous ne pouvez pas numériser un code, augmentez la distance entre le scanneur et le code.</string>
-    <string name="help_privacy">Qu\'est-ce qui rend cette application respectueuse de la vie privée ?</string>
+    <string name="help_privacy">En quoi cette application est-elle respectueuse de la vie privée ?</string>
     <string name="help_privacy_answer">L\'application Privacy Friendly App Example ne nécessite aucune permission. Elle ne contient pas non plus de mécanismes de suivi ni de publicité.</string>
     <string name="help_permission">Quelles autorisations sont requises par Scanneur QR RESPECTUEUX DE LA VIE PRIVÉE ?</string>
     <string name="help_permission_answer">L\'application nécessite l\'autorisation de la caméra, qui est utilisée pour numériser des codes-barres et des codes QR via la caméra. L\'application nécessite également l\'autorisation d\'accéder à votre stockage pour numériser des codes à partir de vos images ou enregistrer des codes générés dans vos images.</string>
@@ -217,7 +217,7 @@
     <string name="removed_items">éléments supprimés</string>
     <string name="canncelled_scan">Vous avez annulé la numérisation</string>
     <string name="Scan_qr">Numériser</string>
-    <string name="okay">Okay</string>
+    <string name="okay">D\'accord</string>
     <string name="Store_in_gallery">Enregistrer</string>
     <string name="phone_number">Numéro de téléphone</string>
     <!-- Activités du générateur -->
