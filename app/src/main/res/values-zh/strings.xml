@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">QR Scanner</string>
-    <string name="navigation_drawer_open">打开侧滑导航栏</string>
-    <string name="navigation_drawer_close">关闭侧滑导航栏</string>
+    <string name="navigation_drawer_open">打开抽屉式导航栏</string>
+    <string name="navigation_drawer_close">关闭抽屉式导航栏</string>
     <string name="qr_scanner">二维码扫描</string>
     <string name="qr_generator">二维码生成</string>
     <string name="history">历史</string>
@@ -58,7 +58,7 @@
     <string name="encryption">加密</string>
     <string name="action_about">关于</string>
     <string name="history_disabled">已停用历史记录</string>
-    <string name="to">接受者：</string>
+    <string name="to">收件人：</string>
     <string name="usability_hint2">如果无法扫描代码，请拉远扫描仪与二维码的距离。</string>
     <string name="description_contact">您扫描的二维码包含联系信息。 要将其<i>导入</i>到您的地址簿中，请单击“继续”。</string>
     <string name="description_email">您扫描的二维码包含一个电子邮件地址。 要<i>发送电子邮件</i>或<i>将其添加到联系人</i>，请单击“继续”。</string>
@@ -73,8 +73,8 @@
     <string name="back">后退</string>
     <string name="choose_action_url">继续</string>
     <string name="abort_action_url">关于</string>
-    <string name="something_went_wrong">出了些问题。</string>
-    <string name="copied_to_clipboard">复制到剪贴板。</string>
+    <string name="something_went_wrong">出了点问题。</string>
+    <string name="copied_to_clipboard">已复制到剪贴板。</string>
     <string name="noname">未指定名称</string>
     <string name="title_activity_result_url">链接</string>
     <string name="title_activity_result_text">文本</string>
@@ -108,7 +108,7 @@
     <string name="pref_keep_duplicates">保留重复项</string>
     <string name="pref_keep_duplicates_explanation">重复项将保存到历史记录中</string>
     <string name="pref_title_beep">检测声音</string>
-    <string name="geoInfo">您扫描的二维码包含彩信。</string>
+    <string name="geoInfo">您扫描的二维码包含地理信息。</string>
     <string name="content_copied">内容已复制</string>
     <string name="share_via">分享方式</string>
     <string name="no_content_in_history">没有历史记录！</string>
@@ -147,7 +147,7 @@
     <string name="network_name">网络名称 (SSID)</string>
     <string name="password">密码</string>
     <string name="company">公司</string>
-    <string name="lastname">姓</string>
+    <string name="lastname">姓氏</string>
     <string name="title">标题</string>
     <string name="city">城市</string>
     <string name="street_number">街道编号</string>
@@ -195,9 +195,9 @@
     <string name="dialog_history_delete_title">删除</string>
     <string name="pref_save_real_image_to_history_title">保存二维码</string>
     <string name="pref_save_real_image_to_history_summary">保存代码的真实图像而非重新创建</string>
-    <string name="item_result_email_to">目的地：</string>
-    <string name="item_result_email_cc">CC：</string>
-    <string name="item_result_email_bcc">BCC：</string>
+    <string name="item_result_email_to">收件人：</string>
+    <string name="item_result_email_cc">抄送：</string>
+    <string name="item_result_email_bcc">密送：</string>
     <string name="item_result_email_subject">主题：</string>
     <string name="item_result_email_body">正文：</string>
     <string name="item_result_calendar_title">标题：</string>
