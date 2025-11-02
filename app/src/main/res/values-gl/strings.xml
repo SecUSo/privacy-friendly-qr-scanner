@@ -317,4 +317,6 @@
     <string name="fragment_result_text_dialog_positive_button">Buscar</string>
     <string name="fragment_result_text_dialog_title">Buscar</string>
     <string name="none">Nada</string>
+    <string name="pref_custom_search_engine_title">Motor de busca personalizado</string>
+    <string name="pref_custom_search_engine_summary">O URL que se usará como \"Motor de busca personalizado\". A cadea de busca inserirase en %s.</string>
 </resources>

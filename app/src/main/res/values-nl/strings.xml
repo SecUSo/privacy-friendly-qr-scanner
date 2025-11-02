@@ -336,4 +336,6 @@
     <string name="item_result_calendar_title">Titel:</string>
     <string name="item_result_calendar_description">Beschrijving:</string>
     <string name="item_result_calendar_location">Locatie:</string>
+    <string name="pref_custom_search_engine_title">Aangepaste zoekmachine</string>
+    <string name="pref_custom_search_engine_summary">De URL die wordt gebruikt als \"Aangepaste zoekmachine\". De zoekterm wordt ingevoegd op %s.</string>
 </resources>

@@ -232,4 +232,6 @@
     <string name="item_result_calendar_description">Descripción:</string>
     <string name="item_result_calendar_title">Título:</string>
     <string name="item_result_email_subject">Sujeto:</string>
+    <string name="pref_custom_search_engine_title">Motor de búsqueda personalizado</string>
+    <string name="pref_custom_search_engine_summary">La URL que se usará como \"Motor de búsqueda personalizado\". La cadena de búsqueda se insertará en %s.</string>
 </resources>

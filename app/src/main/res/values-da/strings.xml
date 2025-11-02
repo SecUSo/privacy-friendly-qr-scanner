@@ -260,4 +260,6 @@
         <item>Startpage</item>
         <item>Brave</item>
     </string-array>
+    <string name="pref_custom_search_engine_title">Brugerdefineret søgemaskine</string>
+    <string name="pref_custom_search_engine_summary">URL’en, der skal bruges som \"Brugerdefineret søgemaskine\". Søgestrengen indsættes ved %s.</string>
 </resources>

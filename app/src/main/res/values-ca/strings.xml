@@ -230,4 +230,6 @@
     <string name="help_permission_answer">L\'aplicació requereix el permís d\'accés a la càmera, que s\'utilitza per a escanejar codis de barres i codis QR. L\'aplicació també requereix el permís per a accedir a l\'emmagatzematge per a escanejar codis des de les imatges o desar els codis generats en imatges.</string>
     <string name="no_code_in_image_explanation">Malauradament, no s\'ha pogut trobar cap codi en aquesta imatge. Per a millorar el resultat, podeu escapçar o redreçar la imatge i tornar-ho a provar.</string>
     <string name="cannot_connect_to_encrypted_wifi_without_password">Sense contrasenya, no es pot establir cap connexió a una xarxa WiFi xifrada.</string>
+    <string name="pref_custom_search_engine_title">Motor de cerca personalitzat</string>
+    <string name="pref_custom_search_engine_summary">L\'URL que s\'utilitzarà com a \"Motor de cerca personalitzat\". La cadena de cerca s\'inserirà a %s.</string>
 </resources>

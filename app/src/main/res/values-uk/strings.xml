@@ -4,4 +4,6 @@
     <string name="title_activity_qrscanner">QR-сканер</string>
     <string name="app_name">QR-сканер</string>
     <string name="qr_scanner">QR-сканер</string>
+    <string name="pref_custom_search_engine_title">Користувацька пошукова система</string>
+    <string name="pref_custom_search_engine_summary">URL-адреса, яку буде використано як «Користувацьку пошукову систему». Рядок пошуку буде вставлено в %s.</string>
 </resources>

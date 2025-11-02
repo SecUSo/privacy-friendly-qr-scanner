@@ -233,4 +233,6 @@
     <string name="fragment_result_text_dialog_message">Chcete vyhledat tento text pomocí %s? Tak mohou potenciálně uniknout informace a tento text se odešle do internetového vyhledávače.</string>
     <string name="help_data_backup">Jak zálohuji svá data?</string>
     <string name="help_data_backup_answer">Můžete použít aplikaci Privacy Friendly Backup k zálohování a obnově dat této aplikace. Tímto způsobem lze také přesunout vaše data do nového telefonu.</string>
+    <string name="pref_custom_search_engine_title">Vlastní vyhledávač</string>
+    <string name="pref_custom_search_engine_summary">Adresa URL, která se použije jako „Vlastní vyhledávač“. Vyhledávací řetězec bude vložen na místo %s.</string>
 </resources>

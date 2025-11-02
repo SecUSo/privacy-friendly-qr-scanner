@@ -336,4 +336,6 @@
     <string name="item_result_calendar_start">Başlangıç:</string>
     <string name="help_data_backup_answer">Bu uygulamanın verilerini yedeklemek ve geri yüklemek için ayrı Gizlilik Dostu Yedekleme uygulamasını kullanabilirsiniz. Bu, verilerinizi yeni bir telefona taşımak için de kullanılabilir.</string>
     <string name="help_data_backup">Verilerimi nasıl yedeklerim?</string>
+    <string name="pref_custom_search_engine_title">Özel arama motoru</string>
+    <string name="pref_custom_search_engine_summary">\"Özel arama motoru\" olarak kullanılacak URL. Arama dizesi %s konumuna eklenecektir.</string>
 </resources>
