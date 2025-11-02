@@ -70,11 +70,29 @@ object WebSearchUtil {
         } else 0
     }
 
-    private fun getSearchEngineURI(context: Context): String {
-        val searchEngineIndex = getPrefSearchEngineIndex(context)
+    private fun getCustomSearchEngineUri(context: Context): String {
         val searchEngineUris: Array<String> =
             context.resources.getStringArray(R.array.pref_search_engine_uris)
-        return searchEngineUris[searchEngineIndex]
+        val pref = PreferenceManager.getDefaultSharedPreferences(context)
+        val customSearchEngineUri = pref.getString("pref_custom_search_engine_uri", searchEngineUris[0])
+        if (customSearchEngineUri != null)
+            return customSearchEngineUri
+        return searchEngineUris[0]
+    }
+
+    private fun getSearchEngineURI(context: Context): String {
+        val searchEngineIndex = getPrefSearchEngineIndex(context)
+        val searchEngineValues: Array<String> =
+            context.resources.getStringArray(R.array.pref_search_engine_values)
+        val searchEngineValue = searchEngineValues[searchEngineIndex]
+        if (searchEngineValue == "CUSTOM") {
+            return getCustomSearchEngineUri(context)
+        }
+        else {
+            val searchEngineUris: Array<String> =
+                context.resources.getStringArray(R.array.pref_search_engine_uris)
+            return searchEngineUris[searchEngineIndex]
+        }
     }
 
     private fun getSearchEngineName(context: Context): String {

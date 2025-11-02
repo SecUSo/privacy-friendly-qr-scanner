@@ -315,4 +315,6 @@
     <string name="activity_enter_toast_missing_data">データなし</string>
     <string name="fragment_result_text_dialog_message">%s のテキストを検索しますか？ 検索エンジンにテキストを送信するため、情報漏洩の可能性があります。</string>
     <string name="generator_market_explanation_2">作成された QR コードは Google Play ストア上の対応するアプリを示します。</string>
+    <string name="pref_custom_search_engine_title">カスタム検索エンジン</string>
+    <string name="pref_custom_search_engine_summary">「カスタム検索エンジン」として使用する URL。検索文字列は %s に挿入されます。</string>
 </resources>

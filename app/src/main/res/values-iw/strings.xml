@@ -231,4 +231,6 @@
     <string name="fragment_result_text_dialog_title">חיפוש</string>
     <string name="none">ללא</string>
     <string name="fragment_result_text_dialog_message">לחפש את הטקסט הזה ב־%s? עלול להדליף מידע והטקסט יישלח למנוע החיפוש.</string>
+    <string name="pref_custom_search_engine_title">מנוע חיפוש מותאם אישית</string>
+    <string name="pref_custom_search_engine_summary">כתובת ה-URL לשימוש כ„מנוע חיפוש מותאם אישית“. מחרוזת החיפוש תתווסף במקום %s.</string>
 </resources>

@@ -359,6 +359,7 @@
         <item>Google</item>
         <item>Startpage</item>
         <item>Brave</item>
+        <item>@string/pref_custom_search_engine_title</item>
     </string-array>
     <string name="pref_search_engine_default" translatable="false">DUCK_DUCK_GO</string>
     <string-array name="pref_search_engine_values" translatable="false">
@@ -366,6 +367,7 @@
         <item>GOOGLE</item>
         <item>STARTPAGE</item>
         <item>BRAVE</item>
+        <item>CUSTOM</item>
     </string-array>
     <string-array name="pref_search_engine_uris" translatable="false">
         <item>"https://duckduckgo.com/?q=%s"</item>
@@ -373,4 +375,7 @@
         <item>"https://www.startpage.com/search?query=%s"</item>
         <item>"https://search.brave.com/search?q=%s"</item>
     </string-array>
+    <string name="pref_custom_search_engine_title">Custom Search Engine</string>
+    <string name="pref_custom_search_engine_summary">The URL to use as \"Custom Search Engine\". The search string will be inserted at %s.</string>
+    <string name="pref_custom_search_engine_default" translatable="false">https://custom-search-engine.com/?q=%s</string>
 </resources>

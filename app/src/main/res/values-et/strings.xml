@@ -232,4 +232,6 @@
     <string name="item_result_email_to">Saaja:</string>
     <string name="activity_result_toast_error_cant_load">Tulemuse laadimisel läks midagi viltu.</string>
     <string name="fragment_result_text_dialog_message">Kas sa soovid seda teksti otsida otsinguteenuses %s? Sellega saadad teksti otsingumootorile ning kui seal leidub privaatset teavet, siis see ei pruugi olla mõttekas.</string>
+    <string name="pref_custom_search_engine_title">Kohandatud otsingumootor</string>
+    <string name="pref_custom_search_engine_summary">URL, mida kasutatakse kui „Kohandatud otsingumootorit“. Otsingusõne sisestatakse asukohta %s.</string>
 </resources>

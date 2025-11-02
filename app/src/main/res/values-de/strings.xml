@@ -330,4 +330,6 @@
     <string name="item_result_calendar_start">Beginn:</string>
     <string name="item_result_calendar_end">Ende:</string>
     <string name="switch_camera">Kamera umschalten</string>
+    <string name="pref_custom_search_engine_title">Benutzerdefinierte Suchmaschine</string>
+    <string name="pref_custom_search_engine_summary">Die URL, die als „Benutzerdefinierte Suchmaschine“ verwendet wird. Die Suchzeichenkette wird bei %s eingefügt.</string>
 </resources>

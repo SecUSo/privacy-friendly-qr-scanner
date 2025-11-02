@@ -338,4 +338,6 @@
     <string name="help_data_backup_answer">Puoi usare l\'app Privacy Friendly Backup per fare una copia di riserva dei dati e per ripristinarli. E puoi usarla anche per trasferire i tuoi dati su un nuovo telefono.</string>
     <string name="item_result_calendar_location">Posizione:</string>
     <string name="item_result_calendar_start">Inizio:</string>
+    <string name="pref_custom_search_engine_title">Motore di ricerca personalizzato</string>
+    <string name="pref_custom_search_engine_summary">L\'URL da utilizzare come \"Motore di ricerca personalizzato\". La stringa di ricerca verrà inserita in %s.</string>
 </resources>

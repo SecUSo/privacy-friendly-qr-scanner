@@ -342,4 +342,6 @@
     <string name="password_value">Mot de passe : %1$s</string>
     <string name="android_version_does_not_support_feature">Votre version d\'Android ne prend pas en charge cette fonctionnalité.</string>
     <string name="item_result_calendar_location">Localisation :</string>
+    <string name="pref_custom_search_engine_title">Moteur de recherche personnalisé</string>
+    <string name="pref_custom_search_engine_summary">L’URL à utiliser comme « Moteur de recherche personnalisé ». La chaîne de recherche sera insérée à %s.</string>
 </resources>

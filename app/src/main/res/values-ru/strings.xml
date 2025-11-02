@@ -232,4 +232,6 @@
     <string name="none">Отсутствует</string>
     <string name="pref_app_theme_title">Тема</string>
     <string name="hello_blank_fragment">Здравствуйте, пустой фрагмент</string>
+    <string name="pref_custom_search_engine_title">Пользовательская поисковая система</string>
+    <string name="pref_custom_search_engine_summary">URL, который будет использоваться как «Пользовательская поисковая система». Поисковая строка будет вставлена в %s.</string>
 </resources>

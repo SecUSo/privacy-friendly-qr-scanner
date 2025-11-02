@@ -330,4 +330,6 @@
     <string name="help_data_backup">我怎样备份数据？</string>
     <string name="help_data_backup_answer">你可以使用单独的 Privacy Friendly Backup 应用来备份并还原本程序的数据。它也可以用于将数据迁移到新手机上。</string>
     <string name="cannot_connect_to_encrypted_wifi_without_password">没有密码无法连接到加密的 WiFi 网络。</string>
+    <string name="pref_custom_search_engine_title">自定义搜索引擎</string>
+    <string name="pref_custom_search_engine_summary">用作“自定义搜索引擎”的 URL。搜索字符串将插入到 %s。</string>
 </resources>

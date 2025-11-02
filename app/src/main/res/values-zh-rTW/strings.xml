@@ -229,4 +229,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="activity_result_toast_error_cant_load">載入結果時發生了一些問題。</string>
     <string name="generated_code_image_explanation">注意：此處顯示的條碼是基於掃描的圖碼的內容重建而來，因此看起來不同。然而，它內含的資料是相同的。</string>
+    <string name="pref_custom_search_engine_title">自訂搜尋引擎</string>
+    <string name="pref_custom_search_engine_summary">作為「自訂搜尋引擎」使用的 URL。搜尋字串將插入至 %s。</string>
 </resources>
