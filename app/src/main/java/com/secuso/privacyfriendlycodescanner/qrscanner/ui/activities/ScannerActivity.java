@@ -18,11 +18,14 @@
 
 package com.secuso.privacyfriendlycodescanner.qrscanner.ui.activities;
 
+import static com.secuso.privacyfriendlycodescanner.qrscanner.helpers.PrefManager.PREF_SAVE_REAL_IMAGE_TO_HISTORY;
+
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Build;
@@ -58,6 +61,9 @@ import com.journeyapps.barcodescanner.DefaultDecoderFactory;
 import com.journeyapps.barcodescanner.camera.CameraInstance;
 import com.journeyapps.barcodescanner.camera.CameraSettings;
 import com.secuso.privacyfriendlycodescanner.qrscanner.R;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
+import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
+import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.helpers.BaseActivity;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.viewmodel.ScannerViewModel;
 
@@ -88,6 +94,8 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
     private ScannerViewModel viewModel;
     private ScaleGestureDetector scaleGestureDetector;
+
+    private SharedPreferences preferences;
 
     private final CameraPreview.StateListener stateListener = new CameraPreview.StateListener() {
         @Override
@@ -128,11 +136,23 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
             return;
         }
 
-        barcodeScannerView.setStatusText(result.getText());
-
         beepManager.playBeepSoundAndVibrate();
 
-        ResultActivity.startResultActivity(ScannerActivity.this, result);
+        if(preferences.getBoolean("pref_enable_silent_scan", false)){
+            Toast.makeText(this, getString(R.string.scanned_toast_silent_mode, result.getBarcodeFormat().name()), Toast.LENGTH_SHORT).show();
+
+            Bitmap mCodeImage;
+            try {
+                mCodeImage = result.getBitmapWithResultPoints(ContextCompat.getColor(getApplication(), R.color.colorAccent));
+            } catch (NullPointerException e) {
+                mCodeImage = Utils.generateCode(result.getText(), result.getBarcodeFormat(), null, result.getResult().getResultMetadata());
+            }
+            HistoryItem currentHistoryItem = Utils.createHistoryItem(mCodeImage, result, preferences.getBoolean(PREF_SAVE_REAL_IMAGE_TO_HISTORY, false));
+            AppRepository.getInstance(getApplication()).insertHistoryEntry(currentHistoryItem);
+        } else {
+            barcodeScannerView.setStatusText(result.getText());
+            ResultActivity.startResultActivity(ScannerActivity.this, result);
+        }
 //            Intent resultIntent = new Intent(ScannerActivity.this, ResultActivity.class);
 //            resultIntent.putExtra("QRResult", new ParcelableResultDecorator(result.getResult()), result.getBitmapWithResultPoints());
 //            startActivity(resultIntent);
@@ -146,7 +166,7 @@ public class ScannerActivity extends BaseActivity implements NavigationView.OnNa
 
         setContentView(R.layout.activity_scanner);
 
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        preferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 
         permissionNeededExplanation = findViewById(R.id.activity_scanner_permission_needed_explanation);
         barcodeScannerView = findViewById(R.id.zxing_barcode_scanner);
