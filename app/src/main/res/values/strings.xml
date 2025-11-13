@@ -210,6 +210,8 @@
     <!-- Example General settings -->
     <string name="pref_title_enable_history">Enable History</string>
     <string name="pref_description_enable_history">Previous scans are logged for you to show them again</string>
+    <string name="pref_title_silent_scan">Enable silent scan</string>
+    <string name="pref_description_silent_scan">Only save scan to history and continue scanning</string>
     <string name="pref_keep_duplicates">Keep duplicates</string>
     <string name="pref_keep_duplicates_explanation">Duplicates are saved to the history</string>
     <!-- Example settings for Notifications -->
@@ -305,6 +307,7 @@
     <string name="password_value">Password: %1$s</string>
     <!-- Others -->
     <string name="android_version_does_not_support_feature">Your Android version does not support this feature.</string>
+    <string name="scanned_toast_silent_mode">Scanned: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!--Settings for Default Search Engine-->

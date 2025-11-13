@@ -6,6 +6,12 @@
         android:key="bool_history"
         android:summary="@string/pref_description_enable_history"
         android:title="@string/pref_title_enable_history" />
+		
+	<SwitchPreference
+        android:defaultValue="false"
+        android:key="pref_enable_silent_scan"
+        android:summary="@string/pref_description_silent_scan"
+        android:title="@string/pref_title_silent_scan" />
 
     <SwitchPreference
         android:defaultValue="false"
