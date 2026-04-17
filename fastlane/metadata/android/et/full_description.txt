@@ -9,7 +9,7 @@ Enamus Google Play rakendustepoes leiduvaid skännereid vajavad tõesti vajalike
 
 Privaatsussõbralik QR-koodi skänner toetab andmete lugemist kõikidest tavalistest QR-koodidest, triipkoodidest ja muudest sarnastest masinloetavatest koodidest.
 
-Meie rakendus kuulub privaatsussõbralike rakenduste (Privacy Friendly Apps) kogumisse, mida arendab SECUSO uurimisrühm Darmstadti Tehnikaülikoolis (Technische Universität Darmstadt). Lisateave leidub siin: secuso.org/pfa
+Meie rakendus kuulub privaatsussõbralike rakenduste (Privacy Friendly Apps) kogumisse, mida arendab SECUSO uurimisrühm (Karlsruhe Institute of Technology). Lisateave leidub siin: secuso.org/pfa
 
 Meid võid leida:
 BlueSky - https://bsky.app/profile/secusoresearch.bsky.social
