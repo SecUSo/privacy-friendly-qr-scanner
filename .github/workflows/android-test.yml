@@ -1,0 +1,99 @@
+name: Android Emulator Tests
+on: [ push, pull_request ]
+
+jobs:
+  check-if-tests-exist:
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.check-androidTest.outputs.NOT_EMPTY }}
+      min-sdk-version: ${{ steps.get-sdk-version.outputs.MIN_SDK_VERSION }}
+      target-sdk-version: ${{ steps.get-sdk-version.outputs.TARGET_SDK_VERSION }}
+      app-id: ${{ steps.get-app-id.outputs.APP_ID }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: "recursive"
+      - name: Check if androidTest folder is not empty
+        run: |
+          echo "NOT_EMPTY=$([ "$(ls -A app/src/androidTest)" ] && echo 'true' || echo 'false')"
+          echo "NOT_EMPTY=$([ "$(ls -A app/src/androidTest)" ] && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+        id: check-androidTest
+      - name: Get min and target sdk
+        if: steps.check-androidTest.outputs.NOT_EMPTY == 'true'
+        id: get-sdk-version
+        run: |
+            echo "MIN_SDK_VERSION=$(cat app/build.gradle | grep minSdkVersion | rev | cut -d' ' -f 1 | rev)" >> $GITHUB_OUTPUT
+            echo "TARGET_SDK_VERSION=$(cat app/build.gradle | grep targetSdkVersion | rev | cut -d' ' -f 1 | rev)" >> $GITHUB_OUTPUT
+      - name: Get app ID
+        id: get-app-id
+        run: |
+            echo "APP_ID=$(cat app/build.gradle | grep applicationId | rev | cut -d' ' -f 1 | rev | tr -d '"')" >> $GITHUB_OUTPUT
+      
+  test:
+    needs: check-if-tests-exist
+    if: needs.check-if-tests-exist.outputs.status == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        api-level: [34, "${{ needs.check-if-tests-exist.outputs.min-sdk-version }}", "${{ needs.check-if-tests-exist.outputs.target-sdk-version }}"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+    
+      - name: Enable KVM group perms
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Gradle cache
+        uses: gradle/gradle-build-action@v3
+
+      - name: AVD cache
+        uses: actions/cache@v4
+        id: avd-cache
+        with:
+          path: |
+            ~/.android/avd/*
+            ~/.android/adb*
+          key: avd-${{ matrix.api-level }}
+
+      - name: Set up JDK environment
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 17
+
+      - name: create AVD and generate snapshot for caching
+        if: steps.avd-cache.outputs.cache-hit != 'true'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          target: ${{ matrix.api-level >= 30 && 'google_apis' || 'default' }}
+          arch: ${{ matrix.api-level < 21 && 'x86' || 'x86_64' }}
+          force-avd-creation: false
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: false
+          script: echo "Generated AVD snapshot for caching."
+
+      - name: Run connected tests
+        uses: ReactiveCircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          target: ${{ matrix.api-level >= 30 && 'google_apis' || 'default' }}
+          arch: ${{ matrix.api-level < 21 && 'x86' || 'x86_64' }}
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: |
+            adb uninstall ${{needs.check-if-tests-exist.outputs.app-id}} || true
+            adb uninstall ${{needs.check-if-tests-exist.outputs.app-id}}.test || true
+            adb uninstall ${{needs.check-if-tests-exist.outputs.app-id}}.androidTest || true
+            chmod +x gradlew
+            ./gradlew :app:connectedCheck --stacktrace
+            adb uninstall ${{needs.check-if-tests-exist.outputs.app-id}} || true
+            adb uninstall ${{needs.check-if-tests-exist.outputs.app-id}}.test || true
+            adb uninstall ${{needs.check-if-tests-exist.outputs.app-id}}.androidTest || true
