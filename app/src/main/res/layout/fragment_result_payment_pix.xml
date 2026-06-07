@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/result_field_pix_explanation"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/payment_explanation_pix"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/result_field_pix_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/result_field_pix_city"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/result_field_pix_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/result_field_pix_key"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/result_field_pix_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/result_field_pix_reference"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textIsSelectable="true"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/result_field_pix_country"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

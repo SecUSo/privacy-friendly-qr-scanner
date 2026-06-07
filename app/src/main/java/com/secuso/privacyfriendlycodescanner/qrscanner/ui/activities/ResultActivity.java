@@ -47,12 +47,16 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.generator.Contents;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
+import com.secuso.privacyfriendlycodescanner.qrscanner.payment.PaymentCode;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.QRCodeImageDialogFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.dialogfragments.RawDataDialogFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.BankUrlResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.CalendarResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ContactResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EmailResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.EpcResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.GeoResultFragment;
+import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.PixResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ProductResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.ResultFragment;
 import com.secuso.privacyfriendlycodescanner.qrscanner.ui.resultfragments.SMSResultFragment;
@@ -203,7 +207,11 @@ public class ResultActivity extends AppCompatActivity {
         codeTypeText.setText(viewModel.currentHistoryItem.getFormat().toString());
 
         Glide.with(this).load(viewModel.mCodeImage).into(qrImageView);
-        qrTypeText.setText(Contents.Type.parseParsedResultType(viewModel.mParsedResult.getType()).toLocalizedString(getApplicationContext()));
+        if (viewModel.mPaymentCode != null) {
+            qrTypeText.setText(paymentTypeLabel(viewModel.mPaymentCode));
+        } else {
+            qrTypeText.setText(Contents.Type.parseParsedResultType(viewModel.mParsedResult.getType()).toLocalizedString(getApplicationContext()));
+        }
 
         long timestamp = viewModel.currentHistoryItem.getTimestamp();
         if (timestamp != 0) {
@@ -263,6 +271,13 @@ public class ResultActivity extends AppCompatActivity {
             return;
         }
 
+        // Payment codes (EPC/GiroCode, bank:// URL, EMV/Pix) are not recognised by ZXing's
+        // ParsedResultType, so route them to a dedicated fragment before the default dispatch.
+        // If no payment code was detected, the original handling below stays unchanged.
+        if (viewModel.mPaymentCode != null && loadPaymentFragment(parsedResult)) {
+            return;
+        }
+
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
         ResultFragment resultFragment;
@@ -318,5 +333,53 @@ public class ResultActivity extends AppCompatActivity {
         ft.commit();
 
         chooseActionButton.setText(resultFragment.getProceedButtonTitle(this));
+    }
+
+    /**
+     * Loads the result fragment matching the detected {@link PaymentCode}.
+     *
+     * @return {@code true} if a payment fragment was loaded, {@code false} otherwise
+     */
+    private boolean loadPaymentFragment(ParsedResult parsedResult) {
+        ResultFragment resultFragment;
+        switch (viewModel.mPaymentCode.getType()) {
+            case EPC:
+                resultFragment = new EpcResultFragment();
+                break;
+            case BANK_URL:
+                resultFragment = new BankUrlResultFragment();
+                break;
+            case EMV:
+                resultFragment = new PixResultFragment();
+                break;
+            default:
+                return false;
+        }
+
+        currentResultFragment = resultFragment;
+        resultFragment.putQRCode(parsedResult);
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.activity_result_frame_layout, resultFragment);
+        ft.commit();
+
+        chooseActionButton.setText(resultFragment.getProceedButtonTitle(this));
+        return true;
+    }
+
+    /**
+     * Returns the localized type label for the detected payment code, used as the heading.
+     */
+    private String paymentTypeLabel(@NonNull PaymentCode paymentCode) {
+        switch (paymentCode.getType()) {
+            case EPC:
+                return getString(R.string.payment_type_epc);
+            case BANK_URL:
+                return getString(R.string.payment_type_bank_url);
+            case EMV:
+                return getString(paymentCode.isPixScheme() ? R.string.payment_type_pix : R.string.payment_type_emv);
+            default:
+                return null;
+        }
     }
 }
