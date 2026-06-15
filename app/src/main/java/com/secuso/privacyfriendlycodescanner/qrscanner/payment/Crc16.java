@@ -35,7 +35,7 @@ public final class Crc16 {
     }
 
     /**
-     * Computes the CRC-16/CCITT-FALSE over the ASCII bytes of the given string.
+     * Computes the CRC-16/CCITT-FALSE over the UTF-8 bytes of the given string.
      *
      * @return the CRC as an unsigned 16-bit value
      */

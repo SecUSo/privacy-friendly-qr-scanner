@@ -19,6 +19,7 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner.payment;
 
 import java.math.BigInteger;
+import java.util.Locale;
 
 /**
  * Validation helper for International Bank Account Numbers (IBAN) following the
@@ -40,7 +41,7 @@ public final class Iban {
         if (iban == null) {
             return null;
         }
-        return iban.replace(" ", "").trim().toUpperCase();
+        return iban.replace(" ", "").trim().toUpperCase(Locale.ROOT);
     }
 
     /**

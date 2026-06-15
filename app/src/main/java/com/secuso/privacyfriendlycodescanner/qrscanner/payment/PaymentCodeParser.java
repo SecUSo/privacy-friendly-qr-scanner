@@ -21,6 +21,7 @@ package com.secuso.privacyfriendlycodescanner.qrscanner.payment;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -38,7 +39,7 @@ import java.util.Map;
  */
 public final class PaymentCodeParser {
 
-    private static final String BANK_URL_PREFIX = "bank://singlepaymentsepa";
+    private static final String BANK_URL_PREFIX = "bank://singlepaymentsepa?";
 
     /** ISO 4217 numeric to alphabetic mapping for the most common currencies. */
     private static final Map<String, String> CURRENCY_CODES = new HashMap<>();
@@ -78,7 +79,7 @@ public final class PaymentCodeParser {
             if (trimmed.isEmpty()) {
                 return null;
             }
-            String lower = trimmed.toLowerCase();
+            String lower = trimmed.toLowerCase(Locale.ROOT);
             if (trimmed.startsWith("BCD\n") || trimmed.startsWith("BCD\r\n")) {
                 return parseEpc(trimmed);
             }
@@ -182,7 +183,7 @@ public final class PaymentCodeParser {
             if (eq <= 0) {
                 continue;
             }
-            String key = decode(pair.substring(0, eq)).toLowerCase();
+            String key = decode(pair.substring(0, eq)).toLowerCase(Locale.ROOT);
             String value = decode(pair.substring(eq + 1));
             params.put(key, value);
         }
@@ -255,7 +256,7 @@ public final class PaymentCodeParser {
                 continue;
             }
             String gui = account.get("00");
-            if (gui != null && gui.toLowerCase().contains("br.gov.bcb.pix")) {
+            if ("br.gov.bcb.pix".equalsIgnoreCase(gui)) {
                 pixScheme = true;
                 if (pixKey == null) {
                     pixKey = account.get("01");
