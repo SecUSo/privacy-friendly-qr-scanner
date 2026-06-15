@@ -381,4 +381,32 @@
     <string name="pref_custom_search_engine_title">Custom Search Engine</string>
     <string name="pref_custom_search_engine_summary">The URL to use as \"Custom Search Engine\". The search string will be inserted at %s.</string>
     <string name="pref_custom_search_engine_default" translatable="false">https://duckduckgo.com/?q=%s</string>
+
+    <!-- Payment codes (EPC/GiroCode, bank:// URL, EMV/Pix) -->
+    <string name="payment_type_epc">SEPA Credit Transfer (EPC)</string>
+    <string name="payment_type_bank_url">SEPA Credit Transfer</string>
+    <string name="payment_type_pix">Pix payment</string>
+    <string name="payment_type_emv">Payment code (EMV)</string>
+    <string name="payment_explanation_epc">Scanned SEPA payment data (EPC / GiroCode):</string>
+    <string name="payment_explanation_bank_url">Scanned SEPA payment data:</string>
+    <string name="payment_explanation_pix">Scanned payment data:</string>
+    <string name="payment_recipient_value">Recipient: %1$s</string>
+    <string name="payment_iban_value">IBAN: %1$s</string>
+    <string name="payment_bic_value">BIC: %1$s</string>
+    <string name="payment_amount_value">Amount: %1$s</string>
+    <string name="payment_purpose_value">Purpose: %1$s</string>
+    <string name="payment_purpose_code_value">Purpose code: %1$s</string>
+    <string name="payment_version_value">Version: %1$s</string>
+    <string name="payment_city_value">City: %1$s</string>
+    <string name="payment_country_value">Country: %1$s</string>
+    <string name="payment_pix_key_value">Pix key: %1$s</string>
+    <string name="payment_pix_info_value">Info: %1$s</string>
+    <string name="payment_reference_value">Reference: %1$s</string>
+    <string name="payment_copy_field">Copy field</string>
+    <string name="payment_copy_iban">Copy IBAN</string>
+    <string name="payment_copy_amount">Copy amount</string>
+    <string name="payment_copy_purpose">Copy purpose</string>
+    <string name="payment_copy_recipient">Copy recipient</string>
+    <string name="payment_copy_pix_key">Copy Pix key</string>
+    <string name="payment_copy_all">Copy everything</string>
 </resources>

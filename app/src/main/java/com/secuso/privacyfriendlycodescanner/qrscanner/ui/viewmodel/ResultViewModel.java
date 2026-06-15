@@ -39,6 +39,8 @@ import com.secuso.privacyfriendlycodescanner.qrscanner.R;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.AppRepository;
 import com.secuso.privacyfriendlycodescanner.qrscanner.database.HistoryItem;
 import com.secuso.privacyfriendlycodescanner.qrscanner.helpers.Utils;
+import com.secuso.privacyfriendlycodescanner.qrscanner.payment.PaymentCode;
+import com.secuso.privacyfriendlycodescanner.qrscanner.payment.PaymentCodeParser;
 
 public class ResultViewModel extends AndroidViewModel {
 
@@ -48,6 +50,8 @@ public class ResultViewModel extends AndroidViewModel {
     public ParsedResult mParsedResult = null;
     public Bitmap mCodeImage = null;
     public boolean mSavedToHistory = false;
+    /** Non-null when the scanned content was recognised as a supported payment code. */
+    public PaymentCode mPaymentCode = null;
 
     private final SharedPreferences mPreferences;
 
@@ -71,6 +75,7 @@ public class ResultViewModel extends AndroidViewModel {
     public void initFromHistoryItem(HistoryItem historyItem) {
         currentHistoryItem = historyItem;
         mParsedResult = ResultParser.parseResult(currentHistoryItem.getResult());
+        mPaymentCode = PaymentCodeParser.parse(currentHistoryItem.getText());
         mCodeImage = currentHistoryItem.getImage();
         if (mCodeImage == null) {
             mCodeImage = Utils.generateCode(currentHistoryItem.getText(), BarcodeFormat.QR_CODE, null);
@@ -84,6 +89,7 @@ public class ResultViewModel extends AndroidViewModel {
     public void initFromScan(BarcodeResult barcodeResult) {
         currentBarcodeResult = barcodeResult;
         mParsedResult = ResultParser.parseResult(currentBarcodeResult.getResult());
+        mPaymentCode = PaymentCodeParser.parse(currentBarcodeResult.getText());
         fillMissingResultPoints();
         try {
             mCodeImage = currentBarcodeResult.getBitmapWithResultPoints(ContextCompat.getColor(getApplication(), R.color.colorAccent));
