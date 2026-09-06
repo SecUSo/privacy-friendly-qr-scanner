@@ -26,18 +26,18 @@
     <string name="Settings">Configuració</string>
     <string name="QRGenerator">Generador de QR</string>
     <string name="History">Historial</string>
-    <string name="slide1_heading">Benvingut!</string>
+    <string name="slide1_heading">Et donem la benvinguda</string>
     <string name="slide1_text">Us donem la benvinguda al lector de codis QR respectuós amb la privadesa. Aquest tutorial cobrirà allò més important que us cal saber.</string>
     <string name="slide2_heading">Quines funcionalitats té?</string>
     <string name="text_slide2">Amb aquesta aplicació podeu escanejar i crear codis QR.</string>
     <string name="text_slide3">El codi QR que heu escanejat es pot desar a l\'historial. Encara més, el podeu compartir o copiar.</string>
-    <string name="wecome">Benvingut!</string>
+    <string name="wecome">Benvingut/da</string>
     <string name="help_">Ajuda</string>
     <string name="tutorial">Tutorial</string>
     <string name="about_author">Autors:</string>
     <string name="about_author_string">%s i col·laboradors.</string>
-    <string name="about_affiliation">En associació amb</string>
-    <string name="more_info">Podeu trobar més informació a:</string>
+    <string name="about_affiliation">Amb afiliació amb</string>
+    <string name="more_info">Es pot trobar més informació a:</string>
     <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repositori de GitHub</a></string>
     <string name="url_secuso"><a href="https://www.secuso.org/pfa">Lloc web SECUSO</a></string>
     <string name="about_libraries">Biblioteques usades:</string>
@@ -153,6 +153,7 @@
     <string name="select_all">Selecciona-ho tot</string>
     <plurals name="entries_selected">
         <item quantity="one">%1$d seleccionat</item>
+        <item quantity="many">%1$d de seleccionats</item>
         <item quantity="other">%1$d seleccionats</item>
     </plurals>
     <string name="activity_scanner_permission_needed_explanation">Aquesta aplicació necessita el permís d\'accés a la càmera per a poder escanejar codis QR.</string>
@@ -213,7 +214,7 @@
     <string name="QRScanner">QR Scanner</string>
     <string name="slide3_heading">Més funcionalitats</string>
     <string name="skip">Omet</string>
-    <string name="next">Endavant</string>
+    <string name="next">Següent</string>
     <string name="wifi_explanation">Aquesta versió de l\'aplicació no pot connectar a xarxes WiFi automàticament perquè no té el permís necessari. A sota teniu alguns detalls sobre la xarxa.</string>
     <string name="history_disabled">S\'ha desactivat l\'historial</string>
     <string name="description_contact">El codi QR que heu escanejat conté informació de contacte. Per a poder <i>importar</i>-la en la llibreta d\'adreces, feu clic a Continua.</string>
@@ -223,8 +224,8 @@
     <string name="lastname">Cognoms</string>
     <string name="confirmation">Confirmació</string>
     <string name="help_permission1_description">Aquesta aplicació requereix el permís per a accedir a la càmera, que s\'usa per a escanejar codis de barres i codis QR.</string>
-    <string name="privacy_friendly">Aquesta aplicació pertany al grup d\'aplicacions respectuoses amb la privadesa, desenvolupat per SECUSO. El codi font és llicenciat sota la llicència GPLv3. Copyright de Karlsruhe Institute of Technology i Google Inc.</string>
-    <string name="welcome_text">L\'aplicació PRIVACY FRIENDLY QR Code Scanner us permet escanejar codis de barres i codis QR amb diversos continguts, alhora que requereix un conjunt mínim de permisos i admet la detecció d\'enllaços maliciosos.</string>
+    <string name="privacy_friendly">Aquesta és una de les moltes aplicacions respectuoses amb la privadesa desenvolupada per SECUSO. El codi font és llicenciat d\'acord amb la llicència GPLv3. El copyright de les imatges és de Karlsruhe Institute of Technology i Google Inc.</string>
+    <string name="welcome_text">L\'aplicació QR Code Scanner respectuosa amb la privadesa permet escanejar codis de barres i codis QR amb diversos continguts, alhora que requereix un conjunt mínim de permisos i ajuda a detectar enllaços maliciosos.</string>
     <string name="help_whatis_answer">Amb PRIVACY FRIENDLY QR Scanner podeu escanejar i generar codis de barres i codis QR amb diversos continguts. També podeu copiar i compartir un codi QR escanejat amb altres aplicacions, a més podeu desar el codi QR generat a la galeria i compartir-lo també.</string>
     <string name="help_privacy_answer">Una aplicació respectuosa amb la privadesa d\'exemple no requereix cap permís. A més, no inclou cap mecanisme de seguiment ni publicitat.</string>
     <string name="help_permission_answer">L\'aplicació requereix el permís d\'accés a la càmera, que s\'utilitza per a escanejar codis de barres i codis QR. L\'aplicació també requereix el permís per a accedir a l\'emmagatzematge per a escanejar codis des de les imatges o desar els codis generats en imatges.</string>
@@ -232,4 +233,9 @@
     <string name="cannot_connect_to_encrypted_wifi_without_password">Sense contrasenya, no es pot establir cap connexió a una xarxa WiFi xifrada.</string>
     <string name="pref_custom_search_engine_title">Motor de cerca personalitzat</string>
     <string name="pref_custom_search_engine_summary">L\'URL que s\'utilitzarà com a \"Motor de cerca personalitzat\". La cadena de cerca s\'inserirà a %s.</string>
+    <string name="help_data_backup">Com faig còpies de seguretat de les meves dades?</string>
+    <string name="help_data_backup_answer">Podeu utilitzar l\'aplicació Privacy Friendly Backup de còpia de seguretat separada per fer còpies de seguretat i restaurar les dades d\'aquesta aplicació. Això també es pot utilitzar per migrar les vostres dades a un telèfon nou.</string>
+    <string name="pref_title_silent_scan">Habilita l\'escaneig silenciós</string>
+    <string name="pref_description_silent_scan">Desa només l\'escaneig a l\'historial i continua l\'escaneig</string>
+    <string name="scanned_toast_silent_mode">S\'ha escanejat: %1$s</string>
 </resources>

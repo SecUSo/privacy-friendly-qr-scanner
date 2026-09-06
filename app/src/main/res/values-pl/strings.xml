@@ -236,4 +236,7 @@
     <string name="help_data_backup">Jak mogę wykonać kopię zapasową danych?</string>
     <string name="pref_custom_search_engine_title">Niestandardowa wyszukiwarka</string>
     <string name="pref_custom_search_engine_summary">Adres URL używany jako „Niestandardowa wyszukiwarka”. Ciąg wyszukiwania zostanie wstawiony w %s.</string>
+    <string name="pref_title_silent_scan">Włącz ciche skanowanie</string>
+    <string name="pref_description_silent_scan">Zapisuj skan tylko w historii i kontynuuj skanowanie</string>
+    <string name="scanned_toast_silent_mode">Zeskanowano: %1$s</string>
 </resources>
