@@ -332,4 +332,7 @@
     <string name="switch_camera">Kamera umschalten</string>
     <string name="pref_custom_search_engine_title">Benutzerdefinierte Suchmaschine</string>
     <string name="pref_custom_search_engine_summary">Die URL, die als „Benutzerdefinierte Suchmaschine“ verwendet wird. Die Suchzeichenkette wird bei %s eingefügt.</string>
+    <string name="pref_title_silent_scan">Stiller Scan aktivieren</string>
+    <string name="pref_description_silent_scan">Den Scan nur im Verlauf speichern und mit dem Scannen fortfahren</string>
+    <string name="scanned_toast_silent_mode">Gescanned: %1$s</string>
 </resources>
