@@ -193,9 +193,9 @@
     <string name="select_image_from_gallery_explanation">Esta función le permite abrir imágenes de su galería y escanear los códigos que contienen. Para ello es necesario tener acceso a las imágenes.</string>
     <string name="select_image_from_gallery">Seleccionar imagen de la galería</string>
     <string name="image_is_being_processed">Procesando la imagen…</string>
-    <string name="no_code_in_image_explanation">Lamentablemente, no se pudo encontrar ningún código en esta imagen. Para mejorar el resultado, puede recortar o enderezar la imagen y volver a intentarlo.</string>
+    <string name="no_code_in_image_explanation">Lamentablemente, no se pudo encontrar ningún código en esta imagen. Para mejorar el resultado, puedes recortar o enderezar la imagen y volver a intentarlo.</string>
     <string name="switch_camera">Cambiar de cámara</string>
-    <string name="generated_code_image_explanation">Nota: El código mostrado aquí fue generado en base al contenido del código escaneado por lo tanto puede verse diferente. Sin embargo, los datos que contiene son los mismos.</string>
+    <string name="generated_code_image_explanation">Nota: El código que se muestra aquí se creó en función del contenido del código escaneado y, por lo tanto, puede parecer diferente. Sin embargo, los datos que contiene son los mismos.</string>
     <string name="raw_data">Datos sin procesar (Raw)</string>
     <string name="image_stored_in_gallery">Imagen guardada en la galería</string>
     <string name="close">Cerrar</string>
