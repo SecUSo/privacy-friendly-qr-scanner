@@ -179,7 +179,7 @@
     <string name="privacy_friendly">This application belongs to the group of PRIVACY FRIENDLY Apps developed by Karlsruhe Institute of Technology. Sourcecode licensed under GPLv3. Images copyright KIT and Google Inc.</string>
     <string name="more_info">More information can be found on:</string>
     <string name="github" translatable="false"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Github-Repo</a></string>-->
-    <string name="help_permission1_description">L\'application nécessite l\'autorisation d\'accès à l\'appareil photo, qui est utilisé pour scanner les codes-barres et les QR codes via celui-ci.</string>
+    <string name="help_permission1_description">L\'application requiert l\'autorisation d\'accéder à l\'appareil photo pour scanner les codes-barres et les QR codes.</string>
     <string name="help_permission1_heading">Caméra</string>
     <string name="help_privacy_heading">Quelles sont les autorisations requises par Scanneur QR RESPECTUEUX DE LA VIE PRIVÉE ?</string>
     <string name="help_category_example">La numérisation ne fonctionne pas, que puis-je faire ?</string>
@@ -195,7 +195,7 @@
     <string name="help_privacy">En quoi cette application est-elle respectueuse de la vie privée ?</string>
     <string name="help_privacy_answer">L\'application Privacy Friendly App Example ne nécessite aucune permission. Elle ne contient pas non plus de mécanismes de suivi ni de publicité.</string>
     <string name="help_permission">Quelles autorisations sont requises par Scanneur QR RESPECTUEUX DE LA VIE PRIVÉE ?</string>
-    <string name="help_permission_answer">L\'application nécessite l\'autorisation de la caméra, qui est utilisée pour numériser des codes-barres et des codes QR via la caméra. L\'application nécessite également l\'autorisation d\'accéder à votre stockage pour numériser des codes à partir de vos images ou enregistrer des codes générés dans vos images.</string>
+    <string name="help_permission_answer">L\'application requiert l\'autorisation d\'utiliser l\'appareil photo pour numériser des codes-barres et des codes QR. L\'application requiert également l\'autorisation d\'accéder à votre stockage pour numériser des codes à partir de vos images ou pour ajouter les codes générés à vos images.</string>
     <!-- Chaînes liées à SettingsActivity -->
     <!-- Exemple de paramètres généraux -->
 
@@ -239,7 +239,7 @@
     <string name="zip_code">Code postal</string>
     <string name="country">Pays</string>
     <string name="generator_package_name">Nom du package</string>
-    <string name="generator_market_explanation">Ici, vous pouvez entrer le nom du package de l\'application. Par exemple :</string>
+    <string name="generator_market_explanation">Ici, vous pouvez saisir le nom du package de l\'application. Par exemple :</string>
     <string name="generator_market_explanation_2">Le code QR généré pointe ensuite vers l\'application correspondante sur Google Play.</string>
     <string name="import_from_contacts">Importer des contacts</string>
     <string name="sms_text">Texte SMS</string>
@@ -329,7 +329,7 @@
     <plurals name="entries_selected">
         <item quantity="one">%1$d entrée sélectionnée</item>
         <item quantity="many">%1$d entrées sélectionnées</item>
-        <item quantity="other"/>
+        <item quantity="other">%1$d entrées sélectionnées</item>
     </plurals>
     <string name="switch_camera">Changement de caméra</string>
     <string name="cannot_connect_to_encrypted_wifi_without_password">Aucune connexion à un réseau WiFi chiffré ne peut être établie sans mot de passe.</string>
