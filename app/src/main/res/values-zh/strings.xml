@@ -102,7 +102,7 @@
     <string name="help_privacy">本应用哪些方面隐私友好？</string>
     <string name="help_privacy_answer">Privacy Friendly QR Scanner 无需任何权限。此外，它不包含任何跟踪机制或广告。</string>
     <string name="help_permission">此应用需要哪些权限？</string>
-    <string name="help_permission_answer">该应用程序需要相机权限，用于通过相机扫描条形码和二维码。 该应用程序还需要访问您的存储空间的权限，以扫描图像中的代码或将生成的代码保存到您的图像中。</string>
+    <string name="help_permission_answer">本应用需要相机权限，用于通过相机扫描条形码和二维码。 本应用还需要访问您的存储空间的权限，以扫描图像中的代码或将生成的代码保存到您的图像中。</string>
     <string name="pref_title_enable_history">启用历史记录</string>
     <string name="pref_description_enable_history">以前的扫描会被记录下来供您再次显示</string>
     <string name="pref_keep_duplicates">保留重复项</string>
@@ -332,4 +332,7 @@
     <string name="cannot_connect_to_encrypted_wifi_without_password">没有密码无法连接到加密的 WiFi 网络。</string>
     <string name="pref_custom_search_engine_title">自定义搜索引擎</string>
     <string name="pref_custom_search_engine_summary">用作“自定义搜索引擎”的 URL。搜索字符串将插入到 %s。</string>
+    <string name="pref_title_silent_scan">启用静默扫描</string>
+    <string name="pref_description_silent_scan">仅保存扫描到历史记录并继续扫描</string>
+    <string name="scanned_toast_silent_mode">已扫描：%1$s</string>
 </resources>

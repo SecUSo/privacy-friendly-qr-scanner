@@ -60,13 +60,13 @@
     <string name="to">Destinatario:</string>
     <string name="subject">Soggetto</string>
     <string name="usability_hint2">Se non puoi scansionare un codice QR, aumenta la distanza tra lo scanner ed il codice.</string>
-    <string name="description_contact">Il codice QR che hai scansionato contiene informazioni di contatto.</string>
-    <string name="description_email">Il codice QR che hai scansionato contiene un indirizzo e-mail.</string>
-    <string name="description_send_email">Il codice QR che hai scansionato contiene un\'e-mail.</string>
-    <string name="description_product">Il codice QR che hai scansionato contiene un codice prodotto.</string>
-    <string name="description_tel">Il codice QR che hai scansionato contiene un numero di telefono.</string>
-    <string name="description_sms">Il codice QR che hai scansionato contiene un SMS.</string>
-    <string name="description_text">Il codice QR che hai scansionato contiene del testo semplice.</string>
+    <string name="description_contact">Il codice QR che hai scansionato contiene informazioni di contatto. Per <i>importarlo</i> nella rubrica, clic su Procedi.</string>
+    <string name="description_email">Il codice QR che hai scansionato contiene un indirizzo e-mail. Per <i>mandare una mail</i> o <i>aggiungerlo a un contatto</i>, clic su Procedi.</string>
+    <string name="description_send_email">Il codice QR che hai scansionato contiene un\'e-mail. Per <i>inviarla</i> o per <i>aggiungere l\'indirizzo a un contatto</i>, clic su Procedi.</string>
+    <string name="description_product">Il codice QR che hai scansionato contiene un codice prodotto. Per <i>cercare nel web</i> informazioni sul prodotto, clic su Procedi.</string>
+    <string name="description_tel">Il codice QR che hai scansionato contiene un numero di telefono. Per <i>chiamarlo</i> o per <i>aggiungerlo a un contatto</i>, clic su Procedi.</string>
+    <string name="description_sms">Il codice QR che hai scansionato contiene un SMS. Per <i>inviare</i> l\'SMS o per <i>aggiungere il numero a un contatto</i>, clic su Procedi.</string>
+    <string name="description_text">Il codice QR che hai scansionato contiene del testo semplice. Per <i>cercare nel web</i> informazioni, clic su Procedi.</string>
     <string name="choose_action">Continua</string>
     <string name="abort_action">Annulla </string>
     <string name="proceed">Continua</string>
@@ -158,7 +158,7 @@
         <item>ISBN</item>
         <item>Numero di identificazione del veicolo (VIN)</item>
     </string-array>
-    <string name="copied_to_clipboard">Copiato nella clipboard.</string>
+    <string name="copied_to_clipboard">Copiato negli appunti.</string>
     <string name="noname">Nessun nome specificato</string>
     <string name="title_activity_result_url">Link trovato</string>
     <string name="title_activity_result_text">Testo trovato</string>
@@ -322,8 +322,8 @@
     <string name="code_generation_error">Non è stato possibile generare alcun codice.</string>
     <string name="something_went_wrong">Qualcosa è andato storto.</string>
     <string name="save_to_history">Salva nella cronologia</string>
-    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">GitHub-Repo</a></string>
-    <string name="url_secuso"><a href="https://www.secuso.org/pfa">SECUSO-Website</a></string>
+    <string name="github"><a href="https://github.com/SecUSo/privacy-friendly-qr-scanner">Repository GitHub</a></string>
+    <string name="url_secuso"><a href="https://www.secuso.org/pfa">Sito web SECUSO</a></string>
     <string name="switch_camera">Cambia fotocamera</string>
     <plurals name="entries_selected">
         <item quantity="one">%1$d voce selezionata</item>
@@ -341,4 +341,7 @@
     <string name="activity_history_list_item_qr_image_descriptor">Codice QR</string>
     <string name="pref_custom_search_engine_title">Motore di ricerca personalizzato</string>
     <string name="pref_custom_search_engine_summary">L\'URL da utilizzare come \"Motore di ricerca personalizzato\". La stringa di ricerca verrà inserita in %s.</string>
+    <string name="pref_title_silent_scan">Abilita scansione silente</string>
+    <string name="pref_description_silent_scan">Salva la scansione nella cronologia e continua la scansione</string>
+    <string name="scanned_toast_silent_mode">Scansione eseguita: %1$s</string>
 </resources>

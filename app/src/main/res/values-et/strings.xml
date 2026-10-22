@@ -234,4 +234,7 @@
     <string name="fragment_result_text_dialog_message">Kas sa soovid seda teksti otsida otsinguteenuses %s? Sellega saadad teksti otsingumootorile ning kui seal leidub privaatset teavet, siis see ei pruugi olla mõttekas.</string>
     <string name="pref_custom_search_engine_title">Kohandatud otsingumootor</string>
     <string name="pref_custom_search_engine_summary">URL, mida kasutatakse kui „Kohandatud otsingumootorit“. Otsingusõne sisestatakse asukohta %s.</string>
+    <string name="pref_title_silent_scan">Lülita vaikne skaneerimine sisse</string>
+    <string name="pref_description_silent_scan">Salvesta vaid skaneerimiste ajalukku ja jätka skaneerimist</string>
+    <string name="scanned_toast_silent_mode">Skaneeritud: %1$s</string>
 </resources>
