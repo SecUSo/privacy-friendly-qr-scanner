@@ -43,7 +43,7 @@ import java.util.GregorianCalendar;
 @Database(entities = {HistoryItem.class}, version = AppDatabase.VERSION)
 @TypeConverters({Converters.class})
 public abstract class AppDatabase extends RoomDatabase {
-    public static final int VERSION = 2;
+    public static final int VERSION = 3;
     public static final String DB_NAME = "DB.db";
 
     public abstract HistoryDao historyDao();
@@ -108,9 +108,19 @@ public abstract class AppDatabase extends RoomDatabase {
     };
 
 
+    public static final Migration MIGRATION_2_3 = new Migration(2, 3) {
+        @Override
+        public void migrate(@NonNull SupportSQLiteDatabase database) {
+            database.execSQL("ALTER TABLE Histories ADD COLUMN productName TEXT");
+            database.execSQL("ALTER TABLE Histories ADD COLUMN productCategory TEXT");
+            database.execSQL("ALTER TABLE Histories ADD COLUMN productIngredients TEXT");
+        }
+    };
+
     public static final Migration[] MIGRATIONS = {
             MIGRATION_1_2,
-            MIGRATION_2_1
+            MIGRATION_2_1,
+            MIGRATION_2_3
     };
 
     public synchronized static AppDatabase getInstance(Context context) {

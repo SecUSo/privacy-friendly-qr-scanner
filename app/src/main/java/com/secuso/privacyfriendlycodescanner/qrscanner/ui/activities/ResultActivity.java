@@ -132,11 +132,36 @@ public class ResultActivity extends AppCompatActivity {
 
         displayGeneralData();
 
+        viewModel.productChanged.observe(this, ignored -> displayProduct());
+        viewModel.lookupFailed.observe(this, failed -> {
+            TextView status = findViewById(R.id.product_lookup_status);
+            status.setVisibility(Boolean.TRUE.equals(failed) ? View.VISIBLE : View.GONE);
+            status.setText(R.string.product_lookup_unavailable);
+        });
+        displayProduct();
+        if (!getIntent().getBooleanExtra(HISTORY_DATA, false)) {
+            viewModel.lookupProduct();
+        }
+
         findViewById(R.id.btnChooseAction).setOnClickListener(this::onChooseActionButtonClick);
 
         findViewById(R.id.btnRawData).setOnClickListener(this::onRawDataButtonClick);
 
         findViewById(R.id.activity_result_qr_image).setOnClickListener(this::onQRImageClick);
+    }
+
+    private void displayProduct() {
+        HistoryItem item = viewModel.currentHistoryItem;
+        if (item == null || item.getProductName() == null) return;
+        findViewById(R.id.product_card).setVisibility(View.VISIBLE);
+        ((TextView) findViewById(R.id.product_name)).setText(item.getProductName());
+        TextView category = findViewById(R.id.product_category);
+        String categoryText = item.getProductCategory();
+        category.setText(categoryText);
+        category.setVisibility(categoryText == null || categoryText.isEmpty() ? View.GONE : View.VISIBLE);
+        String ingredients = item.getProductIngredients();
+        ((TextView) findViewById(R.id.product_ingredients)).setText(
+                ingredients == null || ingredients.isEmpty() ? getString(R.string.product_details_unavailable) : ingredients);
     }
 
     /**

@@ -46,7 +46,7 @@ public interface HistoryDao {
     LiveData<List<HistoryItem>> getAllLiveData();
 
     @Insert
-    void insert(HistoryItem entry);
+    long insert(HistoryItem entry);
 
     @Query("DELETE FROM Histories")
     void deleteAll();

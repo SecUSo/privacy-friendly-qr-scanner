@@ -5,6 +5,10 @@ plugins {
     id 'com.google.devtools.ksp'
 }
 
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas".toString())
+}
+
 android {
     defaultConfig {
         applicationId "com.secuso.privacyFriendlyCodeScanner"
@@ -17,6 +21,11 @@ android {
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         buildFeatures.dataBinding = true
         vectorDrawables.useSupportLibrary = true
+        def productBackendUrl = providers.gradleProperty("productBackendUrl").orElse("").get()
+        if (productBackendUrl && !productBackendUrl.startsWith("https://")) {
+            throw new GradleException("productBackendUrl must use HTTPS")
+        }
+        buildConfigField "String", "PRODUCT_BACKEND_URL", "\"" + productBackendUrl.replace("\\", "\\\\").replace("\"", "\\\"") + "\""
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -58,6 +67,7 @@ android {
     }
 
     namespace 'com.secuso.privacyfriendlycodescanner.qrscanner'
+    buildFeatures.buildConfig = true
     lint {
         lintConfig = file("lint.xml")
     }
@@ -77,6 +87,7 @@ dependencies {
 
     implementation('com.journeyapps:zxing-android-embedded:4.3.0') { transitive = false }
     implementation 'com.google.zxing:core:3.5.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.13' // Supports Android API 17.
 
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
     implementation "androidx.multidex:multidex:2.0.1"

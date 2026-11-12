@@ -19,7 +19,21 @@
 
 The Privacy Friendly QR Scanner belongs to the group of Privacy Friendly Apps. The app supports its users in detecting malicious links: QR Codes provide new possibilities for an attacker, as QR Codes can contain malicious links, i.e. links to phishing webpages or webpages from which malware would automatically be downloaded. Therefore it is important to carefully check the link before accessing the corresponding webpage.
 
-This app is optimized regarding the user's privacy. It only uses the device's camera in order to decode QR codes and barcodes.
+This fork adds an optional online product lookup to the original scanner. Inventory stays on the device, but when lookup is enabled, EAN/UPC barcode numbers are sent to the configured backend and then to Open Food Facts and, if necessary, Open Beauty Facts. QR codes are not sent to these services. Network operators and hosting providers may retain request logs. Disable **Online product lookup** in settings to scan offline.
+
+## Product lookup and deployment
+
+The backend in `backend/server.js` queries Open Food Facts first and Open Beauty Facts second. Unknown products, including other household items and clothing, fall back to the original scan result. Ingredients are community-supplied and may be incomplete; do not rely on them for allergy or safety decisions.
+
+Deploy `render.yaml` as a Render Blueprint in your own account, then build the Android app with the resulting HTTPS service URL:
+
+```sh
+./gradlew assembleDebug -PproductBackendUrl=https://YOUR-SERVICE.onrender.com
+```
+
+Without this build property, online lookup is unavailable and the scanner displays the original result. The backend returns `GET /scan?code=...` with `name`, `category`, and `ingredients`, 404 for an unknown item and 503 when providers fail. UPC-E requests additionally include `format=UPC_E` so the backend can expand them to UPC-A for the catalog. It does not intentionally log barcode values or store requests; check Render's own logging and privacy policies before deployment. The local inventory is included in Privacy Friendly Backup exports. Silent scanning continues to save raw scans without online lookup.
+
+The app's system-aware dark theme is already enabled by default and can be overridden in settings. The QR generator is hidden from the main navigation.
 
 ## Motivation
 

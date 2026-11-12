@@ -95,11 +95,13 @@ public class HistoryItemViewModel extends BaseObservable {
     }
 
     public String getType() {
-        return type;
+        return entry.getProductCategory() != null && !entry.getProductCategory().isEmpty()
+                ? entry.getProductCategory() : type;
     }
 
     public String getText() {
-        return parsed.getDisplayResult();
+        return entry.getProductName() != null && !entry.getProductName().isEmpty()
+                ? entry.getProductName() : parsed.getDisplayResult();
     }
 
 

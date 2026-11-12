@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
@@ -59,7 +60,7 @@
             android:parentActivityName=".ui.activities.ScannerActivity" />
         <activity
             android:name=".ui.activities.HistoryActivity"
-            android:label="@string/history"
+            android:label="@string/personal_inventory"
             android:parentActivityName=".ui.activities.ScannerActivity" />
         <activity
             android:name=".ui.activities.HelpActivity"
@@ -67,20 +68,9 @@
             android:parentActivityName=".ui.activities.ScannerActivity" />
         <activity
             android:name=".ui.activities.generator.QrGeneratorOverviewActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/QRGenerator"
-            android:parentActivityName=".ui.activities.ScannerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/plain" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/x-vcard" />
-            </intent-filter>
-        </activity>
+            android:parentActivityName=".ui.activities.ScannerActivity" />
         <activity
             android:name=".ui.activities.TutorialActivity"
             android:parentActivityName=".ui.activities.ScannerActivity"

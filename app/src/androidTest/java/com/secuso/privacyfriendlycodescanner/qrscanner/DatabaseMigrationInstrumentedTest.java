@@ -1,6 +1,7 @@
 package com.secuso.privacyfriendlycodescanner.qrscanner;
 
 import android.content.Context;
+import android.database.Cursor;
 
 import androidx.room.Room;
 import androidx.room.testing.MigrationTestHelper;
@@ -63,6 +64,31 @@ public class DatabaseMigrationInstrumentedTest {
     @After
     public void deleteDatabase() {
         InstrumentationRegistry.getInstrumentation().getTargetContext().deleteDatabase(TEST_DB_NAME);
+    }
+
+    @Test
+    public void preservesHistoryWhenAddingProductFields() throws Exception {
+        SupportSQLiteDatabase db = testHelper.createDatabase(TEST_DB_NAME, 2);
+        db.execSQL("INSERT INTO Histories (_id, text, numBits, timestamp) VALUES (7, '12345678', 0, 123)");
+        AppDatabase.MIGRATION_2_3.migrate(db);
+        try (Cursor cursor = db.query("SELECT _id, text, timestamp, productName, productCategory, productIngredients FROM Histories")) {
+            assertEquals(1, cursor.getCount());
+            cursor.moveToFirst();
+            assertEquals(7, cursor.getInt(0));
+            assertEquals("12345678", cursor.getString(1));
+            assertEquals(123, cursor.getLong(2));
+            assertEquals(null, cursor.getString(3));
+            assertEquals(null, cursor.getString(4));
+            assertEquals(null, cursor.getString(5));
+        }
+        db.execSQL("UPDATE Histories SET productName='Soap', productCategory='Home', productIngredients='Water' WHERE _id=7");
+        try (Cursor cursor = db.query("SELECT productName, productCategory, productIngredients FROM Histories WHERE _id=7")) {
+            cursor.moveToFirst();
+            assertEquals("Soap", cursor.getString(0));
+            assertEquals("Home", cursor.getString(1));
+            assertEquals("Water", cursor.getString(2));
+        }
+        db.close();
     }
 
     @Test

@@ -50,7 +50,10 @@ data class HistoryItem(
     var numBits: Int = 0,
     var resultPoints: Array<ResultPoint?>? = null,
     var format: BarcodeFormat? = null,
-    var timestamp: Long = 0
+    var timestamp: Long = 0,
+    var productName: String? = null,
+    var productCategory: String? = null,
+    var productIngredients: String? = null
 ) {
     fun get_id(): Int {
         return _id

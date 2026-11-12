@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: personal-inventory-lookup
+    runtime: node
+    buildCommand: "node --version"
+    startCommand: "node backend/server.js"
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0

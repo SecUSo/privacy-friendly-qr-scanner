@@ -3,6 +3,12 @@
 
     <SwitchPreference
         android:defaultValue="true"
+        android:key="pref_product_lookup"
+        android:summary="@string/pref_product_lookup_summary"
+        android:title="@string/pref_product_lookup_title" />
+
+    <SwitchPreference
+        android:defaultValue="true"
         android:key="bool_history"
         android:summary="@string/pref_description_enable_history"
         android:title="@string/pref_title_enable_history" />

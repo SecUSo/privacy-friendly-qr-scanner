@@ -63,7 +63,7 @@ public class AppRepository {
     }
 
     public void insertHistoryEntry(HistoryItem entry) {
-        executor.execute(() -> appDatabase.historyDao().insert(entry));
+        executor.execute(() -> entry.set_id((int) appDatabase.historyDao().insert(entry)));
     }
 
     public void updateHistoryEntry(HistoryItem entry) {
