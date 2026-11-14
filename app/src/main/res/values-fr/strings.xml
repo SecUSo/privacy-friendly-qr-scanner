@@ -23,8 +23,8 @@
     <string name="History">Historique</string>
     <string name="slide1_heading">Bienvenue</string>
     <string name="slide1_text">Bienvenue dans Scanneur QR respectueux de la Vie Privée. Ce tutoriel couvrira les choses les plus importantes que vous devez savoir.</string>
-    <string name="slide2_heading">Qu\'est-ce qu\'il y a ?</string>
-    <string name="text_slide2">Avec cette application vous permet à la fois de scanner et de créer des QR codes.</string>
+    <string name="slide2_heading">Quelles sont les fonctionnalités ?</string>
+    <string name="text_slide2">Cette application vous permet à la fois de scanner et de créer des QR codes.</string>
     <string name="slide3_heading">Plus de fonctionnalités</string>
     <string name="text_slide3">Le code QR que vous avez scanné peut être enregistré dans l\'historique. En outre, vous pouvez le partager ou le copier.</string>
     <string name="wecome">Bienvenue</string>
@@ -35,9 +35,9 @@
     <!--###ABOUT###-->
     <string name="about_author">Auteurs :</string>
     <string name="about_author_string">%s et des contributeurs.</string>
-    <string name="about_affiliation">En collaboration avec</string>
+    <string name="about_affiliation">En coopération avec</string>
     <string name="privacy_friendly">C\'est une des nombreuses application respectueuse de la vie privée développées par SECUSO. Le code source est sous licence GPLv3. Images sous copyright par Karlsruhe Institute of Technology et Google Inc.</string>
-    <string name="more_info">Plus d\'informations :</string>
+    <string name="more_info">Pour plus d\'informations :</string>
     <string name="about_libraries">Bibliothèques utilisées :</string>
     <string name="app_name_long">Scanneur de QR codes Respectueux de la Vie Privée</string>
     <string name="version_number">Version v%s</string>
@@ -344,4 +344,7 @@
     <string name="item_result_calendar_location">Localisation :</string>
     <string name="pref_custom_search_engine_title">Moteur de recherche personnalisé</string>
     <string name="pref_custom_search_engine_summary">L’URL à utiliser comme « Moteur de recherche personnalisé ». La chaîne de recherche sera insérée à %s.</string>
+    <string name="pref_title_silent_scan">Autoriser le scan silencieux</string>
+    <string name="pref_description_silent_scan">Sauvegarder le scan seulement dans l’historique et continuer à scanner</string>
+    <string name="scanned_toast_silent_mode">Scanné : %1$s</string>
 </resources>
