@@ -6,7 +6,7 @@
     <string name="qr_scanner">Scanneur QR</string>
     <string name="qr_generator">Générateur QR</string>
     <string name="history">Historique</string>
-    <string name="settings">Paramètres</string>
+    <string name="settings">Préférences</string>
     <string name="help">Aide</string>
     <string name="about">À propos</string>
     <string name="title_activity_qrscanner">Scanneur QR</string>
@@ -172,7 +172,7 @@
     <string name="action_help">Aide</string>
     <!-- ### BOÎTE DE DIALOGUE DE BIENVENUE ### -->
     <string name="welcome_text">Privacy friendly QR scanner permet de scanner des codes-barres et des codes QR au contenu varié en n\'utilisant qu\'un minimum d\'autorisations, et peut détecter des liens malveillants.</string>
-    <string name="welcome">Bienvenue</string>
+    <string name="welcome">Bienvenu</string>
     <string name="viewhelp">Afficher l\'aide</string>
     <!--<string name="help_privacy_heading">Privacy Info</string>
     <string name="about_author_contributors">Contributors</string>
