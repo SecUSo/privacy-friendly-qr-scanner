@@ -136,5 +136,13 @@
     <string name="phone_number">Telefonnummer</string>
     <string name="okay">OK</string>
     <string name="pref_custom_search_engine_title">Egendefinert søkemotor</string>
-    <string name="pref_custom_search_engine_summary">URL-en som skal brukes som \"Egendefinert søkemotor\". Søkestrengen settes inn ved %s.</string>
+    <string name="pref_custom_search_engine_summary">Nettadressen som skal brukes som \"Egendefinert søkemotor\". Søkestrengen settes inn ved %s.</string>
+    <string name="slide1_text">Velkommen til Privacy Friendly QR Scanner. Denne veiledningen vil dekke de mest nødvendige ting du burde vite.</string>
+    <string name="text_slide3">QR-koden du har skannet kan lagres i Historikk. Dessuten kan du dele den eller kopiere den.</string>
+    <string name="usability_hint2">Hvis du ikke kan skanne en kode, øk avstanden mellom skanneren og koden.</string>
+    <string name="welcome_text">Privacy Friendly QR Scanner gir mulighet for å skanne strekkoder og QR-koder med forskjellig innhold med et minimalt antall tillatelser, og hjelper til med å oppdage skadelige lenker.</string>
+    <string name="help_permission1_description">Denne appen krever kameratillatelse, som brukes til å skanne strekkoder og QR-koder via kamera.</string>
+    <string name="help_privacy_heading">Hvilke tillatelser kreves av Privacy Friendly QR Scanner?</string>
+    <string name="pref_search_engine_enabled_title">Bruk søkemotorer</string>
+    <string name="pref_search_engine_enabled_summary">Vis knappen \"Søk\" ved skanning av tekst.</string>
 </resources>
