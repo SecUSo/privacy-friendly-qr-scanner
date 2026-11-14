@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">QR Scanner</string>
     <string name="navigation_drawer_open">打开抽屉式导航栏</string>
-    <string name="navigation_drawer_close">关闭抽屉式导航栏</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="qr_scanner">二维码扫描</string>
     <string name="qr_generator">二维码生成</string>
     <string name="history">历史</string>
@@ -29,7 +29,7 @@
     <string name="text_slide3">您扫描的二维码可以保存在历史记录中。 此外，您可以共享或复制它。</string>
     <string name="wecome">欢迎</string>
     <string name="skip">跳过</string>
-    <string name="next">继续</string>
+    <string name="next">下个</string>
     <string name="help_">帮助</string>
     <string name="tutorial">教程</string>
     <string name="about_author">作者：</string>
@@ -102,7 +102,7 @@
     <string name="help_privacy">本应用哪些方面隐私友好？</string>
     <string name="help_privacy_answer">Privacy Friendly QR Scanner 无需任何权限。此外，它不包含任何跟踪机制或广告。</string>
     <string name="help_permission">此应用需要哪些权限？</string>
-    <string name="help_permission_answer">该应用程序需要相机权限，用于通过相机扫描条形码和二维码。 该应用程序还需要访问您的存储空间的权限，以扫描图像中的代码或将生成的代码保存到您的图像中。</string>
+    <string name="help_permission_answer">本应用需要相机权限，用于通过相机扫描条形码和二维码。 本应用还需要访问您的存储空间的权限，以扫描图像中的代码或将生成的代码保存到您的图像中。</string>
     <string name="pref_title_enable_history">启用历史记录</string>
     <string name="pref_description_enable_history">以前的扫描会被记录下来供您再次显示</string>
     <string name="pref_keep_duplicates">保留重复项</string>
@@ -174,7 +174,7 @@
     <string name="selected_1">已选择</string>
     <string name="activity_scanner_permission_needed_explanation">该应用程序需要相机权限才能扫描二维码。</string>
     <string name="select_image_from_gallery_explanation">此功能允许您从图库中打开图像并扫描其中包含的代码。 这需要访问图像。</string>
-    <string name="select_image_from_gallery">从图库中选择图像</string>
+    <string name="select_image_from_gallery">从图库选择图片</string>
     <string name="image_is_being_processed">正在处理图像…</string>
     <string name="raw_data">原始数据</string>
     <string name="generated_code_image_explanation">注意：此处显示的代码是根据扫描代码的内容生成的，因此可能看起来有所不同。 但是，它包含的数据是相同的。</string>
@@ -332,4 +332,7 @@
     <string name="cannot_connect_to_encrypted_wifi_without_password">没有密码无法连接到加密的 WiFi 网络。</string>
     <string name="pref_custom_search_engine_title">自定义搜索引擎</string>
     <string name="pref_custom_search_engine_summary">用作“自定义搜索引擎”的 URL。搜索字符串将插入到 %s。</string>
+    <string name="pref_title_silent_scan">启用静默扫描</string>
+    <string name="pref_description_silent_scan">仅保存扫描到历史记录并继续扫描</string>
+    <string name="scanned_toast_silent_mode">已扫描：%1$s</string>
 </resources>

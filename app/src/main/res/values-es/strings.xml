@@ -96,7 +96,7 @@
     <string name="title_activity_result_product">Producto encontrado</string>
     <string name="welcome">Bienvenido</string>
     <string name="help_permission1_description">La aplicación requiere el permiso de la cámara para escanear códigos de barras y códigos QR.</string>
-    <string name="help_permission_answer">La aplicación requiere el permiso de la cámara, que se utiliza para escanear códigos de barras y códigos QR a través de la cámara. La aplicación también requiere el permiso para acceder a su almacenamiento, lo que permite escanear códigos desde la galería o guardar los códigos generados en el dispositivo.</string>
+    <string name="help_permission_answer">La aplicación requiere el permiso de la cámara para escanear códigos de barras y códigos QR. También necesita permiso para acceder al almacenamiento, lo que permite escanear códigos desde tus imágenes o guardar en ellas los códigos generados.</string>
     <string name="pref_title_enable_history">Habilitar el historial</string>
     <string name="navigation_drawer_close">Cerrar menú de navegación</string>
     <string name="title_activity_qrscanner">Escáner QR</string>
@@ -115,7 +115,7 @@
     <string name="cannot_clear">El historial ya está vacío</string>
     <string name="domain">Dominio</string>
     <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Información</a> sobre cómo comprobar los enlaces.</string>
-    <string name="ok">De acuerdo</string>
+    <string name="ok">Ok</string>
     <string name="element_removed">Elemento eliminado.</string>
     <string name="conform_url">Por favor, confirme que ha comprobado el enlace.</string>
     <string name="wifi_explanation">Esta versión de la aplicación no puede conectarse automáticamente a redes WIFI, ya que no cuenta con los permisos para ello. A continuación se muestran algunos detalles sobre la red.</string>
@@ -128,7 +128,7 @@
     <string name="Store_in_gallery">Almacenar</string>
     <string name="phone_number">Número de teléfono</string>
     <string name="text_enter">El texto que desea codificar</string>
-    <string name="hello_world">¡Hola Mundo!</string>
+    <string name="hello_world">Hola Mundo</string>
     <string name="barcode_format">Formato</string>
     <string name="error_correction_level">Nivel de corrección de errores</string>
     <string name="code_generation_error">No se pudo generar ningún código.</string>
@@ -193,9 +193,9 @@
     <string name="select_image_from_gallery_explanation">Esta función le permite abrir imágenes de su galería y escanear los códigos que contienen. Para ello es necesario tener acceso a las imágenes.</string>
     <string name="select_image_from_gallery">Seleccionar imagen de la galería</string>
     <string name="image_is_being_processed">Procesando la imagen…</string>
-    <string name="no_code_in_image_explanation">Lamentablemente, no se pudo encontrar ningún código en esta imagen. Para mejorar el resultado, puede recortar o enderezar la imagen y volver a intentarlo.</string>
+    <string name="no_code_in_image_explanation">Lamentablemente, no se pudo encontrar ningún código en esta imagen. Para mejorar el resultado, puedes recortar o enderezar la imagen y volver a intentarlo.</string>
     <string name="switch_camera">Cambiar de cámara</string>
-    <string name="generated_code_image_explanation">Nota: El código mostrado aquí fue generado en base al contenido del código escaneado por lo tanto puede verse diferente. Sin embargo, los datos que contiene son los mismos.</string>
+    <string name="generated_code_image_explanation">Nota: El código que se muestra aquí se creó en función del contenido del código escaneado y, por lo tanto, puede parecer diferente. Sin embargo, los datos que contiene son los mismos.</string>
     <string name="raw_data">Datos sin procesar (Raw)</string>
     <string name="image_stored_in_gallery">Imagen guardada en la galería</string>
     <string name="close">Cerrar</string>
@@ -235,4 +235,7 @@
     <string name="hello_blank_fragment">Hola, fragmento en blanco</string>
     <string name="pref_custom_search_engine_title">Motor de búsqueda personalizado</string>
     <string name="pref_custom_search_engine_summary">La URL que se usará como \"Motor de búsqueda personalizado\". La cadena de búsqueda se insertará en %s.</string>
+    <string name="pref_title_silent_scan">Activar escaneo silencioso</string>
+    <string name="pref_description_silent_scan">Solo guardar el escaneo en el historial y seguir escaneando</string>
+    <string name="scanned_toast_silent_mode">Escaneado: %1$s</string>
 </resources>
