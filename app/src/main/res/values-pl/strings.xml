@@ -110,7 +110,7 @@
     <string name="selected">Wybrane</string>
     <string name="city">Miasto</string>
     <string name="code_generation_error">Nie udało się wygenerować żadnego kodu.</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
     <string name="lastname">Nazwisko</string>
     <string name="conform_url">Potwierdź, że sprawdziłeś(-aś) link</string>
     <string name="further_info"><a href="https://secuso.aifb.kit.edu/betr-nachrichten-flyer2EN">Informacje</a> na temat sprawdzania linków.</string>
@@ -173,7 +173,7 @@
     <string name="domain">Domena</string>
     <string name="action_search">Szukaj</string>
     <string name="help_permission">Jakie uprawnienia są wymagane przez przyjazny dla prywatności skaner QR\?</string>
-    <string name="okay">Ok</string>
+    <string name="okay">OK</string>
     <string name="help_privacy">Co sprawia, że aplikacja jest przyjazna dla prywatności\?</string>
     <string name="delete_content">Czy na pewno chcesz usunąć zawartość\?</string>
     <string name="selected_items">wybrane elementy</string>
@@ -237,6 +237,6 @@
     <string name="pref_custom_search_engine_title">Niestandardowa wyszukiwarka</string>
     <string name="pref_custom_search_engine_summary">Adres URL używany jako „Niestandardowa wyszukiwarka”. Ciąg wyszukiwania zostanie wstawiony w %s.</string>
     <string name="pref_title_silent_scan">Włącz ciche skanowanie</string>
-    <string name="pref_description_silent_scan">Zapisz skanowanie tylko w historii i kontynuuj skanowanie</string>
+    <string name="pref_description_silent_scan">Zapisuj skan tylko w historii i kontynuuj skanowanie</string>
     <string name="scanned_toast_silent_mode">Zeskanowano: %1$s</string>
 </resources>
